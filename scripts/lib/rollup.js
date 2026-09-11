@@ -93,10 +93,31 @@ export function rollupHop(hop, sources) {
   }
   for (const ref of [...(hop.aroma?.refs ?? []), ...(hop.pedigree?.refs ?? [])]) citedSources.add(ref);
 
+  const forms = (hop.forms ?? []).map((form) => {
+    const rolled = {};
+    for (const key of ['alpha_acid', 'beta_acid', 'cohumulone', 'total_oil']) {
+      const m = rollupMetric(form.analytics?.[key], sources);
+      if (m) rolled[key] = m;
+    }
+    (form.refs ?? []).forEach((r) => citedSources.add(r));
+    for (const m of Object.values(rolled)) m.sources.forEach((s) => citedSources.add(s.id));
+
+    // How much stronger this format is than the whole hop. This is the number a
+    // brewer actually needs when swapping Cryo into a recipe written for T90.
+    const base = analytics.alpha_acid?.typical;
+    const here = rolled.alpha_acid?.typical;
+    return {
+      ...form,
+      analytics: Object.keys(rolled).length ? rolled : null,
+      alpha_factor: base && here ? round(here / base) : null,
+    };
+  });
+
   const { file, expectedSlug, ...rest } = hop;
 
   return {
     ...rest,
+    forms: forms.length ? forms : null,
     kind: hop.kind ?? 'cultivar',
     analytics: Object.keys(analytics).length ? analytics : null,
     oils: Object.keys(oils).length ? oils : null,

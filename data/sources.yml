@@ -24,6 +24,18 @@ ychr:
   url: https://yakimachiefranches.com/hop-varieties/
   tier: breeder
   weight: 1.0
+  note: >
+    Publishes its methodology, which most sources do not: ranges derived from
+    multiple crop years of their own laboratory data under ASBC hop methods,
+    sensory from Check All That Apply ballots.
+
+mill95:
+  publisher: Mill 95
+  title: Idaho hop variety profiles
+  url: https://mill95hops.com/
+  tier: merchant
+  weight: 0.7
+  note: Idaho's independent in-state hop processor; closest thing to a source of record for Idaho farm-bred varieties.
 
 nzhops:
   publisher: New Zealand Hops Ltd

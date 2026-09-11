@@ -373,6 +373,18 @@ details.sources > summary:hover { color: var(--ink); }
 .stack-key .num { margin-left: auto; color: var(--ink-soft); }
 .swatch { width: 0.6rem; height: 0.6rem; flex: none; }
 
+table.forms { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+table.forms th {
+  text-align: left; font-weight: 500; font-size: 0.78rem; color: var(--ink-soft);
+  border-bottom: 1px solid var(--ink); padding: 0 0 0.3rem;
+}
+table.forms th:not(:first-child), table.forms td:not(:first-child) { text-align: right; }
+table.forms td { padding: 0.45rem 0; border-bottom: 1px solid var(--wire-soft); }
+table.forms tr.form-note td {
+  font-size: 0.8rem; color: var(--ink-soft); text-align: left;
+  padding: 0 0 0.6rem; border-bottom: 1px solid var(--wire-soft);
+}
+
 .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; padding: 0; margin: 0; list-style: none; }
 .tags li {
   font-size: 0.82rem;

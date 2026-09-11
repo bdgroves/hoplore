@@ -1,0 +1,97 @@
+slug: idaho-7
+name: Idaho 7
+aliases: []
+brand: Idaho 7 Brand
+purpose: dual
+country: US
+kind: cultivar
+
+ownership:
+  holder: Jackson Farms
+  mark: registered
+  public_domain: false
+
+pedigree:
+  released: 2015
+  breeder: jackson-farms
+  parents: { unknown: true, note: Pedigree not published. Selected on the farm rather than out of a formal breeding programme. }
+  refs: [ychr, mill95]
+
+aroma:
+  summary: >
+    Tangerine marmalade over resinous pine, with pineapple and guava behind it
+    and a black-tea dryness on the finish. High oil, so it rewards whirlpool and
+    dry hop far more than it rewards the kettle.
+  tags: [tangerine, orange, grapefruit, tropical, guava, pine, resinous, apricot, tea, floral]
+  refs: [ychr, mill95]
+
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: seed-general-knowledge, low: 10.0, high: 14.0, typical: 12.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: seed-general-knowledge, low: 4.0, high: 6.5 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: seed-general-knowledge, low: 2.0, high: 3.0 }
+
+# The reason this record exists. Same plant, three products, three sets of
+# numbers. Substitute Cryo into a recipe written for T90 at the same weight and
+# you roughly double the bitterness.
+forms:
+  - form: t90
+    product_name: T-90 pellets
+    analytics:
+      alpha_acid:
+        unit: percent
+        observations:
+          - { source: seed-general-knowledge, low: 10.0, high: 14.0, typical: 12.0 }
+    note: The baseline. Alpha tracks the whole cone closely; pelletising concentrates very little.
+  - form: cryo
+    product_name: Cryo Hops / LupuLN2
+    analytics:
+      alpha_acid:
+        unit: percent
+        observations:
+          - { source: seed-general-knowledge, low: 20.0, high: 26.0, typical: 23.0 }
+      total_oil:
+        unit: ml_per_100g
+        observations:
+          - { source: seed-general-knowledge, low: 4.0, high: 6.0 }
+    note: >
+      Lupulin separated from the vegetal fraction, so alpha and oil roughly
+      double while the leaf-derived polyphenols drop away. Dose by alpha, not
+      by weight.
+    refs: [ychr]
+
+usage:
+  timing: [whirlpool, dry-hop, bittering]
+  beer_styles: [hazy-ipa, american-ipa, west-coast-ipa, double-ipa, american-pale-ale]
+
+products:
+  cryo: true
+  lupomax: false
+  refs: [ychr]
+
+substitutes:
+  - { slug: citra, confidence: medium, note: 'Pairs with it more often than it replaces it, but the citrus overlaps.' }
+  - { slug: mosaic, confidence: medium }
+  - { slug: simcoe, confidence: low, note: 'Closer on the pine axis, further on the tangerine.' }
+
+meta:
+  status: draft
+  verification: unverified
+  last_reviewed: '2026-09-11'
+  notes: >
+    Origin, release year and breeder are sourced; the brewing values are not,
+    and are the next thing to replace. Yakima Chief publishes ranges derived
+    from multiple crop years of their own lab data under ASBC methods, which is
+    a better citation than most breeder sheets offer.
+
+    A useful test case for coverage: Jackson Farms is a family farm in Wilder,
+    Idaho, not a breeding institute, and the hop is distributed by three
+    separate companies. No single scraper will ever find hops like this.

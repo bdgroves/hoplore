@@ -192,10 +192,52 @@
       }
     },
 
+    "brand": {
+      "type": "string",
+      "description": "Trademarked brand the plant is sold under, where that differs from the cultivar name. Idaho 7 Brand covers a plant Jackson Farms bred; the mark and the cultivar are not the same thing."
+    },
+    "previously_named": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Former commercial names. Equinox became Ekuanot; Denali became Sultana. Fed into search so an old recipe still finds the hop."
+    },
+    "superseded_by": {
+      "$ref": "#/$defs/slug",
+      "description": "Set on an experimental designation once it is released under a name, so HBC 586 points at whatever it became instead of becoming a duplicate record."
+    },
+
+    "forms": {
+      "type": "array",
+      "description": "A hop is sold in formats with materially different brewing values: Cryo runs roughly double the alpha and oil of the T90 pellet it came from. Top-level `analytics` is the baseline cone/T90 figure; anything else belongs here. Omit entirely rather than guessing.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["form"],
+        "properties": {
+          "form": {
+            "enum": ["leaf", "t90", "t45", "cryo", "lupomax", "hopsteiner-lupulin", "co2-extract", "spectrum", "other"]
+          },
+          "product_name": { "type": "string", "description": "Trade name, e.g. 'Cryo Hops', 'LupuLN2', 'Lupomax'." },
+          "analytics": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "alpha_acid": { "$ref": "#/$defs/metric" },
+              "beta_acid": { "$ref": "#/$defs/metric" },
+              "cohumulone": { "$ref": "#/$defs/metric" },
+              "total_oil": { "$ref": "#/$defs/metric" }
+            }
+          },
+          "note": { "type": "string", "maxLength": 300 },
+          "refs": { "type": "array", "items": { "$ref": "#/$defs/sourceId" } }
+        }
+      }
+    },
+
     "products": {
       "type": "object",
       "additionalProperties": false,
-      "description": "Concentrated lupulin and extract formats known to exist for this hop.",
+      "description": "Which concentrated formats exist at all. Kept alongside `forms` because knowing a Cryo version exists is useful even before anyone has recorded its numbers.",
       "properties": {
         "cryo": { "type": "boolean" },
         "lupomax": { "type": "boolean" },

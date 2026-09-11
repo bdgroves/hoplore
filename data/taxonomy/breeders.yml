@@ -15,6 +15,10 @@ osu:
 ychr:
   label: Yakima Chief Ranches
   country: US
+jackson-farms:
+  label: Jackson Farms
+  country: US
+  note: Family farm in Wilder, Idaho. Bred and released Idaho 7 in 2015.
 hri-nz:
   label: Plant & Food Research New Zealand
   country: NZ

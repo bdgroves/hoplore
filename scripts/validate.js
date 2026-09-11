@@ -89,12 +89,19 @@ for (const hop of hops) {
     if (!slugs.has(parent)) warn(at('pedigree.parents'), `${role} parent "${parent}" is not yet in the dataset`);
   }
 
+  // A released hop cannot also be superseded, and the target must exist.
+  if (hop.superseded_by) {
+    if (!slugs.has(hop.superseded_by)) err(at('superseded_by'), `"${hop.superseded_by}" has no record in data/hops/`);
+    if (hop.superseded_by === hop.slug) err(at('superseded_by'), 'a hop cannot supersede itself');
+  }
+
   // Every cited source must exist.
   const refs = [
     ...(hop.aroma?.refs ?? []),
     ...(hop.pedigree?.refs ?? []),
     ...(hop.products?.refs ?? []),
     ...(hop.substitutes ?? []).flatMap((s) => s.refs ?? []),
+    ...(hop.forms ?? []).flatMap((f) => f.refs ?? []),
     ...allMetrics(hop).flatMap((m) => m.observations.map((o) => o.source)),
   ];
   for (const ref of new Set(refs)) {
@@ -116,6 +123,45 @@ for (const hop of hops) {
         err(at(`analytics.${key}`), `${o.high ?? o.typical} exceeds the plausible ceiling of ${ceiling} (${o.source})`);
       }
     }
+  }
+
+  // Concentrated formats legitimately exceed the cone ceilings, so they get
+  // their own. A Cryo alpha of 24% is normal; 24% on a leaf hop is a typo.
+  const CONCENTRATED = new Set(['cryo', 'lupomax', 'hopsteiner-lupulin', 'co2-extract', 'spectrum']);
+  for (const form of hop.forms ?? []) {
+    const concentrated = CONCENTRATED.has(form.form);
+    const ceilings = concentrated
+      ? { alpha_acid: 65, beta_acid: 40, cohumulone: 100, total_oil: 30 }
+      : { alpha_acid: 25, beta_acid: 15, cohumulone: 100, total_oil: 6 };
+
+    for (const [key, metric] of Object.entries(form.analytics ?? {})) {
+      for (const o of metric.observations) {
+        if (o.low != null && o.high != null && o.low > o.high) {
+          err(at(`forms.${form.form}.${key}`), `low ${o.low} is greater than high ${o.high} (${o.source})`);
+        }
+        if (Math.max(o.high ?? 0, o.typical ?? 0) > ceilings[key]) {
+          err(at(`forms.${form.form}.${key}`), `${o.high ?? o.typical} exceeds the ceiling of ${ceilings[key]} for a ${form.form} product`);
+        }
+      }
+    }
+
+    // A concentrate weaker than the base pellet means the numbers got swapped.
+    const baseAlpha = hop.analytics?.alpha_acid?.observations;
+    const formAlpha = form.analytics?.alpha_acid?.observations;
+    if (concentrated && baseAlpha?.length && formAlpha?.length) {
+      const mid = (obs) => {
+        const mids = obs.map((o) => o.typical ?? (o.low + o.high) / 2);
+        return mids.reduce((a, b) => a + b, 0) / mids.length;
+      };
+      if (mid(formAlpha) <= mid(baseAlpha)) {
+        err(at(`forms.${form.form}`), 'a concentrated format cannot have lower alpha than the whole hop — values likely swapped');
+      }
+    }
+  }
+
+  const formKinds = (hop.forms ?? []).map((f) => f.form);
+  if (new Set(formKinds).size !== formKinds.length) {
+    err(at('forms'), 'the same format is listed twice');
   }
 
   // An oil breakdown that does not roughly sum to 100 means a component is
@@ -152,6 +198,18 @@ for (const hop of hops) {
 }
 
 // --------------------------------------------------------------- global checks
+
+// Duplicate names are how a dataset ends up with two records for one plant.
+const nameIndex = new Map();
+for (const hop of hops) {
+  for (const name of [hop.name, ...(hop.aliases ?? []), ...(hop.previously_named ?? [])]) {
+    const key = name.toLowerCase().replace(/[^a-z0-9]/g, '');
+    if (nameIndex.has(key) && nameIndex.get(key) !== hop.slug) {
+      err('names', `"${name}" is claimed by both ${nameIndex.get(key)} and ${hop.slug}`);
+    }
+    nameIndex.set(key, hop.slug);
+  }
+}
 
 for (const [id, src] of Object.entries(sources)) {
   if (src.tier !== 'unsourced' && !src.url) warn('sources.yml', `"${id}" has no url`);

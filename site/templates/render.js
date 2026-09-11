@@ -224,6 +224,7 @@ export function renderHop({ hop, similar, taxonomy, sources, meta }) {
   <div class="cols">
     <div>
       ${hop.analytics ? analyticsBlock(hop, sources) : ''}
+      ${hop.forms ? formsBlock(hop) : ''}
       ${hop.oils ? oilsBlock(hop) : ''}
     </div>
     <div>
@@ -304,6 +305,47 @@ function rangeBar(key, m, sources) {
         </ul>
       </details>
     </div>`;
+}
+
+const FORM_LABEL = {
+  leaf: 'Whole leaf',
+  t90: 'T-90 pellets',
+  t45: 'T-45 pellets',
+  cryo: 'Cryo',
+  lupomax: 'Lupomax',
+  'hopsteiner-lupulin': 'Hopsteiner pellet lupulin',
+  'co2-extract': 'CO2 extract',
+  spectrum: 'Spectrum',
+  other: 'Other',
+};
+
+/** Same plant, different products, different numbers. Dose by alpha, not weight. */
+function formsBlock(hop) {
+  const rows = hop.forms
+    .map((form) => {
+      const aa = form.analytics?.alpha_acid;
+      const oil = form.analytics?.total_oil;
+      return `<tr>
+        <td>${esc(form.product_name ?? FORM_LABEL[form.form] ?? form.form)}</td>
+        <td class="num">${aa ? `${fmt(aa.low)}–${fmt(aa.high)}%` : '—'}</td>
+        <td class="num">${oil ? `${fmt(oil.low)}–${fmt(oil.high)}` : '—'}</td>
+        <td class="num">${form.alpha_factor ? `${form.alpha_factor}×` : '—'}</td>
+      </tr>${form.note ? `<tr class="form-note"><td colspan="4">${esc(form.note)}</td></tr>` : ''}`;
+    })
+    .join('\n      ');
+
+  return `<section class="block">
+    <h2>Product formats</h2>
+    <table class="forms">
+      <thead><tr><th>Format</th><th>Alpha</th><th>Oil mL/100g</th><th>vs whole hop</th></tr></thead>
+      <tbody>
+      ${rows}
+      </tbody>
+    </table>
+    <p class="callout">Swap a concentrate into a recipe written for pellets at
+    the same weight and the bitterness moves by the factor in the last column.
+    Dose these by alpha, not by grams.</p>
+  </section>`;
 }
 
 function oilsBlock(hop) {

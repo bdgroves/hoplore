@@ -40,6 +40,7 @@ schema/                 JSON Schema 2020-12. the contract.
 scripts/validate.js     the bouncer
 scripts/build.js        observations in, API + website out
 site/                   templates and styles for the static site
+tools/ingest/           scrapers that turn breeder sheets into observations
 dist/                   generated. gitignored. never edit.
 ```
 
@@ -123,6 +124,62 @@ Nelson scoring 49 is the system working. Nothing substitutes for Nelson Sauvin. 
 
 ---
 
+## A hop is not one product
+
+Idaho 7 T-90 pellets and Idaho 7 Cryo are the same plant with different numbers.
+Cryo is lupulin separated from the vegetal fraction, so alpha and oil roughly
+double. Every hop database I've looked at models this as a checkbox — "Cryo
+available: yes" — which tells you nothing you can brew with.
+
+So formats are first-class:
+
+```yaml
+forms:
+  - form: t90
+    analytics:
+      alpha_acid:
+        observations: [{ source: ych, low: 10.0, high: 14.0 }]
+  - form: cryo
+    product_name: Cryo Hops / LupuLN2
+    analytics:
+      alpha_acid:
+        observations: [{ source: ych, low: 20.0, high: 26.0 }]
+```
+
+The build derives an `alpha_factor` per format — Idaho 7 Cryo comes out at
+**1.92×** the whole hop — because that is the number you need when dropping a
+concentrate into a recipe written for pellets. Dose by alpha, not by grams.
+
+The validator knows a concentrate cannot be weaker than the hop it came from,
+and applies different plausibility ceilings to concentrated formats, because 24%
+alpha is normal for Cryo and a typo on a leaf hop.
+
+## Pulling data in
+
+`tools/ingest/` holds scrapers. The first one reads Hopsteiner's variety data
+sheets, which are plain HTML tables with a "last changed" date on each:
+
+```bash
+pixi run -e data hopsteiner-discover      # what do they actually publish?
+pixi run -e data hopsteiner centennial     # dry run
+pixi run -e data hopsteiner centennial --apply
+```
+
+Dry run by default. It prints what it found, then a reconciliation report
+against what is already on file:
+
+```
+  !! cohumulone: on file 18-25 (seed-general-knowledge), hopsteiner says 18.0-28.0
+```
+
+`!!` means it disagrees with a placeholder — the placeholder was probably wrong.
+`~` means it disagrees with a real source, which is not an error. Two sources
+disagreeing is the thing this project exists to show.
+
+An ingest script writes observations and nothing else. It never averages, never
+merges, never touches an observation belonging to another source. All the
+arithmetic stays in `rollup.js` at build time where it is visible.
+
 ## The API
 
 Static JSON on a CDN, which means it costs nothing to run and can't go down independently of the site.
@@ -146,13 +203,21 @@ Building something with it? Go ahead — it's CC BY 4.0, just credit it. I'd lov
 
 ## Honest state of the data
 
-**13 cultivars, and most of them are seeded rather than sourced.**
+**14 cultivars, and most of them are still seeded rather than sourced.**
 
 I bootstrapped the initial records from general brewing knowledge so there'd be something to build the tooling against, and every one of those citations points at a source called `seed-general-knowledge` with `tier: unsourced` and `weight: 0.1`. The validator flags them. The build report lists them by name. The site renders them with a red dot that says "needs a citation."
 
 That is not me being modest, it's the design. A dataset that can't tell you which of its numbers to distrust is worse than no dataset. Replacing a `seed-general-knowledge` citation with a real breeder sheet is the single most useful thing anyone can do here, and it's a five-line diff.
 
-Aramis is the one fully-worked example. Copy its shape.
+Aramis is the fully-worked example for a single hop — copy its shape. Idaho 7
+is the example for formats, and for the hard case in coverage: a hop bred by a
+family farm in Wilder, Idaho, distributed by three separate companies, that no
+breeder scraper will ever find.
+
+Hallertau Mittelfrüh shows the machinery working. Hopsteiner's sheet puts
+cohumulone at 18–28% against the placeholder's 18–25%, so the published range
+widened and the typical shifted toward the breeder — Hopsteiner carries a trust
+weight of 1.0, the placeholder 0.1.
 
 ---
 
@@ -168,15 +233,21 @@ Found a wrong number? [Open an issue](../../issues/new?template=data-correction.
 
 ## Roadmap, roughly in order of how much I want it
 
-- [ ] Get to 100 cultivars with real breeder citations
-- [ ] Crop-year data, so you can see alpha drift across harvests instead of one eternal average
-- [ ] An IBU calculator that pulls straight from the dataset
+- [ ] Replace every `seed-general-knowledge` citation with a real source
+- [ ] Scrapers for the sources Hopsteiner cannot cover: Yakima Chief Ranches
+      (Citra, Mosaic, Simcoe, Talus), NZ Hops, Hop Products Australia,
+      Charles Faram
+- [ ] `coverage.js` plus a scheduled workflow that diffs the Hop Growers of
+      America variety list against `data/hops/` and opens an issue for anything
+      missing — so new releases find me instead of the other way round
+- [ ] Plant patents as a source. Public domain, breeder-authored, and they carry
+      pedigree the marketing sheets leave out
+- [ ] Crop-year data from the BarthHaas Hop Harvest Guide, so you can watch
+      alpha drift across harvests instead of reading one eternal average
+- [ ] An IBU calculator wired straight to the dataset, format-aware
 - [ ] BeerXML / BeerJSON import: paste a recipe, get told what's substitutable
-- [ ] "What's in my freezer" — pick the hops you own, get the beers you can build
-- [ ] Embeddable web component, so other brewing sites can pull a hop card with two lines of HTML
-- [ ] Storage stability curves, because nobody publishes them and everybody needs them
-
----
+- [ ] Storage stability curves, because nobody publishes them and everybody
+      needs them
 
 ## Licensing, and a disclaimer
 
