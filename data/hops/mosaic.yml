@@ -9,7 +9,6 @@ ownership:
   holder: Hop Breeding Company
   mark: registered
   public_domain: false
-  plant_patent: USPP 25,340
 pedigree:
   year_crossed: 2000
   released: 2012
@@ -61,3 +60,6 @@ meta:
   status: draft
   verification: unverified
   last_reviewed: '2026-09-11'
+  notes: >
+    Plant patent number removed pending verification on Google Patents; the
+    one previously recorded here could not be confirmed against the register.

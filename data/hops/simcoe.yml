@@ -9,7 +9,6 @@ ownership:
   holder: Yakima Chief Ranches
   mark: registered
   public_domain: false
-  plant_patent: USPP 15,485
 pedigree:
   released: 2000
   breeder: ychr
@@ -63,3 +62,6 @@ meta:
   status: draft
   verification: unverified
   last_reviewed: '2026-09-11'
+  notes: >
+    Plant patent number removed pending verification on Google Patents; the
+    one previously recorded here could not be confirmed against the register.

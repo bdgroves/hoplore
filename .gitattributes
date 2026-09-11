@@ -1,0 +1,4 @@
+﻿* text=auto eol=lf
+pixi.lock linguist-generated=true -diff
+package-lock.json linguist-generated=true -diff
+data/**/*.yml linguist-detectable=true

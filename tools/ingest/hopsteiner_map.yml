@@ -1,0 +1,26 @@
+# HopLore slug  ->  Hopsteiner's URL name at
+# https://hopsteiner.us/variety-data-sheets/<name>/
+#
+# `false` means Hopsteiner does not carry that variety, so the script skips it
+# without a pointless 404. Proprietary HBC and YCR hops are licensed elsewhere.
+#
+# Run `--discover` to list everything they publish and fill in the gaps.
+
+# verified against the live site
+centennial: Centennial
+hallertau-mittelfrueh: Hallertauer-Mittelfrueh
+
+# expected to exist, unverified — the script will tell you if the name is wrong
+cascade: Cascade
+challenger: Challenger
+willamette: Willamette
+saaz-cz: Saazer
+strisselspalt: Strisselspalt
+aramis: Aramis
+whitbread-golding-variety: Whitbread-Golding-Variety
+
+# not carried by Hopsteiner
+citra: false          # Hop Breeding Company
+mosaic: false         # Hop Breeding Company
+simcoe: false         # Yakima Chief Ranches
+nelson-sauvin: false  # New Zealand Hops Ltd

@@ -63,8 +63,10 @@ pdfplumber = "*"
 "ruamel.yaml" = "*"
 
 [feature.data.tasks]
-ingest = "python tools/ingest/run.py"
-shell-data = "python"
+# Dry run by default; add --apply to write. See tools/ingest/README.md.
+hopsteiner = "python tools/ingest/hopsteiner.py"
+hopsteiner-discover = "python tools/ingest/hopsteiner.py --discover"
+test-ingest = "python tools/ingest/test_hopsteiner.py"
 
 [environments]
 default = { solve-group = "default" }
