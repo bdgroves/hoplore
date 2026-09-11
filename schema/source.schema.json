@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hoplore.dev/api/v1/schema/source.schema.json",
+  "title": "Source registry",
+  "description": "Every number in this dataset points at an entry here. No entry, no number.",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["publisher", "tier"],
+    "properties": {
+      "publisher": { "type": "string" },
+      "title": { "type": "string" },
+      "url": { "type": "string", "format": "uri" },
+      "retrieved": { "type": "string", "format": "date" },
+      "tier": {
+        "enum": ["breeder", "merchant", "lab", "literature", "aggregator", "unsourced"],
+        "description": "breeder = the people who bred or license it (highest trust). lab = published GC/HPLC analysis. merchant = supplier spec sheet. literature = book or peer-reviewed paper. aggregator = a site that itself compiled from elsewhere. unsourced = placeholder, must not appear in a published record."
+      },
+      "weight": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1,
+        "description": "Relative trust used when rolling observations into a published range."
+      },
+      "note": { "type": "string" }
+    }
+  }
+}

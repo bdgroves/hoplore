@@ -1,0 +1,63 @@
+slug: cascade
+name: Cascade
+purpose: dual
+country: US
+also_grown_in: [NZ, AU, AR]
+kind: cultivar
+ownership: { mark: public, public_domain: true }
+pedigree:
+  year_crossed: 1956
+  released: 1972
+  breeder: usda-ars
+  parents: { seed: fuggle, pollen: serebrianka, note: Fuggle x a Serebrianka seedling. Neither parent is in the dataset yet. }
+  refs: [seed-general-knowledge]
+aroma:
+  summary: >
+    The hop that started American craft. Grapefruit and flowers, with a spicy
+    backbone that stops it from reading as pure citrus candy. Still the reference
+    point every other US aroma hop gets described against.
+  tags: [grapefruit, citrus, floral, spice, pine, woody]
+  refs: [seed-general-knowledge]
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: seed-general-knowledge, low: 4.5, high: 9.0, typical: 6.5 }
+      - { source: usda-nass-2022, typical: 6.8, crop_year: 2022 }
+  beta_acid:
+    unit: percent
+    observations: [{ source: seed-general-knowledge, low: 4.5, high: 7.0 }]
+  cohumulone:
+    unit: percent_of_alpha
+    observations: [{ source: seed-general-knowledge, low: 33, high: 40 }]
+  total_oil:
+    unit: ml_per_100g
+    observations: [{ source: seed-general-knowledge, low: 0.8, high: 1.5 }]
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 45, high: 60 }]
+  humulene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 8, high: 13 }]
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 3, high: 6 }]
+  farnesene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 4, high: 8 }]
+  other:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 20, high: 35 }]
+usage:
+  timing: [bittering, late-boil, whirlpool, dry-hop]
+  beer_styles: [american-pale-ale, american-ipa, west-coast-ipa, american-amber, porter, american-stout, american-lager]
+products: { cryo: true, lupomax: true }
+substitutes:
+  - { slug: centennial, confidence: high, note: 'More alpha, cleaner citrus. Scale the charge down ~15%.' }
+  - { slug: citra, confidence: low, note: Only if you want the beer to move tropical. }
+  - { slug: willamette, confidence: low }
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-11'

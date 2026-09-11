@@ -1,0 +1,84 @@
+# Controlled aroma vocabulary. `parent` lets the site roll specific terms up into
+# families, so a search for "citrus" also finds grapefruit and tangerine.
+# Add a term here before using it in a hop file; the validator enforces it.
+
+# --- families ---
+citrus:      { label: Citrus }
+tropical:    { label: Tropical fruit }
+stone-fruit: { label: Stone fruit }
+berry:       { label: Berry }
+orchard:     { label: Orchard fruit }
+floral:      { label: Floral }
+herbal:      { label: Herbal }
+spice:       { label: Spice }
+resinous:    { label: Resinous }
+vegetal:     { label: Vegetal }
+earthy:      { label: Earthy }
+sweet:       { label: Sweet aromatics }
+savory:      { label: Savory }
+
+# --- citrus ---
+grapefruit:  { label: Grapefruit, parent: citrus }
+orange:      { label: Orange, parent: citrus }
+tangerine:   { label: Tangerine, parent: citrus }
+lemon:       { label: Lemon, parent: citrus }
+lime:        { label: Lime, parent: citrus }
+lemongrass:  { label: Lemongrass, parent: citrus }
+
+# --- tropical ---
+mango:       { label: Mango, parent: tropical }
+passionfruit: { label: Passionfruit, parent: tropical }
+pineapple:   { label: Pineapple, parent: tropical }
+guava:       { label: Guava, parent: tropical }
+coconut:     { label: Coconut, parent: tropical }
+melon:       { label: Melon, parent: tropical }
+
+# --- stone & orchard ---
+peach:       { label: Peach, parent: stone-fruit }
+apricot:     { label: Apricot, parent: stone-fruit }
+pear:        { label: Pear, parent: orchard }
+apple:       { label: Apple, parent: orchard }
+
+# --- berry & vine ---
+blueberry:   { label: Blueberry, parent: berry }
+blackcurrant: { label: Blackcurrant, parent: berry }
+strawberry:  { label: Strawberry, parent: berry }
+white-wine:  { label: White wine, parent: berry, note: The Nelson Sauvin gooseberry-Sauvignon axis. }
+gooseberry:  { label: Gooseberry, parent: berry }
+
+# --- floral ---
+rose:        { label: Rose, parent: floral }
+elderflower: { label: Elderflower, parent: floral }
+lavender:    { label: Lavender, parent: floral }
+perfume:     { label: Perfume, parent: floral }
+
+# --- herbal / spice ---
+mint:        { label: Mint, parent: herbal }
+tea:         { label: Tea, parent: herbal }
+noble:       { label: Noble, parent: herbal, note: The Saaz-Hallertau-Tettnang-Spalt signature. }
+black-pepper: { label: Black pepper, parent: spice }
+anise:       { label: Anise, parent: spice }
+licorice:    { label: Licorice, parent: spice }
+clove:       { label: Clove, parent: spice }
+cinnamon:    { label: Cinnamon, parent: spice }
+
+# --- resinous / vegetal / earthy ---
+pine:        { label: Pine, parent: resinous }
+dank:        { label: Dank, parent: resinous }
+cannabis:    { label: Cannabis, parent: resinous }
+grassy:      { label: Grassy, parent: vegetal }
+green:       { label: Green, parent: vegetal }
+onion-garlic: { label: Onion / garlic, parent: vegetal }
+tomato:      { label: Tomato leaf, parent: vegetal }
+woody:       { label: Woody, parent: earthy }
+tobacco:     { label: Tobacco, parent: earthy }
+soil:        { label: Soil, parent: earthy }
+cedar:       { label: Cedar, parent: earthy }
+
+# --- sweet / savory ---
+candy:       { label: Candy, parent: sweet }
+vanilla:     { label: Vanilla, parent: sweet }
+caramel:     { label: Caramel, parent: sweet }
+creamy:      { label: Creamy, parent: sweet }
+bubblegum:   { label: Bubblegum, parent: sweet }
+cheesy:      { label: Cheesy, parent: savory }

@@ -1,0 +1,58 @@
+slug: hallertau-mittelfrueh
+name: Hallertau Mittelfruh
+aliases: [Hallertauer Mittelfrüh, Hallertauer, Mittelfrueh]
+purpose: aroma
+country: DE
+kind: cultivar
+ownership: { mark: public, public_domain: true }
+pedigree:
+  breeder: unknown
+  parents: { unknown: true, note: A landrace selection from the Hallertau region. }
+  refs: [seed-general-knowledge]
+aroma:
+  summary: >
+    The definition of noble. Soft herbal spice, a little floral, no sharp edges
+    anywhere. Fragile in storage and low in alpha, which is the price of it.
+  tags: [noble, herbal, floral, spice, tea, woody]
+  refs: [seed-general-knowledge]
+analytics:
+  alpha_acid:
+    unit: percent
+    observations: [{ source: seed-general-knowledge, low: 3.0, high: 5.5, typical: 4.0 }]
+  beta_acid:
+    unit: percent
+    observations: [{ source: seed-general-knowledge, low: 3.0, high: 5.0 }]
+  cohumulone:
+    unit: percent_of_alpha
+    observations: [{ source: seed-general-knowledge, low: 18, high: 25 }]
+  total_oil:
+    unit: ml_per_100g
+    observations: [{ source: seed-general-knowledge, low: 0.6, high: 1.1 }]
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 20, high: 28 }]
+  humulene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 35, high: 50 }]
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 10, high: 15 }]
+  farnesene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, typical: 1 }]
+  other:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 15, high: 25 }]
+usage:
+  timing: [late-boil, whirlpool]
+  beer_styles: [pilsner, helles, marzen, kolsch, weissbier, pale-lager, altbier]
+products: { cryo: false, lupomax: false }
+substitutes:
+  - { slug: strisselspalt, confidence: high }
+  - { slug: saaz-cz, confidence: medium }
+  - { slug: aramis, confidence: low }
+meta:
+  status: draft
+  verification: unverified
+  last_reviewed: '2026-09-11'

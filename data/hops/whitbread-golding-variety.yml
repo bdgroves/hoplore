@@ -1,0 +1,46 @@
+slug: whitbread-golding-variety
+name: Whitbread Golding Variety
+aliases: [WGV, Whitbread Golding]
+purpose: dual
+country: GB
+kind: cultivar
+ownership: { mark: public, public_domain: true }
+pedigree:
+  released: 1911
+  breeder: unknown
+  parents: { unknown: true, note: 'A selection from Bates Brewer, itself a Golding seedling.' }
+  refs: [seed-general-knowledge]
+aroma:
+  summary: >
+    Fuller and earthier than a true Golding, with a fruity, slightly resinous
+    edge. A workhorse English hop that takes bittering duty without turning harsh.
+  tags: [earthy, woody, orchard, floral, spice]
+  refs: [seed-general-knowledge]
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: seed-general-knowledge, low: 5.0, high: 7.5, typical: 6.2 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: seed-general-knowledge, low: 2.0, high: 3.5 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: seed-general-knowledge, low: 32, high: 38 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: seed-general-knowledge, low: 0.7, high: 1.2 }
+usage:
+  timing: [bittering, late-boil]
+  beer_styles: [english-bitter, esb, british-brown, porter, english-ipa]
+products: { cryo: false, lupomax: false }
+substitutes:
+  - { slug: challenger, confidence: medium }
+  - { slug: aramis, confidence: low }
+meta:
+  status: draft
+  verification: unverified
+  last_reviewed: '2026-09-11'

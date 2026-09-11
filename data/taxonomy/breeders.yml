@@ -1,0 +1,32 @@
+comav:
+  label: COMAV / Comptoir Agricole
+  country: FR
+  url: https://www.hops-france.com/
+hbc:
+  label: Hop Breeding Company
+  country: US
+  note: Joint venture of John I. Haas and Yakima Chief Ranches.
+usda-ars:
+  label: USDA-ARS hop breeding program
+  country: US
+osu:
+  label: Oregon State University
+  country: US
+ychr:
+  label: Yakima Chief Ranches
+  country: US
+hri-nz:
+  label: Plant & Food Research New Zealand
+  country: NZ
+wye:
+  label: Wye College
+  country: GB
+  note: Closed 2007; programme continued as Wye Hops Ltd.
+hull:
+  label: Hop Research Center Hull
+  country: DE
+hopsteiner-breeding:
+  label: Hopsteiner breeding program
+  country: US
+unknown:
+  label: Unrecorded

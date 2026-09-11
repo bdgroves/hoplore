@@ -1,0 +1,30 @@
+# BJCP 2021 codes where a clean mapping exists.
+american-pale-ale:   { label: American Pale Ale, bjcp: '18B' }
+american-ipa:        { label: American IPA, bjcp: '21A' }
+hazy-ipa:            { label: Hazy IPA, bjcp: '21C' }
+west-coast-ipa:      { label: West Coast IPA, bjcp: '21A' }
+double-ipa:          { label: Double IPA, bjcp: '22A' }
+cold-ipa:            { label: Cold IPA }
+american-amber:      { label: American Amber Ale, bjcp: '19A' }
+american-stout:      { label: American Stout, bjcp: '20B' }
+porter:              { label: Porter, bjcp: '13C' }
+american-lager:      { label: American Lager, bjcp: '1B' }
+pilsner:             { label: Pilsner, bjcp: '5D' }
+czech-pale-lager:    { label: Czech Pale Lager, bjcp: '3A' }
+helles:              { label: Munich Helles, bjcp: '4A' }
+marzen:              { label: Marzen, bjcp: '6A' }
+kolsch:              { label: Kolsch, bjcp: '5B' }
+altbier:             { label: Altbier, bjcp: '7B' }
+weissbier:           { label: Weissbier, bjcp: '10A' }
+saison:              { label: Saison, bjcp: '25B' }
+belgian-ale:         { label: Belgian Ale, bjcp: '24B' }
+biere-de-garde:      { label: Biere de Garde, bjcp: '24C' }
+trappist-ale:        { label: Trappist Ale, bjcp: '26B' }
+lambic:              { label: Lambic, bjcp: '23D' }
+english-bitter:      { label: English Bitter, bjcp: '11A' }
+esb:                 { label: Strong Bitter, bjcp: '11C' }
+english-ipa:         { label: English IPA, bjcp: '12C' }
+british-brown:       { label: British Brown Ale, bjcp: '13B' }
+barleywine:          { label: Barleywine, bjcp: '17D' }
+pale-lager:          { label: Pale Lager, bjcp: '2A' }
+sour-ale:            { label: Sour Ale, bjcp: '28A' }

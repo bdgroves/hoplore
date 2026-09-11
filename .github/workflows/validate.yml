@@ -1,0 +1,21 @@
+name: Validate data
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: prefix-dev/setup-pixi@v0.8.1
+        with:
+          environments: default
+          cache: true
+
+      # Same command a contributor runs locally, same pinned Node, same result.
+      - name: Check the data
+        run: pixi run check

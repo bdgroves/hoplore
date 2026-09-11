@@ -1,0 +1,187 @@
+# HopLore
+
+**An open hop database that shows its working.**
+
+Every hop spec sheet on the internet gives you one confident number. `Alpha: 5.5–8.5%`. Cool. Says who? Measured when? In whose field, in what crop year, by someone selling it to you or by someone who bred it?
+
+Nobody says. So I built a database that does.
+
+---
+
+## The thing that set me off
+
+I went looking for Aramis data one night — a French aroma hop, Strisselspalt crossed with WGV back in 2002 — and found four sites giving four different alpha ranges. One of them was honest enough to admit in its own methodology page that its sources were *"different or blatantly contradictory"* and that the fix was to widen the range until everything fit inside it.
+
+Which, fine. That is a reasonable thing to do. But it means the range you're reading is an artifact of an editorial decision made by a stranger, and you cannot see the decision, and you cannot check it, and you cannot disagree with it.
+
+I brew on a 10-gallon system in the garage with a notebook full of crossed-out numbers. I am not going to pretend I need four-decimal precision on cohumulone. But I do want to know whether the 5.5% low end came from the breeder or from a shop trying to move last year's crop, because those two numbers mean completely different things when I'm building a bittering charge.
+
+So: store the observations. Derive the range. Show both.
+
+```yaml
+alpha_acid:
+  unit: percent
+  observations:
+    - { source: beermaverick, low: 5.5, high: 8.5, typical: 7.0 }
+    - { source: hops-france,  low: 7.0, high: 8.5, note: 'Breeder figure, narrower than merchant spread.' }
+```
+
+That's the whole thesis. Nobody hand-writes a published range in this repo. You write down what each source actually said, and `npm run build` rolls it up into `5.5–8.5%, typical 7.5, agreement 0.75, 2 sources` — and the site renders the breeder's number and the aggregator's number as two separate dots on the same bar so you can *see* them disagree.
+
+---
+
+## What's in the jar
+
+```
+data/hops/*.yml         one file per cultivar — the actual product
+data/sources.yml        the source registry. no entry, no number.
+data/taxonomy/          controlled vocabulary for aroma, styles, countries, breeders
+schema/                 JSON Schema 2020-12. the contract.
+scripts/validate.js     the bouncer
+scripts/build.js        observations in, API + website out
+site/                   templates and styles for the static site
+dist/                   generated. gitignored. never edit.
+```
+
+Three outputs from one build, which is the point — the website is rendered *from* the API JSON, so the site can't drift from the data:
+
+| Output | What it is |
+|---|---|
+| `dist/api/v1/**` | A free JSON API. No key, no auth, no rate limit, CORS wide open. |
+| `dist/index.html` + `dist/hops/<slug>/` | The static site. Works with JavaScript off. |
+| `dist/api/v1/hops.csv` | For when you just want to open it in a spreadsheet like a normal person. |
+
+---
+
+## Run it
+
+```bash
+git clone git@github.com:bdgroves/hoplore.git
+cd hoplore
+pixi install
+
+pixi run validate    # yells at you about the data
+pixi run build       # writes dist/
+pixi run serve       # http://localhost:4173
+```
+
+Node is pinned in `pixi.toml` and locked in `pixi.lock`, so a fresh clone on any
+machine builds byte-identical output. That matters more than usual for a project
+whose entire pitch is "you can check my work" — if the build isn't reproducible,
+neither is the data.
+
+There's a second environment for the Python side of things, installed only when
+you ask for it, because nobody adding a hop record should have to download
+pandas to do it:
+
+```bash
+pixi run -e data python tools/ingest/run.py
+```
+
+If you'd rather not use pixi, `npm install && npm run build` works fine — the
+pixi tasks are thin wrappers around the npm scripts.
+
+`npm run validate` is the interesting one. It is deliberately hard to please.
+
+It checks the schema, then it checks the things a schema can't: that every cited source exists in the registry, that every substitute points at a hop that actually has a record, that no aroma tag has been invented on the spot, that oil components sum to roughly 100%, that nobody typed a cohumulone of 420, that a record marked `published` isn't quietly resting on placeholder citations, and that substitution suggestions go both ways so the graph is walkable instead of full of dead ends.
+
+Errors fail the build. Warnings don't — they print as a to-do list, because a visible gap beats an invisible guess.
+
+```
+HopLore data check
+  13 cultivars, 12 sources, 63 aroma tags
+  status: 1 published, 12 draft
+
+23 warnings
+  ~ cascade.yml pedigree.parents: seed parent "fuggle" is not yet in the dataset
+  ~ nelson-sauvin.yml meta.verification: cites a placeholder source
+  ...
+
+All checks passed.
+```
+
+---
+
+## Substitution, done with math instead of vibes
+
+"What can I use instead of Citra" is really three questions wearing a trenchcoat, so `scripts/lib/similarity.js` answers all three separately:
+
+- **chemistry** — scaled distance across alpha, beta, cohumulone, total oil
+- **oils** — distance across the normalised oil breakdown, so myrcene-bombs cluster with myrcene-bombs
+- **aroma** — tag overlap, with partial credit where two tags share a parent family, because grapefruit and tangerine are not strangers
+
+Then curated swaps — the ones a human vouched for in the YAML — get a bonus on top, because a brewer who has actually made the swap beats a distance metric every time.
+
+```
+Citra →  Mosaic         86   chem 0.91  oils 0.83  aroma 0.33  [brewer-tested]
+         Simcoe         70   chem 0.84  oils 0.96  aroma 0.42
+         Centennial     64   chem 0.83  oils 0.85  aroma 0.23
+         Nelson Sauvin  49   chem 0.67  oils 0.24  aroma 0.41
+```
+
+Nelson scoring 49 is the system working. Nothing substitutes for Nelson Sauvin. The number agrees.
+
+---
+
+## The API
+
+Static JSON on a CDN, which means it costs nothing to run and can't go down independently of the site.
+
+```
+GET /api/v1/index.json            slim list, ~all you need for search
+GET /api/v1/hops.json             everything
+GET /api/v1/hops/citra.json       one hop, ranges + every underlying observation
+GET /api/v1/similar/citra.json    ranked substitutes with component scores
+GET /api/v1/sources.json          the source registry
+GET /api/v1/taxonomy.json         aroma tags, styles, countries, breeders
+GET /api/v1/hops.csv              the whole thing, flattened
+GET /api/v1/schema/hop.schema.json
+```
+
+Every response carries a `meta` envelope with the build timestamp and license. `v1` will not break. If the shape needs to change, it becomes `v2` and `v1` keeps working.
+
+Building something with it? Go ahead — it's CC BY 4.0, just credit it. I'd love to hear about it.
+
+---
+
+## Honest state of the data
+
+**13 cultivars, and most of them are seeded rather than sourced.**
+
+I bootstrapped the initial records from general brewing knowledge so there'd be something to build the tooling against, and every one of those citations points at a source called `seed-general-knowledge` with `tier: unsourced` and `weight: 0.1`. The validator flags them. The build report lists them by name. The site renders them with a red dot that says "needs a citation."
+
+That is not me being modest, it's the design. A dataset that can't tell you which of its numbers to distrust is worse than no dataset. Replacing a `seed-general-knowledge` citation with a real breeder sheet is the single most useful thing anyone can do here, and it's a five-line diff.
+
+Aramis is the one fully-worked example. Copy its shape.
+
+---
+
+## Contributing
+
+Adding a hop is: copy `data/hops/aramis.yml`, change everything, cite your sources in `data/sources.yml`, run `pixi run validate`, open a PR. CI runs `pixi run check` — the same command, the same pinned Node — so if it's green locally it's green there.
+
+Full instructions with the gotchas are in [CONTRIBUTING.md](CONTRIBUTING.md). The short version of the one rule that matters: **never write a range you calculated yourself.** Write what the source said. The build does the arithmetic, in public, the same way for every hop.
+
+Found a wrong number? [Open an issue](../../issues/new?template=data-correction.yml) — there's a template, it takes a minute, and a correction with a source link is more valuable to this project than a new hop without one.
+
+---
+
+## Roadmap, roughly in order of how much I want it
+
+- [ ] Get to 100 cultivars with real breeder citations
+- [ ] Crop-year data, so you can see alpha drift across harvests instead of one eternal average
+- [ ] An IBU calculator that pulls straight from the dataset
+- [ ] BeerXML / BeerJSON import: paste a recipe, get told what's substitutable
+- [ ] "What's in my freezer" — pick the hops you own, get the beers you can build
+- [ ] Embeddable web component, so other brewing sites can pull a hop card with two lines of HTML
+- [ ] Storage stability curves, because nobody publishes them and everybody needs them
+
+---
+
+## Licensing, and a disclaimer
+
+Code is **MIT**. Data is **CC BY 4.0** — use it, sell things built on it, just say where it came from. Two licenses because they are genuinely two different assets, and the data is the one that took the work.
+
+Not affiliated with any hop breeder, farm, merchant, or the aggregators cited in `data/sources.yml`. Variety names are trademarks of their owners and are used here to identify the plants, which is what names are for. Measured properties of a plant are facts; facts don't belong to anybody. See [NOTICE.md](NOTICE.md).
+
+Built in the Pacific Northwest, which is where most of these grow, which is at least a little bit why I care.

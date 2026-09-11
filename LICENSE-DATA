@@ -1,0 +1,18 @@
+The contents of the `data/` directory — the hop records, source registry and
+taxonomies — are licensed under the Creative Commons Attribution 4.0
+International License (CC BY 4.0).
+
+Full text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+You are free to share and adapt this data for any purpose, including
+commercially, provided you give appropriate credit and indicate if changes
+were made.
+
+Suggested attribution:
+
+    Hop data from HopLore (https://github.com/bdgroves/hoplore), CC BY 4.0.
+
+Code in this repository is licensed separately under the MIT License; see
+LICENSE.
+
+See NOTICE.md regarding trademarks and third-party rights.

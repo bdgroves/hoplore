@@ -1,0 +1,69 @@
+slug: citra
+name: Citra
+aliases: [HBC 394, X-114]
+purpose: dual
+country: US
+international_code: CTA
+cultivar_id: HBC 394
+kind: cultivar
+ownership:
+  holder: Hop Breeding Company
+  mark: registered
+  public_domain: false
+  plant_patent: USPP 18,956
+pedigree:
+  year_crossed: 1990
+  released: 2008
+  breeder: hbc
+  parents: { seed: hallertau-mittelfrueh, note: 'Complex pedigree including Hallertau Mittelfruh, Tettnanger, East Kent Golding and Brewer''s Gold.' }
+  refs: [seed-general-knowledge]
+aroma:
+  summary: >
+    Passionfruit, mango and grapefruit, loud and immediate. The hop that made
+    the modern IPA possible, and the one most likely to smell like cat pee if
+    you overdo the dry hop or let it sit warm.
+  tags: [passionfruit, mango, grapefruit, citrus, tropical, lime, peach]
+  refs: [seed-general-knowledge]
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: seed-general-knowledge, low: 10.0, high: 15.0, typical: 12.0 }
+      - { source: usda-nass-2022, typical: 12.4, crop_year: 2022 }
+  beta_acid:
+    unit: percent
+    observations: [{ source: seed-general-knowledge, low: 3.0, high: 4.5 }]
+  cohumulone:
+    unit: percent_of_alpha
+    observations: [{ source: seed-general-knowledge, low: 22, high: 28 }]
+  total_oil:
+    unit: ml_per_100g
+    observations: [{ source: seed-general-knowledge, low: 1.5, high: 3.0 }]
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 60, high: 70 }]
+  humulene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 8, high: 13 }]
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 4, high: 8 }]
+  farnesene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, typical: 1 }]
+  other:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 12, high: 25 }]
+usage:
+  timing: [bittering, whirlpool, dry-hop]
+  beer_styles: [american-ipa, hazy-ipa, double-ipa, west-coast-ipa, american-pale-ale, sour-ale]
+products: { cryo: true, lupomax: true, spectrum_extract: true }
+substitutes:
+  - { slug: mosaic, confidence: high, note: 'Half-sibling by way of Simcoe. Less pure citrus, more berry.' }
+  - { slug: nelson-sauvin, confidence: low, note: 'Different fruit entirely, but similar intensity.' }
+  - { slug: centennial, confidence: low }
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-11'

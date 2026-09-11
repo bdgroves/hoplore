@@ -1,0 +1,47 @@
+slug: strisselspalt
+name: Strisselspalt
+aliases: [Strisselspalter]
+purpose: aroma
+country: FR
+kind: cultivar
+ownership: { mark: public, public_domain: true }
+pedigree:
+  breeder: unknown
+  parents: { unknown: true, note: 'A landrace of the Alsace region, not a bred cross.' }
+  refs: [seed-general-knowledge]
+aroma:
+  summary: >
+    The French noble analogue. Delicate, herbal and floral with a light citrus
+    lift; often described as sitting between Hallertau Mittelfruh and Hersbrucker.
+  tags: [herbal, floral, noble, citrus, spice]
+  refs: [seed-general-knowledge]
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: seed-general-knowledge, low: 1.8, high: 5.0, typical: 3.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: seed-general-knowledge, low: 3.0, high: 5.5 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: seed-general-knowledge, low: 20, high: 25 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: seed-general-knowledge, low: 0.6, high: 0.8 }
+usage:
+  timing: [late-boil, whirlpool]
+  beer_styles: [pilsner, pale-lager, helles, saison, biere-de-garde, weissbier]
+products: { cryo: false, lupomax: false }
+substitutes:
+  - { slug: aramis, confidence: high, note: 'Offspring. More alpha and oil, so scale back.' }
+  - { slug: hallertau-mittelfrueh, confidence: high }
+  - { slug: willamette, confidence: medium }
+meta:
+  status: draft
+  verification: unverified
+  last_reviewed: '2026-09-11'
+  notes: Needs a Comptoir Agricole or BarthHaas sheet to replace the seed citations.

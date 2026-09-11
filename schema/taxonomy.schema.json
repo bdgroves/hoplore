@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hoplore.dev/api/v1/schema/taxonomy.schema.json",
+  "title": "Controlled vocabulary",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["label"],
+    "properties": {
+      "label": { "type": "string" },
+      "parent": { "type": "string", "description": "Broader term, for rolling grapefruit up into citrus." },
+      "bjcp": { "type": "string", "description": "BJCP 2021 style code, where applicable." },
+      "country": { "type": "string", "pattern": "^[A-Z]{2}$" },
+      "url": { "type": "string", "format": "uri" },
+      "note": { "type": "string" }
+    }
+  }
+}

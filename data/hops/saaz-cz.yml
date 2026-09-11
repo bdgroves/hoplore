@@ -1,0 +1,58 @@
+slug: saaz-cz
+name: Saaz
+aliases: [Žatec, Zatec, Saazer, Czech Saaz]
+purpose: aroma
+country: CZ
+kind: cultivar
+ownership: { mark: public, public_domain: true }
+pedigree:
+  breeder: unknown
+  parents: { unknown: true, note: 'A protected-origin landrace of the Zatec region, centuries old.' }
+  refs: [seed-general-knowledge]
+aroma:
+  summary: >
+    Delicate, hay-like and faintly spicy, with the cinnamon-tea character that
+    defines a Czech pilsner. Very low alpha and poor storage stability; buy it
+    fresh or do not bother.
+  tags: [noble, herbal, spice, cinnamon, floral, tea, grassy]
+  refs: [seed-general-knowledge]
+analytics:
+  alpha_acid:
+    unit: percent
+    observations: [{ source: seed-general-knowledge, low: 2.5, high: 4.5, typical: 3.5 }]
+  beta_acid:
+    unit: percent
+    observations: [{ source: seed-general-knowledge, low: 4.0, high: 6.0 }]
+  cohumulone:
+    unit: percent_of_alpha
+    observations: [{ source: seed-general-knowledge, low: 23, high: 28 }]
+  total_oil:
+    unit: ml_per_100g
+    observations: [{ source: seed-general-knowledge, low: 0.4, high: 0.8 }]
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 25, high: 40 }]
+  humulene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 20, high: 35 }]
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 6, high: 10 }]
+  farnesene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 12, high: 20, note: Unusually high farnesene is a Saaz marker. }]
+  other:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 10, high: 25 }]
+usage:
+  timing: [late-boil, whirlpool]
+  beer_styles: [czech-pale-lager, pilsner, pale-lager, helles, lambic, saison, weissbier]
+products: { cryo: false, lupomax: false }
+substitutes:
+  - { slug: hallertau-mittelfrueh, confidence: high }
+  - { slug: strisselspalt, confidence: medium }
+meta:
+  status: draft
+  verification: unverified
+  last_reviewed: '2026-09-11'

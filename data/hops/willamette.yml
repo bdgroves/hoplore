@@ -1,0 +1,64 @@
+slug: willamette
+name: Willamette
+purpose: aroma
+country: US
+also_grown_in: [GB]
+kind: cultivar
+ownership: { mark: public, public_domain: true }
+pedigree:
+  released: 1976
+  breeder: usda-ars
+  parents: { seed: fuggle, note: A triploid Fuggle seedling selected in Oregon; Fuggle not yet in dataset. }
+  refs: [seed-general-knowledge]
+aroma:
+  summary: >
+    Soft, earthy and mildly floral with a faint fruit note. The quiet American
+    Fuggle — it fills out a malt-forward beer without asking for attention.
+  tags: [earthy, floral, herbal, woody, spice, orchard]
+  refs: [seed-general-knowledge]
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: seed-general-knowledge, low: 4.0, high: 6.0, typical: 5.0 }
+      - { source: usda-nass-2022, typical: 5.2, crop_year: 2022, note: Crop-year average across Oregon acreage. }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: seed-general-knowledge, low: 3.0, high: 4.5 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: seed-general-knowledge, low: 30, high: 35 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: seed-general-knowledge, low: 1.0, high: 1.5 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 30, high: 40 }]
+  humulene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 20, high: 30 }]
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 7, high: 8 }]
+  farnesene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 5, high: 6 }]
+  other:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 20, high: 30 }]
+usage:
+  timing: [late-boil, whirlpool, dry-hop]
+  beer_styles: [american-pale-ale, american-amber, porter, british-brown, english-bitter, american-lager]
+products: { cryo: false, lupomax: false }
+substitutes:
+  - { slug: strisselspalt, confidence: medium }
+  - { slug: challenger, confidence: low }
+  - { slug: aramis, confidence: low }
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-11'

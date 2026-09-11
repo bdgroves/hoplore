@@ -1,0 +1,63 @@
+slug: mosaic
+name: Mosaic
+aliases: [HBC 369]
+purpose: dual
+country: US
+cultivar_id: HBC 369
+kind: cultivar
+ownership:
+  holder: Hop Breeding Company
+  mark: registered
+  public_domain: false
+  plant_patent: USPP 25,340
+pedigree:
+  year_crossed: 2000
+  released: 2012
+  breeder: hbc
+  parents: { seed: simcoe, note: Simcoe crossed with a Nugget-derived male. }
+  refs: [seed-general-knowledge]
+aroma:
+  summary: >
+    Blueberry, mango and a dry herbal snap, which is why the name stuck — it
+    lands differently depending on where in the process you put it. Whirlpool
+    for fruit, dry hop for the herbal side.
+  tags: [blueberry, mango, tropical, citrus, herbal, pine, floral]
+  refs: [seed-general-knowledge]
+analytics:
+  alpha_acid:
+    unit: percent
+    observations: [{ source: seed-general-knowledge, low: 10.5, high: 14.0, typical: 12.0 }]
+  beta_acid:
+    unit: percent
+    observations: [{ source: seed-general-knowledge, low: 3.0, high: 4.5 }]
+  cohumulone:
+    unit: percent_of_alpha
+    observations: [{ source: seed-general-knowledge, low: 22, high: 26 }]
+  total_oil:
+    unit: ml_per_100g
+    observations: [{ source: seed-general-knowledge, low: 1.0, high: 2.5 }]
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 50, high: 60 }]
+  humulene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 12, high: 18 }]
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 6, high: 10 }]
+  other:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 15, high: 30 }]
+usage:
+  timing: [whirlpool, dry-hop, bittering]
+  beer_styles: [hazy-ipa, american-ipa, double-ipa, american-pale-ale, west-coast-ipa]
+products: { cryo: true, lupomax: true }
+substitutes:
+  - { slug: citra, confidence: high }
+  - { slug: simcoe, confidence: medium, note: 'Seed parent. Drier, more pine.' }
+  - { slug: nelson-sauvin, confidence: low }
+meta:
+  status: draft
+  verification: unverified
+  last_reviewed: '2026-09-11'

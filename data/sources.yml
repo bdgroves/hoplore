@@ -1,0 +1,91 @@
+# The source registry. Every number in data/hops/ cites a key from this file.
+# If you add an observation, add its source here first.
+#
+# tier drives trust: breeder > lab > literature > merchant > aggregator > unsourced
+# weight is used by scripts/lib/rollup.js when sources disagree.
+
+hops-france:
+  publisher: Hops France (COMPTOIR AGRICOLE)
+  title: Aramis variety data sheet
+  url: https://www.hops-france.com/en/our-varieties/
+  tier: breeder
+  weight: 1.0
+
+hopsteiner:
+  publisher: Hopsteiner
+  title: Hop variety data sheets
+  url: https://www.hopsteiner.com/variety-data-sheets/
+  tier: breeder
+  weight: 1.0
+
+ychr:
+  publisher: Yakima Chief Ranches
+  title: Proprietary variety specifications
+  url: https://yakimachiefranches.com/hop-varieties/
+  tier: breeder
+  weight: 1.0
+
+nzhops:
+  publisher: New Zealand Hops Ltd
+  title: NZ Hops variety guide
+  url: https://www.nzhops.co.nz/hop-varieties
+  tier: breeder
+  weight: 1.0
+
+barthhaas:
+  publisher: BarthHaas
+  title: Variety data sheets
+  url: https://www.barthhaas.com/en/hops-and-products/hop-varieties
+  tier: breeder
+  weight: 1.0
+
+crosby:
+  publisher: Crosby Hop Farm
+  title: Hop variety specifications
+  url: https://crosbyhops.com/hops/
+  tier: merchant
+  weight: 0.7
+
+yvh:
+  publisher: Yakima Valley Hops
+  title: Retail hop listings
+  url: https://yakimavalleyhops.com/collections/hops
+  tier: merchant
+  weight: 0.6
+
+bsg:
+  publisher: BSG HandCraft
+  title: Hop variety reference
+  url: https://bsgcraftbrewing.com/hops
+  tier: merchant
+  weight: 0.6
+
+usda-nass-2022:
+  publisher: USDA National Agricultural Statistics Service
+  title: National Hop Report 2022
+  url: https://www.nass.usda.gov/Statistics_by_Subject/result.php?sector=CROPS
+  retrieved: '2022-12-01'
+  tier: literature
+  weight: 0.9
+
+seed-general-knowledge:
+  publisher: HopLore seed pass
+  title: Values entered from general brewing knowledge, pending a primary citation
+  tier: unsourced
+  weight: 0.1
+  note: >
+    Placeholder used only during the initial seed of this repo. Any record citing
+    this source is flagged unverified and will not be marked published.
+    Replacing these citations with real ones is the single most useful
+    contribution anyone can make. See CONTRIBUTING.md.
+
+beermaverick:
+  publisher: Beer Maverick
+  title: Hop varieties database
+  url: https://beermaverick.com/hops/
+  tier: aggregator
+  weight: 0.4
+  note: >
+    A compiled secondary source. Useful for cross-checking and for its honest
+    admission that upstream sources contradict each other. Cited where a range
+    came from their compilation rather than from a sheet we read ourselves.

@@ -1,0 +1,65 @@
+slug: simcoe
+name: Simcoe
+aliases: [YCR 14]
+purpose: dual
+country: US
+cultivar_id: YCR 14
+kind: cultivar
+ownership:
+  holder: Yakima Chief Ranches
+  mark: registered
+  public_domain: false
+  plant_patent: USPP 15,485
+pedigree:
+  released: 2000
+  breeder: ychr
+  parents: { unknown: true, note: Pedigree not published by the breeder. }
+  refs: [seed-general-knowledge]
+aroma:
+  summary: >
+    Pine and passionfruit at the same time, over a dry resinous base. The West
+    Coast IPA hop — high alpha, low cohumulone, so it bitters hard without
+    scraping.
+  tags: [pine, resinous, passionfruit, grapefruit, apricot, dank, woody]
+  refs: [seed-general-knowledge]
+analytics:
+  alpha_acid:
+    unit: percent
+    observations: [{ source: seed-general-knowledge, low: 11.0, high: 15.0, typical: 13.0 }]
+  beta_acid:
+    unit: percent
+    observations: [{ source: seed-general-knowledge, low: 4.0, high: 5.0 }]
+  cohumulone:
+    unit: percent_of_alpha
+    observations: [{ source: seed-general-knowledge, low: 15, high: 20 }]
+  total_oil:
+    unit: ml_per_100g
+    observations: [{ source: seed-general-knowledge, low: 2.0, high: 2.5 }]
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 60, high: 65 }]
+  humulene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 10, high: 15 }]
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 5, high: 8 }]
+  farnesene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, typical: 1 }]
+  other:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 12, high: 22 }]
+usage:
+  timing: [bittering, whirlpool, dry-hop]
+  beer_styles: [west-coast-ipa, american-ipa, double-ipa, american-pale-ale, cold-ipa]
+products: { cryo: true, lupomax: false }
+substitutes:
+  - { slug: mosaic, confidence: medium, note: Direct descendant. }
+  - { slug: centennial, confidence: medium }
+  - { slug: citra, confidence: low }
+meta:
+  status: draft
+  verification: unverified
+  last_reviewed: '2026-09-11'

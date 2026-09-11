@@ -1,0 +1,15 @@
+AU: { label: Australia }
+CA: { label: Canada }
+CN: { label: China }
+CZ: { label: Czech Republic }
+FR: { label: France }
+DE: { label: Germany }
+JP: { label: Japan }
+NZ: { label: New Zealand }
+PL: { label: Poland }
+SI: { label: Slovenia }
+ZA: { label: South Africa }
+UA: { label: Ukraine }
+GB: { label: United Kingdom }
+US: { label: United States }
+AR: { label: Argentina }

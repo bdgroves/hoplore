@@ -1,0 +1,13 @@
+node_modules/
+dist/
+
+# pixi manages the environment; the lockfile IS committed, the env is not
+.pixi/
+*.egg-info/
+__pycache__/
+.DS_Store
+Thumbs.db
+*.log
+.env
+.vscode/
+.idea/

@@ -1,0 +1,20 @@
+{
+  "name": "hoplore",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "An open, sourced, version-controlled database of hop cultivars — plus a static site and a free JSON API.",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "validate": "node scripts/validate.js",
+    "build": "node scripts/build.js",
+    "serve": "node --run build && node scripts/serve.js",
+    "new-hop": "node scripts/new-hop.js"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "yaml": "^2.6.1"
+  }
+}

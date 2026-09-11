@@ -1,0 +1,245 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hoplore.dev/api/v1/schema/hop.schema.json",
+  "title": "Hop cultivar",
+  "description": "One hop cultivar, blend or experimental selection. Numeric properties store raw per-source OBSERVATIONS; published ranges are derived at build time by scripts/rollup.js and must never be hand-written into these files.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["slug", "name", "purpose", "country", "meta"],
+
+  "$defs": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Lowercase kebab-case identifier. Must match the filename."
+    },
+    "sourceId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9.]+)*$",
+      "description": "Key into data/sources.yml."
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source"],
+      "description": "What ONE source reported. Give low+high for a range, typical for a single figure, or all three. An observation with no numbers is invalid — omit it instead.",
+      "properties": {
+        "source": { "$ref": "#/$defs/sourceId" },
+        "low": { "type": "number", "minimum": 0 },
+        "high": { "type": "number", "minimum": 0 },
+        "typical": { "type": "number", "minimum": 0 },
+        "crop_year": { "type": "integer", "minimum": 1900, "maximum": 2100 },
+        "note": { "type": "string", "maxLength": 280 }
+      },
+      "anyOf": [
+        { "required": ["low", "high"] },
+        { "required": ["typical"] }
+      ]
+    },
+    "metric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["unit", "observations"],
+      "properties": {
+        "unit": {
+          "enum": [
+            "percent",
+            "percent_of_alpha",
+            "percent_of_total_oil",
+            "ml_per_100g",
+            "ratio"
+          ]
+        },
+        "observations": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/observation" }
+        }
+      }
+    }
+  },
+
+  "properties": {
+    "slug": { "$ref": "#/$defs/slug" },
+    "name": { "type": "string", "minLength": 2, "maxLength": 80 },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Trade names, former names, regional spellings. Fed into site search."
+    },
+    "purpose": {
+      "enum": ["aroma", "bittering", "dual"],
+      "description": "Typical brewing role. Contested calls belong in meta.notes, not a fourth value."
+    },
+    "country": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "description": "ISO 3166-1 alpha-2 country of origin (where bred), not every country it is now grown in."
+    },
+    "also_grown_in": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[A-Z]{2}$" }
+    },
+    "international_code": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "Three-letter trade code where one exists, e.g. ARS, CTZ."
+    },
+    "cultivar_id": {
+      "type": "string",
+      "maxLength": 40,
+      "description": "Breeder's selection number, e.g. 'P 05-9', 'HBC 394'."
+    },
+    "kind": {
+      "enum": ["cultivar", "blend", "experimental"],
+      "default": "cultivar"
+    },
+
+    "ownership": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "holder": { "type": "string" },
+        "mark": { "enum": ["trademark", "registered", "public"] },
+        "public_domain": { "type": "boolean" },
+        "plant_patent": { "type": "string", "description": "e.g. 'USPP 18,318'" }
+      }
+    },
+
+    "pedigree": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "year_crossed": { "type": "integer", "minimum": 1700, "maximum": 2100 },
+        "released": { "type": "integer", "minimum": 1700, "maximum": 2100 },
+        "breeder": { "type": "string", "description": "Key into data/taxonomy/breeders.yml." },
+        "parents": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "seed": { "type": "string" },
+            "pollen": { "type": "string" },
+            "unknown": { "type": "boolean" },
+            "note": { "type": "string" }
+          }
+        },
+        "refs": { "type": "array", "items": { "$ref": "#/$defs/sourceId" } }
+      }
+    },
+
+    "aroma": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "summary": { "type": "string", "maxLength": 600 },
+        "tags": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/slug" },
+          "description": "Keys into data/taxonomy/aroma-tags.yml. No free text."
+        },
+        "refs": { "type": "array", "items": { "$ref": "#/$defs/sourceId" } }
+      }
+    },
+
+    "analytics": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "alpha_acid": { "$ref": "#/$defs/metric" },
+        "beta_acid": { "$ref": "#/$defs/metric" },
+        "cohumulone": { "$ref": "#/$defs/metric" },
+        "total_oil": { "$ref": "#/$defs/metric" },
+        "hsi": {
+          "$ref": "#/$defs/metric",
+          "description": "Hop Storage Index."
+        },
+        "alpha_retention_6mo_20c": {
+          "$ref": "#/$defs/metric",
+          "description": "Percent of alpha acid retained after 6 months at 20 C."
+        }
+      }
+    },
+
+    "oils": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Each component as a percent of total oil.",
+      "properties": {
+        "myrcene": { "$ref": "#/$defs/metric" },
+        "humulene": { "$ref": "#/$defs/metric" },
+        "caryophyllene": { "$ref": "#/$defs/metric" },
+        "farnesene": { "$ref": "#/$defs/metric" },
+        "linalool": { "$ref": "#/$defs/metric" },
+        "geraniol": { "$ref": "#/$defs/metric" },
+        "pinene": { "$ref": "#/$defs/metric" },
+        "selinene": { "$ref": "#/$defs/metric" },
+        "other": { "$ref": "#/$defs/metric" }
+      }
+    },
+
+    "usage": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "timing": {
+          "type": "array",
+          "items": { "enum": ["first-wort", "bittering", "late-boil", "whirlpool", "dry-hop"] }
+        },
+        "beer_styles": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/slug" },
+          "description": "Keys into data/taxonomy/beer-styles.yml."
+        }
+      }
+    },
+
+    "products": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Concentrated lupulin and extract formats known to exist for this hop.",
+      "properties": {
+        "cryo": { "type": "boolean" },
+        "lupomax": { "type": "boolean" },
+        "hopsteiner_pellet_lupulin": { "type": "boolean" },
+        "spectrum_extract": { "type": "boolean" },
+        "refs": { "type": "array", "items": { "$ref": "#/$defs/sourceId" } }
+      }
+    },
+
+    "substitutes": {
+      "type": "array",
+      "description": "Human-asserted swaps. Computed similarity scores are generated into dist/ and never committed here.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["slug"],
+        "properties": {
+          "slug": { "$ref": "#/$defs/slug" },
+          "confidence": { "enum": ["high", "medium", "low"] },
+          "note": { "type": "string", "maxLength": 200 },
+          "refs": { "type": "array", "items": { "$ref": "#/$defs/sourceId" } }
+        }
+      }
+    },
+
+    "blend_of": {
+      "type": "array",
+      "description": "For kind: blend. Proprietary blends may legitimately list an empty array.",
+      "items": { "$ref": "#/$defs/slug" }
+    },
+
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "verification"],
+      "properties": {
+        "status": { "enum": ["stub", "draft", "published"] },
+        "verification": {
+          "enum": ["unverified", "single-source", "corroborated"],
+          "description": "unverified = seeded from general knowledge, needs a primary source. single-source = one citation. corroborated = two or more independent sources."
+        },
+        "last_reviewed": { "type": "string", "format": "date" },
+        "notes": { "type": "string", "maxLength": 1000 }
+      }
+    }
+  }
+}

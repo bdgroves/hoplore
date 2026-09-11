@@ -1,0 +1,47 @@
+slug: challenger
+name: Challenger
+purpose: dual
+country: GB
+kind: cultivar
+ownership: { mark: public, public_domain: true }
+pedigree:
+  released: 1972
+  breeder: wye
+  parents: { seed: northern-brewer-gb, note: Northern Brewer crossed with a German male; seed parent slug not yet in dataset. }
+  refs: [seed-general-knowledge]
+aroma:
+  summary: >
+    Crisp and green-spicy with cedar and a dry floral edge. Bitters cleanly,
+    which is why it shows up as both the copper addition and the late charge in
+    a lot of English recipes.
+  tags: [spice, cedar, floral, green, tea, earthy]
+  refs: [seed-general-knowledge]
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: seed-general-knowledge, low: 6.0, high: 9.0, typical: 7.5 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: seed-general-knowledge, low: 2.5, high: 4.5 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: seed-general-knowledge, low: 20, high: 25 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: seed-general-knowledge, low: 1.0, high: 1.7 }
+usage:
+  timing: [bittering, late-boil, dry-hop]
+  beer_styles: [english-bitter, esb, english-ipa, porter, british-brown, american-amber]
+products: { cryo: false, lupomax: false }
+substitutes:
+  - { slug: whitbread-golding-variety, confidence: medium }
+  - { slug: aramis, confidence: medium }
+  - { slug: willamette, confidence: low }
+meta:
+  status: draft
+  verification: unverified
+  last_reviewed: '2026-09-11'

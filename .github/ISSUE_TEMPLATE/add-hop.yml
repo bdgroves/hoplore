@@ -1,0 +1,27 @@
+name: Missing hop
+description: Request a cultivar that is not in the dataset yet
+title: "[hop] "
+labels: [data, new-hop]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Variety name
+    validations:
+      required: true
+  - type: input
+    id: country
+    attributes:
+      label: Country of origin
+      placeholder: US
+  - type: textarea
+    id: sources
+    attributes:
+      label: Where can its data be found
+      description: Links to breeder or merchant sheets. A request with sources gets added; one without waits.
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Want to add it yourself?
+      options:
+        - label: I'd like to open the PR — point me at CONTRIBUTING.md

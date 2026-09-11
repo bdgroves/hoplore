@@ -1,0 +1,71 @@
+# HopLore toolchain.
+#
+# The repo is Node underneath, but pinning the Node version here means a fresh
+# clone on any machine builds byte-identical output — which matters more than
+# usual for a project whose whole pitch is reproducibility.
+#
+#   pixi install          set up the environment
+#   pixi run validate     check the data
+#   pixi run build        write dist/
+#   pixi run serve        look at it
+#   pixi run new-hop "Mount Hood" US aroma
+
+[workspace]
+name = "hoplore"
+version = "0.1.0"
+description = "An open, sourced, version-controlled database of hop cultivars."
+authors = ["Brooks Groves"]
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64", "osx-arm64", "osx-64"]
+
+[dependencies]
+nodejs = ">=22,<23"
+
+[tasks]
+
+# npm install is cached on the lockfile, so it only actually runs when
+# dependencies change rather than before every single task.
+install = { cmd = "npm install", inputs = [
+  "package.json",
+  "package-lock.json",
+], outputs = [
+  "node_modules/.package-lock.json",
+] }
+
+validate = { cmd = "node scripts/validate.js", depends-on = ["install"] }
+build = { cmd = "node scripts/build.js", depends-on = ["validate"] }
+serve = { cmd = "node scripts/serve.js", depends-on = ["build"] }
+new-hop = { cmd = "node scripts/new-hop.js", depends-on = ["install"] }
+
+# What CI runs. Same command locally, so green here means green there.
+check = { depends-on = ["validate", "build"] }
+
+clean = { cmd = "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"" }
+
+# ---------------------------------------------------------------------------
+# Data ingest environment.
+#
+# Separate because 95% of the work here is Node, and nobody adding a hop record
+# should have to download pandas to do it. Installed only when you ask for it:
+#
+#   pixi run -e data python tools/ingest/example.py
+#
+# This is where PDF scraping of breeder sheets and crop-year ingest will live.
+# ---------------------------------------------------------------------------
+
+[feature.data.dependencies]
+python = ">=3.12"
+pandas = "*"
+requests = "*"
+beautifulsoup4 = "*"
+lxml = "*"
+pdfplumber = "*"
+"ruamel.yaml" = "*"
+
+[feature.data.tasks]
+ingest = "python tools/ingest/run.py"
+shell-data = "python"
+
+[environments]
+default = { solve-group = "default" }
+data = { features = ["data"], solve-group = "default" }

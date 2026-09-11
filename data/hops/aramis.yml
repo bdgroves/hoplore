@@ -1,0 +1,101 @@
+# Reference record. If you are adding a hop, copy the SHAPE of this file.
+# Note that no published range is written down anywhere here — only what each
+# source said. `npm run build` does the rolling up.
+
+slug: aramis
+name: Aramis
+aliases: []
+purpose: aroma
+country: FR
+international_code: ARS
+cultivar_id: P 05-9
+kind: cultivar
+
+ownership:
+  holder: Hops France
+  mark: trademark
+  public_domain: false
+
+pedigree:
+  year_crossed: 2002
+  released: 2008
+  breeder: comav
+  parents:
+    seed: strisselspalt
+    pollen: whitbread-golding-variety
+  refs: [hops-france, beermaverick]
+
+aroma:
+  summary: >
+    Sweet and spicy, reading as a louder Strisselspalt — same family resemblance,
+    more oil and more alpha behind it. Spicy and herbal up front with a subtle
+    citrus edge.
+  tags: [spice, black-pepper, herbal, citrus, floral, grassy, green]
+  refs: [hops-france, beermaverick]
+
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: beermaverick, low: 5.5, high: 8.5, typical: 7.0 }
+      - { source: hops-france, low: 7.0, high: 8.5, note: 'Breeder figure, narrower than merchant spread.' }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: beermaverick, low: 3.0, high: 5.5, typical: 4.3 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: beermaverick, low: 20, high: 42, typical: 31 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: beermaverick, low: 1.2, high: 1.6, typical: 1.4 }
+
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: beermaverick, low: 38, high: 41, typical: 39.5 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: beermaverick, low: 19, high: 22, typical: 20.5 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: beermaverick, low: 2, high: 8, typical: 5 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: beermaverick, low: 2, high: 4, typical: 3 }
+  other:
+    unit: percent_of_total_oil
+    observations:
+      - { source: beermaverick, low: 25, high: 39, note: 'Includes beta-pinene, linalool, geraniol and selinene.' }
+
+usage:
+  timing: [late-boil, whirlpool, dry-hop]
+  beer_styles: [saison, belgian-ale, biere-de-garde, trappist-ale, porter, american-pale-ale, weissbier, pilsner, pale-lager]
+
+products:
+  cryo: false
+  lupomax: false
+  hopsteiner_pellet_lupulin: false
+
+substitutes:
+  - { slug: strisselspalt, confidence: high, note: 'Seed parent. Closest match, dial the charge up slightly.' }
+  - { slug: whitbread-golding-variety, confidence: medium, note: 'Pollen parent. Earthier, less citrus.' }
+  - { slug: challenger, confidence: medium }
+  - { slug: willamette, confidence: low }
+  - { slug: hallertau-mittelfrueh, confidence: low, note: Noble-adjacent swap when spice matters more than citrus. }
+
+meta:
+  status: published
+  verification: corroborated
+  last_reviewed: '2026-09-11'
+  notes: >
+    A good illustration of why this repo stores observations instead of one
+    range: the breeder publishes 7.0-8.5% alpha while merchant listings run as
+    low as 5.5%. Both are recorded, and the site shows the spread rather than
+    quietly splitting the difference.

@@ -1,0 +1,49 @@
+name: Wrong number
+description: A figure in the dataset is incorrect or out of date
+title: "[data] "
+labels: [data, correction]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Corrections are the most valuable contribution to this project. Thank you.
+  - type: input
+    id: hop
+    attributes:
+      label: Which hop
+      placeholder: citra
+    validations:
+      required: true
+  - type: input
+    id: field
+    attributes:
+      label: Which field
+      placeholder: analytics.alpha_acid
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: What it says now, and what it should say
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: A link to a breeder sheet, lab analysis, or published report. This is the part that matters.
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: tier
+    attributes:
+      label: What kind of source is it
+      options:
+        - Breeder or licensor
+        - Published lab analysis
+        - Book, paper or government report
+        - Merchant spec sheet
+        - Another database or website
+    validations:
+      required: true

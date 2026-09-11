@@ -1,0 +1,62 @@
+slug: centennial
+name: Centennial
+aliases: [CFJ90, Super Cascade]
+purpose: dual
+country: US
+kind: cultivar
+ownership: { mark: public, public_domain: true }
+pedigree:
+  year_crossed: 1974
+  released: 1990
+  breeder: usda-ars
+  parents: { seed: brewers-gold-us, note: Brewer's Gold crossed with a complex male line. }
+  refs: [seed-general-knowledge]
+aroma:
+  summary: >
+    Cascade with the contrast turned up — sharper citrus, more lemon-pith
+    bitterness, a floral top note. Bitters clean enough to carry a whole beer
+    on its own.
+  tags: [citrus, grapefruit, lemon, floral, pine, resinous]
+  refs: [seed-general-knowledge]
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: seed-general-knowledge, low: 8.0, high: 12.0, typical: 10.0 }
+  beta_acid:
+    unit: percent
+    observations: [{ source: seed-general-knowledge, low: 3.5, high: 5.5 }]
+  cohumulone:
+    unit: percent_of_alpha
+    observations: [{ source: seed-general-knowledge, low: 28, high: 35 }]
+  total_oil:
+    unit: ml_per_100g
+    observations: [{ source: seed-general-knowledge, low: 1.5, high: 2.5 }]
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 45, high: 60 }]
+  humulene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 10, high: 18 }]
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 4, high: 8 }]
+  farnesene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, typical: 1 }]
+  other:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 18, high: 30 }]
+usage:
+  timing: [bittering, late-boil, whirlpool, dry-hop]
+  beer_styles: [american-ipa, west-coast-ipa, double-ipa, american-pale-ale, american-amber, american-stout, barleywine]
+products: { cryo: true, lupomax: false }
+substitutes:
+  - { slug: cascade, confidence: high }
+  - { slug: simcoe, confidence: medium }
+  - { slug: citra, confidence: low }
+meta:
+  status: draft
+  verification: unverified
+  last_reviewed: '2026-09-11'

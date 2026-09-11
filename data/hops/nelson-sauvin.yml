@@ -1,0 +1,61 @@
+slug: nelson-sauvin
+name: Nelson Sauvin
+purpose: dual
+country: NZ
+kind: cultivar
+ownership:
+  holder: New Zealand Hops Ltd
+  mark: trademark
+  public_domain: false
+pedigree:
+  released: 2000
+  breeder: hri-nz
+  parents: { seed: smooth-cone, note: Smoothcone crossed with a New Zealand male selection. }
+  refs: [seed-general-knowledge]
+aroma:
+  summary: >
+    Named for Sauvignon Blanc and it earns it — gooseberry, white grape and a
+    hard mineral edge. Polarising in quantity; a little makes a beer taste
+    expensive, a lot makes it taste like a cat.
+  tags: [white-wine, gooseberry, passionfruit, grapefruit, tropical, green]
+  refs: [seed-general-knowledge]
+analytics:
+  alpha_acid:
+    unit: percent
+    observations: [{ source: seed-general-knowledge, low: 10.0, high: 13.0, typical: 11.5 }]
+  beta_acid:
+    unit: percent
+    observations: [{ source: seed-general-knowledge, low: 6.0, high: 8.0 }]
+  cohumulone:
+    unit: percent_of_alpha
+    observations: [{ source: seed-general-knowledge, low: 22, high: 26 }]
+  total_oil:
+    unit: ml_per_100g
+    observations: [{ source: seed-general-knowledge, low: 1.0, high: 1.3 }]
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 20, high: 25 }]
+  humulene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 36, high: 40 }]
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 10, high: 14 }]
+  other:
+    unit: percent_of_total_oil
+    observations: [{ source: seed-general-knowledge, low: 25, high: 32 }]
+usage:
+  timing: [bittering, whirlpool, dry-hop]
+  beer_styles: [american-ipa, hazy-ipa, west-coast-ipa, saison, sour-ale, pilsner]
+products: { cryo: true, lupomax: false }
+substitutes:
+  - { slug: citra, confidence: low, note: Nothing really substitutes for Nelson. This is the least-bad option. }
+  - { slug: mosaic, confidence: low }
+meta:
+  status: draft
+  verification: unverified
+  last_reviewed: '2026-09-11'
+  notes: >
+    High humulene relative to myrcene, which is unusual for a fruit-forward hop
+    and shows up clearly in the oil chart. Worth a lab citation.
