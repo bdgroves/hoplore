@@ -1,0 +1,40 @@
+slug: waimea
+name: Waimea
+purpose: dual
+country: NZ
+kind: cultivar
+
+# Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).
+# purpose is an unconfirmed default -- see meta.notes. No analytics recorded
+# yet: run `pixi run -e data hopsteiner waimea --apply` to pull real values.
+
+ownership:
+  mark: public
+  public_domain: true
+
+pedigree:
+  breeder: unknown
+  parents: { unknown: true }
+  refs: []
+
+aroma:
+  summary: >
+    Not yet written. Fill in from a real source, then update meta.status.
+  tags: []
+  refs: []
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: stub
+  verification: unverified
+  last_reviewed: '2026-09-14'
+  notes: >
+    purpose defaulted to dual, unconfirmed -- was not researched individually
+    for this bulk scaffold pass. Correct before publishing.
