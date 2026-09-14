@@ -141,16 +141,34 @@ function alphaBetaRatio(analytics) {
 /**
  * Normalise the oil breakdown to sum to 100 so two hops can be compared even
  * when their sheets total 94% and 103%. The raw numbers stay untouched above.
+ *
+ * Refuses to normalise a breakdown that is mostly missing. Scaling a partial
+ * set up to 100% silently invents a composition nobody measured: Hopsteiner
+ * publishes only farnesene and linalool, so a Hopsteiner-only Chinook has
+ * components summing to 0.8% of its oil, and normalising that produced a
+ * published claim of "62.5% farnesene, 37.5% linalool" for a hop that is
+ * really myrcene-dominant with farnesene as a sub-1% trace. That is exactly
+ * the kind of derived-but-unobserved number this project exists not to make.
+ *
+ * MIN_COVERAGE is the share of total oil the named components must account
+ * for before a normalised profile means anything. Below that we keep raw_sum
+ * (so the page can say how little is known) and publish no profile.
  */
+const MIN_COVERAGE = 60;
+
 function oilProfile(oils) {
   const keys = Object.keys(oils);
   if (!keys.length) return null;
   const raw = Object.fromEntries(keys.map((k) => [k, oils[k].typical]));
   const sum = Object.values(raw).reduce((a, b) => a + b, 0);
   if (!sum) return null;
+  if (sum < MIN_COVERAGE) {
+    return { raw_sum: round(sum, 1), normalized: null, insufficient: true };
+  }
   return {
     raw_sum: round(sum, 1),
     normalized: Object.fromEntries(keys.map((k) => [k, round((raw[k] / sum) * 100, 1)])),
+    insufficient: false,
   };
 }
 

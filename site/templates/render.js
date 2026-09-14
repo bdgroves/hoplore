@@ -135,6 +135,7 @@ export function renderIndex({ hops, taxonomy, meta }) {
         <button class="chip" data-filter="bittering" aria-pressed="false">Bittering</button>
         <button class="chip" data-filter="dual" aria-pressed="false">Dual purpose</button>
         <button class="chip" data-filter="cryo" aria-pressed="false">Available as lupulin powder</button>
+        <button class="chip" data-filter="hasdata" aria-pressed="false">Has brewing data</button>
         <button class="chip" data-filter="corroborated" aria-pressed="false">Two or more sources</button>
       </div>
     </div>
@@ -164,14 +165,24 @@ function row(hop, taxonomy) {
     .join(' ')
     .toLowerCase();
 
+  // A stub has a name and nothing else yet. Saying so beats an empty row that
+  // looks like a rendering fault.
+  const isStub = hop.meta.status === 'stub';
+  const middle = tags.length
+    ? esc(tags.join(', '))
+    : isStub
+      ? '<em class="awaiting">awaiting data</em>'
+      : '';
+
   return `<a class="row" href="hops/${hop.slug}/"
      data-search="${esc(search)}"
      data-purpose="${hop.purpose}"
      data-cryo="${Boolean(hop.products?.cryo)}"
+     data-hasdata="${!isStub}"
      data-verification="${hop.meta.verification}">
         <span class="row-name">${esc(hop.name)}${hop.aliases?.length ? ` <em>${esc(hop.aliases[0])}</em>` : ''}</span>
         <span class="purpose" data-purpose="${hop.purpose}">${hop.purpose === 'dual' ? 'dual' : hop.purpose}</span>
-        <span class="row-tags">${esc(tags.join(', '))}</span>
+        <span class="row-tags">${middle}</span>
         <span class="row-aa num">${aa ? `${fmt(aa.low)}–${fmt(aa.high)}%` : '—'}</span>
       </a>`;
 }
@@ -366,7 +377,31 @@ function formsBlock(hop) {
 }
 
 function oilsBlock(hop) {
-  const profile = hop.derived?.oil_profile?.normalized;
+  const oilProfile = hop.derived?.oil_profile;
+  if (!oilProfile) return '';
+
+  // Too little of the oil is accounted for to draw a breakdown. Say what is
+  // known and why the rest is missing, rather than scaling two trace
+  // components up to 100% and inventing a profile. See rollup.js.
+  if (oilProfile.insufficient) {
+    const known = Object.entries(hop.oils ?? {})
+      .map(([key, metric]) => `<li>${cap(key)}<span class="num">${fmt(metric.typical)}%</span></li>`)
+      .join('\n        ');
+    return `<section class="block">
+    <h2>Oil composition</h2>
+    <p class="callout">Not enough of this hop's oil is accounted for to show a
+    breakdown. The sources on file name components totalling
+    <span class="num">${oilProfile.raw_sum}%</span> of total oil — most of the
+    balance is myrcene, which the source for this record doesn't publish.
+    Rather than scale what's here up to 100% and invent the rest, here is
+    only what was actually measured:</p>
+    <ul class="stack-key bare">
+        ${known}
+    </ul>
+  </section>`;
+  }
+
+  const profile = oilProfile.normalized;
   if (!profile) return '';
 
   const entries = Object.entries(profile).sort((a, b) => b[1] - a[1]);
@@ -394,7 +429,7 @@ function oilsBlock(hop) {
       </ul>
     </div>
     <p class="callout">Normalised to 100% so this hop can be compared like for like.
-    The published components sum to <span class="num">${hop.derived.oil_profile.raw_sum}%</span>
+    The published components sum to <span class="num">${oilProfile.raw_sum}%</span>
     of total oil in the source data.</p>
   </section>`;
 }

@@ -177,6 +177,13 @@ h1, h2, h3 {
 
 .ledger { padding-bottom: 5rem; }
 
+/* The UA stylesheet's `[hidden] { display: none }` is a bare attribute
+   selector, so any class rule that sets `display` beats it — and .row and
+   .country both set `display: grid`. Without this, index.js can set
+   row.hidden all it likes and nothing disappears, which is exactly the bug
+   that made search look broken. Keep this above those rules' specificity. */
+[hidden] { display: none !important; }
+
 .country {
   display: grid;
   grid-template-columns: 11rem minmax(0, 1fr);
@@ -372,6 +379,24 @@ details.sources > summary:hover { color: var(--ink); }
 }
 .stack-key .num { margin-left: auto; color: var(--ink-soft); }
 .swatch { width: 0.6rem; height: 0.6rem; flex: none; }
+
+/* Oil list with no stacked bar beside it — used when too little of the oil is
+   accounted for to draw a breakdown honestly. No fixed height, no flex-grow
+   weighting, since there is no bar for it to line up with. */
+.stack-key.bare { height: auto; margin-top: 0.8rem; }
+.stack-key.bare li { flex: none; padding: 0.35rem 0; }
+
+/* A stub row: real variety, no data pulled in yet. Marked rather than blank so
+   an empty row reads as a known gap instead of a broken render. */
+.row-tags .awaiting {
+  font-style: normal;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+  opacity: 0.75;
+}
+.row[data-hasdata="false"] .row-name { color: var(--ink-soft); }
 
 table.forms { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
 table.forms th {

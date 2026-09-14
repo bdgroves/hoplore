@@ -17,6 +17,7 @@ function matches(row, needle) {
   if (purposes.length && !purposes.includes(row.dataset.purpose)) return false;
 
   if (active.has('cryo') && row.dataset.cryo !== 'true') return false;
+  if (active.has('hasdata') && row.dataset.hasdata !== 'true') return false;
   if (active.has('corroborated') && row.dataset.verification !== 'corroborated') return false;
 
   return true;
