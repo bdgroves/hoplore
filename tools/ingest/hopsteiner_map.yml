@@ -9,15 +9,11 @@
 # verified against the live site
 centennial: Centennial
 hallertau-mittelfrueh: Hallertauer-Mittelfrueh
-
-# expected to exist, unverified — the script will tell you if the name is wrong
 cascade: Cascade
 challenger: Challenger
 willamette: Willamette
 saaz-cz: Saazer
-strisselspalt: Strisselspalt
 aramis: Aramis
-whitbread-golding-variety: Whitbread-Golding-Variety
 
 # not carried by Hopsteiner
 citra: false          # Hop Breeding Company
@@ -25,122 +21,65 @@ mosaic: false         # Hop Breeding Company
 simcoe: false         # Yakima Chief Ranches
 nelson-sauvin: false  # New Zealand Hops Ltd
 
-# confirmed via probe discovery (tools/ingest/discover_all.py), 2026-09
+# verified against the live site via `--all --apply`, 2026-09 (the HEAD-based
+# probe that first suggested these turned out to be unreliable -- see the fix
+# in hopsteiner.py's probe(). These are only here because the real GET fetch
+# during --apply actually returned data, not because of the probe.
 admiral: Admiral
 african-queen: African-Queen
-agnus: Agnus
 amarillo: Amarillo
 apollo: Apollo
 ariana: Ariana
 aurora: Aurora
 azacca: Azacca
-barbe-rouge: Barbe-Rouge
 boadicea: Boadicea
 bobek: Bobek
-bohemie: Bohemie
 bramling-cross: Bramling-Cross
 bravo: Bravo
 callista: Callista
 calypso: Calypso
-celeia: Celeia
 chinook: Chinook
 cluster: Cluster
-columbus: Columbus
 comet: Comet
 crystal: Crystal
-denali: Denali
-dr-rudi: Dr-Rudi
 east-kent-golding: East-Kent-Golding
-eclipse: Eclipse
-ekuanot: Ekuanot
 el-dorado: El-Dorado
-ella: Ella
-enigma: Enigma
 eureka: Eureka
 first-gold: First-Gold
-flint-jp: Flint
 fuggle: Fuggle
-galaxy: Galaxy
 glacier: Glacier
-godiva: Godiva
 green-bullet: Green-Bullet
 hallertau-blanc: Hallertau-Blanc
-hallertau-magnum: Hallertau-Magnum
-hallertau-merkur: Hallertau-Merkur
-hallertau-taurus: Hallertau-Taurus
-hallertau-tradition: Hallertau-Tradition
-harlequin: Harlequin
 hersbrucker: Hersbrucker
 horizon: Horizon
-huell-melon: Hüll-Melon
-ibuki: Ibuki
-idaho-gem: Idaho-Gem
-jarrylo: Jarrylo
-jester: Jester
-kazbek: Kazbek
-kohatu: Kohatu
 lemondrop: Lemondrop
 liberty: Liberty
-loral: Loral
-lubelski: Lubelski
-mackinac: Mackinac
-magnat: Magnat
-magnum: Magnum
 mandarina-bavaria: Mandarina-Bavaria
 marynka: Marynka
 melba: Melba
-mistral: Mistral
 motueka: Motueka
 mount-hood: Mount-Hood
-nectaron: Nectaron
-newport: Newport
 northdown: Northdown
 nugget: Nugget
-olicana: Olicana
 opal: Opal
 pacific-jade: Pacific-Jade
-pacifica: Pacifica
-pahto: Pahto
-palisade: Palisade
 perle: Perle
 phoenix: Phoenix
 pilgrim: Pilgrim
 polaris: Polaris
 premiant: Premiant
 progress: Progress
-rakau: Rakau
 riwaka: Riwaka
-rubin: Rubín
-sabro: Sabro
 saphir: Saphir
-sladek: Sladek
 smaragd: Smaragd
 sorachi-ace: Sorachi-Ace
 southern-cross: Southern-Cross
-southern-passion: Southern-Passion
 southern-star: Southern-Star
 sovereign: Sovereign
-spalt-spalter: Spalt-Spalter
 sterling: Sterling
-strata: Strata
-styrian-cardinal: Styrian-Cardinal
-styrian-golding: Styrian-Golding
 styrian-wolf: Styrian-Wolf
-summer: Summer
 summit: Summit
-superdelic: Superdelic
-taiheke: Taiheke
-talus: Talus
 target: Target
-teamaker: Teamaker
 tettnang: Tettnanger
-topaz: Topaz
 triskel: Triskel
-triumph: Triumph
-ultra: Ultra
-vic-secret: Vic-Secret
-vista: Vista
-waimea: Waimea
-wakatu: Wakatu
-warrior: Warrior
 zeus: Zeus

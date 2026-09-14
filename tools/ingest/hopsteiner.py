@@ -411,6 +411,15 @@ def discover_varieties(delay: float) -> dict[str, str]:
     fetch (see tools/ingest/README.md) or manual discovery of whatever API
     the JS grid actually calls.
 
+    Uses GET, not HEAD. A prior version used HEAD and it was wrong: on a
+    real batch of 118 candidates HEAD returned 200 for all of them, but a
+    real GET (during --apply, minutes later) 404'd on 60 of those same
+    URLs. This server evidently doesn't validate the path the same way for
+    both methods — treat any HEAD-based result from this site as unreliable.
+    GET is heavier (the full page body, ~50KB, gets downloaded and thrown
+    away) but it's the only method that's actually been confirmed to agree
+    with what --apply's real fetch sees.
+
     Returns {our-slug: confirmed-url}, keyed by our slug rather than theirs,
     since there is no "their slug" for a candidate until it resolves.
     """
@@ -424,7 +433,7 @@ def discover_varieties(delay: float) -> dict[str, str]:
             url = f"{BASE}{guess}/"
             time.sleep(delay)
             try:
-                resp = requests.head(url, headers={"User-Agent": UA}, timeout=15, allow_redirects=True)
+                resp = requests.get(url, headers={"User-Agent": UA}, timeout=15, allow_redirects=True)
             except requests.RequestException:
                 continue
             if resp.status_code == 200:

@@ -88,6 +88,16 @@ JSON endpoint the JS grid actually calls (open the index page in a browser,
 DevTools → Network → XHR). Neither is implemented; this is the deliberately
 lighter-weight version.
 
+**Gotcha already hit once:** the probe uses `GET`, not `HEAD`. An earlier
+version used `HEAD` on the theory that it's cheaper (no response body), and
+a manual test with `GET` confirmed the server tells real and fake slugs
+apart correctly. But that test didn't check `HEAD` specifically — and on a
+real batch of 118 candidates, `HEAD` returned `200` for every single one,
+while the real `GET` during `--apply` minutes later 404'd on 60 of them.
+This server does not validate the same way for both methods. If you're
+tempted to switch back to `HEAD` for speed, don't, unless you've confirmed
+agreement with `GET` on this specific site first.
+
 ### Fields they publish that we do not model
 
 `--verbose` lists these. Currently unmapped: xanthohumol, total polyphenols,
