@@ -1,0 +1,47 @@
+name: Discover new varieties
+
+on:
+  schedule:
+    # 1st of the month, 13:00 UTC. Cron, not "monthly" — GitHub Actions has
+    # no monthly shorthand.
+    - cron: '0 13 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: prefix-dev/setup-pixi@v0.8.1
+        with:
+          environments: data
+          cache: true
+
+      # Read-only: lists what each scraper's site currently publishes and
+      # diffs it against data/hops/. Never writes to data/hops/ or to any
+      # scraper's map file — see tools/ingest/discover_all.py.
+      - name: Run discovery
+        run: pixi run -e data python tools/ingest/discover_all.py --out discovery-report.md
+
+      - name: Count possibly-new varieties
+        id: count
+        run: |
+          count=$(grep -oP '^\d+(?= possibly-new)' discovery-report.md || echo 0)
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+
+      - name: Open an issue if anything new turned up
+        if: steps.count.outputs.count != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create discovery --color 0E8A16 \
+            --description "Filed automatically by discover.yml" 2>/dev/null || true
+          gh issue create \
+            --title "Discovery: $(date -u +%Y-%m-%d) — ${{ steps.count.outputs.count }} possibly-new variety name(s)" \
+            --body-file discovery-report.md \
+            --label discovery

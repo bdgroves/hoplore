@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import json
 import re
 import sys
 import time
@@ -356,8 +357,13 @@ def report(sheet: Sheet, record: CommentedMap | None, verbose: bool) -> None:
 # ---------------------------------------------------------------------- discover
 
 
-def discover(delay: float) -> None:
-    """Ask the site what it actually has, instead of guessing at URL slugs."""
+def discover_varieties(delay: float) -> dict[str, str]:
+    """Ask the site what it actually has, instead of guessing at URL slugs.
+
+    Returns {href-name: display-name}, e.g. {"centennial": "Centennial"}.
+    Kept separate from the CLI-facing discover() below so discover_all.py can
+    call it as a library function and get data back instead of parsing stdout.
+    """
     html = fetch(BASE, delay)
     soup = BeautifulSoup(html, "lxml")
 
@@ -370,6 +376,16 @@ def discover(delay: float) -> None:
         if name in ("variety-data-sheets", "") or "?" in name:
             continue
         varieties[name] = link.get_text(strip=True) or name
+
+    return varieties
+
+
+def discover(delay: float, as_json: bool) -> None:
+    varieties = discover_varieties(delay)
+
+    if as_json:
+        print(json.dumps({"source": SOURCE_ID, "varieties": varieties}, indent=2))
+        return
 
     print(f"\n{len(varieties)} varieties listed by Hopsteiner:\n")
     for name in sorted(varieties):
@@ -390,6 +406,7 @@ def main() -> int:
     parser.add_argument("slugs", nargs="*", help="HopLore slugs to update")
     parser.add_argument("--all", action="store_true", help="every mapped variety")
     parser.add_argument("--discover", action="store_true", help="list what Hopsteiner publishes")
+    parser.add_argument("--json", action="store_true", help="with --discover, machine-readable output")
     parser.add_argument("--apply", action="store_true", help="write changes to data/hops/")
     parser.add_argument("--force", action="store_true", help="replace existing hopsteiner observations")
     parser.add_argument("--refresh", action="store_true", help="ignore the local cache")
@@ -399,7 +416,7 @@ def main() -> int:
     args = parser.parse_args()
 
     if args.discover:
-        discover(args.delay)
+        discover(args.delay, args.json)
         return 0
 
     mapping = load_map()

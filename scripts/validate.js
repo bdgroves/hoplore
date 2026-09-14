@@ -7,7 +7,7 @@
  */
 import Ajv from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
-import { loadDataset, schemas, c, METRIC_KEYS, OIL_KEYS } from './lib/load.js';
+import { loadDataset, schemas, c, METRIC_KEYS, OIL_KEYS, allMetrics, allRefs } from './lib/load.js';
 
 const { sources, taxonomy, hops } = loadDataset();
 const schema = schemas();
@@ -236,28 +236,6 @@ if (oneWay.length) {
 }
 
 // ----------------------------------------------------------------- report out
-
-function allMetrics(hop) {
-  return [
-    ...METRIC_KEYS.map((k) => hop.analytics?.[k]),
-    ...OIL_KEYS.map((k) => hop.oils?.[k]),
-  ].filter((m) => m?.observations);
-}
-
-// Every source id a hop record cites, across every field that can carry a
-// `refs`/`source` key. Used both to check "does this ref exist" (per-hop)
-// and "was this registered source ever cited" (global) — those two checks
-// drifted apart because the global one only looked at analytics/oils.
-function allRefs(hop) {
-  return [
-    ...(hop.aroma?.refs ?? []),
-    ...(hop.pedigree?.refs ?? []),
-    ...(hop.products?.refs ?? []),
-    ...(hop.substitutes ?? []).flatMap((s) => s.refs ?? []),
-    ...(hop.forms ?? []).flatMap((f) => f.refs ?? []),
-    ...allMetrics(hop).flatMap((m) => m.observations.map((o) => o.source)),
-  ];
-}
 
 const byStatus = hops.reduce((acc, h) => {
   acc[h.meta.status] = (acc[h.meta.status] ?? 0) + 1;

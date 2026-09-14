@@ -41,6 +41,10 @@ new-hop = { cmd = "node scripts/new-hop.js", depends-on = ["install"] }
 # script the pre-commit hook runs — see .githooks/pre-commit.
 lint-yaml = { cmd = "node scripts/check-yaml-syntax.js", depends-on = ["install"] }
 
+# Report only, never fails CI: missing varieties, stale records, records
+# still on placeholder citations. See scripts/coverage.js.
+coverage = { cmd = "node scripts/coverage.js", depends-on = ["install"] }
+
 # What CI runs. Same command locally, so green here means green there.
 check = { depends-on = ["validate", "build"] }
 
@@ -71,6 +75,11 @@ pdfplumber = "*"
 hopsteiner = "python tools/ingest/hopsteiner.py"
 hopsteiner-discover = "python tools/ingest/hopsteiner.py --discover"
 test-ingest = "python tools/ingest/test_hopsteiner.py"
+
+# Runs every registered scraper's discovery mode and reports names not
+# matched to a record in data/hops/. Same thing the monthly discover.yml
+# workflow runs, wired up for a manual check locally.
+discover-all = "python tools/ingest/discover_all.py"
 
 [environments]
 default = { solve-group = "default" }

@@ -49,6 +49,31 @@ export const schemas = () => ({
 export const METRIC_KEYS = ['alpha_acid', 'beta_acid', 'cohumulone', 'total_oil', 'hsi', 'alpha_retention_6mo_20c'];
 export const OIL_KEYS = ['myrcene', 'humulene', 'caryophyllene', 'farnesene', 'linalool', 'geraniol', 'pinene', 'selinene', 'other'];
 
+/** Every analytics/oils metric on a hop that actually has observations. */
+export function allMetrics(hop) {
+  return [
+    ...METRIC_KEYS.map((k) => hop.analytics?.[k]),
+    ...OIL_KEYS.map((k) => hop.oils?.[k]),
+  ].filter((m) => m?.observations);
+}
+
+/**
+ * Every source id a hop record cites, across every field that can carry a
+ * `refs`/`source` key. Single source of truth for "what does this record
+ * cite" — validate.js and coverage.js both need this, and having it defined
+ * twice is exactly how the ychr/mill95 false-warning bug happened.
+ */
+export function allRefs(hop) {
+  return [
+    ...(hop.aroma?.refs ?? []),
+    ...(hop.pedigree?.refs ?? []),
+    ...(hop.products?.refs ?? []),
+    ...(hop.substitutes ?? []).flatMap((s) => s.refs ?? []),
+    ...(hop.forms ?? []).flatMap((f) => f.refs ?? []),
+    ...allMetrics(hop).flatMap((m) => m.observations.map((o) => o.source)),
+  ];
+}
+
 export const c = {
   red: (s) => `\x1b[31m${s}\x1b[0m`,
   green: (s) => `\x1b[32m${s}\x1b[0m`,

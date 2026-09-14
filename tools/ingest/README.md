@@ -48,6 +48,7 @@ Useful flags:
 | flag | what it does |
 |---|---|
 | `--discover` | list every variety Hopsteiner publishes, to fill in the map |
+| `--json` | with `--discover`, machine-readable output instead of a printed list |
 | `--apply` | actually write to `data/hops/` |
 | `--force` | replace an existing hopsteiner observation instead of skipping |
 | `--refresh` | ignore the local cache and re-fetch |
@@ -79,3 +80,21 @@ sections — worth deciding before the next source gets a scraper, not after.
 - `patents.py` — plant patent records from Google Patents. Public domain,
   breeder-authored, and they carry pedigree and agronomics that the marketing
   sheets leave out.
+
+## discover_all.py
+
+Runs every scraper in `SCRAPERS` (currently just Hopsteiner) with its
+`discover_varieties()` function and reports any name not matched to an
+existing `data/hops/` record — by `name`, `aliases`, `previously_named`, or
+`slug`, loosely normalized. Read-only, same as `scripts/coverage.js`, just
+sourced from the live sites instead of the hand-maintained reference list.
+
+```bash
+pixi run -e data discover-all
+pixi run -e data python tools/ingest/discover_all.py --out discovery-report.md
+```
+
+Runs monthly via `.github/workflows/discover.yml`, which opens a GitHub issue
+when it finds anything. Adding a second scraper here later just means giving
+it a `discover_varieties(delay)` function with the same contract and adding
+it to the `SCRAPERS` dict — no other wiring needed.

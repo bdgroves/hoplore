@@ -1,0 +1,166 @@
+# Known hop cultivars worth having a HopLore record for, whether or not we
+# have gotten to them yet. This is a checklist for `pixi run coverage`, not a
+# taxonomy anything else depends on — it is deliberately not schema-enforced
+# and not wired into validate.js or build.js.
+#
+# Not exhaustive. The farm-bred long tail especially (Jackson Farms, Gooding
+# Farms, CLS Farms, Virgil Gamache, Indie Hops/OSU) has no central registry —
+# see HANDOFF.md. Add to this file as new releases turn up; that is exactly
+# what the discovery workflow is for.
+#
+# slug must match what the hop's own file would be named: data/hops/<slug>.yml
+
+- { slug: aramis, name: Aramis, country: FR }
+- { slug: cascade, name: Cascade, country: US }
+- { slug: centennial, name: Centennial, country: US }
+- { slug: challenger, name: Challenger, country: GB }
+- { slug: citra, name: Citra, country: US }
+- { slug: hallertau-mittelfrueh, name: Hallertau Mittelfrüh, country: DE }
+- { slug: idaho-7, name: Idaho 7, country: US }
+- { slug: mosaic, name: Mosaic, country: US }
+- { slug: nelson-sauvin, name: Nelson Sauvin, country: NZ }
+- { slug: saaz-cz, name: Saaz, country: CZ }
+- { slug: simcoe, name: Simcoe, country: US }
+- { slug: strisselspalt, name: Strisselspalt, country: FR }
+- { slug: whitbread-golding-variety, name: Whitbread Golding Variety, country: GB }
+- { slug: willamette, name: Willamette, country: US }
+
+# --- United States -----------------------------------------------------
+- { slug: chinook, name: Chinook, country: US }
+- { slug: columbus, name: Columbus, country: US }
+- { slug: zeus, name: Zeus, country: US }
+- { slug: comet, name: Comet, country: US }
+- { slug: crystal, name: Crystal, country: US }
+- { slug: amarillo, name: Amarillo, country: US }
+- { slug: summit, name: Summit, country: US }
+- { slug: idaho-gem, name: Idaho Gem, country: US, note: farm-bred (Gooding Farms) }
+- { slug: talus, name: Talus, country: US }
+- { slug: ekuanot, name: Ekuanot, country: US }
+- { slug: loral, name: Loral, country: US }
+- { slug: el-dorado, name: El Dorado, country: US, note: farm-bred (CLS Farms) }
+- { slug: azacca, name: Azacca, country: US }
+- { slug: strata, name: Strata, country: US, note: farm-bred (Indie Hops/OSU) }
+- { slug: sabro, name: Sabro, country: US }
+- { slug: denali, name: Denali, country: US }
+- { slug: palisade, name: Palisade, country: US }
+- { slug: nugget, name: Nugget, country: US }
+- { slug: bravo, name: Bravo, country: US }
+- { slug: apollo, name: Apollo, country: US }
+- { slug: warrior, name: Warrior, country: US }
+- { slug: magnum, name: Magnum, country: US }
+- { slug: newport, name: Newport, country: US }
+- { slug: horizon, name: Horizon, country: US }
+- { slug: liberty, name: Liberty, country: US }
+- { slug: mount-hood, name: Mount Hood, country: US }
+- { slug: sterling, name: Sterling, country: US }
+- { slug: ultra, name: Ultra, country: US }
+- { slug: glacier, name: Glacier, country: US }
+- { slug: cluster, name: Cluster, country: US }
+- { slug: eureka, name: 'Eureka!', country: US }
+- { slug: triumph, name: Triumph, country: US }
+- { slug: pahto, name: Pahto, country: US }
+- { slug: jarrylo, name: Jarrylo, country: US }
+- { slug: vista, name: Vista, country: US }
+- { slug: teamaker, name: Teamaker, country: US }
+- { slug: calypso, name: Calypso, country: US }
+- { slug: lemondrop, name: Lemondrop, country: US }
+- { slug: mackinac, name: Mackinac, country: US, note: farm-bred (Michigan) }
+
+# --- Germany -------------------------------------------------------------
+- { slug: perle, name: Perle, country: DE }
+- { slug: tettnang, name: Tettnanger, country: DE }
+- { slug: hersbrucker, name: Hersbrucker, country: DE }
+- { slug: spalt-spalter, name: Spalt Spalter, country: DE }
+- { slug: hallertau-blanc, name: Hallertau Blanc, country: DE }
+- { slug: mandarina-bavaria, name: Mandarina Bavaria, country: DE }
+- { slug: huell-melon, name: Hüll Melon, country: DE }
+- { slug: polaris, name: Polaris, country: DE }
+- { slug: saphir, name: Saphir, country: DE }
+- { slug: opal, name: Opal, country: DE }
+- { slug: smaragd, name: Smaragd, country: DE }
+- { slug: hallertau-taurus, name: Hallertau Taurus, country: DE }
+- { slug: hallertau-merkur, name: Hallertau Merkur, country: DE }
+- { slug: hallertau-magnum, name: Hallertau Magnum, country: DE }
+- { slug: hallertau-tradition, name: Hallertau Tradition, country: DE }
+- { slug: callista, name: Callista, country: DE }
+- { slug: ariana, name: Ariana, country: DE }
+
+# --- United Kingdom --------------------------------------------------------
+- { slug: fuggle, name: Fuggle, country: GB }
+- { slug: east-kent-golding, name: East Kent Golding, country: GB }
+- { slug: target, name: Target, country: GB }
+- { slug: northdown, name: Northdown, country: GB }
+- { slug: bramling-cross, name: Bramling Cross, country: GB }
+- { slug: first-gold, name: First Gold, country: GB }
+- { slug: admiral, name: Admiral, country: GB }
+- { slug: pilgrim, name: Pilgrim, country: GB }
+- { slug: boadicea, name: Boadicea, country: GB }
+- { slug: jester, name: Jester, country: GB }
+- { slug: olicana, name: Olicana, country: GB }
+- { slug: godiva, name: Godiva, country: GB }
+- { slug: harlequin, name: Harlequin, country: GB }
+- { slug: sovereign, name: Sovereign, country: GB }
+- { slug: phoenix, name: Phoenix, country: GB }
+- { slug: progress, name: Progress, country: GB }
+
+# --- Czech Republic --------------------------------------------------------
+- { slug: sladek, name: Sladek, country: CZ }
+- { slug: premiant, name: Premiant, country: CZ }
+- { slug: agnus, name: Agnus, country: CZ }
+- { slug: kazbek, name: Kazbek, country: CZ }
+- { slug: bohemie, name: Bohemie, country: CZ }
+- { slug: rubin, name: Rubín, country: CZ }
+
+# --- New Zealand -------------------------------------------------------
+- { slug: motueka, name: Motueka, country: NZ }
+- { slug: riwaka, name: Riwaka, country: NZ }
+- { slug: pacific-jade, name: Pacific Jade, country: NZ }
+- { slug: rakau, name: Rakau, country: NZ }
+- { slug: wakatu, name: Wakatu, country: NZ }
+- { slug: waimea, name: Waimea, country: NZ }
+- { slug: southern-cross, name: Southern Cross, country: NZ }
+- { slug: green-bullet, name: Green Bullet, country: NZ }
+- { slug: pacifica, name: Pacifica, country: NZ }
+- { slug: kohatu, name: Kohatu, country: NZ }
+- { slug: superdelic, name: Superdelic, country: NZ }
+- { slug: taiheke, name: Taiheke, country: NZ }
+- { slug: dr-rudi, name: Dr. Rudi, country: NZ }
+- { slug: nectaron, name: Nectaron, country: NZ }
+
+# --- Australia -------------------------------------------------------------
+- { slug: galaxy, name: Galaxy, country: AU }
+- { slug: vic-secret, name: Vic Secret, country: AU }
+- { slug: ella, name: Ella, country: AU }
+- { slug: enigma, name: Enigma, country: AU }
+- { slug: summer, name: Summer, country: AU }
+- { slug: topaz, name: Topaz, country: AU }
+- { slug: melba, name: Melba, country: AU }
+- { slug: eclipse, name: Eclipse, country: AU }
+
+# --- France ------------------------------------------------------------
+- { slug: triskel, name: Triskel, country: FR }
+- { slug: barbe-rouge, name: Barbe Rouge, country: FR }
+- { slug: mistral, name: Mistral, country: FR }
+
+# --- Slovenia ----------------------------------------------------------
+- { slug: celeia, name: Celeia, country: SI }
+- { slug: bobek, name: Bobek, country: SI }
+- { slug: aurora, name: Aurora, country: SI }
+- { slug: styrian-golding, name: Styrian Golding, country: SI }
+- { slug: styrian-wolf, name: Styrian Wolf, country: SI }
+- { slug: styrian-cardinal, name: Styrian Cardinal, country: SI }
+
+# --- Poland --------------------------------------------------------------
+- { slug: marynka, name: Marynka, country: PL }
+- { slug: lubelski, name: Lubelski, country: PL }
+- { slug: magnat, name: Magnat, country: PL }
+
+# --- Japan ---------------------------------------------------------------
+- { slug: sorachi-ace, name: Sorachi Ace, country: JP }
+- { slug: ibuki, name: Ibuki, country: JP }
+- { slug: flint-jp, name: Flint, country: JP }
+
+# --- South Africa --------------------------------------------------------
+- { slug: southern-passion, name: Southern Passion, country: ZA }
+- { slug: african-queen, name: African Queen, country: ZA }
+- { slug: southern-star, name: Southern Star, country: ZA }
