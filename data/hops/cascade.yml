@@ -22,18 +22,17 @@ analytics:
   alpha_acid:
     unit: percent
     observations:
-      - { source: seed-general-knowledge, low: 4.5, high: 9.0, typical: 6.5 }
       - { source: usda-nass-2022, typical: 6.8, crop_year: 2022 }
       - { source: hopsteiner, low: 4.5, high: 7.0, note: Data sheet last changed 2020-01-09. }
   beta_acid:
     unit: percent
-    observations: [{ source: seed-general-knowledge, low: 4.5, high: 7.0 }, { source: hopsteiner, low: 4.5, high: 7.0, note: Data sheet last changed 2020-01-09. }]
+    observations: [{ source: hopsteiner, low: 4.5, high: 7.0, note: Data sheet last changed 2020-01-09. }]
   cohumulone:
     unit: percent_of_alpha
-    observations: [{ source: seed-general-knowledge, low: 33, high: 40 }, { source: hopsteiner, low: 33.0, high: 40.0, note: Data sheet last changed 2020-01-09. }]
+    observations: [{ source: hopsteiner, low: 33.0, high: 40.0, note: Data sheet last changed 2020-01-09. }]
   total_oil:
     unit: ml_per_100g
-    observations: [{ source: seed-general-knowledge, low: 0.8, high: 1.5 }, { source: hopsteiner, low: 0.8, high: 1.5, note: Data sheet last changed 2020-01-09. }]
+    observations: [{ source: hopsteiner, low: 0.8, high: 1.5, note: Data sheet last changed 2020-01-09. }]
 oils:
   myrcene:
     unit: percent_of_total_oil
@@ -46,7 +45,7 @@ oils:
     observations: [{ source: seed-general-knowledge, low: 3, high: 6 }]
   farnesene:
     unit: percent_of_total_oil
-    observations: [{ source: seed-general-knowledge, low: 4, high: 8 }, { source: hopsteiner, low: 4.0, high: 8.0, note: Data sheet last changed 2020-01-09. }]
+    observations: [{ source: hopsteiner, low: 4.0, high: 8.0, note: Data sheet last changed 2020-01-09. }]
   other:
     unit: percent_of_total_oil
     observations: [{ source: seed-general-knowledge, low: 20, high: 35 }]

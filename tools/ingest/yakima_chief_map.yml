@@ -13,12 +13,18 @@ citra: citra
 mosaic: mosaic
 simcoe: simcoe
 idaho-7: idaho7
-talus: talus
 ekuanot: ekuanot
 loral: loral
 sabro: sabro
 palisade: palisade
 warrior: warrior
+
+# Listed by YCR, brand page exists, but it carries no Field Notes table at
+# all -- checked 2026-09: zero <table> elements, the word "alpha" does not
+# appear anywhere in the page text. Not a parser gap. Left mapped so
+# --discover doesn't keep flagging it as unmapped; the scraper reports "no
+# recognised brewing values" and moves on, which is the honest outcome.
+talus: talus
 
 # Listed by YCR but with no HopLore record yet. Create the record first
 # (`pixi run new-hop "Ahtanum" US aroma`), then uncomment.

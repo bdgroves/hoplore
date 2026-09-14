@@ -20,22 +20,18 @@ analytics:
   alpha_acid:
     unit: percent
     observations:
-      - { source: seed-general-knowledge, low: 6.0, high: 9.0, typical: 7.5 }
       - { source: hopsteiner, low: 5.0, high: 9.0, note: Data sheet last changed 2020-01-09. }
   beta_acid:
     unit: percent
     observations:
-      - { source: seed-general-knowledge, low: 2.5, high: 4.5 }
       - { source: hopsteiner, low: 3.0, high: 4.0, note: Data sheet last changed 2020-01-09. }
   cohumulone:
     unit: percent_of_alpha
     observations:
-      - { source: seed-general-knowledge, low: 20, high: 25 }
       - { source: hopsteiner, low: 27.0, high: 30.0, note: Data sheet last changed 2020-01-09. }
   total_oil:
     unit: ml_per_100g
     observations:
-      - { source: seed-general-knowledge, low: 1.0, high: 1.7 }
       - { source: hopsteiner, low: 1.0, high: 1.5, note: Data sheet last changed 2020-01-09. }
 usage:
   timing: [bittering, late-boil, dry-hop]

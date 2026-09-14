@@ -28,18 +28,17 @@ analytics:
   alpha_acid:
     unit: percent
     observations:
-      - { source: seed-general-knowledge, low: 10.0, high: 15.0, typical: 12.0 }
       - { source: usda-nass-2022, typical: 12.4, crop_year: 2022 }
       - { source: ychr, low: 11.0, high: 13.0 }
   beta_acid:
     unit: percent
-    observations: [{ source: seed-general-knowledge, low: 3.0, high: 4.5 }, { source: ychr, low: 3.5, high: 4.5 }]
+    observations: [{ source: ychr, low: 3.5, high: 4.5 }]
   cohumulone:
     unit: percent_of_alpha
-    observations: [{ source: seed-general-knowledge, low: 22, high: 28 }, { source: ychr, low: 22.0, high: 24.0 }]
+    observations: [{ source: ychr, low: 22.0, high: 24.0 }]
   total_oil:
     unit: ml_per_100g
-    observations: [{ source: seed-general-knowledge, low: 1.5, high: 3.0 }, { source: ychr, low: 2.2, high: 2.8 }]
+    observations: [{ source: ychr, low: 2.2, high: 2.8 }]
   alpha_retention_6mo_20c:
     unit: percent
     observations:
@@ -47,16 +46,16 @@ analytics:
 oils:
   myrcene:
     unit: percent_of_total_oil
-    observations: [{ source: seed-general-knowledge, low: 60, high: 70 }, { source: ychr, low: 60.0, high: 65.0 }]
+    observations: [{ source: ychr, low: 60.0, high: 65.0 }]
   humulene:
     unit: percent_of_total_oil
-    observations: [{ source: seed-general-knowledge, low: 8, high: 13 }, { source: ychr, low: 11.0, high: 13.0 }]
+    observations: [{ source: ychr, low: 11.0, high: 13.0 }]
   caryophyllene:
     unit: percent_of_total_oil
-    observations: [{ source: seed-general-knowledge, low: 4, high: 8 }, { source: ychr, low: 6.0, high: 8.0 }]
+    observations: [{ source: ychr, low: 6.0, high: 8.0 }]
   farnesene:
     unit: percent_of_total_oil
-    observations: [{ source: seed-general-knowledge, typical: 1 }, { source: ychr, low: 0.0, high: 0.0 }]
+    observations: [{ source: ychr, low: 0.0, high: 0.0 }]
   other:
     unit: percent_of_total_oil
     observations: [{ source: seed-general-knowledge, low: 12, high: 25 }]

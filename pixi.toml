@@ -82,6 +82,11 @@ ych = "python tools/ingest/yakima_chief.py"
 ych-discover = "python tools/ingest/yakima_chief.py --discover"
 test-ych = "python tools/ingest/test_yakima_chief.py"
 
+# Maintenance: remove placeholder observations a real source has superseded.
+# Dry run by default. See tools/drop_placeholders.py for why this is a
+# deletion and not a second opinion.
+drop-placeholders = "python tools/drop_placeholders.py"
+
 # Runs every registered scraper's discovery mode and reports names not
 # matched to a record in data/hops/. Same thing the monthly discover.yml
 # workflow runs, wired up for a manual check locally.

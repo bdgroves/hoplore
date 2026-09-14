@@ -18,16 +18,16 @@ aroma:
 analytics:
   alpha_acid:
     unit: percent
-    observations: [{ source: seed-general-knowledge, low: 3.0, high: 5.5, typical: 4.0 }, { source: hopsteiner, low: 3.0, high: 5.5, note: Data sheet last changed 2020-01-09. }]
+    observations: [{ source: hopsteiner, low: 3.0, high: 5.5, note: Data sheet last changed 2020-01-09. }]
   beta_acid:
     unit: percent
-    observations: [{ source: seed-general-knowledge, low: 3.0, high: 5.0 }, { source: hopsteiner, low: 3.0, high: 5.0, note: Data sheet last changed 2020-01-09. }]
+    observations: [{ source: hopsteiner, low: 3.0, high: 5.0, note: Data sheet last changed 2020-01-09. }]
   cohumulone:
     unit: percent_of_alpha
-    observations: [{ source: seed-general-knowledge, low: 18, high: 25 }, { source: hopsteiner, low: 18.0, high: 28.0, note: Data sheet last changed 2020-01-09. }]
+    observations: [{ source: hopsteiner, low: 18.0, high: 28.0, note: Data sheet last changed 2020-01-09. }]
   total_oil:
     unit: ml_per_100g
-    observations: [{ source: seed-general-knowledge, low: 0.6, high: 1.1 }, { source: hopsteiner, low: 0.7, high: 1.3, note: Data sheet last changed 2020-01-09. }]
+    observations: [{ source: hopsteiner, low: 0.7, high: 1.3, note: Data sheet last changed 2020-01-09. }]
 oils:
   myrcene:
     unit: percent_of_total_oil
@@ -40,7 +40,7 @@ oils:
     observations: [{ source: seed-general-knowledge, low: 10, high: 15 }]
   farnesene:
     unit: percent_of_total_oil
-    observations: [{ source: seed-general-knowledge, typical: 1 }, { source: hopsteiner, low: 0.0, high: 1.0, note: Data sheet last changed 2020-01-09. }]
+    observations: [{ source: hopsteiner, low: 0.0, high: 1.0, note: Data sheet last changed 2020-01-09. }]
   other:
     unit: percent_of_total_oil
     observations: [{ source: seed-general-knowledge, low: 15, high: 25 }]
