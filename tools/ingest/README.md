@@ -3,7 +3,7 @@
 Python side of the project. Run from the `data` pixi environment:
 
 ```bash
-pixi run -e data hopsteiner-discover          # what does Hopsteiner publish?
+pixi run -e data hopsteiner-discover          # confirm known varieties against Hopsteiner's URLs
 pixi run -e data hopsteiner centennial         # dry run, shows what it would do
 pixi run -e data hopsteiner centennial --apply # write it
 pixi run -e data hopsteiner --all --apply      # every mapped variety
@@ -47,7 +47,7 @@ Useful flags:
 
 | flag | what it does |
 |---|---|
-| `--discover` | list every variety Hopsteiner publishes, to fill in the map |
+| `--discover` | probe data/reference/varieties.yml against Hopsteiner's URLs — see below |
 | `--json` | with `--discover`, machine-readable output instead of a printed list |
 | `--apply` | actually write to `data/hops/` |
 | `--force` | replace an existing hopsteiner observation instead of skipping |
@@ -63,6 +63,30 @@ links back to the repo.
 `tools/ingest/hopsteiner_map.yml` maps our slugs to their URL names. A value of
 `false` means they do not carry that variety — proprietary HBC and YCR hops like
 Citra, Mosaic and Simcoe are licensed elsewhere, so there is no sheet to fetch.
+
+### Why `--discover` probes instead of lists
+
+The variety-data-sheets index page renders its grid client-side — a plain
+`requests` fetch sees the nav and footer (51 `<a>` tags) and zero variety
+links. Their WordPress sitemap doesn't cover it either: `sitemap.xml`'s eight
+child sitemaps are post/page/news/blog/events/mediapr/category/type, and none
+of those list a `variety-data-sheets` URL. Checked by hand, not assumed.
+
+So `discover_varieties()` doesn't scrape a listing — there isn't one
+available without rendering JavaScript. It probes instead: for every variety
+in `data/reference/varieties.yml` not already resolved (true or false) in
+`hopsteiner_map.yml`, it guesses a URL (`slug_candidates()` — title-case,
+hyphenated, plus a German-transliterated variant) and keeps whatever comes
+back `200`. A miss means *unconfirmed*, not *Hopsteiner doesn't have it* —
+`hopsteiner_map.yml`'s `Hallertauer-Mittelfrueh` for our `Hallertau Mittelfrüh`
+is proof the mechanical guess doesn't always match their actual URL.
+
+If you want true discovery of varieties nobody has entered into the
+reference list yet, that needs either a headless-browser fetch (Playwright —
+a real dependency this project has otherwise avoided) or finding whatever
+JSON endpoint the JS grid actually calls (open the index page in a browser,
+DevTools → Network → XHR). Neither is implemented; this is the deliberately
+lighter-weight version.
 
 ### Fields they publish that we do not model
 
@@ -84,10 +108,11 @@ sections — worth deciding before the next source gets a scraper, not after.
 ## discover_all.py
 
 Runs every scraper in `SCRAPERS` (currently just Hopsteiner) with its
-`discover_varieties()` function and reports any name not matched to an
+`discover_varieties()` function and reports anything not matched to an
 existing `data/hops/` record — by `name`, `aliases`, `previously_named`, or
-`slug`, loosely normalized. Read-only, same as `scripts/coverage.js`, just
-sourced from the live sites instead of the hand-maintained reference list.
+`slug`, loosely normalized. Read-only, same as `scripts/coverage.js`. What
+"discovery" actually means is source-specific — see "Why `--discover` probes
+instead of lists" above for what it means for Hopsteiner today.
 
 ```bash
 pixi run -e data discover-all
@@ -96,5 +121,6 @@ pixi run -e data python tools/ingest/discover_all.py --out discovery-report.md
 
 Runs monthly via `.github/workflows/discover.yml`, which opens a GitHub issue
 when it finds anything. Adding a second scraper here later just means giving
-it a `discover_varieties(delay)` function with the same contract and adding
-it to the `SCRAPERS` dict — no other wiring needed.
+it a `discover_varieties(delay)` function returning `{key: value}` — value
+just needs to be useful to read in an issue body, a name or a confirmed URL,
+whatever fits that source — and adding it to the `SCRAPERS` dict.

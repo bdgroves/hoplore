@@ -32,7 +32,6 @@ import sys
 import time
 from dataclasses import dataclass, field
 from pathlib import Path
-from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
@@ -357,27 +356,82 @@ def report(sheet: Sheet, record: CommentedMap | None, verbose: bool) -> None:
 # ---------------------------------------------------------------------- discover
 
 
-def discover_varieties(delay: float) -> dict[str, str]:
-    """Ask the site what it actually has, instead of guessing at URL slugs.
+REFERENCE_FILE = ROOT / "data" / "reference" / "varieties.yml"
 
-    Returns {href-name: display-name}, e.g. {"centennial": "Centennial"}.
-    Kept separate from the CLI-facing discover() below so discover_all.py can
-    call it as a library function and get data back instead of parsing stdout.
+
+def load_reference() -> dict[str, str]:
+    """{slug: display name} from data/reference/varieties.yml."""
+    entries = yaml.load(REFERENCE_FILE.read_text(encoding="utf-8")) or []
+    return {e["slug"]: e["name"] for e in entries if e.get("slug") and e.get("name")}
+
+
+def slug_candidates(name: str) -> list[str]:
     """
-    html = fetch(BASE, delay)
-    soup = BeautifulSoup(html, "lxml")
+    Guess the URL segment Hopsteiner might use for a display name, e.g.
+    "Mount Hood" -> "Mount-Hood". Not reliable for every naming quirk —
+    hopsteiner_map.yml's confirmed "Hallertauer-Mittelfrueh" for our
+    "Hallertau Mittelfrüh" is not a mechanical transform of the name at all,
+    it is a different word form on top of the transliteration. Treat a miss
+    as "unconfirmed", never as "Hopsteiner doesn't carry this".
+    """
+    base = name.strip()
+    translit = (
+        base.replace("ü", "ue").replace("Ü", "Ue")
+        .replace("ö", "oe").replace("Ö", "Oe")
+        .replace("ä", "ae").replace("Ä", "Ae")
+        .replace("ß", "ss")
+    )
+    seen: list[str] = []
+    for text in (base, translit):
+        cleaned = re.sub(r"[!'’.®™]", "", text)
+        cleaned = re.sub(r"\s+", "-", cleaned.strip())
+        if cleaned and cleaned not in seen:
+            seen.append(cleaned)
+    return seen
 
-    varieties = {}
-    for link in soup.find_all("a", href=True):
-        href = urljoin(BASE, link["href"])
-        if "/variety-data-sheets/" not in href:
-            continue
-        name = href.rstrip("/").split("/")[-1]
-        if name in ("variety-data-sheets", "") or "?" in name:
-            continue
-        varieties[name] = link.get_text(strip=True) or name
 
-    return varieties
+def discover_varieties(delay: float) -> dict[str, str]:
+    """
+    Hopsteiner's variety-data-sheets index page renders its grid client-side.
+    A plain HTML fetch of that page sees zero variety links (confirmed:
+    51 <a> tags, all nav/footer, none pointing at an individual variety).
+    Their WordPress sitemap does not cover it either — sitemap.xml's eight
+    child sitemaps are post/page/news/blog/events/mediapr/category/type,
+    and none of those list a variety-data-sheets URL. Checked by hand before
+    writing this; see the project's HANDOFF.md for the transcript.
+
+    So this does not scrape a listing — there isn't one available to us
+    without rendering JavaScript. Instead it *probes*: for every variety in
+    data/reference/varieties.yml that hopsteiner_map.yml has not already
+    resolved (true or false), it guesses a URL via slug_candidates() and
+    keeps the guesses that come back 200.
+
+    This can only confirm names HopLore already knows about. It cannot find
+    a cultivar nobody has heard of yet — that would need either a rendered
+    fetch (see tools/ingest/README.md) or manual discovery of whatever API
+    the JS grid actually calls.
+
+    Returns {our-slug: confirmed-url}, keyed by our slug rather than theirs,
+    since there is no "their slug" for a candidate until it resolves.
+    """
+    mapping = load_map()
+    reference = load_reference()
+    candidates = {slug: name for slug, name in reference.items() if slug not in mapping}
+
+    found: dict[str, str] = {}
+    for slug, name in candidates.items():
+        for guess in slug_candidates(name):
+            url = f"{BASE}{guess}/"
+            time.sleep(delay)
+            try:
+                resp = requests.head(url, headers={"User-Agent": UA}, timeout=15, allow_redirects=True)
+            except requests.RequestException:
+                continue
+            if resp.status_code == 200:
+                found[slug] = url
+                break
+
+    return found
 
 
 def discover(delay: float, as_json: bool) -> None:
@@ -387,10 +441,16 @@ def discover(delay: float, as_json: bool) -> None:
         print(json.dumps({"source": SOURCE_ID, "varieties": varieties}, indent=2))
         return
 
-    print(f"\n{len(varieties)} varieties listed by Hopsteiner:\n")
-    for name in sorted(varieties):
-        print(f"  {name}")
-    print("\nAdd the ones you want to tools/ingest/hopsteiner_map.yml as `our-slug: Their-Name`.\n")
+    print(f"\n{len(varieties)} reference variety URL(s) confirmed by probing (of the ones not already in hopsteiner_map.yml):\n")
+    for slug in sorted(varieties):
+        url = varieties[slug]
+        guessed_name = url.rstrip("/").rsplit("/", 1)[-1]
+        print(f"  {slug:<24} {url}")
+        print(f"    -> paste into hopsteiner_map.yml:  {slug}: {guessed_name}")
+    print(
+        "\nA slug not listed here was not confirmed — that means \"unknown\", not \"absent\". "
+        "See discover_varieties()'s docstring for why a full listing isn't available.\n"
+    )
 
 
 # -------------------------------------------------------------------------- CLI

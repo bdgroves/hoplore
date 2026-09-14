@@ -1,19 +1,32 @@
 #!/usr/bin/env python3
 """
-Run every ingest scraper's discovery mode and report anything it lists that
-HopLore does not have a record for yet.
+Run every ingest scraper's discovery mode and report anything it turns up
+that HopLore doesn't have a record for yet.
 
     pixi run -e data python tools/ingest/discover_all.py
     pixi run -e data python tools/ingest/discover_all.py --out discovery-report.md
 
 Read-only. Never touches data/hops/ or any scraper's own map file — this is
-reporting, the same as scripts/coverage.js, just sourced from the live sites
-instead of a hand-maintained reference list. The point is new hop releases
-should find you rather than you having to remember to go check.
+reporting, the same as scripts/coverage.js, just sourced from live sites
+instead of the hand-maintained reference list scripts/coverage.js checks
+against.
 
-To add a second scraper here later: give it a discover_varieties(delay)
-function returning {their-name-or-slug: display-name}, same contract as
-hopsteiner.discover_varieties, and add it to SCRAPERS below.
+What "discovery" means varies by scraper, and that's on purpose — a scraper
+reports what it can actually see about its own source, not a pretense of a
+uniform contract that doesn't fit every site:
+
+  - hopsteiner: can't list its own catalog (see hopsteiner.py's
+    discover_varieties docstring for why — short version: the listing page
+    is JS-rendered and not in their sitemap). What it CAN do is confirm
+    whether a variety from data/reference/varieties.yml that we haven't
+    already resolved now has a live page. So its results are "we now have
+    evidence Hopsteiner carries this known variety", not "here is a hop
+    nobody has heard of".
+
+Every scraper here needs a discover_varieties(delay) function returning
+{key: value} where value is at minimum useful to read in an issue body —
+a display name, a confirmed URL, whatever fits that source. Add a second
+scraper by giving it that function and adding it to SCRAPERS below.
 """
 from __future__ import annotations
 
@@ -85,15 +98,15 @@ def main() -> int:
         total_new += len(new)
 
         lines.append(f"### {source_id}")
-        lines.append(f"{len(varieties)} varieties listed, {len(new)} not matched to an existing record.\n")
+        lines.append(f"{len(varieties)} result(s), {len(new)} not matched to an existing record.\n")
         if new:
             for key in sorted(new):
-                lines.append(f"- **{new[key]}** (`{key}`)")
+                lines.append(f"- **{key}** — {new[key]}")
         else:
             lines.append("_nothing new._")
         lines.append("")
 
-    header = f"## HopLore discovery report\n\n{total_new} possibly-new variety name(s) found across {len(SCRAPERS)} scraper(s).\n"
+    header = f"## HopLore discovery report\n\n{total_new} possibly-new result(s) found across {len(SCRAPERS)} scraper(s).\n"
     report = header + "\n" + "\n".join(lines)
 
     print(report)
