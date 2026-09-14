@@ -1,0 +1,8 @@
+#!/bin/sh
+# Blocks commits that stage YAML with a phantom key from an unquoted comma
+# inside a flow mapping. See scripts/check-yaml-syntax.js for why.
+#
+# Enable once per clone:
+#   git config core.hooksPath .githooks
+
+node "$(git rev-parse --show-toplevel)/scripts/check-yaml-syntax.js"

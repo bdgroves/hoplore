@@ -96,14 +96,7 @@ for (const hop of hops) {
   }
 
   // Every cited source must exist.
-  const refs = [
-    ...(hop.aroma?.refs ?? []),
-    ...(hop.pedigree?.refs ?? []),
-    ...(hop.products?.refs ?? []),
-    ...(hop.substitutes ?? []).flatMap((s) => s.refs ?? []),
-    ...(hop.forms ?? []).flatMap((f) => f.refs ?? []),
-    ...allMetrics(hop).flatMap((m) => m.observations.map((o) => o.source)),
-  ];
+  const refs = allRefs(hop);
   for (const ref of new Set(refs)) {
     if (!sourceIds.has(ref)) err(at(), `cites unknown source "${ref}" — add it to data/sources.yml`);
   }
@@ -215,7 +208,7 @@ for (const [id, src] of Object.entries(sources)) {
   if (src.tier !== 'unsourced' && !src.url) warn('sources.yml', `"${id}" has no url`);
 }
 
-const cited = new Set(hops.flatMap((h) => allMetrics(h).flatMap((m) => m.observations.map((o) => o.source))));
+const cited = new Set(hops.flatMap((h) => allRefs(h)));
 for (const id of sourceIds) {
   if (!cited.has(id)) warn('sources.yml', `"${id}" is registered but never cited`);
 }
@@ -249,6 +242,21 @@ function allMetrics(hop) {
     ...METRIC_KEYS.map((k) => hop.analytics?.[k]),
     ...OIL_KEYS.map((k) => hop.oils?.[k]),
   ].filter((m) => m?.observations);
+}
+
+// Every source id a hop record cites, across every field that can carry a
+// `refs`/`source` key. Used both to check "does this ref exist" (per-hop)
+// and "was this registered source ever cited" (global) — those two checks
+// drifted apart because the global one only looked at analytics/oils.
+function allRefs(hop) {
+  return [
+    ...(hop.aroma?.refs ?? []),
+    ...(hop.pedigree?.refs ?? []),
+    ...(hop.products?.refs ?? []),
+    ...(hop.substitutes ?? []).flatMap((s) => s.refs ?? []),
+    ...(hop.forms ?? []).flatMap((f) => f.refs ?? []),
+    ...allMetrics(hop).flatMap((m) => m.observations.map((o) => o.source)),
+  ];
 }
 
 const byStatus = hops.reduce((acc, h) => {

@@ -98,3 +98,18 @@ version you have locally, so green here means green there.
 
 Not a pixi user? `npm install && npm run validate` does the same thing — the
 pixi tasks just wrap the npm scripts.
+
+## Pre-commit hook
+
+Unquoted commas in a YAML flow mapping (see Style, above) have bitten this
+repo more than once — the YAML parses fine, but a chunk of your note text
+becomes a phantom key that only surfaces later as an opaque schema error.
+A hook catches it before the commit happens:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+One-time, per clone. After that, `git commit` runs `pixi run lint-yaml`
+against whatever YAML you staged and blocks the commit if it finds a
+suspicious key.

@@ -37,6 +37,10 @@ build = { cmd = "node scripts/build.js", depends-on = ["validate"] }
 serve = { cmd = "node scripts/serve.js", depends-on = ["build"] }
 new-hop = { cmd = "node scripts/new-hop.js", depends-on = ["install"] }
 
+# Checks staged YAML for the unquoted-comma-in-a-flow-mapping bug. Same
+# script the pre-commit hook runs — see .githooks/pre-commit.
+lint-yaml = { cmd = "node scripts/check-yaml-syntax.js", depends-on = ["install"] }
+
 # What CI runs. Same command locally, so green here means green there.
 check = { depends-on = ["validate", "build"] }
 

@@ -151,4 +151,4 @@ if (needsWork.length) {
   console.log(c.yellow(`  ${needsWork.length} record(s) still resting on placeholder citations:`));
   console.log(c.dim(`    ${needsWork.map((h) => h.slug).join(', ')}`));
 }
-console.log(c.dim(`\n  dist/ is ready. npm run serve to look at it.\n`));
+console.log(c.dim(`\n  dist/ is ready. pixi run serve to look at it.\n`));
