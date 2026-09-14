@@ -23,15 +23,16 @@ analytics:
     unit: percent
     observations:
       - { source: seed-general-knowledge, low: 8.0, high: 12.0, typical: 10.0 }
+      - { source: hopsteiner, low: 9.5, high: 11.5, note: Data sheet last changed 2020-01-09. }
   beta_acid:
     unit: percent
-    observations: [{ source: seed-general-knowledge, low: 3.5, high: 5.5 }]
+    observations: [{ source: seed-general-knowledge, low: 3.5, high: 5.5 }, { source: hopsteiner, low: 3.5, high: 4.5, note: Data sheet last changed 2020-01-09. }]
   cohumulone:
     unit: percent_of_alpha
-    observations: [{ source: seed-general-knowledge, low: 28, high: 35 }]
+    observations: [{ source: seed-general-knowledge, low: 28, high: 35 }, { source: hopsteiner, low: 29.0, high: 30.0, note: Data sheet last changed 2020-01-09. }]
   total_oil:
     unit: ml_per_100g
-    observations: [{ source: seed-general-knowledge, low: 1.5, high: 2.5 }]
+    observations: [{ source: seed-general-knowledge, low: 1.5, high: 2.5 }, { source: hopsteiner, low: 0.8, high: 2.3, note: Data sheet last changed 2020-01-09. }]
 oils:
   myrcene:
     unit: percent_of_total_oil
@@ -44,10 +45,14 @@ oils:
     observations: [{ source: seed-general-knowledge, low: 4, high: 8 }]
   farnesene:
     unit: percent_of_total_oil
-    observations: [{ source: seed-general-knowledge, typical: 1 }]
+    observations: [{ source: seed-general-knowledge, typical: 1 }, { source: hopsteiner, low: 0.0, high: 1.0, note: Data sheet last changed 2020-01-09. }]
   other:
     unit: percent_of_total_oil
     observations: [{ source: seed-general-knowledge, low: 18, high: 30 }]
+  linalool:
+    unit: percent_of_total_oil
+    observations:
+      - { source: hopsteiner, low: 1.0, high: 1.3, note: Data sheet last changed 2020-01-09. }
 usage:
   timing: [bittering, late-boil, whirlpool, dry-hop]
   beer_styles: [american-ipa, west-coast-ipa, double-ipa, american-pale-ale, american-amber, american-stout, barleywine]
@@ -58,5 +63,5 @@ substitutes:
   - { slug: citra, confidence: low }
 meta:
   status: draft
-  verification: unverified
-  last_reviewed: '2026-09-11'
+  verification: single-source
+  last_reviewed: '2026-09-14'

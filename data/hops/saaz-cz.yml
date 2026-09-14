@@ -19,16 +19,16 @@ aroma:
 analytics:
   alpha_acid:
     unit: percent
-    observations: [{ source: seed-general-knowledge, low: 2.5, high: 4.5, typical: 3.5 }]
+    observations: [{ source: seed-general-knowledge, low: 2.5, high: 4.5, typical: 3.5 }, { source: hopsteiner, low: 2.8, high: 3.5, note: Data sheet last changed 2020-01-09. }]
   beta_acid:
     unit: percent
-    observations: [{ source: seed-general-knowledge, low: 4.0, high: 6.0 }]
+    observations: [{ source: seed-general-knowledge, low: 4.0, high: 6.0 }, { source: hopsteiner, low: 3.0, high: 5.0, note: Data sheet last changed 2020-01-09. }]
   cohumulone:
     unit: percent_of_alpha
-    observations: [{ source: seed-general-knowledge, low: 23, high: 28 }]
+    observations: [{ source: seed-general-knowledge, low: 23, high: 28 }, { source: hopsteiner, low: 24.0, high: 26.0, note: Data sheet last changed 2020-01-09. }]
   total_oil:
     unit: ml_per_100g
-    observations: [{ source: seed-general-knowledge, low: 0.4, high: 0.8 }]
+    observations: [{ source: seed-general-knowledge, low: 0.4, high: 0.8 }, { source: hopsteiner, low: 0.3, high: 0.7, note: Data sheet last changed 2020-01-09. }]
 oils:
   myrcene:
     unit: percent_of_total_oil
@@ -41,10 +41,14 @@ oils:
     observations: [{ source: seed-general-knowledge, low: 6, high: 10 }]
   farnesene:
     unit: percent_of_total_oil
-    observations: [{ source: seed-general-knowledge, low: 12, high: 20, note: Unusually high farnesene is a Saaz marker. }]
+    observations: [{ source: seed-general-knowledge, low: 12, high: 20, note: Unusually high farnesene is a Saaz marker. }, { source: hopsteiner, low: 14.0, high: 22.0, note: Data sheet last changed 2020-01-09. }]
   other:
     unit: percent_of_total_oil
     observations: [{ source: seed-general-knowledge, low: 10, high: 25 }]
+  linalool:
+    unit: percent_of_total_oil
+    observations:
+      - { source: hopsteiner, low: 0.3, high: 0.5, note: Data sheet last changed 2020-01-09. }
 usage:
   timing: [late-boil, whirlpool]
   beer_styles: [czech-pale-lager, pilsner, pale-lager, helles, lambic, saison, weissbier]
@@ -54,5 +58,5 @@ substitutes:
   - { slug: strisselspalt, confidence: medium }
 meta:
   status: draft
-  verification: unverified
-  last_reviewed: '2026-09-11'
+  verification: single-source
+  last_reviewed: '2026-09-14'

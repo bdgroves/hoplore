@@ -33,8 +33,34 @@ substitutes: []
 
 meta:
   status: stub
-  verification: unverified
+  verification: single-source
   last_reviewed: '2026-09-14'
   notes: >
     purpose defaulted to dual, unconfirmed -- was not researched individually
     for this bulk scaffold pass. Correct before publishing.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: hopsteiner, low: 5.0, high: 6.0, note: Data sheet last changed 2020-01-09. }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: hopsteiner, low: 2.2, high: 2.4, note: Data sheet last changed 2020-01-09. }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: hopsteiner, low: 27.0, high: 29.0, note: Data sheet last changed 2020-01-09. }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: hopsteiner, low: 0.6, high: 0.8, note: Data sheet last changed 2020-01-09. }
+oils:
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: hopsteiner, low: 3.4, high: 3.8, note: Data sheet last changed 2020-01-09. }
+  linalool:
+    unit: percent_of_total_oil
+    observations:
+      - { source: hopsteiner, low: 0.4, high: 0.7, note: Data sheet last changed 2020-01-09. }

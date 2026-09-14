@@ -21,18 +21,22 @@ analytics:
     unit: percent
     observations:
       - { source: seed-general-knowledge, low: 6.0, high: 9.0, typical: 7.5 }
+      - { source: hopsteiner, low: 5.0, high: 9.0, note: Data sheet last changed 2020-01-09. }
   beta_acid:
     unit: percent
     observations:
       - { source: seed-general-knowledge, low: 2.5, high: 4.5 }
+      - { source: hopsteiner, low: 3.0, high: 4.0, note: Data sheet last changed 2020-01-09. }
   cohumulone:
     unit: percent_of_alpha
     observations:
       - { source: seed-general-knowledge, low: 20, high: 25 }
+      - { source: hopsteiner, low: 27.0, high: 30.0, note: Data sheet last changed 2020-01-09. }
   total_oil:
     unit: ml_per_100g
     observations:
       - { source: seed-general-knowledge, low: 1.0, high: 1.7 }
+      - { source: hopsteiner, low: 1.0, high: 1.5, note: Data sheet last changed 2020-01-09. }
 usage:
   timing: [bittering, late-boil, dry-hop]
   beer_styles: [english-bitter, esb, english-ipa, porter, british-brown, american-amber]
@@ -43,5 +47,10 @@ substitutes:
   - { slug: willamette, confidence: low }
 meta:
   status: draft
-  verification: unverified
-  last_reviewed: '2026-09-11'
+  verification: single-source
+  last_reviewed: '2026-09-14'
+oils:
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: hopsteiner, low: 1.0, high: 2.0, note: Data sheet last changed 2020-01-09. }
