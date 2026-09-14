@@ -8,7 +8,7 @@ ownership: { mark: public, public_domain: true }
 pedigree:
   released: 1976
   breeder: usda-ars
-  parents: { seed: fuggle, note: A triploid Fuggle seedling selected in Oregon; Fuggle not yet in dataset. }
+  parents: { seed: fuggle, note: A triploid Fuggle seedling selected in Oregon. }
   refs: [seed-general-knowledge]
 aroma:
   summary: >

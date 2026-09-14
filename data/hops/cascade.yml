@@ -9,7 +9,7 @@ pedigree:
   year_crossed: 1956
   released: 1972
   breeder: usda-ars
-  parents: { seed: fuggle, pollen: serebrianka, note: Fuggle x a Serebrianka seedling. Neither parent is in the dataset yet. }
+  parents: { seed: fuggle, pollen: serebrianka, note: Fuggle x a Serebrianka seedling. }
   refs: [seed-general-knowledge]
 aroma:
   summary: >

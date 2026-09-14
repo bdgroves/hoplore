@@ -2,9 +2,11 @@
 
 **An open hop database that shows its working.**
 
-Every hop spec sheet on the internet gives you one confident number. `Alpha: 5.5–8.5%`. Cool. Says who? Measured when? In whose field, in what crop year, by someone selling it to you or by someone who bred it?
+Every hop spec sheet on the internet hands you one confident number. `Alpha: 5.5–8.5%`. Cool. Says who? Measured when? In whose field, in what crop year, by the people who bred it or by a shop trying to move last season's crop?
 
 Nobody says. So I built a database that does.
+
+**132 cultivars. 67 with real breeder-tier citations. Every number traceable to whoever actually said it.**
 
 ---
 
@@ -26,7 +28,7 @@ alpha_acid:
     - { source: hops-france,  low: 7.0, high: 8.5, note: 'Breeder figure, narrower than merchant spread.' }
 ```
 
-That's the whole thesis. Nobody hand-writes a published range in this repo. You write down what each source actually said, and `npm run build` rolls it up into `5.5–8.5%, typical 7.5, agreement 0.75, 2 sources` — and the site renders the breeder's number and the aggregator's number as two separate dots on the same bar so you can *see* them disagree.
+That's the whole thesis. Nobody hand-writes a published range in this repo. You write down what each source actually said, and `pixi run build` rolls it up into `5.5–8.5%, typical 7.5, agreement 0.75, 2 sources` — and the site renders the breeder's number and the aggregator's number as two separate dots on the same bar so you can *see* them disagree.
 
 ---
 
@@ -64,6 +66,7 @@ pixi install
 pixi run validate    # yells at you about the data
 pixi run build       # writes dist/
 pixi run serve       # http://localhost:4173
+pixi run coverage    # what's missing, what's stale, what's still on placeholders
 ```
 
 Node is pinned in `pixi.toml` and locked in `pixi.lock`, so a fresh clone on any
@@ -76,13 +79,13 @@ you ask for it, because nobody adding a hop record should have to download
 pandas to do it:
 
 ```bash
-pixi run -e data python tools/ingest/run.py
+pixi run -e data hopsteiner centennial
 ```
 
 If you'd rather not use pixi, `npm install && npm run build` works fine — the
 pixi tasks are thin wrappers around the npm scripts.
 
-`npm run validate` is the interesting one. It is deliberately hard to please.
+`pixi run validate` is the interesting one. It is deliberately hard to please.
 
 It checks the schema, then it checks the things a schema can't: that every cited source exists in the registry, that every substitute points at a hop that actually has a record, that no aroma tag has been invented on the spot, that oil components sum to roughly 100%, that nobody typed a cohumulone of 420, that a record marked `published` isn't quietly resting on placeholder citations, and that substitution suggestions go both ways so the graph is walkable instead of full of dead ends.
 
@@ -90,16 +93,22 @@ Errors fail the build. Warnings don't — they print as a to-do list, because a 
 
 ```
 HopLore data check
-  13 cultivars, 12 sources, 63 aroma tags
-  status: 1 published, 12 draft
+  132 cultivars, 12 sources, 63 aroma tags
+  status: 118 stub, 1 published, 13 draft
 
-23 warnings
-  ~ cascade.yml pedigree.parents: seed parent "fuggle" is not yet in the dataset
-  ~ nelson-sauvin.yml meta.verification: cites a placeholder source
+122 warnings
+  ~ chinook.yml oils: no myrcene figure, which is the one every sheet publishes
+  ~ centennial.yml meta.verification: cites a placeholder source but is not marked unverified
   ...
 
 All checks passed.
 ```
+
+That myrcene warning is a good example of the validator earning its keep. It's
+not a bug in the pipeline — Hopsteiner's sheets genuinely don't publish myrcene,
+which is usually the single biggest component of a hop's oil. So the tool tells
+you the breakdown is incomplete instead of quietly drawing you a pie chart that
+adds up to 4%.
 
 ---
 
@@ -203,11 +212,30 @@ Building something with it? Go ahead — it's CC BY 4.0, just credit it. I'd lov
 
 ## Honest state of the data
 
-**14 cultivars, and most of them are still seeded rather than sourced.**
+Nobody gets to skip this section. Here's exactly where it stands:
 
-I bootstrapped the initial records from general brewing knowledge so there'd be something to build the tooling against, and every one of those citations points at a source called `seed-general-knowledge` with `tier: unsourced` and `weight: 0.1`. The validator flags them. The build report lists them by name. The site renders them with a red dot that says "needs a citation."
+| | count | what that means |
+|---|---|---|
+| Cultivars | **132** | every one has a record, a page and an API endpoint |
+| Cite a real source | **67** | mostly Hopsteiner, tier `breeder`, weight 1.0 |
+| Still cite a placeholder | **13** | the original seed pass, flagged everywhere |
+| Bare stubs, no numbers yet | **60** | real varieties, no data pulled in yet |
 
-That is not me being modest, it's the design. A dataset that can't tell you which of its numbers to distrust is worse than no dataset. Replacing a `seed-general-knowledge` citation with a real breeder sheet is the single most useful thing anyone can do here, and it's a five-line diff.
+I bootstrapped the first records from general brewing knowledge so there'd be
+something to build the tooling against, and every one of those citations points
+at a source called `seed-general-knowledge` with `tier: unsourced` and
+`weight: 0.1`. The validator flags them. The build report lists them by name.
+The site renders them with a red dot that says "needs a citation."
+
+That's not modesty, it's the design. A dataset that can't tell you which of its
+numbers to distrust is worse than no dataset. Replacing a
+`seed-general-knowledge` citation with a real breeder sheet is the single most
+useful thing anyone can do here, and it's a five-line diff.
+
+The 60 bare stubs are the same principle pointed the other way. They're real
+cultivars with real names and no invented numbers behind them — an empty record
+that says "we don't have this yet" beats a full one padded out with plausible
+guesses. They're waiting on a source that actually covers them.
 
 Aramis is the fully-worked example for a single hop — copy its shape. Idaho 7
 is the example for formats, and for the hard case in coverage: a hop bred by a
@@ -233,13 +261,15 @@ Found a wrong number? [Open an issue](../../issues/new?template=data-correction.
 
 ## Roadmap, roughly in order of how much I want it
 
-- [ ] Replace every `seed-general-knowledge` citation with a real source
+- [x] `coverage.js` plus a scheduled workflow that diffs a reference variety
+      list against `data/hops/` and opens an issue for anything missing — so new
+      releases find me instead of the other way round
+- [x] A Hopsteiner scraper, and 132 cultivars seeded off the back of it
+- [ ] Replace the remaining 13 `seed-general-knowledge` citations with real sources
 - [ ] Scrapers for the sources Hopsteiner cannot cover: Yakima Chief Ranches
       (Citra, Mosaic, Simcoe, Talus), NZ Hops, Hop Products Australia,
-      Charles Faram
-- [ ] `coverage.js` plus a scheduled workflow that diffs the Hop Growers of
-      America variety list against `data/hops/` and opens an issue for anything
-      missing — so new releases find me instead of the other way round
+      Charles Faram — these are also the ones that publish **myrcene**, which
+      Hopsteiner doesn't, so this is what fills in 60 half-empty oil breakdowns
 - [ ] Plant patents as a source. Public domain, breeder-authored, and they carry
       pedigree the marketing sheets leave out
 - [ ] Crop-year data from the BarthHaas Hop Harvest Guide, so you can watch
@@ -255,4 +285,12 @@ Code is **MIT**. Data is **CC BY 4.0** — use it, sell things built on it, just
 
 Not affiliated with any hop breeder, farm, merchant, or the aggregators cited in `data/sources.yml`. Variety names are trademarks of their owners and are used here to identify the plants, which is what names are for. Measured properties of a plant are facts; facts don't belong to anybody. See [NOTICE.md](NOTICE.md).
 
-Built in the Pacific Northwest, which is where most of these grow, which is at least a little bit why I care.
+---
+
+Built in the Pacific Northwest — within a couple hours' drive of the Yakima
+Valley, where something like three quarters of the American hop crop comes off
+the bine every fall. Around here hops aren't an ingredient you order, they're a
+harvest you can smell on the wind in September. Hard not to get curious about
+what's actually in them.
+
+Cheers. Go make something bitter.

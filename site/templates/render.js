@@ -196,7 +196,7 @@ export function renderHop({ hop, similar, taxonomy, sources, meta }) {
   const pedigreeLine = parents?.unknown
     ? `Parentage unrecorded. ${esc(parents.note ?? '')}`
     : parents
-      ? `${esc(parents.seed ? nameOf(parents.seed) : '?')}${parents.pollen ? ` × ${esc(nameOf(parents.pollen))}` : ''}${parents.note ? `. ${esc(parents.note)}` : ''}`
+      ? `${parents.seed ? parentLink(parents.seed) : '?'}${parents.pollen ? ` × ${parentLink(parents.pollen)}` : ''}${parents.note ? `. ${esc(parents.note)}` : ''}`
       : null;
 
   const body = `
@@ -238,8 +238,25 @@ export function renderHop({ hop, similar, taxonomy, sources, meta }) {
 </main>
 ${footer(base, meta)}`;
 
+  // A parent that has its own record gets a link; one that doesn't (the
+  // pedigree graph always runs ahead of the dataset) gets a readable name
+  // instead of a raw slug. `us`/`uk`/`nz` etc. are country suffixes on
+  // disambiguated slugs like brewers-gold-us, so they uppercase rather
+  // than title-case.
   function nameOf(slug) {
-    return meta.names[slug] ?? slug.replace(/-/g, ' ');
+    if (meta.names[slug]) return meta.names[slug];
+    const SUFFIXES = new Set(['us', 'uk', 'gb', 'nz', 'de', 'cz', 'au', 'fr', 'si', 'pl', 'jp', 'za']);
+    return slug
+      .split('-')
+      .map((word) =>
+        SUFFIXES.has(word) ? word.toUpperCase() : word.charAt(0).toUpperCase() + word.slice(1)
+      )
+      .join(' ');
+  }
+
+  function parentLink(slug) {
+    const name = esc(nameOf(slug));
+    return meta.names[slug] ? `<a href="${base}hops/${slug}/">${name}</a>` : name;
   }
 
   return shell({

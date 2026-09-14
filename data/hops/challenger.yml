@@ -7,7 +7,7 @@ ownership: { mark: public, public_domain: true }
 pedigree:
   released: 1972
   breeder: wye
-  parents: { seed: northern-brewer-gb, note: Northern Brewer crossed with a German male; seed parent slug not yet in dataset. }
+  parents: { seed: northern-brewer-gb, note: Northern Brewer crossed with a German male. }
   refs: [seed-general-knowledge]
 aroma:
   summary: >
