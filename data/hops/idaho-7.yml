@@ -30,14 +30,17 @@ analytics:
     unit: percent
     observations:
       - { source: seed-general-knowledge, low: 10.0, high: 14.0, typical: 12.0 }
+      - { source: ychr, low: 9.5, high: 14.0 }
   beta_acid:
     unit: percent
     observations:
       - { source: seed-general-knowledge, low: 4.0, high: 6.5 }
+      - { source: ychr, low: 3.5, high: 5.0 }
   total_oil:
     unit: ml_per_100g
     observations:
       - { source: seed-general-knowledge, low: 2.0, high: 3.0 }
+      - { source: ychr, low: 1.0, high: 2.0 }
 
 # The reason this record exists. Same plant, three products, three sets of
 # numbers. Substitute Cryo into a recipe written for T90 at the same weight and

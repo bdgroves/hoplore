@@ -82,15 +82,20 @@ yaml.indent(mapping=2, sequence=4, offset=2)
 # YCR's row label -> (section, metric, unit).
 #
 # Labels are matched on a normalised prefix rather than the whole string,
-# because the parenthetical suffixes carry units and wording that is likely to
-# be edited ("Total Oils (Mls. per 100 grams dried hops)"). Matching the stem
-# means a reworded unit note degrades to "unmapped and reported" rather than a
-# silent miss.
+# because YCR run at least two page templates with different wording for the
+# same figure:
+#
+#   Citra, Simcoe, Warrior:  "Alpha Acids"  "Total Oils (Mls. per 100 grams…)"
+#   Ekuanot, Sabro:          "Alpha"        "Total Oil"
+#
+# So the prefixes are deliberately the shortest unambiguous stem. "alpha"
+# would also match "Alpha-Beta Ratio", which is why IGNORED_PREFIXES is
+# checked first — keep that ordering.
 FIELD_MAP = {
-    "alpha acids": ("analytics", "alpha_acid", "percent"),
-    "beta acids": ("analytics", "beta_acid", "percent"),
+    "alpha": ("analytics", "alpha_acid", "percent"),
+    "beta": ("analytics", "beta_acid", "percent"),
     "cohumulone": ("analytics", "cohumulone", "percent_of_alpha"),
-    "total oils": ("analytics", "total_oil", "ml_per_100g"),
+    "total oil": ("analytics", "total_oil", "ml_per_100g"),
     "storage": ("analytics", "alpha_retention_6mo_20c", "percent"),
     "myrcene": ("oils", "myrcene", "percent_of_total_oil"),
     "humulene": ("oils", "humulene", "percent_of_total_oil"),

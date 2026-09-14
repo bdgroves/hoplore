@@ -43,3 +43,15 @@ analytics:
     unit: percent_of_alpha
     observations:
       - { source: ychr, low: 32.0, high: 38.0 }
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: ychr, low: 14.5, high: 15.5 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: ychr, low: 4.5, high: 5.5 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: ychr, low: 2.5, high: 4.5 }

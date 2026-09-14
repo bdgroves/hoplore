@@ -43,3 +43,11 @@ analytics:
     unit: percent_of_alpha
     observations:
       - { source: ychr, low: 21.0, high: 24.0 }
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: ychr, low: 11.3, high: 12.2 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: ychr, low: 4.0, high: 5.4 }

@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from yakima_chief import parse_range, parse_brand, map_label  # noqa: E402
+from yakima_chief import parse_range, parse_brand, map_label, IGNORED_PREFIXES  # noqa: E402
 
 FIXTURE = Path(__file__).parent / "fixtures" / "ychr-citra.html"
 
@@ -66,6 +66,18 @@ check(
 )
 check("label unknown", map_label("Bine Colour"), None)
 
+# YCR run at least two page templates. Citra/Simcoe/Warrior use verbose
+# labels; Ekuanot/Sabro use terse ones for the same figures. Matching only
+# the verbose form silently dropped alpha, beta and total oil from the terse
+# pages — Ekuanot came back with cohumulone and nothing else.
+check("label terse alpha", map_label("Alpha"), ("analytics", "alpha_acid", "percent"))
+check("label terse beta", map_label("Beta"), ("analytics", "beta_acid", "percent"))
+check("label terse total oil", map_label("Total Oil"), ("analytics", "total_oil", "ml_per_100g"))
+check("label bare cohumulone", map_label("Cohumulone"), ("analytics", "cohumulone", "percent_of_alpha"))
+# "alpha" is a prefix of "Alpha-Beta Ratio", so the ignore list has to win.
+# parse_brand checks IGNORED_PREFIXES before map_label; this pins the reason.
+check("alpha-beta ratio is on the ignore list", "Alpha-Beta Ratio".lower().startswith(IGNORED_PREFIXES), True)
+
 # --- whole-page parse -------------------------------------------------------
 
 brand = parse_brand(FIXTURE.read_text(encoding="utf-8"), "citra", "citra", "https://example/")
@@ -95,6 +107,19 @@ oil_total = sum(
     (o.low + o.high) / 2 for o in brand.observations if o.section == "oils"
 )
 check("oil components clear the 60% coverage floor", oil_total > 60, True)
+
+# --- terse template whole-page parse ----------------------------------------
+
+terse = parse_brand(
+    (Path(__file__).parent / "fixtures" / "ychr-ekuanot.html").read_text(encoding="utf-8"),
+    "ekuanot", "ekuanot", "https://example/",
+)
+terse_found = {f"{o.section}.{o.metric}": (o.low, o.high) for o in terse.observations}
+check("terse alpha parsed", terse_found.get("analytics.alpha_acid"), (14.5, 15.5))
+check("terse beta parsed", terse_found.get("analytics.beta_acid"), (4.5, 5.5))
+check("terse cohumulone parsed", terse_found.get("analytics.cohumulone"), (32.0, 38.0))
+check("terse total oil parsed", terse_found.get("analytics.total_oil"), (2.5, 4.5))
+check("terse nothing unmapped", terse.unmapped, {})
 
 # --- report -----------------------------------------------------------------
 

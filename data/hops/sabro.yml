@@ -43,3 +43,7 @@ analytics:
     unit: percent
     observations:
       - { source: ychr, low: 12.0, high: 16.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: ychr, low: 2.5, high: 3.5 }
