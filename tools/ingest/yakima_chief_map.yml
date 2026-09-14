@@ -1,0 +1,29 @@
+# HopLore slug  ->  YCR's brand-page name at
+# https://yakimachiefranches.com/create/brands/<name>
+#
+# `false` means YCR does not carry that variety, so the script skips it
+# without a pointless 404.
+#
+# Run `--discover` to list every brand page in their sitemap. Unlike the
+# Hopsteiner map, this one can be filled in from a real listing rather than
+# guessed -- YCR's sitemap enumerates the brand pages.
+
+# from their sitemap, matched to records we already have
+citra: citra
+mosaic: mosaic
+simcoe: simcoe
+idaho-7: idaho7
+talus: talus
+ekuanot: ekuanot
+loral: loral
+sabro: sabro
+palisade: palisade
+warrior: warrior
+
+# Listed by YCR but with no HopLore record yet. Create the record first
+# (`pixi run new-hop "Ahtanum" US aroma`), then uncomment.
+# ahtanum: ahtanum
+# krush: krush
+# dolcita: Dolcita
+# hbc-682: hbc-682
+# terrasurge: terrasurge-hbc-1325

@@ -42,6 +42,10 @@ analytics:
 # The reason this record exists. Same plant, three products, three sets of
 # numbers. Substitute Cryo into a recipe written for T90 at the same weight and
 # you roughly double the bitterness.
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: ychr, low: 30.0, high: 30.0 }
 forms:
   - form: t90
     product_name: T-90 pellets
@@ -84,8 +88,8 @@ substitutes:
 
 meta:
   status: draft
-  verification: unverified
-  last_reviewed: '2026-09-11'
+  verification: single-source
+  last_reviewed: '2026-09-14'
   notes: >
     Origin, release year and breeder are sourced; the brewing values are not,
     and are the next thing to replace. Yakima Chief publishes ranges derived
@@ -95,3 +99,16 @@ meta:
     A useful test case for coverage: Jackson Farms is a family farm in Wilder,
     Idaho, not a breeding institute, and the hop is distributed by three
     separate companies. No single scraper will ever find hops like this.
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: ychr, low: 45.0, high: 55.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: ychr, low: 10.0, high: 20.0 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: ychr, low: 0.5, high: 1.0 }

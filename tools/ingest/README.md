@@ -7,7 +7,10 @@ pixi run -e data hopsteiner-discover          # confirm known varieties against 
 pixi run -e data hopsteiner centennial         # dry run, shows what it would do
 pixi run -e data hopsteiner centennial --apply # write it
 pixi run -e data hopsteiner --all --apply      # every mapped variety
-pixi run -e data test-ingest                   # parser tests
+pixi run -e data test-ingest                   # hopsteiner parser tests
+pixi run -e data ych-discover                  # what YCR publishes
+pixi run -e data ych citra                     # dry run
+pixi run -e data test-ych                      # YCR parser tests
 ```
 
 Kept separate from the Node build on purpose. Adding a hop record by hand needs
@@ -105,6 +108,58 @@ hard resins:alpha, beta-caryophyllene:humulene, linalool:alpha, yield, maturity,
 acreage, and disease resistance. The ratios are derivable from figures we
 already hold. Xanthohumol and the agronomic block would need new schema
 sections — worth deciding before the next source gets a scraper, not after.
+
+## yakima_chief.py
+
+Yakima Chief Ranches breed and license the proprietary US hops Hopsteiner
+doesn't carry — Citra, Mosaic, Simcoe, Talus, Ekuanot, Loral, Sabro — and,
+unlike Hopsteiner, they publish a **full oil breakdown including myrcene**.
+That matters more than it sounds: myrcene is usually the largest single
+component, and without it an oil profile can't clear `MIN_COVERAGE` in
+`rollup.js`, so no chart gets drawn at all. This source is what turns the oil
+chart on.
+
+They also publish storage stability (alpha remaining after six months at
+20 °C), which maps onto `alpha_retention_6mo_20c` — a metric the schema has
+always defined and nothing had ever filled in.
+
+```bash
+pixi run -e data ych-discover          # their sitemap lists every brand page
+pixi run -e data ych citra             # dry run
+pixi run -e data ych citra --apply     # write it
+pixi run -e data ych --all --apply     # every mapped variety
+pixi run -e data test-ych              # parser tests, offline
+```
+
+Same contract as `hopsteiner.py`: dry run by default, cached responses,
+identifies itself in the user-agent, reconciles without resolving, writes
+observations only.
+
+**Discovery here is a real listing, not a guess.** Their `sitemap.xml`
+enumerates every `/create/brands/` page, so `--discover` reads an actual
+catalogue rather than probing URLs — which is how Dolcita, Krush, HBC-682 and
+Terrasurge turned up as varieties HopLore has no record for yet.
+
+### What is deliberately not scraped
+
+`yakimachief.com` — the merchant arm, including the lot COA lookup at
+`tools.yakimachief.com` — returns **HTTP 429 to the very first request** from
+this client. That is bot protection declining us outright, not real rate
+limiting. It is an explicit no, and it is respected.
+
+That closes off the most promising route to `crop_year` observations, which
+HANDOFF.md had flagged as lab-tier data with dates on it that nobody else
+structures. Treat it as closed unless YCH publish a documented API. **Do not**
+add a retry loop, back-off, or user-agent rotation to work around it.
+
+### Gotcha: closed-up hyphens
+
+YCR writes ranges closed up (`11-13`) where Hopsteiner writes them spaced
+(`9.5 - 11.5`). The first version of this parser reused Hopsteiner's number
+pattern, which allowed a leading minus — so `11-13` parsed as `11` and `-13`
+and came out as the range `-13.0` to `11.0`. Silent, inverted, negative. The
+pattern now refuses a sign outright, since none of these quantities can be
+negative. `test_yakima_chief.py` pins that case.
 
 ## Planned
 

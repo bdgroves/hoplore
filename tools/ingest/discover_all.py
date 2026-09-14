@@ -23,6 +23,11 @@ uniform contract that doesn't fit every site:
     evidence Hopsteiner carries this known variety", not "here is a hop
     nobody has heard of".
 
+  - yakima_chief: a real listing. Their sitemap enumerates every
+    /create/brands/ page, so this genuinely does find varieties nobody has
+    entered yet — which is how Dolcita, Krush, HBC-682 and Terrasurge
+    turned up. This is what discovery is supposed to look like.
+
 Every scraper here needs a discover_varieties(delay) function returning
 {key: value} where value is at minimum useful to read in an issue body —
 a display name, a confirmed URL, whatever fits that source. Add a second
@@ -37,6 +42,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 import hopsteiner  # noqa: E402  (path insert must come first)
+import yakima_chief  # noqa: E402
 
 from ruamel.yaml import YAML
 
@@ -46,9 +52,10 @@ HOPS_DIR = ROOT / "data" / "hops"
 yaml = YAML()
 
 # Registered scrapers. Each entry needs a discover_varieties(delay) function
-# that returns {their-key: display-name}.
+# that returns {their-key: value}.
 SCRAPERS = {
     "hopsteiner": hopsteiner,
+    "yakima_chief": yakima_chief,
 }
 
 

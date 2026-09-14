@@ -33,8 +33,42 @@ substitutes: []
 
 meta:
   status: stub
-  verification: unverified
+  verification: single-source
   last_reviewed: '2026-09-14'
   notes: >
     purpose defaulted to dual, unconfirmed -- was not researched individually
     for this bulk scaffold pass. Correct before publishing.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: ychr, low: 15.0, high: 18.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: ychr, low: 4.3, high: 5.3 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: ychr, low: 22.0, high: 26.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: ychr, low: 1.3, high: 1.7 }
+  alpha_retention_6mo_20c:
+    unit: percent
+    observations:
+      - { source: ychr, low: 76.0, high: 76.0 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: ychr, low: 40.0, high: 50.0 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: ychr, low: 9.0, high: 11.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: ychr, low: 15.0, high: 19.0 }

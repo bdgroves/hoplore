@@ -33,8 +33,13 @@ substitutes: []
 
 meta:
   status: stub
-  verification: unverified
+  verification: single-source
   last_reviewed: '2026-09-14'
   notes: >
     purpose defaulted to dual, unconfirmed -- was not researched individually
     for this bulk scaffold pass. Correct before publishing.
+analytics:
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: ychr, low: 32.0, high: 38.0 }

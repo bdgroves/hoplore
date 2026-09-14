@@ -25,29 +25,37 @@ aroma:
 analytics:
   alpha_acid:
     unit: percent
-    observations: [{ source: seed-general-knowledge, low: 10.5, high: 14.0, typical: 12.0 }]
+    observations: [{ source: seed-general-knowledge, low: 10.5, high: 14.0, typical: 12.0 }, { source: ychr, low: 11.5, high: 13.5 }]
   beta_acid:
     unit: percent
-    observations: [{ source: seed-general-knowledge, low: 3.0, high: 4.5 }]
+    observations: [{ source: seed-general-knowledge, low: 3.0, high: 4.5 }, { source: ychr, low: 3.2, high: 3.9 }]
   cohumulone:
     unit: percent_of_alpha
-    observations: [{ source: seed-general-knowledge, low: 22, high: 26 }]
+    observations: [{ source: seed-general-knowledge, low: 22, high: 26 }, { source: ychr, low: 24.0, high: 26.0 }]
   total_oil:
     unit: ml_per_100g
-    observations: [{ source: seed-general-knowledge, low: 1.0, high: 2.5 }]
+    observations: [{ source: seed-general-knowledge, low: 1.0, high: 2.5 }, { source: ychr, low: 1.0, high: 1.5 }]
+  alpha_retention_6mo_20c:
+    unit: percent
+    observations:
+      - { source: ychr, low: 75.0, high: 75.0 }
 oils:
   myrcene:
     unit: percent_of_total_oil
-    observations: [{ source: seed-general-knowledge, low: 50, high: 60 }]
+    observations: [{ source: seed-general-knowledge, low: 50, high: 60 }, { source: ychr, low: 47.0, high: 53.0 }]
   humulene:
     unit: percent_of_total_oil
-    observations: [{ source: seed-general-knowledge, low: 12, high: 18 }]
+    observations: [{ source: seed-general-knowledge, low: 12, high: 18 }, { source: ychr, low: 13.0, high: 16.0 }]
   caryophyllene:
     unit: percent_of_total_oil
-    observations: [{ source: seed-general-knowledge, low: 6, high: 10 }]
+    observations: [{ source: seed-general-knowledge, low: 6, high: 10 }, { source: ychr, low: 5.2, high: 7.8 }]
   other:
     unit: percent_of_total_oil
     observations: [{ source: seed-general-knowledge, low: 15, high: 30 }]
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: ychr, low: 0.0, high: 0.0 }
 usage:
   timing: [whirlpool, dry-hop, bittering]
   beer_styles: [hazy-ipa, american-ipa, double-ipa, american-pale-ale, west-coast-ipa]
@@ -58,8 +66,8 @@ substitutes:
   - { slug: nelson-sauvin, confidence: low }
 meta:
   status: draft
-  verification: unverified
-  last_reviewed: '2026-09-11'
+  verification: single-source
+  last_reviewed: '2026-09-14'
   notes: >
     Plant patent number removed pending verification on Google Patents; the
     one previously recorded here could not be confirmed against the register.
