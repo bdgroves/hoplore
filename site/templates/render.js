@@ -480,7 +480,11 @@ function substitutesBlock(hop, similar) {
           ${s.curated ? `<span class="badge">brewer-tested</span>` : ''}
           <span class="sub-score num">${Math.round(s.score * 100)}</span>
         </div>
-        <div class="sub-meta num">aroma ${pct(s.parts.aroma)} · oils ${pct(s.parts.oils)} · chemistry ${pct(s.parts.chemistry)}${s.purpose_shift ? ` · shifts ${esc(s.purpose_shift)}` : ''}</div>
+        <div class="sub-meta num">aroma ${pct(s.parts.aroma)} · oils ${pct(s.parts.oils)} · chemistry ${pct(s.parts.chemistry)}${s.purpose_shift ? ` · shifts ${esc(s.purpose_shift)}` : ''}${
+          s.coverage != null && s.coverage < 1
+            ? ` <span class="sub-partial" title="Scored on ${Math.round(s.coverage * 100)}% of the axes; held back because the rest of this hop isn't measured yet. Unshrunk score ${Math.round(s.raw_score * 100)}.">partial data</span>`
+            : ''
+        }</div>
         ${s.note ? `<p class="sub-note">${esc(s.note)}</p>` : ''}
       </li>`
         )
@@ -488,7 +492,10 @@ function substitutesBlock(hop, similar) {
     </ul>
     <p class="callout">Scored on aroma overlap, oil composition and acid
     chemistry, then nudged up where a brewer has vouched for the swap by hand.
-    Anything under 50 is a different beer, not a substitution.</p>
+    A hop measured on only one of the three axes has its score pulled toward
+    the middle — one number is weaker evidence than three, and shouldn't
+    outrank a hop we actually know. Anything under 50 is a different beer,
+    not a substitution.</p>
   </section>`;
 }
 

@@ -426,6 +426,16 @@ table.forms tr.form-note td {
 .sub-head a { font-weight: 500; }
 .sub-score { margin-left: auto; font-size: 0.85rem; }
 .sub-meta { font-size: 0.78rem; color: var(--ink-faint); }
+.sub-partial {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--wire-soft);
+  padding: 0.05rem 0.35rem;
+  margin-left: 0.4ch;
+  white-space: nowrap;
+  cursor: help;
+}
 .sub-note { font-size: 0.82rem; color: var(--ink-soft); max-width: var(--measure); margin: 0.15rem 0 0; }
 
 .badge {

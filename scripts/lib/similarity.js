@@ -17,6 +17,21 @@
  */
 
 const WEIGHTS = { chemistry: 0.3, oils: 0.3, aroma: 0.4 };
+const TOTAL_WEIGHT = Object.values(WEIGHTS).reduce((a, b) => a + b, 0);
+
+// A score computed from one axis is not the same claim as a score computed
+// from three, and must not outrank one. Scores are shrunk toward 0.5 ("we
+// don't know") in proportion to how much of the hop is actually measured:
+//
+//   adjusted = 0.5 + (raw - 0.5) * coverage
+//
+// Without this, a record with only alpha/beta/cohumulone on file scores its
+// bare chemistry number while a fully-measured hop carries the weight of a
+// mediocre aroma match — so Simcoe's top substitute came back as Nugget
+// (chemistry only, 81) ahead of brewer-tested Citra (all three axes, 75).
+// Shrinkage is symmetric on purpose: a bad partial score is pulled up too,
+// because one axis is equally weak evidence of a bad match.
+const shrink = (raw, coverage) => 0.5 + (raw - 0.5) * coverage;
 
 // Expected spread of each field across the whole hop world, used to normalise
 // differences so 2% alpha does not get compared against 40% cohumulone.
@@ -74,9 +89,16 @@ function score(a, b, aromaTags) {
     weight += WEIGHTS[key];
   }
 
+  const coverage = weight / TOTAL_WEIGHT;
+  const raw = weight ? total / weight : 0;
+
   return {
     slug: b.slug,
-    score: weight ? round(total / weight) : 0,
+    score: weight ? round(shrink(raw, coverage)) : 0,
+    // What the axes on file actually said, before shrinkage. Kept so the
+    // difference between "poor match" and "barely measured" stays visible.
+    raw_score: weight ? round(raw) : 0,
+    coverage: round(coverage, 2),
     parts: {
       chemistry: chemistry === null ? null : round(chemistry),
       oils: oils === null ? null : round(oils),
