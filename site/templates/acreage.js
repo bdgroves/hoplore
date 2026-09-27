@@ -5,9 +5,9 @@
 import { esc, shell, footer } from './render.js';
 
 export const STATES = [
-  { key: 'WA', label: 'Washington', color: '#2a78d6' },
-  { key: 'OR', label: 'Oregon', color: '#eb6834' },
-  { key: 'ID', label: 'Idaho', color: '#1baf7a' },
+  { key: 'WA', label: 'Washington', color: 'var(--cat-1)' },
+  { key: 'OR', label: 'Oregon', color: 'var(--cat-2)' },
+  { key: 'ID', label: 'Idaho', color: 'var(--cat-3)' },
 ];
 const STATE = Object.fromEntries(STATES.map((s) => [s.key, s]));
 const BUCKETS = new Set(['Experimental', 'Other varieties']);
@@ -295,7 +295,6 @@ export function renderGrown({ acreage, hops, meta }) {
 <header class="masthead" style="padding-top:1.5rem">
   <div class="wrap">
     <nav class="nav" style="border-top:0;padding-top:0">
-      <a href="https://brooksgroves.com/">&larr; brooksgroves.com</a>
       <a href="${base}">All varieties</a>
       <a href="${base}landscape/">Hop landscape</a>
       <a href="${base}api/v1/acreage.json">This data as JSON</a>

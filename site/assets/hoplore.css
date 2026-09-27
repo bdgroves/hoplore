@@ -2,31 +2,79 @@
    Structure comes from vertical wires, the way a hop yard does. */
 
 :root {
-  --paper: #e7e4d8;
-  --paper-deep: #dcd8c8;
-  --paper-lift: #efece2;
-  --ink: #17251f;
-  --ink-soft: #4e5a50;
-  --ink-faint: #7b857c;
-  --wire: #bcb7a4;
-  --wire-soft: #cfcaba;
+  /* brooksgroves.com palette (see bdgroves.github.io, index.html :root).
+     The old HopLore names are kept as aliases so the rest of this file
+     didn't have to change. */
+  --parchment: #f5f0e8;
+  --cream: #ede8dc;
+  --white: #fdfaf4;
+  --stone: #7a7268;
+  --mist: #d6d0c4;
+  --gold: #c8922a;
+  --rust: #8b3a2a;
+  --sage: #4a5c45;
+  --ink: #1c1a16;
 
-  --lupulin: #c8901a;
-  --bine: #3b6b4c;
-  --rust: #9a4a2b;
+  --paper: var(--parchment);
+  --paper-deep: var(--cream);
+  --paper-lift: var(--white);
+  --ink-soft: #4e4940;
+  --ink-faint: var(--stone);
+  --wire: var(--mist);
+  --wire-soft: #e4ded2;
 
-  /* Brewing-role colors. Validated as a categorical set against --paper
-     (dataviz validate_palette.js): the old bine/rust pair was 5.7 dE apart
-     under protanopia -- effectively the same color to a red-green
-     colorblind reader. Rust/gold still sits in the 6-8 band, so every
-     chart that uses these also varies marker shape. */
+  --lupulin: var(--gold);
+  --bine: var(--sage);
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Libre Baskerville", Georgia, serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
+
+  /* Brewing-role colors. Validated as a categorical set against the page
+     surface (dataviz validate_palette.js). Rust/gold sits in the 6-8 dE
+     band under protanopia, so every chart that uses these also varies
+     marker shape. */
   --aroma: #00809a;
   --bittering: #b8433a;
   --dual: #a07e10;
 
+  /* Categorical chart slots (states on the acreage charts, regions on the
+     landscape). Validated light and dark separately with the dataviz
+     validator; the dark column is the same hues stepped for the dark surface. */
+  --cat-1: #2a78d6;
+  --cat-2: #eb6834;
+  --cat-3: #1baf7a;
+  --cat-4: #4a3aa7;
+  --cat-other: #7b857c;
+
   --gutter: clamp(1.25rem, 4vw, 3.5rem);
   --measure: 66ch;
 }
+
+/* The site's dark theme, same values, switched by the same bg_theme key. */
+[data-theme="dark"] {
+  --parchment: #17150f;
+  --cream: #211e17;
+  --white: #1d1a14;
+  --stone: #a2988a;
+  --mist: #3a352d;
+  --gold: #d9a63f;
+  --rust: #cf6b52;
+  --sage: #83a077;
+  --ink: #ece6da;
+  --ink-soft: #c9c1b3;
+  --wire-soft: #2b2720;
+  --aroma: #1fa0b8;
+  --bittering: #d55181;
+  --dual: #c98500;
+  --cat-1: #3987e5;
+  --cat-2: #d95926;
+  --cat-3: #199e70;
+  --cat-4: #9085e9;
+  --cat-other: #8a8578;
+}
+[data-theme="dark"] footer { background: #0f0d0a; }
+[data-theme="dark"] img { filter: brightness(.92); }
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -36,7 +84,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.55;
   font-optical-sizing: auto;
@@ -51,7 +99,7 @@ a:hover { text-decoration-color: var(--lupulin); }
 }
 
 h1, h2, h3 {
-  font-family: "Bricolage Grotesque", "IBM Plex Sans", sans-serif;
+  font-family: var(--font-display);
   font-weight: 600;
   font-variation-settings: "wdth" 88;
   line-height: 1.02;
@@ -60,7 +108,7 @@ h1, h2, h3 {
 }
 
 .num {
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.02em;
 }
@@ -125,7 +173,7 @@ h1, h2, h3 {
   color: var(--ink-soft);
 }
 .stats div { display: flex; gap: 0.5ch; align-items: baseline; }
-.stats b { font-family: "IBM Plex Mono", monospace; color: var(--ink); font-weight: 500; }
+.stats b { font-family: var(--font-mono); color: var(--ink); font-weight: 500; }
 
 .nav {
   display: flex; flex-wrap: wrap; gap: 0 1.5rem;
@@ -208,7 +256,7 @@ h1, h2, h3 {
 }
 .country > h2 small {
   display: block;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--font-mono);
   font-weight: 400;
   font-size: 0.75rem;
   color: var(--ink-faint);
@@ -398,7 +446,7 @@ details.sources > summary:hover { color: var(--ink); }
    an empty row reads as a known gap instead of a broken render. */
 .row-tags .awaiting {
   font-style: normal;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.04em;
   color: var(--ink-faint);
@@ -435,7 +483,7 @@ table.forms tr.form-note td {
 .sub-score { margin-left: auto; font-size: 0.85rem; }
 .sub-meta { font-size: 0.78rem; color: var(--ink-faint); }
 .sub-partial {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.68rem;
   letter-spacing: 0.04em;
   border: 1px solid var(--wire-soft);
@@ -486,7 +534,7 @@ table.forms tr.form-note td {
 }
 .foot p { max-width: var(--measure); text-wrap: pretty; }
 .foot code {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.85em;
   background: var(--paper-lift);
   padding: 0.1rem 0.35rem;
@@ -523,8 +571,8 @@ table.forms tr.form-note td {
 
 .chart .grid { stroke: var(--wire-soft); stroke-width: 1; }
 .chart .axis { stroke: var(--ink); stroke-width: 1; }
-.chart .tick { font: 12px "IBM Plex Mono", monospace; fill: var(--ink-faint); }
-.chart .axis-title { font: 500 13px "IBM Plex Sans", sans-serif; fill: var(--ink-soft); }
+.chart .tick { font: 12px var(--font-mono); fill: var(--ink-faint); }
+.chart .axis-title { font: italic 13px var(--font-body); fill: var(--ink-soft); }
 
 .pt { cursor: pointer; outline: none; }
 .pt .mk { fill: var(--mark); stroke: var(--paper); stroke-width: 2; }
@@ -538,7 +586,7 @@ table.forms tr.form-note td {
 .pt.hit .mk { stroke: var(--ink); stroke-width: 2.5; }
 
 .chart .lbl {
-  font: 500 12.5px "IBM Plex Sans", sans-serif;
+  font: 12.5px var(--font-body);
   fill: var(--ink);
   paint-order: stroke;
   stroke: var(--paper);
@@ -555,11 +603,11 @@ table.forms tr.form-note td {
   padding: 0.6rem 0.8rem;
   background: var(--paper-lift);
   border: 1px solid var(--ink);
-  box-shadow: 0 6px 18px rgb(23 37 31 / 0.12);
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.14);
   font-size: 0.85rem;
   pointer-events: none;
 }
-.tip b { display: block; font-family: "Bricolage Grotesque", sans-serif; font-size: 1.05rem; }
+.tip b { display: block; font-family: var(--font-display); font-size: 1.05rem; }
 .tip .role-note { display: block; color: var(--ink-faint); font-size: 0.8rem; }
 .tip .role { color: var(--ink-soft); display: inline-flex; align-items: center; gap: 0.4ch; }
 .tip .role::before { content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--mark); }
@@ -657,3 +705,80 @@ table.forms tr.form-note td {
 .beerlist.compact li { grid-template-columns: 1fr; gap: 0; }
 .beer-hops { display: flex; flex-wrap: wrap; gap: 0.2rem 0.7rem; font-size: 0.88rem; color: var(--ink-soft); }
 @media (max-width: 46rem) { .beerlist li { grid-template-columns: 1fr auto; } .beer-hops { grid-column: 1 / -1; } }
+
+
+/* ------------------------------------------------------ brooksgroves.com blend
+
+   Everything below makes HopLore read as a page of brooksgroves.com: the
+   site's topline and masthead bar, its serif headings, and the small-caps
+   mono labels it uses for tags, kickers and pills. HopLore keeps its own
+   layout and charts; it just dresses like the rest of the house. */
+
+.topline { height: 4px; background: linear-gradient(90deg, var(--rust) 0%, var(--gold) 50%, var(--sage) 100%); }
+.sitebar {
+  border-bottom: 2px solid var(--ink);
+  padding: 0 var(--gutter);
+  position: sticky; top: 0; z-index: 100;
+  background: var(--parchment);
+}
+.sitebar-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; max-width: 78rem; margin: 0 auto; padding: 0.75rem 0; }
+.site-name { font-family: var(--font-display); font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 900; text-decoration: none; color: var(--ink); }
+.sitebar-nav { display: flex; align-items: center; gap: 1.5rem; }
+.sitebar-nav a { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; color: var(--stone); }
+.sitebar-nav a:hover { color: var(--rust); }
+.theme-toggle { background: none; border: 0; cursor: pointer; padding: 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--stone); line-height: 1; }
+.theme-toggle:hover { color: var(--gold); }
+@media (max-width: 30rem) { .sitebar-nav { gap: 0.9rem; } .sitebar-nav a:nth-child(2) { display: none; } }
+
+body { font-size: 15px; line-height: 1.7; }
+h1, h2, h3 { font-family: var(--font-display); font-variation-settings: normal; letter-spacing: -0.01em; }
+.wordmark { font-weight: 900; letter-spacing: -0.03em; }
+.page-title { font-weight: 900; letter-spacing: -0.02em; }
+.wordmark span, .page-title em { color: var(--rust); font-style: italic; }
+.block > h2 { font-size: 1.15rem; font-weight: 700; }
+.standfirst { font-size: clamp(0.95rem, 1.4vw, 1.08rem); line-height: 1.8; color: var(--stone); }
+[data-theme="dark"] .standfirst { color: var(--ink-soft); }
+
+/* Page-level navs read like the site's section nav. */
+.nav a { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; color: var(--stone); }
+.nav a:hover { color: var(--rust); }
+.kicker { font-family: var(--font-mono); font-size: 0.66rem; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
+
+/* Tags, chips, pills and badges: the site's tag-btn / stack-pill look. */
+.tags li, .chip, .how, .badge, .sub-partial, .row-tags .awaiting {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--cream);
+  border: 1px solid var(--mist);
+  border-radius: 4px;
+  color: var(--stone);
+  padding: 0.25rem 0.65rem;
+}
+.tags li[data-family], .together li.shared { border-color: var(--gold); color: var(--ink); }
+.chip:hover { background: var(--gold); border-color: var(--gold); color: var(--white); }
+.chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--parchment); }
+.role-chip[aria-pressed="true"] { background: var(--cream); color: var(--ink); border-color: var(--ink); }
+.how.fresh { background: transparent; color: var(--sage); border-color: var(--sage); }
+.purpose { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.row-tags .awaiting { background: none; border: 0; padding: 0; }
+.finder label, .hc-meta, .stat-k { font-family: var(--font-mono); letter-spacing: 0.06em; }
+.fine { font-size: 0.8rem; }
+/* Mono numerals run wider than Plex did; give the alpha column room so a
+   range like 15.7–19.1% stays on one line. */
+.row { grid-template-columns: minmax(9rem, 1.4fr) 5.5rem minmax(0, 2.2fr) 6.6rem; }
+@media (max-width: 40rem) {
+  .row { grid-template-columns: minmax(0, 1fr) auto; }
+  .row-name { grid-row: 1; grid-column: 1; }
+  .row-aa { grid-column: 2; }
+}
+.finder label { font-size: 0.68rem; text-transform: uppercase; color: var(--stone); }
+.callout { font-style: italic; }
+a:hover { text-decoration-color: var(--rust); }
+:focus-visible { outline-color: var(--gold); }
+
+/* The dataset colophon sits above the shared site footer. */
+.colophon { border-top: 1px solid var(--ink); padding: 1.6rem 0 0.5rem; font-size: 0.85rem; color: var(--stone); }
+.colophon p { max-width: var(--measure); }
+.colophon code { font-family: var(--font-mono); font-size: 0.85em; }

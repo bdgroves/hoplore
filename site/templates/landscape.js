@@ -33,11 +33,11 @@ const LABELLED = [
 // validated all-pairs on --paper (worst CVD dE 9.2, normal 16.3); the two
 // low-contrast hues get relief from direct labels and the table view.
 const REGION = {
-  us: { label: 'United States', color: '#2a78d6', countries: ['US'] },
-  eu: { label: 'Continental Europe', color: '#eb6834', countries: ['DE', 'CZ', 'SI', 'PL', 'FR'] },
-  gb: { label: 'Britain', color: '#1baf7a', countries: ['GB'] },
-  south: { label: 'Southern Hemisphere', color: '#4a3aa7', countries: ['NZ', 'AU', 'ZA'] },
-  other: { label: 'Elsewhere', color: '#7b857c', countries: [] },
+  us: { label: 'United States', color: 'var(--cat-1)', countries: ['US'] },
+  eu: { label: 'Continental Europe', color: 'var(--cat-2)', countries: ['DE', 'CZ', 'SI', 'PL', 'FR'] },
+  gb: { label: 'Britain', color: 'var(--cat-3)', countries: ['GB'] },
+  south: { label: 'Southern Hemisphere', color: 'var(--cat-4)', countries: ['NZ', 'AU', 'ZA'] },
+  other: { label: 'Elsewhere', color: 'var(--cat-other)', countries: [] },
 };
 const regionOf = (iso) => Object.keys(REGION).find((k) => REGION[k].countries.includes(iso)) ?? 'other';
 
@@ -163,7 +163,6 @@ export function renderLandscape({ hops, meta }) {
 <header class="masthead" style="padding-top:1.5rem">
   <div class="wrap">
     <nav class="nav" style="border-top:0;padding-top:0">
-      <a href="https://brooksgroves.com/">&larr; brooksgroves.com</a>
       <a href="${base}">All varieties</a>
       <a href="${base}api/v1/hops.json">Download the data</a>
       <a href="https://github.com/bdgroves/hoplore">GitHub</a>

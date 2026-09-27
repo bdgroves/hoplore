@@ -1,4 +1,5 @@
 import { hopAcreageBlock } from './acreage.js';
+import { FONTS, THEME_INIT, THEME_TOGGLE, SITE_FOOTER, siteHeader } from './chrome.js';
 import { hopBeersBlock } from './beers.js';
 
 /** Plain string templates. No framework — the whole site is static HTML over
@@ -50,18 +51,23 @@ export function shell({ title, description, body, base = '', bodyClass = '' }) {
 <meta property="og:description" content="${esc(description)}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="${FONTS}" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍺</text></svg>">
+<link rel="stylesheet" href="/css/site-footer.css">
 <link rel="stylesheet" href="${base}assets/hoplore.css">
+${THEME_INIT}
 </head>
-<body class="${bodyClass}">
+<body class="${bodyClass}" id="top">
 <a class="skip" href="#main">Skip to content</a>
+${siteHeader(base)}
 ${body}
+${THEME_TOGGLE}
 </body>
 </html>`;
 }
 
 export const footer = (base, meta) => `
-<footer class="foot">
+<section class="colophon">
   <div class="wrap">
     <p>HopLore is an open dataset first and a website second. Every figure on this
     site is rolled up from cited observations in
@@ -73,7 +79,8 @@ export const footer = (base, meta) => `
     Not affiliated with any hop breeder, farm or merchant; variety names are the
     marks of their owners.</p>
   </div>
-</footer>`;
+</section>
+${SITE_FOOTER}`;
 
 // ------------------------------------------------------------------- index
 
@@ -117,7 +124,6 @@ export function renderIndex({ hops, taxonomy, meta }) {
       <div><b>${withAlpha.length}</b> with full acid data</div>
     </div>
     <nav class="nav">
-      <a href="https://brooksgroves.com/">&larr; brooksgroves.com</a>
       <a href="landscape/">Hop landscape</a>
       <a href="grown/">Where the hops grow</a>
       <a href="beers/">What's in the can</a>
@@ -226,7 +232,6 @@ export function renderHop({ hop, similar, taxonomy, sources, meta, acreageYears 
 <header class="masthead" style="padding-top:1.5rem">
   <div class="wrap">
     <nav class="nav" style="border-top:0;padding-top:0">
-      <a href="https://brooksgroves.com/">&larr; brooksgroves.com</a>
       <a href="${base}">All varieties</a>
       <a href="${base}landscape/#${hop.slug}">Where it sits in the landscape</a>
       ${hop.acreage ? `<a href="${base}grown/">Where America's hops grow</a>` : ''}
