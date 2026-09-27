@@ -1,0 +1,55 @@
+name: Untappd check-ins
+
+# Daily. Merges the latest check-ins from brooksgroves.com/beers.json into
+# data/untappd/checkins.yml (a growing history, not a rolling 20), reads the
+# star ratings off the check-in pages when Untappd allows it, and redeploys
+# if anything changed. Beer pages then show the check-in next to the hops.
+
+on:
+  schedule:
+    - cron: '17 15 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: ingest
+  cancel-in-progress: false
+
+jobs:
+  checkins:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: prefix-dev/setup-pixi@v0.10.2
+        with:
+          environments: data default
+          cache: true
+
+      - name: Merge check-ins
+        run: |
+          set -o pipefail
+          pixi run -e data python tools/ingest/untappd.py --ratings | tee data/untappd/last-run.txt
+          cat data/untappd/last-run.txt >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Validate
+        run: pixi run validate
+
+      - name: Commit and deploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/untappd/checkins.yml
+          # The run log only rides along on a manual run, so the daily commit
+          # isn't noise when nothing but the timestamp changed.
+          if [ "$EVENT" = "workflow_dispatch" ]; then git add data/untappd/last-run.txt; fi
+          if git diff --cached --quiet; then echo "No new check-ins."; exit 0; fi
+          git commit -m "Untappd check-ins: $(head -1 data/untappd/last-run.txt)"
+          git pull --rebase --autostash && git push
+          gh workflow run deploy.yml --ref main

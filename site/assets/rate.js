@@ -1,0 +1,47 @@
+// Untappd-style caps: 0.25 to 5 in quarter steps. makeRater() is shared by
+// beer pages ("Rate it") and the scan page; on a beer page this file also
+// wires up the Save button, which opens a GitHub issue the "Add a scanned
+// beer" workflow turns into data/ratings.yml.
+
+const REPO = 'bdgroves/hoplore';
+
+export function makeRater(el, initial = 3.5) {
+  el.classList.add('rater');
+  el.innerHTML = `<span class="caps big" aria-hidden="true"><span class="caps-row">●●●●●</span><span class="caps-fill">●●●●●</span></span>
+    <b class="num rater-val"></b>
+    <input type="range" min="0.25" max="5" step="0.25" aria-label="Rating, out of 5">`;
+  const input = el.querySelector('input');
+  const fill = el.querySelector('.caps-fill');
+  const val = el.querySelector('.rater-val');
+  const set = (v) => {
+    fill.style.width = `${(v / 5) * 100}%`;
+    val.textContent = Number(v).toFixed(2).replace(/0$/, '').replace(/\.0$/, '');
+  };
+  input.value = initial;
+  set(initial);
+  input.addEventListener('input', () => set(Number(input.value)));
+  // Tapping the caps themselves picks the nearest quarter.
+  el.querySelector('.caps').addEventListener('click', (e) => {
+    const box = e.currentTarget.getBoundingClientRect();
+    const v = Math.min(5, Math.max(0.25, Math.round(((e.clientX - box.left) / box.width) * 20) / 4));
+    input.value = v;
+    set(v);
+  });
+  return { get value() { return Number(input.value); } };
+}
+
+const glass = document.querySelector('.my-glass');
+if (glass) {
+  const holder = glass.querySelector('.rater');
+  const rater = makeRater(holder, Number(holder.dataset.stars) || 3.5);
+  glass.querySelector('#rate-save').addEventListener('click', () => {
+    const d = glass.dataset;
+    const note = glass.querySelector('#rate-note').value.trim();
+    const q = (v) => JSON.stringify(v ?? null);
+    const yaml = [`brewery: ${d.brewery}`, `beer: ${d.beer}`, `name: ${q(d.name)}`, `brewery_name: ${q(d.breweryName)}`,
+      `stars: ${rater.value}`, `note: ${q(note || null)}`].join('\n');
+    const body = `<!-- hoplove-rating -->\nSubmit to record this rating on HopLove.\n\n\`\`\`yaml\n${yaml}\n\`\`\`\n`;
+    const title = `Rating: ${d.name} (${d.breweryName}) ${rater.value}`;
+    window.open(`https://github.com/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`, '_blank', 'noopener');
+  });
+}

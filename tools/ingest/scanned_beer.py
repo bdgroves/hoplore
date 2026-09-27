@@ -28,6 +28,7 @@ from ruamel.yaml.comments import CommentedMap, CommentedSeq
 
 sys.path.insert(0, str(Path(__file__).parent))
 from beers import parse_hop, record_index  # noqa: E402
+from rating import add_rating, clean_stars  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "data" / "beers" / "scanned"
@@ -129,11 +130,17 @@ def main() -> int:
 
     linked = sum(1 for h in hops if h.get("hop"))
     print(f"added {beer_name} ({brewery}) to {path.relative_to(ROOT)}: {len(hops)} hops, {linked} matched")
+    stars = clean_stars(data.get("stars"))
+    rated = ""
+    if stars is not None:
+        add_rating(doc["brewery"]["slug"], beer_slug, beer_name, doc["brewery"]["name"], stars, str(data.get("note") or "").strip())
+        rated = f", rated {stars:g} caps"
+        print(f"rated {stars:g}")
     out = os.environ.get("GITHUB_OUTPUT")
     if out:
         with open(out, "a", encoding="utf-8") as fh:
             fh.write(f"page=beers/{slug}/{beer_slug}/\n")
-            fh.write(f"summary={beer_name} by {brewery}: {len(hops)} hops, {linked} matched to HopLove records\n")
+            fh.write(f"summary={beer_name} by {brewery}: {len(hops)} hops, {linked} matched to HopLove records{rated}\n")
     return 0
 
 

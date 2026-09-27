@@ -2,8 +2,12 @@
 // Cloudflare Worker proxy, which holds the API key), matches the hop names to
 // HopLove records, and can open a GitHub issue that adds the beer.
 
+import { makeRater } from './rate.js';
+
 const WORKER_URL = 'https://brooks-anthropic-proxy.bdgroves1970.workers.dev';
-const MODEL = 'claude-opus-4-5';
+// Fastest first; if the Worker or the model turns it down, or the answer
+// doesn't parse, the next one tries.
+const MODELS = ['claude-sonnet-5', 'claude-opus-4-5'];
 const REPO = 'bdgroves/hoplore';
 const $ = (s) => document.querySelector(s);
 
@@ -94,53 +98,76 @@ function takeFile(file) {
   // 1600px on the long side as JPEG before sending.
   const img = new Image();
   img.onload = () => {
-    const scale = Math.min(1, 1600 / Math.max(img.width, img.height));
+    const scale = Math.min(1, 1400 / Math.max(img.width, img.height));
     const canvas = document.createElement('canvas');
     canvas.width = Math.round(img.width * scale);
     canvas.height = Math.round(img.height * scale);
     canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
-    const url = canvas.toDataURL('image/jpeg', 0.85);
+    const url = canvas.toDataURL('image/jpeg', 0.82);
     photo = { media_type: 'image/jpeg', data: url.split(',')[1] };
     $('#preview').src = url;
     $('#preview').hidden = false;
     $('#drop-text').hidden = true;
     URL.revokeObjectURL(img.src);
-    status('Photo ready.');
+    // No second tap: a photo goes straight to the reader.
+    read();
   };
   img.onerror = () => status("Couldn't open that image.");
   img.src = URL.createObjectURL(file);
 }
 
+async function ask(model, content) {
+  const r = await fetch(WORKER_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ model, max_tokens: 900, system: SYSTEM, messages: [{ role: 'user', content }] }),
+  });
+  if (!r.ok) throw new Error(`the reader returned ${r.status}`);
+  const d = await r.json();
+  const raw = (d.content || []).map((b) => b.text || '').join('').trim();
+  const json = raw.slice(raw.indexOf('{'), raw.lastIndexOf('}') + 1);
+  return JSON.parse(json);
+}
+
+let busy = false;
 async function read() {
   const text = $('#text').value.trim();
   const hint = $('#hint').value.trim();
   if (!photo && !text) return status('Add a photo or paste some text first.');
+  if (busy) return;
+  busy = true;
   status('Reading the hops…');
   $('#read').disabled = true;
+  document.body.classList.add('reading');
+  const started = performance.now();
   try {
-    await loadIndex();
     const content = [];
     if (photo) content.push({ type: 'image', source: { type: 'base64', media_type: photo.media_type, data: photo.data } });
-    content.push({ type: 'text', text: [hint && `Brewery: ${hint}.`, text && `Text:\n${text.slice(0, 8000)}`, 'Report the hops as JSON.'].filter(Boolean).join('\n\n') });
-    const r = await fetch(WORKER_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ model: MODEL, max_tokens: 1500, system: SYSTEM, messages: [{ role: 'user', content }] }),
-    });
-    if (!r.ok) throw new Error(`the reader returned ${r.status}`);
-    const d = await r.json();
-    const raw = (d.content || []).map((b) => b.text || '').join('').trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '');
-    const got = JSON.parse(raw);
+    content.push({ type: 'text', text: [hint && `Brewery: ${hint}.`, wanted && `It should be ${wanted}.`, text && `Text:\n${text.slice(0, 8000)}`, 'Report the hops as JSON.'].filter(Boolean).join('\n\n') });
+    let got = null;
+    let lastError = null;
+    for (const model of MODELS) {
+      try {
+        got = await ask(model, content);
+        break;
+      } catch (e) {
+        lastError = e;
+      }
+    }
+    if (!got) throw lastError;
+    await indexReady;
     if (!got.hops?.length) throw new Error(got.error || 'no hops are named on it');
     got.brewery = got.brewery || hint || null;
     const items = got.hops.map(matchHop);
     last = { ...got, items, scanned_from: photo ? 'photo' : 'text' };
     show(last);
-    status(`${items.length} hop${items.length === 1 ? '' : 's'} found, ${items.filter((i) => i.hop).length} matched.`);
+    status(`${items.length} hop${items.length === 1 ? '' : 's'} found, ${items.filter((i) => i.hop).length} matched, in ${((performance.now() - started) / 1000).toFixed(1)} s.`);
   } catch (e) {
     status(`Couldn't read it: ${e.message}.`);
   } finally {
     $('#read').disabled = false;
+    document.body.classList.remove('reading');
+    busy = false;
   }
 }
 
@@ -162,11 +189,29 @@ function keep() {
     `beer: ${q(last.beer)}`, `style: ${q(last.style)}`, `abv: ${last.abv ?? 'null'}`,
     `hops: [${last.hops.map(q).join(', ')}]`, `hops_as_written: ${q(last.hops_as_written)}`,
     `scanned_from: ${q(last.scanned_from)}`, 'brewery_url: null',
+    ...($('#rate-on').checked ? [`stars: ${rater.value}`, `note: ${q($('#scan-note').value.trim() || null)}`] : []),
   ].join('\n');
   const body = `<!-- hoplove-beer-scan -->\nFix anything misread below, then submit. Submitting adds the beer to HopLove.\n\n\`\`\`yaml\n${yaml}\n\`\`\`\n`;
-  const title = `Beer: ${last.beer} (${last.brewery || 'unknown brewery'})`;
+  const title = `Beer: ${last.beer} (${last.brewery || 'unknown brewery'})${$('#rate-on').checked ? ` ${rater.value}` : ''}`;
   window.open(`https://github.com/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`, '_blank', 'noopener');
 }
+
+const rater = makeRater($('#scan-rater'), 3.5);
+// Touching the caps or the note means you want the rating kept.
+$('#scan-rater').addEventListener('input', () => { $('#rate-on').checked = true; });
+$('#scan-rater').addEventListener('click', () => { $('#rate-on').checked = true; });
+$('#scan-note').addEventListener('input', () => { $('#rate-on').checked = true; });
+
+// Arriving from an Untappd check-in on /beers/: ?brewery=…&beer=…
+const params = new URLSearchParams(location.search);
+const wanted = [params.get('beer'), params.get('brewery') && `by ${params.get('brewery')}`].filter(Boolean).join(' ');
+if (params.get('brewery')) $('#hint').value = params.get('brewery');
+if (wanted) {
+  $('#from-checkin').hidden = false;
+  $('#from-checkin b').textContent = wanted;
+}
+// Start fetching the hop list now, while the photo is being taken.
+const indexReady = loadIndex().catch(() => { index = new Map(); });
 
 $('#photo').addEventListener('change', (e) => takeFile(e.target.files[0]));
 const drop = $('#drop');

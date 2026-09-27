@@ -33,7 +33,7 @@ beers:
     hops:
       - { hop: sterling, name: Sterling, as_written: Sterling }
   - slug: fresh-hop-iowa-bar-fight
-    name: Grab Yourself A Fresh Hop Iowa IPA
+    name: Fresh Hop Iowa IPA
     url: https://doublemountainbrewery.com/beer/fresh-hop-iowa-bar-fight/
     abv: 6.4
     hops_as_written: Simcoe, Citra and Mosaic and fresh hop Strata in the kettle, a Fresh Hop Strata hop back, and Citra, Mosaic, and Simcoe and Strata CGX in the dry hop
@@ -44,7 +44,7 @@ beers:
       - { hop: strata, name: Strata, fresh: true, as_written: Strata }
       - { hop: strata, name: Strata, as_written: Strata }
   - slug: hop-lion
-    name: Grab yourself a Hop Lion IPA
+    name: Hop Lion IPA
     url: https://doublemountainbrewery.com/beer/hop-lion/
     abv: 6.7
     hops_as_written: Centennial and Citra in the kettle, Simcoe, Mosaic, and Centennial in the hop back, Citra, Mosaic, and Cascade dry hop
@@ -55,7 +55,7 @@ beers:
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: cascade, name: Cascade, as_written: Cascade }
   - slug: killer-green
-    name: Grab Yourself A Killer Green
+    name: Killer Green
     url: https://doublemountainbrewery.com/beer/killer-green/
     abv: 7.3
     hops_as_written: Centennial, Cryo Centennial, Strata and Brewer’s Gold in the kettle, Citra in the hop back, Centennial, Brewer’s Gold, and Strata in the first dry hop. Fresh Hop Centennial for the second dry hop
@@ -66,7 +66,7 @@ beers:
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: centennial, name: Centennial, fresh: true, as_written: Centennial }
   - slug: killer-red
-    name: Grab Yourself A Killer Red
+    name: Killer Red
     url: https://doublemountainbrewery.com/beer/killer-red-2/
     abv: 7.0
     hops_as_written: Simcoe and Centennial in the kettle, Simcoe Hop back, Cryo Simcoe and Centennial in the first dry hop, and fresh hop Centennial in second dry hop

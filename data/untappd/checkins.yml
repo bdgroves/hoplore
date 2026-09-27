@@ -1,0 +1,158 @@
+source: Untappd, via https://brooksgroves.com/beers.json (tools/ingest/untappd.py) -- do not edit by hand
+checkins:
+  - id: 1604757919
+    date: '2026-09-27'
+    beer: Fresh Hop Double Crush
+    brewery: Reuben's Brews
+    venue: Western State Hospital
+    comment: A nice dank pine resin edge with a grapefruit sort of thing going on with all that fresh hop simcoe going on.  🔥🌳🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_09_27/9ea56bb9917e5dd877a7c1e3ddb64ab0_c_1604757919_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1604757919
+  - id: 1604063176
+    date: '2026-09-25'
+    beer: Fresh Hop Junior (2026)
+    brewery: Structures Brewing
+    venue: Western State Hospital
+    comment: Wrapping up the work week and apparently the Mariner’s season with a great tasting fresh hop!! 🔥⚾️🌳🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_09_25/110975266858ce74b71a531ad8cd0276_c_1604063176_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1604063176
+  - id: 1603425909
+    date: '2026-09-23'
+    beer: 'Field to Ferment: Centennial (2026)'
+    brewery: Fremont Brewing
+    venue: Western State Hospital
+    comment: Classic Fresh Hop situation!  Love that Centennial Hop flavor! 🔥🌳🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_09_23/8993895a2b037930fe80ceb15790ac22_c_1603425909_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1603425909
+  - id: 1603159623
+    date: '2026-09-21'
+    beer: Beak Breaker Hazy
+    brewery: Pelican Brewing Company
+    venue: Western State Hospital
+    comment: In laws came back from the beach and brought some of this … I’ll get into it! 🔥🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_09_21/f1143a6c0125e5edce9bf279303cfc5b_c_1603159623_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1603159623
+  - id: 1603148224
+    date: '2026-09-20'
+    beer: Fresh Hop Static Shatter (2026)
+    brewery: Block 15 Brewing Company
+    venue: Western State Hospital
+    comment: Fresh hop season!! FTW!!  This one is ok. 🔥🌳🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_09_20/83eed6c4fafdd769f1281952b455517a_c_1603148224_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1603148224
+  - id: 1602772157
+    date: '2026-09-19'
+    beer: Fresh Hop Topcutter (2026)
+    brewery: Bale Breaker Brewing Company
+    venue: Peaks and Pints Bottleshop, Taproom and Eatery
+    comment: Fresh hop FTW!!  So many options with all these fresh hops!! 🔥🌳🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_09_19/92d242ad863b92c1b04f690c32888643_c_1602772157_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1602772157
+  - id: 1602769671
+    date: '2026-09-19'
+    beer: Fresh Assassin (2026 Release)
+    brewery: Triceratops Brewing Company
+    venue: Peaks and Pints Bottleshop, Taproom and Eatery
+    comment: This fresh hop is interesting,  more sweet and malty that IPA hops. 🔥🌳🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_09_19/234a3f147aeef6b47822d5511bf31d68_c_1602769671_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1602769671
+  - id: 1602768285
+    date: '2026-09-19'
+    beer: Simcoe Architect
+    brewery: Fort George Brewery
+    venue: Peaks and Pints Bottleshop, Taproom and Eatery
+    comment: This one real nice!  🔥🌳🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_09_19/19961e981482b2b2bd1384993d7f2586_c_1602768285_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1602768285
+  - id: 1602750717
+    date: '2026-09-19'
+    beer: Quality of Consciousness
+    brewery: Fort George Brewery
+    venue: Peaks and Pints Bottleshop, Taproom and Eatery
+    comment: Fresh hop has arrived!!  Love it!! 🔥🌳🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_09_19/70518663daec0ad24af2d11b4b5acddf_c_1602750717_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1602750717
+  - id: 1601305375
+    date: '2026-09-13'
+    beer: Killer Green
+    brewery: Double Mountain Brewery & Cidery
+    venue: Double Mountain Brewery
+    comment: Fresh hop season down here in Hood River! 🔥🍺🤙
+    link: https://untappd.com/user/bdgroves/checkin/1601305375
+  - id: 1601305090
+    date: '2026-09-13'
+    beer: Fresh Hop Iowa Bar Fight
+    brewery: Double Mountain Brewery & Cidery
+    venue: Double Mountain Brewery
+    comment: Nice first 2026 fresh hop beer!! 🔥🍺🤙
+    link: https://untappd.com/user/bdgroves/checkin/1601305090
+  - id: 1601003163
+    date: '2026-09-12'
+    beer: Cosmic Guava West Coast IPA
+    brewery: pFriem Family Brewers
+    venue: Riverside Restaurant & Lounge
+    comment: This one was interesting. 🤔🍺🤙
+    link: https://untappd.com/user/bdgroves/checkin/1601003163
+  - id: 1601002202
+    date: '2026-09-12'
+    beer: Punch Bowl Juicy IPA
+    brewery: Hood River Brewing Company
+    venue: Riverside Restaurant & Lounge
+    comment: This one is real smooth on the pallet!! 🔥🍺🤙
+    link: https://untappd.com/user/bdgroves/checkin/1601002202
+  - id: 1600870057
+    date: '2026-09-12'
+    beer: Tomorrow Comes
+    brewery: Kings & Daughters Brewery
+    venue: The Walled Garden (A Kings & Daughters Public House)
+    comment: ❤️HR!!  Great beer!!
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_09_12/811330ce08602f5015a46ae583a7d091_c_1600870057_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1600870057
+  - id: 1600075074
+    date: '2026-09-08'
+    beer: Ripe IPA
+    brewery: Great Notion Brewing
+    venue: Western State Hospital
+    comment: Hmm,  this is ok but maybe was on the shelf too long, or not stored right,  I’m going to drink it still.  🔥🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_09_08/ae2284318bd28dc4f09f469512b4d47f_c_1600075074_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1600075074
+  - id: 1600050215
+    date: '2026-09-07'
+    beer: Hop Zine
+    brewery: Brothers Cascadia Brewing
+    venue: Western State Hospital
+    comment: I fully support local beers!!  This one is a dry hop monster love these T90’s!! 🔥🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_09_07/095760173c4086f9fdfcdf5a868f39f0_c_1600050215_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1600050215
+  - id: 1599908487
+    date: '2026-09-07'
+    beer: The Creative Process
+    brewery: Fast Fashion
+    venue: Western State Hospital
+    comment: This one is the beer of the day, highly recommended!!  🔥🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_09_07/c34e4efac5a6211f41005affa2c4c7de_c_1599908487_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1599908487
+  - id: 1599902239
+    date: '2026-09-07'
+    beer: Mammuthus Magnificus
+    brewery: Tripping Animals Brewing Co.
+    venue: Western State Hospital
+    comment: Always down with a solid collaboration!  A bit more bitter than expected but I’ll take it! 🔥🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_09_07/b1c0d641a2022cdd040b1d93d8e569bc_c_1599902239_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1599902239
+  - id: 1597525079
+    date: '2026-08-29'
+    beer: Golden Thread
+    brewery: Kings & Daughters Brewery
+    venue: Western State Hospital
+    comment: Nice mellow beer.  I’ll have to check this book out, since I find myself in Hood River frequently. 🔥🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_08_29/22d6d9052d76ced0f0eb6db8cc5e6e2a_c_1597525079_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1597525079
+  - id: 1596542469
+    date: '2026-08-24'
+    beer: Nigiri
+    brewery: Fort George Brewery
+    venue: Western State Hospital
+    comment: Collabs FTW!  Hadn’t had a lot of Japanese microbrews before, just the big players and I thought they were dry.  This is simply interesting. 🔥🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_08_24/63cbcd339439c37d42210ad5e1161d66_c_1596542469_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1596542469

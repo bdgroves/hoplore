@@ -9,7 +9,7 @@ import Ajv from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { loadDataset, schemas, c, METRIC_KEYS, OIL_KEYS, allMetrics, allRefs } from './lib/load.js';
 
-const { sources, taxonomy, hops, acreage, breweries } = loadDataset();
+const { sources, taxonomy, hops, acreage, breweries, checkins, ratings } = loadDataset();
 const schema = schemas();
 
 const ajv = new Ajv({ allErrors: true, strict: false });
@@ -222,6 +222,24 @@ for (const b of breweries) {
       if (!h.hop) warn(at, `${beer.name}: "${h.name}" has no HopLove record yet`);
     }
   }
+}
+
+// ------------------------------------------------ check-ins and ratings
+
+const isStars = (v) => typeof v === 'number' && v >= 0.25 && v <= 5 && Number.isInteger(v * 4);
+const beerKeys = new Set(breweries.flatMap((b) => (b.beers ?? []).map((beer) => `${b.brewery.slug}/${beer.slug}`)));
+const checkinIds = new Set();
+for (const c of checkins) {
+  const at = 'untappd/checkins.yml';
+  if (!Number.isInteger(c.id) || checkinIds.has(c.id)) err(at, `check-in id ${c.id} is missing or repeated`);
+  checkinIds.add(c.id);
+  if (!c.beer || !c.brewery || !/^\d{4}-\d{2}-\d{2}$/.test(String(c.date))) err(at, `check-in ${c.id} needs beer, brewery and a date`);
+  if (c.rating != null && !isStars(c.rating)) err(at, `check-in ${c.id} has rating ${c.rating}; caps run 0.25-5 in quarters`);
+}
+for (const r of ratings) {
+  const at = 'ratings.yml';
+  if (!isStars(r.stars)) err(at, `${r.name}: ${r.stars} isn't a rating; caps run 0.25-5 in quarters`);
+  if (!beerKeys.has(`${r.brewery}/${r.beer}`)) warn(at, `${r.name}: no beer at beers/${r.brewery}/${r.beer}/`);
 }
 
 // ------------------------------------------------------------------ acreage

@@ -809,3 +809,44 @@ a:hover { text-decoration-color: var(--rust); }
 .scan h2.scan-beer { font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 900; margin: 0.2rem 0 0.4rem; }
 .scan-keep { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-top: 1rem; }
 .scan-keep .fine { max-width: 52ch; }
+
+/* ------------------------------------------------------------ your glass */
+/* Untappd-style caps: a dim row with a gold row clipped over it. */
+.caps { position: relative; display: inline-block; line-height: 1; font-size: 1.05rem; letter-spacing: 0.12em; color: var(--wire); vertical-align: -0.08em; white-space: nowrap; }
+.caps .caps-fill { position: absolute; inset: 0 auto 0 0; overflow: hidden; color: var(--gold); }
+.caps.small { font-size: 0.78rem; }
+.caps.big { font-size: 2rem; cursor: pointer; }
+.caps-num { font-family: var(--font-mono); font-size: 0.8rem; }
+.had-it { margin-top: 0.8rem; }
+.had-it a { text-decoration: none; display: inline-flex; gap: 0.5rem; align-items: center; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--rust); }
+.had { font-family: var(--font-mono); font-size: 0.68rem; color: var(--rust); white-space: nowrap; }
+.my-glass, .my-recent, .in-my-glass { border-top: 3px solid var(--rust); }
+.my-glass h2, .my-recent h2, .in-my-glass h2 { color: var(--rust); }
+.my-rating { display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; }
+.my-rating .caps { font-size: 1.6rem; }
+.checkins { list-style: none; padding: 0; margin: 0.8rem 0 0; }
+.checkins li { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1rem; padding: 0.7rem 0; border-bottom: 1px solid var(--wire-soft); }
+.checkins li:not(:has(img)) { grid-template-columns: 1fr; }
+.checkins img, .ci-card img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; background: var(--cream); }
+.ci-when { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.06em; color: var(--stone); margin: 0; }
+.ci-note { font-style: italic; margin: 0.3rem 0; max-width: 60ch; }
+.rate-it { margin-top: 1rem; }
+.rate-it summary { cursor: pointer; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--rust); }
+.rate-it textarea, .scan-rate textarea { display: block; width: 100%; max-width: 36rem; font: inherit; font-size: 0.95rem; background: var(--white); color: var(--ink); border: 1px solid var(--mist); padding: 0.6rem; margin: 0.3rem 0 0.8rem; }
+.rater { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; margin: 0.6rem 0; }
+.rater input[type="range"] { width: min(16rem, 100%); accent-color: var(--gold); }
+.rater-val { font-family: var(--font-mono); font-size: 1.2rem; min-width: 3ch; }
+.scan-rate { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--wire-soft); }
+.scan-rate h3 { font-size: 1.05rem; margin: 0; }
+.ci-cards { list-style: none; padding: 0; margin: 0.8rem 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; }
+.ci-card { display: grid; grid-template-columns: 5rem 1fr; gap: 0.8rem; align-items: start; padding: 0.7rem; background: var(--paper-lift); border: 1px solid var(--wire-soft); }
+.ci-card h3 { font-size: 1rem; margin: 0.15rem 0; line-height: 1.2; }
+.ci-card h3 a { text-decoration: none; }
+.ci-card .fine { margin: 0.1rem 0; }
+.ci-card .beer-hops { margin: 0.35rem 0 0; }
+.ci-card.unknown { background: transparent; border-style: dashed; }
+.ci-noimg { display: grid; place-items: center; aspect-ratio: 1; background: var(--cream); font-size: 1.6rem; }
+.drop-big { display: block; font-size: 2.4rem; margin-bottom: 0.4rem; }
+body.reading .dropzone { border-color: var(--gold); animation: reading 1.2s ease-in-out infinite alternate; }
+@keyframes reading { from { background: var(--cream); } to { background: var(--paper-lift); } }
+@media (prefers-reduced-motion: reduce) { body.reading .dropzone { animation: none; } }

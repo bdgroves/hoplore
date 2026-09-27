@@ -23,13 +23,14 @@ export function renderScan({ meta }) {
 </header>
 
 <main id="main" class="wrap scan">
+  <p class="callout" id="from-checkin" hidden>From your Untappd check-in: <b></b>. Snap the can and HopLove reads the hops.</p>
   <section class="block scan-inputs">
     <div class="scan-grid">
       <div>
         <h2>A photo</h2>
         <label class="dropzone" id="drop">
           <input type="file" id="photo" accept="image/*" capture="environment" hidden>
-          <span id="drop-text">Tap to take a picture, or drop / paste an image here</span>
+          <span id="drop-text"><span class="drop-big">📷</span>Tap to take a picture — it reads as soon as you shoot.<br><span class="fine">Or drop / paste an image here.</span></span>
           <img id="preview" alt="" hidden>
         </label>
       </div>
@@ -50,6 +51,12 @@ export function renderScan({ meta }) {
     <p class="fine" id="r-meta"></p>
     <p class="fine">As printed: <q id="r-written"></q></p>
     <ul class="hopcards" id="r-hops"></ul>
+    <div class="scan-rate">
+      <h3>Rate it <span class="fine">· like Untappd, 0.25–5</span></h3>
+      <div id="scan-rater"></div>
+      <label class="fine"><input type="checkbox" id="rate-on"> Save my rating with it</label>
+      <textarea id="scan-note" rows="2" maxlength="600" placeholder="A note, if you like: dank pine resin, grapefruit…"></textarea>
+    </div>
     <div class="scan-keep">
       <button id="keep" class="chip scan-go" type="button">Add to HopLove</button>
       <span class="fine">Opens a GitHub issue with this beer filled in; submit it and the site

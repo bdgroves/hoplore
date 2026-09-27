@@ -67,7 +67,14 @@ export function loadDataset() {
   }
   const breweries = [...bySlug.values()];
 
-  return { sources, taxonomy, hops, acreage, breweries };
+  // Brooks's own drinking: Untappd check-ins (tools/ingest/untappd.py) and
+  // ratings set on HopLove (tools/ingest/rating.py). Both optional.
+  const checkinsPath = join(DATA, 'untappd', 'checkins.yml');
+  const checkins = existsSync(checkinsPath) ? readYaml(checkinsPath).checkins ?? [] : [];
+  const ratingsPath = join(DATA, 'ratings.yml');
+  const ratings = existsSync(ratingsPath) ? readYaml(ratingsPath).ratings ?? [] : [];
+
+  return { sources, taxonomy, hops, acreage, breweries, checkins, ratings };
 }
 
 export const schemas = () => ({

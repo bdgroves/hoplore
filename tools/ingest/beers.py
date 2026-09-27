@@ -320,6 +320,8 @@ def parse_fort_george(path: Path) -> tuple | None:
 
 def parse_double_mountain(path: Path) -> tuple | None:
     _, name, text = page_text(path)
+    # Some pages title the beer as an invitation: "Grab Yourself A Killer Green".
+    name = re.sub(r"^grab yourself an?\s+", "", name, flags=re.I) if name else name
     hops = between(text, r"\bHops", r"Malts?|Yeast|Appearance|Aroma|Mouthfeel|Flavor|Food")
     m = re.search(r"\bABV\s*([\d.]+)", text)
     return name, float(m.group(1)) if m else None, hops, "field"

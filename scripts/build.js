@@ -17,9 +17,12 @@ import { renderLandscape } from '../site/templates/landscape.js';
 import { renderGrown, acreageFor } from '../site/templates/acreage.js';
 import { renderBeer, renderBeers, beersByHop } from '../site/templates/beers.js';
 import { renderScan } from '../site/templates/scan.js';
+import { attachMine } from '../site/templates/mine.js';
 
 const API_VERSION = 'v1';
-const { sources, taxonomy, hops: raw, acreage, breweries } = loadDataset();
+const { sources, taxonomy, hops: raw, acreage, breweries, checkins, ratings } = loadDataset();
+// Before beersByHop, so hop pages know which of their beers Brooks has had.
+const recent = attachMine(breweries, checkins, ratings);
 const inBeers = beersByHop(breweries);
 
 rmSync(DIST, { recursive: true, force: true });
@@ -137,7 +140,7 @@ write(out('scan/index.html'), renderScan({ meta }));
 const bySlug = Object.fromEntries(hops.map((h) => [h.slug, h]));
 const beerPaths = [];
 if (breweries.length) {
-  write(out('beers/index.html'), renderBeers({ breweries, bySlug, meta }));
+  write(out('beers/index.html'), renderBeers({ breweries, bySlug, meta, recent }));
   for (const b of breweries) {
     for (const beer of b.beers) {
       const path = `beers/${b.brewery.slug}/${beer.slug}/`;
