@@ -29,7 +29,29 @@ substitutes: []
 
 meta:
   status: stub
-  verification: unverified
-  last_reviewed: '2026-09-26'
+  verification: single-source
+  last_reviewed: '2026-09-27'
   notes: >
     purpose defaulted to dual, unconfirmed. Country: Hopsteiner's data sheet (main growing country).
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: hopsteiner, low: 9.5, high: 11.5, note: Data sheet last changed 2023-03-29. }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: hopsteiner, low: 3.0, high: 3.6, note: Data sheet last changed 2023-03-29. }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: hopsteiner, low: 28.0, high: 32.0, note: Data sheet last changed 2023-03-29. }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: hopsteiner, low: 2.0, high: 2.5, note: Data sheet last changed 2023-03-29. }
+oils:
+  linalool:
+    unit: percent_of_total_oil
+    observations:
+      - { source: hopsteiner, low: 0.3, high: 0.5, note: Data sheet last changed 2023-03-29. }

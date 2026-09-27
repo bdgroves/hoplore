@@ -30,7 +30,29 @@ substitutes: []
 
 meta:
   status: stub
-  verification: unverified
-  last_reviewed: '2026-09-26'
+  verification: single-source
+  last_reviewed: '2026-09-27'
   notes: >
     purpose defaulted to dual, unconfirmed. Country: Hopsteiner's data sheet (origin: England).
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: hopsteiner, low: 5.7, high: 7.8, note: Data sheet last changed 2020-01-09. }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: hopsteiner, low: 2.9, high: 3.7, note: Data sheet last changed 2020-01-09. }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: hopsteiner, low: 40.0, high: 48.0, note: Data sheet last changed 2020-01-09. }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: hopsteiner, low: 1.6, high: 2.2, note: Data sheet last changed 2020-01-09. }
+oils:
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: hopsteiner, low: 0.0, high: 1.0, note: Data sheet last changed 2020-01-09. }

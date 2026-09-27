@@ -20,18 +20,22 @@ analytics:
     unit: percent
     observations:
       - { source: seed-general-knowledge, low: 1.8, high: 5.0, typical: 3.0 }
+      - { source: hopsteiner, low: 3.0, high: 5.0, note: Data sheet last changed 2020-01-09. }
   beta_acid:
     unit: percent
     observations:
       - { source: seed-general-knowledge, low: 3.0, high: 5.5 }
+      - { source: hopsteiner, low: 3.0, high: 5.5, note: Data sheet last changed 2020-01-09. }
   cohumulone:
     unit: percent_of_alpha
     observations:
       - { source: seed-general-knowledge, low: 20, high: 25 }
+      - { source: hopsteiner, low: 20.0, high: 25.0, note: Data sheet last changed 2020-01-09. }
   total_oil:
     unit: ml_per_100g
     observations:
       - { source: seed-general-knowledge, low: 0.6, high: 0.8 }
+      - { source: hopsteiner, low: 0.6, high: 0.8, note: Data sheet last changed 2020-01-09. }
 usage:
   timing: [late-boil, whirlpool]
   beer_styles: [pilsner, pale-lager, helles, saison, biere-de-garde, weissbier]
@@ -42,6 +46,15 @@ substitutes:
   - { slug: willamette, confidence: medium }
 meta:
   status: draft
-  verification: unverified
-  last_reviewed: '2026-09-11'
+  verification: single-source
+  last_reviewed: '2026-09-27'
   notes: Needs a Comptoir Agricole or BarthHaas sheet to replace the seed citations.
+oils:
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: hopsteiner, low: 0.0, high: 1.0, note: Data sheet last changed 2020-01-09. }
+  linalool:
+    unit: percent_of_total_oil
+    observations:
+      - { source: hopsteiner, low: 0.5, high: 0.6, note: Data sheet last changed 2020-01-09. }

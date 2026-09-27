@@ -31,7 +31,24 @@ substitutes: []
 
 meta:
   status: stub
-  verification: unverified
-  last_reviewed: '2026-09-26'
+  verification: single-source
+  last_reviewed: '2026-09-27'
   notes: >
     purpose defaulted to dual, unconfirmed. Country: Hopsteiner's data sheet (main growing country). A proprietary blend of Pacific Northwest varieties; components not published.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: hopsteiner, low: 11.0, high: 14.0, note: Data sheet last changed 2022-04-04. }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: hopsteiner, low: 4.0, high: 5.0, note: Data sheet last changed 2022-04-04. }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: hopsteiner, low: 20.0, high: 30.0, note: Data sheet last changed 2022-04-04. }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: hopsteiner, low: 1.5, high: 3.0, note: Data sheet last changed 2022-04-04. }
