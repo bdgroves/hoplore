@@ -1,5 +1,13 @@
 source: Untappd, via https://brooksgroves.com/beers.json (tools/ingest/untappd.py) -- do not edit by hand
 checkins:
+  - id: 1604767330
+    date: '2026-09-27'
+    beer: Fresh Cut (2026)
+    brewery: Fortside Brewing Company
+    venue: Western State Hospital
+    comment: Fresh hops … love this time of year!! 🔥🌳🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_09_27/7e0c9646fb62cbf2dde5b84b95f3f40c_c_1604767330_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1604767330
   - id: 1604757919
     date: '2026-09-27'
     beer: Fresh Hop Double Crush
