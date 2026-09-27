@@ -36,7 +36,9 @@ jobs:
         id: add
         env:
           SCAN_BODY: ${{ github.event.issue.body }}
-        run: pixi run -e data python tools/ingest/scanned_beer.py
+        run: |
+          set -o pipefail
+          pixi run -e data python tools/ingest/scanned_beer.py | tee scan.log
 
       - name: Validate
         run: pixi run validate
@@ -57,6 +59,15 @@ jobs:
           gh workflow run deploy.yml --ref main
           gh issue close "$NUMBER" --comment "Added: $SUMMARY. It'll be at https://brooksgroves.com/hoplore/$PAGE in a minute or two, once the site rebuilds. 🍺❤️"
 
+      - name: Say what went wrong
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number }}
+        run: |
+          why=$(tail -1 scan.log 2>/dev/null || true)
+          gh issue comment "$NUMBER" --body "Couldn't add this one yet: ${why:-the check failed (see the Actions run)}. Edit the issue to fix the YAML and saving the edit tries again."
+
   rate:
     if: contains(github.event.issue.body, 'hoplove-rating') && github.event.issue.user.login == github.repository_owner && github.event.issue.state == 'open'
     runs-on: ubuntu-latest
@@ -72,7 +83,9 @@ jobs:
         id: add
         env:
           RATING_BODY: ${{ github.event.issue.body }}
-        run: pixi run -e data python tools/ingest/rating.py
+        run: |
+          set -o pipefail
+          pixi run -e data python tools/ingest/rating.py | tee scan.log
 
       - name: Validate
         run: pixi run validate
@@ -91,3 +104,12 @@ jobs:
           git pull --rebase --autostash && git push
           gh workflow run deploy.yml --ref main
           gh issue close "$NUMBER" --comment "Rated $SUMMARY. It'll show on https://brooksgroves.com/hoplore/$PAGE in a minute or two. 🍺❤️"
+
+      - name: Say what went wrong
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number }}
+        run: |
+          why=$(tail -1 scan.log 2>/dev/null || true)
+          gh issue comment "$NUMBER" --body "Couldn't add this one yet: ${why:-the check failed (see the Actions run)}. Edit the issue to fix the YAML and saving the edit tries again."

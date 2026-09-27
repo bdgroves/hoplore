@@ -55,8 +55,9 @@ def main() -> int:
     brewery = str(data.get("brewery") or "").strip()
     beer_name = str(data.get("beer") or "").strip()
     written = [str(h).strip() for h in (data.get("hops") or []) if str(h).strip()]
-    if not brewery or not beer_name or not written:
-        print("a scanned beer needs brewery, beer and at least one hop")
+    missing = [k for k, v in (("brewery", brewery), ("beer", beer_name), ("hops", written)) if not v or v == "None"]
+    if missing:
+        print(f"the {' and '.join(missing)} line{'s are' if len(missing) > 1 else ' is'} empty -- fill {'them' if len(missing) > 1 else 'it'} in")
         return 1
 
     index = record_index()
@@ -70,7 +71,8 @@ def main() -> int:
         hops.append(node)
 
     OUT.mkdir(parents=True, exist_ok=True)
-    slug = slugify(brewery)
+    # "Fortside Brewing Company" -> fortside, like the crawled breweries.
+    slug = slugify(re.sub(r"\b(?:brewing|brewery|brewers|brews|beer|company|co)\b\.?", "", brewery, flags=re.I)) or slugify(brewery)
     # A brewery HopLove already crawls keeps its slug, city and website, so a
     # scanned can lands in the same section as the brewery's other beers.
     known = YAML(typ="safe").load((Path(__file__).parent / "breweries.yml").read_text(encoding="utf-8")) or []

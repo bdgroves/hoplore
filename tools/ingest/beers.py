@@ -146,8 +146,15 @@ def parse_hop(token: str, index: dict[str, str]) -> dict:
     if m := re.search(r"\(([^)]*)\)", text):
         item["product"] = m.group(1).strip()
         text = (text[: m.start()] + text[m.end():]).strip()
-    if m := re.match(r"(?:fresh(?:ly)?|wet)(?:[- ](?:picked|hop|hopped))?\s+", text, re.I):
-        item["fresh"] = True  # "Fresh Strata", "freshly picked Simcoe", "wet hop Centennial"
+    # Who sold it ("YCH Citra", "BarthHaas Mosaic Incognito") isn't part of the name.
+    text = re.sub(r"^(?:YCH|Yakima Chief(?: Hops)?|BarthHaas|Barth Haas|Hopsteiner|John I\.? Haas|Haas)\s+", "", text, flags=re.I)
+    # YCH Cryo Fresh: fresh hops, frozen as lupulin pellets at the farm.
+    if m := re.search(r"\bcryo[- ]?fresh\b", text, re.I):
+        item["fresh"] = True
+        item["product"] = "Cryo Fresh"
+        text = (text[: m.start()] + text[m.end():]).strip()
+    if m := re.match(r"(?:(?:fresh(?:ly)?|wet)(?:[- ](?:picked|hop|hopped))?(?:,?\s+(?:and\s+)?))+", text, re.I):
+        item["fresh"] = True  # "Fresh Strata", "freshly picked Simcoe", "wet hop Centennial", "fresh, wet Centennial"
         text = text[m.end():]
     text = re.sub(r"\bhops?\b", "", text, flags=re.I)
     text = re.sub(r"\s+", " ", re.sub(r"[™®]", " ", text)).strip()

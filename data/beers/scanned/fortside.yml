@@ -1,0 +1,19 @@
+brewery:
+  slug: fortside
+  name: Fortside Brewing
+  city: Vancouver
+  state: WA
+  url: https://www.fortsidebrewing.com/
+generated_by: 'HopLove scans (/scan/): photographed or pasted by a person, hops matched by tools/ingest/scanned_beer.py'
+retrieved: '2026-09-27'
+beers:
+  - slug: fresh-cut
+    name: Fresh Cut
+    url: https://www.fortsidebrewing.com/
+    hops_as_written: 'YCH Cryo Fresh Citra and Mosaic into the whirlpool and then again as a dry hop addition kick in with a groove dripping in juicy grapefruit, orange blossom, and a heady dankness. Then comes the real rock star: a dry hopping of fresh, wet Centennial'
+    scanned_from: photo
+    scanned: '2026-09-27'
+    hops:
+      - { hop: citra, name: Citra, product: Cryo Fresh, fresh: true, as_written: YCH Cryo Fresh Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: centennial, name: Centennial, fresh: true, as_written: 'fresh, wet Centennial' }

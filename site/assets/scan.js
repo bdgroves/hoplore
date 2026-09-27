@@ -24,6 +24,7 @@ Return ONLY raw JSON, no markdown fences, no commentary:
   "hops": ["one entry per hop, as written, keeping words like Cryo, CGX, fresh, or a farm name"],
   "error": null
 }
+The brewery is the company that made the beer: look for the logo, "Brewed by…" or "Brewed and canned by…" fine print, and the address. A slogan, a region or a collective on the can (for example "North Bank Brewers") is not the brewery. The beer is the beer's own name, usually the biggest words on the front; if you can't find it, use null rather than guessing.
 Rules: list only hops that are actually named in the image or text. Never infer hops from the style, the brewery or your own knowledge of the beer. If no hops are named, return "hops": [] and put a short explanation in "error". If this is not a beer at all, say so in "error".`;
 
 let photo = null; // { media_type, data }
@@ -58,7 +59,12 @@ function matchHop(token) {
   const item = { written: token, fresh: false, form: null, farm: null };
   const from = text.match(/\bfrom\s+(.+)$/i);
   if (from) { item.farm = from[1].trim(); text = text.slice(0, from.index).trim(); }
-  const fresh = text.match(/^(?:fresh(?:ly)?|wet)(?:[- ](?:picked|hop|hopped))?\s+/i);
+  // The seller isn't part of the name: "YCH Citra", "BarthHaas Mosaic".
+  text = text.replace(/^(?:YCH|Yakima Chief(?: Hops)?|BarthHaas|Barth Haas|Hopsteiner|John I\.? Haas|Haas)\s+/i, '');
+  // YCH Cryo Fresh: fresh hops frozen as lupulin pellets at the farm.
+  const cryoFresh = text.match(/\bcryo[- ]?fresh\b/i);
+  if (cryoFresh) { item.fresh = true; item.form = 'Cryo Fresh'; text = text.replace(cryoFresh[0], ' ').replace(/\s+/g, ' ').trim(); }
+  const fresh = text.match(/^(?:(?:fresh(?:ly)?|wet)(?:[- ](?:picked|hop|hopped))?(?:,?\s+(?:and\s+)?))+/i);
   if (fresh) { item.fresh = true; text = text.slice(fresh[0].length); }
   text = text.replace(/\bhops?\b/gi, '').replace(/[™®()]/g, ' ').replace(/\s+/g, ' ').trim();
   for (const [w, label] of FORMS) {
@@ -158,6 +164,7 @@ async function read() {
     await indexReady;
     if (!got.hops?.length) throw new Error(got.error || 'no hops are named on it');
     got.brewery = got.brewery || hint || null;
+    got.beer = got.beer || params.get('beer')?.replace(/\s*\([^)]*\b(?:19|20)\d\d\b[^)]*\)/, '') || null;
     const items = got.hops.map(matchHop);
     last = { ...got, items, scanned_from: photo ? 'photo' : 'text' };
     show(last);
@@ -173,8 +180,9 @@ async function read() {
 
 function show(s) {
   $('#result').hidden = false;
-  $('#r-brewery').textContent = [s.brewery, s.city, s.state].filter(Boolean).join(' · ');
-  $('#r-beer').textContent = s.beer || 'Unnamed beer';
+  $('#r-brewery').value = s.brewery || '';
+  $('#r-beer').value = s.beer || '';
+  $('#r-where').textContent = [s.city, s.state].filter(Boolean).join(', ');
   $('#r-meta').textContent = [s.style, s.abv != null ? `${s.abv}% ABV` : null].filter(Boolean).join(' · ');
   $('#r-written').textContent = s.hops_as_written || s.hops.join(', ');
   $('#r-hops').innerHTML = s.items.map(card).join('');
@@ -183,6 +191,14 @@ function show(s) {
 
 function keep() {
   if (!last) return;
+  // What's in the boxes wins: the model's reading, or your fix to it.
+  last.brewery = $('#r-brewery').value.trim() || null;
+  last.beer = $('#r-beer').value.trim() || null;
+  if (!last.brewery || !last.beer) {
+    status(`Fill in the ${!last.beer ? 'beer' : 'brewery'} name first — it wasn't readable on the ${last.scanned_from}.`);
+    $(!last.beer ? '#r-beer' : '#r-brewery').focus();
+    return;
+  }
   const q = (v) => JSON.stringify(v ?? null);
   const yaml = [
     `brewery: ${q(last.brewery)}`, `city: ${q(last.city)}`, `state: ${q(last.state)}`,

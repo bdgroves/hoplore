@@ -46,8 +46,11 @@ export function renderScan({ meta }) {
   </section>
 
   <section class="block" id="result" hidden>
-    <p class="kicker" id="r-brewery"></p>
-    <h2 class="scan-beer" id="r-beer"></h2>
+    <div class="scan-names">
+      <label><span class="scan-label">Brewery</span><input id="r-brewery" type="text" autocomplete="off"></label>
+      <label><span class="scan-label">Beer</span><input id="r-beer" class="scan-beer" type="text" autocomplete="off" placeholder="The beer's name"></label>
+    </div>
+    <p class="fine" id="r-where"></p>
     <p class="fine" id="r-meta"></p>
     <p class="fine">As printed: <q id="r-written"></q></p>
     <ul class="hopcards" id="r-hops"></ul>

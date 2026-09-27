@@ -587,7 +587,6 @@ beers:
       - { hop: columbus, name: CTZ, as_written: CTZ }
       - { hop: galaxy, name: Galaxy, as_written: Galaxy }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
-      - { hop: null, name: YCH, form: HyperBoost, as_written: YCH Hyperboost }
   - slug: indigo-montoya
     name: Indigo Montoya
     url: https://exnovobrew.com/beer/indigo-montoya/

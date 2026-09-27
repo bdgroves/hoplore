@@ -850,3 +850,8 @@ a:hover { text-decoration-color: var(--rust); }
 body.reading .dropzone { border-color: var(--gold); animation: reading 1.2s ease-in-out infinite alternate; }
 @keyframes reading { from { background: var(--cream); } to { background: var(--paper-lift); } }
 @media (prefers-reduced-motion: reduce) { body.reading .dropzone { animation: none; } }
+.scan-names { display: grid; grid-template-columns: 1fr 2fr; gap: 1rem; }
+@media (max-width: 46rem) { .scan-names { grid-template-columns: 1fr; } }
+.scan-names input { width: 100%; font: inherit; background: var(--white); color: var(--ink); border: 1px solid var(--mist); padding: 0.4rem 0.6rem; }
+.scan-names input.scan-beer { font-family: var(--font-display); font-size: clamp(1.4rem, 4vw, 2rem); font-weight: 900; }
+.scan-names input:placeholder-shown { border-color: var(--rust); }
