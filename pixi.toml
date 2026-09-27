@@ -86,6 +86,11 @@ test-ych = "python tools/ingest/test_yakima_chief.py"
 barthhaas = "python tools/ingest/barthhaas.py"
 barthhaas-discover = "python tools/ingest/barthhaas.py --discover"
 
+# Hop Breeding Company (Yakima): one page, every HBC brand. Breeder of record
+# for Citra, Mosaic, Sabro, Talus.
+hbc = "python tools/ingest/hbc.py"
+hbc-discover = "python tools/ingest/hbc.py --discover"
+
 # Maintenance: remove placeholder observations a real source has superseded.
 # Dry run by default. See tools/drop_placeholders.py for why this is a
 # deletion and not a second opinion.

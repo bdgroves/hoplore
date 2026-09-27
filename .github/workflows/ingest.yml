@@ -15,7 +15,7 @@ on:
       scraper:
         description: Which scraper
         type: choice
-        options: [ych, hopsteiner, barthhaas]
+        options: [ych, hopsteiner, barthhaas, hbc]
         default: ych
       slugs:
         description: Space-separated HopLore slugs, or --all

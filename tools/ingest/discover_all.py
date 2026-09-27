@@ -44,6 +44,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 import hopsteiner  # noqa: E402  (path insert must come first)
 import yakima_chief  # noqa: E402
 import barthhaas  # noqa: E402
+import hbc  # noqa: E402
 
 from ruamel.yaml import YAML
 
@@ -58,6 +59,7 @@ SCRAPERS = {
     "hopsteiner": hopsteiner,
     "yakima_chief": yakima_chief,
     "barthhaas": barthhaas,
+    "hbc": hbc,
 }
 
 

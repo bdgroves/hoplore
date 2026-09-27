@@ -51,6 +51,16 @@ barthhaas:
   tier: breeder
   weight: 1.0
 
+hbc:
+  publisher: Hop Breeding Company
+  title: HBC brand specifications
+  url: https://www.hopbreeding.com/
+  tier: breeder
+  weight: 1.0
+  note: >
+    Yakima breeding joint venture of Yakima Chief Ranches and John I. Haas;
+    the breeder of record for Citra, Mosaic, Sabro, Talus and the rest.
+
 crosby:
   publisher: Crosby Hop Farm
   title: Hop variety specifications

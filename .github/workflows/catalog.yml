@@ -10,7 +10,7 @@ on:
       source:
         description: Which source
         type: choice
-        options: [hopsteiner, barthhaas]
+        options: [hopsteiner, barthhaas, hbc]
         default: hopsteiner
 
 permissions:
