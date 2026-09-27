@@ -1,0 +1,36 @@
+ WARN the lock file is up-to-date but uses an older format (v6), run `pixi lock` to upgrade to v7 for improved reproducibility
+Traceback (most recent call last):
+  File "/home/runner/work/hoplore/hoplore/tools/ingest/snapshot.py", line 136, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/runner/work/hoplore/hoplore/tools/ingest/snapshot.py", line 109, in main
+    return crawl_breweries()
+  File "/home/runner/work/hoplore/hoplore/tools/ingest/snapshot.py", line 78, in crawl_breweries
+    breweries = YAML(typ="safe").load((HERE / "breweries.yml").read_text(encoding="utf-8"))
+  File "/home/runner/work/hoplore/hoplore/.pixi/envs/data/lib/python3.14/site-packages/ruamel/yaml/main.py", line 454, in load
+    return constructor.get_single_data()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/runner/work/hoplore/hoplore/.pixi/envs/data/lib/python3.14/site-packages/ruamel/yaml/constructor.py", line 117, in get_single_data
+    node = self.composer.get_single_node()
+  File "_ruamel_yaml.pyx", line 706, in work._ruamel_yaml.CParser.get_single_node
+  File "_ruamel_yaml.pyx", line 724, in work._ruamel_yaml.CParser._compose_document
+  File "_ruamel_yaml.pyx", line 773, in work._ruamel_yaml.CParser._compose_node
+  File "_ruamel_yaml.pyx", line 850, in work._ruamel_yaml.CParser._compose_sequence_node
+  File "_ruamel_yaml.pyx", line 775, in work._ruamel_yaml.CParser._compose_node
+  File "_ruamel_yaml.pyx", line 889, in work._ruamel_yaml.CParser._compose_mapping_node
+  File "_ruamel_yaml.pyx", line 773, in work._ruamel_yaml.CParser._compose_node
+  File "_ruamel_yaml.pyx", line 848, in work._ruamel_yaml.CParser._compose_sequence_node
+  File "_ruamel_yaml.pyx", line 904, in work._ruamel_yaml.CParser._parse_next_event
+ruamel.yaml.scanner.ScannerError: while scanning a plain scalar
+  in "<unicode string>", line 14, column 13
+found unexpected ':'
+  in "<unicode string>", line 14, column 18
+crawler exited 1
+
+added 8 packages, and audited 9 packages in 3s
+
+3 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+0 page(s) rendered
