@@ -19,10 +19,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as quince, gingerbread, apricot, green pepper, green tea.
+  tags: [orchard, spice, apricot, green, tea]
+  refs: [barthhaas]
 
 usage:
   timing: []

@@ -14,10 +14,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as pineapple, fennel, rose, eucalyptus, mate tea.
+  tags: [pineapple, anise, rose, mint, tea]
+  refs: [barthhaas]
 
 usage:
   timing: []

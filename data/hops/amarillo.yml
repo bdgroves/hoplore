@@ -19,10 +19,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as apricot, grapefruit, honeydew melon, yoghurt, black tea.
+  tags: [apricot, grapefruit, melon, creamy, tea]
+  refs: [barthhaas]
 
 usage:
   timing: []

@@ -19,10 +19,10 @@ pedigree:
   refs: [ychr]
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as peach, coconut, pineapple.
+  tags: [peach, coconut, pineapple]
+  refs: [barthhaas]
 
 usage:
   timing: []

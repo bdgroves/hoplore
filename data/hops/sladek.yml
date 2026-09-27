@@ -19,10 +19,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as gingerbread, watermelon, cognac, orange, nettle.
+  tags: [spice, melon, woody, orange, herbal]
+  refs: [barthhaas]
 
 usage:
   timing: []

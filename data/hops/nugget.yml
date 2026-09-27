@@ -19,10 +19,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as lemon, geranium, lychee, pear, red currant.
+  tags: [lemon, floral, tropical, pear, berry]
+  refs: [barthhaas]
 
 usage:
   timing: []

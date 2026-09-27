@@ -14,10 +14,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as juniper, orange, wild garlic, pear, hay.
+  tags: [spice, orange, onion-garlic, pear, grassy]
+  refs: [barthhaas]
 
 usage:
   timing: []

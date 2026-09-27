@@ -19,10 +19,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as lily of the valley, bergamot, cognac, cucumber, marjoram.
+  tags: [floral, citrus, woody, green, herbal]
+  refs: [barthhaas]
 
 usage:
   timing: []

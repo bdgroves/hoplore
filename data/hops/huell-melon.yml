@@ -19,10 +19,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as honeydew melon, strawberry, caramel, peach, yoghurt.
+  tags: [melon, strawberry, caramel, peach, creamy]
+  refs: [barthhaas]
 
 usage:
   timing: []

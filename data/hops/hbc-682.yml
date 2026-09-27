@@ -22,10 +22,10 @@ pedigree:
   refs: [ychr]
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as resin, pepper, plum, earthy, leek.
+  tags: [resinous, black-pepper, stone-fruit, earthy, onion-garlic]
+  refs: [barthhaas]
 
 usage:
   timing: []

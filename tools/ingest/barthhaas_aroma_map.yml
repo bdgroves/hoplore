@@ -1,0 +1,116 @@
+# BarthHaas aroma descriptor -> HopLore aroma tag (data/taxonomy/aroma-tags.yml).
+# A descriptor not listed here falls back to its BarthHaas flavor family (below).
+descriptors:
+  Lemon: lemon
+  Lemon Balm: lemon
+  Grapefruit: grapefruit
+  Pomelo: grapefruit
+  Pineapple: pineapple
+  Pear: pear
+  Quince: orchard
+  Apple: apple
+  Orange: orange
+  Tangerine: tangerine
+  Bergamot: citrus
+  Lime: lime
+  Lemon Grass: lemongrass
+  Pepper: black-pepper
+  Gooseberry: gooseberry
+  Strawberry: strawberry
+  Raspberry: berry
+  Blackberry: berry
+  Red Currant: berry
+  Cranberry: berry
+  Black Currant: blackcurrant
+  Blueberry: blueberry
+  Cherry: stone-fruit
+  Plum: stone-fruit
+  Apricot: apricot
+  Peach: peach
+  Passion Fruit: passionfruit
+  Mango: mango
+  Guava: guava
+  Lychee: tropical
+  Banana: tropical
+  Kiwi: tropical
+  Coconut: coconut
+  Honeydew Melon: melon
+  Watermelon: melon
+  White Wine Grapes: white-wine
+  Tobacco: tobacco
+  Cedar: cedar
+  Barrique: woody
+  Myrrh: woody
+  Resin: resinous
+  Pine: pine
+  Earthy: earthy
+  Hay: grassy
+  Green Grassy: grassy
+  Fresh Cut Grass: grassy
+  Green Pepper: green
+  Cucumber: green
+  Artichoke: vegetal
+  Celeriac: vegetal
+  Tomato Leaves: tomato
+  Leek: onion-garlic
+  Onion: onion-garlic
+  Garlic: onion-garlic
+  Wild Garlic: onion-garlic
+  Caramel: caramel
+  Toffee: caramel
+  Honey: sweet
+  Cream: creamy
+  Yoghurt: creamy
+  Butter: creamy
+  Vanilla: vanilla
+  Tonka Bean: vanilla
+  Geranium: floral
+  Camomile Blossom: floral
+  Lily of the Valley: floral
+  Apple Blossom: floral
+  Lilac: floral
+  Carnation: floral
+  Rose: rose
+  Lavender: lavender
+  Elderflower: elderflower
+  Mint: mint
+  Menthol: mint
+  Eucalyptus: mint
+  Green Tea: tea
+  Black Tea: tea
+  Mate Tea: tea
+  Liquorice: licorice
+  Fennel: anise
+  Fennel Seeds: anise
+  Aniseed: anise
+  Tarragon: anise
+  Cinnamon: cinnamon
+  Gingerbread: spice
+  Ginger: spice
+  Curry: spice
+  Nutmeg: spice
+  Coriander: spice
+  Chilli: spice
+  Thyme: herbal
+  Marjoram: herbal
+  Lovage: herbal
+  Nettle: herbal
+  Basil: herbal
+  Sage: herbal
+  Woodruff: herbal
+  Dill: herbal
+  Oregano: herbal
+  Rosemary: herbal
+families:
+  blumig: floral
+  grun: green
+  grune-fruchte: orchard
+  holzig-aromatisch: woody
+  krautig: herbal
+  menthol: mint
+  rote-beeren: berry
+  sahnekaramell: sweet
+  susse-fruchte: stone-fruit
+  vegetal: vegetal
+  wurzig: spice
+  zitrus: citrus

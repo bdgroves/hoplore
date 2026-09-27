@@ -14,10 +14,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as honeydew melon, tobacco, blueberry, myrrh, black currant.
+  tags: [melon, tobacco, blueberry, woody, blackcurrant]
+  refs: [barthhaas]
 
 usage:
   timing: []

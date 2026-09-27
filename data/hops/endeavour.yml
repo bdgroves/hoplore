@@ -14,10 +14,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as gingerbread, blackberry, bergamot, watermelon.
+  tags: [spice, berry, citrus, melon]
+  refs: [barthhaas]
 
 usage:
   timing: []

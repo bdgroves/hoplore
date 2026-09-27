@@ -15,10 +15,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as lavender, lemon, fennel, blueberry, green pepper.
+  tags: [lavender, lemon, anise, blueberry, green]
+  refs: [barthhaas]
 
 usage:
   timing: []

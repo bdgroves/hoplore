@@ -19,10 +19,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as geranium, thyme, bergamot, red currant, fresh cut grass.
+  tags: [floral, herbal, citrus, berry, grassy]
+  refs: [barthhaas]
 
 usage:
   timing: []

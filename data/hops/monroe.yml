@@ -14,10 +14,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as cherry, plum, strawberry, yoghurt, red currant.
+  tags: [stone-fruit, strawberry, creamy, berry]
+  refs: [barthhaas]
 
 usage:
   timing: []

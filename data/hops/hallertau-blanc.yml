@@ -19,10 +19,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as grapefruit, white wine grapes, lemon grass, cucumber, quince.
+  tags: [grapefruit, white-wine, lemongrass, green, orchard]
+  refs: [barthhaas]
 
 usage:
   timing: []

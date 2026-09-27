@@ -19,10 +19,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as watermelon, pear, apricot, tangerine, menthol.
+  tags: [melon, pear, apricot, tangerine, mint]
+  refs: [barthhaas]
 
 usage:
   timing: []

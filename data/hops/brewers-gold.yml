@@ -16,10 +16,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as lemon, lemon balm, lovage, red currant.
+  tags: [lemon, herbal, berry]
+  refs: [barthhaas]
 
 usage:
   timing: []

@@ -19,10 +19,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as apricot, camomile blossom, lemon grass, plum, black tea.
+  tags: [apricot, floral, lemongrass, stone-fruit, tea]
+  refs: [barthhaas]
 
 usage:
   timing: []

@@ -15,10 +15,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as lemon balm, lemon grass, tomato leaves, apricot, tarragon.
+  tags: [lemon, lemongrass, tomato, apricot, anise]
+  refs: [barthhaas]
 
 usage:
   timing: []

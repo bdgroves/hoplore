@@ -19,10 +19,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as thyme, lime, mint, pepper, marjoram.
+  tags: [herbal, lime, mint, black-pepper]
+  refs: [barthhaas]
 
 usage:
   timing: []

@@ -15,10 +15,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as thyme, lemon, cucumber, lovage, green tea.
+  tags: [herbal, lemon, green, tea]
+  refs: [barthhaas]
 
 usage:
   timing: []

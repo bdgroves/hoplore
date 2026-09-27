@@ -19,10 +19,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as lemon, cranberry, cream, pepper, mate tea.
+  tags: [lemon, berry, creamy, black-pepper, tea]
+  refs: [barthhaas]
 
 usage:
   timing: []

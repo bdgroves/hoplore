@@ -14,10 +14,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as apricot, caramel, green tea.
+  tags: [apricot, caramel, tea]
+  refs: [barthhaas]
 
 usage:
   timing: []

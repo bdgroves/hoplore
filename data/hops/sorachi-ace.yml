@@ -19,10 +19,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as orange, lychee, lemon grass, plum, yoghurt.
+  tags: [orange, tropical, lemongrass, stone-fruit, creamy]
+  refs: [barthhaas]
 
 usage:
   timing: []

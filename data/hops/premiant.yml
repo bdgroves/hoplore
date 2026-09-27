@@ -19,10 +19,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as chocolate, lemon grass, lavender, curry, leather.
+  tags: [sweet, lemongrass, lavender, spice, woody]
+  refs: [barthhaas]
 
 usage:
   timing: []

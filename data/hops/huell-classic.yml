@@ -14,10 +14,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as green grassy, hay, menthol, pepper, chilli.
+  tags: [grassy, mint, black-pepper, spice]
+  refs: [barthhaas]
 
 usage:
   timing: []

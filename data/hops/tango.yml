@@ -14,10 +14,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as lemon, passion fruit, apple, resin, grapefruit.
+  tags: [lemon, passionfruit, apple, resinous, grapefruit]
+  refs: [barthhaas]
 
 usage:
   timing: []

@@ -19,10 +19,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as ginger, leek, tomato leaves, fennel seeds, garlic.
+  tags: [spice, onion-garlic, tomato, anise]
+  refs: [barthhaas]
 
 usage:
   timing: []

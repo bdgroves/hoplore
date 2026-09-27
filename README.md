@@ -234,7 +234,7 @@ Done:
 
 Next, roughly in order of how much I want it:
 
-- [ ] **Aroma data at scale.** Only 14 hops have aroma descriptors, and aroma is 40% of the substitution score. The single biggest gap.
+- [ ] **Aroma data for the rest.** 109 of 188 hops now carry aroma descriptors (most from BarthHaas's variety pages, translated through `tools/ingest/barthhaas_aroma_map.yml`). Apollo, Idaho 7's peers and the other hops BarthHaas doesn't carry are next — aroma is 40% of the substitution score.
 - [ ] **An IBU calculator that outputs a range** — because alpha is a range, your IBUs are too. Format-aware, so Cryo doses correctly. Nobody else can do this, because nobody else stores ranges.
 - [ ] A mini landscape on every hop page, with that hop and its substitutes highlighted
 - [ ] Side-by-side compare for 2–4 hops

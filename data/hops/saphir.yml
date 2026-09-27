@@ -19,10 +19,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as lemon, juniper, strawberry, lily of the valley, black tea.
+  tags: [lemon, spice, strawberry, floral, tea]
+  refs: [barthhaas]
 
 usage:
   timing: []

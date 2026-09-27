@@ -14,10 +14,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as camomile blossom, raspberry, lemon, hay, red currant.
+  tags: [floral, berry, lemon, grassy]
+  refs: [barthhaas]
 
 usage:
   timing: []

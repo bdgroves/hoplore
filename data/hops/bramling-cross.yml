@@ -19,10 +19,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as camomile blossom, grapefruit, gooseberry, caramel, vanilla.
+  tags: [floral, grapefruit, gooseberry, caramel, vanilla]
+  refs: [barthhaas]
 
 usage:
   timing: []

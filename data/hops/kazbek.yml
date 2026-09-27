@@ -19,10 +19,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as orange, pineapple, mango, raspberry, lemon.
+  tags: [orange, pineapple, mango, berry, lemon]
+  refs: [barthhaas]
 
 usage:
   timing: []

@@ -19,10 +19,10 @@ pedigree:
   refs: []
 
 aroma:
-  summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+  summary: >-
+    BarthHaas describes it as peach, pineapple, blueberry, gooseberry, black currant.
+  tags: [peach, pineapple, blueberry, gooseberry, blackcurrant]
+  refs: [barthhaas]
 
 usage:
   timing: []
