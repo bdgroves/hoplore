@@ -35,6 +35,7 @@ jobs:
         env:
           SOURCE: ${{ inputs.source }}
         run: |
+          set -o pipefail
           if [ "$SOURCE" = breweries ]; then
             pixi run -e data python tools/ingest/snapshot.py --breweries | tee -a "$GITHUB_STEP_SUMMARY"
             if [ -s tools/ingest/raw/pages/render_urls.txt ]; then
