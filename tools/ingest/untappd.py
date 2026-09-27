@@ -9,6 +9,11 @@ so HopLove keeps every check-in it has ever seen rather than a rolling 20.
 
     pixi run -e data python tools/ingest/untappd.py                 # fetch and merge
     pixi run -e data python tools/ingest/untappd.py --from beers.json   # merge a local copy
+    pixi run -e data python tools/ingest/untappd.py --export untappd.json  # a full Untappd export
+
+The export (Untappd Insider > Account > Download History, JSON or CSV) is the
+one place Untappd hands over every check-in *with* its rating, so importing
+it fills in the whole history and every caps rating at once.
 
 The RSS behind beers.json carries the beer, brewery, venue, comment and photo,
 but not the star rating. With --ratings it also opens each recent check-in's
@@ -68,12 +73,47 @@ def parse(entry: dict) -> CommentedMap | None:
 RATING = re.compile(r'rating-serving.{0,400}?data-rating="([\d.]+)"', re.S)
 
 
+class Blocked(Exception):
+    pass
+
+
+def from_export(row: dict) -> CommentedMap | None:
+    """One check-in from an Untappd history export (JSON or CSV row)."""
+    try:
+        cid = int(row.get("checkin_id") or 0)
+    except (TypeError, ValueError):
+        return None
+    if not cid or not row.get("beer_name") or not row.get("brewery_name"):
+        return None
+    item = CommentedMap()
+    item["id"] = cid
+    item["date"] = str(row.get("created_at") or "")[:10] or None
+    item["beer"] = str(row["beer_name"]).strip()
+    item["brewery"] = str(row["brewery_name"]).strip()
+    if row.get("venue_name"):
+        item["venue"] = str(row["venue_name"]).strip()
+    if row.get("comment"):
+        item["comment"] = str(row["comment"]).strip()
+    if row.get("photo_url"):
+        item["photo"] = str(row["photo_url"])
+    item["link"] = str(row.get("checkin_url") or f"https://untappd.com/user/bdgroves/checkin/{cid}")
+    try:
+        stars = float(row.get("rating_score") or 0)
+    except (TypeError, ValueError):
+        stars = 0
+    if 0.25 <= stars <= 5:
+        item["rating"] = round(stars * 4) / 4
+    return item
+
+
 def fetch_rating(link: str) -> float | None:
     """The caps rating on a public check-in page, or None."""
     try:
         r = requests.get(link, headers={"User-Agent": BROWSER_UA, "Accept": "text/html"}, timeout=30)
     except requests.RequestException:
         return None
+    if r.status_code in (403, 429):
+        raise Blocked(f"untappd.com answered {r.status_code}")
     if r.status_code != 200:
         print(f"  {r.status_code} for {link}")
         return None
@@ -84,10 +124,13 @@ def fetch_rating(link: str) -> float | None:
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--from", dest="source", help="read a local beers.json instead of fetching")
+    ap.add_argument("--export", help="merge an Untappd history export (.json or .csv), ratings included")
     ap.add_argument("--ratings", action="store_true", help="read star ratings from recent check-in pages on untappd.com")
     args = ap.parse_args()
 
-    if args.source:
+    if args.export:
+        data = {"checkins": []}
+    elif args.source:
         data = json.loads(Path(args.source).read_text(encoding="utf-8"))
     else:
         r = requests.get(URL, headers={"User-Agent": UA}, timeout=30)
@@ -110,6 +153,29 @@ def main() -> int:
             have[item["id"]] = item
             added += 1
 
+    if args.export:
+        path = Path(args.export)
+        if path.suffix.lower() == ".csv":
+            import csv
+            rows = list(csv.DictReader(path.open(encoding="utf-8-sig")))
+        else:
+            rows = json.loads(path.read_text(encoding="utf-8-sig"))
+        rated = 0
+        for row in rows:
+            item = from_export(row)
+            if not item:
+                continue
+            if item["id"] in have:
+                # Keep what's on file, but take the export's rating and photo.
+                for key in ("rating", "photo", "venue", "comment"):
+                    if key in item and have[item["id"]].get(key) is None:
+                        have[item["id"]][key] = item[key]
+            else:
+                have[item["id"]] = item
+                added += 1
+            rated += "rating" in item
+        print(f"export: {len(rows)} rows, {rated} rated")
+
     if args.ratings:
         # Only the last few weeks: once a rating is found it's kept, and an
         # old check-in Untappd wouldn't show us isn't worth asking about daily.
@@ -117,7 +183,11 @@ def main() -> int:
         rated = 0
         for c in have.values():
             if c.get("rating") is None and str(c.get("date") or "") >= since and c.get("link"):
-                stars = fetch_rating(c["link"])
+                try:
+                    stars = fetch_rating(c["link"])
+                except Blocked as e:
+                    print(f"{e}; skipping ratings this run")
+                    break
                 if stars is not None:
                     c["rating"] = stars
                     rated += 1

@@ -6,6 +6,8 @@ name: Untappd check-ins
 # if anything changed. Beer pages then show the check-in next to the hops.
 
 on:
+  push:
+    paths: ['data/untappd/export.*']
   schedule:
     - cron: '17 15 * * *'
   workflow_dispatch:
@@ -32,7 +34,10 @@ jobs:
       - name: Merge check-ins
         run: |
           set -o pipefail
-          pixi run -e data python tools/ingest/untappd.py --ratings | tee data/untappd/last-run.txt
+          # An Untappd history export uploaded as data/untappd/export.json (or
+          # .csv) brings in every past check-in with its rating.
+          EXPORT=$(ls data/untappd/export.json data/untappd/export.csv 2>/dev/null | head -1 || true)
+          pixi run -e data python tools/ingest/untappd.py --ratings ${EXPORT:+--export "$EXPORT"} | tee data/untappd/last-run.txt
           cat data/untappd/last-run.txt >> "$GITHUB_STEP_SUMMARY"
 
       - name: Validate
@@ -50,6 +55,6 @@ jobs:
           # isn't noise when nothing but the timestamp changed.
           if [ "$EVENT" = "workflow_dispatch" ]; then git add data/untappd/last-run.txt; fi
           if git diff --cached --quiet; then echo "No new check-ins."; exit 0; fi
-          git commit -m "Untappd check-ins: $(head -1 data/untappd/last-run.txt)"
+          git commit -m "Untappd check-ins: $(tail -1 data/untappd/last-run.txt)"
           git pull --rebase --autostash && git push
           gh workflow run deploy.yml --ref main
