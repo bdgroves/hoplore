@@ -1,0 +1,7 @@
+about: Brooks's own ratings, set on HopLove (tools/ingest/rating.py). 0.25-5 caps, like Untappd.
+ratings:
+  - brewery: reubens
+    beer: fresh-hop-double-crush
+    name: Fresh Hop Double Crush (Reuben's Brews)
+    stars: 4.0
+    date: '2026-09-27'
