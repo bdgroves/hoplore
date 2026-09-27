@@ -45,10 +45,12 @@ analytics:
     observations:
       - { source: ychr, low: 12.0, high: 16.0 }
       - { source: barthhaas, low: 11.6, high: 17.0, note: Range over the last 4 crop years. }
+      - { source: hbc, low: 12.0, high: 16.0 }
   total_oil:
     unit: ml_per_100g
     observations:
       - { source: ychr, low: 2.5, high: 3.5 }
+      - { source: hbc, low: 2.5, high: 3.5 }
   beta_acid:
     unit: percent
     observations:

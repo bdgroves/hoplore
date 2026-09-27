@@ -75,7 +75,7 @@ class Brand:
     number: str
     brand: str
     observations: list[Observation] = field(default_factory=list)
-    aromas: list[str] = field(default_factory=list)
+    prose: str = ""  # the brand's descriptive paragraph; aromas live here, not in a labelled list
     unmapped: dict[str, str] = field(default_factory=dict)
 
 
@@ -109,21 +109,16 @@ def split_brands(html: str) -> list[tuple[str, str, list[str]]]:
     return brands
 
 
-AROMA_LABEL = re.compile(r"^(aroma|aromas|aroma profile|aroma descriptors|flavou?r)\s*:?\s*(.*)$", re.I)
-
-
 def parse_lines(number: str, name: str, lines: list[str]) -> Brand:
     brand = Brand(number=number, brand=name)
     seen: set[str] = set()
     pairs: list[tuple[str, str]] = []
+    brand.prose = " ".join(l for l in lines if not LABEL_VALUE.match(l) and l != "View Details")
     for i, line in enumerate(lines):
         if m := LABEL_VALUE.match(line):
             pairs.append((m.group(1), m.group(2)))
         elif map_label(line.rstrip("*: ")) and not re.search(r"\d", line) and i + 1 < len(lines):
             pairs.append((line.rstrip("*: "), lines[i + 1]))
-        if (m := AROMA_LABEL.match(line)) and not brand.aromas:
-            rest = m.group(2) or (lines[i + 1] if i + 1 < len(lines) else "")
-            brand.aromas = [a.strip().lower() for a in re.split(r",|;|/|\band\b", rest) if a.strip()]
 
     for label, value in pairs:
         key = label.lower().strip()
@@ -181,7 +176,7 @@ def apply_brand(record: CommentedMap, brand: Brand, force: bool) -> list[str]:
 
     if any(c.strip().startswith(("add", "replace")) for c in changes):
         meta = record.setdefault("meta", CommentedMap())
-        meta["last_reviewed"] = time.strftime("%Y-%m-%d")
+        meta["last_reviewed"] = time.strftime("%Y-%m-%d", time.gmtime())
         sources = {
             o.get("source")
             for sec in ("analytics", "oils")
@@ -231,7 +226,7 @@ def write_catalog(delay: float) -> None:
     CATALOG_FILE.write_text(json.dumps({
         "source": SOURCE_ID, "crawled": time.strftime("%Y-%m-%d"), "url": PAGE, "count": len(brands),
         "varieties": {f"hbc-{n}": b.brand for n, b in brands.items()},
-        "details": {f"hbc-{n}": {"name": b.brand, "aromas": b.aromas,
+        "details": {f"hbc-{n}": {"name": b.brand, "description": b.prose,
                                  "values": {o.metric: [o.low, o.high] for o in b.observations}}
                     for n, b in brands.items()},
     }, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -291,8 +286,6 @@ def main() -> int:
             print("  no recognised brewing values")
         for obs in brand.observations:
             print(f"  {obs.label:<40} {obs.low} - {obs.high}")
-        if brand.aromas:
-            print(f"  aroma: {', '.join(brand.aromas)}")
         if args.verbose:
             for label, value in brand.unmapped.items():
                 print(f"    skipped: {label}: {value}")

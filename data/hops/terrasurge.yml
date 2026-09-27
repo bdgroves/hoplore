@@ -1,13 +1,13 @@
 slug: terrasurge
-name: Terrasurge
+name: TerraSurge
 aliases: [HBC 1325]
-purpose: dual
+purpose: bittering
 country: US
 kind: cultivar
 
 # Stub created from discovery issue #1 (YCR sitemap lists a brand page for it).
-# purpose is an unconfirmed default -- see meta.notes. No analytics yet:
-# run `pixi run -e data ych terrasurge --apply` to pull YCR's figures.
+# Purpose from HBC's own brand page: part of its "Terra Alpha" high-alpha
+# series, bred "for their bittering needs".
 
 ownership:
   holder: Hop Breeding Company
@@ -34,20 +34,23 @@ substitutes: []
 
 meta:
   status: stub
-  verification: single-source
+  verification: corroborated
   last_reviewed: '2026-09-27'
   notes: >
-    purpose defaulted to dual, unconfirmed. Breeder set from HBC 1325 in YCR's own brand URL.
+    Purpose bittering per HBC (Terra Alpha series). Breeder set from HBC 1325 in YCR's own brand URL.
 analytics:
   alpha_acid:
     unit: percent
     observations:
       - { source: ychr, low: 16.4, high: 22.4 }
+      - { source: hbc, low: 16.0, high: 22.0 }
   beta_acid:
     unit: percent
     observations:
       - { source: ychr, low: 5.8, high: 8.1 }
+      - { source: hbc, low: 5.8, high: 8.1 }
   total_oil:
     unit: ml_per_100g
     observations:
       - { source: ychr, low: 1.4, high: 4.5 }
+      - { source: hbc, low: 1.4, high: 4.5 }

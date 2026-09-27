@@ -3,14 +3,14 @@ name: TerraFlux
 aliases:
   - HBC 682
   - Pahto
-purpose: dual
+purpose: bittering
 country: US
 international_code: PAH
 kind: cultivar
 
 # Stub created from discovery issue #1 (YCR sitemap lists a brand page for it).
-# purpose is an unconfirmed default -- see meta.notes. No analytics yet:
-# run `pixi run -e data ych hbc-682 --apply` to pull YCR's figures.
+# Purpose from HBC's own brand page: "the first high-alpha bittering hop
+# released by HBC".
 
 ownership:
   holder: Hop Breeding Company
@@ -40,23 +40,26 @@ meta:
   verification: corroborated
   last_reviewed: '2026-09-27'
   notes: >
-    purpose defaulted to dual, unconfirmed. Breeder set from HBC selection number in YCR's own brand URL. Renamed from HBC 682: HBC's site lists HBC 682 as TerraFlux, and BarthHaas's TerraFlux page carries the code PAH (Pahto) -- one hop, rebranded. A separate empty Pahto stub was merged in.
+    Purpose bittering per HBC ("the first high-alpha bittering hop released by HBC"). Breeder set from HBC selection number in YCR's own brand URL. Renamed from HBC 682: HBC's site lists HBC 682 as TerraFlux, and BarthHaas's TerraFlux page carries the code PAH (Pahto) -- one hop, rebranded. A separate empty Pahto stub was merged in.
 analytics:
   alpha_acid:
     unit: percent
     observations:
       - { source: ychr, low: 17.0, high: 20.0 }
       - { source: barthhaas, low: 13.2, high: 18.5, note: Range over the last 4 crop years. }
+      - { source: hbc, low: 14.0, high: 23.0 }
   beta_acid:
     unit: percent
     observations:
       - { source: ychr, low: 4.5, high: 6.0 }
       - { source: barthhaas, low: 5.2, high: 7.0, note: Range over the last 4 crop years. }
+      - { source: hbc, low: 4.0, high: 8.9 }
   total_oil:
     unit: ml_per_100g
     observations:
       - { source: ychr, low: 1.0, high: 2.5 }
       - { source: barthhaas, low: 1.7, high: 2.8, note: Range over the last 4 crop years. }
+      - { source: hbc, low: 1.0, high: 5.0 }
 oils:
   myrcene:
     unit: percent_of_total_oil

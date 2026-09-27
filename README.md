@@ -108,6 +108,7 @@ Scrapers live in `tools/ingest/`, one per source, all under the same contract: *
 | `hopsteiner` | ~100 varieties across the US, Europe, the Southern Hemisphere; the catalog is crawled, not guessed | acids and some oils; no myrcene |
 | `ych` | Yakima Chief Ranches: Citra, Mosaic, Simcoe, Krush, Dolcita, Sabro… | full oil profiles **including myrcene**, plus storage stability |
 | `barthhaas` | ~100 varieties worldwide, incl. Galaxy, Vic Secret, the Czech and Polish hops | full oil breakdown, stated as the range over the last four crop years |
+| `hbc` | Hop Breeding Company, Yakima: all 10 brands (Citra, Mosaic, Sabro, Talus, TerraFlux…) from one page | the breeder's own spec; oils for Citra and Mosaic |
 
 ```bash
 pixi run -e data ych citra            # dry run: what it found, and where it disagrees

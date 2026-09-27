@@ -90,6 +90,7 @@ barthhaas-discover = "python tools/ingest/barthhaas.py --discover"
 # for Citra, Mosaic, Sabro, Talus.
 hbc = "python tools/ingest/hbc.py"
 hbc-discover = "python tools/ingest/hbc.py --discover"
+test-hbc = "python tools/ingest/test_hbc.py"
 
 # Maintenance: remove placeholder observations a real source has superseded.
 # Dry run by default. See tools/drop_placeholders.py for why this is a

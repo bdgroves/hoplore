@@ -6,17 +6,18 @@ international_code: TAL
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).
-# purpose is an unconfirmed default -- see meta.notes. No analytics recorded
-# yet: run `pixi run -e data hopsteiner talus --apply` to pull real values.
+# purpose is an unconfirmed default -- see meta.notes. HBC describes it only
+# by its aromas, which is suggestive but not a stated role.
 
 ownership:
   mark: public
   public_domain: true
 
 pedigree:
-  breeder: unknown
-  parents: { unknown: true }
-  refs: []
+  released: 2020
+  breeder: hbc
+  parents: { seed: sabro, note: HBC calls Talus a daughter of Sabro; the male is not published. }
+  refs: [hbc]
 
 aroma:
   summary: >
@@ -34,24 +35,27 @@ substitutes: []
 
 meta:
   status: stub
-  verification: single-source
+  verification: corroborated
   last_reviewed: '2026-09-27'
   notes: >
-    purpose defaulted to dual, unconfirmed -- was not researched individually
-    for this bulk scaffold pass. Correct before publishing.
+    purpose defaulted to dual, unconfirmed -- HBC's page describes it by aroma
+    but doesn't state a role. Pedigree and release year from HBC.
 analytics:
   alpha_acid:
     unit: percent
     observations:
       - { source: barthhaas, low: 6.3, high: 9.5, note: Range over the last 4 crop years. }
+      - { source: hbc, low: 8.9, high: 9.5 }
   beta_acid:
     unit: percent
     observations:
       - { source: barthhaas, low: 7.7, high: 10.2, note: Range over the last 4 crop years. }
+      - { source: hbc, low: 8.3, high: 10.2 }
   total_oil:
     unit: ml_per_100g
     observations:
       - { source: barthhaas, low: 1.0, high: 2.7, note: Range over the last 4 crop years. }
+      - { source: hbc, low: 1.0, high: 2.2 }
 oils:
   myrcene:
     unit: percent_of_total_oil
