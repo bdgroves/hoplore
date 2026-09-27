@@ -115,61 +115,190 @@ def split_hops(line: str) -> list[str]:
     return [t.strip() for t in line.split(",") if t.strip()]
 
 
-# ------------------------------------------------------------------ Fort George
-
-FORT_GEORGE = {
-    "slug": "fort-george",
-    "name": "Fort George Brewery",
-    "city": "Astoria",
-    "state": "OR",
-    "url": "https://fortgeorgebrewery.com/",
-    "pages": "fortgeorgebrewery.com",
-}
+# ------------------------------------------------------------------ helpers
 
 
-def fort_george_beer(path: Path, index: dict[str, str]) -> dict | None:
-    soup = BeautifulSoup(path.read_text(encoding="utf-8"), "lxml")
-    h1 = soup.find("h1")  # sits in the page <header>, so read it before stripping chrome
+def page_text(path: Path) -> tuple[BeautifulSoup, str | None, str]:
+    """(soup, h1 text, whitespace-collapsed body text) for a saved page."""
+    soup = BeautifulSoup(path.read_text(encoding="utf-8", errors="ignore"), "lxml")
+    h1 = soup.find("h1")
     name = h1.get_text(" ", strip=True) if h1 else None
     for tag in soup(["script", "style", "noscript", "nav", "footer"]):
         tag.decompose()
-    body = soup.find("article") or soup
-    text = re.sub(r"\s+", " ", body.get_text(" "))
-    notes_at = text.find("Brewer's Notes")
-    notes = text[notes_at:] if notes_at >= 0 else ""
+    return soup, name, re.sub(r"\s+", " ", soup.get_text(" "))
 
-    hops_line = None
-    if m := re.search(r"\bHops?:\s*(.+?)(?=\s+[A-Z][a-z]+:|$)", notes):
-        hops_line = m.group(1).strip()
-    elif m := re.search(r"dry[- ]hopped with ([A-Z][\w\s-]+?) hops", text):
-        hops_line = m.group(1).strip()
-    if not name or not hops_line or hops_line.lower() in ("none", "n/a", "-"):
+
+def between(text: str, start: str, stops: str) -> str | None:
+    """Text after the label `start` up to the next label in `stops`."""
+    m = re.search(rf"{start}\s*(.+?)(?=\s+(?:{stops})\b|$)", text)
+    return m.group(1).strip(" :;-") if m else None
+
+
+def abv_of(text: str) -> float | None:
+    m = re.search(r"([\d.]+)\s*%\s*ABV", text) or re.search(r"ABV:?\s*([\d.]+)\s*%?", text)
+    try:
+        return float(m.group(1)) if m else None
+    except ValueError:
         return None
 
-    abv = re.search(r"([\d.]+)\s*%\s*ABV", text)
-    slug = path.stem.removeprefix("beer_")
+
+def names_in(text: str, index: dict[str, str]) -> list[dict]:
+    """For prose hop notes ("Simcoe and Centennial in the kettle, Cryo Simcoe
+    in the dry hop, fresh hop Centennial from ..."): find every known variety
+    name in the text, longest names first, and note Cryo / fresh next to it."""
+    candidates = sorted(NAME_FORMS, key=len, reverse=True)
+    taken: list[tuple[int, int]] = []
+    found: list[tuple[int, dict]] = []
+    for label in candidates:
+        for m in re.finditer(rf"(?<![A-Za-z]){re.escape(label)}(?![A-Za-z])", text):
+            a, b = m.span()
+            if any(a < y and b > x for x, y in taken):
+                continue
+            taken.append((a, b))
+            before, after = text[max(0, a - 18):a].lower(), text[b:b + 12].lower()
+            item = {"hop": NAME_FORMS[label], "name": m.group(0), "as_written": m.group(0)}
+            if "cryo" in before.split()[-1:] or after.strip().startswith("cryo"):
+                item["form"] = "Cryo"
+            if re.search(r"fresh(?:[- ]hop)?\s*$", before):
+                item["fresh"] = True
+            if fm := re.match(r"\s*(?:hops?\s+)?from\s+([A-Z][\w'&.\s]{1,40}?(?:Farms?|Ranch|Agriculture|Hops))", text[b:b + 70]):
+                item["farm"] = fm.group(1).strip()
+            found.append((a, item))
+    out, seen = [], set()
+    for _, item in sorted(found, key=lambda x: x[0]):
+        key = (item["hop"], item.get("form"), item.get("fresh"))
+        if key not in seen:
+            seen.add(key)
+            out.append(item)
+    return out
+
+
+NAME_FORMS: dict[str, str] = {}
+
+
+def load_name_forms() -> None:
+    """Display names and aliases as they'd be written in prose -> slug."""
+    safe = YAML(typ="safe")
+    for path in sorted((ROOT / "data" / "hops").glob("*.yml")):
+        rec = safe.load(path.read_text(encoding="utf-8"))
+        for alt in [rec["name"], *(rec.get("aliases") or [])]:
+            alt = str(alt)
+            if len(alt) >= 4 and not alt.isdigit():
+                NAME_FORMS.setdefault(alt, rec["slug"])
+    for alias, slug in {"Nelson": "nelson-sauvin", "Mt. Hood": "mount-hood", "Mt Hood": "mount-hood",
+                        "HBC 586": "krush", "HBC 1019": "dolcita", "HBC 682": "hbc-682", "Tettnang": "tettnang",
+                        "El Dorado": "el-dorado", "Idaho 7": "idaho-7", "Brewer's Gold": "brewers-gold",
+                        "Mittelfruh": "hallertau-mittelfrueh", "Hallertau": "hallertau-mittelfrueh"}.items():
+        NAME_FORMS.setdefault(alias, slug)
+
+
+# One parser per brewery: saved page -> (name, abv, hops text, mode).
+# mode "list" = the brewery writes a list ("A, B, C Cryo"); "prose" = the
+# brewery writes sentences and names are found in them.
+
+
+def parse_fort_george(path: Path) -> tuple | None:
+    _, name, text = page_text(path)
+    notes = text[text.find("Brewer's Notes"):] if "Brewer's Notes" in text else ""
+    hops = None
+    if m := re.search(r"\bHops?:\s*(.+?)(?=\s+[A-Z][a-z]+:|$)", notes):
+        hops = m.group(1).strip()
+    elif m := re.search(r"dry[- ]hopped with ([A-Z][\w\s-]+?) hops", text):
+        hops = m.group(1).strip()
+    return name, abv_of(text), hops, "list"
+
+
+def parse_double_mountain(path: Path) -> tuple | None:
+    _, name, text = page_text(path)
+    hops = between(text, r"\bHops", r"Malts?|Yeast|Appearance|Aroma|Mouthfeel|Flavor|Food")
+    m = re.search(r"\bABV\s*([\d.]+)", text)
+    return name, float(m.group(1)) if m else None, hops, "prose"
+
+
+def parse_ex_novo(path: Path) -> tuple | None:
+    _, name, text = page_text(path)
+    m = re.search(r"(?:IBU \d+|Availability [\w-]+) Hops (.+?)(?= Yeasts?\b| Malts?\b| Back to all beers|$)", text)
+    hops = m.group(1).strip() if m else None
+    return name, abv_of(text), hops.replace(" / ", ", ") if hops else None, "list"
+
+
+def parse_pfriem(path: Path) -> tuple | None:
+    _, name, text = page_text(path)
+    hops = between(text, r"INGREDIENTS .*?\bHops", r"Yeast|Adjuncts|Barrels|Special Ingredients|TASTING NOTES|Fruit")
+    return name, abv_of(text), hops, "list"
+
+
+def parse_prose_generic(path: Path) -> tuple | None:
+    """Breweries that describe hops in a sentence: take the sentences that
+    talk about hops and find the variety names in them."""
+    _, name, text = page_text(path)
+    bits = re.findall(r"[^.]*\b(?:hops?|hopped|dry[- ]hop\w*)\b[^.]*\.", text, re.I)
+    return name, abv_of(text), " ".join(bits) or None, "prose"
+
+
+PARSERS = {
+    "fort-george": (parse_fort_george, "fortgeorgebrewery.com", "beer_*.html"),
+    "double-mountain": (parse_double_mountain, "doublemountainbrewery.com", "beer_*.html"),
+    "ex-novo": (parse_ex_novo, "exnovobrew.com", "beer_*.html"),
+    "pfriem": (parse_pfriem, "pfriembeer.com", "beer_*.html"),
+    "breakside": (parse_prose_generic, "breakside.com", "our_beer_*.html"),
+    "ecliptic": (parse_prose_generic, "eclipticbrewing.com", "beer_*.html"),
+    "7-seas": (parse_prose_generic, "7seasbrewing.com", "*.html"),
+    "kings-and-daughters": (parse_prose_generic, "kingsanddaughters.com", "product_*.html"),
+}
+
+
+def build_beer(brewery: dict, path: Path, parsed: tuple, index: dict[str, str]) -> CommentedMap | None:
+    name, abv, hops_line, mode = parsed
+    if not name or not hops_line or hops_line.lower() in ("none", "n/a", "-"):
+        return None
+    items: list[dict] = []
+    if mode == "list":
+        farm = None
+        for token in split_hops(hops_line):
+            if norm(token) in FARMS:
+                farm = FARMS[norm(token)]
+                continue
+            item = parse_hop(token, index)
+            if farm:
+                item.setdefault("farm", farm)
+                farm = None
+            items.append(item)
+    else:
+        items = names_in(hops_line, index)
+        if m := re.search(r"from ([A-Z][\w'&.\s]{2,40}?(?:Farms?|Ranch|Hops|Agriculture))", hops_line):
+            for item in items:
+                if item.get("fresh"):
+                    item.setdefault("farm", m.group(1).strip())
+    items = [i for i in items if i.get("name")]
+    if not items:
+        return None
+    slug = re.sub(r"^(beer|our_beer|product)_", "", path.stem)
+    slug = re.sub(r"_[A-Z0-9]{16,}$", "", slug).replace("_", "-").lower()
+    slug = re.sub(r"-2$", "", slug)  # WordPress's "-2" on a reused title
     beer = CommentedMap()
-    beer["slug"] = re.sub(r"-\d+$", "", slug) if slug.endswith("-2") else slug
-    beer["name"] = name
-    beer["url"] = f"https://fortgeorgebrewery.com/beer/{slug}/"
+    beer["slug"] = slug
+    name = re.sub(r"\s+", " ", name).strip()
+    beer["name"] = name.title() if name.isupper() else name
+    beer["url"] = source_url(path)
     if abv:
-        beer["abv"] = float(abv.group(1))
-    beer["hops_as_written"] = hops_line
+        beer["abv"] = abv
+    beer["hops_as_written"] = hops_line if len(hops_line) <= 400 else hops_line[:397] + "..."
     hops = CommentedSeq()
-    farm = None
-    for token in split_hops(hops_line):
-        if norm(token) in FARMS:
-            farm = FARMS[norm(token)]
-            continue
-        item = parse_hop(token, index)
-        if farm:
-            item.setdefault("farm", farm)
-            farm = None
+    for item in items:
         node = CommentedMap((k, item[k]) for k in ("hop", "name", "form", "product", "fresh", "farm", "as_written") if k in item)
         node.fa.set_flow_style()
         hops.append(node)
     beer["hops"] = hops
     return beer
+
+
+def source_url(path: Path) -> str:
+    """Rebuild the page URL from the saved file's name (see snapshot.target)."""
+    host = path.parent.name
+    host = host if host.count(".") > 1 or host in ("breakside.com", "exnovobrew.com", "doublemountainbrewery.com",
+                                                    "eclipticbrewing.com", "fortgeorgebrewery.com") else "www." + host
+    return f"https://{host}/" + path.stem.replace("_", "/") + "/"
 
 
 def write(brewery: dict, beers: list) -> None:
@@ -191,12 +320,28 @@ def write(brewery: dict, beers: list) -> None:
 
 def main() -> int:
     index = record_index()
-    pages = sorted((RAW / FORT_GEORGE["pages"]).glob("beer_*.html"))
-    beers = [b for b in (fort_george_beer(p, index) for p in pages) if b]
-    write(FORT_GEORGE, beers)
-    unlinked = sorted({h["name"] for b in beers for h in b["hops"] if not h["hop"]})
-    print(f"wrote data/beers/{FORT_GEORGE['slug']}.yml: {len(beers)} of {len(pages)} beers list their hops")
-    print(f"  unlinked hop names: {', '.join(unlinked) or 'none'}")
+    load_name_forms()
+    breweries = YAML(typ="safe").load((HERE / "breweries.yml").read_text(encoding="utf-8"))
+    for brewery in breweries:
+        if brewery["slug"] not in PARSERS:
+            continue
+        parse, folder, pattern = PARSERS[brewery["slug"]]
+        pages = sorted((RAW / folder).glob(pattern))
+        beers, seen = [], set()
+        for path in pages:
+            beer = build_beer(brewery, path, parse(path), index)
+            if beer and beer["slug"] not in seen:
+                seen.add(beer["slug"])
+                beers.append(beer)
+        if not beers:
+            print(f"{brewery['slug']}: no beers with hop lists in {len(pages)} saved page(s)")
+            continue
+        meta = {k: brewery[k] for k in ("slug", "name", "city", "state", "url")}
+        write(meta, beers)
+        unlinked = sorted({h["name"] for b in beers for h in b["hops"] if not h["hop"]})
+        print(f"wrote data/beers/{brewery['slug']}.yml: {len(beers)} of {len(pages)} pages list their hops")
+        if unlinked:
+            print(f"  unlinked: {', '.join(unlinked)}")
     return 0
 
 
