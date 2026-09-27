@@ -91,10 +91,10 @@ meta:
   verification: single-source
   last_reviewed: '2026-09-14'
   notes: >
-    Origin, release year and breeder are sourced; the brewing values are not,
-    and are the next thing to replace. Yakima Chief publishes ranges derived
-    from multiple crop years of their own lab data under ASBC methods, which is
-    a better citation than most breeder sheets offer.
+    Origin, release year and breeder are sourced, and the brewing values come
+    from Yakima Chief's multi-crop-year lab ranges. Still single-source: none of
+    Hopsteiner, BarthHaas or HBC publishes Idaho 7, so a second source is the
+    next thing to find. The Cryo figures under forms are still placeholders.
 
     A useful test case for coverage: Jackson Farms is a family farm in Wilder,
     Idaho, not a breeding institute, and the hop is distributed by three
