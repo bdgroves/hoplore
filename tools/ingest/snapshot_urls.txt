@@ -47,9 +47,23 @@ https://neomexicanus.com/wp-content/uploads/2024/10/Zappa-Hops_2022-Fact-Sheet_f
 
 # New Zealand Hops (grower co-operative): Shopify catalogue as JSON
 https://nzhops.co.nz/collections/new-zealand-hops/products.json?limit=250
+https://nzhops.co.nz/products/superdelic
+https://nzhops.co.nz/products/nectaron
+https://nzhops.co.nz/products/nelson-sauvin
+https://nzhops.co.nz/products/motueka
+https://nzhops.co.nz/products/riwaka™
 https://nzhops.co.nz/products/wai-iti
-# Oregon and Washington growers with their own varieties
-https://www.crosbyhops.com/hops/varieties
-https://www.crosbyhops.com/hops/varieties/adeena
-https://royfarms.com/hops/
-https://royfarms.com/hops/roy-farms-adeena/
+https://nzhops.co.nz/products/rakau
+https://nzhops.co.nz/products/moutere™
+https://nzhops.co.nz/products/waimea
+https://nzhops.co.nz/products/wakatu-1
+https://nzhops.co.nz/products/kohatu
+https://nzhops.co.nz/products/taiheke
+https://nzhops.co.nz/products/pacifica
+https://nzhops.co.nz/products/pacific-gem
+https://nzhops.co.nz/products/southern-cross
+https://nzhops.co.nz/products/pacific-jade
+https://nzhops.co.nz/products/green-bullet
+https://nzhops.co.nz/products/dr-rudi
+https://nzhops.co.nz/products/fuggle-nz
+https://nzhops.co.nz/products/nz-chinoook
