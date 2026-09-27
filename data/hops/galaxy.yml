@@ -2,6 +2,7 @@ slug: galaxy
 name: Galaxy
 purpose: dual
 country: AU
+international_code: GXY
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

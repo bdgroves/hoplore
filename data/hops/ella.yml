@@ -2,6 +2,7 @@ slug: ella
 name: Ella
 purpose: dual
 country: AU
+international_code: ELL
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

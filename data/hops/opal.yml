@@ -2,6 +2,7 @@ slug: opal
 name: Opal
 purpose: dual
 country: DE
+international_code: OPL
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

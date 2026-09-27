@@ -2,6 +2,7 @@ slug: triskel
 name: Triskel
 purpose: dual
 country: FR
+international_code: TKL
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

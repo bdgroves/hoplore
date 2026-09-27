@@ -2,6 +2,7 @@ slug: spalter-select
 name: Spalter Select
 purpose: dual
 country: DE
+international_code: SSE
 kind: cultivar
 
 # Stub created from the Hopsteiner catalog crawl (catalogs/hopsteiner.json).

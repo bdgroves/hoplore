@@ -2,6 +2,7 @@ slug: perle
 name: Perle
 purpose: dual
 country: DE
+international_code: PER
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

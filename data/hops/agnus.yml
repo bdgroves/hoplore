@@ -2,6 +2,7 @@ slug: agnus
 name: Agnus
 purpose: dual
 country: CZ
+international_code: AGN
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

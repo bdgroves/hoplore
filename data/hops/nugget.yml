@@ -2,6 +2,7 @@ slug: nugget
 name: Nugget
 purpose: dual
 country: US
+international_code: NUG
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

@@ -2,6 +2,7 @@ slug: mandarina-bavaria
 name: Mandarina Bavaria
 purpose: dual
 country: DE
+international_code: MBA
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

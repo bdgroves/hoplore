@@ -2,6 +2,7 @@ slug: sladek
 name: Sladek
 purpose: dual
 country: CZ
+international_code: SLD
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

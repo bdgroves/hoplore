@@ -2,6 +2,7 @@ slug: aurora
 name: Aurora
 purpose: dual
 country: SI
+international_code: SSA
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

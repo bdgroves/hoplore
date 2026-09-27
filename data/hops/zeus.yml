@@ -2,6 +2,7 @@ slug: zeus
 name: Zeus
 purpose: dual
 country: US
+international_code: ZEU
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

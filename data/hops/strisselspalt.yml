@@ -3,6 +3,7 @@ name: Strisselspalt
 aliases: [Strisselspalter]
 purpose: aroma
 country: FR
+international_code: FSP
 kind: cultivar
 ownership: { mark: public, public_domain: true }
 pedigree:

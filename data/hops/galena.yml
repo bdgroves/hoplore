@@ -2,6 +2,7 @@ slug: galena
 name: Galena
 purpose: dual
 country: US
+international_code: GAL
 kind: cultivar
 
 # Stub created from the Hopsteiner catalog crawl (catalogs/hopsteiner.json).

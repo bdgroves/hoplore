@@ -2,6 +2,7 @@ slug: amarillo
 name: Amarillo
 purpose: dual
 country: US
+international_code: VG1
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

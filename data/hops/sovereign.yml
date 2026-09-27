@@ -2,6 +2,7 @@ slug: sovereign
 name: Sovereign
 purpose: dual
 country: GB
+international_code: SOV
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

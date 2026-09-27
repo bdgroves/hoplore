@@ -2,6 +2,7 @@ slug: smaragd
 name: Smaragd
 purpose: dual
 country: DE
+international_code: SGD
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

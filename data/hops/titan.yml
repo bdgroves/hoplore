@@ -2,6 +2,7 @@ slug: titan
 name: Titan
 purpose: dual
 country: US
+international_code: TTN
 kind: cultivar
 
 # Stub created from the Hopsteiner catalog crawl (catalogs/hopsteiner.json).

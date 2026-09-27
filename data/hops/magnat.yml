@@ -2,6 +2,7 @@ slug: magnat
 name: Magnat
 purpose: dual
 country: PL
+international_code: MGN
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

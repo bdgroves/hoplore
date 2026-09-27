@@ -1,7 +1,11 @@
 slug: hbc-682
-name: HBC 682
+name: TerraFlux
+aliases:
+  - HBC 682
+  - Pahto
 purpose: dual
 country: US
+international_code: PAH
 kind: cultivar
 
 # Stub created from discovery issue #1 (YCR sitemap lists a brand page for it).
@@ -36,7 +40,7 @@ meta:
   verification: single-source
   last_reviewed: '2026-09-27'
   notes: >
-    purpose defaulted to dual, unconfirmed. Breeder set from HBC selection number in YCR's own brand URL.
+    purpose defaulted to dual, unconfirmed. Breeder set from HBC selection number in YCR's own brand URL. Renamed from HBC 682: HBC's site lists HBC 682 as TerraFlux, and BarthHaas's TerraFlux page carries the code PAH (Pahto) -- one hop, rebranded. A separate empty Pahto stub was merged in.
 analytics:
   alpha_acid:
     unit: percent

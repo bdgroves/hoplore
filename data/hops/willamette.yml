@@ -2,6 +2,7 @@ slug: willamette
 name: Willamette
 purpose: aroma
 country: US
+international_code: WIL
 also_grown_in: [GB]
 kind: cultivar
 ownership: { mark: public, public_domain: true }

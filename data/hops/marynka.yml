@@ -2,6 +2,7 @@ slug: marynka
 name: Marynka
 purpose: dual
 country: PL
+international_code: MAR
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

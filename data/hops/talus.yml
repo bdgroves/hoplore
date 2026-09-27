@@ -2,6 +2,7 @@ slug: talus
 name: Talus
 purpose: dual
 country: US
+international_code: TAL
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

@@ -2,6 +2,7 @@ slug: admiral
 name: Admiral
 purpose: dual
 country: GB
+international_code: ADM
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

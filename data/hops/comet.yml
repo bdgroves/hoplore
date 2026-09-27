@@ -2,6 +2,7 @@ slug: comet
 name: Comet
 purpose: dual
 country: US
+international_code: COM
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

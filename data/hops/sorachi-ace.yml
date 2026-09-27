@@ -2,6 +2,7 @@ slug: sorachi-ace
 name: Sorachi Ace
 purpose: dual
 country: JP
+international_code: SOR
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

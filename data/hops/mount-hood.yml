@@ -2,6 +2,7 @@ slug: mount-hood
 name: Mount Hood
 purpose: dual
 country: US
+international_code: MTH
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

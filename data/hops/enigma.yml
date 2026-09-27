@@ -2,6 +2,7 @@ slug: enigma
 name: Enigma
 purpose: dual
 country: AU
+international_code: ENI
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

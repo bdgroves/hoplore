@@ -2,6 +2,7 @@ slug: cascade
 name: Cascade
 purpose: dual
 country: US
+international_code: CAS
 also_grown_in: [NZ, AU, AR]
 kind: cultivar
 ownership: { mark: public, public_domain: true }

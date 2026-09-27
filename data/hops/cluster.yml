@@ -2,6 +2,7 @@ slug: cluster
 name: Cluster
 purpose: dual
 country: US
+international_code: CLU
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

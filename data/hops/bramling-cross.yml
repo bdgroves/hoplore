@@ -2,6 +2,7 @@ slug: bramling-cross
 name: Bramling Cross
 purpose: dual
 country: GB
+international_code: BRX
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

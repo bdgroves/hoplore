@@ -2,6 +2,7 @@ slug: loral
 name: Loral
 purpose: dual
 country: US
+international_code: LOR
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

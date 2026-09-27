@@ -2,6 +2,7 @@ slug: celeia
 name: Celeia
 purpose: dual
 country: SI
+international_code: SGC
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

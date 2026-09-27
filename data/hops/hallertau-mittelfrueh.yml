@@ -3,6 +3,7 @@ name: Hallertau Mittelfruh
 aliases: [Hallertauer Mittelfrüh, Hallertauer, Mittelfrueh]
 purpose: aroma
 country: DE
+international_code: HAL
 kind: cultivar
 ownership: { mark: public, public_domain: true }
 pedigree:

@@ -2,6 +2,7 @@ slug: bobek
 name: Bobek
 purpose: dual
 country: SI
+international_code: SGB
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

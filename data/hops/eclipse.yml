@@ -2,6 +2,7 @@ slug: eclipse
 name: Eclipse
 purpose: dual
 country: AU
+international_code: ECL
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

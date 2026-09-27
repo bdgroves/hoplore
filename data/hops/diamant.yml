@@ -2,6 +2,7 @@ slug: diamant
 name: Diamant
 purpose: dual
 country: DE
+international_code: DNT
 kind: cultivar
 
 # Stub created from the Hopsteiner catalog crawl (catalogs/hopsteiner.json).

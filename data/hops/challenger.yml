@@ -2,6 +2,7 @@ slug: challenger
 name: Challenger
 purpose: dual
 country: GB
+international_code: CHA
 kind: cultivar
 ownership: { mark: public, public_domain: true }
 pedigree:

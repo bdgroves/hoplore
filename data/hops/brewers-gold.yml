@@ -3,6 +3,7 @@ name: Brewers Gold
 aliases: [Brewer's Gold]
 purpose: dual
 country: GB
+international_code: BGO
 kind: cultivar
 
 # Stub created from the Hopsteiner catalog crawl (catalogs/hopsteiner.json).

@@ -2,6 +2,7 @@ slug: callista
 name: Callista
 purpose: dual
 country: DE
+international_code: CAL
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

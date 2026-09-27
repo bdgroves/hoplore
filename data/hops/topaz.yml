@@ -2,6 +2,7 @@ slug: topaz
 name: Topaz
 purpose: dual
 country: AU
+international_code: TOP
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

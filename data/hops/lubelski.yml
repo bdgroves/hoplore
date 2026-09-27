@@ -2,6 +2,7 @@ slug: lubelski
 name: Lubelski
 purpose: dual
 country: PL
+international_code: LUB
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

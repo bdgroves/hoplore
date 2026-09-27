@@ -2,6 +2,7 @@ slug: east-kent-golding
 name: East Kent Golding
 purpose: dual
 country: GB
+international_code: EKG
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

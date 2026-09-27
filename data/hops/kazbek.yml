@@ -2,6 +2,7 @@ slug: kazbek
 name: Kazbek
 purpose: dual
 country: CZ
+international_code: KAZ
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

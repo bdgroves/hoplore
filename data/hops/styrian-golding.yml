@@ -2,6 +2,7 @@ slug: styrian-golding
 name: Styrian Golding
 purpose: dual
 country: SI
+international_code: SSG
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

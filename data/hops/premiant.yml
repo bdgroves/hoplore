@@ -2,6 +2,7 @@ slug: premiant
 name: Premiant
 purpose: dual
 country: CZ
+international_code: PRE
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

@@ -2,6 +2,7 @@ slug: hallertau-tradition
 name: Hallertau Tradition
 purpose: dual
 country: DE
+international_code: HTR
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

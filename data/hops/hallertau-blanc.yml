@@ -2,6 +2,7 @@ slug: hallertau-blanc
 name: Hallertau Blanc
 purpose: dual
 country: DE
+international_code: HBC
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

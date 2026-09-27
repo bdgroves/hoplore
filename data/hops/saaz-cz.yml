@@ -3,6 +3,7 @@ name: Saaz
 aliases: [Žatec, Zatec, Saazer, Czech Saaz]
 purpose: aroma
 country: CZ
+international_code: SAZ
 kind: cultivar
 ownership: { mark: public, public_domain: true }
 pedigree:

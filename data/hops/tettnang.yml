@@ -2,6 +2,7 @@ slug: tettnang
 name: Tettnanger
 purpose: dual
 country: DE
+international_code: TET
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

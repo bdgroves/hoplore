@@ -3,6 +3,7 @@ name: Centennial
 aliases: [CFJ90, Super Cascade]
 purpose: dual
 country: US
+international_code: CEN
 kind: cultivar
 ownership: { mark: public, public_domain: true }
 pedigree:

@@ -3,6 +3,7 @@ name: Whitbread Golding Variety
 aliases: [WGV, Whitbread Golding]
 purpose: dual
 country: GB
+international_code: WGV
 kind: cultivar
 ownership: { mark: public, public_domain: true }
 pedigree:

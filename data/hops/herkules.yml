@@ -2,6 +2,7 @@ slug: herkules
 name: Herkules
 purpose: dual
 country: DE
+international_code: HKS
 kind: cultivar
 
 # Stub created from the Hopsteiner catalog crawl (catalogs/hopsteiner.json).

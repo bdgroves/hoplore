@@ -58,7 +58,6 @@
 - { slug: cluster, name: Cluster, country: US }
 - { slug: eureka, name: 'Eureka!', country: US }
 - { slug: triumph, name: Triumph, country: US }
-- { slug: pahto, name: Pahto, country: US }
 - { slug: jarrylo, name: Jarrylo, country: US }
 - { slug: vista, name: Vista, country: US }
 - { slug: teamaker, name: Teamaker, country: US }
@@ -68,7 +67,7 @@
 - { slug: ahtanum, name: Ahtanum, country: US }
 - { slug: krush, name: Krush, country: US }
 - { slug: dolcita, name: Dolcita, country: US }
-- { slug: hbc-682, name: HBC 682, country: US }
+- { slug: hbc-682, name: TerraFlux, country: US }
 - { slug: terrasurge, name: Terrasurge, country: US }
 
 # --- Germany -------------------------------------------------------------
@@ -201,3 +200,20 @@
 - { slug: titan, name: 'Titan', country: US }
 - { slug: trident, name: 'Trident', country: US }
 - { slug: vanguard, name: 'Vanguard', country: US }
+
+# --- added from the BarthHaas catalog, 2026-09 --------------------------
+- { slug: bru-1, name: 'Bru-1', country: US }
+- { slug: chelan, name: 'Chelan', country: US }
+- { slug: endeavour, name: 'Endeavour', country: GB }
+- { slug: extra-styrian-dana, name: 'Extra Styrian Dana', country: SI }
+- { slug: harmonie, name: 'Harmonie', country: CZ }
+- { slug: huell-classic, name: 'Huell Classic', country: DE }
+- { slug: lunahops, name: 'LunaHops', country: AU }
+- { slug: millennium, name: 'Millennium', country: US }
+- { slug: monroe, name: 'Monroe', country: DE }
+- { slug: relax, name: 'Relax', country: DE }
+- { slug: saaz-late, name: 'Saaz Late', country: CZ }
+- { slug: sybilla, name: 'Sybilla', country: PL }
+- { slug: tango, name: 'Tango', country: DE }
+- { slug: tsingdao-flower, name: 'Tsingdao Flower', country: CN }
+- { slug: vital, name: 'Vital', country: CZ }

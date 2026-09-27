@@ -2,6 +2,7 @@ slug: el-dorado
 name: El Dorado
 purpose: dual
 country: US
+international_code: ELD
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).

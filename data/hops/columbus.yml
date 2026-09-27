@@ -2,6 +2,7 @@ slug: columbus
 name: Columbus
 purpose: dual
 country: US
+international_code: CBS
 kind: cultivar
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).
