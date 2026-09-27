@@ -9,7 +9,7 @@ import Ajv from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { loadDataset, schemas, c, METRIC_KEYS, OIL_KEYS, allMetrics, allRefs } from './lib/load.js';
 
-const { sources, taxonomy, hops } = loadDataset();
+const { sources, taxonomy, hops, acreage } = loadDataset();
 const schema = schemas();
 
 const ajv = new Ajv({ allErrors: true, strict: false });
@@ -208,7 +208,29 @@ for (const [id, src] of Object.entries(sources)) {
   if (src.tier !== 'unsourced' && !src.url) warn('sources.yml', `"${id}" has no url`);
 }
 
+// ------------------------------------------------------------------ acreage
+
+if (acreage) {
+  const at = 'acreage/usda-nass.yml';
+  if (!sourceIds.has(acreage.source)) err(at, `cites unknown source "${acreage.source}"`);
+  for (const v of acreage.varieties ?? []) {
+    for (const slug of v.slugs ?? []) {
+      if (!slugs.has(slug)) err(at, `${v.name} links to "${slug}", which has no record — fix tools/ingest/usda_nass_map.yml`);
+    }
+    for (const [measure, states] of Object.entries({ acres: v.acres, production_klb: v.production_klb })) {
+      for (const [st, series] of Object.entries(states ?? {})) {
+        for (const [year, value] of Object.entries(series)) {
+          if (!(typeof value === 'number' && value >= 0) && value !== 'withheld') {
+            err(at, `${v.name} ${measure} ${st} ${year}: "${value}" is neither a number nor "withheld"`);
+          }
+        }
+      }
+    }
+  }
+}
+
 const cited = new Set(hops.flatMap((h) => allRefs(h)));
+if (acreage) cited.add(acreage.source);
 for (const id of sourceIds) {
   if (!cited.has(id)) warn('sources.yml', `"${id}" is registered but never cited`);
 }

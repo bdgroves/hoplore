@@ -92,6 +92,12 @@ hbc = "python tools/ingest/hbc.py"
 hbc-discover = "python tools/ingest/hbc.py --discover"
 test-hbc = "python tools/ingest/test_hbc.py"
 
+# USDA NASS National Hop Report: acreage by variety for WA, OR, ID.
+# --fetch downloads the reports (or run "Snapshot a source catalog" ->
+# usda_nass in Actions); no flag parses the saved reports into data/acreage/.
+usda-nass = "python tools/ingest/usda_nass.py"
+test-usda-nass = "python tools/ingest/test_usda_nass.py"
+
 # Maintenance: remove placeholder observations a real source has superseded.
 # Dry run by default. See tools/drop_placeholders.py for why this is a
 # deletion and not a second opinion.

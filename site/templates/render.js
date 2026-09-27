@@ -1,3 +1,5 @@
+import { hopAcreageBlock } from './acreage.js';
+
 /** Plain string templates. No framework — the whole site is static HTML over
  *  the same JSON the API serves, so the site can never drift from the data. */
 
@@ -115,6 +117,7 @@ export function renderIndex({ hops, taxonomy, meta }) {
     </div>
     <nav class="nav">
       <a href="landscape/">Hop landscape</a>
+      <a href="grown/">Where the hops grow</a>
       <a href="api/v1/hops.json">Download the data</a>
       <a href="api/v1/schema/hop.schema.json">Schema</a>
       <a href="https://github.com/bdgroves/hoplore">GitHub</a>
@@ -195,7 +198,7 @@ function row(hop, taxonomy) {
 
 // ---------------------------------------------------------------- hop sheet
 
-export function renderHop({ hop, similar, taxonomy, sources, meta }) {
+export function renderHop({ hop, similar, taxonomy, sources, meta, acreageYears }) {
   const base = '../../';
   const country = taxonomy.countries[hop.country]?.label ?? hop.country;
 
@@ -222,6 +225,7 @@ export function renderHop({ hop, similar, taxonomy, sources, meta }) {
     <nav class="nav" style="border-top:0;padding-top:0">
       <a href="${base}">All varieties</a>
       <a href="${base}landscape/#${hop.slug}">Where it sits in the landscape</a>
+      ${hop.acreage ? `<a href="${base}grown/">Where America's hops grow</a>` : ''}
       <a href="${base}api/v1/hops/${hop.slug}.json">This hop as JSON</a>
       <a href="https://github.com/bdgroves/hoplore/blob/main/data/hops/${hop.slug}.yml">Edit the source file</a>
     </nav>
@@ -244,6 +248,7 @@ export function renderHop({ hop, similar, taxonomy, sources, meta }) {
       ${hop.analytics ? analyticsBlock(hop, sources) : ''}
       ${hop.forms ? formsBlock(hop) : ''}
       ${hop.oils ? oilsBlock(hop) : ''}
+      ${hop.acreage ? hopAcreageBlock({ ...hop, acreageYears }, base) : ''}
     </div>
     <div>
       ${aromaBlock(hop, taxonomy)}

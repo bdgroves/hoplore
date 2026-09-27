@@ -1,0 +1,12 @@
+# NASS variety name (after tools/ingest/usda_nass.py canonical()) -> HopLore slug(s).
+# Only names the loose automatic match gets wrong or can't make. A list means
+# NASS reports several cultivars as one bucket; false means deliberately unlinked.
+CTZ: [columbus, zeus]           # "Beginning in 2020, Zeus is included in Columbus/Tomahawk/Zeus"
+Columbus/Tomahawk: [columbus]   # 2015-2019, when Zeus still had its own row
+Hallertauer Mittelfruher: [hallertau-mittelfrueh]
+Hallertauer: [hallertau-mittelfrueh]
+Mt. Hood: [mount-hood]
+Equinox: [ekuanot]              # HBC 366 was sold as Equinox before the rename
+Golding: false                  # US-grown "Golding" -- which Golding isn't stated
+Experimental: false
+Other varieties: false

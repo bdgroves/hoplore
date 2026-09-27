@@ -6,6 +6,7 @@
 
 [Browse the hops](https://brooksgroves.com/hoplore/) ·
 [The hop landscape](https://brooksgroves.com/hoplore/landscape/) ·
+[Where the hops grow](https://brooksgroves.com/hoplore/grown/) ·
 [The JSON API](https://brooksgroves.com/hoplore/api/v1/hops.json) ·
 [Report a wrong number](../../issues/new?template=data-correction.yml)
 
@@ -43,6 +44,7 @@ That's the whole thesis. Nobody hand-writes a published range in this repo. You 
 
 - **A page per hop** — every source plotted on its own range bar, the oil breakdown, aroma, beer styles, pedigree, and ranked substitutes.
 - **[The hop landscape](https://brooksgroves.com/hoplore/landscape/)** — every hop with published figures on one chart, bittering power against aroma oil. Each hop carries a cross out to the widest range any source reported, so a big cross means the sources disagree or the crop swings year to year. Every hop page links in with that hop lit up.
+- **[Where America's hops grow](https://brooksgroves.com/hoplore/grown/)** — Washington grows three-quarters of the US crop, and this is the page that shows it: acres for every variety USDA counts in Washington, Oregon and Idaho, 2015 to 2025, straight from the National Hop Report. Every hop that's in the survey gets its own *Where it's grown* chart too — Citra is the No. 1 hop by acreage in both Washington and Oregon.
 - **Honesty built into the page.** A hop with only a placeholder citation gets a red "needs a citation" badge. A stub with no numbers says *awaiting data*. A brewing role that hasn't been sourced says *role ?* instead of quietly guessing. An oil breakdown that doesn't account for enough of the oil isn't drawn at all — rather than scaling two trace compounds up to 100% and inventing the rest.
 
 It all works with JavaScript off. JavaScript adds search, filters and tooltips on top.
@@ -54,6 +56,7 @@ It all works with JavaScript off. JavaScript adds search, filters and tooltips o
 ```
 data/hops/*.yml         one file per cultivar — the actual product
 data/sources.yml        the source registry. no entry, no number.
+data/acreage/           USDA acreage by variety and state. generated, never hand-edited
 data/taxonomy/          controlled vocabulary: aroma, styles, countries, breeders
 data/reference/         the checklist of varieties that should have a record
 schema/                 JSON Schema 2020-12. the contract.
@@ -70,7 +73,7 @@ One build, three outputs, and the website is rendered *from* the API JSON, so th
 | Output | What it is |
 |---|---|
 | `dist/api/v1/**` | A free JSON API. No key, no auth, no rate limit, CORS wide open. |
-| `dist/index.html`, `dist/hops/<slug>/`, `dist/landscape/` | The static site. |
+| `dist/index.html`, `dist/hops/<slug>/`, `dist/landscape/`, `dist/grown/` | The static site. |
 | `dist/api/v1/hops.csv` | For when you just want to open it in a spreadsheet like a normal person. |
 
 Every push to `main` validates, builds and deploys to GitHub Pages.
@@ -109,6 +112,7 @@ Scrapers live in `tools/ingest/`, one per source, all under the same contract: *
 | `ych` | Yakima Chief Ranches: Citra, Mosaic, Simcoe, Krush, Dolcita, Sabro… | full oil profiles **including myrcene**, plus storage stability |
 | `barthhaas` | ~100 varieties worldwide, incl. Galaxy, Vic Secret, the Czech and Polish hops | full oil breakdown, stated as the range over the last four crop years |
 | `hbc` | Hop Breeding Company, Yakima: all 10 brands (Citra, Mosaic, Sabro, Talus, TerraFlux…) from one page | the breeder's own spec; oils for Citra and Mosaic |
+| `usda_nass` | USDA National Hop Report, 2015–2025: acres and production by variety for Washington, Oregon and Idaho | writes `data/acreage/`, not hop records. Checked by making every state and year add up to USDA's own totals, exactly |
 
 ```bash
 pixi run -e data ych citra            # dry run: what it found, and where it disagrees
@@ -168,6 +172,7 @@ GET /hoplore/api/v1/index.json            slim list, ~all you need for search
 GET /hoplore/api/v1/hops.json             everything
 GET /hoplore/api/v1/hops/citra.json       one hop: ranges + every underlying observation
 GET /hoplore/api/v1/similar/citra.json    ranked substitutes with component scores
+GET /hoplore/api/v1/acreage.json          USDA acreage by variety, state and year
 GET /hoplore/api/v1/sources.json          the source registry
 GET /hoplore/api/v1/taxonomy.json         aroma tags, styles, countries, breeders
 GET /hoplore/api/v1/hops.csv              the whole thing, flattened
@@ -212,10 +217,12 @@ Found a wrong number? [Open an issue](../../issues/new?template=data-correction.
 
 Done:
 
-- [x] Hopsteiner, BarthHaas and Yakima Chief Ranches scrapers — real breeder data for 149 hops, and myrcene for the hops that matter most
+- [x] Hopsteiner, BarthHaas, Yakima Chief Ranches and HBC scrapers — real breeder data for 149 hops, and myrcene for the hops that matter most
 - [x] Coverage report plus a monthly discovery workflow that opens an issue when a new variety shows up
 - [x] The hop landscape
 - [x] Run any scraper from the Actions tab
+- [x] Hop Breeding Company specs, straight from the breeder
+- [x] Washington, Oregon and Idaho acreage from the USDA National Hop Report, 2015–2025
 
 Next, roughly in order of how much I want it:
 
@@ -224,7 +231,7 @@ Next, roughly in order of how much I want it:
 - [ ] A mini landscape on every hop page, with that hop and its substitutes highlighted
 - [ ] Side-by-side compare for 2–4 hops
 - [ ] More sources: NZ Hops, Hop Products Australia, Charles Faram — for the ~30 hops no current source covers
-- [ ] Washington acreage from the USDA National Hop Report: which hops the state actually grows, and how much
+- [ ] Records for the Washington hops USDA counts that HopLore doesn't have yet: Pekko, Elani, Zappa, Meridian
 - [ ] Plant patents as a source: public domain, breeder-authored, and they carry the pedigree marketing sheets leave out
 - [ ] Crop-year data, so you can watch alpha drift across harvests instead of reading one eternal average
 - [ ] BeerXML / BeerJSON import: paste a recipe, get told what's substitutable

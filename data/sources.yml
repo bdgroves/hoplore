@@ -82,6 +82,18 @@ bsg:
   tier: merchant
   weight: 0.6
 
+usda-nass:
+  publisher: USDA National Agricultural Statistics Service
+  title: National Hop Report (annual, 2017-2025 editions)
+  url: https://esmis.nal.usda.gov/publication/national-hop-report
+  retrieved: '2026-09-27'
+  tier: literature
+  weight: 0.9
+  note: >
+    Acreage, yield and production by variety for Washington, Oregon and Idaho.
+    Plain-text releases saved under tools/ingest/raw/usda-nass/; parsed into
+    data/acreage/usda-nass.yml.
+
 usda-nass-2022:
   publisher: USDA National Agricultural Statistics Service
   title: National Hop Report 2022
