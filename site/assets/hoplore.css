@@ -195,7 +195,7 @@ h1, h2, h3 {
 
 .finder label { display: block; font-size: 0.85rem; color: var(--ink-soft); margin-bottom: 0.3rem; }
 
-#q, #lq {
+#q, #lq, #bq {
   width: 100%;
   font: inherit;
   font-size: 1.15rem;
@@ -205,7 +205,7 @@ h1, h2, h3 {
   border-bottom: 2px solid var(--ink);
   color: inherit;
 }
-#q::placeholder, #lq::placeholder { color: var(--ink-faint); }
+#q::placeholder, #lq::placeholder, #bq::placeholder { color: var(--ink-faint); }
 
 .filters { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 
@@ -783,3 +783,12 @@ a:hover { text-decoration-color: var(--rust); }
 .colophon p { max-width: var(--measure); }
 .colophon code { font-family: var(--font-mono); font-size: 0.85em; }
 .wordmark .heart { font-size: 0.32em; vertical-align: 0.9em; letter-spacing: 0; font-style: normal; }
+.jump { display: grid; gap: 0.45rem; }
+.jump-city { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; }
+.jump-city > span { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); min-width: 8.5rem; }
+.jump .chip { text-decoration: none; }
+.jump .chip .num { color: var(--ink-faint); margin-left: 0.3ch; }
+.fresh-season { border-top: 3px solid var(--sage); }
+.fresh-season h2 { color: var(--sage); }
+.fresh-season .beerlist li { grid-template-columns: minmax(10rem, 16rem) 11rem 1fr; }
+@media (max-width: 46rem) { .fresh-season .beerlist li { grid-template-columns: 1fr auto; } }

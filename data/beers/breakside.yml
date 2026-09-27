@@ -1,0 +1,734 @@
+brewery:
+  slug: breakside
+  name: Breakside Brewery
+  city: Portland
+  state: OR
+  url: https://breakside.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-27'
+beers:
+  - slug: distantfriends
+    name: '#Distantfriends'
+    url: https://breakside.com/our/beer/distantfriends/
+    abv: 6.8
+    hops_as_written: Aged Whole Leaf
+    hops:
+      - { hop: null, name: Aged, form: whole cone, as_written: Aged Whole Leaf }
+  - slug: albatross
+    name: Albatross
+    url: https://breakside.com/our/beer/albatross/
+    abv: 7.0
+    hops_as_written: NELSON SAUVIN, CITRA
+    hops:
+      - { hop: nelson-sauvin, name: NELSON SAUVIN, as_written: NELSON SAUVIN }
+      - { hop: citra, name: CITRA, as_written: CITRA }
+  - slug: archipelagos
+    name: Archipelagos
+    url: https://breakside.com/our/beer/archipelagos/
+    abv: 6.5
+    hops_as_written: Aged Whole Leaf Cascade
+    hops:
+      - { hop: null, name: Aged Whole Leaf Cascade, as_written: Aged Whole Leaf Cascade }
+  - slug: the-sublime-helles-lager-copy
+    name: Bayside
+    url: https://breakside.com/our/beer/the-sublime-helles-lager-copy/
+    abv: 7.0
+    hops_as_written: Mosaic, HBC 586, Nelson Sauvin, Summit
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: summit, name: Summit, as_written: Summit }
+  - slug: beer-hunter
+    name: Beer Hunter IPA
+    url: https://breakside.com/our/beer/beer-hunter/
+    abv: 6.0
+    hops_as_written: Cascade, Chinook, Crystal, Simcoe, Zumo, HBC 638
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: crystal, name: Crystal, as_written: Crystal }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: null, name: Zumo, as_written: Zumo }
+      - { hop: null, name: HBC 638, as_written: HBC 638 }
+  - slug: joyrx
+    name: Beer that Benefits
+    url: https://breakside.com/our/beer/joyrx/
+    abv: 7.1
+    hops_as_written: MOSAIC, NELSON SAUVIN, TAIHEKE, HBC 1019
+    hops:
+      - { hop: mosaic, name: MOSAIC, as_written: MOSAIC }
+      - { hop: nelson-sauvin, name: NELSON SAUVIN, as_written: NELSON SAUVIN }
+      - { hop: taiheke, name: TAIHEKE, as_written: TAIHEKE }
+      - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
+  - slug: btb-oregon-humane
+    name: Beer that Benefits Oregon Humane
+    url: https://breakside.com/our/beer/btb-oregon-humane/
+    abv: 6.5
+    hops_as_written: MOSAIC, CHINOOK, COLUMBUS, NECTARON
+    hops:
+      - { hop: mosaic, name: MOSAIC, as_written: MOSAIC }
+      - { hop: chinook, name: CHINOOK, as_written: CHINOOK }
+      - { hop: columbus, name: COLUMBUS, as_written: COLUMBUS }
+      - { hop: nectaron, name: NECTARON, as_written: NECTARON }
+  - slug: joyrx-copy
+    name: Beer that Benefits Oregon Wild
+    url: https://breakside.com/our/beer/joyrx-copy/
+    abv: 6.5
+    hops_as_written: MOSAIC, CITRA, DOLCITA, KRUSH
+    hops:
+      - { hop: mosaic, name: MOSAIC, as_written: MOSAIC }
+      - { hop: citra, name: CITRA, as_written: CITRA }
+      - { hop: dolcita, name: DOLCITA, as_written: DOLCITA }
+      - { hop: krush, name: KRUSH, as_written: KRUSH }
+  - slug: btb-oregon-humane-copy
+    name: Beer that Benefits Surfrider Foundation
+    url: https://breakside.com/our/beer/btb-oregon-humane-copy/
+    abv: 6.7
+    hops_as_written: MOSAIC, SIMCOE, NECTARON
+    hops:
+      - { hop: mosaic, name: MOSAIC, as_written: MOSAIC }
+      - { hop: simcoe, name: SIMCOE, as_written: SIMCOE }
+      - { hop: nectaron, name: NECTARON, as_written: NECTARON }
+  - slug: black-tan
+    name: Black & Tan
+    url: https://breakside.com/our/beer/black-tan/
+    abv: 9.2
+    hops_as_written: Citra, Simcoe and CTZ
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: columbus, name: CTZ, as_written: CTZ }
+  - slug: breakside-ipa
+    name: Breakside IPA
+    url: https://breakside.com/our/beer/breakside-ipa/
+    abv: 6.8
+    hops_as_written: Chinook, Citra, Columbus, Falconer’s Flight
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: null, name: Falconer’s Flight, as_written: Falconer’s Flight }
+  - slug: breakside-pilsner
+    name: Breakside Pilsner
+    url: https://breakside.com/our/beer/breakside-pilsner/
+    abv: 5.0
+    hops_as_written: Mittelfruh, Hersbrucker, Mt. Hood
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Mittelfruh }
+      - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
+      - { hop: mount-hood, name: Mt Hood, as_written: Mt Hood }
+  - slug: breakside-stout
+    name: Breakside Stout
+    url: https://breakside.com/our/beer/breakside-stout/
+    abv: 6.8
+    hops_as_written: Cascade
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: breakside-white
+    name: Breakside White
+    url: https://breakside.com/our/beer/breakside-white/
+    abv: 5.2
+    hops_as_written: STERLING, HERSBRUCKER, MT. HOOD
+    hops:
+      - { hop: sterling, name: STERLING, as_written: STERLING }
+      - { hop: hersbrucker, name: HERSBRUCKER, as_written: HERSBRUCKER }
+      - { hop: mount-hood, name: Mt HOOD, as_written: Mt HOOD }
+  - slug: chocolate-brandy-alexander
+    name: Chocolate Brandy Alexander
+    url: https://breakside.com/our/beer/chocolate-brandy-alexander/
+    abv: 8.4
+    hops_as_written: Columbus
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: cuddle-puddle
+    name: Cuddle Puddle
+    url: https://breakside.com/our/beer/cuddle-puddle-2/
+    abv: 6.0
+    hops_as_written: 'STRATA, CITRA, SIMCOE, : NELSON SAUVIN'
+    hops:
+      - { hop: strata, name: STRATA, as_written: STRATA }
+      - { hop: citra, name: CITRA, as_written: CITRA }
+      - { hop: simcoe, name: SIMCOE, as_written: SIMCOE }
+      - { hop: nelson-sauvin, name: NELSON SAUVIN, as_written: NELSON SAUVIN }
+  - slug: cultivating-mass
+    name: Cultivating Mass
+    url: https://breakside.com/our/beer/cultivating-mass/
+    abv: 10.9
+    hops_as_written: Liberty
+    hops:
+      - { hop: liberty, name: Liberty, as_written: Liberty }
+  - slug: disco-overload
+    name: Disco Overload
+    url: https://breakside.com/our/beer/disco-overload/
+    abv: 6.6
+    hops_as_written: SIMCOE, MOSAIC, KRUSH, CASHMERE, SUPERDELIC
+    hops:
+      - { hop: simcoe, name: SIMCOE, as_written: SIMCOE }
+      - { hop: mosaic, name: MOSAIC, as_written: MOSAIC }
+      - { hop: krush, name: KRUSH, as_written: KRUSH }
+      - { hop: cashmere, name: CASHMERE, as_written: CASHMERE }
+      - { hop: superdelic, name: SUPERDELIC, as_written: SUPERDELIC }
+  - slug: double-wanderlust
+    name: Double Wanderlust
+    url: https://breakside.com/our/beer/double-wanderlust/
+    abv: 8.4
+    hops_as_written: Mosaic, Chinook, Nelson Sauvin, Eldorado
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: el-dorado, name: Eldorado, as_written: Eldorado }
+  - slug: dreamers-of-the-golden-dream
+    name: Dreamers of the Golden Dream
+    url: https://breakside.com/our/beer/dreamers-of-the-golden-dream/
+    abv: 6.3
+    hops_as_written: NELSON SAUVIN, RIWAKA, NECTARON, TAIHEKE, KRUSH
+    hops:
+      - { hop: nelson-sauvin, name: NELSON SAUVIN, as_written: NELSON SAUVIN }
+      - { hop: riwaka, name: RIWAKA, as_written: RIWAKA }
+      - { hop: nectaron, name: NECTARON, as_written: NECTARON }
+      - { hop: taiheke, name: TAIHEKE, as_written: TAIHEKE }
+      - { hop: krush, name: KRUSH, as_written: KRUSH }
+  - slug: fresh-hop-cascade-wanderlust-ipa
+    name: Fresh Hop Cascade Wanderlust IPA
+    url: https://breakside.com/our/beer/fresh-hop-cascade-wanderlust-ipa/
+    hops_as_written: Fresh Cascade
+    hops:
+      - { hop: cascade, name: Cascade, fresh: true, as_written: Fresh Cascade }
+  - slug: fresh-hop-chinook-ipa
+    name: Fresh Hop Chinook IPA
+    url: https://breakside.com/our/beer/fresh-hop-chinook-ipa/
+    hops_as_written: Fresh Chinook
+    hops:
+      - { hop: chinook, name: Chinook, fresh: true, as_written: Fresh Chinook }
+  - slug: fresh-hop-citra-ipa
+    name: Fresh Hop Citra IPA
+    url: https://breakside.com/our/beer/fresh-hop-citra-ipa/
+    hops_as_written: Fresh Citra
+    hops:
+      - { hop: citra, name: Citra, fresh: true, as_written: Fresh Citra }
+  - slug: fresh-hop-simcoe-ipa
+    name: Fresh Hop Simcoe IPA
+    url: https://breakside.com/our/beer/fresh-hop-simcoe-ipa/
+    hops_as_written: Fresh Simcoe
+    hops:
+      - { hop: simcoe, name: Simcoe, fresh: true, as_written: Fresh Simcoe }
+  - slug: fresh-hop-sterling-pilsner
+    name: Fresh Hop Sterling Pilsner
+    url: https://breakside.com/our/beer/fresh-hop-sterling-pilsner/
+    hops_as_written: Fresh Sterling
+    hops:
+      - { hop: sterling, name: Sterling, fresh: true, as_written: Fresh Sterling }
+  - slug: frontside-rodeo
+    name: Frontside Rodeo
+    url: https://breakside.com/our/beer/frontside-rodeo/
+    abv: 7.1
+    hops_as_written: NZ 106, Citra, Simcoe, Nectaron
+    hops:
+      - { hop: null, name: NZ 106, as_written: NZ 106 }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+  - slug: futurism
+    name: FUturism
+    url: https://breakside.com/our/beer/futurism/
+    abv: 7.0
+    hops_as_written: angier, Mosaic, Citra
+    hops:
+      - { hop: null, name: angier, as_written: angier }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: the-sublime-helles-lager-copy-copy
+    name: Gala
+    url: https://breakside.com/our/beer/the-sublime-helles-lager-copy-copy/
+    abv: 7.0
+    hops_as_written: Simcoe and Mosaic
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: game-time
+    name: Game Time
+    url: https://breakside.com/our/beer/game-time/
+    abv: 4.5
+    hops_as_written: HBC 1134, Hersbrucker
+    hops:
+      - { hop: null, name: HBC 1134, as_written: HBC 1134 }
+      - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
+  - slug: giuseppe-warlock-double-ipa
+    name: Giuseppe Warlock Double IPA
+    url: https://breakside.com/our/beer/giuseppe-warlock-double-ipa/
+    abv: 8.0
+    hops_as_written: NELSON SAUVIN, MOSAIC, COMET, WAIMEA
+    hops:
+      - { hop: nelson-sauvin, name: NELSON SAUVIN, as_written: NELSON SAUVIN }
+      - { hop: mosaic, name: MOSAIC, as_written: MOSAIC }
+      - { hop: comet, name: COMET, as_written: COMET }
+      - { hop: waimea, name: WAIMEA, as_written: WAIMEA }
+  - slug: india-golden-ale
+    name: India Golden Ale
+    url: https://breakside.com/our/beer/india-golden-ale/
+    abv: 8.3
+    hops_as_written: Eldorado, Mosaic, Chinook
+    hops:
+      - { hop: el-dorado, name: Eldorado, as_written: Eldorado }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: industry-baby
+    name: Industry Baby
+    url: https://breakside.com/our/beer/industry-baby/
+    abv: 5.3
+    hops_as_written: Mt. Hood
+    hops:
+      - { hop: mount-hood, name: Mt Hood, as_written: Mt Hood }
+  - slug: its-a-me-mario
+    name: It's a Me Mario
+    url: https://breakside.com/our/beer/its-a-me-mario-2/
+    abv: 5.5
+    hops_as_written: HBC 1134, Sterling, Hersbrucker
+    hops:
+      - { hop: null, name: HBC 1134, as_written: HBC 1134 }
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+      - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
+  - slug: kid-in-a-candy-shop
+    name: Kid in a Candy Shop
+    url: https://breakside.com/our/beer/kid-in-a-candy-shop/
+    abv: 7.0
+    hops_as_written: CITRA LUPOMAX, CITRA HYPERBOOST, CHINOOK T90 AND CRYO, SIMCOE CRYO, COLUMBUS
+    hops:
+      - { hop: citra, name: CITRA, form: LupoMax, as_written: CITRA LUPOMAX }
+      - { hop: citra, name: CITRA, form: HyperBoost, as_written: CITRA HYPERBOOST }
+      - { hop: chinook, name: CHINOOK, form: T90, as_written: CHINOOK T90 }
+      - { hop: simcoe, name: SIMCOE, form: Cryo, as_written: SIMCOE CRYO }
+      - { hop: columbus, name: COLUMBUS, as_written: COLUMBUS }
+  - slug: kids-these-haze
+    name: Kids These Haze
+    url: https://breakside.com/our/beer/kids-these-haze/
+    abv: 6.2
+    hops_as_written: Mosaic, Eldorado, Amarillo
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: el-dorado, name: Eldorado, as_written: Eldorado }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: life2
+    name: Life, Volume 2
+    url: https://breakside.com/our/beer/life2/
+    abv: 9.5
+    hops_as_written: Crystal
+    hops:
+      - { hop: crystal, name: Crystal, as_written: Crystal }
+  - slug: life3
+    name: Life, Volume 3
+    url: https://breakside.com/our/beer/life3/
+    abv: 9.2
+    hops_as_written: Crystal
+    hops:
+      - { hop: crystal, name: Crystal, as_written: Crystal }
+  - slug: life4
+    name: Life, Volume 4
+    url: https://breakside.com/our/beer/life4/
+    abv: 9.0
+    hops_as_written: Crystal, 25 IBU
+    hops:
+      - { hop: crystal, name: Crystal, as_written: Crystal }
+  - slug: life5
+    name: Life, Volume 5
+    url: https://breakside.com/our/beer/life5/
+    abv: 9.5
+    hops_as_written: Crystal, 25 IBU
+    hops:
+      - { hop: crystal, name: Crystal, as_written: Crystal }
+  - slug: lunch-break-india-session-ale
+    name: Lunch Break
+    url: https://breakside.com/our/beer/lunch-break-india-session-ale/
+    abv: 4.7
+    hops_as_written: Amarillo, Cascade, Galaxy, Rakau, Simcoe
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: rakau, name: Rakau, as_written: Rakau }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: luz-natural
+    name: Luz Natural
+    url: https://breakside.com/our/beer/luz-natural/
+    abv: 4.5
+    hops_as_written: Columbus
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: morning-dew
+    name: Morning Dew
+    url: https://breakside.com/our/beer/morning-dew/
+    abv: 7.1
+    hops_as_written: Simcoe, Citra, Mosaic, Azacca, Strata
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: muckbang
+    name: Muckbang
+    url: https://breakside.com/our/beer/muckbang/
+    abv: 6.5
+    hops_as_written: Kohatu, Mosaic, Chinook
+    hops:
+      - { hop: kohatu, name: Kohatu, as_written: Kohatu }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: my-homie-ipa
+    name: My Homie IPA
+    url: https://breakside.com/our/beer/my-homie-ipa/
+    abv: 7.0
+    hops_as_written: Cashmere, Nectaron, Mosaic
+    hops:
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: noble-pilsner
+    name: Noble Pilsner
+    url: https://breakside.com/our/beer/noble-pilsner/
+    abv: 5.6
+    hops_as_written: Hallertau Mittelfruh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Hallertau Mittelfruh }
+  - slug: oktoberfest
+    name: Oktoberfest
+    url: https://breakside.com/our/beer/oktoberfest/
+    abv: 5.6
+    hops_as_written: HERSBRUCKER
+    hops:
+      - { hop: hersbrucker, name: HERSBRUCKER, as_written: HERSBRUCKER }
+  - slug: passionfruit-sour
+    name: Passionfruit Sour
+    url: https://breakside.com/our/beer/passionfruit-sour/
+    abv: 5.0
+    hops_as_written: Hersbrucker
+    hops:
+      - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
+  - slug: pause-for-effect
+    name: Pause for Effect
+    url: https://breakside.com/our/beer/pause-for-effect/
+    abv: 6.7
+    hops_as_written: Aged Whole Leaf
+    hops:
+      - { hop: null, name: Aged, form: whole cone, as_written: Aged Whole Leaf }
+  - slug: perpetual-motion
+    name: Perpetual Motion
+    url: https://breakside.com/our/beer/perpetual-motion/
+    abv: 23.0
+    hops_as_written: Liberty
+    hops:
+      - { hop: liberty, name: Liberty, as_written: Liberty }
+  - slug: persephone
+    name: Persephone
+    url: https://breakside.com/our/beer/persephone/
+    abv: 7.9
+    hops_as_written: Aged Whole Leaf
+    hops:
+      - { hop: null, name: Aged, form: whole cone, as_written: Aged Whole Leaf }
+  - slug: post-time
+    name: Post Time
+    url: https://breakside.com/our/beer/post-time/
+    abv: 4.7
+    hops_as_written: HESRBRUCKER
+    hops:
+      - { hop: hersbrucker, name: HESRBRUCKER, as_written: HESRBRUCKER }
+  - slug: quince
+    name: Quince
+    url: https://breakside.com/our/beer/quince/
+    abv: 6.0
+    hops_as_written: CITRA, TALUS, COLUMBUS
+    hops:
+      - { hop: citra, name: CITRA, as_written: CITRA }
+      - { hop: talus, name: TALUS, as_written: TALUS }
+      - { hop: columbus, name: COLUMBUS, as_written: COLUMBUS }
+  - slug: rainbows-unicorns
+    name: Rainbows & Unicorns
+    url: https://breakside.com/our/beer/rainbows-unicorns/
+    abv: 5.5
+    hops_as_written: Comet, El Dorado, Galaxy
+    hops:
+      - { hop: comet, name: Comet, as_written: Comet }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: safe-word-triple-ipa
+    name: Safe Word Triple IPA
+    url: https://breakside.com/our/beer/safe-word-triple-ipa/
+    abv: 10.1
+    hops_as_written: MOSAIC, NELSON, COLUMBUS, KRUSH, SIMCOE
+    hops:
+      - { hop: mosaic, name: MOSAIC, as_written: MOSAIC }
+      - { hop: nelson-sauvin, name: NELSON, as_written: NELSON }
+      - { hop: columbus, name: COLUMBUS, as_written: COLUMBUS }
+      - { hop: krush, name: KRUSH, as_written: KRUSH }
+      - { hop: simcoe, name: SIMCOE, as_written: SIMCOE }
+  - slug: salted-carmel-stout
+    name: Salted Caramel Stout
+    url: https://breakside.com/our/beer/salted-carmel-stout/
+    abv: 6.7
+    hops_as_written: Columbus
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: sharing-horizons
+    name: Sharing Horizons
+    url: https://breakside.com/our/beer/sharing-horizons/
+    abv: 5.7
+    hops_as_written: Liberty, X033, Mt. Hood, Wakatu
+    hops:
+      - { hop: liberty, name: Liberty, as_written: Liberty }
+      - { hop: null, name: X033, as_written: X033 }
+      - { hop: mount-hood, name: Mt Hood, as_written: Mt Hood }
+      - { hop: wakatu, name: Wakatu, as_written: Wakatu }
+  - slug: tropical-pale-copy
+    name: Shine, Dream, Smile
+    url: https://breakside.com/our/beer/tropical-pale-copy/
+    abv: 7.0
+    hops_as_written: MOSAIC, CITRA, SIMCOE
+    hops:
+      - { hop: mosaic, name: MOSAIC, as_written: MOSAIC }
+      - { hop: citra, name: CITRA, as_written: CITRA }
+      - { hop: simcoe, name: SIMCOE, as_written: SIMCOE }
+  - slug: stars-on-ice
+    name: Stars on Ice!
+    url: https://breakside.com/our/beer/stars-on-ice/
+    abv: 8.1
+    hops_as_written: Strata CGX, Nectaron, Mosaic, Talus
+    hops:
+      - { hop: strata, name: Strata, form: CGX, as_written: Strata CGX }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: talus, name: Talus, as_written: Talus }
+  - slug: starstruck
+    name: Starstruck
+    url: https://breakside.com/our/beer/starstruck/
+    abv: 6.7
+    hops_as_written: TALUS, CASHMERE, MOSAIC, ELDORADO
+    hops:
+      - { hop: talus, name: TALUS, as_written: TALUS }
+      - { hop: cashmere, name: CASHMERE, as_written: CASHMERE }
+      - { hop: mosaic, name: MOSAIC, as_written: MOSAIC }
+      - { hop: el-dorado, name: ELDORADO, as_written: ELDORADO }
+  - slug: stay-west
+    name: Stay West
+    url: https://breakside.com/our/beer/stay-west/
+    abv: 7.0
+    hops_as_written: Azalea, Simcoe, Chinook
+    hops:
+      - { hop: null, name: Azalea, as_written: Azalea }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: hail-nelson-copy
+    name: Sugarcube
+    url: https://breakside.com/our/beer/hail-nelson-copy/
+    abv: 6.2
+    hops_as_written: Amarillo, Strata, Rakau
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: rakau, name: Rakau, as_written: Rakau }
+  - slug: summer-classic
+    name: Summer Classic
+    url: https://breakside.com/our/beer/summer-classic/
+    abv: 6.0
+    hops_as_written: Krush, Thora
+    hops:
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: null, name: Thora, as_written: Thora }
+  - slug: summertime
+    name: Summertime
+    url: https://breakside.com/our/beer/summertime-2/
+    abv: 4.0
+    hops_as_written: Magnum
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+  - slug: tall-guy-ipa
+    name: Tall Guy
+    url: https://breakside.com/our/beer/tall-guy-ipa/
+    abv: 6.8
+    hops_as_written: CITRA, STRATA, AMARILLO, CASHMERE
+    hops:
+      - { hop: citra, name: CITRA, as_written: CITRA }
+      - { hop: strata, name: STRATA, as_written: STRATA }
+      - { hop: amarillo, name: AMARILLO, as_written: AMARILLO }
+      - { hop: cashmere, name: CASHMERE, as_written: CASHMERE }
+  - slug: the-pursuit
+    name: The Pursuit
+    url: https://breakside.com/our/beer/the-pursuit/
+    abv: 7.1
+    hops_as_written: Mosaic, Strata, Simcoe, Citra
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: the-sublime-helles-lager
+    name: The Sublime Helles Lager
+    url: https://breakside.com/our/beer/the-sublime-helles-lager/
+    abv: 5.2
+    hops_as_written: Hersbrucker, Lorien
+    hops:
+      - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
+      - { hop: lorien, name: Lorien, as_written: Lorien }
+  - slug: popularity-contest
+    name: Thirst Trap
+    url: https://breakside.com/our/beer/popularity-contest/
+    abv: 6.4
+    hops_as_written: Mosaic, Chinook, Simcoe
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: thriving-metropolis-ipa-3
+    name: Thriving Metropolis
+    url: https://breakside.com/our/beer/thriving-metropolis-ipa-3/
+    abv: 7.0
+    hops_as_written: Simcoe, Nelson Sauvin, Riwaka, Krush, Columbus, Dolcita
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: riwaka, name: Riwaka, as_written: Riwaka }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: dolcita, name: Dolcita, as_written: Dolcita }
+  - slug: thriving-metropolis-ipa-1
+    name: 'Thriving Metropolis IPA #1'
+    url: https://breakside.com/our/beer/thriving-metropolis-ipa-1/
+    abv: 7.0
+    hops_as_written: SIMCOE CRYO, NELSON SAUVIN, CASHMERE, HBC 586
+    hops:
+      - { hop: simcoe, name: SIMCOE, form: Cryo, as_written: SIMCOE CRYO }
+      - { hop: nelson-sauvin, name: NELSON SAUVIN, as_written: NELSON SAUVIN }
+      - { hop: cashmere, name: CASHMERE, as_written: CASHMERE }
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+  - slug: thriving-metropolis-ipa-2
+    name: 'Thriving Metropolis IPA #2'
+    url: https://breakside.com/our/beer/thriving-metropolis-ipa-2-2/
+    abv: 7.0
+    hops_as_written: SIMCOE CRYO, STRATA, CHINOOK, AND HBC 586
+    hops:
+      - { hop: simcoe, name: SIMCOE, form: Cryo, as_written: SIMCOE CRYO }
+      - { hop: strata, name: STRATA, as_written: STRATA }
+      - { hop: chinook, name: CHINOOK, as_written: CHINOOK }
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+  - slug: toro-red
+    name: Toro Red
+    url: https://breakside.com/our/beer/toro-red/
+    abv: 6.5
+    hops_as_written: Hersbrucker
+    hops:
+      - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
+  - slug: tropical-pale
+    name: Tropical Pale
+    url: https://breakside.com/our/beer/tropical-pale/
+    abv: 6.1
+    hops_as_written: MOSAIC, CHINOOK, CITRA. CASCADE, SIMCOE, NELSON SAUVIN
+    hops:
+      - { hop: mosaic, name: MOSAIC, as_written: MOSAIC }
+      - { hop: chinook, name: CHINOOK, as_written: CHINOOK }
+      - { hop: citra, name: CITRA, as_written: CITRA }
+      - { hop: cascade, name: CASCADE, as_written: CASCADE }
+      - { hop: simcoe, name: SIMCOE, as_written: SIMCOE }
+      - { hop: nelson-sauvin, name: NELSON SAUVIN, as_written: NELSON SAUVIN }
+  - slug: true-gold
+    name: True Gold
+    url: https://breakside.com/our/beer/true-gold/
+    abv: 5.1
+    hops_as_written: Galaxy, Mosaic
+    hops:
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: rainbows-unicorns-copy-copy
+    name: Turbomachinery IPA
+    url: https://breakside.com/our/beer/rainbows-unicorns-copy-copy/
+    abv: 7.1
+    hops_as_written: SIMCOE, RIWAKA, CHINOOK
+    hops:
+      - { hop: simcoe, name: SIMCOE, as_written: SIMCOE }
+      - { hop: riwaka, name: RIWAKA, as_written: RIWAKA }
+      - { hop: chinook, name: CHINOOK, as_written: CHINOOK }
+  - slug: unbearable-lightness
+    name: Unbearable Lightness
+    url: https://breakside.com/our/beer/unbearable-lightness/
+    abv: 4.4
+    hops_as_written: Sterling
+    hops:
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: unplugged
+    name: Unplugged
+    url: https://breakside.com/our/beer/unplugged/
+    abv: 7.1
+    hops_as_written: Citra, Simcoe, Chinook Cryo, Columbus Cryo
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: chinook, name: Chinook, form: Cryo, as_written: Chinook Cryo }
+      - { hop: columbus, name: Columbus, form: Cryo, as_written: Columbus Cryo }
+  - slug: up-top
+    name: Up Top
+    url: https://breakside.com/our/beer/up-top/
+    abv: 4.8
+    hops_as_written: HALLERTAU MITTELFRUH, SANTIAM
+    hops:
+      - { hop: hallertau-mittelfrueh, name: MITTELFRUH, as_written: HALLERTAU MITTELFRUH }
+      - { hop: santiam, name: SANTIAM, as_written: SANTIAM }
+  - slug: tropical-pale-copy-copy
+    name: Up Top!
+    url: https://breakside.com/our/beer/tropical-pale-copy-copy/
+    abv: 5.0
+    hops_as_written: CONTESSA
+    hops:
+      - { hop: contessa, name: CONTESSA, as_written: CONTESSA }
+  - slug: wanderjack
+    name: Wanderjack
+    url: https://breakside.com/our/beer/wanderjack/
+    abv: 7.1
+    hops_as_written: Strata, Mosaic, Simcoe, Amarillo
+    hops:
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: wanderlust-ipa
+    name: Wanderlust IPA
+    url: https://breakside.com/our/beer/wanderlust-ipa/
+    abv: 6.5
+    hops_as_written: Amarillo, Cascade, Mosaic, Simcoe, Summit
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: summit, name: Summit, as_written: Summit }
+  - slug: west-coast-ipa
+    name: West Coast IPA
+    url: https://breakside.com/our/beer/west-coast-ipa/
+    abv: 6.5
+    hops_as_written: MOSAIC, KRUSH, STRATA
+    hops:
+      - { hop: mosaic, name: MOSAIC, as_written: MOSAIC }
+      - { hop: krush, name: KRUSH, as_written: KRUSH }
+      - { hop: strata, name: STRATA, as_written: STRATA }
+  - slug: what-rough-beast
+    name: What Rough Beast
+    url: https://breakside.com/our/beer/what-rough-beast/
+    abv: 6.8
+    hops_as_written: Citra, Columbus, Mosaic
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: white-tea-lager
+    name: White Tea Lager
+    url: https://breakside.com/our/beer/white-tea-lager-2/
+    abv: 5.1
+    hops_as_written: Mt. Hood
+    hops:
+      - { hop: mount-hood, name: Mt Hood, as_written: Mt Hood }
+  - slug: wisco-tavern-beer
+    name: Wisco Tavern Beer
+    url: https://breakside.com/our/beer/wisco-tavern-beer/
+    abv: 5.5
+    hops_as_written: Wai-iti
+    hops:
+      - { hop: wai-iti, name: Wai-iti, as_written: Wai-iti }

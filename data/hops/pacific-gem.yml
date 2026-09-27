@@ -1,0 +1,38 @@
+slug: pacific-gem
+name: Pacific Gem
+aliases: []
+purpose: bittering
+country: NZ
+kind: cultivar
+
+ownership:
+  holder: New Zealand Plant & Food Research
+  mark: trademark
+  public_domain: false
+
+pedigree:
+  released: 1987
+  breeder: hri-nz
+  parents: { seed: smoothcone, note: 'Smoothcone crossed with a Californian Late Cluster x Fuggle.' }
+  refs: [nzhops]
+
+aroma:
+  summary: >
+    A bittering hop with black pepper and a distinct blackberry aroma, and brewers describe an oaky flavor, per NZ Hops. The workhorse of New Zealand lager kettles.
+  tags: [black-pepper, berry, woody]
+  refs: [nzhops]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: unverified
+  last_reviewed: '2026-09-27'
+  notes: >
+    Purpose bittering: NZ Hops calls it a solid bittering hop.

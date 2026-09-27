@@ -31,15 +31,10 @@
   match: '^(https://www\.pfriembeer\.com)?/beer/[a-z0-9-]+/$'
   base: https://www.pfriembeer.com
 
-- slug: kings-and-daughters
-  name: Kings & Daughters Brewery
-  city: Hood River
-  state: OR
-  url: https://www.kingsanddaughters.com/
-  sitemaps: ['https://www.kingsanddaughters.com/sitemap.xml']
-  match: '^https://www\.kingsanddaughters\.com/product/[^/]*(ipa|pale|lager|pils|fresh|hazy|ale)[^/]*/[A-Z0-9]+$'
-  render: true
-  limit: 40
+# Kings & Daughters (Hood River) publishes no hop lists on its own shop
+# pages; data/beers/kings-and-daughters.yml is keyed by hand from the
+# brewery's own descriptions on its Untappd page, and only for beers whose
+# description names the hops.
 
 - slug: ex-novo
   name: Ex Novo Brewing

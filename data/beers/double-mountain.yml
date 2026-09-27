@@ -1,0 +1,186 @@
+brewery:
+  slug: double-mountain
+  name: Double Mountain Brewery
+  city: Hood River
+  state: OR
+  url: https://doublemountainbrewery.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-27'
+beers:
+  - slug: centennial
+    name: Centennial IPA
+    url: https://doublemountainbrewery.com/beer/centennial/
+    abv: 5.8
+    hops_as_written: "Kettle: Citra, HBC 586, Cluster, Cascade; Dry Hop: Cascade, HBC 586, Brewer's Gold"
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: cluster, name: Cluster, as_written: Cluster }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: brewers-gold, name: Brewer's Gold, as_written: Brewer's Gold }
+  - slug: devils-kriek
+    name: Devil's Kriek
+    url: https://doublemountainbrewery.com/beer/devils-kriek/
+    abv: 9.5
+    hops_as_written: Cluster
+    hops:
+      - { hop: cluster, name: Cluster, as_written: Cluster }
+  - slug: devils-cuvee-kriek
+    name: Devil’s Cuvée Kriek
+    url: https://doublemountainbrewery.com/beer/devils-cuvee-kriek/
+    abv: 9.9
+    hops_as_written: Sterling
+    hops:
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: fresh-hop-iowa-bar-fight
+    name: Grab Yourself A Fresh Hop Iowa IPA
+    url: https://doublemountainbrewery.com/beer/fresh-hop-iowa-bar-fight/
+    abv: 6.4
+    hops_as_written: Simcoe, Citra and Mosaic and fresh hop Strata in the kettle, a Fresh Hop Strata hop back, and Citra, Mosaic, and Simcoe and Strata CGX in the dry hop
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: strata, name: Strata, fresh: true, as_written: Strata }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: hop-lion
+    name: Grab yourself a Hop Lion IPA
+    url: https://doublemountainbrewery.com/beer/hop-lion/
+    abv: 6.7
+    hops_as_written: Centennial and Citra in the kettle, Simcoe, Mosaic, and Centennial in the hop back, Citra, Mosaic, and Cascade dry hop
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: killer-green
+    name: Grab Yourself A Killer Green
+    url: https://doublemountainbrewery.com/beer/killer-green/
+    abv: 7.3
+    hops_as_written: Centennial, Cryo Centennial, Strata and Brewer’s Gold in the kettle, Citra in the hop back, Centennial, Brewer’s Gold, and Strata in the first dry hop. Fresh Hop Centennial for the second dry hop
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: centennial, name: Centennial, form: Cryo, as_written: Centennial }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: centennial, name: Centennial, fresh: true, as_written: Centennial }
+  - slug: killer-red
+    name: Grab Yourself A Killer Red
+    url: https://doublemountainbrewery.com/beer/killer-red-2/
+    abv: 7.0
+    hops_as_written: Simcoe and Centennial in the kettle, Simcoe Hop back, Cryo Simcoe and Centennial in the first dry hop, and fresh hop Centennial in second dry hop
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Simcoe }
+      - { hop: centennial, name: Centennial, fresh: true, as_written: Centennial }
+  - slug: hey-love
+    name: Hey Love
+    url: https://doublemountainbrewery.com/beer/hey/love/
+    abv: 5.8
+    hops_as_written: 'Kettle: Citra, HBC 586, Cluster, Cascade; DH: Cascade, HBC 586, Brewer’s Gold'
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: cluster, name: Cluster, as_written: Cluster }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: love-shed
+    name: It’s About the Beer
+    url: https://doublemountainbrewery.com/beer/love/shed-2/
+    abv: 6.0
+    hops_as_written: Simcoe, Centennial, and Citra in the kettle, Cascade and Centennial in the hop back, Cryo Centennial, T90 Centennial, and Citra dry hop
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: centennial, name: Centennial, form: Cryo, as_written: Centennial }
+  - slug: jiro
+    name: Jiro
+    url: https://doublemountainbrewery.com/beer/jiro/
+    abv: 4.8
+    hops_as_written: Sterling and Brewer’s Gold in the kettle
+    hops:
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: iowa-bar-fight
+    name: Meet the Iowa Bar Fight
+    url: https://doublemountainbrewery.com/beer/iowa-bar-fight/
+    abv: 6.4
+    hops_as_written: Citra and Mosaic in the kettle, Strata hop back, Citra, Mosaic, and Simcoe dry hop
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: kolsch
+    name: Meet the Kolsch
+    url: https://doublemountainbrewery.com/beer/kolsch/
+    abv: 5.2
+    hops_as_written: Sterling in the kettle
+    hops:
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: ira
+    name: Pilsner
+    url: https://doublemountainbrewery.com/beer/ira-2/
+    abv: 4.7
+    hops_as_written: Oregon Tettnang from Gosche Farms
+    hops:
+      - { hop: tettnang, name: Tettnang, farm: Gosche Farms, as_written: Tettnang }
+  - slug: peche-cuvee
+    name: Pêche Cuvée
+    url: https://doublemountainbrewery.com/beer/peche-cuvee/
+    abv: 8.7
+    hops_as_written: Sterling in the boil
+    hops:
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: tahoma-cuvee
+    name: Tahoma Cuvée
+    url: https://doublemountainbrewery.com/beer/tahoma-cuvee/
+    abv: 9.0
+    hops_as_written: Sterling
+    hops:
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: tahoma-kriek
+    name: Tahoma Kriek
+    url: https://doublemountainbrewery.com/beer/tahoma-kriek/
+    abv: 9.9
+    hops_as_written: Sterling
+    hops:
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: vaporizer
+    name: The Vaporizer
+    url: https://doublemountainbrewery.com/beer/vaporizer/
+    abv: 5.7
+    hops_as_written: Simcoe, Citra, and Strata in the kettle, Centennial the hop back, Strata, Centennial, and Cryo Citra in the dry hops
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Citra }
+  - slug: turn-the-haze
+    name: Turn the Haze
+    url: https://doublemountainbrewery.com/beer/turn-the-haze/
+    abv: 6.3
+    hops_as_written: Brewer’s Gold, Mosaic, Centennial, and Citra in the kettle, Ekuanot, Brewer’s Gold, Mosaic, and Citra dry hop
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
+  - slug: una-mas
+    name: Una Más
+    url: https://doublemountainbrewery.com/beer/una-mas/
+    abv: 4.2
+    hops_as_written: Crystal and Goldings
+    hops:
+      - { hop: crystal, name: Crystal, as_written: Crystal }
+      - { hop: golding-uk, name: Goldings, as_written: Goldings }
+  - slug: wolfweizen
+    name: Wolfweizen
+    url: https://doublemountainbrewery.com/beer/wolfweizen/
+    abv: 5.2
+    hops_as_written: Styrian Golding
+    hops:
+      - { hop: styrian-golding, name: Styrian Golding, as_written: Styrian Golding }

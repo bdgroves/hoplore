@@ -1,0 +1,1618 @@
+brewery:
+  slug: pfriem
+  name: pFriem Family Brewers
+  city: Hood River
+  state: OR
+  url: https://www.pfriembeer.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-27'
+beers:
+  - slug: 14th-anniversary-to-thee-lager
+    name: 14th Anniversary To Thee Lager
+    url: https://www.pfriembeer.com/beer/14th-anniversary-to-thee-lager/
+    abv: 5.0
+    hops_as_written: Perle, Select, Tettnang, Saphir
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: null, name: Select, as_written: Select }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+  - slug: 6th-nail
+    name: 6th Nail
+    url: https://www.pfriembeer.com/beer/6th-nail/
+    abv: 6.7
+    hops_as_written: Aged Czech Saaz
+    hops:
+      - { hop: saaz-cz, name: Czech Saaz, as_written: Aged Czech Saaz }
+  - slug: alexiss-amber-lager
+    name: Alexis’s Amber Lager
+    url: https://www.pfriembeer.com/beer/alexiss-amber-lager/
+    abv: 5.6
+    hops_as_written: Chinook, Saaz, Simcoe
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: amaro-barrel-aged-barleywine-club-exclusive
+    name: Amaro Barrel Aged Barleywine - Club Exclusive
+    url: https://www.pfriembeer.com/beer/amaro-barrel-aged-barleywine-club-exclusive/
+    abv: 12.0
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: american-lager
+    name: American Lager
+    url: https://www.pfriembeer.com/beer/american-lager/
+    abv: 5.0
+    hops_as_written: Perle, Tettnang
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: apple-brandy-barrel-aged-barleywine
+    name: Apple Brandy Barrel Aged Barleywine
+    url: https://www.pfriembeer.com/beer/apple-brandy-barrel-aged-barleywine/
+    abv: 11.8
+    hops_as_written: Chinook, Cascade
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: australian-pale
+    name: Australian Pale
+    url: https://www.pfriembeer.com/beer/australian-pale/
+    abv: 5.2
+    hops_as_written: Strata, Mosaic, Mosaic Cryo, Krush
+    hops:
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic Cryo }
+      - { hop: krush, name: Krush, as_written: Krush }
+  - slug: barrel-aged-amburana-imperial-stout-club-exclusive
+    name: Barrel Aged Amburana Imperial Stout - Club Exclusive
+    url: https://www.pfriembeer.com/beer/barrel-aged-amburana-imperial-stout-club-exclusive/
+    abv: 11.5
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: barrel-aged-american-dark-strong
+    name: Barrel Aged American Dark Strong
+    url: https://www.pfriembeer.com/beer/barrel-aged-american-dark-strong/
+    abv: 11.8
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: barrel-aged-botanical-saison-ii
+    name: Barrel Aged Botanical Saison II - Club Exclusive
+    url: https://www.pfriembeer.com/beer/barrel-aged-botanical-saison-ii/
+    abv: 6.5
+    hops_as_written: Tettnang
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: barrel-aged-botanical-saison-iii-club-exclusive
+    name: Barrel Aged Botanical Saison III - Club Exclusive
+    url: https://www.pfriembeer.com/beer/barrel-aged-botanical-saison-iii-club-exclusive/
+    abv: 6.5
+    hops_as_written: Tettnang
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: barrel-aged-chocolate-pecan-black-barleywine
+    name: Barrel Aged Chocolate Pecan Black Barleywine
+    url: https://www.pfriembeer.com/beer/barrel-aged-chocolate-pecan-black-barleywine/
+    abv: 14.0
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: barrel-aged-saison-iv
+    name: Barrel Aged Saison IV
+    url: https://www.pfriembeer.com/beer/barrel-aged-saison-iv/
+    abv: 6.6
+    hops_as_written: German Tettnang, Citra, Nelson Sauvin
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: German Tettnang }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: barrel-aged-saison-v
+    name: Barrel Aged Saison V
+    url: https://www.pfriembeer.com/beer/barrel-aged-saison-v/
+    abv: 5.7
+    hops_as_written: Tettnang, Galaxy
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: barrel-aged-saison-vi
+    name: Barrel Aged Saison VI
+    url: https://www.pfriembeer.com/beer/barrel-aged-saison-vi/
+    abv: 5.6
+    hops_as_written: Tettnang, Galaxy
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: barrel-aged-saison-vii
+    name: Barrel Aged Saison VII
+    url: https://www.pfriembeer.com/beer/barrel-aged-saison-vii/
+    abv: 6.2
+    hops_as_written: Tettnang, Nelson Sauvin, Motueka
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+  - slug: barrel-aged-saison-viii
+    name: Barrel Aged Saison VIII
+    url: https://www.pfriembeer.com/beer/barrel-aged-saison-viii/
+    abv: 6.5
+    hops_as_written: Hallertau Blanc
+    hops:
+      - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
+  - slug: beer-de-bera
+    name: Beer de Bera - Club Exclusive
+    url: https://www.pfriembeer.com/beer/beer-de-bera/
+    abv: 6.2
+    hops_as_written: Tettnang
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: belgian-pils
+    name: Belgian Pils
+    url: https://www.pfriembeer.com/beer/belgian-pils/
+    abv: 5.2
+    hops_as_written: Perle, Saphir, Tettnang, Saaz
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: belmont-station-28th-anniversary-west-coast-ipa
+    name: Belmont Station 28th Anniversary West Coast IPA
+    url: https://www.pfriembeer.com/beer/belmont-station-28th-anniversary-west-coast-ipa/
+    abv: 6.5
+    hops_as_written: Chinook, Mosaic, Mosaic Cryo, Simcoe, Simcoe Dynaboost, Columbus Cryo, Krush Hyperboost
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic Cryo }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: simcoe, name: Simcoe, form: DynaBoost, as_written: Simcoe Dynaboost }
+      - { hop: columbus, name: Columbus, form: Cryo, as_written: Columbus Cryo }
+      - { hop: krush, name: Krush, form: HyperBoost, as_written: Krush Hyperboost }
+  - slug: biere-de-coupage-club-exclusive
+    name: Bière de Coupage - Club Exclusive
+    url: https://www.pfriembeer.com/beer/biere-de-coupage-club-exclusive/
+    abv: 6.5
+    hops_as_written: Tettnang, Saphir
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+  - slug: blenders-reserve-club-exclusive
+    name: Blender’s Reserve - Club Exclusive
+    url: https://www.pfriembeer.com/beer/blenders-reserve-club-exclusive/
+    abv: 12.4
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: botanical-saison
+    name: Botanical Saison
+    url: https://www.pfriembeer.com/beer/botanical-saison/
+    abv: 6.3
+    hops_as_written: German Tettnang, Hallertau Blanc
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: German Tettnang }
+      - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
+  - slug: bourbon-barrel-aged-barleywine
+    name: Bourbon Barrel Aged Barleywine
+    url: https://www.pfriembeer.com/beer/bourbon-barrel-aged-barleywine/
+    abv: 12.0
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: bourbon-barrel-aged-double-mash-imperial-stout
+    name: Bourbon Barrel Aged Double Mash Imperial Stout
+    url: https://www.pfriembeer.com/beer/bourbon-barrel-aged-double-mash-imperial-stout/
+    abv: 14.0
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: bourbon-barrel-aged-french-macaron-stout-club-exclusive
+    name: Bourbon Barrel Aged French Macaron Stout - Club Exclusive
+    url: https://www.pfriembeer.com/beer/bourbon-barrel-aged-french-macaron-stout-club-exclusive/
+    abv: 11.5
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: bourbon-barrel-aged-hazelnut-porter
+    name: Bourbon Barrel Aged Hazelnut Porter
+    url: https://www.pfriembeer.com/beer/bourbon-barrel-aged-hazelnut-porter/
+    abv: 9.7
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: bourbon-barrel-aged-imperial-chocolate-stout
+    name: Bourbon Barrel Aged Imperial Chocolate Stout
+    url: https://www.pfriembeer.com/beer/bourbon-barrel-aged-imperial-chocolate-stout/
+    abv: 11.0
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: bourbon-barrel-imperial-stout
+    name: Bourbon Barrel Aged Imperial Stout
+    url: https://www.pfriembeer.com/beer/bourbon-barrel-imperial-stout/
+    abv: 11.2
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: bourbon-barrel-aged-marionberry-oatmeal-stout
+    name: Bourbon Barrel Aged Marionberry Oatmeal Stout
+    url: https://www.pfriembeer.com/beer/bourbon-barrel-aged-marionberry-oatmeal-stout/
+    abv: 9.4
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: bourbon-barrel-aged-smores-stout
+    name: Bourbon Barrel Aged S’mores Stout
+    url: https://www.pfriembeer.com/beer/bourbon-barrel-aged-smores-stout/
+    abv: 12.4
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: fresh-hop-strata-pale
+    name: Bourbon Barrel Aged S’mores Stout
+    url: https://www.pfriembeer.com/beer/fresh-hop-strata-pale/
+    abv: 12.4
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: bourbon-barrel-aged-vanilla-pistachio-imperial-stout
+    name: Bourbon Barrel Aged Vanilla Pistachio Imperial Stout
+    url: https://www.pfriembeer.com/beer/bourbon-barrel-aged-vanilla-pistachio-imperial-stout/
+    abv: 12.4
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: brett-saison
+    name: Brett Saison
+    url: https://www.pfriembeer.com/beer/brett-saison/
+    abv: 6.7
+    hops_as_written: German Tettnang, Motueka, Sorachi Ace, Hallertau Blanc, Huell Melon
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: German Tettnang }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+      - { hop: sorachi-ace, name: Sorachi Ace, as_written: Sorachi Ace }
+      - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
+      - { hop: huell-melon, name: Huell Melon, as_written: Huell Melon }
+  - slug: bretta-iv
+    name: Bretta IV
+    url: https://www.pfriembeer.com/beer/bretta-iv/
+    abv: 6.1
+    hops_as_written: Tettnang, Cashmere, Galaxy, Nelson Sauvin
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: bretta-v
+    name: Bretta V
+    url: https://www.pfriembeer.com/beer/bretta-v/
+    abv: 6.4
+    hops_as_written: Nectaron, Citra, Chinook
+    hops:
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: bright-pale
+    name: Bright Pale
+    url: https://www.pfriembeer.com/beer/bright-pale/
+    abv: 5.3
+    hops_as_written: Chinook, Simcoe, Calista
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: callista, name: Calista, as_written: Calista }
+  - slug: california-pils
+    name: California Pils
+    url: https://www.pfriembeer.com/beer/california-pils/
+    abv: 6.2
+    hops_as_written: Mosaic, Mosaic Cryo, Mosaic Dynaboost, Krush, Krush Cryo
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic Cryo }
+      - { hop: mosaic, name: Mosaic, form: DynaBoost, as_written: Mosaic Dynaboost }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+  - slug: canadian-lager
+    name: Canadian Lager
+    url: https://www.pfriembeer.com/beer/canadian-lager/
+    abv: 5.0
+    hops_as_written: Perle, Tettnang
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: caneberry-cuvee
+    name: Caneberry Cuvée
+    url: https://www.pfriembeer.com/beer/caneberry-cuvee/
+    abv: 6.5
+    hops_as_written: Aged Czech Saaz
+    hops:
+      - { hop: saaz-cz, name: Czech Saaz, as_written: Aged Czech Saaz }
+  - slug: cashmere-single-hop-pale
+    name: Cashmere Single Hop Pale
+    url: https://www.pfriembeer.com/beer/cashmere-single-hop-pale/
+    abv: 5.9
+    hops_as_written: Cashmere
+    hops:
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+  - slug: cherry-brandy-barrel-aged-belgian-strong-dark
+    name: Cherry Brandy Barrel Aged Belgian Strong Dark
+    url: https://www.pfriembeer.com/beer/cherry-brandy-barrel-aged-belgian-strong-dark/
+    abv: 10.0
+    hops_as_written: Tettnang, Perle
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: chocolate-raspberry-bourbon-barrel-aged-imperial-stout-club-exclusive
+    name: Chocolate Raspberry Bourbon Barrel Aged Imperial Stout - Club Exclusive
+    url: https://www.pfriembeer.com/beer/chocolate-raspberry-bourbon-barrel-aged-imperial-stout-club-exclusive/
+    abv: 10.5
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: citra-galaxy-ipa
+    name: Citra + Galaxy IPA
+    url: https://www.pfriembeer.com/beer/citra-galaxy-ipa/
+    abv: 5.9
+    hops_as_written: Citra, Galaxy
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: citra-strata-ipa
+    name: Citra + Strata IPA
+    url: https://www.pfriembeer.com/beer/citra-strata-ipa/
+    abv: 6.7
+    hops_as_written: Citra, Strata
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: coconut-ipa
+    name: Coconut IPA
+    url: https://www.pfriembeer.com/beer/coconut-ipa/
+    abv: 6.9
+    hops_as_written: Citra, Nelson, Mosaic, Chinook
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: coconut-mango-tart-ale
+    name: Coconut Mango Tart Ale
+    url: https://www.pfriembeer.com/beer/coconut-mango-tart-ale/
+    abv: 5.0
+    hops_as_written: Citra
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: coconut-stout
+    name: Coconut Stout
+    url: https://www.pfriembeer.com/beer/coconut-stout/
+    abv: 10.3
+    hops_as_written: Chinook, Sabro
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+  - slug: cognac-barrel-aged-double-mash-imperial-stout
+    name: Cognac Barrel Aged Double Mash Imperial Stout
+    url: https://www.pfriembeer.com/beer/cognac-barrel-aged-double-mash-imperial-stout/
+    abv: 14.0
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: coles-dunkel
+    name: Cole’s Dunkel
+    url: https://www.pfriembeer.com/beer/coles-dunkel/
+    abv: 5.5
+    hops_as_written: Hallertau Mittelfrüh, Tettnang Tettnanger
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+      - { hop: null, name: Tettnang Tettnanger, as_written: Tettnang Tettnanger }
+  - slug: columbus-cryo-mosaic-west-coast-ipa
+    name: Columbus Cryo + Mosaic West Coast IPA
+    url: https://www.pfriembeer.com/beer/columbus-cryo-mosaic-west-coast-ipa/
+    abv: 7.2
+    hops_as_written: Columbus Cryo, Mosaic
+    hops:
+      - { hop: columbus, name: Columbus, form: Cryo, as_written: Columbus Cryo }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: cosmic-guava-west-coast-ipa
+    name: Cosmic Guava West Coast IPA
+    url: https://www.pfriembeer.com/beer/cosmic-guava-west-coast-ipa/
+    abv: 7.2
+    hops_as_written: 'Krush, Mosaic, Euphorics: Cosmic Guava'
+    hops:
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: cryo-pale
+    name: Cryo Pale
+    url: https://www.pfriembeer.com/beer/cryo-pale/
+    abv: 6.3
+    hops_as_written: Cryo- Mosaic and Citra
+    hops:
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Cryo- Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: czech-dark-lager
+    name: Czech Dark Lager
+    url: https://www.pfriembeer.com/beer/czech-dark-lager/
+    abv: 5.3
+    hops_as_written: Perle, Saaz, Tettnang
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: czech-lager
+    name: Czech Lager
+    url: https://www.pfriembeer.com/beer/czech-lager/
+    abv: 5.1
+    hops_as_written: Select, Saaz, Perle
+    hops:
+      - { hop: null, name: Select, as_written: Select }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: daves-west-coast-ipa
+    name: Dave’s West Coast IPA
+    url: https://www.pfriembeer.com/beer/daves-west-coast-ipa/
+    abv: 7.2
+    hops_as_written: 'Simcoe, Simcoe Hyperboost, Mosaic, Citra, Krush Cryo, Columbus Cryo, Nectaron, Abstrax Quantum: Nectaron'
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: simcoe, name: Simcoe, form: HyperBoost, as_written: Simcoe Hyperboost }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+      - { hop: columbus, name: Columbus, form: Cryo, as_written: Columbus Cryo }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: nectaron, name: Nectaron, form: Quantum, as_written: 'Abstrax Quantum: Nectaron' }
+  - slug: distillers-cuvee-club-exclusive
+    name: Distiller’s Cuvée - Club Exclusive
+    url: https://www.pfriembeer.com/beer/distillers-cuvee-club-exclusive/
+    abv: 13.0
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: doppelbock
+    name: Doppelbock
+    url: https://www.pfriembeer.com/beer/doppelbock/
+    abv: 7.2
+    hops_as_written: Hallertau Perle, Tettnang Tettnanger, Select
+    hops:
+      - { hop: perle, name: Perle, as_written: Hallertau Perle }
+      - { hop: null, name: Tettnang Tettnanger, as_written: Tettnang Tettnanger }
+      - { hop: null, name: Select, as_written: Select }
+  - slug: double-barrel-cuvee-club-exclusive
+    name: Double Barrel Cuvée - Club Exclusive
+    url: https://www.pfriembeer.com/beer/double-barrel-cuvee-club-exclusive/
+    abv: 11.5
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: druif
+    name: Druif Blanc
+    url: https://www.pfriembeer.com/beer/druif/
+    abv: 7.3
+    hops_as_written: Aged Whole Leaf Hops
+    hops:
+      - { hop: null, name: Aged, form: whole cone, as_written: Aged Whole Leaf Hops }
+  - slug: druif-rouge
+    name: Druif Rouge
+    url: https://www.pfriembeer.com/beer/druif-rouge/
+    abv: 7.3
+    hops_as_written: Aged Whole Leaf Hops
+    hops:
+      - { hop: null, name: Aged, form: whole cone, as_written: Aged Whole Leaf Hops }
+  - slug: dry-hopped-farmhouse-ale
+    name: Dry Hopped Farmhouse Ale
+    url: https://www.pfriembeer.com/beer/dry-hopped-farmhouse-ale/
+    abv: 6.2
+    hops_as_written: Krush, Motueka, Nelson, Tettnang
+    hops:
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: dry-stout
+    name: Dry Stout
+    url: https://www.pfriembeer.com/beer/dry-stout/
+    abv: 4.8
+    hops_as_written: Perle, Chinook
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: earth-day-ipa
+    name: Earth Day IPA
+    url: https://www.pfriembeer.com/beer/earth-day-ipa/
+    abv: 6.6
+    hops_as_written: Mosaic Cryo, Mosaic Dynaboost, Citra, Krush
+    hops:
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic Cryo }
+      - { hop: mosaic, name: Mosaic, form: DynaBoost, as_written: Mosaic Dynaboost }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: Krush, as_written: Krush }
+  - slug: eclipse-strata-hazy-ipa
+    name: Eclipse + Strata Hazy IPA
+    url: https://www.pfriembeer.com/beer/eclipse-strata-hazy-ipa/
+    abv: 6.6
+    hops_as_written: Eclipse, Strata, Simcoe, Mosaic
+    hops:
+      - { hop: eclipse, name: Eclipse, as_written: Eclipse }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: eclipse-pale
+    name: Eclipse Pale
+    url: https://www.pfriembeer.com/beer/eclipse-pale/
+    abv: 6.9
+    hops_as_written: Eclipse
+    hops:
+      - { hop: eclipse, name: Eclipse, as_written: Eclipse }
+  - slug: esb
+    name: ESB
+    url: https://www.pfriembeer.com/beer/esb/
+    abv: 5.1
+    hops_as_written: UK Progress, UK Whitbread Golding Variety, UK Golding
+    hops:
+      - { hop: progress, name: Progress, as_written: UK Progress }
+      - { hop: whitbread-golding-variety, name: Whitbread Golding Variety, as_written: UK Whitbread Golding Variety }
+      - { hop: golding-uk, name: UK Golding, as_written: UK Golding }
+  - slug: estate-kriek-club-exclusive
+    name: Estate Kriek - Club Exclusive
+    url: https://www.pfriembeer.com/beer/estate-kriek-club-exclusive/
+    abv: 5.7
+    hops_as_written: Aged Whole Leaf Hops
+    hops:
+      - { hop: null, name: Aged, form: whole cone, as_written: Aged Whole Leaf Hops }
+  - slug: export-stout
+    name: Export Stout
+    url: https://www.pfriembeer.com/beer/export-stout/
+    abv: 7.5
+    hops_as_written: Chinook, Dolcita
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: dolcita, name: Dolcita, as_written: Dolcita }
+  - slug: fonio-lager
+    name: Fonio Lager
+    url: https://www.pfriembeer.com/beer/fonio-lager/
+    abv: 4.8
+    hops_as_written: Mandarina Bavaria, Nelson, Select, Perle
+    hops:
+      - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina Bavaria }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: null, name: Select, as_written: Select }
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: foragers-cuvee-club-exclusive
+    name: Forager’s Cuvée - Club Exclusive
+    url: https://www.pfriembeer.com/beer/foragers-cuvee-club-exclusive/
+    abv: 6.2
+    hops_as_written: Aged Czech Saaz
+    hops:
+      - { hop: saaz-cz, name: Czech Saaz, as_written: Aged Czech Saaz }
+  - slug: fraise
+    name: Fraise
+    url: https://www.pfriembeer.com/beer/fraise/
+    abv: 6.4
+    hops_as_written: Aged Czech Saaz
+    hops:
+      - { hop: saaz-cz, name: Czech Saaz, as_written: Aged Czech Saaz }
+  - slug: fresh-hop-barrel-aged-saison-club-exclusive
+    name: Fresh Hop Barrel Aged Saison - Club Exclusive
+    url: https://www.pfriembeer.com/beer/fresh-hop-barrel-aged-saison-club-exclusive/
+    abv: 6.5
+    hops_as_written: Tettnang Fresh Hops Citra
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: citra, name: Citra, fresh: true, as_written: Fresh Hops Citra }
+  - slug: fresh-hop-hazy-ipa
+    name: Fresh Hop Hazy IPA
+    url: https://www.pfriembeer.com/beer/fresh-hop-hazy-ipa/
+    abv: 6.8
+    hops_as_written: Citra, Krush Cryo, Riwaka Fresh Hops Centennial
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+      - { hop: riwaka, name: Riwaka, as_written: Riwaka }
+      - { hop: centennial, name: Centennial, fresh: true, as_written: Fresh Hops Centennial }
+  - slug: fresh-hop-kellerbier
+    name: Fresh Hop Kellerbier
+    url: https://www.pfriembeer.com/beer/fresh-hop-kellerbier/
+    abv: 4.9
+    hops_as_written: Perle, Saphir, Tettnang, Spalt Select Fresh Hops Willamette
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: spalter-select, name: Spalt Select, as_written: Spalt Select }
+      - { hop: willamette, name: Willamette, fresh: true, as_written: Fresh Hops Willamette }
+  - slug: fresh-hop-lorien-pilsner
+    name: Fresh Hop Lórien Pilsner
+    url: https://www.pfriembeer.com/beer/fresh-hop-lorien-pilsner/
+    abv: 4.9
+    hops_as_written: Perle, Saphir, Tettnang, Spalt Select, Lórien Fresh Hops Lórien
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: spalter-select, name: Spalt Select, as_written: Spalt Select }
+      - { hop: lorien, name: Lórien, as_written: Lórien }
+      - { hop: lorien, name: Lórien, fresh: true, as_written: Fresh Hops Lórien }
+  - slug: fresh-hop-pilsner
+    name: Fresh Hop Pilsner
+    url: https://www.pfriembeer.com/beer/fresh-hop-pilsner/
+    abv: 4.9
+    hops_as_written: Saphir, Tettnang, Perle Fresh Hops Goschie Farms Tettnang
+    hops:
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: tettnang, name: Tettnang, fresh: true, farm: Goschie Farms, as_written: Fresh Hops Goschie Farms Tettnang }
+  - slug: fresh-hop-strata-ipa
+    name: Fresh Hop Strata IPA
+    url: https://www.pfriembeer.com/beer/fresh-hop-strata-ipa/
+    abv: 6.9
+    hops_as_written: Strata
+    hops:
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: fresh-hop-pale
+    name: Fresh Hop Strata Pale
+    url: https://www.pfriembeer.com/beer/fresh-hop-pale/
+    abv: 5.4
+    hops_as_written: Citra, Mosaic, Nelson Fresh Hops Strata
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: strata, name: Strata, fresh: true, as_written: Fresh Hops Strata }
+  - slug: fresh-hop-west-coast-ipa
+    name: Fresh Hop West Coast IPA
+    url: https://www.pfriembeer.com/beer/fresh-hop-west-coast-ipa/
+    abv: 6.8
+    hops_as_written: Cryo Fresh Mosaic, Cryo Fresh Krush, Mosaic, Simcoe Dynaboost Fresh Hops Simcoe
+    hops:
+      - { hop: mosaic, name: Mosaic, fresh: true, as_written: Fresh Mosaic }
+      - { hop: krush, name: Krush, fresh: true, as_written: Fresh Krush }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, form: DynaBoost, as_written: Simcoe Dynaboost }
+      - { hop: simcoe, name: Simcoe, fresh: true, as_written: Fresh Hops Simcoe }
+  - slug: fruited-spontanee
+    name: Fruited Spontanée
+    url: https://www.pfriembeer.com/beer/fruited-spontanee/
+    abv: 6.2
+    hops_as_written: Aged Whole Leaf Noble Hops
+    hops:
+      - { hop: null, name: Aged Whole Leaf Noble, as_written: Aged Whole Leaf Noble Hops }
+  - slug: german-coast-pils
+    name: German Coast Pils
+    url: https://www.pfriembeer.com/beer/german-coast-pils/
+    abv: 5.2
+    hops_as_written: Perle, Saphir, Huell Melon, Amarillo T45
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+      - { hop: huell-melon, name: Huell Melon, as_written: Huell Melon }
+      - { hop: amarillo, name: Amarillo, form: T45, as_written: Amarillo T45 }
+  - slug: guava-saison
+    name: Guava Saison
+    url: https://www.pfriembeer.com/beer/guava-saison/
+    abv: 4.5
+    hops_as_written: German Tettnang, Huell Melon, Motueka
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: German Tettnang }
+      - { hop: huell-melon, name: Huell Melon, as_written: Huell Melon }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+  - slug: hazy-citra-pale
+    name: Hazy Citra Pale
+    url: https://www.pfriembeer.com/beer/hazy-citra-pale/
+    abv: 5.5
+    hops_as_written: Citra
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: hazy-double-ipa
+    name: Hazy Double IPA
+    url: https://www.pfriembeer.com/beer/hazy-double-ipa/
+    abv: 9.2
+    hops_as_written: Citra
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: hazy-pale
+    name: Hazy Pale
+    url: https://www.pfriembeer.com/beer/hazy-pale/
+    abv: 5.5
+    hops_as_written: Citra, Krush Cryo, Nelson
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+  - slug: hazy-sabro-ipa
+    name: Hazy Sabro IPA
+    url: https://www.pfriembeer.com/beer/hazy-sabro-ipa/
+    abv: 6.6
+    hops_as_written: Mosaic, Citra, Sabro
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+  - slug: hyper-ipa
+    name: Hyper IPA
+    url: https://www.pfriembeer.com/beer/hyper-ipa/
+    abv: 6.1
+    hops_as_written: Chinook, Simcoe Hyperboost, HBC-638, Krush Cyo, HBC-1019
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: simcoe, name: Simcoe, form: HyperBoost, as_written: Simcoe Hyperboost }
+      - { hop: null, name: HBC-638, as_written: HBC-638 }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cyo }
+      - { hop: dolcita, name: HBC-1019, as_written: HBC-1019 }
+  - slug: ipa
+    name: IPA
+    url: https://www.pfriembeer.com/beer/ipa/
+    abv: 6.8
+    hops_as_written: Chinook, Mosaic, Citra
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: italian-pilsner
+    name: Italian Pilsner
+    url: https://www.pfriembeer.com/beer/italian-pilsner/
+    abv: 4.8
+    hops_as_written: Perle, Saphir, Tettnang, Spalt Select
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: spalter-select, name: Spalt Select, as_written: Spalt Select }
+  - slug: japanese-mizunara-oak-aged-whisky-stout-club-exclusive
+    name: Japanese Mizunara Oak Aged Whisky Stout - Club Exclusive
+    url: https://www.pfriembeer.com/beer/japanese-mizunara-oak-aged-whisky-stout-club-exclusive/
+    abv: 10.8
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: juicy-ipa
+    name: Juicy IPA
+    url: https://www.pfriembeer.com/beer/juicy-ipa/
+    abv: 7.2
+    hops_as_written: Chinook, El Dorado, Cashmere, Citra
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: kellerbier
+    name: Kellerbier
+    url: https://www.pfriembeer.com/beer/kellerbier/
+    abv: 5.0
+    hops_as_written: Tettnang, Spalt
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: spalt-spalter, name: Spalt, as_written: Spalt }
+  - slug: kelsies-rye-lager
+    name: Kelsie’s Rye Lager
+    url: https://www.pfriembeer.com/beer/kelsies-rye-lager/
+    abv: 4.8
+    hops_as_written: Perle, Tettnang, Saaz, Mandarina Bavaria, Select
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina Bavaria }
+      - { hop: null, name: Select, as_written: Select }
+  - slug: kettle-soured-passionfruit-pale
+    name: Kettle Soured Passionfruit Pale
+    url: https://www.pfriembeer.com/beer/kettle-soured-passionfruit-pale/
+    abv: 5.5
+    hops_as_written: Citra, Mosaic, Hallertau Blanc, Chinook
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: krush-motueka-hazy-ipa
+    name: Krush + Motueka Hazy IPA
+    url: https://www.pfriembeer.com/beer/krush-motueka-hazy-ipa/
+    abv: 7.0
+    hops_as_written: Krush, Motueka, Citra
+    hops:
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: krush-pale
+    name: Krush Pale
+    url: https://www.pfriembeer.com/beer/krush-pale/
+    abv: 6.2
+    hops_as_written: Krush, Krush Cryo, Krush Hyperboost
+    hops:
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+      - { hop: krush, name: Krush, form: HyperBoost, as_written: Krush Hyperboost }
+  - slug: krush-west-coast-ipa
+    name: Krush West Coast IPA
+    url: https://www.pfriembeer.com/beer/krush-west-coast-ipa/
+    abv: 6.9
+    hops_as_written: Krush, Krush Cryo, Krush Hyperboost
+    hops:
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+      - { hop: krush, name: Krush, form: HyperBoost, as_written: Krush Hyperboost }
+  - slug: kolsch
+    name: Kölsch
+    url: https://www.pfriembeer.com/beer/kolsch/
+    abv: 4.8
+    hops_as_written: Tettnang Tettnanger, Hallertau Perle
+    hops:
+      - { hop: null, name: Tettnang Tettnanger, as_written: Tettnang Tettnanger }
+      - { hop: perle, name: Perle, as_written: Hallertau Perle }
+  - slug: lager
+    name: Lager
+    url: https://www.pfriembeer.com/beer/lager/
+    abv: 5.0
+    hops_as_written: Perle T45, Tettnang, Select
+    hops:
+      - { hop: perle, name: Perle, form: T45, as_written: Perle T45 }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: null, name: Select, as_written: Select }
+  - slug: las-pinas-coladas-club-exclusive
+    name: Las Piñas Coladas - Club Exclusive
+    url: https://www.pfriembeer.com/beer/las-pinas-coladas-club-exclusive/
+    abv: 7.1
+    hops_as_written: Aged Czech Saaz
+    hops:
+      - { hop: saaz-cz, name: Czech Saaz, as_written: Aged Czech Saaz }
+  - slug: lemon-basil-bosbessen-club-exclusive
+    name: Lemon Basil Bosbessen - Club Exclusive
+    url: https://www.pfriembeer.com/beer/lemon-basil-bosbessen-club-exclusive/
+    abv: 6.0
+    hops_as_written: Aged Whole Leaf Noble Hops
+    hops:
+      - { hop: null, name: Aged Whole Leaf Noble, as_written: Aged Whole Leaf Noble Hops }
+  - slug: lemon-zest-farmhouse-ale
+    name: Lemon Zest Farmhouse Ale
+    url: https://www.pfriembeer.com/beer/lemon-zest-farmhouse-ale/
+    abv: 6.2
+    hops_as_written: Tettnang, Nelson, Krush
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: krush, name: Krush, as_written: Krush }
+  - slug: maibock
+    name: Maibock
+    url: https://www.pfriembeer.com/beer/maibock/
+    abv: 7.8
+    hops_as_written: Perle, Tettnanger, Saphir
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+  - slug: maple-barrel-aged-pastry-stout
+    name: Maple Barrel Aged Pastry Stout
+    url: https://www.pfriembeer.com/beer/maple-barrel-aged-pastry-stout/
+    abv: 8.5
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: mexican-chocolate-stout
+    name: Mexican Chocolate Stout
+    url: https://www.pfriembeer.com/beer/mexican-chocolate-stout/
+    abv: 8.1
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: mexican-dark-lager
+    name: Mexican Dark Lager
+    url: https://www.pfriembeer.com/beer/mexican-dark-lager/
+    abv: 5.2
+    hops_as_written: Perle, Saaz
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: mexican-vienna-lager
+    name: Mexican Vienna Lager
+    url: https://www.pfriembeer.com/beer/mexican-vienna-lager/
+    abv: 4.5
+    hops_as_written: Perle, Czech Saaz, Tettnang
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: midwest-ipa
+    name: Midwest IPA
+    url: https://www.pfriembeer.com/beer/midwest-ipa/
+    abv: 6.8
+    hops_as_written: Citra, Mosaic, Galaxy, Nelson
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+  - slug: mosaic-krush-cryo-west-coast-ipa
+    name: Mosaic + Krush Cryo West Coast IPA
+    url: https://www.pfriembeer.com/beer/mosaic-krush-cryo-west-coast-ipa/
+    abv: 7.2
+    hops_as_written: Mosaic, Krush Cryo, Columbus Cryo
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+      - { hop: columbus, name: Columbus, form: Cryo, as_written: Columbus Cryo }
+  - slug: mosaic-strata-west-coast-ipa
+    name: Mosaic + Strata West Coast IPA
+    url: https://www.pfriembeer.com/beer/mosaic-strata-west-coast-ipa/
+    abv: 7.0
+    hops_as_written: Chinook, Mosaic, Strata, CGX Strata
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: strata, name: Strata, form: CGX, as_written: CGX Strata }
+  - slug: mosaic-single-hop-pale
+    name: Mosaic Pale
+    url: https://www.pfriembeer.com/beer/mosaic-single-hop-pale/
+    abv: 6.2
+    hops_as_written: Mosaic, Mosaic Cryo, Mosaic Dynaboost
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic Cryo }
+      - { hop: mosaic, name: Mosaic, form: DynaBoost, as_written: Mosaic Dynaboost }
+  - slug: motueka-west-coast-ipa
+    name: Motueka West Coast IPA
+    url: https://www.pfriembeer.com/beer/motueka-west-coast-ipa/
+    abv: 7.2
+    hops_as_written: Motueka
+    hops:
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+  - slug: marzen
+    name: Märzen
+    url: https://www.pfriembeer.com/beer/marzen/
+    abv: 5.9
+    hops_as_written: Perle, Spalt
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: spalt-spalter, name: Spalt, as_written: Spalt }
+  - slug: nectarine-golden-ale
+    name: Nectarine Golden Ale
+    url: https://www.pfriembeer.com/beer/nectarine-golden-ale/
+    abv: 7.1
+    hops_as_written: Tettnanger, Hallertau Blanc
+    hops:
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+      - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
+  - slug: nectaron-hazy-ipa
+    name: Nectaron Hazy IPA
+    url: https://www.pfriembeer.com/beer/nectaron-hazy-ipa/
+    abv: 7.3
+    hops_as_written: Nectaron, Citra
+    hops:
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: nectaron-ipa
+    name: Nectaron IPA
+    url: https://www.pfriembeer.com/beer/nectaron-ipa/
+    abv: 6.7
+    hops_as_written: Nectaron
+    hops:
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+  - slug: nelson-pale
+    name: Nelson Pale
+    url: https://www.pfriembeer.com/beer/nelson-pale/
+    abv: 6.2
+    hops_as_written: Nelson
+    hops:
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+  - slug: new-zealand-hazy-ipa
+    name: New Zealand Hazy IPA
+    url: https://www.pfriembeer.com/beer/new-zealand-hazy-ipa/
+    abv: 7.3
+    hops_as_written: Motueka, Riwaka, Rakau, Nectaron
+    hops:
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+      - { hop: riwaka, name: Riwaka, as_written: Riwaka }
+      - { hop: rakau, name: Rakau, as_written: Rakau }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+  - slug: new-zealand-pale
+    name: New Zealand Pale
+    url: https://www.pfriembeer.com/beer/new-zealand-pale/
+    abv: 5.9
+    hops_as_written: Nectaron, Motueka, Nelson Sauvin
+    hops:
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: north-german-pilsner
+    name: North German Pilsner
+    url: https://www.pfriembeer.com/beer/north-german-pilsner/
+    abv: 4.8
+    hops_as_written: Herkules Extract, Saphir
+    hops:
+      - { hop: herkules, name: Herkules, form: extract, as_written: Herkules Extract }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+  - slug: orange-curacao-barrel-aged-belgian-christmas-ale-beer-exclusive
+    name: Orange Curaçao Barrel Aged Belgian Christmas Ale - Beer Exclusive
+    url: https://www.pfriembeer.com/beer/orange-curacao-barrel-aged-belgian-christmas-ale-beer-exclusive/
+    abv: 8.0
+    hops_as_written: Perle, Tettnang, Cashmere
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+  - slug: oregon-coast-ipa
+    name: Oregon Coast IPA
+    url: https://www.pfriembeer.com/beer/oregon-coast-ipa/
+    abv: 7.0
+    hops_as_written: Eclipse, Krush, Citra Cryo, Simcoe
+    hops:
+      - { hop: eclipse, name: Eclipse, as_written: Eclipse }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Citra Cryo }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: oregon-lager
+    name: Oregon Lager
+    url: https://www.pfriembeer.com/beer/oregon-lager/
+    abv: 4.8
+    hops_as_written: Perle, Tettnanger, Oregon Cascade
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+      - { hop: cascade, name: Cascade, as_written: Oregon Cascade }
+  - slug: oyster-stout
+    name: Oyster Stout
+    url: https://www.pfriembeer.com/beer/oyster-stout/
+    abv: 6.6
+    hops_as_written: Chinook, Cascade
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: pacific-coast-pils
+    name: Pacific Coast Pils
+    url: https://www.pfriembeer.com/beer/pacific-coast-pils/
+    abv: 6.0
+    hops_as_written: Mosaic, Mosaic Cryo, Nelson, Krush, Krush Cryo, Simcoe, Simcoe Dynaboost
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic Cryo }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: simcoe, name: Simcoe, form: DynaBoost, as_written: Simcoe Dynaboost }
+  - slug: pale
+    name: Pale
+    url: https://www.pfriembeer.com/beer/pale/
+    abv: 5.4
+    hops_as_written: Citra, Mosaic, Nelson Sauvin
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: paloma-ipa
+    name: Paloma IPA
+    url: https://www.pfriembeer.com/beer/paloma-ipa/
+    abv: 6.6
+    hops_as_written: Chinook, Citra, Euphorics Pomelo Day Dream
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: passionfruit-farmhouse-ale
+    name: Passionfruit Farmhouse Ale
+    url: https://www.pfriembeer.com/beer/passionfruit-farmhouse-ale/
+    abv: 4.8
+    hops_as_written: German Tettnang, Galaxy
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: German Tettnang }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: passionfruit-hazy-ipa
+    name: Passionfruit Hazy IPA
+    url: https://www.pfriembeer.com/beer/passionfruit-hazy-ipa/
+    abv: 6.3
+    hops_as_written: Citra
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: passionfruit-pale
+    name: Passionfruit Pale
+    url: https://www.pfriembeer.com/beer/passionfruit-pale/
+    abv: 5.5
+    hops_as_written: Citra, Mosaic, Hallertau Blanc, Chinook
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: pastry-stout
+    name: Pastry Stout
+    url: https://www.pfriembeer.com/beer/pastry-stout/
+    abv: 9.5
+    hops_as_written: Warrior, Chinook, Cascade
+    hops:
+      - { hop: warrior, name: Warrior, as_written: Warrior }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: peacharine-hazy-ipa
+    name: Peacharine Hazy IPA
+    url: https://www.pfriembeer.com/beer/peacharine-hazy-ipa/
+    abv: 7.3
+    hops_as_written: Peacharine, Citra
+    hops:
+      - { hop: null, name: Peacharine, as_written: Peacharine }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: peacharine-pale
+    name: Peacharine Pale
+    url: https://www.pfriembeer.com/beer/peacharine-pale/
+    abv: 5.8
+    hops_as_written: Peacharine, Citra
+    hops:
+      - { hop: null, name: Peacharine, as_written: Peacharine }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: pear-golden-ale
+    name: Pear Golden Ale
+    url: https://www.pfriembeer.com/beer/pear-golden-ale/
+    abv: 7.3
+    hops_as_written: Tettnang, Hallertau Blanc
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
+  - slug: pfriembeachwood-ipl
+    name: pFriem + Beachwood IPL
+    url: https://www.pfriembeer.com/beer/pfriembeachwood-ipl/
+    abv: 6.1
+    hops_as_written: Warrior, Loral, Mosaic, El Dorado
+    hops:
+      - { hop: warrior, name: Warrior, as_written: Warrior }
+      - { hop: loral, name: Loral, as_written: Loral }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+  - slug: pfriem-beervana-baltic-porter
+    name: pFriem + Beervana Baltic Porter
+    url: https://www.pfriembeer.com/beer/pfriem-beervana-baltic-porter/
+    abv: 8.5
+    hops_as_written: Perle, Saaz
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: pfriem-breakside-barrel-aged-bananas-foster-black-barleywine-club-exclusive
+    name: pFriem + Breakside Barrel Aged Bananas Foster Black Barleywine - Club Exclusive
+    url: https://www.pfriembeer.com/beer/pfriem-breakside-barrel-aged-bananas-foster-black-barleywine-club-exclusive/
+    abv: 11.2
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: pfriem-breakside-new-zealand-ipa
+    name: pFriem + Breakside New Zealand IPA
+    url: https://www.pfriembeer.com/beer/pfriem-breakside-new-zealand-ipa/
+    abv: 6.5
+    hops_as_written: Nelson, Krush Cryo, Simcoe Dynaboost, Nectaron, Nectaron Quantum Brite
+    hops:
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+      - { hop: simcoe, name: Simcoe, form: DynaBoost, as_written: Simcoe Dynaboost }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: nectaron, name: Nectaron, form: Quantum, as_written: Nectaron Quantum Brite }
+  - slug: pfriem-cerveceria-hercules-pink-xocoyul-fest-pils
+    name: pFriem + Cervecería Hércules Pink Xocoyul Fest Pils
+    url: https://www.pfriembeer.com/beer/pfriem-cerveceria-hercules-pink-xocoyul-fest-pils/
+    abv: 6.0
+    hops_as_written: Perle, Tettnang, Select
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: null, name: Select, as_written: Select }
+  - slug: pfriem-coava-bourbon-barrel-aged-imperial-coffee-stout-club-exclusive
+    name: pFriem + Coava Bourbon Barrel Aged Imperial Coffee Stout - Club Exclusive
+    url: https://www.pfriembeer.com/beer/pfriem-coava-bourbon-barrel-aged-imperial-coffee-stout-club-exclusive/
+    abv: 13.6
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: pfriem-georgetown-the-tao-of-josh-west-coast-ipa
+    name: pFriem + Georgetown The Tao of Josh West Coast IPA
+    url: https://www.pfriembeer.com/beer/pfriem-georgetown-the-tao-of-josh-west-coast-ipa/
+    abv: 7.0
+    hops_as_written: Mosaic, Mosaic Dynaboost, Citra, Nelson, Nectaron, Krush Cryo
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: mosaic, name: Mosaic, form: DynaBoost, as_written: Mosaic Dynaboost }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+  - slug: pfriem-grand-fir-west-coast-pilsner
+    name: pFriem + Grand Fir West Coast Pilsner
+    url: https://www.pfriembeer.com/beer/pfriem-grand-fir-west-coast-pilsner/
+    abv: 5.2
+    hops_as_written: 'Krush, Mosaic, Riwaka Advanced Hop Products Euphorics: Pineapple Paradise'
+    hops:
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: null, name: 'Riwaka Advanced  Products Euphorics: Pineapple Paradise', as_written: 'Riwaka Advanced Hop Products Euphorics: Pineapple Paradise' }
+  - slug: pfriem-great-notion-hazy-ipa
+    name: Pfriem + Great Notion Hazy IPA
+    url: https://www.pfriembeer.com/beer/pfriem-great-notion-hazy-ipa/
+    abv: 7.0
+    hops_as_written: Mosaic Dynaboost, HBC 1019, Krush Cryo, Krush, Nectaron
+    hops:
+      - { hop: mosaic, name: Mosaic, form: DynaBoost, as_written: Mosaic Dynaboost }
+      - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+  - slug: pfriem-green-cheek-california-ipa
+    name: pFriem + Green Cheek California IPA
+    url: https://www.pfriembeer.com/beer/pfriem-green-cheek-california-ipa/
+    abv: 7.0
+    hops_as_written: Mosaic, Mosaic Cryo, Citra, Eclipse, Krush Cryo
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic Cryo }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: eclipse, name: Eclipse, as_written: Eclipse }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+  - slug: pfriem-highland-park-timbo-pils
+    name: pFriem + Highland Park Timbo Pils
+    url: https://www.pfriembeer.com/beer/pfriem-highland-park-timbo-pils/
+    abv: 5.8
+    hops_as_written: Select, Saaz, Citra, Mosaic
+    hops:
+      - { hop: null, name: Select, as_written: Select }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: pfriem-highland-park-west-coast-ipa
+    name: pFriem + Highland Park West Coast IPA
+    url: https://www.pfriembeer.com/beer/pfriem-highland-park-west-coast-ipa/
+    abv: 6.8
+    hops_as_written: Mosaic, Mosaic 803, Krush Cryo, Nectaron, Simcoe
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic 803 }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: pfriem-keeper-coffee-belgian-strong-dark
+    name: pFriem + Keeper Coffee Belgian Strong Dark
+    url: https://www.pfriembeer.com/beer/pfriem-keeper-coffee-belgian-strong-dark/
+    abv: 10.0
+    hops_as_written: Tettnang, Perle, Cashmere
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+  - slug: pfriem-loyal-legion-vietnamese-lager
+    name: pFriem + Loyal Legion Vietnamese Lager
+    url: https://www.pfriembeer.com/beer/pfriem-loyal-legion-vietnamese-lager/
+    abv: 4.9
+    hops_as_written: Tettnang, Saaz, Nelson, Krush
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: krush, name: Krush, as_written: Krush }
+  - slug: pfriem-nebuleus-star-kitchen-club-exclusive
+    name: 'pFriem + Nebuleus: Star Kitchen - Club Exclusive'
+    url: https://www.pfriembeer.com/beer/pfriem-nebuleus-star-kitchen-club-exclusive/
+    abv: 7.6
+    hops_as_written: Aged Czech Saaz
+    hops:
+      - { hop: saaz-cz, name: Czech Saaz, as_written: Aged Czech Saaz }
+  - slug: pfriem-north-park-west-coast-ipa
+    name: pFriem + North Park West Coast IPA
+    url: https://www.pfriembeer.com/beer/pfriem-north-park-west-coast-ipa/
+    abv: 7.4
+    hops_as_written: Mosaic, Mosaic Dynaboost, Krush Cryo, Nelson, Nectaron, Simcoe
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: mosaic, name: Mosaic, form: DynaBoost, as_written: Mosaic Dynaboost }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: pfriem-ontap-8th-anniversary-west-coast-ipa
+    name: pFriem + OnTap 8th Anniversary West Coast IPA
+    url: https://www.pfriembeer.com/beer/pfriem-ontap-8th-anniversary-west-coast-ipa/
+    abv: 6.3
+    hops_as_written: Simcoe, Simcoe Dynaboost, Nectaron, Krush, Krush Cryo
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: simcoe, name: Simcoe, form: DynaBoost, as_written: Simcoe Dynaboost }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+  - slug: pfriem-three-on-a-match-west-coast-ipa
+    name: pFriem + Three on a Match West Coast IPA
+    url: https://www.pfriembeer.com/beer/pfriem-three-on-a-match-west-coast-ipa/
+    abv: 6.7
+    hops_as_written: 'Citra, Krush, Krush Cryo, Nelson, Strata, Euphorics: Pineapple Paradise'
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: pfriem-von-ebert-west-coast-ipa
+    name: pFriem + Von Ebert West Coast IPA
+    url: https://www.pfriembeer.com/beer/pfriem-von-ebert-west-coast-ipa/
+    abv: 6.8
+    hops_as_written: Mosaic, Mosaic Cryo, Krush, Krush Cryo, Strata
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic Cryo }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: pfriem-westbound-down-west-coast-ipa
+    name: pFriem + Westbound & Down West Coast IPA
+    url: https://www.pfriembeer.com/beer/pfriem-westbound-down-west-coast-ipa/
+    abv: 7.0
+    hops_as_written: Mosaic, Nectaron, Krush, Krush Cryo, Krush Hyperboost
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+      - { hop: krush, name: Krush, form: HyperBoost, as_written: Krush Hyperboost }
+  - slug: pilsner
+    name: Pilsner
+    url: https://www.pfriembeer.com/beer/pilsner/
+    abv: 4.9
+    hops_as_written: Perle T45, Saphir, Tettnang, Spalt Select
+    hops:
+      - { hop: perle, name: Perle, form: T45, as_written: Perle T45 }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: spalter-select, name: Spalt Select, as_written: Spalt Select }
+  - slug: port-barrel-aged-doppelbock
+    name: Port Barrel Aged Doppelbock
+    url: https://www.pfriembeer.com/beer/port-barrel-aged-doppelbock/
+    abv: 7.7
+    hops_as_written: Hallertau Perle, Tettnang Tettnanger
+    hops:
+      - { hop: perle, name: Perle, as_written: Hallertau Perle }
+      - { hop: null, name: Tettnang Tettnanger, as_written: Tettnang Tettnanger }
+  - slug: rum-barrel-aged-ginger-molasses-oatmeal-stout-club-exclusive
+    name: Rum Barrel Aged Ginger Molasses Oatmeal Stout - Club Exclusive
+    url: https://www.pfriembeer.com/beer/rum-barrel-aged-ginger-molasses-oatmeal-stout-club-exclusive/
+    abv: 12.3
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: saison-roja-club-exclusive
+    name: Saison Roja - Club Exclusive
+    url: https://www.pfriembeer.com/beer/saison-roja-club-exclusive/
+    abv: 7.5
+    hops_as_written: Perle
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: shebrew-french-pils
+    name: SheBrew French Pils
+    url: https://www.pfriembeer.com/beer/shebrew-french-pils/
+    abv: 5.0
+    hops_as_written: Perle, Tettnang, Barbe Rouge, Mistral, HBC 630
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: barbe-rouge, name: Barbe Rouge, as_written: Barbe Rouge }
+      - { hop: mistral, name: Mistral, as_written: Mistral }
+      - { hop: null, name: HBC 630, as_written: HBC 630 }
+  - slug: south-pacific-ipa
+    name: South Pacific IPA
+    url: https://www.pfriembeer.com/beer/south-pacific-ipa/
+    abv: 6.8
+    hops_as_written: Citra, Nelson, Nectaron, Eclipse
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: eclipse, name: Eclipse, as_written: Eclipse }
+  - slug: spontanee
+    name: Spontanée
+    url: https://www.pfriembeer.com/beer/spontanee/
+    abv: 6.6
+    hops_as_written: Aged Whole Leaf Noble
+    hops:
+      - { hop: null, name: Aged Whole Leaf Noble, as_written: Aged Whole Leaf Noble }
+  - slug: spontanee-3-year-blend
+    name: Spontanée 3 Year Blend
+    url: https://www.pfriembeer.com/beer/spontanee-3-year-blend/
+    abv: 5.8
+    hops_as_written: Aged whole leaf noble
+    hops:
+      - { hop: null, name: Aged whole leaf noble, as_written: Aged whole leaf noble }
+  - slug: star-party-ipa
+    name: Star Party IPA
+    url: https://www.pfriembeer.com/beer/star-party-ipa/
+    abv: 7.3
+    hops_as_written: Citra, El Dorado
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+  - slug: stone-fruit-cuvee
+    name: Stone Fruit Cuvée
+    url: https://www.pfriembeer.com/beer/stone-fruit-cuvee/
+    abv: 6.3
+    hops_as_written: Aged Czech Saaz
+    hops:
+      - { hop: saaz-cz, name: Czech Saaz, as_written: Aged Czech Saaz }
+  - slug: strata-ipa
+    name: Strata IPA
+    url: https://www.pfriembeer.com/beer/strata-ipa/
+    abv: 6.7
+    hops_as_written: Strata
+    hops:
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: tequila-barrel-aged-mole-stout
+    name: Tequila Barrel Aged Mole Stout
+    url: https://www.pfriembeer.com/beer/tequila-barrel-aged-mole-stout/
+    abv: 9.0
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: thora-west-coast-pale
+    name: Thora West Coast Pale
+    url: https://www.pfriembeer.com/beer/thora-west-coast-pale/
+    abv: 5.8
+    hops_as_written: Thora (HQG-4), Mosaic
+    hops:
+      - { hop: null, name: Thora, product: HQG-4, as_written: Thora (HQG-4) }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: tiki-saturn-hazy-ipa
+    name: Tiki Saturn Hazy IPA
+    url: https://www.pfriembeer.com/beer/tiki-saturn-hazy-ipa/
+    abv: 7.0
+    hops_as_written: Citra, Krush, Krush Cryo
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+  - slug: trinity-west-coast-ipa
+    name: Trinity West Coast IPA
+    url: https://www.pfriembeer.com/beer/trinity-west-coast-ipa/
+    abv: 7.0
+    hops_as_written: Citra, Citra Dynaboost, Citra Cryo, Mosaic, Simcoe
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: citra, name: Citra, form: DynaBoost, as_written: Citra Dynaboost }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Citra Cryo }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: triple-hazy-ipa
+    name: Triple Hazy IPA
+    url: https://www.pfriembeer.com/beer/triple-hazy-ipa/
+    abv: 10.0
+    hops_as_written: Mosaic, Citra, Galaxy
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: triple-ipa
+    name: Triple IPA
+    url: https://www.pfriembeer.com/beer/triple-ipa/
+    abv: 10.0
+    hops_as_written: Chinook, Simcoe, Simcoe Dynaboost, Mosaic, Mosaic Hyperboost, Citra, Citra Cryo Nectaron
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: simcoe, name: Simcoe, form: DynaBoost, as_written: Simcoe Dynaboost }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: mosaic, name: Mosaic, form: HyperBoost, as_written: Mosaic Hyperboost }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: null, name: Citra Cryo Nectaron, as_written: Citra Cryo Nectaron }
+  - slug: tropical-hazy-ipa
+    name: Tropical Hazy IPA
+    url: https://www.pfriembeer.com/beer/tropical-hazy-ipa/
+    abv: 6.3
+    hops_as_written: Citra, Krush Cryo
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+  - slug: tropical-ipa
+    name: Tropical IPA
+    url: https://www.pfriembeer.com/beer/tropical-ipa/
+    abv: 6.7
+    hops_as_written: Chinook, Citra, Nelson, El Dorado
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+  - slug: vanilla-barrel-aged-oatmeal-stout
+    name: Vanilla Barrel Aged Oatmeal Stout
+    url: https://www.pfriembeer.com/beer/vanilla-barrel-aged-oatmeal-stout/
+    abv: 9.0
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: vanilla-barrel-aged-oatmeal-stout-club-exclusive
+    name: Vanilla Barrel Aged Oatmeal Stout - Club Exclusive
+    url: https://www.pfriembeer.com/beer/vanilla-barrel-aged-oatmeal-stout-club-exclusive/
+    abv: 9.0
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: vanilla-chai-bourbon-barrel-aged-stout-club-exclusive
+    name: Vanilla Chai Bourbon Barrel Aged Stout - Club Exclusive
+    url: https://www.pfriembeer.com/beer/vanilla-chai-bourbon-barrel-aged-stout-club-exclusive/
+    abv: 11.0
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: vermouth-barrel-aged-rye-imperial-brown-ale
+    name: Vermouth Barrel Aged Rye Imperial Brown Ale
+    url: https://www.pfriembeer.com/beer/vermouth-barrel-aged-rye-imperial-brown-ale/
+    abv: 11.4
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: vinifera-saison
+    name: Vinifera Saison
+    url: https://www.pfriembeer.com/beer/vinifera-saison/
+    abv: 7.4
+    hops_as_written: Tettnang
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: vista-pale
+    name: Vista Pale
+    url: https://www.pfriembeer.com/beer/vista-pale/
+    abv: 5.9
+    hops_as_written: Vista
+    hops:
+      - { hop: vista, name: Vista, as_written: Vista }
+  - slug: we-love-la-wcipa
+    name: We Love LA West Coast IPA
+    url: https://www.pfriembeer.com/beer/we-love-la-wcipa/
+    abv: 7.2
+    hops_as_written: Mosaic, Citra, Simcoe, Citra Hyperboost, Mosaic LupoMax
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: citra, name: Citra, form: HyperBoost, as_written: Citra Hyperboost }
+      - { hop: mosaic, name: Mosaic, form: LupoMax, as_written: Mosaic LupoMax }
+  - slug: west-coast-ipa
+    name: West Coast IPA
+    url: https://www.pfriembeer.com/beer/west-coast-ipa/
+    abv: 6.8
+    hops_as_written: Citra, Krush, Krush Cryo, Nelson, Mosaic
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: west-coast-pilsner
+    name: West Coast Pilsner
+    url: https://www.pfriembeer.com/beer/west-coast-pilsner/
+    abv: 4.9
+    hops_as_written: Citra, Citra Dynaboost, Citra 803, Krush, Krush Cryo, Nectaron
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: citra, name: Citra, form: DynaBoost, as_written: Citra Dynaboost }
+      - { hop: citra, name: Citra, as_written: Citra 803 }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+  - slug: wheat-pale
+    name: Wheat Pale
+    url: https://www.pfriembeer.com/beer/wheat-pale/
+    abv: 5.3
+    hops_as_written: Citra, Nelson, Mosaic, Chinook
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: xpa
+    name: XPA
+    url: https://www.pfriembeer.com/beer/xpa/
+    abv: 5.0
+    hops_as_written: Citra, Eclipse, Krush, Krush Cryo, Krush Hyperboost, Simcoe
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: eclipse, name: Eclipse, as_written: Eclipse }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+      - { hop: krush, name: Krush, form: HyperBoost, as_written: Krush Hyperboost }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: zappa-ipa
+    name: Zappa IPA
+    url: https://www.pfriembeer.com/beer/zappa-ipa/
+    abv: 5.9
+    hops_as_written: Zappa, Citra
+    hops:
+      - { hop: zappa, name: Zappa, as_written: Zappa }
+      - { hop: citra, name: Citra, as_written: Citra }

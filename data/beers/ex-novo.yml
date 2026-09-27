@@ -1,0 +1,1427 @@
+brewery:
+  slug: ex-novo
+  name: Ex Novo Brewing
+  city: Portland
+  state: OR
+  url: https://exnovobrew.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-27'
+beers:
+  - slug: 1995-called
+    name: 1995 Called
+    url: https://exnovobrew.com/beer/1995-called/
+    abv: 5.5
+    hops_as_written: Cascade, CTZ, EKG
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: columbus, name: CTZ, as_written: CTZ }
+      - { hop: east-kent-golding, name: EKG, as_written: EKG }
+  - slug: 988-hotline-wcipa
+    name: 988 Hotline WCIPA
+    url: https://exnovobrew.com/beer/988-hotline-wcipa/
+    abv: 6.7
+    hops_as_written: Simcoe, Simcoe cryo
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Simcoe cryo }
+  - slug: a-star-is-bjorn
+    name: A Star Is Bjorn
+    url: https://exnovobrew.com/beer/a-star-is-bjorn/
+    abv: 8.7
+    hops_as_written: Perle
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: all-together-ipa
+    name: All Together IPA
+    url: https://exnovobrew.com/beer/all-together-ipa/
+    abv: 7.0
+    hops_as_written: Cascade, Citra, Columbus, Mosaic, Simcoe
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: altered-beast
+    name: Altered Beast
+    url: https://exnovobrew.com/beer/altered-beast/
+    abv: 5.6
+    hops_as_written: Czech Saaz, Hallertau Mittelfrueh, Huell Melon
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
+      - { hop: hallertau-mittelfrueh, name: Mittelfrueh, as_written: Hallertau Mittelfrueh }
+      - { hop: huell-melon, name: Huell Melon, as_written: Huell Melon }
+  - slug: are-we-done-here
+    name: Are We Done Here?
+    url: https://exnovobrew.com/beer/are-we-done-here/
+    abv: 5.0
+    hops_as_written: Cryo Idaho 7, El Dorado, Galaxy
+    hops:
+      - { hop: idaho-7, name: Idaho 7, form: Cryo, as_written: Cryo Idaho 7 }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: austin-flowers
+    name: Austin Flowers
+    url: https://exnovobrew.com/beer/austin-flowers/
+    abv: 6.8
+    hops_as_written: El Dorado, Mosaic, Sabro, Simcoe
+    hops:
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: austral-pale-ale
+    name: Austral Pale Ale
+    url: https://exnovobrew.com/beer/austral-pale-ale-2/
+    abv: 6.0
+    hops_as_written: CTZ, Galaxy, Moteuka Hop Extract, Nelson Sauvin, Rakau Hop Extract, Riwaka Hop Extract
+    hops:
+      - { hop: columbus, name: CTZ, as_written: CTZ }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: motueka, name: Moteuka, form: extract, as_written: Moteuka Hop Extract }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: rakau, name: Rakau, form: extract, as_written: Rakau Hop Extract }
+      - { hop: riwaka, name: Riwaka, form: extract, as_written: Riwaka Hop Extract }
+  - slug: autumnal-lager
+    name: Autumnal Lager
+    url: https://exnovobrew.com/beer/autumnal-lager/
+    abv: 4.9
+    hops_as_written: German Tettnang, Spalt
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: German Tettnang }
+      - { hop: spalt-spalter, name: Spalt, as_written: Spalt }
+  - slug: barrel-racer-new-mexico-state-fair-2024
+    name: 'Barrel Racer: New Mexico State Fair 2024'
+    url: https://exnovobrew.com/beer/barrel-racer-new-mexico-state-fair-2024/
+    abv: 5.0
+    hops_as_written: Cascade, Mittelfruh
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Mittelfruh }
+  - slug: because-people-like-to-say-salsa
+    name: Because People Like to Say Salsa
+    url: https://exnovobrew.com/beer/because-people-like-to-say-salsa/
+    abv: 6.8
+    hops_as_written: El Dorado, Mosaic
+    hops:
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: bedrock-pushpop-mango
+    name: 'Bedrock Pushpop: Mango'
+    url: https://exnovobrew.com/beer/bedrock-pushpop-mango/
+    abv: 7.3
+    hops_as_written: Amarillo, El Dorado, Mosaic
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: bedrock-pushpop-pineapple
+    name: 'Bedrock Pushpop: Pineapple'
+    url: https://exnovobrew.com/beer/bedrock-pushpop-pineapple/
+    abv: 7.3
+    hops_as_written: Amarillo, El Dorado, Mosaic
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: bit-of-a-commute
+    name: Bit of a Commute
+    url: https://exnovobrew.com/beer/bit-of-a-commute/
+    abv: 6.5
+    hops_as_written: Citra, Galaxy, HBC 630, Simcoe
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: null, name: HBC 630, as_written: HBC 630 }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: black-is-beautiful
+    name: Black is Beautiful
+    url: https://exnovobrew.com/beer/black-is-beautiful/
+    abv: 7.0
+    hops_as_written: Citra, HBC 586, Strata
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: bock-holliday
+    name: Bock Holliday
+    url: https://exnovobrew.com/beer/bock-holliday/
+    abv: 7.2
+    hops_as_written: Perle, Tettnang
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: boosted-immunity
+    name: Boosted Immunity
+    url: https://exnovobrew.com/beer/boosted-immunity/
+    abv: 4.5
+    hops_as_written: Perle, Sabro
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+  - slug: boots-with-the-spurs
+    name: Boots With The Spurs
+    url: https://exnovobrew.com/beer/boots-with-the-spurs/
+    abv: 5.1
+    hops_as_written: Cascade, Mittelfruh
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Mittelfruh }
+  - slug: bury-me-in-smoke
+    name: Bury Me In Smoke
+    url: https://exnovobrew.com/beer/bury-me-in-smoke/
+    abv: 8.5
+    hops_as_written: Amarillo, Citra, Talus
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: talus, name: Talus, as_written: Talus }
+  - slug: but-its-a-dry-heat
+    name: But It’s A Dry Heat
+    url: https://exnovobrew.com/beer/but-its-a-dry-heat/
+    abv: 5.1
+    hops_as_written: Czech Saaz, German Perle
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
+      - { hop: perle, name: Perle, as_written: German Perle }
+  - slug: c-r-e-a-m
+    name: C.R.E.A.M
+    url: https://exnovobrew.com/beer/c-r-e-a-m/
+    abv: 5.6
+    hops_as_written: Crystal, Magnum
+    hops:
+      - { hop: crystal, name: Crystal, as_written: Crystal }
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+  - slug: cactus-wins-the-lottery
+    name: Cactus Wins The Lottery
+    url: https://exnovobrew.com/beer/cactus-wins-the-lottery/
+    abv: 4.2
+    hops_as_written: Lemondrop
+    hops:
+      - { hop: lemondrop, name: Lemondrop, as_written: Lemondrop }
+  - slug: cardinal-sim
+    name: Cardinal Sim
+    url: https://exnovobrew.com/beer/cardinal-sim/
+    abv: 6.7
+    hops_as_written: Simcoe, Simcoe cryo
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Simcoe cryo }
+  - slug: clifford-the-big-red-beer
+    name: Clifford the Big Red Beer
+    url: https://exnovobrew.com/beer/clifford-the-big-red-beer/
+    abv: 5.6
+    hops_as_written: Amarillo, Chinook, CTZ
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: columbus, name: CTZ, as_written: CTZ }
+  - slug: coconut-penguin-tuxedo
+    name: Coconut Penguin Tuxedo
+    url: https://exnovobrew.com/beer/coconut-penguin-tuxedo/
+    abv: 7.4
+    hops_as_written: Cascade, Centennial, Columbus
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: coffee-penguin-tuxedo
+    name: Coffee Penguin Tuxedo
+    url: https://exnovobrew.com/beer/coffee-penguin-tuxedo/
+    abv: 7.4
+    hops_as_written: Cascade, Centennial, Columbus
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: consequential-sequin-potential
+    name: Consequential Sequin Potential
+    url: https://exnovobrew.com/beer/consequential-sequin-potential/
+    abv: 6.8
+    hops_as_written: Cashmere, Enigma, Zappa
+    hops:
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+      - { hop: enigma, name: Enigma, as_written: Enigma }
+      - { hop: zappa, name: Zappa, as_written: Zappa }
+  - slug: coral-blue-5
+    name: 'Coral Blue #5'
+    url: https://exnovobrew.com/beer/coral-blue-5/
+    abv: 5.0
+    hops_as_written: GR Perle
+    hops:
+      - { hop: perle, name: Perle, as_written: GR Perle }
+  - slug: corrales-is-more
+    name: Corrales is More
+    url: https://exnovobrew.com/beer/corrales-is-more/
+    abv: 0.3
+    hops_as_written: Perle, Saaz
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: corraleno
+    name: Corraleño
+    url: https://exnovobrew.com/beer/corraleno/
+    abv: 5.0
+    hops_as_written: Saaz
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: costume-party
+    name: Costume Party
+    url: https://exnovobrew.com/beer/costume-party/
+    abv: 7.2
+    hops_as_written: Citra, Mosaic, Nelson Sauvin
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: crueltor
+    name: Crueltor
+    url: https://exnovobrew.com/beer/crueltor/
+    abv: 6.9
+    hops_as_written: Mosiac, Nelson Sauvin
+    hops:
+      - { hop: mosaic, name: Mosiac, as_written: Mosiac }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: cult-classic
+    name: Cult Classic
+    url: https://exnovobrew.com/beer/cult-classic/
+    abv: 5.6
+    hops_as_written: Centennial, Chinook, Citra, CTZ
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: columbus, name: CTZ, as_written: CTZ }
+  - slug: darryls-strawberries
+    name: Darryl’s Strawberries
+    url: https://exnovobrew.com/beer/darryls-strawberries/
+    abv: 5.0
+    hops_as_written: GR Perle
+    hops:
+      - { hop: perle, name: Perle, as_written: GR Perle }
+  - slug: death-to-dullahan-on-nitro
+    name: Death to Dullahan on NITRO
+    url: https://exnovobrew.com/beer/death-to-dullahan-on-nitro/
+    abv: 5.8
+    hops_as_written: East Kent Golding
+    hops:
+      - { hop: east-kent-golding, name: East Kent Golding, as_written: East Kent Golding }
+  - slug: decem-series-cold-ipa
+    name: 'Decem Series: Cold IPA'
+    url: https://exnovobrew.com/beer/decem-series-cold-ipa/
+    abv: 7.2
+    hops_as_written: HBC 1019, Strata CGX, Talus Cryo
+    hops:
+      - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
+      - { hop: strata, name: Strata, form: CGX, as_written: Strata CGX }
+      - { hop: talus, name: Talus, form: Cryo, as_written: Talus Cryo }
+  - slug: decem-series-italian-pilsner
+    name: 'Decem Series: Italian Pilsner'
+    url: https://exnovobrew.com/beer/decem-series-italian-pilsner/
+    abv: 5.0
+    hops_as_written: Adeena, Hallertau Mittelfruh, Perle, Tettnang
+    hops:
+      - { hop: null, name: Adeena, as_written: Adeena }
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Hallertau Mittelfruh }
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: del-boca-vista-chronicles
+    name: Del Boca Vista Chronicles
+    url: https://exnovobrew.com/beer/del-boca-vista-chronicles/
+    abv: 6.7
+    hops_as_written: El Dorado, Vista
+    hops:
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: vista, name: Vista, as_written: Vista }
+  - slug: desert-agua-fresca
+    name: Desert Agua Fresca
+    url: https://exnovobrew.com/beer/desert-agua-fresca/
+    abv: 4.6
+    hops_as_written: Hallertau Mittelfruh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Hallertau Mittelfruh }
+  - slug: dripping-sun
+    name: Dripping Sun
+    url: https://exnovobrew.com/beer/dripping-sun/
+    abv: 4.6
+    hops_as_written: Aged whole leaf spalt, Amarillo, HBC 586, Strata
+    hops:
+      - { hop: null, name: Aged whole leaf spalt, as_written: Aged whole leaf spalt }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: dunkel-steve
+    name: Dunkel Steve
+    url: https://exnovobrew.com/beer/dunkel-steve/
+    abv: 5.2
+    hops_as_written: German Hallertau Mittelfruh, German Perle
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: German Hallertau Mittelfruh }
+      - { hop: perle, name: Perle, as_written: German Perle }
+  - slug: dusty-spur
+    name: Dusty Spur
+    url: https://exnovobrew.com/beer/dusty-spur/
+    abv: 5.1
+    hops_as_written: Cascade, Mittelfruh
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Mittelfruh }
+  - slug: earth-to-beer
+    name: Earth To Beer
+    url: https://exnovobrew.com/beer/earth-to-beer/
+    abv: 5.3
+    hops_as_written: Indie Hops, Lorien
+    hops:
+      - { hop: null, name: Indie, as_written: Indie Hops }
+      - { hop: lorien, name: Lorien, as_written: Lorien }
+  - slug: easy-come-easy-go
+    name: Easy Come, Easy Go
+    url: https://exnovobrew.com/beer/easy-come-easy-go/
+    abv: 4.8
+    hops_as_written: Czech Saaz, German Magnum
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
+      - { hop: magnum, name: Magnum, as_written: German Magnum }
+  - slug: eliot
+    name: Eliot
+    url: https://exnovobrew.com/beer/eliot/
+    abv: 6.6
+    hops_as_written: Amarillo, Mosaic, Simcoe, Strata, Warrior extract
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: warrior, name: Warrior, form: extract, as_written: Warrior extract }
+  - slug: esse-locum
+    name: Esse Locum
+    url: https://exnovobrew.com/beer/esse-locum/
+    abv: 4.6
+    hops_as_written: Saaz
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: eternal-fest
+    name: Eternal Fest
+    url: https://exnovobrew.com/beer/eternal-fest/
+    abv: 5.7
+    hops_as_written: German Perle, Hallertau Mittelfruh
+    hops:
+      - { hop: perle, name: Perle, as_written: German Perle }
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Hallertau Mittelfruh }
+  - slug: extra-time
+    name: Extra Time
+    url: https://exnovobrew.com/beer/extra-time/
+    abv: 5.3
+    hops_as_written: Centennial, Fuggle
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: fuggle, name: Fuggle, as_written: Fuggle }
+  - slug: farm-league
+    name: Farm League
+    url: https://exnovobrew.com/beer/farm-league/
+    abv: 7.0
+    hops_as_written: Citra, Galaxy
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: favorite-child
+    name: Favorite Child
+    url: https://exnovobrew.com/beer/favorite-child/
+    abv: 7.0
+    hops_as_written: Simcoe
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: felt-cuke-might-delete-later
+    name: Felt Cuke, Might Delete Later
+    url: https://exnovobrew.com/beer/felt-cuke-might-delete-later/
+    abv: 5.9
+    hops_as_written: Hallertau Mittelfruh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Hallertau Mittelfruh }
+  - slug: flashy-unapologetic
+    name: Flashy & Unapologetic
+    url: https://exnovobrew.com/beer/flashy-unapologetic/
+    abv: 7.2
+    hops_as_written: Citra, Strata
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: fresh-hop-eliot
+    name: Fresh Hop Eliot
+    url: https://exnovobrew.com/beer/fresh-hop-eliot/
+    abv: 6.6
+    hops_as_written: Amarillo, Fresh Centennial, Mosaic, Simcoe, Strata, Warrior extract
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: centennial, name: Centennial, fresh: true, as_written: Fresh Centennial }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: warrior, name: Warrior, form: extract, as_written: Warrior extract }
+  - slug: fresh-hop-german-overalls
+    name: Fresh Hop German Overalls
+    url: https://exnovobrew.com/beer/fresh-hop-german-overalls/
+    abv: 5.8
+    hops_as_written: Fresh Hop Centennial, Hallertau Mittelfruh, Perle
+    hops:
+      - { hop: centennial, name: Centennial, fresh: true, as_written: Fresh Hop Centennial }
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Hallertau Mittelfruh }
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: fresh-hop-light-through-the-trees
+    name: Fresh Hop Light Through The Trees
+    url: https://exnovobrew.com/beer/fresh-hop-light-through-the-trees/
+    abv: 5.2
+    hops_as_written: Fresh Centennial, Mosaic, Simcoe
+    hops:
+      - { hop: centennial, name: Centennial, fresh: true, as_written: Fresh Centennial }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: fresh-hop-mass-ascension
+    name: Fresh Hop Mass Ascension
+    url: https://exnovobrew.com/beer/fresh-hop-mass-ascension/
+    abv: 6.9
+    hops_as_written: Fresh Centennial, Mosaic, Simcoe
+    hops:
+      - { hop: centennial, name: Centennial, fresh: true, as_written: Fresh Centennial }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: fresh-hop-walk-the-bine
+    name: Fresh Hop Walk the Bine
+    url: https://exnovobrew.com/beer/fresh-hop-walk-the-bine/
+    abv: 6.5
+    hops_as_written: Amarillo, El Dorado, Mosaic, Simcoe
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: fruit-of-the-nation
+    name: Fruit of the Nation
+    url: https://exnovobrew.com/beer/fruit-of-the-nation/
+    abv: 6.0
+    hops_as_written: HBC 586
+    hops:
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+  - slug: fruity-garland
+    name: Fruity Garland
+    url: https://exnovobrew.com/beer/fruity-garland/
+    abv: 5.5
+    hops_as_written: Cascade, GR Magnum
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: magnum, name: Magnum, as_written: GR Magnum }
+  - slug: fuggle-around-and-find-out
+    name: Fuggle Around And Find Out
+    url: https://exnovobrew.com/beer/fuggle-around-and-find-out/
+    abv: 5.6
+    hops_as_written: Fuggle
+    hops:
+      - { hop: fuggle, name: Fuggle, as_written: Fuggle }
+  - slug: gare-bears
+    name: Gare Bears
+    url: https://exnovobrew.com/beer/gare-bears/
+    abv: 8.5
+    hops_as_written: Amarillo, Nelson Sauvin, Simcoe
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: german-overalls
+    name: German Overalls
+    url: https://exnovobrew.com/beer/german-overalls/
+    abv: 5.8
+    hops_as_written: Hallertau Mittelfruh, Perle
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Hallertau Mittelfruh }
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: good-enough-eh
+    name: Good Enough, Eh?
+    url: https://exnovobrew.com/beer/good-enough-eh/
+    abv: 4.5
+    hops_as_written: GR Tettnang, Perle
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: GR Tettnang }
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: haboob-hazy
+    name: Haboob Hazy
+    url: https://exnovobrew.com/beer/haboob-hazy/
+    abv: 6.5
+    hops_as_written: Amarillo, Citra, Vista
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: vista, name: Vista, as_written: Vista }
+  - slug: half-mass
+    name: Half Mass
+    url: https://exnovobrew.com/beer/half-mass/
+    abv: 4.0
+    hops_as_written: Centennial, Columbus, Mosaic, Simcoe
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: hawaii-505
+    name: Hawaii 505
+    url: https://exnovobrew.com/beer/hawaii-505/
+    abv: 5.8
+    hops_as_written: Chinook, El Dorado
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+  - slug: honey-i-lav-you
+    name: Honey, I Lav You
+    url: https://exnovobrew.com/beer/honey-i-lav-you/
+    abv: 5.0
+    hops_as_written: German Saphir, Perle
+    hops:
+      - { hop: saphir, name: Saphir, as_written: German Saphir }
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: hyperboost
+    name: Hyperboost
+    url: https://exnovobrew.com/beer/hyperboost/
+    abv: 6.8
+    hops_as_written: Azacca, CTZ, Galaxy, Simcoe, YCH Hyperboost
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: columbus, name: CTZ, as_written: CTZ }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: null, name: YCH, form: HyperBoost, as_written: YCH Hyperboost }
+  - slug: indigo-montoya
+    name: Indigo Montoya
+    url: https://exnovobrew.com/beer/indigo-montoya/
+    abv: 5.4
+    hops_as_written: Citra, Simcoe
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: intergalactic-pale-reality
+    name: Intergalactic Pale Reality
+    url: https://exnovobrew.com/beer/intergalactic-pale-reality/
+    abv: 6.3
+    hops_as_written: Amarillo, Citra, Galaxy
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: it-rhymes-with-orange
+    name: It Rhymes with Orange
+    url: https://exnovobrew.com/beer/it-rhymes-with-orange/
+    abv: 4.9
+    hops_as_written: Amarillo, Cascade
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: joint-venture
+    name: Joint Venture ’25
+    url: https://exnovobrew.com/beer/joint-venture/
+    abv: 7.5
+    hops_as_written: Azacca, Galaxy, Idaho 7, Mosaic
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: joint-venture-2026
+    name: Joint Venture ’26
+    url: https://exnovobrew.com/beer/joint-venture-2026/
+    abv: 7.5
+    hops_as_written: Azacca, Galaxy, Idaho 7, Mosaic
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: just-a-little-krush
+    name: Just a Little Krush
+    url: https://exnovobrew.com/beer/just-a-little-krush/
+    abv: 7.0
+    hops_as_written: Citra, Elani, Lupomax Krush
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: elani, name: Elani, as_written: Elani }
+      - { hop: krush, name: Krush, form: LupoMax, as_written: Lupomax Krush }
+  - slug: kill-the-sun-french-toast
+    name: 'Kill The Sun ’21: French Toast'
+    url: https://exnovobrew.com/beer/kill-the-sun-french-toast/
+    abv: 12.0
+    hops_as_written: Chinook, Nugget, Wakatu
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+      - { hop: wakatu, name: Wakatu, as_written: Wakatu }
+  - slug: kill-the-sun-gingerbread
+    name: 'Kill The Sun ’21: Gingerbread'
+    url: https://exnovobrew.com/beer/kill-the-sun-gingerbread/
+    abv: 12.0
+    hops_as_written: Chinook, Nugget, Wakatu
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+      - { hop: wakatu, name: Wakatu, as_written: Wakatu }
+  - slug: kill-the-sun-almond-coconut-chocolate
+    name: 'Kill The Sun ’22: Almond, Coconut, Chocolate'
+    url: https://exnovobrew.com/beer/kill-the-sun-almond-coconut-chocolate/
+    abv: 12.0
+    hops_as_written: Chinook, Nugget, Wakatu
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+      - { hop: wakatu, name: Wakatu, as_written: Wakatu }
+  - slug: kill-the-sun-dirty-chai
+    name: 'Kill The Sun ’22: Dirty Chai'
+    url: https://exnovobrew.com/beer/kill-the-sun-dirty-chai/
+    abv: 12.0
+    hops_as_written: Chinook, Nugget, Wakatu
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+      - { hop: wakatu, name: Wakatu, as_written: Wakatu }
+  - slug: kill-the-sun-horchata
+    name: 'Kill The Sun ’22: Horchata'
+    url: https://exnovobrew.com/beer/kill-the-sun-horchata/
+    abv: 12.0
+    hops_as_written: Chinook, Nugget, Wakatu
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+      - { hop: wakatu, name: Wakatu, as_written: Wakatu }
+  - slug: kill-the-sun-golden-milk
+    name: 'Kill The Sun ’23: Golden Milk'
+    url: https://exnovobrew.com/beer/kill-the-sun-golden-milk/
+    abv: 13.9
+    hops_as_written: Chinook, Nugget, Wakatu
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+      - { hop: wakatu, name: Wakatu, as_written: Wakatu }
+  - slug: kill-the-sun-macadamia-espresso
+    name: 'Kill The Sun ’23: Macadamia Espresso'
+    url: https://exnovobrew.com/beer/kill-the-sun-macadamia-espresso/
+    abv: 13.9
+    hops_as_written: Chinook, Nugget, Wakatu
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+      - { hop: wakatu, name: Wakatu, as_written: Wakatu }
+  - slug: kill-the-sun
+    name: Kill The Sun ’24
+    url: https://exnovobrew.com/beer/kill-the-sun-2/
+    abv: 11.7
+    hops_as_written: Cascade, Chinook
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: kill-the-sun-biscoshito
+    name: 'Kill The Sun ’24: Biscochito'
+    url: https://exnovobrew.com/beer/kill-the-sun-biscoshito/
+    abv: 11.7
+    hops_as_written: Cascade, Chinook
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: kill-the-sun-pecan-pie
+    name: 'Kill The Sun ’24: Pecan Pie'
+    url: https://exnovobrew.com/beer/kill-the-sun-pecan-pie/
+    abv: 11.7
+    hops_as_written: Cascade, Chinook
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: kill-the-sun-toasted-almond-coffee
+    name: 'Kill The Sun ’24: Toasted Almond Coffee'
+    url: https://exnovobrew.com/beer/kill-the-sun-toasted-almond-coffee/
+    abv: 11.7
+    hops_as_written: Cascade, Chinook
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: copy-kill-the-sun-25
+    name: Kill The Sun ’25
+    url: https://exnovobrew.com/beer/copy-kill-the-sun-25/
+    abv: 12.1
+    hops_as_written: Cascade, Chinook
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: kill-the-sun-25-coconut-chocolate-almond
+    name: 'Kill The Sun ’25: Coconut Chocolate Almond'
+    url: https://exnovobrew.com/beer/kill-the-sun-25-coconut-chocolate-almond/
+    abv: 12.1
+    hops_as_written: Cascade, Chinook
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: kill-the-sun-25-dirty-chai
+    name: 'Kill The Sun ’25: Dirty Chai'
+    url: https://exnovobrew.com/beer/kill-the-sun-25-dirty-chai/
+    abv: 12.1
+    hops_as_written: Cascade, Chinook
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: kill-the-sun-25-horchata
+    name: 'Kill The Sun ’25: Horchata'
+    url: https://exnovobrew.com/beer/kill-the-sun-25-horchata/
+    abv: 12.1
+    hops_as_written: Cascade, Chinook
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: krispys-kolsch
+    name: Krispy’s Kolsch
+    url: https://exnovobrew.com/beer/krispys-kolsch/
+    abv: 4.9
+    hops_as_written: German Tettnang
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: German Tettnang }
+  - slug: lei-it-on-me
+    name: Lei It On Me
+    url: https://exnovobrew.com/beer/lei-it-on-me/
+    abv: 5.0
+    hops_as_written: German Perle
+    hops:
+      - { hop: perle, name: Perle, as_written: German Perle }
+  - slug: light-through-the-trees
+    name: Light Through The Trees
+    url: https://exnovobrew.com/beer/light-through-the-trees/
+    abv: 4.9
+    hops_as_written: Cascade, Chinook, luminosa
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: luminosa, name: luminosa, as_written: luminosa }
+  - slug: liquid-sweater
+    name: Liquid Sweater
+    url: https://exnovobrew.com/beer/liquid-sweater/
+    abv: 7.0
+    hops_as_written: Chinook, Willamette
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: willamette, name: Willamette, as_written: Willamette }
+  - slug: marryin-berries
+    name: Marryin Berries
+    url: https://exnovobrew.com/beer/marryin-berries/
+    abv: 4.8
+    hops_as_written: Mosaic
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: mass-ascension
+    name: Mass Ascension
+    url: https://exnovobrew.com/beer/mass-ascension/
+    abv: 6.9
+    hops_as_written: Centennial, Mosaic, Simcoe
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: massive-ascension
+    name: Massive Ascension
+    url: https://exnovobrew.com/beer/massive-ascension/
+    abv: 9.4
+    hops_as_written: Centennial, CTZ, Mosaic, Simcoe
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: columbus, name: CTZ, as_written: CTZ }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: mexican-lager
+    name: Mexican Lager
+    url: https://exnovobrew.com/beer/mexican-lager/
+    abv: 5.0
+    hops_as_written: Czech Saaz, German Perle
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
+      - { hop: perle, name: Perle, as_written: German Perle }
+  - slug: midsummer-classic
+    name: Midsummer Classic
+    url: https://exnovobrew.com/beer/midsummer-classic/
+    abv: 7.3
+    hops_as_written: Citra, El Dorado, Galaxy, Simcoe, Simcoe cryo, Strata
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Simcoe cryo }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: milagro-oscuro
+    name: Milagro Oscuro
+    url: https://exnovobrew.com/beer/milagro-oscuro/
+    abv: 5.8
+    hops_as_written: German Tettnang & Czech Saaz
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: German Tettnang }
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
+  - slug: misnakes-were-made
+    name: Misnakes Were Made
+    url: https://exnovobrew.com/beer/misnakes-were-made/
+    abv: 7.0
+    hops_as_written: Chinook, Idaho 7, Mosaic, Simcoe
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: mountains-mountains-chocolate-mint
+    name: Mountains & Mountains with Chocolate and Mint
+    url: https://exnovobrew.com/beer/mountains-mountains-chocolate-mint/
+    abv: 9.6
+    hops_as_written: Chinook, CTZ
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: columbus, name: CTZ, as_written: CTZ }
+  - slug: multiple-phantasms
+    name: Multiple Phantasms
+    url: https://exnovobrew.com/beer/multiple-phantasms/
+    abv: 7.7
+    hops_as_written: ‘23 Pink Boots Blend, Phantasm-Infused Mega Motueka
+    hops:
+      - { hop: null, name: ‘23 Pink Boots Blend, as_written: ‘23 Pink Boots Blend }
+      - { hop: null, name: Phantasm-Infused Mega Motueka, as_written: Phantasm-Infused Mega Motueka }
+  - slug: munder-she-wrote
+    name: Munder, She Wrote
+    url: https://exnovobrew.com/beer/munder-she-wrote/
+    abv: 5.8
+    hops_as_written: Hallertau Mittelfruh, Tettnang
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Hallertau Mittelfruh }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: my-hammy-vice
+    name: My Hammy Vice
+    url: https://exnovobrew.com/beer/my-hammy-vice/
+    abv: 5.2
+    hops_as_written: German Perle, German Tettnang
+    hops:
+      - { hop: perle, name: Perle, as_written: German Perle }
+      - { hop: tettnang, name: Tettnang, as_written: German Tettnang }
+  - slug: nevermore
+    name: Nevermore 2022
+    url: https://exnovobrew.com/beer/nevermore/
+    abv: 12.1
+    hops_as_written: Cascade, Chinook, Columbus
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: nevermore-23
+    name: Nevermore 2023
+    url: https://exnovobrew.com/beer/nevermore-23/
+    abv: 12.1
+    hops_as_written: Cascade, Chinook, Columbus
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: nevermore-2024
+    name: Nevermore 2024
+    url: https://exnovobrew.com/beer/nevermore-2024/
+    abv: 12.1
+    hops_as_written: Cascade, Chinook, Columbus
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: nevermore-2025
+    name: Nevermore 2025
+    url: https://exnovobrew.com/beer/nevermore-2025/
+    abv: 12.1
+    hops_as_written: Cascade, Chinook, Columbus
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: nitro-penguin-tuxedo
+    name: Nitro Penguin Tuxedo
+    url: https://exnovobrew.com/beer/nitro-penguin-tuxedo/
+    hops_as_written: Cascade, Nugget
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+  - slug: no-quitters
+    name: No Quitters
+    url: https://exnovobrew.com/beer/no-quitters/
+    abv: 8.2
+    hops_as_written: Citra, Vic Secret
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: vic-secret, name: Vic Secret, as_written: Vic Secret }
+  - slug: no-swears-or-vulgarity
+    name: No Swears or Vulgarity
+    url: https://exnovobrew.com/beer/no-swears-or-vulgarity/
+    abv: 7.6
+    hops_as_written: 586, Cashmere
+    hops:
+      - { hop: krush, name: '586', as_written: '586' }
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+  - slug: nosy-nelson
+    name: Nosy Nelson
+    url: https://exnovobrew.com/beer/nosy-nelson/
+    abv: 5.5
+    hops_as_written: CTZ, Mosaic, Nelson Sauvin, Simcoe
+    hops:
+      - { hop: columbus, name: CTZ, as_written: CTZ }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: novo-pils
+    name: Novo Pils
+    url: https://exnovobrew.com/beer/novo-pils/
+    abv: 5.9
+    hops_as_written: Citra, German Magnum, German Perle, Mosiac, Strata
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: magnum, name: Magnum, as_written: German Magnum }
+      - { hop: perle, name: Perle, as_written: German Perle }
+      - { hop: mosaic, name: Mosiac, as_written: Mosiac }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: one-if-by-land
+    name: One, If By Land
+    url: https://exnovobrew.com/beer/one-if-by-land/
+    abv: 6.8
+    hops_as_written: El Dorado, HBC 1019, HBC 630, Simcoe
+    hops:
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
+      - { hop: null, name: HBC 630, as_written: HBC 630 }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: over-the-falls
+    name: Over the Falls
+    url: https://exnovobrew.com/beer/over-the-falls/
+    abv: 4.6
+    hops_as_written: GR Tettnang, Perle
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: GR Tettnang }
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: palm-tree-in-a-dust-storm
+    name: Palm Tree in a Dust Storm
+    url: https://exnovobrew.com/beer/palm-tree-in-a-dust-storm/
+    abv: 6.0
+    hops_as_written: ADHA 1631, Amarillo, Azacca, Strata
+    hops:
+      - { hop: null, name: ADHA 1631, as_written: ADHA 1631 }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: pastel-polo
+    name: Pastel Polo
+    url: https://exnovobrew.com/beer/pastel-polo/
+    abv: 7.0
+    hops_as_written: GR Perle
+    hops:
+      - { hop: perle, name: Perle, as_written: GR Perle }
+  - slug: penguin-tuxedo
+    name: Penguin Tuxedo
+    url: https://exnovobrew.com/beer/penguin-tuxedo/
+    hops_as_written: Cascade, Nugget
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+  - slug: penny-from-the-block
+    name: Penny From The Block
+    url: https://exnovobrew.com/beer/penny-from-the-block/
+    abv: 3.0
+    hops_as_written: Adeena, Lorian
+    hops:
+      - { hop: null, name: Adeena, as_written: Adeena }
+      - { hop: lorien, name: Lorian, as_written: Lorian }
+  - slug: perle-haggard
+    name: Perle Haggard
+    url: https://exnovobrew.com/beer/perle-haggard/
+    abv: 5.1
+    hops_as_written: Hallertau Mittelfruh, Perle
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Hallertau Mittelfruh }
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: pomona
+    name: Pomona
+    url: https://exnovobrew.com/beer/pomona/
+    abv: 7.2
+    hops_as_written: Galaxy, Simcoe
+    hops:
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: prom-circumstance
+    name: Prom & Circumstance
+    url: https://exnovobrew.com/beer/prom-circumstance/
+    abv: 4.6
+    hops_as_written: East Kent Goldings, Lorien
+    hops:
+      - { hop: east-kent-golding, name: East Kent Goldings, as_written: East Kent Goldings }
+      - { hop: lorien, name: Lorien, as_written: Lorien }
+  - slug: puff-puff-passion
+    name: Puff Puff Passion
+    url: https://exnovobrew.com/beer/puff-puff-passion/
+    abv: 5.0
+    hops_as_written: Mosaic, Simcoe
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: put-the-bar-in-barista
+    name: Put the Bar in Barista
+    url: https://exnovobrew.com/beer/put-the-bar-in-barista/
+    abv: 5.5
+    hops_as_written: German Magnum, German Tettnang, Hallertau Mittelfruh
+    hops:
+      - { hop: magnum, name: Magnum, as_written: German Magnum }
+      - { hop: tettnang, name: Tettnang, as_written: German Tettnang }
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Hallertau Mittelfruh }
+  - slug: reasonable-reasons-for-seasonable-seasons
+    name: Reasonable Reasons for Seasonable Seasons
+    url: https://exnovobrew.com/beer/reasonable-reasons-for-seasonable-seasons/
+    abv: 6.7
+    hops_as_written: Centennial, Mosaic
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: rosemarys-baby
+    name: Rosemary’s Baby
+    url: https://exnovobrew.com/beer/rosemarys-baby/
+    abv: 4.4
+    hops_as_written: German Perle
+    hops:
+      - { hop: perle, name: Perle, as_written: German Perle }
+  - slug: ruidoso-together
+    name: Ruidoso Together
+    url: https://exnovobrew.com/beer/ruidoso-together/
+    abv: 5.5
+    hops_as_written: Amarillo, Chinook, Vista
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: vista, name: Vista, as_written: Vista }
+  - slug: ruminator
+    name: Ruminator
+    url: https://exnovobrew.com/beer/ruminator-2/
+    abv: 8.0
+    hops_as_written: German Tettnang
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: German Tettnang }
+  - slug: sandia-slice
+    name: Sandia Slice
+    url: https://exnovobrew.com/beer/sandia-slice/
+    abv: 7.1
+    hops_as_written: Amarillo, Crosby El Dorado CGX, Strata
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: el-dorado, name: El Dorado, form: CGX, farm: Crosby Hop Farm, as_written: Crosby El Dorado CGX }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: serving-a-porpoise
+    name: Serving a Porpoise
+    url: https://exnovobrew.com/beer/serving-a-porpoise/
+    abv: 6.3
+    hops_as_written: Amarillo, Mosaic, Nelson
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+  - slug: she-sells-seashelles
+    name: She Sells Seashelles
+    url: https://exnovobrew.com/beer/she-sells-seashelles/
+    abv: 5.3
+    hops_as_written: Hallertau Mittelfruh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Hallertau Mittelfruh }
+  - slug: si-senor
+    name: Si Señor
+    url: https://exnovobrew.com/beer/si-senor/
+    abv: 5.1
+    hops_as_written: Czech Saaz, German Perle
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
+      - { hop: perle, name: Perle, as_written: German Perle }
+  - slug: sidearm-blonde
+    name: Sidearm Blonde
+    url: https://exnovobrew.com/beer/sidearm-blonde/
+    abv: 5.0
+    hops_as_written: Cascade, Columbus
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: silk-pajama-day
+    name: Silk Pajama Day
+    url: https://exnovobrew.com/beer/silk-pajama-day/
+    abv: 6.9
+    hops_as_written: BHC 1019, Enigma, Helios, Sabro, Strata
+    hops:
+      - { hop: dolcita, name: BHC 1019, as_written: BHC 1019 }
+      - { hop: enigma, name: Enigma, as_written: Enigma }
+      - { hop: helios, name: Helios, as_written: Helios }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: simple-solace
+    name: Simple Solace
+    url: https://exnovobrew.com/beer/simple-solace/
+    abv: 7.6
+    hops_as_written: Cascade, Centennial, Chinook, El Dorado
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+  - slug: single-hop-series
+    name: Single Hop Series
+    url: https://exnovobrew.com/beer/single-hop-series/
+    abv: 5.8
+    hops_as_written: Idaho 7
+    hops:
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+  - slug: smoked-show
+    name: Smoked Show
+    url: https://exnovobrew.com/beer/smoked-show/
+    abv: 5.2
+    hops_as_written: German Perle, German Tettnang
+    hops:
+      - { hop: perle, name: Perle, as_written: German Perle }
+      - { hop: tettnang, name: Tettnang, as_written: German Tettnang }
+  - slug: sowing-season
+    name: Sowing Season
+    url: https://exnovobrew.com/beer/sowing-season/
+    abv: 5.6
+    hops_as_written: Columbus, East Kent Goldings
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: east-kent-golding, name: East Kent Goldings, as_written: East Kent Goldings }
+  - slug: stay-goalden
+    name: Stay Goalden!
+    url: https://exnovobrew.com/beer/stay-goalden/
+    abv: 5.0
+    hops_as_written: Cascade, Columbus
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: stay-goalden-pride-edition
+    name: Stay Goalden! Pride Edition
+    url: https://exnovobrew.com/beer/stay-goalden-pride-edition/
+    abv: 5.0
+    hops_as_written: Cascade, Columbus
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: strat-your-stuff
+    name: Strat Your Stuff
+    url: https://exnovobrew.com/beer/strat-your-stuff/
+    abv: 6.0
+    hops_as_written: Galaxy, Strata, Strata CGX
+    hops:
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: strata, name: Strata, form: CGX, as_written: Strata CGX }
+  - slug: summadat
+    name: Summadat
+    url: https://exnovobrew.com/beer/summadat/
+    abv: 4.4
+    hops_as_written: Amarillo, Columbus
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: super-saaz-me
+    name: Super Saaz Me
+    url: https://exnovobrew.com/beer/super-saaz-me/
+    abv: 4.9
+    hops_as_written: Audacia, Cashmere, Hallertau Mittelfruh, Zuper Saazer
+    hops:
+      - { hop: audacia, name: Audacia, as_written: Audacia }
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Hallertau Mittelfruh }
+      - { hop: null, name: Zuper Saazer, as_written: Zuper Saazer }
+  - slug: superdelic-fragilistic
+    name: Superdelic Fragilistic
+    url: https://exnovobrew.com/beer/superdelic-fragilistic/
+    abv: 7.0
+    hops_as_written: Citra, Strata, Superdelic
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: superdelic, name: Superdelic, as_written: Superdelic }
+  - slug: swedish-swimsuit
+    name: Swedish Swimsuit
+    url: https://exnovobrew.com/beer/swedish-swimsuit/
+    abv: 6.6
+    hops_as_written: Amarillo, Elani, Mosaic
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: elani, name: Elani, as_written: Elani }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: taste-the-rain-bro
+    name: Taste the Rain, Bro?
+    url: https://exnovobrew.com/beer/taste-the-rain-bro/
+    abv: 7.3
+    hops_as_written: Mosiac, Nelson Sauvin
+    hops:
+      - { hop: mosaic, name: Mosiac, as_written: Mosiac }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: tesuque-lager
+    name: Tesuque Lager
+    url: https://exnovobrew.com/beer/tesuque-lager/
+    abv: 5.0
+    hops_as_written: Czech Saaz
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
+  - slug: the-darkest-timeline
+    name: The Darkest Timeline
+    url: https://exnovobrew.com/beer/the-darkest-timeline/
+    abv: 5.0
+    hops_as_written: Perle, Saaz
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: the-greatest-day-of-my-life
+    name: The Greatest Day of My Life
+    url: https://exnovobrew.com/beer/the-greatest-day-of-my-life/
+    abv: 5.5
+    hops_as_written: Cascade, Hallertau Mittelfruh
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Hallertau Mittelfruh }
+  - slug: the-zest-is-history
+    name: The Zest Is History
+    url: https://exnovobrew.com/beer/the-zest-is-history/
+    abv: 5.5
+    hops_as_written: Hallertau Mittelfruh, Saphir
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Hallertau Mittelfruh }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+  - slug: theres-no-i-in-steam
+    name: There Is No “I” In Steam
+    url: https://exnovobrew.com/beer/theres-no-i-in-steam/
+    abv: 5.8
+    hops_as_written: Northern Brewer
+    hops:
+      - { hop: northern-brewer, name: Northern Brewer, as_written: Northern Brewer }
+  - slug: to-the-extreme
+    name: To The Extreme
+    url: https://exnovobrew.com/beer/to-the-extreme/
+    abv: 6.6
+    hops_as_written: Citra, Simcoe cryo, Strata
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Simcoe cryo }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: turbo-tang
+    name: Turbo Tang
+    url: https://exnovobrew.com/beer/turbo-tang/
+    abv: 6.9
+    hops_as_written: Citra Hyperboost, El Dorado Dry Hops Citra T90, El Dorado T90
+    hops:
+      - { hop: citra, name: Citra, form: HyperBoost, as_written: Citra Hyperboost }
+      - { hop: null, name: El Dorado Dry  Citra, form: T90, as_written: El Dorado Dry Hops Citra T90 }
+      - { hop: el-dorado, name: El Dorado, form: T90, as_written: El Dorado T90 }
+  - slug: twice-in-a-lifetime
+    name: Twice In A Lifetime
+    url: https://exnovobrew.com/beer/twice-in-a-lifetime/
+    abv: 6.6
+    hops_as_written: Citra, GR Magnum, Mosaic, Nelson Sauvin, Strata
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: magnum, name: Magnum, as_written: GR Magnum }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: two-if-by-sea
+    name: Two, If By Sea
+    url: https://exnovobrew.com/beer/two-if-by-sea/
+    abv: 7.1
+    hops_as_written: HBC 586, Strata, Strata Extract, Vista
+    hops:
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: strata, name: Strata, form: extract, as_written: Strata Extract }
+      - { hop: vista, name: Vista, as_written: Vista }
+  - slug: unstuck-in-time
+    name: Unstuck in Time
+    url: https://exnovobrew.com/beer/unstuck-in-time/
+    abv: 6.9
+    hops_as_written: Azacca, Citra, Idaho 7
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+  - slug: v-for-vienna
+    name: V for Vienna
+    url: https://exnovobrew.com/beer/v-for-vienna/
+    abv: 5.4
+    hops_as_written: Perle, Tettnang
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: walk-the-bine
+    name: Walk the Bine
+    url: https://exnovobrew.com/beer/walk-the-bine/
+    abv: 6.5
+    hops_as_written: Amarillo, El Dorado, Mosaic, Simcoe
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: was-and-always-is
+    name: Was and Always Is
+    url: https://exnovobrew.com/beer/was-and-always-is/
+    abv: 7.2
+    hops_as_written: Amarillo, Citra, Cryopop Blend, Warrior
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: null, name: Cryopop Blend, as_written: Cryopop Blend }
+      - { hop: warrior, name: Warrior, as_written: Warrior }
+  - slug: we-have-the-fruits
+    name: We Have The Fruits
+    url: https://exnovobrew.com/beer/we-have-the-fruits/
+    abv: 6.8
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: wee-numpty
+    name: Wee Numpty
+    url: https://exnovobrew.com/beer/wee-numpty/
+    abv: 4.5
+    hops_as_written: EKG, Mt. Hood
+    hops:
+      - { hop: east-kent-golding, name: EKG, as_written: EKG }
+      - { hop: mount-hood, name: Mt Hood, as_written: Mt Hood }
+  - slug: where-the-mild-things-are
+    name: Where the Mild Things Are
+    url: https://exnovobrew.com/beer/where-the-mild-things-are/
+    abv: 4.1
+    hops_as_written: East Kent Goldings, Fuggle
+    hops:
+      - { hop: east-kent-golding, name: East Kent Goldings, as_written: East Kent Goldings }
+      - { hop: fuggle, name: Fuggle, as_written: Fuggle }
+  - slug: whirlpool-ohoolihan
+    name: Whirlpool O’Hoolihan
+    url: https://exnovobrew.com/beer/whirlpool-ohoolihan/
+    abv: 5.3
+    hops_as_written: Amarillo, CTZ, EKG
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: columbus, name: CTZ, as_written: CTZ }
+      - { hop: east-kent-golding, name: EKG, as_written: EKG }
+  - slug: winter-ipa
+    name: Winter IPA
+    url: https://exnovobrew.com/beer/winter-ipa/
+    abv: 7.6
+    hops_as_written: Cascade, Centennial, Chinook, El Dorado
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+  - slug: workout-tapes-by-fonda
+    name: Workout Tapes by Fonda
+    url: https://exnovobrew.com/beer/workout-tapes-by-fonda/
+    abv: 7.7
+    hops_as_written: HBC 586, Strata
+    hops:
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: yabba-dabba-dont
+    name: Yabba Dabba Don’t
+    url: https://exnovobrew.com/beer/yabba-dabba-dont/
+    abv: 7.3
+    hops_as_written: Amarillo, El Dorado, Sabro
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: sabro, name: Sabro, as_written: Sabro }

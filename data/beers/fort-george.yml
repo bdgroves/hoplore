@@ -76,7 +76,7 @@ beers:
     hops:
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: strata, name: Strata, as_written: Strata }
-      - { hop: null, name: Wai-iti, as_written: Wai-iti }
+      - { hop: wai-iti, name: Wai-iti, as_written: Wai-iti }
       - { hop: nectaron, name: Nectaron, as_written: Nectaron }
   - slug: cathedral-tree
     name: Cathedral Tree
@@ -86,7 +86,7 @@ beers:
     hops:
       - { hop: waimea, name: Waimea, as_written: Waimea }
       - { hop: saphir, name: Saphir, as_written: Saphir }
-      - { hop: saaz-cz, name: German Saaz, as_written: German Saaz }
+      - { hop: saaz-cz, name: Saaz, as_written: German Saaz }
   - slug: cavatica-stout
     name: Cavatica Stout
     url: https://fortgeorgebrewery.com/beer/cavatica-stout/
@@ -122,7 +122,7 @@ beers:
     hops_as_written: Huell Melon, Wai-iti
     hops:
       - { hop: huell-melon, name: Huell Melon, as_written: Huell Melon }
-      - { hop: null, name: Wai-iti, as_written: Wai-iti }
+      - { hop: wai-iti, name: Wai-iti, as_written: Wai-iti }
   - slug: daly-special
     name: Daly Special
     url: https://fortgeorgebrewery.com/beer/daly-special/
@@ -287,14 +287,14 @@ beers:
     hops:
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: strata, name: Strata, as_written: Strata }
-      - { hop: null, name: Wai-iti, as_written: Wai-iti }
+      - { hop: wai-iti, name: Wai-iti, as_written: Wai-iti }
   - slug: pilsner
     name: Pilsner
     url: https://fortgeorgebrewery.com/beer/pilsner/
     abv: 5.0
     hops_as_written: Hallertau Mittelfruh, Saphir, Tradition
     hops:
-      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau Mittelfruh }
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Hallertau Mittelfruh }
       - { hop: saphir, name: Saphir, as_written: Saphir }
       - { hop: hallertau-tradition, name: Tradition, as_written: Tradition }
   - slug: pizza-pals-2025
@@ -315,7 +315,7 @@ beers:
     abv: 4.8
     hops_as_written: Hallertau Mittelfruh
     hops:
-      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau Mittelfruh }
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Hallertau Mittelfruh }
   - slug: subterranean-nectaron
     name: Subterranean Nectaron
     url: https://fortgeorgebrewery.com/beer/subterranean-nectaron/
@@ -324,7 +324,7 @@ beers:
     hops:
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: strata, name: Strata, as_written: Strata }
-      - { hop: null, name: Wai-iti, as_written: Wai-iti }
+      - { hop: wai-iti, name: Wai-iti, as_written: Wai-iti }
       - { hop: nectaron, name: Nectaron, as_written: Nectaron }
   - slug: tide-land
     name: Tide Land
@@ -359,7 +359,7 @@ beers:
     abv: 5.6
     hops_as_written: Wai-iti, Hallertauer Mittelfrüh
     hops:
-      - { hop: null, name: Wai-iti, as_written: Wai-iti }
+      - { hop: wai-iti, name: Wai-iti, as_written: Wai-iti }
       - { hop: hallertau-mittelfrueh, name: Hallertauer Mittelfrüh, as_written: Hallertauer Mittelfrüh }
   - slug: wild-mountain-nectarine
     name: 'Wild Mountain: Nectarine'
@@ -369,7 +369,7 @@ beers:
     hops:
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: strata, name: Strata, as_written: Strata }
-      - { hop: null, name: Wai-iti, as_written: Wai-iti }
+      - { hop: wai-iti, name: Wai-iti, as_written: Wai-iti }
   - slug: worlds-collide
     name: Worlds Collide
     url: https://fortgeorgebrewery.com/beer/worlds-collide/

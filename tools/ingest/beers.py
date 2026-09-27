@@ -45,7 +45,24 @@ FORMS = [
     ("incognito", "Incognito"),
     ("spectrum", "Spectrum"),
     ("t90", "T90"),
+    ("lupomax", "LupoMax"),
+    ("pellets", None),
+    ("extract", "extract"),
+    ("t45", "T45"),
+    ("cyo", "Cryo"),
+    ("quantum brite", "Quantum"),
+    ("whole cone", "whole cone"),
+    ("whole leaf", "whole cone"),
 ]
+
+# Words in front of a variety: a form, or where it was grown. The form is
+# kept; the origin is dropped from the name so "German Tettnang" finds
+# Tettnang.
+PREFIX_FORMS = {"cryo-": "Cryo", "cryo": "Cryo", "cgx": "CGX", "abstrax quantum:": "Quantum", "lupomax": "LupoMax", "lupuln2": "LupuLN2", "whole leaf": "whole cone", "whole cone": "whole cone"}
+ORIGINS = r"(?:german|gr|nz|us|usa|american|czech|oregon|washington|yakima|aged|estate|local|hallertau|slovenian|uk|english)"
+
+# Not hops: malts, numbers and spec words that leak into a hop field.
+NOT_HOPS = re.compile(r"^(two row|2-row|vienna|munich|pilsner|pils|wheat|oats?|malt|\d+ ?ibu|ibu|abv|lactic.*|euphorics.*|yeast.*|aged|none)$", re.I)
 
 # Names breweries use that no record answers to directly.
 ALIASES = {
@@ -57,6 +74,30 @@ ALIASES = {
     "german saaz": "saaz-cz",
     "mt hood": "mount-hood",
     "ctz": "columbus",
+    "mosiac": "mosaic",
+    "moteuka": "motueka",
+    "lorian": "lorien",
+    "hbc 586": "krush",
+    "586": "krush",
+    "hbc 1019": "dolcita",
+    "bhc 1019": "dolcita",
+    "east kent goldings": "east-kent-golding",
+    "east kent golding": "east-kent-golding",
+    "goldings": "east-kent-golding",
+    "mittelfruh": "hallertau-mittelfrueh",
+    "hallertau": "hallertau-mittelfrueh",
+    "hallertauer": "hallertau-mittelfrueh",
+    "spalt": "spalt-spalter",
+    "tettnanger": "tettnang",
+    "el dorado": "el-dorado",
+    "idaho 7": "idaho-7",
+    "idaho7": "idaho-7",
+    "hesrbrucker": "hersbrucker",
+    "calista": "callista",
+    "uk golding": "golding-uk",
+    "spalt select": "spalter-select",
+    "mt hood": "mount-hood",
+    "whitbread golding variety": "whitbread-golding-variety",
 }
 
 
@@ -99,9 +140,26 @@ def parse_hop(token: str, index: dict[str, str]) -> dict:
     low = text.lower()
     for word, label in FORMS:
         if re.search(rf"\b{re.escape(word)}$", low):
-            item["form"] = label
+            if label:
+                item["form"] = label
             text = text[: len(text) - len(word)].strip()
             break
+    for word, label in PREFIX_FORMS.items():
+        if text.lower().startswith(word + " "):
+            item["form"] = label
+            text = text[len(word):].strip()
+    if fm := re.match(r"^(.+? (?:Farms?|Ranch|Agriculture)) (.+)$", text):
+        item.setdefault("farm", fm.group(1).strip())
+        text = fm.group(2).strip()
+    if index.get(norm(re.sub(r"\s+\d{3}$", "", text))):
+        text = re.sub(r"\s+\d{3}$", "", text)  # a lot or product number ("Citra 803")
+    for farm_word, farm in FARMS.items():
+        if text.lower().startswith(farm_word + " "):
+            item.setdefault("farm", farm)
+            text = text[len(farm_word):].strip()
+    stripped = re.sub(rf"^{ORIGINS}(?:[- ]grown)?\s+", "", text, flags=re.I)
+    if stripped != text and index.get(norm(re.sub(r"[™®]", "", stripped))):
+        text = stripped
     name = re.sub(r"[™®]", "", text).strip(" .,-")
     slug = index.get(norm(name))
     item["name"] = name
@@ -110,9 +168,13 @@ def parse_hop(token: str, index: dict[str, str]) -> dict:
 
 
 def split_hops(line: str) -> list[str]:
-    line = re.sub(r"\band\b", ",", line)
+    line = re.sub(r"\s+", " ", line.replace("\xa0", " "))
+    line = re.sub(r"\bMt\.\s*", "Mt ", line, flags=re.I)
+    line = re.sub(r"\band\b|&|\+|;|\.\s", ",", line, flags=re.I)
+    line = re.sub(r"\s+(?=Fresh\b)", ", ", line)  # "Nelson Fresh Strata": a lost line break
     line = re.sub(r"Hallertauer,\s*Mittelfr", "Hallertauer Mittelfr", line)  # a stray comma on one page
-    return [t.strip() for t in line.split(",") if t.strip()]
+    tokens = [t.strip(" .:-") for t in line.split(",")]
+    return [t for t in tokens if t and not NOT_HOPS.match(t)]
 
 
 # ------------------------------------------------------------------ helpers
@@ -224,8 +286,18 @@ def parse_ex_novo(path: Path) -> tuple | None:
 
 def parse_pfriem(path: Path) -> tuple | None:
     _, name, text = page_text(path)
-    hops = between(text, r"INGREDIENTS .*?\bHops", r"Yeast|Adjuncts|Barrels|Special Ingredients|TASTING NOTES|Fruit")
+    m = re.search(r"INGREDIENTS\b.{0,300}?\bHops (.{1,160}?)(?= Yeast| Adjuncts| Barrels| Special Ingredients| TASTING NOTES| Fruit| HISTORY|$)", text)
+    hops = m.group(1).strip() if m else None
     return name, abv_of(text), hops, "list"
+
+
+def parse_breakside(path: Path) -> tuple | None:
+    soup, name, text = page_text(path)
+    title = soup.title.string if soup.title else ""
+    name = (title or "").split(" - Breakside")[0].strip() or name
+    m = re.search(r"\bABV [\d.]+ Hops (.{1,200}?)(?= MALT\b| Packaging\b| UPC\b| Yeast\b|$)", text)
+    abv = re.search(r"\bABV ([\d.]+)", text)
+    return name, float(abv.group(1)) if abv else None, m.group(1).strip() if m else None, "list"
 
 
 def parse_prose_generic(path: Path) -> tuple | None:
@@ -236,22 +308,42 @@ def parse_prose_generic(path: Path) -> tuple | None:
     return name, abv_of(text), " ".join(bits) or None, "prose"
 
 
+def parse_7seas(path: Path) -> tuple | None:
+    """7 Seas announces beers as news posts ("Our 2026 Yakima Valley Fresh Hop
+    IPA is here"); the hops are in the post's sentences."""
+    soup, name, _ = page_text(path)
+    body = soup.find("article") or soup.find(class_=re.compile("entry-content|post-content")) or soup
+    text = re.sub(r"\s+", " ", body.get_text(" "))
+    if name:
+        name = re.sub(r"^Our (\d{4}) (.+?) is here$", r"\2 (\1)", name)
+        name = re.sub(r" is (?:here|back)$", "", name, flags=re.I)
+    bits = re.findall(r"[^.]*\b(?:hops?|hopped)\b[^.]*\.", text, re.I)
+    bits = [b.strip() for b in bits if not re.search(r"Menu|Events & News", b)]
+    return name, abv_of(text), " ".join(bits) or None, "prose"
+
+
 PARSERS = {
     "fort-george": (parse_fort_george, "fortgeorgebrewery.com", "beer_*.html"),
     "double-mountain": (parse_double_mountain, "doublemountainbrewery.com", "beer_*.html"),
     "ex-novo": (parse_ex_novo, "exnovobrew.com", "beer_*.html"),
     "pfriem": (parse_pfriem, "pfriembeer.com", "beer_*.html"),
-    "breakside": (parse_prose_generic, "breakside.com", "our_beer_*.html"),
+    "breakside": (parse_breakside, "breakside.com", "our_beer_*.html"),
     "ecliptic": (parse_prose_generic, "eclipticbrewing.com", "beer_*.html"),
-    "7-seas": (parse_prose_generic, "7seasbrewing.com", "*.html"),
-    "kings-and-daughters": (parse_prose_generic, "kingsanddaughters.com", "product_*.html"),
+    "7-seas": (parse_7seas, "7seasbrewing.com", "*.html"),
 }
 
 
 def build_beer(brewery: dict, path: Path, parsed: tuple, index: dict[str, str]) -> CommentedMap | None:
     name, abv, hops_line, mode = parsed
+    if name and (not hops_line or hops_line.lower() in ("none", "n/a", "-")):
+        # "Fresh Hop Simcoe IPA": the name is the hop list.
+        if m := re.search(r"Fresh Hop ([A-Z][\w'. ]+?)(?= IPA| Pale| Pilsner| Lager| Ale| Red| Wanderlust|$)", name):
+            if index.get(norm(m.group(1))):
+                hops_line, mode = f"Fresh {m.group(1)}", "list"
     if not name or not hops_line or hops_line.lower() in ("none", "n/a", "-"):
         return None
+    if name.lower() in ("beer releases", "beers", "our beers", "all beers", "events & news"):
+        return None  # a listing page, not a beer
     items: list[dict] = []
     if mode == "list":
         farm = None
@@ -279,7 +371,9 @@ def build_beer(brewery: dict, path: Path, parsed: tuple, index: dict[str, str]) 
     beer = CommentedMap()
     beer["slug"] = slug
     name = re.sub(r"\s+", " ", name).strip()
-    beer["name"] = name.title() if name.isupper() else name
+    if name.isupper():
+        name = re.sub(r"\b(Ipa|Esb|Ipl|Dipa|Neipa|Wc|Xpa|Ddh)\b", lambda m: m.group(1).upper(), name.title())
+    beer["name"] = name
     beer["url"] = source_url(path)
     if abv:
         beer["abv"] = abv

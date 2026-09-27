@@ -1,0 +1,24 @@
+brewery:
+  slug: 7-seas
+  name: 7 Seas Brewing
+  city: Tacoma
+  state: WA
+  url: https://www.7seasbrewing.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-27'
+beers:
+  - slug: uno-mas-is-back
+    name: Uno Más
+    url: https://www.7seasbrewing.com/uno-mas-is-back/
+    abv: 6.4
+    hops_as_written: This Comet-hopped IPA is BACK as our tribute to Loza Farms and their incredible work in Yakima Valley. Showcasing the renowned Comet hops grown by our friends at their Loza family-owned and operated 365-acre farm in Yakima Valley’s town of Wapato. As the only Latino-owned hop farm in the country, this year marks their 20th harvest! The Loza family story is both compelling and inspiring, but per...
+    hops:
+      - { hop: comet, name: Comet, as_written: Comet }
+  - slug: 2026-yakima-valley-fresh-hop-ipa
+    name: Yakima Valley Fresh Hop IPA (2026)
+    url: https://www.7seasbrewing.com/2026-yakima-valley-fresh-hop-ipa/
+    abv: 6.2
+    hops_as_written: News Our 2026 Yakima Valley Fresh Hop IPA is here Deep golden in color and bursting with fresh from the field Yakima Valley hops. Floral and vibrant on the nose with hints of citrus fruits, Yakima Valley Fresh Hop IPA expresses a perfect blend of hop character that is both bold and nuanced. Fresh Amarillo hops from our friends at Loza Farms are added to the kettle within several hours of harves...
+    hops:
+      - { hop: amarillo, name: Amarillo, fresh: true, as_written: Amarillo }
+      - { hop: centennial, name: Centennial, as_written: Centennial }

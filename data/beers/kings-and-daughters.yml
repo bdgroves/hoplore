@@ -1,0 +1,45 @@
+brewery:
+  slug: kings-and-daughters
+  name: Kings & Daughters Brewery
+  city: Hood River
+  state: OR
+  url: https://www.kingsanddaughters.com/
+# Keyed by hand: the brewery's own shop pages don't list hops. Each beer here
+# is one whose description, written by the brewery on its Untappd page,
+# names its hops (hops_as_written keeps its wording as closely as the page
+# gives it). Beers that say only "classic
+# and new world hops" are left out rather than guessed at.
+generated_by: hand-keyed from the brewery's descriptions at https://untappd.com/kingsanddaughters/beer
+retrieved: '2026-09-27'
+beers:
+  - slug: beginning-of-a-beautiful-friendship
+    name: Beginning of a Beautiful Friendship
+    url: https://untappd.com/kingsanddaughters/beer
+    abv: 8.3
+    hops_as_written: Freestyle Farms Nelson Sauvin
+    hops:
+      - { hop: nelson-sauvin, name: Nelson Sauvin, farm: Freestyle Farms, as_written: Freestyle Farms Nelson Sauvin }
+  - slug: bijou
+    name: Bijou
+    url: https://untappd.com/kingsanddaughters/beer
+    abv: 5.3
+    hops_as_written: YCH Simcoe, BarthHaas Mosaic Incognito, Roy Farms El Dorado CGX, and Roy Farms Azzaca
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: YCH Simcoe }
+      - { hop: mosaic, name: Mosaic, form: Incognito, as_written: BarthHaas Mosaic Incognito }
+      - { hop: el-dorado, name: El Dorado, form: CGX, farm: Roy Farms, as_written: Roy Farms El Dorado CGX }
+      - { hop: azacca, name: Azacca, farm: Roy Farms, as_written: Roy Farms Azzaca }
+  - slug: fill-your-cup
+    name: Fill Your Cup
+    url: https://untappd.com/kingsanddaughters/beer
+    abv: 5.3
+    hops_as_written: Cirta fresh hops
+    hops:
+      - { hop: citra, name: Citra, fresh: true, as_written: Cirta fresh hops }
+  - slug: snowdrops
+    name: Snowdrops
+    url: https://untappd.com/kingsanddaughters/beer
+    abv: 7.3
+    hops_as_written: the full spectrum of Citra
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }

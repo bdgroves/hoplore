@@ -39,8 +39,9 @@ mill95:
 
 nzhops:
   publisher: New Zealand Hops Ltd
-  title: NZ Hops variety guide
-  url: https://www.nzhops.co.nz/hop-varieties
+  title: NZ Hops variety pages
+  url: https://nzhops.co.nz/collections/new-zealand-hops
+  retrieved: '2026-09-27'
   tier: breeder
   weight: 1.0
 

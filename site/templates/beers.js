@@ -189,25 +189,44 @@ ${footer(base, meta)}`;
 
 export function renderBeers({ breweries, bySlug, meta }) {
   const base = '../';
-  const sections = breweries
+  const order = [...breweries].sort(
+    (a, b) => b.brewery.state.localeCompare(a.brewery.state) || a.brewery.city.localeCompare(b.brewery.city) || a.brewery.name.localeCompare(b.brewery.name)
+  );
+  const hopName = (e) => (e.slug && bySlug[e.slug] ? bySlug[e.slug].name : e.name);
+  const row = (b, beer, showBrewery = false) => {
+    const bill = hopBill(beer);
+    const search = [beer.name, b.brewery.name, b.brewery.city, ...bill.map(hopName)].join(' ').toLowerCase();
+    return `<li data-search="${esc(search)}"><a href="${b.brewery.slug}/${beer.slug}/"><b>${esc(beer.name)}</b></a>
+          <span class="num fine">${showBrewery ? esc(b.brewery.name) : beer.abv != null ? `${fmt(beer.abv)}%` : ''}</span>
+          <span class="beer-hops">${bill.map((e) => `<span${e.fresh ? ' class="fresh"' : ''}>${esc(hopName(e))}</span>`).join('')}</span></li>`;
+  };
+
+  // Fresh hop season gets its own list: those beers only exist for a few weeks.
+  const fresh = order.flatMap((b) => b.beers.filter((beer) => hopBill(beer).some((e) => e.fresh)).map((beer) => row(b, beer, true)));
+
+  const cities = new Map();
+  for (const b of order) {
+    const key = `${b.brewery.city}, ${b.brewery.state}`;
+    if (!cities.has(key)) cities.set(key, []);
+    cities.get(key).push(b);
+  }
+  const jump = [...cities.entries()]
+    .map(([city, list]) => `<div class="jump-city"><span>${esc(city)}</span>${list.map((b) => `<a class="chip" href="#${b.brewery.slug}">${esc(b.brewery.name)} <span class="num">${b.beers.length}</span></a>`).join('')}</div>`)
+    .join('');
+
+  const sections = order
     .map(
-      (b) => `<section class="block" id="${b.brewery.slug}">
-    <h2>${esc(b.brewery.name)} <span class="fine">· ${esc(b.brewery.city)}, ${esc(b.brewery.state)}</span></h2>
+      (b) => `<section class="block brewery" id="${b.brewery.slug}">
+    <h2>${esc(b.brewery.name)} <span class="fine">· ${esc(b.brewery.city)}, ${esc(b.brewery.state)} · ${b.beers.length} beer${b.beers.length === 1 ? '' : 's'}</span></h2>
     <ul class="beerlist">
-      ${b.beers
-        .map((beer) => {
-          const bill = hopBill(beer);
-          return `<li><a href="${b.brewery.slug}/${beer.slug}/"><b>${esc(beer.name)}</b></a>
-          <span class="num fine">${beer.abv != null ? `${fmt(beer.abv)}%` : ''}</span>
-          <span class="beer-hops">${bill.map((e) => `<span${e.fresh ? ' class="fresh"' : ''}>${esc(e.slug && bySlug[e.slug] ? bySlug[e.slug].name : e.name)}</span>`).join('')}</span></li>`;
-        })
-        .join('\n      ')}
+      ${b.beers.map((beer) => row(b, beer)).join('\n      ')}
     </ul>
     <p class="fine">Hop lists from <a href="${esc(b.brewery.url)}">${esc(b.brewery.name)}</a>'s own beer pages, retrieved ${esc(b.retrieved)}.</p>
   </section>`
     )
     .join('\n');
 
+  const total = order.reduce((n, b) => n + b.beers.length, 0);
   const body = `
 <header class="masthead" style="padding-top:1.5rem">
   <div class="wrap">
@@ -217,18 +236,33 @@ export function renderBeers({ breweries, bySlug, meta }) {
     </nav>
     <h1 class="page-title">What's in the can</h1>
     <p class="standfirst">Pick a beer, see its hops — what each one is, what it
-    smells like, how hard it bitters, and where it was grown. Hop lists come
-    straight from the brewery.</p>
+    smells like, how hard it bitters, and where it was grown. ${total} beers from
+    ${order.length} breweries across Washington and Oregon, hop lists straight from the brewery.</p>
   </div>
 </header>
 <main id="main" class="wrap beers">
+  <div class="finder">
+    <div>
+      <label for="bq">Find a beer, a brewery or a hop</label>
+      <input id="bq" type="search" autocomplete="off" placeholder="strata, vortex, pfriem…">
+    </div>
+    <div class="jump">${jump}</div>
+  </div>
+  <p class="fine" id="bq-count" hidden></p>
+  ${fresh.length ? `<section class="block fresh-season" id="fresh-hop">
+    <h2>Fresh hop season <span class="fine">· ${fresh.length} beer${fresh.length === 1 ? '' : 's'} brewed with hops straight off the bine</span></h2>
+    <ul class="beerlist">
+      ${fresh.join('\n      ')}
+    </ul>
+  </section>` : ''}
 ${sections}
 </main>
-${footer(base, meta)}`;
+${footer(base, meta)}
+<script src="${base}assets/beers.js" type="module"></script>`;
 
   return shell({
     title: "What's in the can — beers and their hops, explained | HopLove",
-    description: 'Beers from Pacific Northwest breweries with every hop in them opened up: aroma, alpha acid, oils and where it was grown.',
+    description: `${total} Pacific Northwest beers with every hop in them opened up: aroma, alpha acid, oils and where it was grown.`,
     body,
     base,
   });
