@@ -24,7 +24,9 @@ import requests
 HERE = Path(__file__).parent
 URLS = HERE / "snapshot_urls.txt"
 OUT = HERE / "raw" / "pages"
-UA = "HopLore/0.1 (open hop dataset; +https://github.com/bdgroves/hoplore)"
+# Still says who we are; the "Mozilla/5.0 (compatible; ...)" form is the
+# convention crawlers use, and some sites refuse bare tool user-agents.
+UA = "Mozilla/5.0 (compatible; HopLore/0.1; +https://github.com/bdgroves/hoplore)"
 
 
 def target(url: str, content_type: str) -> Path:
@@ -41,20 +43,25 @@ def main() -> int:
     urls = [l.split("#")[0].strip() for l in URLS.read_text(encoding="utf-8").splitlines()]
     urls = [u for u in urls if u.startswith("https://")]
     failed = 0
+    log: list[str] = []
     for url in urls:
         try:
             r = requests.get(url, headers={"User-Agent": UA}, timeout=60)
             r.raise_for_status()
         except requests.RequestException as error:
             print(f"FAIL {url}: {error}")
+            log.append(f"FAIL {url}: {error}")
             failed += 1
             continue
         out = target(url, r.headers.get("content-type", ""))
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_bytes(r.content)
         print(f"ok   {url} -> {out.relative_to(HERE)} ({len(r.content)} bytes)")
+        log.append(f"ok   {url} ({r.status_code}, {len(r.content)} bytes)")
         time.sleep(1.5)
     print(f"\n{len(urls) - failed}/{len(urls)} saved")
+    OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / "last-run.txt").write_text("\n".join(log) + "\n", encoding="utf-8")
     return 0
 
 

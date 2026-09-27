@@ -1,15 +1,18 @@
 # Pages the snapshot workflow saves into tools/ingest/raw/pages/.
+# Results of the last run: raw/pages/last-run.txt
 # Yakima Chief Hops (grower-owned, Yakima): variety pages with full oil breakdowns
 https://www.yakimachief.com/robots.txt
 https://www.yakimachief.com/sitemap.xml
 https://www.yakimachief.com/variety/idaho-gem-brand
+https://www.yakimachief.com/idaho-gem.html
 # Indie Hops (Portland): Strata, Meridian and Oregon-grown classics
-https://indiehops.com/sitemap.xml
 https://indiehops.com/hops/strata/
 https://indiehops.com/ih-varieties
 https://indiehops.com/hops/cascade
-# Single-variety owners
-https://yakhops.com/elani/
-https://neomexicanus.com/brew/
-https://neomexicanus.com/wp-content/uploads/2024/10/Zappa-Hops_2022-Fact-Sheet_final_web-1.pdf
+# USDA public releases, via the breeder
 https://www.drjohnhops.com/cultivars/
+# Fort George Brewery (Astoria): beer pages list the hops
+https://fortgeorgebrewery.com/beer/
+https://fortgeorgebrewery.com/beer/vortex-ipa/
+https://fortgeorgebrewery.com/beer/fresh-hop-mirrored-realities/
+https://fortgeorgebrewery.com/sitemap.xml
