@@ -1,0 +1,78 @@
+slug: zappa
+name: Zappa
+purpose: aroma
+country: US
+kind: cultivar
+
+ownership:
+  holder: CLS Farms
+  mark: registered
+  public_domain: false
+
+pedigree:
+  breeder: cls-farms
+  parents: { unknown: true, note: 'A native North American Humulus lupulus var. neomexicanus, recovered from the wild in New Mexico.' }
+  refs: [cls-farms]
+
+aroma:
+  summary: >
+    Passion fruit, mint and mango with white pepper and spice, per CLS Farms. A 100% neomexicanus hop from the New Mexico mountains, grown in the Pacific Northwest, and it tastes like nothing bred from European stock.
+  tags: [passionfruit, mint, mango, black-pepper, spice]
+  refs: [cls-farms]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: corroborated
+  last_reviewed: '2026-09-27'
+  notes: >
+    Purpose aroma: CLS Farms calls it an aroma hop.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 6.0, high: 8.0 }
+      - { source: cls-farms, low: 6.0, high: 8.0, note: '2022 fact sheet; the oil figures are single analyses, not ranges.' }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 8.0, high: 9.0 }
+      - { source: cls-farms, low: 8.0, high: 9.0, note: '2022 fact sheet; the oil figures are single analyses, not ranges.' }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 40.0, high: 45.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: cls-farms, low: 1.8, high: 2.5, note: '2022 fact sheet; the oil figures are single analyses, not ranges.' }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 60.0, high: 70.0 }
+      - { source: cls-farms, low: 64.37, high: 64.37, note: '2022 fact sheet; the oil figures are single analyses, not ranges.' }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 1.0, high: 10.0 }
+      - { source: cls-farms, low: 4.62, high: 4.62, note: '2022 fact sheet; the oil figures are single analyses, not ranges.' }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: cls-farms, low: 8.55, high: 8.55, note: '2022 fact sheet; the oil figures are single analyses, not ranges.' }
+  linalool:
+    unit: percent_of_total_oil
+    observations:
+      - { source: cls-farms, low: 0.82, high: 0.82, note: '2022 fact sheet; the oil figures are single analyses, not ranges.' }
+  geraniol:
+    unit: percent_of_total_oil
+    observations:
+      - { source: cls-farms, low: 0.67, high: 0.67, note: '2022 fact sheet; the oil figures are single analyses, not ranges.' }

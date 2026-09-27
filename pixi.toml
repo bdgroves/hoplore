@@ -98,6 +98,11 @@ test-hbc = "python tools/ingest/test_hbc.py"
 usda-nass = "python tools/ingest/usda_nass.py"
 test-usda-nass = "python tools/ingest/test_usda_nass.py"
 
+# One-page spec sheets (Indie Hops, Charles Faram, Haas, YQH, CLS Farms) read
+# from the copies saved by tools/ingest/snapshot.py. See sheets.yml.
+sheets = "python tools/ingest/sheets.py"
+snapshot = "python tools/ingest/snapshot.py"
+
 # Maintenance: remove placeholder observations a real source has superseded.
 # Dry run by default. See tools/drop_placeholders.py for why this is a
 # deletion and not a second opinion.

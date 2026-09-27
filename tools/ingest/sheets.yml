@@ -1,0 +1,149 @@
+# Single-page spec sheets, read from the copies in raw/pages/ by tools/ingest/sheets.py.
+# `values:` = keyed by hand, each number checked against the saved page.
+# `exclude:` = published but can't be right; the reason prints on every run.
+
+# --- Indie Hops, Portland: their own varieties (breeder) ---
+- slug: strata
+  source: indiehops
+  file: indiehops.com/hops_strata.html
+  url: https://indiehops.com/hops/strata
+- slug: audacia
+  source: indiehops
+  file: indiehops.com/hops_audacia.html
+  url: https://indiehops.com/hops/audacia
+- slug: lorien
+  source: indiehops
+  file: indiehops.com/hops_lorien.html
+  url: https://indiehops.com/hops/lorien
+- slug: luminosa
+  source: indiehops
+  file: indiehops.com/hops_luminosa.html
+  url: https://indiehops.com/hops/luminosa
+- slug: meridian
+  source: indiehops
+  file: indiehops.com/hops_meridian.html
+  url: https://indiehops.com/hops/meridian
+
+# --- Indie Hops: public varieties, Oregon-grown lots (merchant) ---
+- slug: cascade
+  source: indiehops-oregon
+  file: indiehops.com/hops_cascade.html
+  url: https://indiehops.com/hops/cascade
+- slug: centennial
+  source: indiehops-oregon
+  file: indiehops.com/hops_centennial.html
+  url: https://indiehops.com/hops/centennial
+- slug: chinook
+  source: indiehops-oregon
+  file: indiehops.com/hops_chinook.html
+  url: https://indiehops.com/hops/chinook
+- slug: crystal
+  source: indiehops-oregon
+  file: indiehops.com/hops_crystal.html
+  url: https://indiehops.com/hops/crystal
+- slug: fuggle
+  source: indiehops-oregon
+  file: indiehops.com/hops_us-fuggle.html
+  url: https://indiehops.com/hops/us-fuggle
+  note: US-grown Fuggle.
+- slug: liberty
+  source: indiehops-oregon
+  file: indiehops.com/hops_liberty.html
+  url: https://indiehops.com/hops/liberty
+  exclude:
+    beta_acid: every figure but alpha is identical to their Centennial sheet -- a copied template, not Liberty
+    cohumulone: every figure but alpha is identical to their Centennial sheet -- a copied template, not Liberty
+    total_oil: every figure but alpha is identical to their Centennial sheet -- a copied template, not Liberty
+    myrcene: every figure but alpha is identical to their Centennial sheet -- a copied template, not Liberty
+    humulene: every figure but alpha is identical to their Centennial sheet -- a copied template, not Liberty
+    caryophyllene: every figure but alpha is identical to their Centennial sheet -- a copied template, not Liberty
+- slug: mount-hood
+  source: indiehops-oregon
+  file: indiehops.com/hops_mt-hood.html
+  url: https://indiehops.com/hops/mt-hood
+  exclude:
+    caryophyllene: same 26-30% as the humulene line above it -- a copied cell
+- slug: nugget
+  source: indiehops-oregon
+  file: indiehops.com/hops_nugget.html
+  url: https://indiehops.com/hops/nugget
+- slug: sterling
+  source: indiehops-oregon
+  file: indiehops.com/hops_sterling.html
+  url: https://indiehops.com/hops/sterling
+- slug: willamette
+  source: indiehops-oregon
+  file: indiehops.com/hops_willamette.html
+  url: https://indiehops.com/hops/willamette
+# us-tettnanger left out: its sheet is identical, field for field, to their US Fuggle sheet.
+
+# --- Charles Faram (UK merchant) hop oracle: spec tables only, never the prose ---
+# Several of its cells are garbled (dates and stray digits); the parser's ceilings
+# drop the impossible ones and the rest are excluded below by name.
+- slug: pekko
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_pekko-hop.html
+  url: https://charlesfaram.com/hop-oracle/pekko-hop/
+  exclude:
+    total_oil: 20.1-20.7 mL/100g is ten times any hop on record
+- slug: jarrylo
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_jarrylo.html
+  url: https://charlesfaram.com/hop-oracle/jarrylo/
+- slug: idaho-gem
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_idaho-gem-hop.html
+  url: https://charlesfaram.com/hop-oracle/idaho-gem-hop/
+- slug: triumph
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_triumph.html
+  url: https://charlesfaram.com/hop-oracle/triumph/
+- slug: vista
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_vista.html
+  url: https://charlesfaram.com/hop-oracle/vista/
+  exclude:
+    myrcene: 0.05% myrcene is not credible for an aroma hop; a garbled cell
+- slug: zappa
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_zappa.html
+  url: https://charlesfaram.com/hop-oracle/zappa/
+- slug: elani
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_elani.html
+  url: https://charlesfaram.com/hop-oracle/elani/
+
+# --- Breeders and owners ---
+- slug: elani
+  source: yqh
+  file: yakhops.com/elani.html
+  url: https://yakhops.com/elani/
+
+- slug: zappa
+  source: cls-farms
+  file: neomexicanus.com/wp-content_uploads_2024_10_Zappa-Hops_2022-Fact-Sheet_final_web-1.pdf
+  url: https://neomexicanus.com/wp-content/uploads/2024/10/Zappa-Hops_2022-Fact-Sheet_final_web-1.pdf
+  note: 2022 fact sheet; the oil figures are single analyses, not ranges.
+  values:
+    alpha_acid: [6, 8]
+    beta_acid: [8, 9]
+    total_oil: [1.8, 2.5]
+    myrcene: 64.37
+    humulene: 4.62
+    caryophyllene: 8.55
+    linalool: 0.82
+    geraniol: 0.67
+
+- slug: idaho-gem
+  source: john-i-haas
+  file: johnihaas.com/wp-content_uploads_2020_09_Haas_HopSpecSheets-IdahoGem_110520.pdf
+  url: https://www.johnihaas.com/wp-content/uploads/2020/09/Haas_HopSpecSheets-IdahoGem_110520.pdf
+  note: 2020 spec sheet; the oil figures are single analyses, not ranges.
+  # Caryophyllene is printed as 0.03% -- left out; every other source has it in whole percents.
+  values:
+    alpha_acid: [11, 14]
+    beta_acid: [5, 7]
+    cohumulone: [40, 45]
+    total_oil: [1.3, 2.0]
+    myrcene: 61.32
+    humulene: 17.66

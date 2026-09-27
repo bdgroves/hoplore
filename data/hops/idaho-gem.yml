@@ -4,24 +4,25 @@ purpose: dual
 country: US
 kind: cultivar
 
-# Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).
-# purpose is an unconfirmed default -- see meta.notes. No analytics recorded
-# yet: run `pixi run -e data hopsteiner idaho-gem --apply` to pull real values.
+# Figures from the John I. Haas and Charles Faram spec sheets; see tools/ingest/sheets.yml.
 
 ownership:
-  mark: public
-  public_domain: true
+  holder: Gooding Farms
+  mark: trademark
+  public_domain: false
 
 pedigree:
-  breeder: unknown
-  parents: { unknown: true }
-  refs: []
+  breeder: gooding-farms
+  parents: { unknown: true, note: A "found" hop -- selected on Gooding Farms in Idaho rather than bred from a planned cross. }
+  refs: [john-i-haas]
 
 aroma:
   summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+    Relatively high alpha with sweet fruit: pineapple, grapefruit and cherry
+    are the key flavors John I. Haas lists. One of Idaho's two farm-found hops,
+    alongside Idaho 7.
+  tags: [pineapple, grapefruit, sweet]
+  refs: [john-i-haas]
 
 usage:
   timing: []
@@ -32,9 +33,43 @@ products: { cryo: false, lupomax: false }
 substitutes: []
 
 meta:
-  status: stub
-  verification: unverified
-  last_reviewed: '2026-09-14'
+  status: draft
+  verification: corroborated
+  last_reviewed: '2026-09-27'
   notes: >
-    purpose defaulted to dual, unconfirmed -- was not researched individually
-    for this bulk scaffold pass. Correct before publishing.
+    purpose defaulted to dual, unconfirmed. Found and marketed by Gooding
+    Farms in Idaho, per the John I. Haas spec sheet.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 11.0, high: 14.5 }
+      - { source: john-i-haas, low: 11.0, high: 14.0, note: '2020 spec sheet; the oil figures are single analyses, not ranges.' }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 35.0, high: 45.0 }
+      - { source: john-i-haas, low: 40.0, high: 45.0, note: '2020 spec sheet; the oil figures are single analyses, not ranges.' }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: john-i-haas, low: 5.0, high: 7.0, note: '2020 spec sheet; the oil figures are single analyses, not ranges.' }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: john-i-haas, low: 1.3, high: 2.0, note: '2020 spec sheet; the oil figures are single analyses, not ranges.' }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 50.0, high: 60.0 }
+      - { source: john-i-haas, low: 61.32, high: 61.32, note: '2020 spec sheet; the oil figures are single analyses, not ranges.' }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 16.0, high: 20.0 }
+      - { source: john-i-haas, low: 17.66, high: 17.66, note: '2020 spec sheet; the oil figures are single analyses, not ranges.' }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 0.1, high: 1.0 }

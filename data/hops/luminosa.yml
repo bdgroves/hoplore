@@ -1,0 +1,70 @@
+slug: luminosa
+name: Luminosa
+purpose: aroma
+country: US
+kind: cultivar
+
+ownership:
+  holder: Indie Hops
+  mark: registered
+  public_domain: false
+
+pedigree:
+  breeder: indie-hops
+  parents: { unknown: true }
+  refs: [indiehops]
+
+aroma:
+  summary: >
+    Bright fresh fruit and a candied-orange-peel sweetness with no sharp edges, per Indie Hops. Aimed squarely at hazy IPA, and at pale ales alongside Cascade or Oregon Chinook.
+  tags: [orange, tropical, citrus, sweet]
+  refs: [indiehops]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-27'
+  notes: >
+    Purpose aroma: Indie Hops sells and describes it only for flavor and aroma.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: indiehops, low: 9.0, high: 12.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: indiehops, low: 4.0, high: 5.0 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: indiehops, low: 28.3, high: 28.3 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: indiehops, low: 1.8, high: 2.2 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: indiehops, low: 43.0, high: 54.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: indiehops, low: 10.0, high: 13.0 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: indiehops, low: 3.0, high: 7.0 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: indiehops, low: 0.0, high: 0.0 }

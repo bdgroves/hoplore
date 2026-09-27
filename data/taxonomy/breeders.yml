@@ -34,3 +34,24 @@ hopsteiner-breeding:
   country: US
 unknown:
   label: Unrecorded
+indie-hops:
+  label: Indie Hops
+  country: US
+  url: https://indiehops.com/
+  note: Portland, Oregon. Breeding with Oregon State University as the Indie Hops Flavor Project.
+adha:
+  label: American Dwarf Hop Association
+  country: US
+yqh:
+  label: Yakima Quality Hops
+  country: US
+  url: https://yakhops.com/
+cls-farms:
+  label: CLS Farms
+  country: US
+  url: https://neomexicanus.com/
+  note: Moxee, Washington.
+gooding-farms:
+  label: Gooding Farms
+  country: US
+  note: Idaho.

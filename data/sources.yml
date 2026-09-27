@@ -61,6 +61,67 @@ hbc:
     Yakima breeding joint venture of Yakima Chief Ranches and John I. Haas;
     the breeder of record for Citra, Mosaic, Sabro, Talus and the rest.
 
+indiehops:
+  publisher: Indie Hops
+  title: Indie Hops variety pages (their own releases)
+  url: https://indiehops.com/ih-varieties
+  retrieved: '2026-09-27'
+  tier: breeder
+  weight: 1.0
+  note: >
+    Portland, Oregon. Breeds with Oregon State University (the Indie Hops
+    Flavor Project); Strata, Audacia, Lórien, Luminosa and Meridian are theirs.
+
+indiehops-oregon:
+  publisher: Indie Hops
+  title: Indie Hops variety pages (Oregon-grown public varieties)
+  url: https://indiehops.com/ih-varieties
+  retrieved: '2026-09-27'
+  tier: merchant
+  weight: 0.8
+  note: >
+    The same site's figures for public varieties it buys from Oregon growers --
+    a merchant spec, and useful as the Oregon-grown view of hops most sources
+    describe from Washington. Liberty and US Tettnanger sheets are copied
+    templates and are excluded; see tools/ingest/sheets.yml.
+
+charles-faram:
+  publisher: Charles Faram
+  title: Hop Oracle
+  url: https://charlesfaram.com/hop-oracle/
+  retrieved: '2026-09-27'
+  tier: merchant
+  weight: 0.6
+  note: >
+    UK merchant. Only the spec tables are used, never the prose, and several
+    garbled cells are excluded by name in tools/ingest/sheets.yml.
+
+john-i-haas:
+  publisher: John I. Haas
+  title: Hop spec sheets
+  url: https://www.johnihaas.com/
+  retrieved: '2026-09-27'
+  tier: merchant
+  weight: 0.8
+  note: Yakima, Washington. Co-owner of the Hop Breeding Company.
+
+yqh:
+  publisher: Yakima Quality Hops
+  title: Elani variety page
+  url: https://yakhops.com/elani/
+  retrieved: '2026-09-27'
+  tier: breeder
+  weight: 1.0
+
+cls-farms:
+  publisher: CLS Farms
+  title: Zappa fact sheet (2022)
+  url: https://neomexicanus.com/
+  retrieved: '2026-09-27'
+  tier: breeder
+  weight: 1.0
+  note: Moxee, Washington. Also the source of El Dorado.
+
 crosby:
   publisher: Crosby Hop Farm
   title: Hop variety specifications

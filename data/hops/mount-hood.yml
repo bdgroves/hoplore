@@ -45,19 +45,23 @@ analytics:
     observations:
       - { source: hopsteiner, low: 4.0, high: 8.0, note: Data sheet last changed 2020-01-09. }
       - { source: barthhaas, low: 3.9, high: 6.5, note: Range over the last 4 crop years. }
+      - { source: indiehops-oregon, low: 5.0, high: 8.0 }
   beta_acid:
     unit: percent
     observations:
       - { source: hopsteiner, low: 4.0, high: 7.5, note: Data sheet last changed 2020-01-09. }
       - { source: barthhaas, low: 5.0, high: 8.0, note: Range over the last 4 crop years. }
+      - { source: indiehops-oregon, low: 5.0, high: 7.5 }
   cohumulone:
     unit: percent_of_alpha
     observations:
       - { source: hopsteiner, low: 22.0, high: 23.0, note: Data sheet last changed 2020-01-09. }
+      - { source: indiehops-oregon, low: 22.0, high: 23.0 }
   total_oil:
     unit: ml_per_100g
     observations:
       - { source: hopsteiner, low: 1.0, high: 1.7, note: Data sheet last changed 2020-01-09. }
+      - { source: indiehops-oregon, low: 1.0, high: 1.3 }
 oils:
   farnesene:
     unit: percent_of_total_oil
@@ -72,6 +76,7 @@ oils:
     unit: percent_of_total_oil
     observations:
       - { source: barthhaas, low: 14.6, high: 35.0, note: Range over the last 4 crop years. }
+      - { source: indiehops-oregon, low: 55.0, high: 65.0 }
   caryophyllene:
     unit: percent_of_total_oil
     observations:
@@ -84,3 +89,4 @@ oils:
     unit: percent_of_total_oil
     observations:
       - { source: barthhaas, low: 17.4, high: 29.7, note: Range over the last 4 crop years. }
+      - { source: indiehops-oregon, low: 26.0, high: 30.0 }

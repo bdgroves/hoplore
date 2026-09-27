@@ -1,0 +1,66 @@
+slug: meridian
+name: Meridian
+purpose: aroma
+country: US
+kind: cultivar
+
+ownership:
+  holder: Indie Hops
+  mark: registered
+  public_domain: false
+
+pedigree:
+  breeder: indie-hops
+  parents: { unknown: true, note: Named after the road near which it was discovered. }
+  refs: [indiehops]
+
+aroma:
+  summary: >
+    Spearmint and boysenberry through Meyer lemon and pineapple, with a sweet-tart, sassafras edge and little resin, per Indie Hops. A top-note hop: a role player in hazy IPA, easy in a saison.
+  tags: [mint, berry, lemon, pineapple]
+  refs: [indiehops]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-27'
+  notes: >
+    Purpose aroma: Indie Hops sells and describes it only for flavor and aroma.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: indiehops, low: 5.0, high: 6.5 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: indiehops, low: 7.0, high: 8.0 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: indiehops, low: 50.1, high: 50.1 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: indiehops, low: 1.1, high: 1.6 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: indiehops, low: 40.0, high: 64.4 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: indiehops, low: 9.0, high: 17.6 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: indiehops, low: 4.0, high: 8.0 }

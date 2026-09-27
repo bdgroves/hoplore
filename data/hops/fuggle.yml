@@ -45,31 +45,42 @@ analytics:
     observations:
       - { source: hopsteiner, low: 3.0, high: 6.0, note: Data sheet last changed 2020-01-09. }
       - { source: barthhaas, low: 3.0, high: 6.5, note: Range over the last 4 crop years. }
+      - { source: indiehops-oregon, low: 4.0, high: 5.0, note: US-grown Fuggle. }
   beta_acid:
     unit: percent
     observations:
       - { source: hopsteiner, low: 2.0, high: 3.0, note: Data sheet last changed 2020-01-09. }
       - { source: barthhaas, low: 2.0, high: 4.0, note: Range over the last 4 crop years. }
+      - { source: indiehops-oregon, low: 2.0, high: 3.0, note: US-grown Fuggle. }
   cohumulone:
     unit: percent_of_alpha
     observations:
       - { source: hopsteiner, low: 30.0, high: 33.0, note: Data sheet last changed 2020-01-09. }
+      - { source: indiehops-oregon, low: 27.0, high: 27.0, note: US-grown Fuggle. }
   total_oil:
     unit: ml_per_100g
     observations:
       - { source: hopsteiner, low: 0.7, high: 1.2, note: Data sheet last changed 2020-01-09. }
       - { source: barthhaas, low: 0.7, high: 1.4, note: Range over the last 4 crop years. }
+      - { source: indiehops-oregon, low: 0.5, high: 1.0, note: US-grown Fuggle. }
 oils:
   farnesene:
     unit: percent_of_total_oil
     observations:
       - { source: hopsteiner, low: 5.0, high: 6.0, note: Data sheet last changed 2020-01-09. }
       - { source: barthhaas, low: 6.0, high: 8.0, note: Range over the last 4 crop years. }
+      - { source: indiehops-oregon, low: 4.0, high: 4.0, note: US-grown Fuggle. }
   myrcene:
     unit: percent_of_total_oil
     observations:
       - { source: barthhaas, low: 25.0, high: 30.0, note: Range over the last 4 crop years. }
+      - { source: indiehops-oregon, low: 43.0, high: 43.0, note: US-grown Fuggle. }
   humulene:
     unit: percent_of_total_oil
     observations:
       - { source: barthhaas, low: 30.0, high: 38.0, note: Range over the last 4 crop years. }
+      - { source: indiehops-oregon, low: 27.0, high: 27.0, note: US-grown Fuggle. }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: indiehops-oregon, low: 9.0, high: 9.0, note: US-grown Fuggle. }

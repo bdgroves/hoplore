@@ -1,0 +1,58 @@
+slug: pekko
+name: Pekko
+purpose: dual
+country: US
+kind: cultivar
+
+ownership:
+  holder: American Dwarf Hop Association
+  mark: registered
+  public_domain: false
+
+pedigree:
+  breeder: adha
+  parents: { unknown: true }
+  refs: [charles-faram]
+
+aroma:
+  summary: >
+    High alpha with a clean, floral and fruity aroma and a herbal streak of mint and basil, per Charles Faram's spec sheet. Named after the Finnish god of barley and brewing.
+  tags: [floral, mint, herbal, citrus]
+  refs: [charles-faram]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-27'
+  notes: >
+    purpose defaulted to dual, unconfirmed -- only a merchant describes its role so far.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 14.0, high: 16.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 3.5, high: 4.5 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 27.0, high: 30.0 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 46.0, high: 55.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 12.0, high: 15.0 }

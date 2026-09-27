@@ -1,0 +1,71 @@
+slug: lorien
+name: Lórien
+purpose: aroma
+country: US
+kind: cultivar
+
+ownership:
+  holder: Indie Hops
+  mark: registered
+  public_domain: false
+
+pedigree:
+  released: 2021
+  breeder: indie-hops
+  parents: { seed: sterling, note: 'A Sterling female pollinated with a German male; the seed was gathered in 2010 from a cross made at Oregon State University.' }
+  refs: [indiehops]
+
+aroma:
+  summary: >
+    Clean fruit and floral character with a dry cinnamon-spice finish, built for lagers and low-gravity beer, per Indie Hops. Old World manners, New World fruit.
+  tags: [floral, orchard, cinnamon, noble]
+  refs: [indiehops]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-27'
+  notes: >
+    Purpose aroma: Indie Hops sells and describes it only for flavor and aroma.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: indiehops, low: 4.0, high: 5.5 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: indiehops, low: 7.0, high: 9.0 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: indiehops, low: 22.6, high: 22.6 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: indiehops, low: 1.8, high: 2.2 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: indiehops, low: 40.0, high: 50.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: indiehops, low: 19.0, high: 25.0 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: indiehops, low: 2.6, high: 5.0 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: indiehops, low: 2.7, high: 4.0 }

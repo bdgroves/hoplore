@@ -4,24 +4,27 @@ purpose: dual
 country: US
 kind: cultivar
 
-# Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).
-# purpose is an unconfirmed default -- see meta.notes. No analytics recorded
-# yet: run `pixi run -e data hopsteiner strata --apply` to pull real values.
+# Figures from Indie Hops, which bred it; run tools/ingest/sheets.py to refresh.
 
 ownership:
-  mark: public
-  public_domain: true
+  holder: Indie Hops
+  mark: registered
+  public_domain: false
 
 pedigree:
-  breeder: unknown
-  parents: { unknown: true }
-  refs: []
+  year_crossed: 2009
+  released: 2018
+  breeder: indie-hops
+  parents: { seed: perle, note: An open-pollinated Perle at an Oregon State University field in Corvallis. }
+  refs: [indiehops]
 
 aroma:
   summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+    Passionfruit and strawberry tied together with sticky, cannabis-smoke dank
+    and a grapefruit edge, per Indie Hops. Oregon's answer to the Yakima
+    proprietaries, and one of the few hops brewers talk about as a house flavor.
+  tags: [passionfruit, strawberry, grapefruit, cannabis, dank]
+  refs: [indiehops]
 
 usage:
   timing: []
@@ -32,9 +35,39 @@ products: { cryo: false, lupomax: false }
 substitutes: []
 
 meta:
-  status: stub
-  verification: unverified
-  last_reviewed: '2026-09-14'
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-27'
   notes: >
-    purpose defaulted to dual, unconfirmed -- was not researched individually
-    for this bulk scaffold pass. Correct before publishing.
+    purpose defaulted to dual, unconfirmed. Pedigree, release and figures
+    are from Indie Hops, which bred it with Oregon State University.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: indiehops, low: 12.0, high: 15.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: indiehops, low: 5.0, high: 6.0 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: indiehops, low: 21.0, high: 21.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: indiehops, low: 2.3, high: 3.5 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: indiehops, low: 52.0, high: 65.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: indiehops, low: 22.0, high: 30.0 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: indiehops, low: 5.0, high: 12.5 }

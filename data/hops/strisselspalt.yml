@@ -20,24 +20,20 @@ analytics:
   alpha_acid:
     unit: percent
     observations:
-      - { source: seed-general-knowledge, low: 1.8, high: 5.0, typical: 3.0 }
       - { source: hopsteiner, low: 3.0, high: 5.0, note: Data sheet last changed 2020-01-09. }
       - { source: barthhaas, low: 1.8, high: 2.5, note: Range over the last 4 crop years. }
   beta_acid:
     unit: percent
     observations:
-      - { source: seed-general-knowledge, low: 3.0, high: 5.5 }
       - { source: hopsteiner, low: 3.0, high: 5.5, note: Data sheet last changed 2020-01-09. }
       - { source: barthhaas, low: 4.0, high: 6.0, note: Range over the last 4 crop years. }
   cohumulone:
     unit: percent_of_alpha
     observations:
-      - { source: seed-general-knowledge, low: 20, high: 25 }
       - { source: hopsteiner, low: 20.0, high: 25.0, note: Data sheet last changed 2020-01-09. }
   total_oil:
     unit: ml_per_100g
     observations:
-      - { source: seed-general-knowledge, low: 0.6, high: 0.8 }
       - { source: hopsteiner, low: 0.6, high: 0.8, note: Data sheet last changed 2020-01-09. }
       - { source: barthhaas, low: 0.6, high: 0.8, note: Range over the last 4 crop years. }
 usage:
