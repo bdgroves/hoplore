@@ -432,14 +432,39 @@ def discover(delay: float, as_json: bool) -> None:
     print()
 
 
+def page_identity(html: str) -> dict:
+    """Name, international code and origin from the header block under the
+    <h1>: a bold <p> with the code ("CAS") and a plain one with the origin."""
+    soup = BeautifulSoup(html, "lxml")
+    h1 = soup.find("h1")
+    out = {"name": h1.get_text(" ", strip=True) if h1 else None, "code": None, "origin": None}
+    if not h1:
+        return out
+    for p in h1.find_next_siblings("p", limit=4):
+        classes = p.get("class") or []
+        text = p.get_text(" ", strip=True)
+        if "text-display-4-bold" in classes and out["code"] is None and re.fullmatch(r"[A-Z0-9]{2,6}", text):
+            out["code"] = text
+        elif "text-display-4" in classes and out["origin"] is None:
+            out["origin"] = text
+    return out
+
+
 def write_catalog(delay: float, fixture: str | None) -> None:
     """Snapshot the catalog to catalogs/barthhaas.json; optionally save one raw
     page as a test fixture so the parser can be checked against real markup."""
     varieties = discover_varieties(delay)
+    details = {}
+    for name, url in varieties.items():
+        try:
+            details[name] = page_identity(fetch(url, delay))
+        except requests.RequestException:
+            details[name] = {"name": None, "code": None, "origin": None, "error": "page did not load"}
     CATALOG_FILE.parent.mkdir(exist_ok=True)
     CATALOG_FILE.write_text(
         json.dumps({"source": SOURCE_ID, "crawled": time.strftime("%Y-%m-%d"),
-                    "count": len(varieties), "varieties": varieties}, indent=2) + "\n",
+                    "count": len(varieties), "varieties": varieties, "details": details},
+                   indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
     print(f"wrote {CATALOG_FILE.relative_to(ROOT)}: {len(varieties)} varieties")
