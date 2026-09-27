@@ -1,25 +1,23 @@
  WARN the lock file is up-to-date but uses an older format (v6), run `pixi lock` to upgrade to v7 for improved reproducibility
-fort-george: 0 beer page(s)
+fort-george: 62 beer page(s)
 double-mountain: 24 beer page(s)
 pfriem: 277 beer page(s)
-kings-and-daughters: 11 beer page(s)
 ex-novo: 191 beer page(s)
 breakside: 275 beer page(s)
-ecliptic: 0 beer page(s)
+ecliptic: 11 beer page(s)
 7-seas: 2 beer page(s)
+elysian: 16 beer page(s)
+fair-isle: 128 beer page(s)
+holy-mountain: 14 beer page(s)
+cloudburst: 450 beer page(s)
+reubens: 441 beer page(s)
+fremont: 0 beer page(s)
+aslan: 101 beer page(s)
 
-added 8 packages, and audited 9 packages in 2s
+added 8 packages, and audited 9 packages in 4s
 
 3 packages are looking for funding
   run `npm fund` for details
 
 found 0 vulnerabilities
-rendered https://www.kingsanddaughters.com/product/calendar-lor-/CUGKFIGTYI55LO5NOKQDKQHX
-rendered https://www.kingsanddaughters.com/product/fort-george-glass-daggers-wc-pale-ale-happy-hour/BY42FEMNJDSHKFFV7WGCYB2K
-rendered https://www.kingsanddaughters.com/product/glass-daggers-wc-pale-ale/JQFPRC5WEOD3TMMMEJGD6NJJ
-rendered https://www.kingsanddaughters.com/product/gow-mexican-dark-lager-4-pack/4KRT7GE7M23R6SFUSYOUAC44
-rendered https://www.kingsanddaughters.com/product/otherlands-lagerbier/KJCY5Q5ND7PXEQD3OSH5XV44
-rendered https://www.kingsanddaughters.com/product/petal-party-soft-ipa-4-pack/VK622Y3T7ASLI66QSJTGIPMI
-rendered https://www.kingsanddaughters.com/product/wholesale-case-crooked-truth/EPCG6P3EWZXNJ5AOSTAHBZHU
-rendered https://www.kingsanddaughters.com/product/wholesale-case-golden-thread/FMC3MXY4TNJ3PWCIM7TUKCNO
-8 page(s) rendered
+0 page(s) rendered
