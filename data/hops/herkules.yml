@@ -30,7 +30,7 @@ substitutes: []
 
 meta:
   status: stub
-  verification: single-source
+  verification: corroborated
   last_reviewed: '2026-09-27'
   notes: >
     purpose defaulted to dual, unconfirmed. Country: breeding origin from general knowledge, not yet cited.
@@ -39,10 +39,12 @@ analytics:
     unit: percent
     observations:
       - { source: hopsteiner, low: 13.0, high: 17.0, note: Data sheet last changed 2020-01-09. }
+      - { source: barthhaas, low: 12.4, high: 22.9, note: Range over the last 4 crop years. }
   beta_acid:
     unit: percent
     observations:
       - { source: hopsteiner, low: 4.0, high: 5.5, note: Data sheet last changed 2020-01-09. }
+      - { source: barthhaas, low: 3.3, high: 5.9, note: Range over the last 4 crop years. }
   cohumulone:
     unit: percent_of_alpha
     observations:
@@ -51,6 +53,7 @@ analytics:
     unit: ml_per_100g
     observations:
       - { source: hopsteiner, low: 1.4, high: 2.4, note: Data sheet last changed 2020-01-09. }
+      - { source: barthhaas, low: 1.4, high: 2.9, note: Range over the last 4 crop years. }
 oils:
   farnesene:
     unit: percent_of_total_oil

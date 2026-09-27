@@ -30,7 +30,7 @@ substitutes: []
 
 meta:
   status: stub
-  verification: single-source
+  verification: corroborated
   last_reviewed: '2026-09-27'
   notes: >
     purpose defaulted to dual, unconfirmed. Country: Hopsteiner's data sheet (main growing country).
@@ -39,6 +39,7 @@ analytics:
     unit: percent
     observations:
       - { source: hopsteiner, low: 7.0, high: 7.5, note: Data sheet last changed 2020-01-09. }
+      - { source: barthhaas, low: 3.0, high: 7.0, note: Range over the last 4 crop years. }
   cohumulone:
     unit: percent_of_alpha
     observations:
@@ -47,11 +48,16 @@ analytics:
     unit: ml_per_100g
     observations:
       - { source: hopsteiner, low: 1.5, high: 1.7, note: Data sheet last changed 2020-01-09. }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: barthhaas, low: 3.0, high: 6.3, note: Range over the last 4 crop years. }
 oils:
   farnesene:
     unit: percent_of_total_oil
     observations:
       - { source: hopsteiner, low: 20.0, high: 21.0, note: Data sheet last changed 2020-01-09. }
+      - { source: barthhaas, low: 0.1, high: 0.6, note: Range over the last 4 crop years. }
   linalool:
     unit: percent_of_total_oil
     observations:

@@ -40,11 +40,13 @@ analytics:
       - { source: beermaverick, low: 5.5, high: 8.5, typical: 7.0 }
       - { source: hops-france, low: 7.0, high: 8.5, note: 'Breeder figure, narrower than merchant spread.' }
       - { source: hopsteiner, low: 6.5, high: 8.5, note: Data sheet last changed 2020-01-09. }
+      - { source: barthhaas, low: 6.5, high: 8.5, note: Range over the last 4 crop years. }
   beta_acid:
     unit: percent
     observations:
       - { source: beermaverick, low: 3.0, high: 5.5, typical: 4.3 }
       - { source: hopsteiner, low: 3.5, high: 5.5, note: Data sheet last changed 2020-01-09. }
+      - { source: barthhaas, low: 3.5, high: 5.5, note: Range over the last 4 crop years. }
   cohumulone:
     unit: percent_of_alpha
     observations:
@@ -55,6 +57,7 @@ analytics:
     observations:
       - { source: beermaverick, low: 1.2, high: 1.6, typical: 1.4 }
       - { source: hopsteiner, low: 1.2, high: 1.6, note: Data sheet last changed 2020-01-09. }
+      - { source: barthhaas, low: 1.2, high: 1.6, note: Range over the last 4 crop years. }
 
 oils:
   myrcene:
@@ -97,7 +100,7 @@ substitutes:
 meta:
   status: published
   verification: corroborated
-  last_reviewed: '2026-09-14'
+  last_reviewed: '2026-09-27'
   notes: >
     A good illustration of why this repo stores observations instead of one
     range: the breeder publishes 7.0-8.5% alpha while merchant listings run as

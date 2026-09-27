@@ -23,11 +23,13 @@ analytics:
     observations:
       - { source: seed-general-knowledge, low: 5.0, high: 7.5, typical: 6.2 }
       - { source: hopsteiner, low: 5.0, high: 8.0, note: Data sheet last changed 2020-01-09. }
+      - { source: barthhaas, low: 5.0, high: 7.7, note: Range over the last 4 crop years. }
   beta_acid:
     unit: percent
     observations:
       - { source: seed-general-knowledge, low: 2.0, high: 3.5 }
       - { source: hopsteiner, low: 2.0, high: 2.5, note: Data sheet last changed 2020-01-09. }
+      - { source: barthhaas, low: 2.0, high: 3.5, note: Range over the last 4 crop years. }
   cohumulone:
     unit: percent_of_alpha
     observations:
@@ -38,6 +40,7 @@ analytics:
     observations:
       - { source: seed-general-knowledge, low: 0.7, high: 1.2 }
       - { source: hopsteiner, low: 0.8, high: 1.2, note: Data sheet last changed 2020-01-09. }
+      - { source: barthhaas, low: 0.8, high: 1.2, note: Range over the last 4 crop years. }
 usage:
   timing: [bittering, late-boil]
   beer_styles: [english-bitter, esb, british-brown, porter, english-ipa]
@@ -47,10 +50,23 @@ substitutes:
   - { slug: aramis, confidence: low }
 meta:
   status: draft
-  verification: single-source
+  verification: corroborated
   last_reviewed: '2026-09-27'
 oils:
   farnesene:
     unit: percent_of_total_oil
     observations:
       - { source: hopsteiner, low: 1.5, high: 2.5, note: Data sheet last changed 2020-01-09. }
+      - { source: barthhaas, low: 1.0, high: 2.0, note: Range over the last 4 crop years. }
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 19.0, high: 27.0, note: Range over the last 4 crop years. }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 11.0, high: 15.0, note: Range over the last 4 crop years. }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 35.0, high: 42.0, note: Range over the last 4 crop years. }

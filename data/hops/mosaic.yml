@@ -26,10 +26,10 @@ aroma:
 analytics:
   alpha_acid:
     unit: percent
-    observations: [{ source: ychr, low: 11.5, high: 13.5 }]
+    observations: [{ source: ychr, low: 11.5, high: 13.5 }, { source: barthhaas, low: 10.4, high: 14.0, note: Range over the last 4 crop years. }]
   beta_acid:
     unit: percent
-    observations: [{ source: ychr, low: 3.2, high: 3.9 }]
+    observations: [{ source: ychr, low: 3.2, high: 3.9 }, { source: barthhaas, low: 2.8, high: 4.0, note: Range over the last 4 crop years. }]
   cohumulone:
     unit: percent_of_alpha
     observations: [{ source: ychr, low: 24.0, high: 26.0 }]
@@ -43,13 +43,13 @@ analytics:
 oils:
   myrcene:
     unit: percent_of_total_oil
-    observations: [{ source: ychr, low: 47.0, high: 53.0 }]
+    observations: [{ source: ychr, low: 47.0, high: 53.0 }, { source: barthhaas, low: 24.5, high: 56.7, note: Range over the last 4 crop years. }]
   humulene:
     unit: percent_of_total_oil
-    observations: [{ source: ychr, low: 13.0, high: 16.0 }]
+    observations: [{ source: ychr, low: 13.0, high: 16.0 }, { source: barthhaas, low: 8.8, high: 16.0, note: Range over the last 4 crop years. }]
   caryophyllene:
     unit: percent_of_total_oil
-    observations: [{ source: ychr, low: 5.2, high: 7.8 }]
+    observations: [{ source: ychr, low: 5.2, high: 7.8 }, { source: barthhaas, low: 3.8, high: 8.8, note: Range over the last 4 crop years. }]
   other:
     unit: percent_of_total_oil
     observations: [{ source: seed-general-knowledge, low: 15, high: 30 }]
@@ -57,6 +57,14 @@ oils:
     unit: percent_of_total_oil
     observations:
       - { source: ychr, low: 0.0, high: 0.0 }
+  linalool:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 0.5, high: 0.9, note: Range over the last 4 crop years. }
+  geraniol:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 0.5, high: 1.0, note: Range over the last 4 crop years. }
 usage:
   timing: [whirlpool, dry-hop, bittering]
   beer_styles: [hazy-ipa, american-ipa, double-ipa, american-pale-ale, west-coast-ipa]
@@ -67,8 +75,8 @@ substitutes:
   - { slug: nelson-sauvin, confidence: low }
 meta:
   status: draft
-  verification: single-source
-  last_reviewed: '2026-09-14'
+  verification: corroborated
+  last_reviewed: '2026-09-27'
   notes: >
     Plant patent number removed pending verification on Google Patents; the
     one previously recorded here could not be confirmed against the register.

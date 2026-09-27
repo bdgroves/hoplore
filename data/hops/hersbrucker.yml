@@ -34,8 +34,8 @@ substitutes: []
 
 meta:
   status: stub
-  verification: single-source
-  last_reviewed: '2026-09-14'
+  verification: corroborated
+  last_reviewed: '2026-09-27'
   notes: >
     purpose defaulted to dual, unconfirmed -- was not researched individually
     for this bulk scaffold pass. Correct before publishing.
@@ -44,10 +44,12 @@ analytics:
     unit: percent
     observations:
       - { source: hopsteiner, low: 1.5, high: 4.0, note: Data sheet last changed 2020-01-09. }
+      - { source: barthhaas, low: 1.3, high: 5.9, note: Range over the last 4 crop years. }
   beta_acid:
     unit: percent
     observations:
       - { source: hopsteiner, low: 2.5, high: 6.0, note: Data sheet last changed 2020-01-09. }
+      - { source: barthhaas, low: 2.9, high: 8.5, note: Range over the last 4 crop years. }
   cohumulone:
     unit: percent_of_alpha
     observations:
@@ -56,6 +58,7 @@ analytics:
     unit: ml_per_100g
     observations:
       - { source: hopsteiner, low: 0.5, high: 1.0, note: Data sheet last changed 2020-01-09. }
+      - { source: barthhaas, low: 0.7, high: 1.3, note: Range over the last 4 crop years. }
 oils:
   farnesene:
     unit: percent_of_total_oil

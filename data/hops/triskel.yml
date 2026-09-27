@@ -34,8 +34,8 @@ substitutes: []
 
 meta:
   status: stub
-  verification: single-source
-  last_reviewed: '2026-09-14'
+  verification: corroborated
+  last_reviewed: '2026-09-27'
   notes: >
     purpose defaulted to dual, unconfirmed -- was not researched individually
     for this bulk scaffold pass. Correct before publishing.
@@ -44,10 +44,12 @@ analytics:
     unit: percent
     observations:
       - { source: hopsteiner, low: 2.5, high: 5.0, note: Data sheet last changed 2020-01-09. }
+      - { source: barthhaas, low: 2.8, high: 5.0, note: Range over the last 4 crop years. }
   beta_acid:
     unit: percent
     observations:
       - { source: hopsteiner, low: 4.0, high: 5.0, note: Data sheet last changed 2020-01-09. }
+      - { source: barthhaas, low: 4.0, high: 5.0, note: Range over the last 4 crop years. }
   cohumulone:
     unit: percent_of_alpha
     observations:
@@ -56,3 +58,17 @@ analytics:
     unit: ml_per_100g
     observations:
       - { source: hopsteiner, low: 1.5, high: 2.0, note: Data sheet last changed 2020-01-09. }
+      - { source: barthhaas, low: 1.5, high: 2.0, note: Range over the last 4 crop years. }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 40.0, high: 60.0, note: Range over the last 4 crop years. }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 2.5, high: 10.0, note: Range over the last 4 crop years. }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 8.0, high: 14.0, note: Range over the last 4 crop years. }

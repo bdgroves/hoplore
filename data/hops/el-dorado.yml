@@ -34,8 +34,8 @@ substitutes: []
 
 meta:
   status: stub
-  verification: single-source
-  last_reviewed: '2026-09-14'
+  verification: corroborated
+  last_reviewed: '2026-09-27'
   notes: >
     purpose defaulted to dual, unconfirmed -- was not researched individually
     for this bulk scaffold pass. Correct before publishing.
@@ -44,10 +44,12 @@ analytics:
     unit: percent
     observations:
       - { source: hopsteiner, low: 13.0, high: 17.0, note: Data sheet last changed 2023-01-09. }
+      - { source: barthhaas, low: 12.0, high: 14.4, note: Range over the last 4 crop years. }
   beta_acid:
     unit: percent
     observations:
       - { source: hopsteiner, low: 7.0, high: 8.0, note: Data sheet last changed 2023-01-09. }
+      - { source: barthhaas, low: 4.8, high: 6.2, note: Range over the last 4 crop years. }
   cohumulone:
     unit: percent_of_alpha
     observations:
@@ -56,3 +58,29 @@ analytics:
     unit: ml_per_100g
     observations:
       - { source: hopsteiner, low: 2.5, high: 3.3, note: Data sheet last changed 2023-01-09. }
+      - { source: barthhaas, low: 1.8, high: 2.8, note: Range over the last 4 crop years. }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 24.9, high: 55.5, note: Range over the last 4 crop years. }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 4.7, high: 10.8, note: Range over the last 4 crop years. }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 0.1, high: 0.4, note: Range over the last 4 crop years. }
+  linalool:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 0.1, high: 0.7, note: Range over the last 4 crop years. }
+  geraniol:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 0.1, high: 0.3, note: Range over the last 4 crop years. }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 5.6, high: 13.5, note: Range over the last 4 crop years. }

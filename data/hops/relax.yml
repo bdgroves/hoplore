@@ -29,9 +29,14 @@ substitutes: []
 
 meta:
   status: stub
-  verification: unverified
-  last_reviewed: '2026-09-26'
+  verification: single-source
+  last_reviewed: '2026-09-27'
   notes: >
     purpose defaulted to dual, unconfirmed. Country and international code
     from BarthHaas's variety page (their listed origin, which can be where
     it's grown rather than where it was bred).
+analytics:
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: barthhaas, low: 10.0, high: 15.0, note: Range over the last 4 crop years. }

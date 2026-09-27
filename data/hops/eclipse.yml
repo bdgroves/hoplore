@@ -34,8 +34,34 @@ substitutes: []
 
 meta:
   status: stub
-  verification: unverified
-  last_reviewed: '2026-09-14'
+  verification: single-source
+  last_reviewed: '2026-09-27'
   notes: >
     purpose defaulted to dual, unconfirmed -- was not researched individually
     for this bulk scaffold pass. Correct before publishing.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: barthhaas, low: 15.7, high: 19.1, note: Range over the last 4 crop years. }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: barthhaas, low: 5.9, high: 9.0, note: Range over the last 4 crop years. }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 41.0, high: 44.0, note: Range over the last 4 crop years. }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 11.1, high: 13.0, note: Range over the last 4 crop years. }
+  linalool:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 0.6, high: 0.7, note: Range over the last 4 crop years. }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 1.0, high: 1.4, note: Range over the last 4 crop years. }

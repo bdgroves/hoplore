@@ -30,9 +30,10 @@ analytics:
     observations:
       - { source: usda-nass-2022, typical: 12.4, crop_year: 2022 }
       - { source: ychr, low: 11.0, high: 13.0 }
+      - { source: barthhaas, low: 11.0, high: 14.3, note: Range over the last 4 crop years. }
   beta_acid:
     unit: percent
-    observations: [{ source: ychr, low: 3.5, high: 4.5 }]
+    observations: [{ source: ychr, low: 3.5, high: 4.5 }, { source: barthhaas, low: 2.7, high: 4.5, note: Range over the last 4 crop years. }]
   cohumulone:
     unit: percent_of_alpha
     observations: [{ source: ychr, low: 22.0, high: 24.0 }]
@@ -46,19 +47,27 @@ analytics:
 oils:
   myrcene:
     unit: percent_of_total_oil
-    observations: [{ source: ychr, low: 60.0, high: 65.0 }]
+    observations: [{ source: ychr, low: 60.0, high: 65.0 }, { source: barthhaas, low: 28.6, high: 66.0, note: Range over the last 4 crop years. }]
   humulene:
     unit: percent_of_total_oil
-    observations: [{ source: ychr, low: 11.0, high: 13.0 }]
+    observations: [{ source: ychr, low: 11.0, high: 13.0 }, { source: barthhaas, low: 7.9, high: 13.2, note: Range over the last 4 crop years. }]
   caryophyllene:
     unit: percent_of_total_oil
-    observations: [{ source: ychr, low: 6.0, high: 8.0 }]
+    observations: [{ source: ychr, low: 6.0, high: 8.0 }, { source: barthhaas, low: 3.7, high: 9.0, note: Range over the last 4 crop years. }]
   farnesene:
     unit: percent_of_total_oil
     observations: [{ source: ychr, low: 0.0, high: 0.0 }]
   other:
     unit: percent_of_total_oil
     observations: [{ source: seed-general-knowledge, low: 12, high: 25 }]
+  linalool:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 0.5, high: 1.1, note: Range over the last 4 crop years. }
+  geraniol:
+    unit: percent_of_total_oil
+    observations:
+      - { source: barthhaas, low: 0.2, high: 0.6, note: Range over the last 4 crop years. }
 usage:
   timing: [bittering, whirlpool, dry-hop]
   beer_styles: [american-ipa, hazy-ipa, double-ipa, west-coast-ipa, american-pale-ale, sour-ale]
@@ -70,4 +79,4 @@ substitutes:
 meta:
   status: draft
   verification: corroborated
-  last_reviewed: '2026-09-14'
+  last_reviewed: '2026-09-27'
