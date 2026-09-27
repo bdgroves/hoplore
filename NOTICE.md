@@ -1,6 +1,6 @@
 # Notice
 
-HopLore is an independent project. It is not affiliated with, endorsed by, or
+HopLove is an independent project. It is not affiliated with, endorsed by, or
 connected to any hop breeder, grower, merchant, research institute, or database
 cited in `data/sources.yml`.
 
@@ -24,7 +24,7 @@ Recording them, citing where each figure came from, and publishing that record
 is what this project does.
 
 What *is* protected is another party's particular compilation, selection and
-arrangement of those facts. HopLore does not reproduce anyone's database. Where
+arrangement of those facts. HopLove does not reproduce anyone's database. Where
 a figure came from a secondary compilation rather than a sheet read directly,
 that compilation is cited by name in `data/sources.yml` with `tier: aggregator`,
 and the citation is visible on the rendered page.

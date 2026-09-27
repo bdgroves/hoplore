@@ -133,7 +133,7 @@ observations only.
 **Discovery here is a real listing, not a guess.** Their `sitemap.xml`
 enumerates every `/create/brands/` page, so `--discover` reads an actual
 catalogue rather than probing URLs — which is how Dolcita, Krush, HBC-682 and
-Terrasurge turned up as varieties HopLore has no record for yet.
+Terrasurge turned up as varieties HopLove has no record for yet.
 
 ### What is deliberately not scraped
 

@@ -26,7 +26,7 @@ URLS = HERE / "snapshot_urls.txt"
 OUT = HERE / "raw" / "pages"
 # Still says who we are; the "Mozilla/5.0 (compatible; ...)" form is the
 # convention crawlers use, and some sites refuse bare tool user-agents.
-UA = "Mozilla/5.0 (compatible; HopLore/0.1; +https://github.com/bdgroves/hoplore)"
+UA = "Mozilla/5.0 (compatible; HopLove/0.1; +https://github.com/bdgroves/hoplore)"
 
 
 def target(url: str, content_type: str) -> Path:

@@ -1,4 +1,4 @@
-# NASS variety name (after tools/ingest/usda_nass.py canonical()) -> HopLore slug(s).
+# NASS variety name (after tools/ingest/usda_nass.py canonical()) -> HopLove slug(s).
 # Only names the loose automatic match gets wrong or can't make. A list means
 # NASS reports several cultivars as one bucket; false means deliberately unlinked.
 CTZ: [columbus, zeus]           # "Beginning in 2020, Zeus is included in Columbus/Tomahawk/Zeus"

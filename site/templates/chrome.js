@@ -1,4 +1,4 @@
-/** The brooksgroves.com chrome, so HopLore reads as part of the site rather
+/** The brooksgroves.com chrome, so HopLove reads as part of the site rather
  *  than a stranger living at /hoplore/: the same topline, masthead bar, theme
  *  toggle (sharing the site's `bg_theme` key, so a dark-mode choice follows you
  *  in from the homepage and back) and the same footer.
@@ -29,7 +29,7 @@ export const siteHeader = (base) => `<div class="topline"></div>
   <div class="sitebar-inner">
     <a href="${SITE}/" class="site-name">Brooks Groves</a>
     <nav class="sitebar-nav" aria-label="brooksgroves.com">
-      <a href="${base}">HopLore</a>
+      <a href="${base}">HopLove</a>
       <a href="${SITE}/#work">Projects</a>
       <a href="${SITE}/">Home</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Switch to dark mode">&#9681;</button>
@@ -84,7 +84,7 @@ export const SITE_FOOTER = `<footer>
       <div class="pagelink-row">
         <a href="https://brooksgroves.com/writing/">Writing</a>
         <a href="https://brooksgroves.com/blog/">Blog</a>
-        <a href="https://github.com/bdgroves/hoplore">HopLore on GitHub</a>
+        <a href="https://github.com/bdgroves/hoplore">HopLove on GitHub</a>
       </div>
     </div>
 

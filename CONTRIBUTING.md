@@ -1,4 +1,4 @@
-# Contributing to HopLore
+# Contributing to HopLove
 
 Corrections are worth more than additions here. A new hop with no citations adds noise; a source link on an existing number makes the whole dataset more trustworthy.
 

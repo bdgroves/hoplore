@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Pull brewing values from BarthHaas variety pages into HopLore records.
+Pull brewing values from BarthHaas variety pages into HopLove records.
 
     pixi run -e data python tools/ingest/barthhaas.py --discover
     pixi run -e data python tools/ingest/barthhaas.py --catalog
@@ -57,7 +57,7 @@ OVERVIEW = "https://www.barthhaas.com/hops-and-products/hop-varieties-overview"
 SITEMAP = "https://www.barthhaas.com/sitemap.xml"
 SOURCE_ID = "barthhaas"
 
-UA = "HopLore/0.1 (open hop dataset; +https://github.com/bdgroves/hoplore)"
+UA = "HopLove/0.1 (open hop dataset; +https://github.com/bdgroves/hoplore)"
 
 yaml = YAML()
 yaml.preserve_quotes = True
@@ -499,7 +499,7 @@ def load_map() -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("slugs", nargs="*", help="HopLore slugs to update")
+    parser.add_argument("slugs", nargs="*", help="HopLove slugs to update")
     parser.add_argument("--all", action="store_true", help="every mapped variety")
     parser.add_argument("--discover", action="store_true", help="list the brand pages in their sitemap")
     parser.add_argument("--json", action="store_true", help="with --discover, machine-readable output")

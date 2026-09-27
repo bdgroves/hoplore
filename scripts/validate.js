@@ -219,7 +219,7 @@ for (const b of breweries) {
     seen.add(beer.slug);
     for (const h of beer.hops ?? []) {
       if (h.hop && !slugs.has(h.hop)) err(at, `${beer.name}: "${h.as_written}" links to "${h.hop}", which has no record`);
-      if (!h.hop) warn(at, `${beer.name}: "${h.name}" has no HopLore record yet`);
+      if (!h.hop) warn(at, `${beer.name}: "${h.name}" has no HopLove record yet`);
     }
   }
 }
@@ -280,7 +280,7 @@ const byStatus = hops.reduce((acc, h) => {
   return acc;
 }, {});
 
-console.log(c.bold(`\nHopLore data check`));
+console.log(c.bold(`\nHopLove data check`));
 console.log(c.dim(`  ${hops.length} cultivars, ${sourceIds.size} sources, ${Object.keys(taxonomy.aromaTags).length} aroma tags`));
 console.log(c.dim(`  status: ${Object.entries(byStatus).map(([k, v]) => `${v} ${k}`).join(', ')}`));
 

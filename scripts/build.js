@@ -167,7 +167,7 @@ write(
 const needsWork = hops.filter((h) => h.derived.relies_on_unsourced);
 const avgCompleteness = Math.round(hops.reduce((s, h) => s + h.derived.completeness, 0) / hops.length);
 
-console.log(c.bold('\nHopLore build'));
+console.log(c.bold('\nHopLove build'));
 console.log(`  ${c.green('✓')} ${hops.length} hop pages`);
 console.log(`  ${c.green('✓')} ${hops.length * 2 + 5} API files under api/${API_VERSION}/`);
 console.log(`  ${c.green('✓')} hops.csv`);

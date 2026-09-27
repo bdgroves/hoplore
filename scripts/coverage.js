@@ -66,7 +66,7 @@ function table(rows, cols) {
   for (const row of rows) console.log(line(cols.map((c) => c.get(row))));
 }
 
-console.log(c.bold('\nHopLore coverage report'));
+console.log(c.bold('\nHopLove coverage report'));
 console.log(c.dim(`  ${hops.length} records against ${reference.length} known varieties in the reference list\n`));
 
 console.log(c.bold(`Missing (${missing.length})`) + c.dim(' — in the reference list, no record in data/hops/'));

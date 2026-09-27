@@ -224,7 +224,7 @@ ${footer(base, meta)}
 <script src="${base}assets/landscape.js" type="module"></script>`;
 
   return shell({
-    title: 'The hop landscape — alpha acid vs total oil for every hop | HopLore',
+    title: 'The hop landscape — alpha acid vs total oil for every hop | HopLove',
     description: `${plotted.length} hop varieties plotted by bittering power and aroma oil, with the full range every source reported.`,
     body,
     base,

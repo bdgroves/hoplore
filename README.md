@@ -1,4 +1,4 @@
-# HopLore
+# HopLove 🍺❤️
 
 **An open hop database that shows its working.**
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Pull brewing values from Yakima Chief Ranches brand pages into HopLore records.
+Pull brewing values from Yakima Chief Ranches brand pages into HopLove records.
 
     pixi run -e data python tools/ingest/yakima_chief.py --discover
     pixi run -e data python tools/ingest/yakima_chief.py citra
@@ -69,7 +69,7 @@ BASE = "https://yakimachiefranches.com/create/brands/"
 SITEMAP = "https://yakimachiefranches.com/sitemap.xml"
 SOURCE_ID = "ychr"
 
-UA = "HopLore/0.1 (open hop dataset; +https://github.com/bdgroves/hoplore)"
+UA = "HopLove/0.1 (open hop dataset; +https://github.com/bdgroves/hoplore)"
 
 yaml = YAML()
 yaml.preserve_quotes = True
@@ -440,7 +440,7 @@ def load_map() -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("slugs", nargs="*", help="HopLore slugs to update")
+    parser.add_argument("slugs", nargs="*", help="HopLove slugs to update")
     parser.add_argument("--all", action="store_true", help="every mapped variety")
     parser.add_argument("--discover", action="store_true", help="list the brand pages in their sitemap")
     parser.add_argument("--json", action="store_true", help="with --discover, machine-readable output")

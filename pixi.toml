@@ -1,4 +1,4 @@
-# HopLore toolchain.
+# HopLove toolchain.
 #
 # The repo is Node underneath, but pinning the Node version here means a fresh
 # clone on any machine builds byte-identical output — which matters more than

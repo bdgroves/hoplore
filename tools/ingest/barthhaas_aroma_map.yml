@@ -1,4 +1,4 @@
-# BarthHaas aroma descriptor -> HopLore aroma tag (data/taxonomy/aroma-tags.yml).
+# BarthHaas aroma descriptor -> HopLove aroma tag (data/taxonomy/aroma-tags.yml).
 # A descriptor not listed here falls back to its BarthHaas flavor family (below).
 descriptors:
   Lemon: lemon

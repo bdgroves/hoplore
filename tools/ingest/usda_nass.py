@@ -23,7 +23,7 @@ from ruamel.yaml import YAML
 from ruamel.yaml.comments import CommentedMap, CommentedSeq
 
 RAW = Path(__file__).parent / "raw" / "usda-nass"
-UA = "HopLore/0.1 (open hop dataset; +https://github.com/bdgroves/hoplore)"
+UA = "HopLove/0.1 (open hop dataset; +https://github.com/bdgroves/hoplore)"
 ESMIS = "https://esmis.nal.usda.gov/sites/default/release-files/"
 
 # Crop year -> plain-text release, from esmis.nal.usda.gov/publication/national-hop-report.
@@ -291,7 +291,7 @@ def write_dataset(parsed: dict) -> None:
     OUT.write_text("# USDA NASS National Hop Report, acreage and production by variety and state.\n" + text, encoding="utf-8")
     unlinked = sorted(v["name"] for v in doc["varieties"] if not v["slugs"])
     print(f"wrote {OUT.relative_to(ROOT)}: {len(doc['varieties'])} varieties, {doc['years'][0]}-{doc['years'][-1]}")
-    print(f"  unlinked (no HopLore record): {', '.join(unlinked)}")
+    print(f"  unlinked (no HopLove record): {', '.join(unlinked)}")
 
 
 def main() -> int:

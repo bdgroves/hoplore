@@ -34,4 +34,4 @@ createServer(async (req, res) => {
   } catch {
     res.writeHead(404).end();
   }
-}).listen(PORT, () => console.log(`\n  HopLore on http://localhost:${PORT}\n`));
+}).listen(PORT, () => console.log(`\n  HopLove on http://localhost:${PORT}\n`));

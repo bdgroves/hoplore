@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-What's in the can: the hops a brewery says it used, linked to HopLore records.
+What's in the can: the hops a brewery says it used, linked to HopLove records.
 
     pixi run -e data python tools/ingest/beers.py      # parse saved pages -> data/beers/
 

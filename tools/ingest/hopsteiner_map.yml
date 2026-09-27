@@ -1,4 +1,4 @@
-# HopLore slug  ->  Hopsteiner's URL name at
+# HopLove slug  ->  Hopsteiner's URL name at
 # https://hopsteiner.us/variety-data-sheets/<name>/
 #
 # `false` means Hopsteiner does not carry that variety, so the script skips it
@@ -101,7 +101,7 @@ nelson-sauvin: Nelson-Sauvin
 strisselspalt: Strisselspalter
 whitbread-golding-variety: Whitbread-Golding
 
-# From the catalog crawl, 2026-09: varieties new to HopLore. Erebus is in
+# From the catalog crawl, 2026-09: varieties new to HopLove. Erebus is in
 # their catalog but its sheet states no country, so it has no record yet.
 akoya: Akoya
 alora: Alora

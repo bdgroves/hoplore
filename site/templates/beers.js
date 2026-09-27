@@ -91,7 +91,7 @@ function hopCard(entry, hop, taxonomy, base) {
   if (!hop) {
     return `<li class="hopcard missing">
       <div class="hc-head"><h3>${esc(entry.name)}</h3></div>
-      <p class="hc-none">Not in HopLore yet. <a href="https://github.com/bdgroves/hoplore/issues/new?title=${encodeURIComponent(`Add ${entry.name}`)}">Ask for it</a>.</p>
+      <p class="hc-none">Not in HopLove yet. <a href="https://github.com/bdgroves/hoplore/issues/new?title=${encodeURIComponent(`Add ${entry.name}`)}">Ask for it</a>.</p>
     </li>`;
   }
   const role = roleOf(hop);
@@ -180,7 +180,7 @@ export function renderBeer({ brewery, beer, bySlug, taxonomy, meta }) {
 ${footer(base, meta)}`;
 
   return shell({
-    title: `${beer.name} by ${brewery.name}: the hops, explained | HopLore`,
+    title: `${beer.name} by ${brewery.name}: the hops, explained | HopLove`,
     description: `${beer.name} (${brewery.name}) is hopped with ${bill.map((e) => e.name).join(', ')}. What each hop is, what it smells like, and where it's grown.`,
     body,
     base,
@@ -227,7 +227,7 @@ ${sections}
 ${footer(base, meta)}`;
 
   return shell({
-    title: "What's in the can — beers and their hops, explained | HopLore",
+    title: "What's in the can — beers and their hops, explained | HopLove",
     description: 'Beers from Pacific Northwest breweries with every hop in them opened up: aroma, alpha acid, oils and where it was grown.',
     body,
     base,

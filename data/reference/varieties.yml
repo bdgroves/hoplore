@@ -1,4 +1,4 @@
-# Known hop cultivars worth having a HopLore record for, whether or not we
+# Known hop cultivars worth having a HopLove record for, whether or not we
 # have gotten to them yet. This is a checklist for `pixi run coverage`, not a
 # taxonomy anything else depends on — it is deliberately not schema-enforced
 # and not wired into validate.js or build.js.

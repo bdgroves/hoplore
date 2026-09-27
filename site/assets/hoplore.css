@@ -1,9 +1,9 @@
-/* HopLore — a field sheet, not a dashboard.
+/* HopLove — a field sheet, not a dashboard.
    Structure comes from vertical wires, the way a hop yard does. */
 
 :root {
   /* brooksgroves.com palette (see bdgroves.github.io, index.html :root).
-     The old HopLore names are kept as aliases so the rest of this file
+     The old HopLove names are kept as aliases so the rest of this file
      didn't have to change. */
   --parchment: #f5f0e8;
   --cream: #ede8dc;
@@ -709,9 +709,9 @@ table.forms tr.form-note td {
 
 /* ------------------------------------------------------ brooksgroves.com blend
 
-   Everything below makes HopLore read as a page of brooksgroves.com: the
+   Everything below makes HopLove read as a page of brooksgroves.com: the
    site's topline and masthead bar, its serif headings, and the small-caps
-   mono labels it uses for tags, kickers and pills. HopLore keeps its own
+   mono labels it uses for tags, kickers and pills. HopLove keeps its own
    layout and charts; it just dresses like the rest of the house. */
 
 .topline { height: 4px; background: linear-gradient(90deg, var(--rust) 0%, var(--gold) 50%, var(--sage) 100%); }
@@ -782,3 +782,4 @@ a:hover { text-decoration-color: var(--rust); }
 .colophon { border-top: 1px solid var(--ink); padding: 1.6rem 0 0.5rem; font-size: 0.85rem; color: var(--stone); }
 .colophon p { max-width: var(--measure); }
 .colophon code { font-family: var(--font-mono); font-size: 0.85em; }
+.wordmark .heart { font-size: 0.32em; vertical-align: 0.9em; letter-spacing: 0; font-style: normal; }

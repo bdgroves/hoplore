@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Run every ingest scraper's discovery mode and report anything it turns up
-that HopLore doesn't have a record for yet.
+that HopLove doesn't have a record for yet.
 
     pixi run -e data python tools/ingest/discover_all.py
     pixi run -e data python tools/ingest/discover_all.py --out discovery-report.md
@@ -69,7 +69,7 @@ def normalize(name: str) -> str:
 
 
 def known_names() -> set[str]:
-    """Every name a HopLore record already answers to."""
+    """Every name a HopLove record already answers to."""
     names = set()
     for path in HOPS_DIR.glob("*.yml"):
         record = yaml.load(path.read_text(encoding="utf-8")) or {}
@@ -127,7 +127,7 @@ def main() -> int:
             lines.append("_nothing new._")
         lines.append("")
 
-    header = f"## HopLore discovery report\n\n{total_new} possibly-new result(s) found across {len(SCRAPERS)} scraper(s).\n"
+    header = f"## HopLove discovery report\n\n{total_new} possibly-new result(s) found across {len(SCRAPERS)} scraper(s).\n"
     report = header + "\n" + "\n".join(lines)
 
     print(report)

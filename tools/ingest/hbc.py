@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Pull brewing values from the Hop Breeding Company's brand page into HopLore.
+Pull brewing values from the Hop Breeding Company's brand page into HopLove.
 
     pixi run -e data python tools/ingest/hbc.py --discover
     pixi run -e data python tools/ingest/hbc.py --catalog
@@ -238,7 +238,7 @@ def write_catalog(delay: float) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("slugs", nargs="*", help="HopLore slugs to update")
+    parser.add_argument("slugs", nargs="*", help="HopLove slugs to update")
     parser.add_argument("--all", action="store_true", help="every mapped brand")
     parser.add_argument("--discover", action="store_true", help="list the brands on the page")
     parser.add_argument("--catalog", action="store_true", help="write catalogs/hbc.json and the page fixture")

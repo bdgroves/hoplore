@@ -354,7 +354,7 @@ ${footer(base, meta)}
 <script src="${base}assets/grown.js" type="module"></script>`;
 
   return shell({
-    title: "Where America's hops grow — Washington, Oregon and Idaho acreage by variety | HopLore",
+    title: "Where America's hops grow — Washington, Oregon and Idaho acreage by variety | HopLove",
     description: `Washington grew ${share('WA')}% of US hops in ${y}. Acres by variety and state from USDA NASS, ${years[0]}–${y}.`,
     body,
     base,

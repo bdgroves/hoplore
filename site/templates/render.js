@@ -69,7 +69,7 @@ ${THEME_TOGGLE}
 export const footer = (base, meta) => `
 <section class="colophon">
   <div class="wrap">
-    <p>HopLore is an open dataset first and a website second. Every figure on this
+    <p>HopLove is an open dataset first and a website second. Every figure on this
     site is rolled up from cited observations in
     <code>data/hops/</code>, and the same build that made this page wrote
     <code>${base}api/v1/hops.json</code> — free, no key, no rate limit.</p>
@@ -165,7 +165,7 @@ ${footer('', meta)}
 <script src="assets/index.js" type="module"></script>`;
 
   return shell({
-    title: 'HopLore — an open hop variety database that shows its sources',
+    title: 'HopLove — an open hop variety database that shows its sources',
     description: `Brewing values, oil breakdowns and substitutions for ${hops.length} hop cultivars. Open data, free JSON API, every number cited.`,
     body,
   });
@@ -293,7 +293,7 @@ ${footer(base, meta)}`;
   }
 
   return shell({
-    title: `${hop.name} hop — brewing values, oils and substitutes | HopLore`,
+    title: `${hop.name} hop — brewing values, oils and substitutes | HopLove`,
     description: hop.aroma?.summary?.slice(0, 180) ?? `${hop.name}: a ${hop.purpose} hop from ${country}.`,
     body,
     base,

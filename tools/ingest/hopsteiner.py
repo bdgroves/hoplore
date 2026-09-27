@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Pull brewing values from Hopsteiner variety data sheets into HopLore records.
+Pull brewing values from Hopsteiner variety data sheets into HopLove records.
 
     pixi run -e data python tools/ingest/hopsteiner.py --discover
     pixi run -e data python tools/ingest/hopsteiner.py centennial
@@ -48,7 +48,7 @@ SOURCE_ID = "hopsteiner"
 
 # Identify ourselves properly. A scraper that hides what it is deserves to be
 # blocked, and this project has nothing to hide.
-UA = "HopLore/0.1 (open hop dataset; +https://github.com/bdgroves/hoplore)"
+UA = "HopLove/0.1 (open hop dataset; +https://github.com/bdgroves/hoplore)"
 
 yaml = YAML()
 yaml.preserve_quotes = True
@@ -465,7 +465,7 @@ def load_map() -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("slugs", nargs="*", help="HopLore slugs to update")
+    parser.add_argument("slugs", nargs="*", help="HopLove slugs to update")
     parser.add_argument("--all", action="store_true", help="every mapped variety")
     parser.add_argument("--discover", action="store_true", help="list what Hopsteiner publishes")
     parser.add_argument("--json", action="store_true", help="with --discover, machine-readable output")
