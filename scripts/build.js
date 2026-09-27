@@ -15,16 +15,19 @@ import { buildSimilarity } from './lib/similarity.js';
 import { renderIndex, renderHop } from '../site/templates/render.js';
 import { renderLandscape } from '../site/templates/landscape.js';
 import { renderGrown, acreageFor } from '../site/templates/acreage.js';
+import { renderBeer, renderBeers, beersByHop } from '../site/templates/beers.js';
 
 const API_VERSION = 'v1';
-const { sources, taxonomy, hops: raw, acreage } = loadDataset();
+const { sources, taxonomy, hops: raw, acreage, breweries } = loadDataset();
+const inBeers = beersByHop(breweries);
 
 rmSync(DIST, { recursive: true, force: true });
 
 const hops = raw.map((h) => {
   const hop = rollupHop(h, sources);
   const grown = acreageFor(hop.slug, acreage);
-  return grown ? { ...hop, acreage: grown } : hop;
+  const withGrown = grown ? { ...hop, acreage: grown } : hop;
+  return inBeers[hop.slug] ? { ...withGrown, beers: inBeers[hop.slug] } : withGrown;
 });
 const similar = buildSimilarity(hops, taxonomy.aromaTags);
 
@@ -78,6 +81,7 @@ write(api('sources.json'), envelope({ sources }));
 write(api('taxonomy.json'), envelope({ taxonomy }));
 write(api('similar.json'), envelope({ similar }));
 if (acreage) write(api('acreage.json'), envelope({ acreage }));
+if (breweries.length) write(api('beers.json'), envelope({ breweries: breweries.map(({ file, ...b }) => b) }));
 
 for (const hop of hops) {
   write(api(`hops/${hop.slug}.json`), envelope({ hop, similar: similar[hop.slug] ?? [] }));
@@ -128,6 +132,18 @@ write(
 write(out('index.html'), renderIndex({ hops, taxonomy, meta }));
 write(out('landscape/index.html'), renderLandscape({ hops, meta }));
 if (acreage) write(out('grown/index.html'), renderGrown({ acreage, hops, meta }));
+const bySlug = Object.fromEntries(hops.map((h) => [h.slug, h]));
+const beerPaths = [];
+if (breweries.length) {
+  write(out('beers/index.html'), renderBeers({ breweries, bySlug, meta }));
+  for (const b of breweries) {
+    for (const beer of b.beers) {
+      const path = `beers/${b.brewery.slug}/${beer.slug}/`;
+      beerPaths.push(path);
+      write(out(`${path}index.html`), renderBeer({ brewery: b.brewery, beer, bySlug, taxonomy, meta }));
+    }
+  }
+}
 
 for (const hop of hops) {
   write(out(`hops/${hop.slug}/index.html`), renderHop({ hop, similar: similar[hop.slug] ?? [], taxonomy, sources, meta, acreageYears: acreage?.years }));
@@ -140,7 +156,7 @@ write(out('robots.txt'), `User-agent: *\nAllow: /\nSitemap: /sitemap.xml\n`);
 write(
   out('sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    ['', 'landscape/', ...(acreage ? ['grown/'] : []), ...hops.map((h) => `hops/${h.slug}/`)]
+    ['', 'landscape/', ...(acreage ? ['grown/'] : []), ...(breweries.length ? ['beers/', ...beerPaths] : []), ...hops.map((h) => `hops/${h.slug}/`)]
       .map((p) => `  <url><loc>https://brooksgroves.com/hoplore/${p}</loc></url>`)
       .join('\n') +
     `\n</urlset>\n`

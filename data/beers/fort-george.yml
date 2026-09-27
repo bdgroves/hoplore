@@ -1,0 +1,379 @@
+brewery:
+  slug: fort-george
+  name: Fort George Brewery
+  city: Astoria
+  state: OR
+  url: https://fortgeorgebrewery.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-27'
+beers:
+  - slug: 3-way-ipa-hazy-double-2026
+    name: 3-Way IPA Hazy Double (2026)
+    url: https://fortgeorgebrewery.com/beer/3-way-ipa-hazy-double-2026/
+    abv: 8.0
+    hops_as_written: Waimea, Citra, Citra Cryo, Superdelic, Motueka Hop Kief
+    hops:
+      - { hop: waimea, name: Waimea, as_written: Waimea }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Citra Cryo }
+      - { hop: superdelic, name: Superdelic, as_written: Superdelic }
+      - { hop: motueka, name: Motueka, form: hop kief, as_written: Motueka Hop Kief }
+  - slug: 3-way-ipa-new-zealand-west-coast-2026
+    name: 3-Way IPA New Zealand West Coast (2026)
+    url: https://fortgeorgebrewery.com/beer/3-way-ipa-new-zealand-west-coast-2026/
+    abv: 6.6
+    hops_as_written: Nectaron, Riwaka, Nelson, Nelson Amplifier, Citra, Simcoe
+    hops:
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: riwaka, name: Riwaka, as_written: Riwaka }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson, form: Amplifier, as_written: Nelson Amplifier }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: 3-way-ipa-west-coast-2026
+    name: 3-Way IPA West Coast (2026)
+    url: https://fortgeorgebrewery.com/beer/3-way-ipa-west-coast-2026/
+    abv: 7.1
+    hops_as_written: Mosaic, Mosaic Cryo, Enigma, Nectaron, Chinook Cryo, Citra, Citra Cryo, Simcoe, Simcoe Cryo
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic Cryo }
+      - { hop: enigma, name: Enigma, as_written: Enigma }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: chinook, name: Chinook, form: Cryo, as_written: Chinook Cryo }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Citra Cryo }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Simcoe Cryo }
+  - slug: bananaza
+    name: Bananaza
+    url: https://fortgeorgebrewery.com/beer/bananaza/
+    abv: 13.6
+    hops_as_written: Crosby, Centennial
+    hops:
+      - { hop: centennial, name: Centennial, farm: Crosby Hop Farm, as_written: Centennial }
+  - slug: barrel-aged-coconut-cavatica
+    name: Barrel-Aged Coconut Cavatica
+    url: https://fortgeorgebrewery.com/beer/barrel-aged-coconut-cavatica/
+    abv: 11.5
+    hops_as_written: Cascade
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: beach-eagle
+    name: Beach Eagle
+    url: https://fortgeorgebrewery.com/beer/beach-eagle/
+    abv: 4.7
+    hops_as_written: Hallertauer, Mittelfrüh, Tettnanger, Motueka
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Hallertauer Mittelfrüh, as_written: Hallertauer Mittelfrüh }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+  - slug: blackberry-limelight
+    name: Blackberry Limelight
+    url: https://fortgeorgebrewery.com/beer/blackberry-limelight/
+    abv: 5.9
+    hops_as_written: Mosaic, Strata, Wai-iti, Nectaron
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: null, name: Wai-iti, as_written: Wai-iti }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+  - slug: cathedral-tree
+    name: Cathedral Tree
+    url: https://fortgeorgebrewery.com/beer/cathedral-tree/
+    abv: 4.8
+    hops_as_written: Waimea, Saphir, German Saaz
+    hops:
+      - { hop: waimea, name: Waimea, as_written: Waimea }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+      - { hop: saaz-cz, name: German Saaz, as_written: German Saaz }
+  - slug: cavatica-stout
+    name: Cavatica Stout
+    url: https://fortgeorgebrewery.com/beer/cavatica-stout/
+    abv: 8.8
+    hops_as_written: Cascade
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: city-of-dreams
+    name: City of Dreams
+    url: https://fortgeorgebrewery.com/beer/city-of-dreams-2/
+    abv: 5.5
+    hops_as_written: Citra, Mosaic, Azacca, Huell Melon
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: huell-melon, name: Huell Melon, as_written: Huell Melon }
+  - slug: city-of-rainbows
+    name: City of Rainbows
+    url: https://fortgeorgebrewery.com/beer/city-of-rainbows/
+    abv: 6.2
+    hops_as_written: Mosaic, Ekuanot, Motueka, Mosaic Cryo, Citra, Citra Cryo
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic Cryo }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Citra Cryo }
+  - slug: confluence-of-fate
+    name: Confluence of Fate
+    url: https://fortgeorgebrewery.com/beer/confluence-of-fate/
+    hops_as_written: Huell Melon, Wai-iti
+    hops:
+      - { hop: huell-melon, name: Huell Melon, as_written: Huell Melon }
+      - { hop: null, name: Wai-iti, as_written: Wai-iti }
+  - slug: daly-special
+    name: Daly Special
+    url: https://fortgeorgebrewery.com/beer/daly-special/
+    abv: 4.5
+    hops_as_written: Apollo
+    hops:
+      - { hop: apollo, name: Apollo, as_written: Apollo }
+  - slug: design-trends
+    name: Design Trends
+    url: https://fortgeorgebrewery.com/beer/design-trends/
+    abv: 5.5
+    hops_as_written: Columbus Cryo, Nelson, Columbus, Vista
+    hops:
+      - { hop: columbus, name: Columbus, form: Cryo, as_written: Columbus Cryo }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: vista, name: Vista, as_written: Vista }
+  - slug: dwaynes-world
+    name: Dwayne’s World
+    url: https://fortgeorgebrewery.com/beer/dwaynes-world/
+    abv: 6.66
+    hops_as_written: Galaxy, Amarillo, Citra, Columbus Cryo (Dank Dive), Simcoe, Simcoe Cryo, and Strata
+    hops:
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: columbus, name: Columbus, form: Cryo, product: Dank Dive, as_written: Columbus Cryo (Dank Dive) }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Simcoe Cryo }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: electric-surfboard
+    name: Electric Surfboard
+    url: https://fortgeorgebrewery.com/beer/electric-surfboard/
+    abv: 9.0
+    hops_as_written: Apollo, Ekuanot, Mosaic, Simcoe
+    hops:
+      - { hop: apollo, name: Apollo, as_written: Apollo }
+      - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: fresh-hop-mirrored-realities
+    name: Fresh Hop Mirrored Realities
+    url: https://fortgeorgebrewery.com/beer/fresh-hop-mirrored-realities/
+    abv: 7.0
+    hops_as_written: Fresh Strata Hops from Coleman Farms, Strata, Chinook, Chinook Cryo
+    hops:
+      - { hop: strata, name: Strata, fresh: true, farm: Coleman Farms, as_written: Fresh Strata Hops from Coleman Farms }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: chinook, name: Chinook, form: Cryo, as_written: Chinook Cryo }
+  - slug: full-pastry-send
+    name: Full Pastry Send
+    url: https://fortgeorgebrewery.com/beer/full-pastry-send/
+    abv: 14.6
+    hops_as_written: Cascade
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: island-towns
+    name: Island Towns
+    url: https://fortgeorgebrewery.com/beer/island-towns/
+    abv: 6.5
+    hops_as_written: Superdelic, Citra, Chinook, Citra Cryo
+    hops:
+      - { hop: superdelic, name: Superdelic, as_written: Superdelic }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Citra Cryo }
+  - slug: javathehop
+    name: Java the Hop
+    url: https://fortgeorgebrewery.com/beer/javathehop/
+    abv: 6.5
+    hops_as_written: Waimea Hops
+    hops:
+      - { hop: waimea, name: Waimea, as_written: Waimea Hops }
+  - slug: low-key-ipa
+    name: Low Key IPA
+    url: https://fortgeorgebrewery.com/beer/low-key-ipa/
+    abv: 2.8
+    hops_as_written: Krush, Eclipse, Mosaic, Krush Cryo
+    hops:
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: eclipse, name: Eclipse, as_written: Eclipse }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
+  - slug: lower-columbia-lager
+    name: Lower Columbia Lager
+    url: https://fortgeorgebrewery.com/beer/lower-columbia-lager/
+    abv: 4.2
+    hops_as_written: Adeena
+    hops:
+      - { hop: null, name: Adeena, as_written: Adeena }
+  - slug: lycosa
+    name: Lycosa
+    url: https://fortgeorgebrewery.com/beer/lycosa/
+    abv: 12.85
+    hops_as_written: Cascade
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: magnanimous-ipa
+    name: Magnanimous IPA
+    url: https://fortgeorgebrewery.com/beer/magnanimous-ipa/
+    abv: 7.0
+    hops_as_written: Chinook, Simcoe
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: magnetic-fields
+    name: Magnetic Fields
+    url: https://fortgeorgebrewery.com/beer/magnetic-fields/
+    abv: 7.0
+    hops_as_written: Azacca, Strata, Citra
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: matryoshka-2026
+    name: Matryoshka 2026
+    url: https://fortgeorgebrewery.com/beer/matryoshka-2026/
+    abv: 13.7
+    hops_as_written: Cascade
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: mirrored-realities
+    name: Mirrored Realities
+    url: https://fortgeorgebrewery.com/beer/mirrored-realities/
+    abv: 7.0
+    hops_as_written: Strata, Helios CO2 Extract, Chinook Cryo, Strata CGX, Chinook, Strata Hop Kief
+    hops:
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: helios, name: Helios, form: CO2 extract, as_written: Helios CO2 Extract }
+      - { hop: chinook, name: Chinook, form: Cryo, as_written: Chinook Cryo }
+      - { hop: strata, name: Strata, form: CGX, as_written: Strata CGX }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: strata, name: Strata, form: hop kief, as_written: Strata Hop Kief }
+  - slug: mutant-skull
+    name: Mutant Skull
+    url: https://fortgeorgebrewery.com/beer/mutant-skull/
+    abv: 8.0
+    hops_as_written: Columbus Cryo, Citra Cryo
+    hops:
+      - { hop: columbus, name: Columbus, form: Cryo, as_written: Columbus Cryo }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Citra Cryo }
+  - slug: one-big-holiday
+    name: One Big Holiday
+    url: https://fortgeorgebrewery.com/beer/one-big-holiday/
+    abv: 9.0
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: pass-the-balaton
+    name: Pass the Balaton
+    url: https://fortgeorgebrewery.com/beer/pass-the-balaton/
+    abv: 6.0
+    hops_as_written: Motueka
+    hops:
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+  - slug: peaches-peaches-peaches-peaches-peaches
+    name: Peaches, Peaches, Peaches, Peaches, Peaches
+    url: https://fortgeorgebrewery.com/beer/peaches-peaches-peaches-peaches-peaches/
+    abv: 5.8
+    hops_as_written: Mosaic, Strata, Wai-iti
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: null, name: Wai-iti, as_written: Wai-iti }
+  - slug: pilsner
+    name: Pilsner
+    url: https://fortgeorgebrewery.com/beer/pilsner/
+    abv: 5.0
+    hops_as_written: Hallertau Mittelfruh, Saphir, Tradition
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau Mittelfruh }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+      - { hop: hallertau-tradition, name: Tradition, as_written: Tradition }
+  - slug: pizza-pals-2025
+    name: Pizza Pals 2025
+    url: https://fortgeorgebrewery.com/beer/pizza-pals-2025/
+    abv: 7.0
+    hops_as_written: Citra, Eclipse, Citra Cryo, Citra Dynaboost, Citra CO2 Extract, Simcoe Cryo
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: eclipse, name: Eclipse, as_written: Eclipse }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Citra Cryo }
+      - { hop: citra, name: Citra, form: DynaBoost, as_written: Citra Dynaboost }
+      - { hop: citra, name: Citra, form: CO2 extract, as_written: Citra CO2 Extract }
+      - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Simcoe Cryo }
+  - slug: short-sands
+    name: Short Sands
+    url: https://fortgeorgebrewery.com/beer/short-sands/
+    abv: 4.8
+    hops_as_written: Hallertau Mittelfruh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau Mittelfruh }
+  - slug: subterranean-nectaron
+    name: Subterranean Nectaron
+    url: https://fortgeorgebrewery.com/beer/subterranean-nectaron/
+    abv: 5.9
+    hops_as_written: Mosaic, Strata, Wai-iti, Nectaron
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: null, name: Wai-iti, as_written: Wai-iti }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+  - slug: tide-land
+    name: Tide Land
+    url: https://fortgeorgebrewery.com/beer/tide-land/
+    abv: 5.0
+    hops_as_written: EKG
+    hops:
+      - { hop: east-kent-golding, name: EKG, as_written: EKG }
+  - slug: vor-tai-p-a
+    name: Vor Tai P.A.
+    url: https://fortgeorgebrewery.com/beer/vor-tai-p-a/
+    abv: 7.0
+    hops_as_written: Mosaic, Mosaic Cryo, Simcoe, Simcoe Cryo
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic Cryo }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Simcoe Cryo }
+  - slug: vortex-ipa
+    name: Vortex IPA
+    url: https://fortgeorgebrewery.com/beer/vortex-ipa/
+    abv: 7.2
+    hops_as_written: Simcoe, Apollo, Comet, Chinook
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: apollo, name: Apollo, as_written: Apollo }
+      - { hop: comet, name: Comet, as_written: Comet }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: wild-gooseberry-chase
+    name: Wild Gooseberry Chase
+    url: https://fortgeorgebrewery.com/beer/wild-gooseberry-chase/
+    abv: 5.6
+    hops_as_written: Wai-iti, Hallertauer Mittelfrüh
+    hops:
+      - { hop: null, name: Wai-iti, as_written: Wai-iti }
+      - { hop: hallertau-mittelfrueh, name: Hallertauer Mittelfrüh, as_written: Hallertauer Mittelfrüh }
+  - slug: wild-mountain-nectarine
+    name: 'Wild Mountain: Nectarine'
+    url: https://fortgeorgebrewery.com/beer/wild-mountain-nectarine/
+    abv: 5.9
+    hops_as_written: Mosaic, Strata, Wai-iti
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: null, name: Wai-iti, as_written: Wai-iti }
+  - slug: worlds-collide
+    name: Worlds Collide
+    url: https://fortgeorgebrewery.com/beer/worlds-collide/
+    abv: 6.8
+    hops_as_written: Perle
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }

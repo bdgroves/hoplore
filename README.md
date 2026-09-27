@@ -7,6 +7,7 @@
 [Browse the hops](https://brooksgroves.com/hoplore/) ·
 [The hop landscape](https://brooksgroves.com/hoplore/landscape/) ·
 [Where the hops grow](https://brooksgroves.com/hoplore/grown/) ·
+[What's in the can](https://brooksgroves.com/hoplore/beers/) ·
 [The JSON API](https://brooksgroves.com/hoplore/api/v1/hops.json) ·
 [Report a wrong number](../../issues/new?template=data-correction.yml)
 
@@ -45,6 +46,7 @@ That's the whole thesis. Nobody hand-writes a published range in this repo. You 
 - **A page per hop** — every source plotted on its own range bar, the oil breakdown, aroma, beer styles, pedigree, and ranked substitutes.
 - **[The hop landscape](https://brooksgroves.com/hoplore/landscape/)** — every hop with published figures on one chart, bittering power against aroma oil. Each hop carries a cross out to the widest range any source reported, so a big cross means the sources disagree or the crop swings year to year. Every hop page links in with that hop lit up.
 - **[Where America's hops grow](https://brooksgroves.com/hoplore/grown/)** — Washington grows three-quarters of the US crop, and this is the page that shows it: acres for every variety USDA counts in Washington, Oregon and Idaho, 2015 to 2025, straight from the National Hop Report. Every hop that's in the survey gets its own *Where it's grown* chart too — Citra is the No. 1 hop by acreage in both Washington and Oregon.
+- **[What's in the can](https://brooksgroves.com/hoplore/beers/)** — pick a beer, see its hops. Starting with Fort George in Astoria: every beer whose page lists its hops gets a page of its own, each hop opened up — aroma, alpha, oil breakdown, how many acres of it Washington and Oregon grew — with Cryo and fresh-hop additions called out (Fresh Hop Mirrored Realities: fresh Strata from Coleman Farms). Every hop page lists the beers it's in.
 - **Honesty built into the page.** A hop with only a placeholder citation gets a red "needs a citation" badge. A stub with no numbers says *awaiting data*. A brewing role that hasn't been sourced says *role ?* instead of quietly guessing. An oil breakdown that doesn't account for enough of the oil isn't drawn at all — rather than scaling two trace compounds up to 100% and inventing the rest.
 
 It all works with JavaScript off. JavaScript adds search, filters and tooltips on top.
@@ -57,6 +59,7 @@ It all works with JavaScript off. JavaScript adds search, filters and tooltips o
 data/hops/*.yml         one file per cultivar — the actual product
 data/sources.yml        the source registry. no entry, no number.
 data/acreage/           USDA acreage by variety and state. generated, never hand-edited
+data/beers/             hop lists from breweries' own beer pages. generated
 data/taxonomy/          controlled vocabulary: aroma, styles, countries, breeders
 data/reference/         the checklist of varieties that should have a record
 schema/                 JSON Schema 2020-12. the contract.
@@ -112,6 +115,8 @@ Scrapers live in `tools/ingest/`, one per source, all under the same contract: *
 | `ych` | Yakima Chief Ranches: Citra, Mosaic, Simcoe, Krush, Dolcita, Sabro… | full oil profiles **including myrcene**, plus storage stability |
 | `barthhaas` | ~100 varieties worldwide, incl. Galaxy, Vic Secret, the Czech and Polish hops | full oil breakdown, stated as the range over the last four crop years |
 | `hbc` | Hop Breeding Company, Yakima: all 10 brands (Citra, Mosaic, Sabro, Talus, TerraFlux…) from one page | the breeder's own spec; oils for Citra and Mosaic |
+| `sheets` | One-page spec sheets: Indie Hops (Strata, Meridian, Audacia, Lórien, Luminosa, and Oregon-grown classics), John I. Haas, Yakima Quality Hops (Elani), CLS Farms (Zappa), Charles Faram | read from saved copies; hand-keyed numbers must appear verbatim in the saved file, and cells that can't be right are excluded by name with the reason |
+| `beers` | Fort George Brewery's beer pages | the hops each beer lists, matched to records; Cryo, CO2 extract, kief and fresh-hop farms kept apart from the variety |
 | `usda_nass` | USDA National Hop Report, 2015–2025: acres and production by variety for Washington, Oregon and Idaho | writes `data/acreage/`, not hop records. Checked by making every state and year add up to USDA's own totals, exactly |
 
 ```bash
@@ -173,6 +178,7 @@ GET /hoplore/api/v1/hops.json             everything
 GET /hoplore/api/v1/hops/citra.json       one hop: ranges + every underlying observation
 GET /hoplore/api/v1/similar/citra.json    ranked substitutes with component scores
 GET /hoplore/api/v1/acreage.json          USDA acreage by variety, state and year
+GET /hoplore/api/v1/beers.json            breweries, beers and their hops
 GET /hoplore/api/v1/sources.json          the source registry
 GET /hoplore/api/v1/taxonomy.json         aroma tags, styles, countries, breeders
 GET /hoplore/api/v1/hops.csv              the whole thing, flattened
@@ -223,6 +229,8 @@ Done:
 - [x] Run any scraper from the Actions tab
 - [x] Hop Breeding Company specs, straight from the breeder
 - [x] Washington, Oregon and Idaho acreage from the USDA National Hop Report, 2015–2025
+- [x] Indie Hops, Haas, Yakima Quality Hops and CLS Farms sheets: Strata, Pekko, Elani, Zappa, Meridian and more
+- [x] What's in the can: Fort George's beers, hop by hop
 
 Next, roughly in order of how much I want it:
 
@@ -231,7 +239,7 @@ Next, roughly in order of how much I want it:
 - [ ] A mini landscape on every hop page, with that hop and its substitutes highlighted
 - [ ] Side-by-side compare for 2–4 hops
 - [ ] More sources: NZ Hops, Hop Products Australia, Charles Faram — for the ~30 hops no current source covers
-- [ ] Records for the Washington hops USDA counts that HopLore doesn't have yet: Pekko, Elani, Zappa, Meridian
+- [ ] More breweries on What's in the can — Washington next
 - [ ] Plant patents as a source: public domain, breeder-authored, and they carry the pedigree marketing sheets leave out
 - [ ] Crop-year data, so you can watch alpha drift across harvests instead of reading one eternal average
 - [ ] BeerXML / BeerJSON import: paste a recipe, get told what's substitutable

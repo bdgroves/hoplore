@@ -1,4 +1,5 @@
 import { hopAcreageBlock } from './acreage.js';
+import { hopBeersBlock } from './beers.js';
 
 /** Plain string templates. No framework — the whole site is static HTML over
  *  the same JSON the API serves, so the site can never drift from the data. */
@@ -119,6 +120,7 @@ export function renderIndex({ hops, taxonomy, meta }) {
       <a href="https://brooksgroves.com/">&larr; brooksgroves.com</a>
       <a href="landscape/">Hop landscape</a>
       <a href="grown/">Where the hops grow</a>
+      <a href="beers/">What's in the can</a>
       <a href="api/v1/hops.json">Download the data</a>
       <a href="api/v1/schema/hop.schema.json">Schema</a>
       <a href="https://github.com/bdgroves/hoplore">GitHub</a>
@@ -255,6 +257,7 @@ export function renderHop({ hop, similar, taxonomy, sources, meta, acreageYears 
     <div>
       ${aromaBlock(hop, taxonomy)}
       ${usageBlock(hop, taxonomy)}
+      ${hopBeersBlock(hop.beers, base)}
       ${substitutesBlock(hop, similar)}
       ${pedigreeLine ? `<section class="block"><h2>Pedigree</h2><p>${pedigreeLine}</p></section>` : ''}
       ${hop.meta.notes ? `<section class="block"><h2>Notes on this record</h2><p>${esc(hop.meta.notes)}</p></section>` : ''}

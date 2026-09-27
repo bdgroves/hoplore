@@ -432,12 +432,24 @@ def discover(delay: float, as_json: bool) -> None:
     print()
 
 
+def tastes(soup: BeautifulSoup) -> list[list[str]]:
+    """The aroma descriptors BarthHaas shows on a variety page, each with the
+    flavor family it files it under (the <li> class, e.g. "zitrus")."""
+    out = []
+    for ul in soup.select("ul.section-card-text__tastes"):
+        for li in ul.find_all("li"):
+            text = li.get_text(" ", strip=True)
+            if text:
+                out.append([" ".join(li.get("class") or []), text])
+    return out
+
+
 def page_identity(html: str) -> dict:
     """Name, international code and origin from the header block under the
     <h1>: a bold <p> with the code ("CAS") and a plain one with the origin."""
     soup = BeautifulSoup(html, "lxml")
     h1 = soup.find("h1")
-    out = {"name": h1.get_text(" ", strip=True) if h1 else None, "code": None, "origin": None}
+    out = {"name": h1.get_text(" ", strip=True) if h1 else None, "code": None, "origin": None, "tastes": tastes(soup)}
     if not h1:
         return out
     for p in h1.find_next_siblings("p", limit=4):

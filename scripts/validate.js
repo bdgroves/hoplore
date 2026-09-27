@@ -9,7 +9,7 @@ import Ajv from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { loadDataset, schemas, c, METRIC_KEYS, OIL_KEYS, allMetrics, allRefs } from './lib/load.js';
 
-const { sources, taxonomy, hops, acreage } = loadDataset();
+const { sources, taxonomy, hops, acreage, breweries } = loadDataset();
 const schema = schemas();
 
 const ajv = new Ajv({ allErrors: true, strict: false });
@@ -206,6 +206,22 @@ for (const hop of hops) {
 
 for (const [id, src] of Object.entries(sources)) {
   if (src.tier !== 'unsourced' && !src.url) warn('sources.yml', `"${id}" has no url`);
+}
+
+// -------------------------------------------------------------------- beers
+
+for (const b of breweries) {
+  const at = `beers/${b.file}`;
+  if (!b.brewery?.slug || !b.brewery?.name) err(at, 'needs brewery.slug and brewery.name');
+  const seen = new Set();
+  for (const beer of b.beers ?? []) {
+    if (seen.has(beer.slug)) err(at, `duplicate beer slug "${beer.slug}"`);
+    seen.add(beer.slug);
+    for (const h of beer.hops ?? []) {
+      if (h.hop && !slugs.has(h.hop)) err(at, `${beer.name}: "${h.as_written}" links to "${h.hop}", which has no record`);
+      if (!h.hop) warn(at, `${beer.name}: "${h.name}" has no HopLore record yet`);
+    }
+  }
 }
 
 // ------------------------------------------------------------------ acreage
