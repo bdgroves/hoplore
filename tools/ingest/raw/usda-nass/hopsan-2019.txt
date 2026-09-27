@@ -1,0 +1,427 @@
+
+National Hop Report
+
+ISSN: 2158-7825
+
+Released December 18, 2019, by the National Agricultural Statistics Service 
+(NASS), Agricultural Statistics Board, United States Department of 
+Agriculture (USDA).
+
+2019 Hop Production Up 5 Percent From Last Year
+
+Production for Idaho, Oregon, and Washington in 2019 totaled a record high 
+112 million pounds, up 5 percent from the 2018 crop of 107 million pounds. 
+Combined area harvested for Idaho, Oregon, and Washington in 2019 totaled a 
+record high 56,544 acres, up 3 percent from the 2018 level of 55,035 acres. 
+Harvested acreage increased in Idaho and Washington, but declined in Oregon. 
+The United States hop yield, at 1,981 pounds per acre, up 38 pounds from a 
+year ago.
+
+Washington produced 73 percent of the United States hop crop for 2019; while 
+Idaho accounted for 15 percent and Oregon accounted for 12 percent. CitraR, 
+Cascade, Zeus, SimcoeR, C/T/ZR, and MosaicR were the six leading varieties in 
+Washington, accounting for 50 percent of the State's hop production. In 
+Idaho, C/T/ZR, MosaicR, Chinook, Zeus, CitraR, and Cascade were the major 
+varieties, accounting for 65 percent of the State's hop production. In 
+Oregon, Nugget, Cascade, CitraR, and Willamette were the major varieties, 
+accounting for 50 percent of the State's hop production.
+
+The 2019 value of production for the United States totaled $637 million, 
+up 9 percent from the previous year.
+
+Hop Area Harvested, Yield, Production, Price, and Value - States and United States: 2017-2019
+-------------------------------------------------------------------------------------------------------------
+     State    :       Area       :      Yield       :                  :      Price       :      Value       
+      and     :    harvested     :       per        :    Production    :       per        :        of        
+     year     :                  :       acre       :                  :      pound       :    production    
+-------------------------------------------------------------------------------------------------------------
+              :      acres              pounds          1,000 pounds         dollars         1,000 dollars   
+              :                                                                                              
+Idaho         :                                                                                              
+2017 .........:       7,125             1,974             14,067.3             5.00              70,337      
+2018 .........:       8,140             1,995             16,242.8             5.30              86,087      
+2019 .........:       8,358             2,034             17,003.1             5.25              89,266      
+              :                                                                                              
+Oregon        :                                                                                              
+2017 .........:       8,216             1,518             12,470.4             5.00              62,352      
+2018 .........:       7,725             1,675             12,936.2             5.40              69,855      
+2019 .........:       7,306             1,783             13,023.2             5.50              71,628      
+              :                                                                                              
+Washington    :                                                                                              
+2017 .........:      38,648             2,046             79,083.8             5.80             458,686      
+2018 .........:      39,170             1,984             77,727.7             5.50             427,502      
+2019 .........:      40,880             2,006             82,014.9             5.80             475,686      
+              :                                                                                              
+United States :                                                                                              
+2017 .........:      53,989             1,956            105,621.5             5.60             591,375      
+2018 .........:      55,035             1,943            106,906.7             5.46             583,444      
+2019 .........:      56,544             1,981            112,041.2             5.68             636,580      
+-------------------------------------------------------------------------------------------------------------
+
+Hop Area Harvested, Yield, and Production by Variety - States and
+United States: 2017-2019
+------------------------------------------------------------------------------
+             State            :    Area harvested     :    Yield per acre     
+              and             :-----------------------------------------------
+            variety           : 2017  : 2018  : 2019  : 2017  : 2018  : 2019  
+------------------------------------------------------------------------------
+                              : ------- acres -------   ------- pounds ------ 
+                              :                                               
+Idaho                         :                                               
+Amarillo R, VGXP01 ...        :   983     825     561   1,569   2,009   1,560 
+Apollo TM ............        :   228     232     (D)   1,798   1,951     (D) 
+Bravo TM .............        :   149      87     (D)   2,799   2,226     (D) 
+Calypso TM ...........        :    81      81      81   2,159   2,138   1,901 
+Cascade ......................:   882     836     710   1,771   1,716   1,823 
+Centennial ...................:   255     (D)     (D)   2,028     (D)     (D) 
+Chinook ......................:   699     962     786   1,665   1,873   2,215 
+Citra R, HBC 394 .....        :   759     855     973   1,657   1,438   1,532 
+Cluster ......................:   (D)      63     (D)     (D)   2,126     (D) 
+                              :                                               
+C/T/Z R ..............        :   (D)     (D)     991     (D)     (D)   3,002 
+Comet ........................:   (D)     (D)     112     (D)     (D)   1,970 
+Crystal ......................:   182     150     131   2,084   1,927   1,971 
+El Dorado R ..........        :   219     120     352   2,163   1,463   1,352 
+Eureka TM ............        :   (D)     133     185     (D)   2,299   2,243 
+Galena .......................:   (D)     109     113     (D)   1,715   1,773 
+Hallertauer ..................:   (D)     (D)     (D)     (D)     (D)     (D) 
+Idaho 7 TM ...........        :   (D)     (D)     388     (D)     (D)   2,562 
+Mosaic R, HBC 369 ....        :   500     506     801   2,581   2,333   2,296 
+Northern Brewer ..............:   (D)     (D)     (D)     (D)     (D)     (D) 
+                              :                                               
+Saaz .........................:   (D)     (D)     140     (D)     (D)     771 
+Simcoe R, YCR 14 .....        :   394     449     469   1,494   1,245   1,164 
+Super Galena TM ......        :   (D)      84     (D)     (D)   2,493     (D) 
+Willamette ...................:   128     (D)     170   1,689     (D)   1,695 
+Zeus .........................: 1,061   1,496     611   2,756   2,764   2,672 
+Experimental .................:    26     (D)     (D)     611     (D)     (D) 
+                              :                                               
+Other varieties 1/ ...........:   579   1,152     784   1,959   1,845   1,907 
+                              :                                               
+Total ........................: 7,125   8,140   8,358   1,974   1,995   2,034 
+                              :                                               
+Oregon                        :                                               
+Amarillo R, VGXP01 ...        :   (D)     (D)     212     (D)     (D)   2,312 
+Cascade ......................: 1,247   1,064   1,039   1,425   1,623   1,620 
+Centennial ...................:   789     698     614   1,273   1,277   1,661 
+Chinook ......................:   124     129     114   1,667   1,674   1,733 
+Citra R, HBC 394 .....        :   766     690     998   1,475   1,600   1,476 
+Crystal ......................:   407     354     247   1,772   1,819   1,943 
+Fuggle .......................:    86      59      63   1,251   1,034   1,243 
+Golding ......................:   215     121      92   1,181   1,160   1,351 
+Magnum .......................:    47     105     (D)   1,714   1,284     (D) 
+                              :                                               
+Meridian .....................:  (NA)     (D)     (D)    (NA)     (D)     (D) 
+Mosaic R, HBC 369 ....        :   337     (D)     478   1,875     (D)   2,113 
+Mt. Hood .....................:   318     311     295   1,439   1,411   1,538 
+Nugget .......................: 1,467   1,307   1,059   1,820   1,946   2,130 
+Perle ........................:    76      77     (D)   1,164   1,093     (D) 
+Simcoe R, YCR 14 .....        :   461     436     440   1,421   1,588   1,845 
+Sterling .....................:   227     191     147   1,407   1,760   1,643 
+Strata TM OR 91331 ...        :  (NA)    (NA)     253    (NA)    (NA)   2,066 
+Super Galena TM ......        :    67      84      78   2,096   2,216   2,580 
+Tettnanger ...................:    72      72     (D)   1,013   1,027     (D) 
+                              :                                               
+Willamette ...................:   892     913     619   1,324   1,489   1,717 
+Experimental .................:   (D)     (D)     (D)     (D)     (D)     (D) 
+                              :                                               
+Other varieties 1/ ...........:   618   1,114     558   1,573   2,068   1,644 
+                              :                                               
+Total ........................: 8,216   7,725   7,306   1,518   1,675   1,783 
+------------------------------------------------------------------------------
+See footnote(s) at end of table.                                   --continued
+
+Hop Area Harvested, Yield, and Production by Variety - States and United States:
+2017-2019 (continued)
+------------------------------------------------------------------------------------
+             State            :                     Production                      
+              and             :-----------------------------------------------------
+            variety           :      2017       :      2018       :      2019       
+------------------------------------------------------------------------------------
+                              :                    1,000 pounds                     
+                              :                                                     
+Idaho                         :                                                     
+Amarillo R, VGXP01 ...        :     1,542.3           1,657.4             875.2     
+Apollo TM ............        :       409.9             452.6               (D)     
+Bravo TM .............        :       417.1             193.7               (D)     
+Calypso TM ...........        :       174.9             173.2             154.0     
+Cascade ......................:     1,562.0           1,434.6           1,294.3     
+Centennial ...................:       517.1               (D)               (D)     
+Chinook ......................:     1,163.8           1,801.8           1,741.0     
+Citra R, HBC 394 .....        :     1,257.7           1,229.5           1,490.6     
+Cluster ......................:         (D)             133.9               (D)     
+                              :                                                     
+C/T/Z R ..............        :         (D)               (D)           2,975.0     
+Comet ........................:         (D)               (D)             220.6     
+Crystal ......................:       379.3             289.1             258.2     
+El Dorado R ..........        :       473.7             175.6             475.9     
+Eureka TM ............        :         (D)             305.8             415.0     
+Galena .......................:         (D)             186.9             200.3     
+Hallertauer ..................:         (D)               (D)               (D)     
+Idaho 7 TM ...........        :         (D)               (D)             994.1     
+Mosaic R, HBC 369 ....        :     1,290.5           1,180.5           1,839.1     
+Northern Brewer ..............:         (D)               (D)               (D)     
+                              :                                                     
+Saaz .........................:         (D)               (D)             107.9     
+Simcoe R, YCR 14 .....        :       588.6             559.0             545.9     
+Super Galena TM ......        :         (D)             209.4               (D)     
+Willamette ...................:       216.2               (D)             288.2     
+Zeus .........................:     2,924.1           4,134.9           1,632.6     
+Experimental .................:        15.9               (D)               (D)     
+                              :                                                     
+Other varieties 1/ ...........:     1,134.2           2,124.9           1,495.2     
+                              :                                                     
+Total ........................:    14,067.3          16,242.8          17,003.1     
+                              :                                                     
+Oregon                        :                                                     
+Amarillo R, VGXP01 ...        :         (D)               (D)             490.1     
+Cascade ......................:     1,777.0           1,726.9           1,683.2     
+Centennial ...................:     1,004.4             891.3           1,019.9     
+Chinook ......................:       206.7             215.9             197.6     
+Citra R, HBC 394 .....        :     1,129.9           1,104.0           1,473.0     
+Crystal ......................:       721.2             643.9             479.9     
+Fuggle .......................:       107.6              61.0              78.3     
+Golding ......................:       253.9             140.4             124.3     
+Magnum .......................:        80.6             134.8               (D)     
+                              :                                                     
+Meridian .....................:        (NA)               (D)               (D)     
+Mosaic R, HBC 369 ....        :       631.9               (D)           1,010.0     
+Mt. Hood .....................:       457.6             438.8             453.7     
+Nugget .......................:     2,669.9           2,543.4           2,255.7     
+Perle ........................:        88.5              84.2               (D)     
+Simcoe R, YCR 14 .....        :       655.1             692.4             811.8     
+Sterling .....................:       319.4             336.2             241.5     
+Strata TM OR 91331 ...        :        (NA)              (NA)             522.7     
+Super Galena TM ......        :       140.4             186.1             201.2     
+Tettnanger ...................:        72.9              73.9               (D)     
+                              :                                                     
+Willamette ...................:     1,181.0           1,359.5           1,062.8     
+Experimental .................:         (D)               (D)               (D)     
+                              :                                                     
+Other varieties 1/ ...........:       972.4           2,303.5             917.5     
+                              :                                                     
+Total ........................:    12,470.4          12,936.2          13,023.2     
+------------------------------------------------------------------------------------
+See footnote(s) at end of table.                                         --continued
+
+Hop Area Harvested, Yield, and Production by Variety - States and United States:
+2017-2019 (continued)
+----------------------------------------------------------------------------------------
+                  State                 :    Area harvested     :    Yield per acre     
+                   and                  :-----------------------------------------------
+                 variety                : 2017  : 2018  : 2019  : 2017  : 2018  : 2019  
+----------------------------------------------------------------------------------------
+                                        :-------- acres -------   ------- pounds ------ 
+                                        :                                               
+Washington                              :                                               
+Ahtanum TM, YCR 1 ............          :   371     255     261   1,052   2,730   2,820 
+Amarillo R, VGXP01 ...........          : 1,984   1,895   1,597   1,687   1,868   1,946 
+Apollo TM ....................          :   684     795     851   2,729   2,848   2,735 
+Azacca TM, ADHA-483 ..........          :   578     546     589   2,463   2,491   2,441 
+Bravo TM .....................          :   486     280     236   2,973   3,258   3,216 
+Cascade ................................: 4,966   4,274   3,718   2,124   1,972   1,920 
+Cashmere ...............................:   (D)     195     310     (D)   1,519   1,699 
+Centennial .............................: 4,375   3,875   3,031   1,703   1,364   1,820 
+Chinook ................................: 1,632   1,734   1,437   1,784   1,875   1,942 
+                                        :                                               
+Citra R, HBC 394 .............          : 3,715   4,837   6,720   1,748   1,611   1,424 
+Cluster ................................:   621     610     470   1,937   1,813   1,815 
+C/T/Z  R .....................          : 1,659   2,034   2,323   2,646   2,482   2,584 
+Comet ..................................:   205     218     210   1,855   1,750   1,311 
+Crystal ................................:   122     114      66   2,063   2,357   1,989 
+Ekuanot TM, HBC 366 ..........          :   890     865     632   2,740   2,583   2,483 
+El Dorado R ..................          :   463     418     641   1,946   1,880   2,032 
+Eureka TM ....................          :   362     409     425   2,244   2,954   3,188 
+Galena .................................:   378     390     297   2,134   2,149   2,045 
+Glacier ................................:   (D)     (D)     (D)     (D)     (D)     (D) 
+                                        :                                               
+Idaho 7 TM .....................        :   (D)     (D)      85     (D)     (D)   1,544 
+Jarrylo TM, ADHA-881 .........          :   (D)     (D)     (D)     (D)     (D)     (D) 
+Loral TM, HBC 291 ............          :   186     172     125   2,295   2,349   2,515 
+Mosaic R, HBC 369 ............          : 1,877   1,932   2,829   2,439   2,351   2,054 
+Mt. Hood ...............................:    87     104      53   1,043   1,454   1,037 
+Mt. Rainier ............................:   (D)     306     239     (D)   1,899   2,149 
+Nugget .................................:   125     126     104   1,950   1,498   2,313 
+Pahto TM, HBC 682 ............          :  (NA)   1,721   2,109    (NA)   2,087   2,398 
+Palisade R, YCR 4 ............          :   571     515     477   2,209   2,441   2,520 
+Pekko TM, ADHA-871 ...........          :   (D)      92     (D)     (D)   1,889     (D) 
+                                        :                                               
+Sabro TM , HBC 438 .............        :  (NA)    (NA)     724    (NA)    (NA)   1,612 
+Simcoe R, YCR 14 .............          : 3,753   3,103   3,367   1,792   1,642   1,788 
+Sorachi Ace ............................:   (D)     146     (D)     (D)   1,042     (D) 
+Summit TM ....................          : 1,617   1,574   1,072   2,067   1,826   1,816 
+Super Galena TM ..............          :   435     500     473   2,647   3,133   2,871 
+Tahoma .................................:   217     209     230   1,752   2,147   1,958 
+Tettnanger .............................:    38     (D)     (D)   1,202     (D)     (D) 
+Willamette .............................:   571     376     270   1,446   1,348   1,596 
+Zeus ...................................: 2,214   2,592   2,612   3,088   2,619   2,620 
+Experimental ...........................:   421     374     360   1,901   1,889   2,251 
+                                        :                                               
+Other varieties 1/ .....................: 3,045   1,584   1,937   1,746   1,896   1,888 
+                                        :                                               
+Total ..................................:38,648  39,170  40,880   2,046   1,984   2,006 
+                                        :                                               
+United States 2/ ....................   :53,989  55,035  56,544   1,956   1,943   1,981 
+----------------------------------------------------------------------------------------
+See footnote(s) at end of table.                                             --continued
+
+Hop Area Harvested, Yield, and Production by Variety - States and United States:
+2017-2019 (continued)
+------------------------------------------------------------------------------------
+             State            :                     Production                      
+              and             :-----------------------------------------------------
+            variety           :      2017       :      2018       :      2019       
+------------------------------------------------------------------------------------
+                              :                    1,000 pounds                     
+                              :                                                     
+Washington                    :                                                     
+Ahtanum TM, YCR 1 ..          :        390.3             696.2             736.0    
+Amarillo R, VGXP01 .          :      3,347.0           3,539.9           3,107.8    
+Apollo TM ..........          :      1,866.6           2,264.2           2,327.5    
+Azacca TM, ADHA-483           :      1,423.6           1,360.1           1,437.7    
+Bravo TM ...........          :      1,444.9             912.2             759.0    
+Cascade ......................:     10,547.8           8,428.3           7,138.6    
+Cashmere .....................:          (D)             296.2             526.7    
+Centennial ...................:      7,450.6           5,285.5           5,516.4    
+Chinook ......................:      2,911.5           3,251.3           2,790.7    
+                              :                                                     
+Citra R, HBC 394 ...          :      6,493.8           7,792.4           9,569.3    
+Cluster ......................:      1,202.9           1,105.9             853.1    
+C/T/Z  R ...........          :      4,389.7           5,048.4           6,002.6    
+Comet ........................:        380.3             381.5             275.3    
+Crystal ......................:        251.7             268.7             131.3    
+Ekuanot TM, HBC 366           :      2,438.6           2,234.3           1,569.3    
+El Dorado R ........          :        901.0             785.8           1,302.5    
+Eureka TM ..........          :        812.3           1,208.2           1,354.9    
+Galena .......................:        806.7             838.1             607.4    
+Glacier ......................:          (D)               (D)               (D)    
+                              :                                                     
+Idaho 7 TM .........          :          (D)               (D)             131.2    
+Jarrylo TM, ADHA-881          :          (D)               (D)               (D)    
+Loral TM, HBC 291 ..          :        426.9             404.0             314.4    
+Mosaic R, HBC 369 ..          :      4,578.0           4,542.1           5,810.8    
+Mt. Hood .....................:         90.7             151.2              55.0    
+Mt. Rainier ..................:          (D)             581.1             513.6    
+Nugget .......................:        243.8             188.7             240.6    
+Pahto TM, HBC 682 ..          :         (NA)           3,591.7           5,057.4    
+Palisade R, YCR 4 ..          :      1,261.3           1,257.1           1,202.0    
+Pekko TM, ADHA-871 .          :          (D)             173.8               (D)    
+                              :                                                     
+Sabro TM , HBC 438 .          :         (NA)              (NA)           1,167.1    
+Simcoe R, YCR 14 ...          :      6,725.4           5,095.1           6,020.2    
+Sorachi Ace ..................:          (D)             152.1               (D)    
+Summit TM ..........          :      3,342.3           2,874.1           1,946.8    
+Super Galena TM ....          :      1,151.4           1,566.5           1,358.0    
+Tahoma .......................:        380.2             448.7             450.3    
+Tettnanger ...................:         45.7               (D)               (D)    
+Willamette ...................:        825.7             506.8             430.9    
+Zeus .........................:      6,836.8           6,788.4           6,843.4    
+Experimental .................:        800.3             706.5             810.4    
+                              :                                                     
+Other varieties 1/ ...........:      5,316.0           3,002.6           3,656.7    
+                              :                                                     
+Total ........................:     79,083.8          77,727.7          82,014.9    
+                              :                                                     
+United States 2/ ..........   :    105,621.5         106,906.7         112,041.2    
+------------------------------------------------------------------------------------
+(D)Withheld to avoid disclosing data for individual operations.                     
+(NANot available.                                                                   
+R Registered                                                                        
+TM Trademark                                                                        
+1/ Includes data withheld to avoid disclosure of individual operations and varieties
+   not listed.                                                                      
+2/ Includes 532 acres of organic hops for 2019 with yield equal to 1,255 pounds per 
+   acre and production at 667,660 pounds.                                           
+
+Statistical Methodology
+
+Survey Procedures: Grower surveys are conducted in the three estimating 
+States to collect acreage, yield, and production data from growers. 
+Additionally, contacts are made with each of the three Hop Commissions. 
+
+Estimating Procedures: Information obtained from the hops growers surveys are 
+used to establish estimates of hops. These estimates are reviewed for errors, 
+reasonableness, and consistency with historical estimates and industry check 
+data.
+
+Revision Policy: All hop estimates are subject to revision the following year 
+based on a thorough review of all available data.
+
+Reliability: Survey results are subject to non-sampling errors such as 
+omission, duplication, imputation for missing data, and mistakes in 
+reporting, recording, and processing the data. These errors cannot be 
+measured directly, but are minimized through rigid quality controls in the 
+data collection process and a careful review of all reported data for 
+consistency and reasonableness.
+
+Information Contacts
+
+Listed below are the commodity statisticians in the Crops Branch of the National Agricultural 
+Statistics Service to contact for additional information. E-mail inquiries may be sent to 
+nass@usda.gov
+
+Lance Honig, Chief, Crops Branch...................................................... (202) 720-2127
+
+Jorge Garcia-Pratts, Head, Fruits, Vegetables and Special Crops Section............... (202) 720-2127
+Joshua Bates - Almonds, Apples, Apricots, Asparagus, Carrots, Coffee, Onions,
+Plums, Prunes, Sweet Corn, Tobacco.................................................... (202) 720-4288
+ Jorge Garcia-Pratts - Dry Beans, Garlic, Hazelnuts, Honeydews, Kiwifruit, Lettuce,
+Maple Syrup, Mint, Pears, Sweet Cherries, Tart Cherries, Tomatoes..................... (202) 720-2127
+    Fleming Gibson - Cauliflower, Celery, Grapefruit, Lemons, Macadamia,
+Mandarins and tangerines, Mushrooms, Olives, Oranges.................................. (202) 720-5412
+    Greg Lemmons - Cranberries, Cucumbers, Pistachios, Potatoes, Pumpkins, 
+Raspberries, Squash, Strawberries, Sugarbeets, Sugarcane, Sweet Potatoes,
+Tame Blueberries, Wild Blueberries.................................................... (202) 720-4285
+    Dan Norris - Artichokes, Cantaloupes, Dry Edible Peas, Green Peas, Lentils,
+          Nectarines, Papayas, Peaches, Snap Beans, Spinach, Walnuts, Watermelons .... (202) 720-3250
+    Dawn Smoker - Avocados, Bell Peppers, Broccoli, Cabbage, Chickpeas, 
+Chile Peppers, Dates, Floriculture, Grapes, Hops, Pecans.............................. (202) 720-4215
+
+Access to NASS Reports
+
+For your convenience, you may access NASS reports and products the following 
+ways:
+
+ 	All reports are available electronically, at no cost, on the NASS web 
+site: www.nass.usda.gov
+
+ 	Both national and state specific reports are available via a free e-
+mail subscription. To set-up this free subscription, visit 
+www.nass.usda.gov and click on "National" or "State" in upper right 
+corner above "search" box to create an account and select the reports 
+you would like to receive.
+
+ 	Cornell's Mann Library has launched a new website housing NASS's and 
+other agency's archived reports. The new website, 
+https://usda.library.cornell.edu. All email subscriptions containing 
+reports will be sent from the new website, 
+https://usda.library.cornell.edu. To continue receiving the reports via 
+e-mail, you will have to go to the new website, create a new account 
+and re-subscribe to the reports. If you need instructions to set up an 
+account or subscribe, they are located at: 
+https://usda.library.cornell.edu/help. You should whitelist 
+notifications@usda-esmis.library.cornell.edu in your email client to 
+avoid the emails going into spam/junk folders. 
+
+For more information on NASS surveys and reports, call the NASS Agricultural 
+Statistics Hotline at (800) 727-9540, 7:30 a.m. to 4:00 p.m. ET, or e-mail: 
+nass@nass.usda.gov. 
+The U.S. Department of Agriculture (USDA) prohibits discrimination against 
+its customers, employees, and applicants for employment on the basis of race, 
+color, national origin, age, disability, sex, gender identity, religion, 
+reprisal, and where applicable, political beliefs, marital status, familial 
+or parental status, sexual orientation, or all or part of an individual's 
+income is derived from any public assistance program, or protected genetic 
+information in employment or in any program or activity conducted or funded 
+by the Department. (Not all prohibited bases will apply to all programs 
+and/or employment activities.) 
+If you wish to file a Civil Rights program complaint of discrimination, 
+complete the USDA Program Discrimination Complaint Form (PDF), found online 
+at www.ascr.usda.gov/filing-program-discrimination-complaint-usda-customer, 
+or at any USDA office, or call (866) 632-9992 to request the form. You may 
+also write a letter containing all of the information requested in the form. 
+Send your completed complaint form or letter to us by mail at U.S. Department 
+of Agriculture, Director, Office of Adjudication, 1400 Independence Avenue, 
+S.W., Washington, D.C. 20250-9410, by fax (202) 690-7442 or email at 
+program.intake@usda.gov. 
+
