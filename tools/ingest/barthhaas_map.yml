@@ -1,0 +1,7 @@
+# HopLore slug  ->  BarthHaas URL name at
+# https://www.barthhaas.com/hops-and-products/hops/<name>
+#
+# Filled from catalogs/barthhaas.json (run the Snapshot a source catalog
+# workflow). `false` = BarthHaas does not carry it.
+
+cascade: cascade

@@ -10,7 +10,7 @@ on:
       source:
         description: Which source
         type: choice
-        options: [hopsteiner]
+        options: [hopsteiner, barthhaas]
         default: hopsteiner
 
 permissions:
@@ -35,18 +35,19 @@ jobs:
         env:
           SOURCE: ${{ inputs.source }}
         run: |
-          pixi run -e data python "tools/ingest/$SOURCE.py" --catalog --delay 1.5
+          EXTRA=""; [ "$SOURCE" = barthhaas ] && EXTRA="--fixture cascade"
+          pixi run -e data python "tools/ingest/$SOURCE.py" --catalog --delay 1.5 $EXTRA
           python3 -c "import json,sys; d=json.load(open(f'tools/ingest/catalogs/{sys.argv[1]}.json')); print(d['count'], 'varieties'); [print(' ', k, '-', v) for k, v in d['varieties'].items()]" "$SOURCE" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit
         env:
           SOURCE: ${{ inputs.source }}
         run: |
-          if git diff --quiet -- tools/ingest/catalogs && [ -z "$(git ls-files --others --exclude-standard tools/ingest/catalogs)" ]; then
+          if git diff --quiet -- tools/ingest/catalogs tools/ingest/fixtures && [ -z "$(git ls-files --others --exclude-standard tools/ingest/catalogs tools/ingest/fixtures)" ]; then
             echo "Catalog unchanged." >> "$GITHUB_STEP_SUMMARY"; exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tools/ingest/catalogs
+          git add tools/ingest/catalogs tools/ingest/fixtures
           git commit -m "Catalog snapshot: $SOURCE" -m "Written by the 'Snapshot a source catalog' workflow, run ${{ github.run_id }}."
           git push
