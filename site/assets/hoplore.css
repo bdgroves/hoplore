@@ -15,9 +15,14 @@
   --bine: #3b6b4c;
   --rust: #9a4a2b;
 
-  --aroma: var(--bine);
-  --bittering: var(--rust);
-  --dual: var(--lupulin);
+  /* Brewing-role colors. Validated as a categorical set against --paper
+     (dataviz validate_palette.js): the old bine/rust pair was 5.7 dE apart
+     under protanopia -- effectively the same color to a red-green
+     colorblind reader. Rust/gold still sits in the 6-8 band, so every
+     chart that uses these also varies marker shape. */
+  --aroma: #00809a;
+  --bittering: #b8433a;
+  --dual: #a07e10;
 
   --gutter: clamp(1.25rem, 4vw, 3.5rem);
   --measure: 66ch;
@@ -142,7 +147,7 @@ h1, h2, h3 {
 
 .finder label { display: block; font-size: 0.85rem; color: var(--ink-soft); margin-bottom: 0.3rem; }
 
-#q {
+#q, #lq {
   width: 100%;
   font: inherit;
   font-size: 1.15rem;
@@ -152,7 +157,7 @@ h1, h2, h3 {
   border-bottom: 2px solid var(--ink);
   color: inherit;
 }
-#q::placeholder { color: var(--ink-faint); }
+#q::placeholder, #lq::placeholder { color: var(--ink-faint); }
 
 .filters { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 
@@ -242,6 +247,9 @@ h1, h2, h3 {
 [data-purpose="aroma"] { --mark: var(--aroma); }
 [data-purpose="bittering"] { --mark: var(--bittering); }
 [data-purpose="dual"] { --mark: var(--dual); }
+[data-purpose="unconfirmed"] { --mark: transparent; }
+.purpose[data-purpose="unconfirmed"] { color: var(--ink-faint); }
+.purpose[data-purpose="unconfirmed"]::before { outline: 1px dashed var(--ink-faint); outline-offset: -1px; }
 
 .row-tags {
   font-size: 0.8rem;
@@ -492,4 +500,84 @@ table.forms tr.form-note td {
 @media print {
   .masthead::before, .finder, .nav { display: none; }
   body { background: #fff; }
+}
+
+/* --------------------------------------------------------------- landscape */
+
+.page-title {
+  font-size: clamp(2.2rem, 7vw, 4.5rem);
+  font-variation-settings: "wdth" 78;
+  letter-spacing: -0.035em;
+  margin: 0.4rem 0 0.6rem;
+}
+
+.role-chip { display: inline-flex; align-items: center; gap: 0.45ch; }
+.role-chip svg .mk { fill: var(--mark); }
+.role-chip .num { color: var(--ink-faint); font-size: 0.8em; }
+.role-chip[aria-pressed="true"] { background: transparent; color: var(--ink); border-color: var(--ink); }
+.role-chip[aria-pressed="false"] { opacity: 0.45; text-decoration: line-through; }
+
+.chart { position: relative; margin: 0 0 1.5rem; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart figcaption { font-size: 0.85rem; color: var(--ink-soft); max-width: var(--measure); margin-top: 0.6rem; }
+
+.chart .grid { stroke: var(--wire-soft); stroke-width: 1; }
+.chart .axis { stroke: var(--ink); stroke-width: 1; }
+.chart .tick { font: 12px "IBM Plex Mono", monospace; fill: var(--ink-faint); }
+.chart .axis-title { font: 500 13px "IBM Plex Sans", sans-serif; fill: var(--ink-soft); }
+
+.pt { cursor: pointer; outline: none; }
+.pt .mk { fill: var(--mark); stroke: var(--paper); stroke-width: 2; }
+.pt .wh { stroke: var(--mark); stroke-width: 1.5; stroke-linecap: round; opacity: 0.22; }
+.pt .hit { fill: transparent; }
+.pt:hover .wh, .pt:focus-visible .wh, .pt.on .wh, .pt.hit .wh { opacity: 0.9; stroke-width: 2; }
+.pt:focus-visible .mk, .pt.on .mk { stroke: var(--ink); }
+.pt.dim { opacity: 0.15; }
+.pt.off { display: none; }
+.searching .pt:not(.hit) { opacity: 0.15; }
+.pt.hit .mk { stroke: var(--ink); stroke-width: 2.5; }
+
+.chart .lbl {
+  font: 500 12.5px "IBM Plex Sans", sans-serif;
+  fill: var(--ink);
+  paint-order: stroke;
+  stroke: var(--paper);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.chart .lbl.off { display: none; }
+
+.tip {
+  position: absolute;
+  z-index: 3;
+  min-width: 12rem;
+  padding: 0.6rem 0.8rem;
+  background: var(--paper-lift);
+  border: 1px solid var(--ink);
+  box-shadow: 0 6px 18px rgb(23 37 31 / 0.12);
+  font-size: 0.85rem;
+  pointer-events: none;
+}
+.tip b { display: block; font-family: "Bricolage Grotesque", sans-serif; font-size: 1.05rem; }
+.tip .role-note { display: block; color: var(--ink-faint); font-size: 0.8rem; }
+.tip .role { color: var(--ink-soft); display: inline-flex; align-items: center; gap: 0.4ch; }
+.tip .role::before { content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--mark); }
+.tip dl { display: grid; grid-template-columns: auto 1fr; gap: 0.1rem 0.9rem; margin: 0.45rem 0 0; }
+.tip dt { color: var(--ink-soft); }
+.tip dd { margin: 0; text-align: right; }
+
+.as-table { border-top: 1px solid var(--wire); padding: 1rem 0 4rem; }
+.as-table summary { cursor: pointer; color: var(--ink-soft); }
+.as-table table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-top: 1rem; }
+.as-table th { text-align: left; font-weight: 500; font-size: 0.78rem; color: var(--ink-soft); border-bottom: 1px solid var(--ink); padding: 0.4rem 0.6rem 0.4rem 0; }
+.as-table td { border-bottom: 1px solid var(--wire-soft); padding: 0.35rem 0.6rem 0.35rem 0; }
+
+/* On a phone the full chart would shrink to a stamp. Keep it legible at a
+   minimum width and let it scroll sideways instead. */
+@media (max-width: 46rem) {
+  .chart { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .chart svg { min-width: 720px; }
+  .chart figcaption { position: sticky; left: 0; }
+  .chart figcaption::before { content: "Scroll sideways to see the whole chart. "; font-weight: 500; }
 }

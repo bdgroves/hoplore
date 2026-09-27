@@ -1,10 +1,10 @@
 /** Plain string templates. No framework — the whole site is static HTML over
  *  the same JSON the API serves, so the site can never drift from the data. */
 
-const esc = (s = '') =>
+export const esc = (s = '') =>
   String(s).replace(/[&<>"']/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
 
-const fmt = (n) => (n == null ? '—' : Number(n).toFixed(Number.isInteger(n) ? 0 : 1));
+export const fmt = (n) => (n == null ? '—' : Number(n).toFixed(Number.isInteger(n) ? 0 : 1));
 
 const UNIT = {
   percent: '%',
@@ -35,7 +35,7 @@ const OIL_COLOR = {
   other: '#bcb7a4',
 };
 
-function shell({ title, description, body, base = '', bodyClass = '' }) {
+export function shell({ title, description, body, base = '', bodyClass = '' }) {
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -57,7 +57,7 @@ ${body}
 </html>`;
 }
 
-const footer = (base, meta) => `
+export const footer = (base, meta) => `
 <footer class="foot">
   <div class="wrap">
     <p>HopLore is an open dataset first and a website second. Every figure on this
@@ -114,6 +114,7 @@ export function renderIndex({ hops, taxonomy, meta }) {
       <div><b>${withAlpha.length}</b> with full acid data</div>
     </div>
     <nav class="nav">
+      <a href="landscape/">Hop landscape</a>
       <a href="api/v1/hops.json">Download the data</a>
       <a href="api/v1/schema/hop.schema.json">Schema</a>
       <a href="https://github.com/bdgroves/hoplore">GitHub</a>
@@ -168,6 +169,11 @@ function row(hop, taxonomy) {
   // A stub has a name and nothing else yet. Saying so beats an empty row that
   // looks like a rendering fault.
   const isStub = hop.meta.status === 'stub';
+  // The bulk-scaffolded stubs carry purpose: dual as a flagged default, not
+  // a finding. Show it as unknown, and keep them out of the role filters.
+  const roleUnconfirmed = /purpose defaulted/.test(hop.meta.notes ?? '');
+  const purposeAttr = roleUnconfirmed ? 'unconfirmed' : hop.purpose;
+  const purposeText = roleUnconfirmed ? 'role ?' : hop.purpose;
   const middle = tags.length
     ? esc(tags.join(', '))
     : isStub
@@ -176,12 +182,12 @@ function row(hop, taxonomy) {
 
   return `<a class="row" href="hops/${hop.slug}/"
      data-search="${esc(search)}"
-     data-purpose="${hop.purpose}"
+     data-purpose="${purposeAttr}"
      data-cryo="${Boolean(hop.products?.cryo)}"
      data-hasdata="${!isStub}"
      data-verification="${hop.meta.verification}">
         <span class="row-name">${esc(hop.name)}${hop.aliases?.length ? ` <em>${esc(hop.aliases[0])}</em>` : ''}</span>
-        <span class="purpose" data-purpose="${hop.purpose}">${hop.purpose === 'dual' ? 'dual' : hop.purpose}</span>
+        <span class="purpose" data-purpose="${purposeAttr}"${roleUnconfirmed ? ' title="Brewing role not yet confirmed from a source"' : ''}>${purposeText}</span>
         <span class="row-tags">${middle}</span>
         <span class="row-aa num">${aa ? `${fmt(aa.low)}–${fmt(aa.high)}%` : '—'}</span>
       </a>`;
@@ -215,6 +221,7 @@ export function renderHop({ hop, similar, taxonomy, sources, meta }) {
   <div class="wrap">
     <nav class="nav" style="border-top:0;padding-top:0">
       <a href="${base}">All varieties</a>
+      <a href="${base}landscape/#${hop.slug}">Where it sits in the landscape</a>
       <a href="${base}api/v1/hops/${hop.slug}.json">This hop as JSON</a>
       <a href="https://github.com/bdgroves/hoplore/blob/main/data/hops/${hop.slug}.yml">Edit the source file</a>
     </nav>

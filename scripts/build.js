@@ -13,6 +13,7 @@ import { loadDataset, DIST, ROOT, c } from './lib/load.js';
 import { rollupHop } from './lib/rollup.js';
 import { buildSimilarity } from './lib/similarity.js';
 import { renderIndex, renderHop } from '../site/templates/render.js';
+import { renderLandscape } from '../site/templates/landscape.js';
 
 const API_VERSION = 'v1';
 const { sources, taxonomy, hops: raw } = loadDataset();
@@ -119,6 +120,7 @@ write(
 // ------------------------------------------------------------------ the site
 
 write(out('index.html'), renderIndex({ hops, taxonomy, meta }));
+write(out('landscape/index.html'), renderLandscape({ hops, meta }));
 
 for (const hop of hops) {
   write(out(`hops/${hop.slug}/index.html`), renderHop({ hop, similar: similar[hop.slug] ?? [], taxonomy, sources, meta }));
@@ -131,8 +133,8 @@ write(out('robots.txt'), `User-agent: *\nAllow: /\nSitemap: /sitemap.xml\n`);
 write(
   out('sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    ['', ...hops.map((h) => `hops/${h.slug}/`)]
-      .map((p) => `  <url><loc>https://bdgroves.github.io/hoplore/${p}</loc></url>`)
+    ['', 'landscape/', ...hops.map((h) => `hops/${h.slug}/`)]
+      .map((p) => `  <url><loc>https://brooksgroves.com/hoplore/${p}</loc></url>`)
       .join('\n') +
     `\n</urlset>\n`
 );
