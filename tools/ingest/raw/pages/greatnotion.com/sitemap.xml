@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- This is the parent sitemap linking to additional sitemaps for products, collections and pages as shown below. The sitemap can not be edited manually, but is kept up to date in real time. -->
+  <sitemap>
+    <loc>https://greatnotion.com/sitemap_agentic_discovery.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://greatnotion.com/sitemap_products_1.xml?from=4553283764320&amp;to=11093322629313</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://greatnotion.com/sitemap_pages_1.xml?from=50431918176&amp;to=150120792257</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://greatnotion.com/sitemap_collections_1.xml?from=286652432577&amp;to=484091068609</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://greatnotion.com/sitemap_blogs_1.xml</loc>
+  </sitemap>
+</sitemapindex>
