@@ -97,10 +97,20 @@ def main() -> int:
             lines.append(f"### {source_id}\n\n_discovery failed: {error}_\n")
             continue
 
+        # A name the scraper's own map already points at is known, even when
+        # it doesn't normalise to anything the record answers to -- YCR's
+        # "terrasurge-hbc-1325" is the Terrasurge record, but no loose string
+        # match will ever say so.
+        mapped = set()
+        if hasattr(module, "load_map"):
+            mapped = {str(v) for v in (module.load_map() or {}).values() if v}
+
         new = {
             key: display
             for key, display in varieties.items()
-            if normalize(display) not in existing and normalize(key) not in existing
+            if key not in mapped
+            and normalize(str(display)) not in existing
+            and normalize(key) not in existing
         }
         total_new += len(new)
 

@@ -1,0 +1,39 @@
+slug: dolcita
+name: Dolcita
+purpose: dual
+country: US
+kind: cultivar
+
+# Stub created from discovery issue #1 (YCR sitemap lists a brand page for it).
+# purpose is an unconfirmed default -- see meta.notes. No analytics yet:
+# run `pixi run -e data ych dolcita --apply` to pull YCR's figures.
+
+ownership:
+  holder: Hop Breeding Company
+  public_domain: false
+
+pedigree:
+  breeder: hbc
+  parents: { unknown: true }
+  refs: [ychr]
+
+aroma:
+  summary: >
+    Not yet written. Fill in from a real source, then update meta.status.
+  tags: []
+  refs: []
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: stub
+  verification: unverified
+  last_reviewed: '2026-09-26'
+  notes: >
+    purpose defaulted to dual, unconfirmed. Breeder set from YCR news post 'HBC announces Dolcita brand hops'.

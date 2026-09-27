@@ -26,10 +26,9 @@ warrior: warrior
 # recognised brewing values" and moves on, which is the honest outcome.
 talus: talus
 
-# Listed by YCR but with no HopLore record yet. Create the record first
-# (`pixi run new-hop "Ahtanum" US aroma`), then uncomment.
-# ahtanum: ahtanum
-# krush: krush
-# dolcita: Dolcita
-# hbc-682: hbc-682
-# terrasurge: terrasurge-hbc-1325
+# Added from discovery issue #1, 2026-09.
+ahtanum: ahtanum
+krush: krush
+dolcita: Dolcita
+hbc-682: hbc-682
+terrasurge: terrasurge-hbc-1325

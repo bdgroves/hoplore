@@ -65,6 +65,11 @@
 - { slug: calypso, name: Calypso, country: US }
 - { slug: lemondrop, name: Lemondrop, country: US }
 - { slug: mackinac, name: Mackinac, country: US, note: farm-bred (Michigan) }
+- { slug: ahtanum, name: Ahtanum, country: US }
+- { slug: krush, name: Krush, country: US }
+- { slug: dolcita, name: Dolcita, country: US }
+- { slug: hbc-682, name: HBC 682, country: US }
+- { slug: terrasurge, name: Terrasurge, country: US }
 
 # --- Germany -------------------------------------------------------------
 - { slug: perle, name: Perle, country: DE }
