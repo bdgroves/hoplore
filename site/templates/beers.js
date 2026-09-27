@@ -172,7 +172,7 @@ export function renderBeer({ brewery, beer, bySlug, taxonomy, meta }) {
     ${cards}
     </ul>
     <p class="fine">In the order ${esc(brewery.name)} lists them: <q>${esc(beer.hops_as_written)}</q>.
-    From <a href="${esc(beer.url)}">the brewery's page for this beer</a>. Forms like Cryo and CO2 extract are
+    ${beer.scanned ? `Read off a ${esc(beer.scanned_from ?? 'photo')} of the ${beer.scanned_from === 'text' ? 'brewery\'s text' : 'can'} with <a href="${base}scan/">Scan a beer</a>, ${esc(beer.scanned)}.` : `From <a href="${esc(beer.url)}">the brewery's page for this beer</a>.`} Forms like Cryo and CO2 extract are
     the same variety processed differently.</p>
   </section>
   ${togetherBlock(bill, bySlug, taxonomy)}

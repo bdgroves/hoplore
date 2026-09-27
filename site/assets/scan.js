@@ -54,7 +54,8 @@ function matchHop(token) {
   const item = { written: token, fresh: false, form: null, farm: null };
   const from = text.match(/\bfrom\s+(.+)$/i);
   if (from) { item.farm = from[1].trim(); text = text.slice(0, from.index).trim(); }
-  if (/^fresh\b/i.test(text)) { item.fresh = true; text = text.replace(/^fresh(\s+hop)?\s+/i, ''); }
+  const fresh = text.match(/^(?:fresh(?:ly)?|wet)(?:[- ](?:picked|hop|hopped))?\s+/i);
+  if (fresh) { item.fresh = true; text = text.slice(fresh[0].length); }
   text = text.replace(/\bhops?\b/gi, '').replace(/[™®()]/g, ' ').replace(/\s+/g, ' ').trim();
   for (const [w, label] of FORMS) {
     const re = new RegExp(`(^${w}\\s+|\\s+${w}$)`, 'i');

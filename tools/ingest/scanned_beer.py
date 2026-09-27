@@ -70,6 +70,17 @@ def main() -> int:
 
     OUT.mkdir(parents=True, exist_ok=True)
     slug = slugify(brewery)
+    # A brewery HopLove already crawls keeps its slug, city and website, so a
+    # scanned can lands in the same section as the brewery's other beers.
+    known = YAML(typ="safe").load((Path(__file__).parent / "breweries.yml").read_text(encoding="utf-8")) or []
+    squash = lambda t: re.sub(r"[^a-z0-9]", "", t.lower().replace("brewing", "").replace("brewery", "").replace("brews", ""))
+    match = next((b for b in known if squash(b["name"]) == squash(brewery)), None)
+    if match:
+        slug = match["slug"]
+        data.setdefault("city", match["city"])
+        data["city"] = data.get("city") or match["city"]
+        data["state"] = data.get("state") or match["state"]
+        data["brewery_url"] = data.get("brewery_url") or match["url"]
     path = OUT / f"{slug}.yml"
     yaml = YAML()
     yaml.width = 4096

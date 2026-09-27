@@ -146,9 +146,9 @@ def parse_hop(token: str, index: dict[str, str]) -> dict:
     if m := re.search(r"\(([^)]*)\)", text):
         item["product"] = m.group(1).strip()
         text = (text[: m.start()] + text[m.end():]).strip()
-    if re.match(r"fresh\b", text, re.I):
-        item["fresh"] = True
-        text = re.sub(r"^fresh\s+", "", text, flags=re.I)
+    if m := re.match(r"(?:fresh(?:ly)?|wet)(?:[- ](?:picked|hop|hopped))?\s+", text, re.I):
+        item["fresh"] = True  # "Fresh Strata", "freshly picked Simcoe", "wet hop Centennial"
+        text = text[m.end():]
     text = re.sub(r"\bhops?\b", "", text, flags=re.I)
     text = re.sub(r"\s+", " ", re.sub(r"[™®]", " ", text)).strip()
     low = text.lower()
