@@ -82,6 +82,8 @@ IGNORED = {
     "agronomic aspects",
 }
 
+ZERO_IS_UNPUBLISHED = {"alpha_acid", "beta_acid", "total_oil"}
+
 CEILINGS = {"alpha_acid": 25, "beta_acid": 15, "cohumulone": 100, "total_oil": 6}
 
 
@@ -184,6 +186,15 @@ def parse_sheet(html: str, slug: str, variety: str, url: str) -> Sheet:
             ceiling = CEILINGS.get(metric)
             if ceiling and high > ceiling:
                 sheet.unmapped[label] = f"{value} (exceeds plausible ceiling {ceiling}, skipped)"
+                continue
+            # No hop has zero alpha, beta or oil. Newer experimental sheets
+            # (Akoya, Alora, Solero, 2026) print "0.0 - 0.0" or "0.0 - 1.5"
+            # where a figure hasn't been published -- Alora's reads 0.0 alpha
+            # next to a 28-32% cohumulone, which is a share OF alpha. A zero
+            # floor is a placeholder, not a measurement: report it, don't
+            # record it.
+            if metric in ZERO_IS_UNPUBLISHED and low == 0:
+                sheet.unmapped[label] = f"{value} (zero lower bound reads as unpublished, skipped)"
                 continue
             sheet.observations.append(
                 Observation(metric=metric, section=section, unit=unit, low=low, high=high, label=label)

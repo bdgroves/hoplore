@@ -13,7 +13,7 @@ Every hop spec sheet on the internet hands you one confident number. `Alpha: 5.5
 
 Nobody says. So I built a database that does.
 
-**137 cultivars. 79 backed by real breeder and lab sources. Every number traceable to whoever actually said it.**
+**167 cultivars. 123 backed by real breeder and lab sources. Every number traceable to whoever actually said it.**
 
 ---
 
@@ -105,7 +105,7 @@ Scrapers live in `tools/ingest/`, one per source, all under the same contract: *
 
 | Scraper | Covers | Notes |
 |---|---|---|
-| `hopsteiner` | ~60 varieties across the US, Europe, the Southern Hemisphere | acids and some oils; no myrcene |
+| `hopsteiner` | ~100 varieties across the US, Europe, the Southern Hemisphere; the catalog is crawled, not guessed | acids and some oils; no myrcene |
 | `ych` | Yakima Chief Ranches: Citra, Mosaic, Simcoe, Krush, Dolcita, Sabro… | full oil profiles **including myrcene**, plus storage stability |
 
 ```bash
@@ -182,15 +182,15 @@ Nobody gets to skip this section.
 
 | | count | what that means |
 |---|---|---|
-| Cultivars | **137** | every one has a record, a page and an API endpoint |
-| Backed by a real source | **79** | Hopsteiner and Yakima Chief Ranches, tier `breeder` |
+| Cultivars | **167** | every one has a record, a page and an API endpoint |
+| Backed by a real source | **123** | Hopsteiner and Yakima Chief Ranches, tier `breeder` |
 | With a full oil breakdown (myrcene) | **16** | the rest are waiting on a source that publishes it |
 | Still citing a placeholder somewhere | **12** | mostly aroma prose and pedigree from the first seed pass |
-| No numbers yet | **55** | real varieties, no source found that covers them |
+| No numbers yet | **44** | real varieties, no source found that covers them |
 
 I bootstrapped the first records from general brewing knowledge so there'd be something to build the tooling against. Every one of those citations points at `seed-general-knowledge`, tier `unsourced`, weight 0.1, and is flagged everywhere. When a real source arrives, the placeholder number it contradicts gets deleted rather than kept alongside — the rollup publishes the *union* of source ranges, so a padded guess would drag the published figure away from what the breeder measured. Citra went from a guessed 10–15% alpha to the breeder's 11–13% that way.
 
-The 55 empty records are the same principle pointed the other way. An empty record that says "we don't have this yet" beats a full one padded out with plausible guesses.
+The 44 empty records are the same principle pointed the other way. An empty record that says "we don't have this yet" beats a full one padded out with plausible guesses.
 
 Aramis is the fully-worked example of a single hop — copy its shape. Idaho 7 is the example for formats, and for the hardest coverage problem: bred by a family farm in Wilder, Idaho, distributed by three companies, found by no breeder's catalog.
 
@@ -210,7 +210,7 @@ Found a wrong number? [Open an issue](../../issues/new?template=data-correction.
 
 Done:
 
-- [x] Hopsteiner and Yakima Chief Ranches scrapers — real breeder data for 79 hops, and myrcene for the hops that matter most
+- [x] Hopsteiner and Yakima Chief Ranches scrapers — real breeder data for 123 hops, and myrcene for the hops that matter most
 - [x] Coverage report plus a monthly discovery workflow that opens an issue when a new variety shows up
 - [x] The hop landscape
 - [x] Run any scraper from the Actions tab

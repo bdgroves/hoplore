@@ -35,14 +35,6 @@ meta:
   notes: >
     purpose defaulted to dual, unconfirmed. Country: Hopsteiner's data sheet (main growing country).
 analytics:
-  alpha_acid:
-    unit: percent
-    observations:
-      - { source: hopsteiner, low: 0.0, high: 0.0, note: Data sheet last changed 2026-03-04. }
-  beta_acid:
-    unit: percent
-    observations:
-      - { source: hopsteiner, low: 0.0, high: 3.5, note: Data sheet last changed 2026-03-04. }
   cohumulone:
     unit: percent_of_alpha
     observations:

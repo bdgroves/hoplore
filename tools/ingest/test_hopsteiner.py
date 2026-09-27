@@ -56,6 +56,28 @@ check("polyphenols skipped", "Total Polyphenoles" in sheet.unmapped, True)
 # Agronomics are reported as unmapped so they are visible, not silently lost.
 check("yield surfaced", "Yield (kg/ha)" in sheet.unmapped, True)
 
+# --- zero floors are placeholders, not measurements -------------------------
+#
+# 2026 experimental sheets print "0.0 - 0.0" (and "0.0 - 1.5") where a figure
+# isn't published. Alora's sheet read 0.0% alpha beside a 28-32% cohumulone,
+# which is measured as a share OF alpha -- so the zero can't be real.
+# Farnesene at 0 is real (Citra has none), so the rule is acids and oil only.
+zero_html = """<table>
+<tr><td>Alpha-Acid %</td><td>0.0 - 0.0</td></tr>
+<tr><td>Beta-Acid %</td><td>0.0 - 3.5</td></tr>
+<tr><td>Co-Humulone % rel.</td><td>28.0 - 32.0</td></tr>
+<tr><td>Total Oils (ml/100g)</td><td>0.8 - 1.3</td></tr>
+<tr><td>Farnesene % of total Oil</td><td>0.0 - 0.0</td></tr>
+</table>"""
+zero = parse_sheet(zero_html, "alora", "Alora", "https://example/")
+zf = {o.metric: (o.low, o.high) for o in zero.observations}
+check("zero alpha not recorded", "alpha_acid" in zf, False)
+check("zero-floor beta not recorded", "beta_acid" in zf, False)
+check("zero alpha reported", any("unpublished" in v for v in zero.unmapped.values()), True)
+check("cohumulone still recorded", zf.get("cohumulone"), (28.0, 32.0))
+check("real oil still recorded", zf.get("total_oil"), (0.8, 1.3))
+check("zero farnesene is real and kept", zf.get("farnesene"), (0.0, 0.0))
+
 if failures:
     print(f"\n{len(failures)} failure(s):")
     for f in failures:
