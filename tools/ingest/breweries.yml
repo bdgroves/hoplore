@@ -1,0 +1,74 @@
+# Breweries whose own beer pages list their hops. snapshot.py --breweries
+# saves every beer page into raw/pages/<host>/; beers.py parses them.
+#
+#   sitemaps / listing: where the beer URLs come from
+#   match:              regex a URL must match to count as a beer page
+#   render: true        page content is drawn by JavaScript; saved with a
+#                       headless browser instead of a plain request
+
+- slug: fort-george
+  name: Fort George Brewery
+  city: Astoria
+  state: OR
+  url: https://fortgeorgebrewery.com/
+  listing: [https://fortgeorgebrewery.com/beer/]
+  match: '^https://fortgeorgebrewery\.com/beer/[a-z0-9-]+/$'
+
+- slug: double-mountain
+  name: Double Mountain Brewery
+  city: Hood River
+  state: OR
+  url: https://doublemountainbrewery.com/
+  sitemaps: [https://doublemountainbrewery.com/sitemap.xml]
+  match: '^https://doublemountainbrewery\.com/beer/[a-z0-9_-]+/$'
+
+- slug: pfriem
+  name: pFriem Family Brewers
+  city: Hood River
+  state: OR
+  url: https://www.pfriembeer.com/
+  listing: [https://www.pfriembeer.com/beer/all/]
+  match: '^(https://www\.pfriembeer\.com)?/beer/[a-z0-9-]+/$'
+  base: https://www.pfriembeer.com
+
+- slug: kings-and-daughters
+  name: Kings & Daughters Brewery
+  city: Hood River
+  state: OR
+  url: https://www.kingsanddaughters.com/
+  sitemaps: [https://www.kingsanddaughters.com/sitemap.xml]
+  match: '^https://www\.kingsanddaughters\.com/product/[^/]*(ipa|pale|lager|pils|fresh|hazy|ale)[^/]*/[A-Z0-9]+$'
+  render: true
+  limit: 40
+
+- slug: ex-novo
+  name: Ex Novo Brewing
+  city: Portland
+  state: OR
+  url: https://exnovobrew.com/
+  sitemaps: [https://exnovobrew.com/sitemap.xml]
+  match: '^https://exnovobrew\.com/beer/[a-z0-9-]+/$'
+
+- slug: breakside
+  name: Breakside Brewery
+  city: Portland
+  state: OR
+  url: https://breakside.com/
+  sitemaps: [https://breakside.com/our_beer-sitemap.xml]
+  match: '^https://breakside\.com/our_beer/[a-z0-9-]+/$'
+
+- slug: ecliptic
+  name: Ecliptic Brewing
+  city: Portland
+  state: OR
+  url: https://eclipticbrewing.com/
+  sitemaps: [https://eclipticbrewing.com/wp-sitemap-posts-beer-1.xml]
+  match: '^https://eclipticbrewing\.com/beer/[a-z0-9-]+/$'
+
+- slug: 7-seas
+  name: 7 Seas Brewing
+  city: Tacoma
+  state: WA
+  url: https://www.7seasbrewing.com/
+  listing: [https://www.7seasbrewing.com/beers/, https://www.7seasbrewing.com/beer-releases/]
+  match: '^https://www\.7seasbrewing\.com/(beers/[a-z0-9-]+/|[0-9]{4}-[a-z0-9-]*fresh-hop[a-z0-9-]*/|uno-mas-is-back/)$'

@@ -10,7 +10,7 @@ on:
       source:
         description: Which source
         type: choice
-        options: [hopsteiner, barthhaas, hbc, usda_nass, snapshot]
+        options: [hopsteiner, barthhaas, hbc, usda_nass, snapshot, breweries]
         default: hopsteiner
 
 permissions:
@@ -35,6 +35,14 @@ jobs:
         env:
           SOURCE: ${{ inputs.source }}
         run: |
+          if [ "$SOURCE" = breweries ]; then
+            pixi run -e data python tools/ingest/snapshot.py --breweries | tee -a "$GITHUB_STEP_SUMMARY"
+            if [ -s tools/ingest/raw/pages/render_urls.txt ]; then
+              npm i --no-save playwright-core@1.56.0 >/dev/null
+              node tools/ingest/render.mjs | tail -40 | tee -a "$GITHUB_STEP_SUMMARY"
+            fi
+            exit 0
+          fi
           if [ "$SOURCE" = snapshot ]; then
             pixi run -e data python tools/ingest/snapshot.py | tee -a "$GITHUB_STEP_SUMMARY"; exit 0
           fi

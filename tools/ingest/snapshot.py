@@ -39,7 +39,74 @@ def target(url: str, content_type: str) -> Path:
     return OUT / parts.netloc.removeprefix("www.") / stem
 
 
+def brewery_urls(brewery: dict) -> list[str]:
+    """Beer page URLs for one brewery, from its sitemaps and listing pages."""
+    pattern = re.compile(brewery["match"])
+    found: list[str] = []
+
+    def take(url: str) -> None:
+        url = url.strip()
+        if url.startswith("/") and brewery.get("base"):
+            url = brewery["base"] + url
+        url = url.replace("http://", "https://", 1)
+        if pattern.match(url) and url not in found:
+            found.append(url)
+
+    for sm in brewery.get("sitemaps", []):
+        try:
+            xml = requests.get(sm, headers={"User-Agent": UA}, timeout=60).text
+        except requests.RequestException:
+            continue
+        for loc in re.findall(r"<loc>\s*([^<]+?)\s*</loc>", xml):
+            take(loc)
+    for page in brewery.get("listing", []):
+        try:
+            html = requests.get(page, headers={"User-Agent": UA}, timeout=60).text
+        except requests.RequestException:
+            continue
+        for href in re.findall(r'href="([^"#?]+)"', html):
+            take(href)
+    return found[: brewery.get("limit", 1000)]
+
+
+def crawl_breweries() -> int:
+    """Save every listed brewery's beer pages. Pages already saved are kept
+    (a beer's hop list doesn't change once it's brewed), so re-runs only
+    fetch what's new. JavaScript-drawn sites are queued for render.mjs."""
+    from ruamel.yaml import YAML  # noqa: PLC0415
+
+    breweries = YAML(typ="safe").load((HERE / "breweries.yml").read_text(encoding="utf-8"))
+    render: list[str] = []
+    log: list[str] = []
+    for brewery in breweries:
+        urls = brewery_urls(brewery)
+        log.append(f"{brewery['slug']}: {len(urls)} beer page(s)")
+        if brewery.get("render"):
+            render.extend(urls)
+            continue
+        for url in urls:
+            out = target(url, "text/html")
+            if out.exists():
+                continue
+            try:
+                r = requests.get(url, headers={"User-Agent": UA}, timeout=60)
+                r.raise_for_status()
+            except requests.RequestException as error:
+                log.append(f"  FAIL {url}: {error}")
+                continue
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_bytes(r.content)
+            time.sleep(1.0)
+    (OUT / "render_urls.txt").write_text("\n".join(render) + "\n", encoding="utf-8")
+    OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / "breweries-run.txt").write_text("\n".join(log) + "\n", encoding="utf-8")
+    print("\n".join(log))
+    return 0
+
+
 def main() -> int:
+    if "--breweries" in sys.argv:
+        return crawl_breweries()
     urls = [l.split("#")[0].strip() for l in URLS.read_text(encoding="utf-8").splitlines()]
     urls = [u for u in urls if u.startswith("https://")]
     failed = 0
