@@ -33,7 +33,49 @@ substitutes: []
 
 meta:
   status: stub
-  verification: unverified
-  last_reviewed: '2026-09-26'
+  verification: single-source
+  last_reviewed: '2026-09-27'
   notes: >
     purpose defaulted to dual, unconfirmed. Breeder set from YCR news post 'HBC announces Dolcita brand hops'.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: ychr, low: 7.5, high: 12.9 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: ychr, low: 7.2, high: 12.2 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: ychr, low: 19.6, high: 25.7 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: ychr, low: 1.0, high: 2.7 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: ychr, low: 28.0, high: 61.0 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: ychr, low: 4.0, high: 10.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: ychr, low: 7.0, high: 14.0 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: ychr, low: 0.0, high: 0.8 }
+  linalool:
+    unit: percent_of_total_oil
+    observations:
+      - { source: ychr, low: 0.0, high: 0.7 }
+  geraniol:
+    unit: percent_of_total_oil
+    observations:
+      - { source: ychr, low: 0.8, high: 1.9 }

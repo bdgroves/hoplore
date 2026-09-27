@@ -29,7 +29,41 @@ substitutes: []
 
 meta:
   status: stub
-  verification: unverified
-  last_reviewed: '2026-09-26'
+  verification: single-source
+  last_reviewed: '2026-09-27'
   notes: >
     purpose defaulted to dual, unconfirmed. Breeder and ownership left unrecorded until a source is read.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: ychr, low: 10.1, high: 14.1 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: ychr, low: 6.3, high: 9.4 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: ychr, low: 35.5, high: 39.5 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: ychr, low: 1.5, high: 3.0 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: ychr, low: 35.0, high: 55.0 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: ychr, low: 9.0, high: 18.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: ychr, low: 11.0, high: 19.0 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: ychr, low: 0.0, high: 0.2 }

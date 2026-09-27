@@ -33,7 +33,20 @@ substitutes: []
 
 meta:
   status: stub
-  verification: unverified
-  last_reviewed: '2026-09-26'
+  verification: single-source
+  last_reviewed: '2026-09-27'
   notes: >
     purpose defaulted to dual, unconfirmed. Breeder set from HBC selection number in YCR's own brand URL.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: ychr, low: 17.0, high: 20.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: ychr, low: 4.5, high: 6.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: ychr, low: 1.0, high: 2.5 }
