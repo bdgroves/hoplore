@@ -19,7 +19,6 @@ aramis: Aramis
 citra: false          # Hop Breeding Company
 mosaic: false         # Hop Breeding Company
 simcoe: false         # Yakima Chief Ranches
-nelson-sauvin: false  # New Zealand Hops Ltd
 
 # verified against the live site via `--all --apply`, 2026-09 (the HEAD-based
 # probe that first suggested these turned out to be unreliable -- see the fix
@@ -83,3 +82,54 @@ target: Target
 tettnang: Tettnanger
 triskel: Triskel
 zeus: Zeus
+
+# From the catalog crawl, 2026-09: existing records whose Hopsteiner name
+# differs from ours, so URL guessing never found them. Nelson Sauvin was
+# wrongly mapped `false` -- Hopsteiner does carry it.
+hallertau-magnum: Hallertauer-Magnum
+hallertau-merkur: Hallertauer-Merkur
+hallertau-taurus: Hallertauer-Taurus
+hallertau-tradition: Hallertauer-Tradition
+spalt-spalter: Spalter
+lubelski: Lubelski--Lublin
+sladek: Sl-dek
+magnum: US-Magnum
+columbus: Columbus---Tomahawk
+celeia: Styrian-Golding--Celeia
+huell-melon: Huell-Melon
+nelson-sauvin: Nelson-Sauvin
+strisselspalt: Strisselspalter
+whitbread-golding-variety: Whitbread-Golding
+
+# From the catalog crawl, 2026-09: varieties new to HopLore. Erebus is in
+# their catalog but its sheet states no country, so it has no record yet.
+akoya: Akoya
+alora: Alora
+altus: Altus
+bitter-gold: Bitter-Gold
+bor: Bor
+brewers-gold: Brewers-Gold
+cashmere: Cashmere
+contessa: Contessa
+delta: Delta
+diamant: Diamant
+galena: Galena
+golding-uk: Golding--UK
+hs09326: HS09326
+hs17704: HS17704
+helios: Helios
+herkules: Herkules
+lotus: Lotus
+mount-rainier: Mt--Rainier
+nobella: Nobella
+northern-brewer: Northern-Brewer
+pride-of-ringwood: Pride-of-Ringwood
+santiam: Santiam
+solero: Solero
+spalter-select: Spalter-Select
+sultana: Sultana
+super-galena: Super-Galena
+tahoma: Tahoma
+titan: Titan
+trident: Trident
+vanguard: Vanguard

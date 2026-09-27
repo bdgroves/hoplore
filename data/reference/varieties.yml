@@ -169,3 +169,35 @@
 - { slug: southern-passion, name: Southern Passion, country: ZA }
 - { slug: african-queen, name: African Queen, country: ZA }
 - { slug: southern-star, name: Southern Star, country: ZA }
+
+# --- added from the Hopsteiner catalog crawl, 2026-09 ------------------
+- { slug: akoya, name: 'Akoya', country: DE }
+- { slug: alora, name: 'Alora', country: US }
+- { slug: altus, name: 'Altus', country: US }
+- { slug: bitter-gold, name: 'Bitter Gold', country: US }
+- { slug: bor, name: 'Bor', country: CZ }
+- { slug: brewers-gold, name: 'Brewers Gold', country: GB }
+- { slug: cashmere, name: 'Cashmere', country: US }
+- { slug: contessa, name: 'Contessa', country: US }
+- { slug: delta, name: 'Delta', country: US }
+- { slug: diamant, name: 'Diamant', country: DE }
+- { slug: galena, name: 'Galena', country: US }
+- { slug: golding-uk, name: 'Golding (UK)', country: GB }
+- { slug: hs09326, name: 'HS09326', country: US }
+- { slug: hs17704, name: 'HS17704', country: US }
+- { slug: helios, name: 'Helios', country: US }
+- { slug: herkules, name: 'Herkules', country: DE }
+- { slug: lotus, name: 'Lotus', country: US }
+- { slug: mount-rainier, name: 'Mt. Rainier', country: US }
+- { slug: nobella, name: 'Nobella', country: DE }
+- { slug: northern-brewer, name: 'Northern Brewer', country: GB }
+- { slug: pride-of-ringwood, name: 'Pride of Ringwood', country: AU }
+- { slug: santiam, name: 'Santiam', country: US }
+- { slug: solero, name: 'Solero', country: DE }
+- { slug: spalter-select, name: 'Spalter Select', country: DE }
+- { slug: sultana, name: 'Sultana', country: US }
+- { slug: super-galena, name: 'Super Galena', country: US }
+- { slug: tahoma, name: 'Tahoma', country: US }
+- { slug: titan, name: 'Titan', country: US }
+- { slug: trident, name: 'Trident', country: US }
+- { slug: vanguard, name: 'Vanguard', country: US }

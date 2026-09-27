@@ -1,0 +1,36 @@
+slug: helios
+name: Helios
+aliases: [HS15619]
+purpose: dual
+country: US
+kind: cultivar
+
+# Stub created from the Hopsteiner catalog crawl (catalogs/hopsteiner.json).
+# purpose is an unconfirmed default -- see meta.notes. No analytics yet:
+# run the Run a scraper workflow (hopsteiner, helios) to pull real values.
+
+pedigree:
+  breeder: unknown
+  parents: { unknown: true }
+  refs: []
+
+aroma:
+  summary: >
+    Not yet written. Fill in from a real source, then update meta.status.
+  tags: []
+  refs: []
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: stub
+  verification: unverified
+  last_reviewed: '2026-09-26'
+  notes: >
+    purpose defaulted to dual, unconfirmed. Country: Hopsteiner's data sheet (main growing country).

@@ -9,7 +9,7 @@ pedigree:
   year_crossed: 1974
   released: 1990
   breeder: usda-ars
-  parents: { seed: brewers-gold-us, note: Brewer's Gold crossed with a complex male line. }
+  parents: { seed: brewers-gold, note: Brewer's Gold crossed with a complex male line. }
   refs: [seed-general-knowledge]
 aroma:
   summary: >
