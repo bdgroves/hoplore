@@ -116,6 +116,7 @@ export function renderIndex({ hops, taxonomy, meta }) {
       <div><b>${withAlpha.length}</b> with full acid data</div>
     </div>
     <nav class="nav">
+      <a href="https://brooksgroves.com/">&larr; brooksgroves.com</a>
       <a href="landscape/">Hop landscape</a>
       <a href="grown/">Where the hops grow</a>
       <a href="api/v1/hops.json">Download the data</a>
@@ -223,6 +224,7 @@ export function renderHop({ hop, similar, taxonomy, sources, meta, acreageYears 
 <header class="masthead" style="padding-top:1.5rem">
   <div class="wrap">
     <nav class="nav" style="border-top:0;padding-top:0">
+      <a href="https://brooksgroves.com/">&larr; brooksgroves.com</a>
       <a href="${base}">All varieties</a>
       <a href="${base}landscape/#${hop.slug}">Where it sits in the landscape</a>
       ${hop.acreage ? `<a href="${base}grown/">Where America's hops grow</a>` : ''}

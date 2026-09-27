@@ -295,6 +295,7 @@ export function renderGrown({ acreage, hops, meta }) {
 <header class="masthead" style="padding-top:1.5rem">
   <div class="wrap">
     <nav class="nav" style="border-top:0;padding-top:0">
+      <a href="https://brooksgroves.com/">&larr; brooksgroves.com</a>
       <a href="${base}">All varieties</a>
       <a href="${base}landscape/">Hop landscape</a>
       <a href="${base}api/v1/acreage.json">This data as JSON</a>
