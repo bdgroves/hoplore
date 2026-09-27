@@ -1,0 +1,90 @@
+brewery:
+  slug: holy-mountain
+  name: Holy Mountain Brewing
+  city: Seattle
+  state: WA
+  url: https://holymountainbrewing.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-27'
+beers:
+  - slug: black-beer
+    name: Black Beer
+    url: https://www.holymountainbrewing.com/beer/black-beer/
+    abv: 4.5
+    hops_as_written: ' Black Beer Dark Ale A dark ale brewed with flaked barley, meris otter, and hopped with east kent goldings. Style Dark Ale ABV 4.5% Availability Seasonal '
+    hops:
+      - { hop: golding-uk, name: Goldings, as_written: goldings }
+  - slug: coastal-cutthroat
+    name: Coastal Cutthroat
+    url: https://www.holymountainbrewing.com/beer/coastal-cutthroat/
+    abv: 4.9
+    hops_as_written: ' Coastal Cutthroat Mosaic Pilsner Coastal Cutthroat Mosaic Pilsner was brewed with a light base of Pale Pilsner Malt and Flaked Oats. Mosaic pellets and Mosaic Cryo were used late in the kettle as well as the dry-hop. Crisp, refreshing, aromatic, and perfect during or after a day on our Puget Sound or Olympic Peninsula. Proceeds of this beer go to the Coastal Cutthroat Colation to help them fur...'
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic }
+  - slug: complexity-of-distance
+    name: Complexity of Distance
+    url: https://www.holymountainbrewing.com/beer/complexity-of-distance/
+    abv: 5.7
+    hops_as_written: ' Complexity of Distance Barrel Blended Saison Complexity of Distance is a blend of 1 to 3-year-old, barrel-fermented mixed culture Saison. This blend was selected for its complex range of flavors and subtle nuance that allows it to integrate with the Kohatu and Citra dry hop additions. Style Saison ABV 5.7% Availability One-Off '
+    hops:
+      - { hop: kohatu, name: Kohatu, as_written: Kohatu }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: demonteller
+    name: Demonteller
+    url: https://www.holymountainbrewing.com/beer/demonteller/
+    abv: 5.5
+    hops_as_written: ' Demonteller Foudre Aged Saison Foudre Aged Saison A mixed culture saison hopped with galaxy and mosaic. Demonteller was fermented and aged in one of our foudres, creating a delicate oak character that balances out a subtle acidity. Style Saison ABV 5.5% Availability Seasonal '
+    hops:
+      - { hop: galaxy, name: Galaxy, as_written: galaxy }
+      - { hop: mosaic, name: Mosaic, as_written: mosaic }
+  - slug: downward-is-heavenward
+    name: Downward is Heavenward
+    url: https://www.holymountainbrewing.com/beer/downward-is-heavenward/
+    abv: 4.9
+    hops_as_written: ' Downward is Heavenward Rustic Rye Lager Downward is Heavenward is our take on a more agrarian style of lager. We used an old world style of Pilsner malt along with some rye in the mash. Before actually mashing in we lined our tun with Kentucky Bluegrass hay and proceeded like normal. This beer was then hopped in the kettle with a blend of Spalter, Hersbrucker, and Saaz at various additions, th...'
+    hops:
+      - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: fedallahs-hearse
+    name: Fedallah’s Hearse
+    url: https://www.holymountainbrewing.com/beer/fedallahs-hearse/
+    abv: 6.4
+    hops_as_written: ' Fedallah’s Hearse West Coast IPA Fedallah’s Hearse was brewed using a blend of Pilsner and 2-Row barleys, along with copious amounts of flaked rice. It was hopped in the kettle with Mosaic and Galaxy, then fermented cold with one of our favorite yeast strains, before being dry-hopped with more Galaxy and Mosaic Cryo. Style IPA ABV 6.4% Availability Occasional Hops Galaxy / Mosaic '
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic }
+  - slug: god-of-reason
+    name: God of Reason
+    url: https://www.holymountainbrewing.com/beer/god-of-reason/
+    abv: 9.9
+    hops_as_written: ' God of Reason Imperial Stout with Vanilla God Of Reason is an imperial stout brewed with heavy additions of specialty crystal and roasted malts, hopped with East Kent Golding and fermented with an expressive English ale strain, creating rich and intense notes of chocolate and dark fruit. We then conditioned this batch on single origin vanilla beans from Papua New Guinea for a big vanilla backb...'
+    hops:
+      - { hop: east-kent-golding, name: East Kent Golding, as_written: East Kent Golding }
+  - slug: kingdom-of-tyrants
+    name: Kingdom of Tyrants
+    url: https://www.holymountainbrewing.com/beer/kingdom-of-tyrants/
+    abv: 9.9
+    hops_as_written: ' Kingdom of Tyrants Barrel Lagered Dopplebock Kingdom of Tyrants was brewed using malt exclusively from Sugar Creek Malting. With a base of Munich, Vienna and Pilsner malts, we also added a touch of Crystal Rye and a custom smoked malt incorporating Cherry and Pecan wood for a subtle smokey background. We then hopped this beer in the kettle using only Tettnang, and fermented it cold with one of...'
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: primordial-sky
+    name: Primordial Sky
+    url: https://www.holymountainbrewing.com/beer/primordial-sky/
+    abv: 8.0
+    hops_as_written: ' Primordial Sky Double IPA Primordial Sky was brewed with Two Row, Pilsner Malt, Malted Spelt, Flakes Barley and Malted Oats. Insane hop additions of Simcoe, Mosaic, Galaxy and Idaho 7 were used in the kettle, and then ran through our hop back through some incredible Citra whole leaf hops. Fermented with a blend of English ale strains, it was then dry-hopped heavily with Mosaic Cryo, Galaxy, Id...'
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic }
+  - slug: the-scarlet-thread
+    name: The Scarlet Thread
+    url: https://www.holymountainbrewing.com/beer/the-scarlet-thread/
+    abv: 4.0
+    hops_as_written: ' The Scarlet Thread 10 Plato Pale Lager The Scarlet Thread is our tribute to the světlý výčepní beers of Czechia, an extremely easy drinking pale lager beer. We brewed it using an extra pale bohemian pilsner malt and hopped in the kettle exclusively with Saaz hops, fermented cold with a delicate lager yeast and conditioned for 6 weeks. The perfect beer for your not-so-dry “dry January”. Style L...'
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }

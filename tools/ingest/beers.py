@@ -47,6 +47,8 @@ FORMS = [
     ("t90", "T90"),
     ("lupomax", "LupoMax"),
     ("pellets", None),
+    ("abstrax", "Abstrax"),
+    ("noble", None),
     ("dry hop", None),
     ("dry", None),
     ("extract", "extract"),
@@ -60,11 +62,11 @@ FORMS = [
 # Words in front of a variety: a form, or where it was grown. The form is
 # kept; the origin is dropped from the name so "German Tettnang" finds
 # Tettnang.
-PREFIX_FORMS = {"cryo-": "Cryo", "cryo": "Cryo", "cgx": "CGX", "abstrax quantum:": "Quantum", "lupomax": "LupoMax", "lupuln2": "LupuLN2", "whole leaf": "whole cone", "whole cone": "whole cone"}
-ORIGINS = r"(?:german|gr|nz|us|usa|american|czech|oregon|washington|yakima|aged|estate|local|hallertau|slovenian|uk|english)"
+PREFIX_FORMS = {"frozen": "frozen", "second-use": "second use", "cryo-": "Cryo", "cryo": "Cryo", "cgx": "CGX", "abstrax quantum:": "Quantum", "lupomax": "LupoMax", "lupuln2": "LupuLN2", "whole leaf": "whole cone", "whole cone": "whole cone"}
+ORIGINS = r"(?:german|gr|nz|us|usa|american|czech|oregon|washington|yakima|aged|estate|local|hallertau|slovenian|uk|english|mi|michigan|new zealand|australian|yakima valley|willamette valley)"
 
 # Not hops: malts, numbers and spec words that leak into a hop field.
-NOT_HOPS = re.compile(r"^(two row|2-row|vienna|munich|pilsner|pils|wheat|oats?|malt|\d+ ?ibu|ibu|abv|lactic.*|euphorics.*|yeast.*|aged|none)$", re.I)
+NOT_HOPS = re.compile(r"^(two row|2-row|vienna|munich|pilsner|pils|wheat|oats?|malt|\d+ ?ibu|ibu|abv|lactic.*|euphorics.*|yeast.*|aged|none|caramel.*|carapils|black|ginger|lime juice|linc .*|mar+is otter|esb|honey malt|golden promise|rye|spelt|flaked .*)$", re.I)
 
 # Names breweries use that no record answers to directly.
 ALIASES = {
@@ -97,6 +99,15 @@ ALIASES = {
     "hesrbrucker": "hersbrucker",
     "calista": "callista",
     "uk golding": "golding-uk",
+    "haltetau mittelfruh": "hallertau-mittelfrueh",
+    "mandarina baveria": "mandarina-bavaria",
+    "luminosia": "luminosa",
+    "sincoe": "simcoe",
+    "styrian goldings": "styrian-golding",
+    "styrin wolf": "styrian-wolf",
+    "mandarina": "mandarina-bavaria",
+    "huell melon": "huell-melon",
+    "hull melon": "huell-melon",
     "spalt select": "spalter-select",
     "mt hood": "mount-hood",
     "whitbread golding variety": "whitbread-golding-variety",
@@ -138,7 +149,8 @@ def parse_hop(token: str, index: dict[str, str]) -> dict:
     if re.match(r"fresh\b", text, re.I):
         item["fresh"] = True
         text = re.sub(r"^fresh\s+", "", text, flags=re.I)
-    text = re.sub(r"\bhops?\b", "", text, flags=re.I).strip()
+    text = re.sub(r"\bhops?\b", "", text, flags=re.I)
+    text = re.sub(r"\s+", " ", re.sub(r"[™®]", " ", text)).strip()
     low = text.lower()
     for word, label in FORMS:
         if re.search(rf"\b{re.escape(word)}$", low):
@@ -150,6 +162,9 @@ def parse_hop(token: str, index: dict[str, str]) -> dict:
         if text.lower().startswith(word + " "):
             item["form"] = label
             text = text[len(word):].strip()
+    if gm := re.search(r",?\s*grown by (.+)$", text, re.I):
+        item.setdefault("farm", gm.group(1).strip())
+        text = text[: gm.start()].strip()
     if fm := re.match(r"^(.+? (?:Farms?|Ranch|Agriculture)) (.+)$", text):
         item.setdefault("farm", fm.group(1).strip())
         text = fm.group(2).strip()
@@ -172,7 +187,7 @@ def parse_hop(token: str, index: dict[str, str]) -> dict:
 def split_hops(line: str) -> list[str]:
     line = re.sub(r"\s+", " ", line.replace("\xa0", " "))
     line = re.sub(r"\bMt\.\s*", "Mt ", line, flags=re.I)
-    line = re.sub(r"\band\b|&|\+|;|\.\s", ",", line, flags=re.I)
+    line = re.sub(r"\band\b|\bplus\b|&|\+|;|\.\s", ",", line, flags=re.I)
     line = re.sub(r"\s+(?=Fresh\b)", ", ", line)  # "Nelson Fresh Strata": a lost line break
     line = re.sub(r"Hallertauer,\s*Mittelfr", "Hallertauer Mittelfr", line)  # a stray comma on one page
     tokens = [t.strip(" .:-") for t in line.split(",")]
@@ -243,13 +258,11 @@ def names_in(text: str, index: dict[str, str], field: bool = False) -> list[dict
                 continue  # "Crystal malt"
             taken.append((a, b))
             before, after = text[max(0, a - 18):a].lower(), text[b:b + 12].lower()
-            name = m.group(0)
-            if name.isupper() and not re.search(r"\d", name):
-                name = name.title()
+            name = label  # the record's own spelling, not the brewery's capitals
             item = {"hop": NAME_FORMS[label], "name": name, "as_written": m.group(0)}
             if "cryo" in before.split()[-1:] or after.strip().startswith("cryo"):
                 item["form"] = "Cryo"
-            if re.search(r"fresh(?:[- ]hop)?\s*$", before):
+            if re.search(r"(?:fresh|wet)(?:[- ]hop(?:ped)?)?\s*$", before):
                 item["fresh"] = True
             if fm := re.match(r"\s*(?:hops?\s+)?from\s+([A-Z][\w'&.\s]{1,40}?(?:Farms?|Ranch|Agriculture|Hops))", text[b:b + 70]):
                 item["farm"] = fm.group(1).strip()
@@ -284,7 +297,8 @@ def load_name_forms() -> None:
     for alias, slug in {"Nelson": "nelson-sauvin", "Mt. Hood": "mount-hood", "Mt Hood": "mount-hood",
                         "HBC 586": "krush", "HBC 1019": "dolcita", "HBC 682": "hbc-682", "Tettnang": "tettnang",
                         "El Dorado": "el-dorado", "Idaho 7": "idaho-7", "Brewer's Gold": "brewers-gold",
-                        "Mittelfruh": "hallertau-mittelfrueh", "Hallertau": "hallertau-mittelfrueh"}.items():
+                        "Mittelfruh": "hallertau-mittelfrueh", "Hallertau": "hallertau-mittelfrueh",
+                        "Mandarina": "mandarina-bavaria", "Huell Melon": "huell-melon", "Hull Melon": "huell-melon"}.items():
         NAME_FORMS.setdefault(alias, slug)
 
 
@@ -360,7 +374,7 @@ def parse_elysian(path: Path) -> tuple | None:
     soup, name, text = page_text(path)
     m = re.search(r"\bHops ([A-Z].{1,160}?)(?= FIND\b| Yeast\b| ABV\b| IBU\b| Malts?\b|$)", text)
     title = soup.title.string.split("|")[0].strip() if soup.title and soup.title.string else name
-    return title, abv_of(text), m.group(1).strip() if m else None, "list"
+    return title, abv_of(text), m.group(1).strip() if m else None, "field"
 
 
 def parse_fair_isle(path: Path) -> tuple | None:
@@ -388,6 +402,13 @@ def parse_description(path: Path) -> tuple | None:
     return title, abv_of(text), desc[-1500:] or None, "prose"
 
 
+def parse_reubens(path: Path) -> tuple | None:
+    soup, name, text = page_text(path)
+    title = soup.title.string.split(" - Reubens")[0].strip() if soup.title and soup.title.string else name
+    m = re.search(r"\bHops ([A-Z].{1,200}?)(?= Subscribe\b| Yeast\b| Malts?\b| Adjuncts?\b|$)", text)
+    return title, abv_of(text), m.group(1).strip() if m else None, "list"
+
+
 def parse_fremont_taplist(path: Path) -> list[tuple]:
     """Fremont's taplist is one page; only its fresh-hop beers name hops
     ("Field to Ferment: Pale Ale Made With Centennial Fresh Hops")."""
@@ -412,7 +433,7 @@ PARSERS = {
     "aslan": (parse_aslan, "aslanbrewing.com", "beers_*.html"),
     "holy-mountain": (parse_description, "holymountainbrewing.com", "beer_*.html"),
     "cloudburst": (parse_description, "cloudburstbrew.com", "beer_*.html"),
-    "reubens": (parse_description, "reubensbrews.com", "beer_*.html"),
+    "reubens": (parse_reubens, "reubensbrews.com", "beer_*.html"),
     "fremont": (parse_fremont_taplist, "fremontbrewing.com", "taplist.html"),
 }
 
@@ -447,6 +468,10 @@ def build_beer(brewery: dict, path: Path, parsed: tuple, index: dict[str, str]) 
                 if item.get("fresh"):
                     item.setdefault("farm", m.group(1).strip())
     items = [i for i in items if i.get("name")]
+    # "Green Is My Favorite Color Wet Hop IPA" with one hop named: that hop is the fresh one.
+    if re.search(r"\b(?:fresh|wet)[- ]hop", name, re.I) and len({i.get("hop") for i in items}) == 1:
+        for i in items:
+            i["fresh"] = True
     if not items:
         return None
     slug = re.sub(r"^(beer|our_beer|product)_", "", path.stem)

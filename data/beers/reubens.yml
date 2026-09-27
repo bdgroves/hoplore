@@ -1,0 +1,2567 @@
+brewery:
+  slug: reubens
+  name: Reuben's Brews
+  city: Seattle
+  state: WA
+  url: https://reubensbrews.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-27'
+beers:
+  - slug: 2-x-2-x
+    name: 2 x 2 x 2
+    url: https://www.reubensbrews.com/beer/2-x-2-x-2/
+    abv: 14.0
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: 61-new-zealand-pilsner
+    name: 6:1
+    url: https://www.reubensbrews.com/beer/61-new-zealand-pilsner/
+    abv: 5.1
+    hops_as_written: Nelson Sauvin, Nectaron
+    hops:
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+  - slug: 7-10-split
+    name: 7/10 Split
+    url: https://www.reubensbrews.com/beer/7-10-split/
+    abv: 4.5
+    hops_as_written: Mt. Hood
+    hops:
+      - { hop: mount-hood, name: Mt Hood, as_written: Mt Hood }
+  - slug: aeir
+    name: Aeir
+    url: https://www.reubensbrews.com/beer/aeir/
+    abv: 8.3
+    hops_as_written: Aged Hops
+    hops:
+      - { hop: null, name: Aged, as_written: Aged Hops }
+  - slug: aerial-duel
+    name: Aerial Duel
+    url: https://www.reubensbrews.com/beer/aerial-duel/
+    abv: 5.8
+    hops_as_written: Simcoe, HBC 1019, Michigan Chinook, Citra
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
+      - { hop: chinook, name: Chinook, as_written: Michigan Chinook }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: alpenglow
+    name: Alpenglow
+    url: https://www.reubensbrews.com/beer/alpenglow/
+    abv: 7.0
+    hops_as_written: Mosaic®, Citra®, Sabro™
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+      - { hop: citra, name: Citra, as_written: Citra® }
+      - { hop: sabro, name: Sabro, as_written: Sabro™ }
+  - slug: alpenglow-fresh-hop-mosaic-edition
+    name: 'Alpenglow: Fresh Hop Mosaic Edition'
+    url: https://www.reubensbrews.com/beer/alpenglow-fresh-hop-mosaic-edition/
+    hops_as_written: Citra, Mosaic, Sabro
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+  - slug: alpenglow-galaxy-edition
+    name: 'Alpenglow: Galaxy Edition'
+    url: https://www.reubensbrews.com/beer/alpenglow-galaxy-edition/
+    abv: 7.0
+    hops_as_written: Galaxy, Mosaic
+    hops:
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: alpenglow-hbc-1019-edition
+    name: 'Alpenglow: HBC 1019 Edition'
+    url: https://www.reubensbrews.com/beer/alpenglow-hbc-1019-edition/
+    abv: 7.0
+    hops_as_written: HBC 1019 from Haas, Mosaic®, Citra®
+    hops:
+      - { hop: dolcita, name: HBC 1019, farm: Haas, as_written: HBC 1019 from Haas }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+      - { hop: citra, name: Citra, as_written: Citra® }
+  - slug: alpenglow-idaho-7-edition
+    name: 'Alpenglow: Idaho 7 Edition'
+    url: https://www.reubensbrews.com/beer/alpenglow-idaho-7-edition/
+    abv: 7.0
+    hops_as_written: Idaho 7®, Mosaic®, Citra®
+    hops:
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7® }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+      - { hop: citra, name: Citra, as_written: Citra® }
+  - slug: alpenglow-new-zealand-edition
+    name: 'Alpenglow: New Zealand Edition'
+    url: https://www.reubensbrews.com/beer/alpenglow-new-zealand-edition/
+    abv: 7.0
+    hops_as_written: Mosaic, Nelson, Galaxy, Vic Secret
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: vic-secret, name: Vic Secret, as_written: Vic Secret }
+  - slug: alpenglow-riwaka-edition
+    name: 'Alpenglow: Riwaka Edition'
+    url: https://www.reubensbrews.com/beer/alpenglow-riwaka-edition/
+    abv: 7.0
+    hops_as_written: Riwaka®, Mosaic®, Citra®
+    hops:
+      - { hop: riwaka, name: Riwaka, as_written: Riwaka® }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+      - { hop: citra, name: Citra, as_written: Citra® }
+  - slug: alpenglow-talus-edition
+    name: 'Alpenglow: Talus Edition'
+    url: https://www.reubensbrews.com/beer/alpenglow-talus-edition/
+    abv: 7.0
+    hops_as_written: Talus, Citra, Mosaic, Sabro
+    hops:
+      - { hop: talus, name: Talus, as_written: Talus }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+  - slug: alpha-comeback
+    name: Alpha Comeback
+    url: https://www.reubensbrews.com/beer/alpha-comeback/
+    abv: 6.9
+    hops_as_written: Chinook, Cascade, Centennial, Columbus, Citra
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: arctic-fox
+    name: Arctic Fox
+    url: https://www.reubensbrews.com/beer/arctic-fox/
+    abv: 6.5
+    hops_as_written: Cascade, Chinook, Citra
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: auspicious-sons
+    name: Auspicious Sons
+    url: https://www.reubensbrews.com/beer/auspicious-sons/
+    abv: 8.8
+    hops_as_written: Simcoe®, Citra®
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe® }
+      - { hop: citra, name: Citra, as_written: Citra® }
+  - slug: autumn-harvest
+    name: Autumn Harvest
+    url: https://www.reubensbrews.com/beer/autumn-harvest/
+    abv: 8.7
+    hops_as_written: Mt. Hood
+    hops:
+      - { hop: mount-hood, name: Mt Hood, as_written: Mt Hood }
+  - slug: ballardweizen
+    name: BallardWeizen
+    url: https://www.reubensbrews.com/beer/ballardweizen/
+    abv: 5.2
+    hops_as_written: Tettnanger, Nelson Sauvin
+    hops:
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: barn-raising
+    name: Barn Raising
+    url: https://www.reubensbrews.com/beer/barn-raising/
+    abv: 4.0
+    hops_as_written: Crystal, Cashmere
+    hops:
+      - { hop: crystal, name: Crystal, as_written: Crystal }
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+  - slug: barnacles
+    name: Barnacles
+    url: https://www.reubensbrews.com/beer/barnacles/
+    abv: 11.75
+    hops_as_written: Magnum, East Kent Golding
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+      - { hop: east-kent-golding, name: East Kent Golding, as_written: East Kent Golding }
+  - slug: barrel-aged-barnacles
+    name: Barrel-Aged Barnacles
+    url: https://www.reubensbrews.com/beer/barrel-aged-barnacles/
+    abv: 15.1
+    hops_as_written: Magnum, East Kent Golding
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+      - { hop: east-kent-golding, name: East Kent Golding, as_written: East Kent Golding }
+  - slug: barrel-aged-lions-share
+    name: Barrel-Aged Lion's Share
+    url: https://www.reubensbrews.com/beer/barrel-aged-lions-share/
+    abv: 14.0
+    hops_as_written: Amarillo, Chinook
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: batch-2291-fluffy-ipa
+    name: 'Batch #2291: Fluffy IPA'
+    url: https://www.reubensbrews.com/beer/batch-2291-fluffy-ipa/
+    abv: 6.5
+    hops_as_written: Simcoe, Mosaic, Citra, Chinook
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: batch-2299-southern-hemisphere-ipa
+    name: 'Batch #2299 Southern Hemisphere IPA'
+    url: https://www.reubensbrews.com/beer/batch-2299-southern-hemisphere-ipa/
+    abv: 6.7
+    hops_as_written: Vic Secret, Nelson Sauvin, Taiheke, Galaxy
+    hops:
+      - { hop: vic-secret, name: Vic Secret, as_written: Vic Secret }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: taiheke, name: Taiheke, as_written: Taiheke }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: batch-2314-fluff-coast-ipa
+    name: 'Batch #2314: Fluff Coast IPA'
+    url: https://www.reubensbrews.com/beer/batch-2314-fluff-coast-ipa/
+    abv: 7.0
+    hops_as_written: Simcoe, Strata, Mosaic, Talus
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: talus, name: Talus, as_written: Talus }
+  - slug: battersea
+    name: Battersea
+    url: https://www.reubensbrews.com/beer/battersea/
+    abv: 8.2
+    hops_as_written: Hallertau, Magnum
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Hallertau, as_written: Hallertau }
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+  - slug: bbis-amburana
+    name: BBIS Amburana
+    url: https://www.reubensbrews.com/beer/bbis-amburana/
+    abv: 14.0
+    hops_as_written: Magnum
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+  - slug: bbis-drowning-in-syrup
+    name: BBIS Drowning in Syrup
+    url: https://www.reubensbrews.com/beer/bbis-drowning-in-syrup/
+    abv: 14.0
+    hops_as_written: Magnum
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+  - slug: peanut-butter-cup-bbis
+    name: BBIS Peanut Butter Cup
+    url: https://www.reubensbrews.com/beer/peanut-butter-cup-bbis/
+    abv: 14.0
+    hops_as_written: Magnum
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+  - slug: bbis-vanilla-bean
+    name: BBIS Vanilla Bean
+    url: https://www.reubensbrews.com/beer/bbis-vanilla-bean/
+    abv: 14.0
+    hops_as_written: Magnum
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+  - slug: beach-crush
+    name: Beach Crush
+    url: https://www.reubensbrews.com/beer/beach-crush/
+    abv: 7.2
+    hops_as_written: Krush, Citra, Dolcita, Superdelic
+    hops:
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: dolcita, name: Dolcita, as_written: Dolcita }
+      - { hop: superdelic, name: Superdelic, as_written: Superdelic }
+  - slug: bear-mug
+    name: Bear Mug
+    url: https://www.reubensbrews.com/beer/bear-mug/
+    abv: 5.9
+    hops_as_written: Cascade
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: beer
+    name: Beer
+    url: https://www.reubensbrews.com/beer/beer/
+    abv: 4.2
+    hops_as_written: Loral Noble
+    hops:
+      - { hop: loral, name: Loral, as_written: Loral Noble }
+  - slug: beer-committee
+    name: Beer Committee
+    url: https://www.reubensbrews.com/beer/beer-committee/
+    abv: 6.0
+    hops_as_written: Amarillo, Citra, Mt. Hood
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mount-hood, name: Mt Hood, as_written: Mt Hood }
+  - slug: belgian-pale-ale
+    name: Belgian Pale Ale
+    url: https://www.reubensbrews.com/beer/belgian-pale-ale/
+    abv: 5.8
+    hops_as_written: Simcoe, Tettnanger, Sterling
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: betonbier-pils
+    name: Betonbier Pils
+    url: https://www.reubensbrews.com/beer/betonbier-pils/
+    abv: 5.3
+    hops_as_written: Aramis, Tettnanger
+    hops:
+      - { hop: aramis, name: Aramis, as_written: Aramis }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+  - slug: big-mountain-lager
+    name: Big Mountain Lager
+    url: https://www.reubensbrews.com/beer/big-mountain-lager/
+    abv: 4.9
+    hops_as_written: Magnum, Saaz
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: big-ol-gingerbread
+    name: Big Ol' Gingerbread
+    url: https://www.reubensbrews.com/beer/big-ol-gingerbread/
+    abv: 11.0
+    hops_as_written: Magnum
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+  - slug: big-whoop
+    name: Big Whoop
+    url: https://www.reubensbrews.com/beer/big-whoop/
+    abv: 4.2
+    hops_as_written: Citra, Simcoe, Amarillo
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: bine-barrel-loral
+    name: 'Bine & Barrel: Loral'
+    url: https://www.reubensbrews.com/beer/bine-barrel-loral/
+    hops_as_written: Loral™
+    hops:
+      - { hop: loral, name: Loral, as_written: Loral™ }
+  - slug: bloody-crikey
+    name: Bloody Crikey
+    url: https://www.reubensbrews.com/beer/bloody-crikey/
+    abv: 6.8
+    hops_as_written: Pale, Caramel, Munich, Wheat, Carapils
+    hops:
+      - { hop: null, name: Pale, as_written: Pale }
+  - slug: body-paint
+    name: Body Paint
+    url: https://www.reubensbrews.com/beer/body-paint/
+    abv: 7.0
+    hops_as_written: Citra, Mosaic, Nelson, Galaxy
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: bohemian-pilsner
+    name: Bohemian Pilsner
+    url: https://www.reubensbrews.com/beer/bohemian-pilsner/
+    abv: 4.5
+    hops_as_written: Saaz, Haltetau Mittelfruh, Tettnanger
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: hallertau-mittelfrueh, name: Haltetau Mittelfruh, as_written: Haltetau Mittelfruh }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+  - slug: brettania-boysenberry
+    name: 'Brettania: Boysenberry'
+    url: https://www.reubensbrews.com/beer/brettania-boysenberry/
+    abv: 6.8
+    hops_as_written: Styrian Goldings
+    hops:
+      - { hop: styrian-golding, name: Styrian Goldings, as_written: Styrian Goldings }
+  - slug: brettania-windsor
+    name: 'Brettania: Windsor'
+    url: https://www.reubensbrews.com/beer/brettania-windsor/
+    abv: 7.4
+    hops_as_written: Nelson Sauvin, Loral®
+    hops:
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: loral, name: Loral, as_written: Loral® }
+  - slug: brighten-up
+    name: Brighten Up
+    url: https://www.reubensbrews.com/beer/brighten-up/
+    abv: 6.0
+    hops_as_written: Mosaic, Amarillo, Nelson Sauvin, Simcoe
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: cascading-effect
+    name: Cascading Effect
+    url: https://www.reubensbrews.com/beer/cascading-effect/
+    abv: 7.8
+    hops_as_written: Comet, Citra, Strata, Audacia, Meridian
+    hops:
+      - { hop: comet, name: Comet, as_written: Comet }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: audacia, name: Audacia, as_written: Audacia }
+      - { hop: meridian, name: Meridian, as_written: Meridian }
+  - slug: citra-pilsner
+    name: Citra Pilsner
+    url: https://www.reubensbrews.com/beer/citra-pilsner/
+    abv: 5.4
+    hops_as_written: Czech Saaz, Magnum, Citra
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: citrus-twist-ipa
+    name: Citrus Twist IPA
+    url: https://www.reubensbrews.com/beer/citrus-twist-ipa/
+    abv: 6.5
+    hops_as_written: Simcoe, Zumo, Citra, Amarillo
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: null, name: Zumo, as_written: Zumo }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: cold-frame
+    name: Cold Frame
+    url: https://www.reubensbrews.com/beer/cold-frame/
+    abv: 5.7
+    hops_as_written: McKenzie, Nelson Sauvin
+    hops:
+      - { hop: null, name: McKenzie, as_written: McKenzie }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: crispy-shifty
+    name: Crispy Shifty
+    url: https://www.reubensbrews.com/beer/crispy-shifty/
+    abv: 5.0
+    hops_as_written: Simcoe, Loral, Hallertau Blanc
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: loral, name: Loral, as_written: Loral }
+      - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
+  - slug: czech-amber-lager
+    name: Czech Amber Lager
+    url: https://www.reubensbrews.com/beer/czech-amber-lager/
+    abv: 5.3
+    hops_as_written: Magnum, Saaz
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: czech-in-the-dark
+    name: Czech in the Dark
+    url: https://www.reubensbrews.com/beer/czech-in-the-dark/
+    abv: 5.0
+    hops_as_written: Sterling, Tettnanger
+    hops:
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+  - slug: dark-munich-lager
+    name: Dark Munich Lager
+    url: https://www.reubensbrews.com/beer/dark-munich-lager-2/
+    abv: 5.3
+    hops_as_written: Tettnang
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: dedication
+    name: Dedication
+    url: https://www.reubensbrews.com/beer/dedication/
+    abv: 7.5
+    hops_as_written: Saaz
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: double-crikey
+    name: Double Crikey
+    url: https://www.reubensbrews.com/beer/double-crikey/
+    abv: 8.5
+    hops_as_written: Citra, Amarillo, Simcoe, Centennial, Azacca
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+  - slug: double-puff
+    name: Double Puff
+    url: https://www.reubensbrews.com/beer/double-puff/
+    abv: 8.0
+    hops_as_written: Citra, Mosaic, HBC 1019, HBC 843
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
+      - { hop: null, name: HBC 843, as_written: HBC 843 }
+  - slug: downtown-debut
+    name: Downtown Debut
+    url: https://www.reubensbrews.com/beer/downtown-debut/
+    abv: 6.7
+    hops_as_written: Nugget, Citra, Strata, Amarillo
+    hops:
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: dream-team
+    name: Dream Team
+    url: https://www.reubensbrews.com/beer/dream-team/
+    abv: 7.2
+    hops_as_written: Cryo Simcoe®, Nelson Sauvin™, Riwaka™, Citra Incognito®
+    hops:
+      - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Cryo Simcoe® }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin™ }
+      - { hop: riwaka, name: Riwaka, as_written: Riwaka™ }
+      - { hop: citra, name: Citra, form: Incognito, as_written: Citra Incognito® }
+  - slug: dream-team-collab-26
+    name: Dream Team Collab '26
+    url: https://www.reubensbrews.com/beer/dream-team-collab-26/
+    abv: 7.2
+    hops_as_written: Citra, Citra Cryo, Strata, Krush
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Citra Cryo }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: krush, name: Krush, as_written: Krush }
+  - slug: dunkel-vision
+    name: Dunkel Vision
+    url: https://www.reubensbrews.com/beer/dunkel-vision/
+    abv: 6.4
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: ella-hazy
+    name: Ella Hazy
+    url: https://www.reubensbrews.com/beer/ella-hazy/
+    abv: 6.0
+    hops_as_written: Ella™
+    hops:
+      - { hop: ella, name: Ella, as_written: Ella™ }
+  - slug: emberweizen-smoked-hefeweizen
+    name: Emberweizen Smoked Hefeweizen
+    url: https://www.reubensbrews.com/beer/emberweizen-smoked-hefeweizen/
+    abv: 5.6
+    hops_as_written: Mandarina Baveria
+    hops:
+      - { hop: mandarina-bavaria, name: Mandarina Baveria, as_written: Mandarina Baveria }
+  - slug: experimental-2445
+    name: 'Experimental #2445'
+    url: https://www.reubensbrews.com/beer/experimental-2445/
+    abv: 13.5
+    hops_as_written: Simcoe, Chinook, Centennial, Citra
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: export-crikey-ipa
+    name: Export Crikey IPA
+    url: https://www.reubensbrews.com/beer/export-crikey-ipa/
+    abv: 5.8
+    hops_as_written: Citra®, Amarillo®, Simcoe®, Centennial, Mosaic®, Azacca®
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra® }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo® }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe® }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+      - { hop: azacca, name: Azacca, as_written: Azacca® }
+  - slug: extant-ipa
+    name: Extant IPA
+    url: https://www.reubensbrews.com/beer/extant-ipa/
+    abv: 8.0
+    hops_as_written: Simcoe®, Motueka, Azacca®
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe® }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+      - { hop: azacca, name: Azacca, as_written: Azacca® }
+  - slug: fantastic-summer
+    name: Fantastic Summer
+    url: https://www.reubensbrews.com/beer/fantastic-summer/
+    abv: 5.0
+    hops_as_written: Hallertau Blanc, Nectaron, Simcoe
+    hops:
+      - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: farm-team
+    name: Farm Team
+    url: https://www.reubensbrews.com/beer/farm-team-2/
+    abv: 5.2
+    hops_as_written: Strata, Citra, Cryo Amarillo
+    hops:
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: amarillo, name: Amarillo, form: Cryo, as_written: Cryo Amarillo }
+  - slug: farm-team-1-autumn-2021
+    name: 'Farm Team #1: Autumn 2021'
+    url: https://www.reubensbrews.com/beer/farm-team-1-autumn-2021/
+    abv: 6.1
+    hops_as_written: Yakima Valley Strata, grown by Roy Farms, Moxee, WA
+    hops:
+      - { hop: null, name: Yakima Valley Strata, as_written: Yakima Valley Strata }
+      - { hop: null, name: Moxee, as_written: Moxee }
+      - { hop: null, name: WA, as_written: WA }
+  - slug: farm-team-4-summer-2022
+    name: 'Farm Team #4: Summer 2022'
+    url: https://www.reubensbrews.com/beer/farm-team-4-summer-2022/
+    abv: 6.1
+    hops_as_written: HBC 1019
+    hops:
+      - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
+  - slug: farm-team-ipa
+    name: Farm Team IPA
+    url: https://www.reubensbrews.com/beer/farm-team-ipa/
+    abv: 6.0
+    hops_as_written: Citra, Simcoe
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: farm-team-lager
+    name: Farm Team Lager
+    url: https://www.reubensbrews.com/beer/farm-team-lager/
+    abv: 5.1
+    hops_as_written: Lorien, Saaz
+    hops:
+      - { hop: lorien, name: Lorien, as_written: Lorien }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: farm-team-west-coast-ipa
+    name: Farm Team Spring '26
+    url: https://www.reubensbrews.com/beer/farm-team-west-coast-ipa/
+    hops_as_written: Citra, Simcoe
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: farm-team-volume-1
+    name: 'Farm Team: Volume 1'
+    url: https://www.reubensbrews.com/beer/farm-team-volume-1/
+    abv: 5.3
+    hops_as_written: Citra, Cryo Idaho 7, Mosaic, Simcoe
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: idaho-7, name: Idaho 7, form: Cryo, as_written: Cryo Idaho 7 }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: farm-team-volume
+    name: 'Farm Team: Volume 2'
+    url: https://www.reubensbrews.com/beer/farm-team-volume-2/
+    abv: 5.2
+    hops_as_written: Mosaic, Citra, Strata
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: farm-team-volume-3
+    name: 'Farm Team: Volume 3'
+    url: https://www.reubensbrews.com/beer/farm-team-volume-3/
+    abv: 5.2
+    hops_as_written: Loza Farms Simcoe, Citra, and Mosaic
+    hops:
+      - { hop: simcoe, name: Simcoe, farm: Loza Farms, as_written: Loza Farms Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: fastball
+    name: Fastball IPA
+    url: https://www.reubensbrews.com/beer/fastball/
+    abv: 7.0
+    hops_as_written: Simcoe, Amarillo, Mosaic, Strata
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: ferry-line
+    name: Ferry Line
+    url: https://www.reubensbrews.com/beer/ferry-line/
+    abv: 5.9
+    hops_as_written: Simcoe®, El Dorado®, Mosaic®
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe® }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado® }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+  - slug: festbier
+    name: Festbier
+    url: https://www.reubensbrews.com/beer/festbier/
+    abv: 5.8
+    hops_as_written: Magnum, Saaz
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: festive-crikey
+    name: Festive Crikey
+    url: https://www.reubensbrews.com/beer/festive-crikey/
+    abv: 6.8
+    hops_as_written: Citra, Amarillo, Simcoe, Centennial, Mosaic, Azacca, ADHA-1631
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: null, name: ADHA-1631, as_written: ADHA-1631 }
+  - slug: fistful-of-beskar
+    name: Fistful of Beskar
+    url: https://www.reubensbrews.com/beer/fistful-of-beskar/
+    abv: 7.0
+    hops_as_written: Galaxy®, Comet®, Mosaic®, and Citra®
+    hops:
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy® }
+      - { hop: comet, name: Comet, as_written: Comet® }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+      - { hop: citra, name: Citra, as_written: Citra® }
+  - slug: flow-state-fresh-hop
+    name: 'Flow State: Fresh Hop'
+    url: https://www.reubensbrews.com/beer/flow-state-fresh-hop/
+    abv: 7.8
+    hops_as_written: Fresh Hop Comet, Comet, Strata, Centennial
+    hops:
+      - { hop: comet, name: Comet, fresh: true, as_written: Fresh Hop Comet }
+      - { hop: comet, name: Comet, as_written: Comet }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+  - slug: fluff-coast
+    name: Fluff Coast
+    url: https://www.reubensbrews.com/beer/fluff-coast/
+    abv: 7.0
+    hops_as_written: Simcoe, Strata, Mosaic, Talus
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: talus, name: Talus, as_written: Talus }
+  - slug: flurries-in-the-forecast
+    name: Flurries in the Forecast
+    url: https://www.reubensbrews.com/beer/flurries-in-the-forecast/
+    abv: 4.7
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: fresh-fest
+    name: Fresh Fest
+    url: https://www.reubensbrews.com/beer/fresh-fest/
+    abv: 5.8
+    hops_as_written: Saaz, Nugget, Fresh Tettnang
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+      - { hop: tettnang, name: Tettnang, fresh: true, as_written: Fresh Tettnang }
+  - slug: fresh-hop-first-pick-west-coast-pils
+    name: Fresh Hop First Pick West Coast Pils
+    url: https://www.reubensbrews.com/beer/fresh-hop-first-pick-west-coast-pils/
+    abv: 5.4
+    hops_as_written: Fresh Luminosia, Lorien
+    hops:
+      - { hop: luminosa, name: Luminosia, fresh: true, as_written: Fresh Luminosia }
+      - { hop: lorien, name: Lorien, as_written: Lorien }
+  - slug: fresh-hop-fizz
+    name: Fresh Hop Fizz
+    url: https://www.reubensbrews.com/beer/fresh-hop-fizz/
+    abv: 5.0
+    hops_as_written: ADHA 218
+    hops:
+      - { hop: null, name: ADHA 218, fresh: true, as_written: ADHA 218 }
+  - slug: fresh-hop-nordic-haze
+    name: Fresh Hop Nordic Haze
+    url: https://www.reubensbrews.com/beer/fresh-hop-nordic-haze/
+    abv: 6.4
+    hops_as_written: Fresh Hop Citra
+    hops:
+      - { hop: citra, name: Citra, fresh: true, as_written: Fresh Hop Citra }
+  - slug: fresh-hop-party-float
+    name: Fresh Hop Party Float
+    url: https://www.reubensbrews.com/beer/fresh-hop-party-float/
+    abv: 6.9
+    hops_as_written: Citra, Idaho 7, Mosaic, Fresh Strata
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: strata, name: Strata, fresh: true, as_written: Fresh Strata }
+  - slug: fresh-hop-puffs-of-classified
+    name: Fresh Hop Puffs of [Classified]
+    url: https://www.reubensbrews.com/beer/fresh-hop-puffs-of-classified/
+    abv: 7.6
+    hops_as_written: HBC 1019 from Haas
+    hops:
+      - { hop: dolcita, name: HBC 1019, fresh: true, farm: Haas, as_written: HBC 1019 from Haas }
+  - slug: fresh-hop-puffs-of-simcoe
+    name: Fresh Hop Puffs of Simcoe
+    url: https://www.reubensbrews.com/beer/fresh-hop-puffs-of-simcoe/
+    abv: 7.6
+    hops_as_written: Fresh Hop Simcoe
+    hops:
+      - { hop: simcoe, name: Simcoe, fresh: true, as_written: Fresh Hop Simcoe }
+  - slug: fresh-hop-reubens-gorgeous-ipa
+    name: Fresh Hop Reuben's Gorgeous IPA
+    url: https://www.reubensbrews.com/beer/fresh-hop-reubens-gorgeous-ipa/
+    abv: 7.0
+    hops_as_written: Nelson Sauvin, Galaxy, Fresh Citra
+    hops:
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: citra, name: Citra, fresh: true, as_written: Fresh Citra }
+  - slug: fresh-hop-roasted-rye
+    name: Fresh Hop Roasted Rye
+    url: https://www.reubensbrews.com/beer/fresh-hop-roasted-rye/
+    abv: 7.0
+    hops_as_written: Simcoe, Cascade, Amarillo
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: fresh-hop-tropical-funk
+    name: Fresh Hop Tropical Funk
+    url: https://www.reubensbrews.com/beer/fresh-hop-tropical-funk/
+    abv: 5.9
+    hops_as_written: Fresh Hop Amarillo
+    hops:
+      - { hop: amarillo, name: Amarillo, fresh: true, as_written: Fresh Hop Amarillo }
+  - slug: fresh-hop-yakima-express-ipa
+    name: Fresh Hop Yakima Express IPA
+    url: https://www.reubensbrews.com/beer/fresh-hop-yakima-express-ipa/
+    abv: 7.0
+    hops_as_written: Simcoe & Amarillo
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: fresh-blackberry-lime
+    name: Fresh! Blackberry Lime
+    url: https://www.reubensbrews.com/beer/fresh-blackberry-lime/
+    abv: 5.4
+    hops_as_written: Simcoe
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: fresh-cranberry-orange
+    name: Fresh! Cranberry Orange
+    url: https://www.reubensbrews.com/beer/fresh-cranberry-orange/
+    abv: 4.7
+    hops_as_written: Simcoe
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: fresh-golden-raspberry
+    name: Fresh! Golden Raspberry
+    url: https://www.reubensbrews.com/beer/fresh-golden-raspberry/
+    abv: 4.7
+    hops_as_written: Simcoe
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: fresh-passion-fruit-orange-guava
+    name: Fresh! Passion Fruit Orange Guava
+    url: https://www.reubensbrews.com/beer/fresh-passion-fruit-orange-guava/
+    abv: 4.7
+    hops_as_written: Simcoe
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: fresh-peach
+    name: Fresh! Peach
+    url: https://www.reubensbrews.com/beer/fresh-peach/
+    abv: 4.7
+    hops_as_written: Simcoe
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: fresh-pomegranate-blueberry
+    name: Fresh! Pomegranate Blueberry
+    url: https://www.reubensbrews.com/beer/fresh-pomegranate-blueberry/
+    abv: 4.8
+    hops_as_written: Simcoe
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: fresh-strawberry-rhubarb
+    name: Fresh! Strawberry Rhubarb
+    url: https://www.reubensbrews.com/beer/fresh-strawberry-rhubarb/
+    abv: 4.7
+    hops_as_written: Simcoe
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: fresh-watermelon-lime
+    name: Fresh! Watermelon Lime
+    url: https://www.reubensbrews.com/beer/fresh-watermelon-lime/
+    abv: 4.7
+    hops_as_written: Simcoe
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: fruitfizz-sabro
+    name: Fruitfizz® Sabro
+    url: https://www.reubensbrews.com/beer/fruitfizz-sabro/
+    abv: 5.0
+    hops_as_written: Cryo Sabro
+    hops:
+      - { hop: sabro, name: Sabro, form: Cryo, as_written: Cryo Sabro }
+  - slug: gimme-smore
+    name: Gimme S'more
+    url: https://www.reubensbrews.com/beer/gimme-smore/
+    abv: 5.5
+    hops_as_written: Magnum
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+  - slug: gobsmacked
+    name: Gobsmacked!
+    url: https://www.reubensbrews.com/beer/gobsmacked/
+    abv: 10.0
+    hops_as_written: Citra®, Magnum®, Mosaic®, Galaxy®
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra® }
+      - { hop: magnum, name: Magnum, as_written: Magnum® }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy® }
+  - slug: golden-generation-belgian-pale-ale
+    name: Golden Generation Belgian Pale Ale
+    url: https://www.reubensbrews.com/beer/golden-generation-belgian-pale-ale/
+    abv: 5.8
+    hops_as_written: Simcoe, Krush, Motueka
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+  - slug: gorilla-juice
+    name: Gorilla Juice
+    url: https://www.reubensbrews.com/beer/gorilla-juice/
+    abv: 6.5
+    hops_as_written: Chinook, Citra®, Lotus®
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: citra, name: Citra, as_written: Citra® }
+      - { hop: lotus, name: Lotus, as_written: Lotus® }
+  - slug: goserita
+    name: Goserita
+    url: https://www.reubensbrews.com/beer/goserita/
+    abv: 4.3
+    hops_as_written: Mt. Hood
+    hops:
+      - { hop: mount-hood, name: Mt Hood, as_written: Mt Hood }
+  - slug: grand-rose
+    name: Grand Rosé
+    url: https://www.reubensbrews.com/beer/grand-rose/
+    abv: 8.0
+    hops_as_written: Nelson Sauvin
+    hops:
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: greyhound-spritz
+    name: Greyhound Spritz
+    url: https://www.reubensbrews.com/beer/greyhound-spritz/
+    abv: 8.4
+    hops_as_written: Galaxy
+    hops:
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: hammerfall-double-ipa
+    name: Hammerfall
+    url: https://www.reubensbrews.com/beer/hammerfall-double-ipa/
+    abv: 8.0
+    hops_as_written: Simcoe, Cascade, Chinook, Citra
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: hang-clouds
+    name: Hang Clouds
+    url: https://www.reubensbrews.com/beer/hang-clouds/
+    abv: 10.0
+    hops_as_written: Nelson, Citra, Mosaic
+    hops:
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: haze-in-the-hood
+    name: Haze in the Hood
+    url: https://www.reubensbrews.com/beer/haze-in-the-hood/
+    abv: 8.0
+    hops_as_written: Galaxy, Amarillo
+    hops:
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: haze-squared
+    name: Haze Squared
+    url: https://www.reubensbrews.com/beer/haze-squared/
+    abv: 8.5
+    hops_as_written: Citra®, Strata, Comet, Simcoe
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra® }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: comet, name: Comet, as_written: Comet }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: hazealicious-squared
+    name: Haze²
+    url: https://www.reubensbrews.com/beer/hazealicious-squared/
+    abv: 8.0
+    hops_as_written: Simcoe, Citra, Dolcita, Strata, Dolcita Abstrax
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: dolcita, name: Dolcita, as_written: Dolcita }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: dolcita, name: Dolcita, form: Abstrax, as_written: Dolcita Abstrax }
+  - slug: heavy-slice
+    name: Heavy Slice
+    url: https://www.reubensbrews.com/beer/heavy-slice/
+    abv: 7.0
+    hops_as_written: Simcoe, Citra, Amarillo
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: high-fives
+    name: High Fives
+    url: https://www.reubensbrews.com/beer/high-fives/
+    abv: 5.9
+    hops_as_written: Simcoe, Chinook, HBC 522, Citra
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: null, name: HBC 522, as_written: HBC 522 }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: holiday-gose
+    name: Holiday Gose
+    url: https://www.reubensbrews.com/beer/holiday-gose/
+    abv: 4.3
+    hops_as_written: Mt. Hood
+    hops:
+      - { hop: mount-hood, name: Mt Hood, as_written: Mt Hood }
+  - slug: holiday-haze
+    name: Holiday Haze
+    url: https://www.reubensbrews.com/beer/holiday-haze/
+    abv: 6.0
+    hops_as_written: Azacca, Citra, Comet, Simcoe, Strata
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: comet, name: Comet, as_written: Comet }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: hop-idol
+    name: Hop Idol (2019)
+    url: https://www.reubensbrews.com/beer/hop-idol/
+    abv: 7.6
+    hops_as_written: Citra®, Sabro®, Azacca®, Mosaic®
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra® }
+      - { hop: sabro, name: Sabro, as_written: Sabro® }
+      - { hop: azacca, name: Azacca, as_written: Azacca® }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+  - slug: hop-idol-2020
+    name: Hop Idol (2020)
+    url: https://www.reubensbrews.com/beer/hop-idol-2020/
+    abv: 7.7
+    hops_as_written: Riwaka™, Simcoe®, Citra®
+    hops:
+      - { hop: riwaka, name: Riwaka, as_written: Riwaka™ }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe® }
+      - { hop: citra, name: Citra, as_written: Citra® }
+  - slug: hop-tropic-pale-ale-zeeks
+    name: Hop Tropic
+    url: https://www.reubensbrews.com/beer/hop-tropic-pale-ale-zeeks/
+    abv: 5.7
+    hops_as_written: Citra, Strata, Sabro
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+  - slug: hoppy-bunches-of-oats
+    name: Hoppy Bunches of Oats
+    url: https://www.reubensbrews.com/beer/hoppy-bunches-of-oats/
+    abv: 5.6
+    hops_as_written: Citra Noble, HBC 1134, Superdelic, Krush, Strata
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra Noble }
+      - { hop: null, name: HBC 1134, as_written: HBC 1134 }
+      - { hop: superdelic, name: Superdelic, as_written: Superdelic }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: hopshine
+    name: Hopshine
+    url: https://www.reubensbrews.com/beer/hopshine/
+    abv: 5.8
+    hops_as_written: Luminosa, Krush, Citra
+    hops:
+      - { hop: luminosa, name: Luminosa, as_written: Luminosa }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: hopsteady-ipa
+    name: Hopsteady IPA
+    url: https://www.reubensbrews.com/beer/hopsteady-ipa/
+    abv: 6.9
+    hops_as_written: Chinook, Cascade, Centennial, Columbus, Citra
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: hugs-handshakes
+    name: Hugs & Handshakes
+    url: https://www.reubensbrews.com/beer/hugs-handshakes/
+    abv: 4.2
+    hops_as_written: McKenzie, Tettnanger
+    hops:
+      - { hop: null, name: McKenzie, as_written: McKenzie }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+  - slug: hyperdrive
+    name: Hyperdrive
+    url: https://www.reubensbrews.com/beer/hyperdrive-2/
+    abv: 8.0
+    hops_as_written: Galaxy, Comet, Mosaic, HBC 1019
+    hops:
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: comet, name: Comet, as_written: Comet }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
+  - slug: imperial-gorilla-juice
+    name: Imperial Gorilla Juice
+    url: https://www.reubensbrews.com/beer/imperial-gorilla-juice/
+    abv: 8.0
+    hops_as_written: Chinook, Citra®, Lotus®
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: citra, name: Citra, as_written: Citra® }
+      - { hop: lotus, name: Lotus, as_written: Lotus® }
+  - slug: imperial-reuben-claus
+    name: Imperial Reuben Claus
+    url: https://www.reubensbrews.com/beer/imperial-reuben-claus/
+    abv: 9.0
+    hops_as_written: Cascade
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: inaugural-drop
+    name: Inaugural Drop
+    url: https://www.reubensbrews.com/beer/inaugural-drop/
+    abv: 7.4
+    hops_as_written: Amarillo, El Dorado, Simcoe
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: ingrained
+    name: Ingrained
+    url: https://www.reubensbrews.com/beer/ingrained/
+    abv: 5.5
+    hops_as_written: Mosaic®, Nelson Sauvin®
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin® }
+  - slug: ink
+    name: Ink
+    url: https://www.reubensbrews.com/beer/ink-2/
+    abv: 8.1
+    hops_as_written: Columbus, Simcoe, Amarillo
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: instant-vintage
+    name: Instant Vintage
+    url: https://www.reubensbrews.com/beer/instant-vintage/
+    abv: 12.7
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: interbay-ipa
+    name: Interbay IPA
+    url: https://www.reubensbrews.com/beer/interbay-ipa/
+    abv: 5.8
+    hops_as_written: Citra, Cashmere, Michigan Chinook, Cascade
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+      - { hop: chinook, name: Chinook, as_written: Michigan Chinook }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: irish-red-ale
+    name: Irish Red Ale
+    url: https://www.reubensbrews.com/beer/irish-red-ale/
+    abv: 5.1
+    hops_as_written: Sincoe, Nugget, Cascade.
+    hops:
+      - { hop: simcoe, name: Sincoe, as_written: Sincoe }
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: its-berry-complicated
+    name: It's Berry Complicated
+    url: https://www.reubensbrews.com/beer/its-berry-complicated/
+    abv: 5.6
+    hops_as_written: Nugget
+    hops:
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+  - slug: its-coming-home-machine-house-collaboration
+    name: It's Coming Home (Machine House Collaboration)
+    url: https://www.reubensbrews.com/beer/its-coming-home-machine-house-collaboration/
+    abv: 4.0
+    hops_as_written: EKG, Godiva
+    hops:
+      - { hop: east-kent-golding, name: EKG, as_written: EKG }
+      - { hop: godiva, name: Godiva, as_written: Godiva }
+  - slug: juice-party-ipa
+    name: Juice Party IPA
+    url: https://www.reubensbrews.com/beer/juice-party-ipa/
+    abv: 6.7
+    hops_as_written: Nugget, Citra, Strata, Amarillo
+    hops:
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: julebokk-winter-lager
+    name: Julebokk Winter Lager
+    url: https://www.reubensbrews.com/beer/julebokk-winter-lager/
+    abv: 7.0
+    hops_as_written: Amarillo
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: kaleidoscope
+    name: Kaleidoscope IPA
+    url: https://www.reubensbrews.com/beer/kaleidoscope/
+    abv: 6.0
+    hops_as_written: Mosaic
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: keller-connection
+    name: Keller Connection
+    url: https://www.reubensbrews.com/beer/keller-connection/
+    abv: 4.6
+    hops_as_written: Spalter Select, Saaz, Mandarina Bavaria, Huell Melon
+    hops:
+      - { hop: spalter-select, name: Spalter Select, as_written: Spalter Select }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina Bavaria }
+      - { hop: huell-melon, name: Huell Melon, as_written: Huell Melon }
+  - slug: key-lime-gose
+    name: Key Lime Gose
+    url: https://www.reubensbrews.com/beer/key-lime-gose/
+    abv: 4.3
+    hops_as_written: Mt. Hood
+    hops:
+      - { hop: mount-hood, name: Mt Hood, as_written: Mt Hood }
+  - slug: kolsch
+    name: Kolsch
+    url: https://www.reubensbrews.com/beer/kolsch/
+    abv: 5.0
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: kokua
+    name: Kōkua
+    url: https://www.reubensbrews.com/beer/kokua/
+    abv: 4.2
+    hops_as_written: Mosaic, Waimea
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: waimea, name: Waimea, as_written: Waimea }
+  - slug: lemon-lime-pilsner
+    name: Lemon-Lime Pilsner
+    url: https://www.reubensbrews.com/beer/lemon-lime-pilsner/
+    abv: 5.4
+    hops_as_written: Czech Saaz, Magnum
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+  - slug: life-on-mars-red-ipa
+    name: Life On Mars
+    url: https://www.reubensbrews.com/beer/life-on-mars-red-ipa/
+    abv: 6.5
+    hops_as_written: Simcoe, Amarillo, Mosaic
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: limoncello
+    name: Limoncello
+    url: https://www.reubensbrews.com/beer/limoncello/
+    abv: 6.0
+    hops_as_written: Lemondrop™
+    hops:
+      - { hop: lemondrop, name: Lemondrop, as_written: Lemondrop™ }
+  - slug: little-fox
+    name: Little Fox
+    url: https://www.reubensbrews.com/beer/little-fox/
+    abv: 6.5
+    hops_as_written: Cascade, Chinook, Citra
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: live-laugh-lavender
+    name: Live, Laugh, Lavender
+    url: https://www.reubensbrews.com/beer/live-laugh-lavender/
+    abv: 5.3
+    hops_as_written: Tettnanger
+    hops:
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+  - slug: london-calling
+    name: London Calling
+    url: https://www.reubensbrews.com/beer/london-calling/
+    abv: 4.7
+    hops_as_written: East Kent Goldings, Jester
+    hops:
+      - { hop: east-kent-golding, name: East Kent Goldings, as_written: East Kent Goldings }
+      - { hop: jester, name: Jester, as_written: Jester }
+  - slug: anniversary-ipa
+    name: Long Days, Short Years - 8th Anniversary IPA
+    url: https://www.reubensbrews.com/beer/anniversary-ipa/
+    abv: 8.6
+    hops_as_written: Sabro®, Michigan Chinook, and Citra®
+    hops:
+      - { hop: sabro, name: Sabro, as_written: Sabro® }
+      - { hop: chinook, name: Chinook, as_written: Michigan Chinook }
+      - { hop: citra, name: Citra, as_written: Citra® }
+  - slug: loot-goblin-halloween-candy-beer
+    name: Loot Goblin
+    url: https://www.reubensbrews.com/beer/loot-goblin-halloween-candy-beer/
+    abv: 6.66
+    hops_as_written: Cascade
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: loral-brut
+    name: Loral Brut
+    url: https://www.reubensbrews.com/beer/loral-brut/
+    abv: 8.0
+    hops_as_written: Loral, Citra®
+    hops:
+      - { hop: loral, name: Loral, as_written: Loral }
+      - { hop: citra, name: Citra, as_written: Citra® }
+  - slug: lucky-fish
+    name: Lucky Fish
+    url: https://www.reubensbrews.com/beer/lucky-fish/
+    abv: 4.3
+    hops_as_written: Saphir
+    hops:
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+  - slug: making-waves
+    name: Making Waves
+    url: https://www.reubensbrews.com/beer/making-waves/
+    abv: 5.6
+    hops_as_written: Simcoe, Chinook, HBC 1019, Citra
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: max-capacity-ipa
+    name: Max Capacity IPA
+    url: https://www.reubensbrews.com/beer/max-capacity-ipa/
+    abv: 8.0
+    hops_as_written: Mosaic, Nelson Sauvin
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: 10th-anniversary-series-metamodern-pnw-amber-with-georgetown-brewing
+    name: Metamodern
+    url: https://www.reubensbrews.com/beer/10th-anniversary-series-metamodern-pnw-amber-with-georgetown-brewing/
+    abv: 5.5
+    hops_as_written: Galaxy, Nelson, Citra
+    hops:
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: mighty-fine-bridgekeepers
+    name: Mighty Fine Bridgekeepers
+    url: https://www.reubensbrews.com/beer/mighty-fine-bridgekeepers/
+    abv: 4.9
+    hops_as_written: Simcoe, Lorien, Citra
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: lorien, name: Lorien, as_written: Lorien }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: mighty-mini
+    name: Mighty Mini
+    url: https://www.reubensbrews.com/beer/mighty-mini/
+    abv: 3.6
+    hops_as_written: Hallertau Mittelfruh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Hallertau Mittelfruh }
+  - slug: mind-the-gap
+    name: Mind the Gap!
+    url: https://www.reubensbrews.com/beer/mind-the-gap/
+    abv: 5.3
+    hops_as_written: Mosaic®, Citra®, Simcoe®
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+      - { hop: citra, name: Citra, as_written: Citra® }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe® }
+  - slug: mind-trick
+    name: Mind Trick
+    url: https://www.reubensbrews.com/beer/mind-trick/
+    abv: 8.0
+    hops_as_written: Citra, Mosaic, HBC 1019, HBC 843
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
+      - { hop: null, name: HBC 843, as_written: HBC 843 }
+  - slug: misguided-youth
+    name: Misguided Youth
+    url: https://www.reubensbrews.com/beer/misguided-youth/
+    abv: 7.2
+    hops_as_written: Southern Passion
+    hops:
+      - { hop: southern-passion, name: Southern Passion, as_written: Southern Passion }
+  - slug: mister-hazee-blackberry-and-vanilla
+    name: 'Mister Hazee: Blackberry and Vanilla'
+    url: https://www.reubensbrews.com/beer/mister-hazee-blackberry-and-vanilla/
+    abv: 6.0
+    hops_as_written: Mosaic, Citra
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: modern-hops-karl-strauss-collaboration
+    name: Modern Hops (Karl Strauss Collaboration)
+    url: https://www.reubensbrews.com/beer/modern-hops-karl-strauss-collaboration/
+    abv: 6.3
+    hops_as_written: Simcoe, Mosaic, Citra, Nectaron
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+  - slug: moreish-ipa
+    name: Moreish IPA
+    url: https://www.reubensbrews.com/beer/moreish-ipa/
+    abv: 6.7
+    hops_as_written: Simcoe®, Amarillo®, Mosaic®
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe® }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo® }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+  - slug: mr-phantastic
+    name: Mr. Phantastic
+    url: https://www.reubensbrews.com/beer/mr-phantastic/
+    abv: 6.3
+    hops_as_written: Phantasm, Cascade, Mosaic, 1019, Simcoe
+    hops:
+      - { hop: null, name: Phantasm, as_written: Phantasm }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: null, name: '1019', as_written: '1019' }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: marzen
+    name: Märzen
+    url: https://www.reubensbrews.com/beer/marzen/
+    abv: 5.5
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: neon-bot
+    name: Neon Bot
+    url: https://www.reubensbrews.com/beer/neon-bot/
+    abv: 4.0
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: nifty-fifties
+    name: Nifty Fifties
+    url: https://www.reubensbrews.com/beer/nifty-fifties/
+    abv: 5.2
+    hops_as_written: Tettnanger, Nelson Sauvin, Peach Abstrax
+    hops:
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: null, name: Peach, form: Abstrax, as_written: Peach Abstrax }
+  - slug: no-anchor
+    name: No Anchor
+    url: https://www.reubensbrews.com/beer/no-anchor/
+    abv: 4.4
+    hops_as_written: Crystal
+    hops:
+      - { hop: crystal, name: Crystal, as_written: Crystal }
+  - slug: no-two-ways-about-it
+    name: No Two Ways About It
+    url: https://www.reubensbrews.com/beer/no-two-ways-about-it/
+    abv: 12.0
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: nordic-haze
+    name: Nordic Haze
+    url: https://www.reubensbrews.com/beer/nordic-haze/
+    abv: 6.4
+    hops_as_written: Michigan Chinook, Citra®, Comet
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Michigan Chinook }
+      - { hop: citra, name: Citra, as_written: Citra® }
+      - { hop: comet, name: Comet, as_written: Comet }
+  - slug: northsun
+    name: Northsun
+    url: https://www.reubensbrews.com/beer/northsun/
+    abv: 5.3
+    hops_as_written: Magnum, Tettnanger
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+  - slug: oh-hey-rose
+    name: Oh Hey, Rosé
+    url: https://www.reubensbrews.com/beer/oh-hey-rose/
+    abv: 6.0
+    hops_as_written: Nelson Sauvin, Simcoe
+    hops:
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: old-world-gold
+    name: Old World Gold
+    url: https://www.reubensbrews.com/beer/old-world-gold/
+    abv: 6.8
+    hops_as_written: Nugget, Styrian Wolf
+    hops:
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+      - { hop: styrian-wolf, name: Styrian Wolf, as_written: Styrian Wolf }
+  - slug: ombili
+    name: Ombili (Métier Collab)
+    url: https://www.reubensbrews.com/beer/ombili/
+    abv: 6.7
+    hops_as_written: Citra, Sabro, Azacca, Amarillo, Simcoe
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: on-the-go-ipa
+    name: On the Go IPA
+    url: https://www.reubensbrews.com/beer/on-the-go-ipa/
+    abv: 5.3
+    hops_as_written: Mosaic®, Citra®, Simcoe®
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+      - { hop: citra, name: Citra, as_written: Citra® }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe® }
+  - slug: overnighter
+    name: Overnighter
+    url: https://www.reubensbrews.com/beer/overnighter/
+    abv: 6.0
+    hops_as_written: MI Chinook, Citra Noble
+    hops:
+      - { hop: chinook, name: Chinook, as_written: MI Chinook }
+      - { hop: citra, name: Citra, as_written: Citra Noble }
+  - slug: pacific-dry
+    name: Pacific Dry
+    url: https://www.reubensbrews.com/beer/pacific-dry/
+    abv: 5.6
+    hops_as_written: Simcoe, Chinook, HBC 1019, Citra
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: pacific-pils
+    name: Pacific Pils
+    url: https://www.reubensbrews.com/beer/pacific-pils/
+    abv: 4.8
+    hops_as_written: Loral®, Simcoe®, Cascade
+    hops:
+      - { hop: loral, name: Loral, as_written: Loral® }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe® }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: party-float
+    name: Party Float
+    url: https://www.reubensbrews.com/beer/party-float/
+    abv: 6.9
+    hops_as_written: Citra, Idaho 7, Mosaic, Strata
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: party-on-fresh-hop-na-ipa
+    name: 'Party On: Fresh Hop NA IPA'
+    url: https://www.reubensbrews.com/beer/party-on-fresh-hop-na-ipa/
+    hops_as_written: Simcoe & Mosaic, Fresh Hop Amarillo
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: amarillo, name: Amarillo, fresh: true, as_written: Fresh Hop Amarillo }
+  - slug: party-on-non-alcoholic-dark
+    name: 'Party On: NA Dark'
+    url: https://www.reubensbrews.com/beer/party-on-non-alcoholic-dark/
+    hops_as_written: Nugget
+    hops:
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+  - slug: party-on-non-alcoholic-juicy-hazy-ipa
+    name: 'Party On: NA Hazy IPA'
+    url: https://www.reubensbrews.com/beer/party-on-non-alcoholic-juicy-hazy-ipa/
+    hops_as_written: Simcoe, Citra, Strata, HBC 1019
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
+  - slug: party-on-non-alcholic-hoppy-red
+    name: 'Party On: NA Hoppy Red'
+    url: https://www.reubensbrews.com/beer/party-on-non-alcholic-hoppy-red/
+    hops_as_written: Nugget, Amarillo, Mosaic
+    hops:
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: patio-party
+    name: Patio Party
+    url: https://www.reubensbrews.com/beer/patio-party-2/
+    abv: 4.5
+    hops_as_written: Simcoe, Ella, Nelson, Galaxy
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: ella, name: Ella, as_written: Ella }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: permafrosty-ipa
+    name: Permafrosty IPA
+    url: https://www.reubensbrews.com/beer/permafrosty-ipa/
+    abv: 7.8
+    hops_as_written: Centennial, Columbus, Fresh Frozen Cascade, Fresh Frozen Simcoe
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: cascade, name: Cascade, form: frozen, fresh: true, as_written: Fresh Frozen Cascade }
+      - { hop: simcoe, name: Simcoe, form: frozen, fresh: true, as_written: Fresh Frozen Simcoe }
+  - slug: personal-space
+    name: Personal Space
+    url: https://www.reubensbrews.com/beer/personal-space/
+    abv: 6.6
+    hops_as_written: Cascade
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: petite
+    name: Petite - Hazy IPA
+    url: https://www.reubensbrews.com/beer/petite/
+    abv: 3.5
+    hops_as_written: Mosaic®, Simcoe®, Loral®
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe® }
+      - { hop: loral, name: Loral, as_written: Loral® }
+  - slug: petite-pre-prohibition-lager
+    name: Petite - Pre-Prohibition Lager
+    url: https://www.reubensbrews.com/beer/petite-pre-prohibition-lager/
+    abv: 3.5
+    hops_as_written: Hallertauer, Saaz
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Hallertauer, as_written: Hallertauer }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: pillars-of-gold
+    name: Pillars of Gold
+    url: https://www.reubensbrews.com/beer/pillars-of-gold/
+    abv: 6.9
+    hops_as_written: Styrian Goldings
+    hops:
+      - { hop: styrian-golding, name: Styrian Goldings, as_written: Styrian Goldings }
+  - slug: pineapple-express-crikey
+    name: Pineapple Express Crikey
+    url: https://www.reubensbrews.com/beer/pineapple-express-crikey/
+    abv: 6.8
+    hops_as_written: Citra, Amarillo, Simcoe, Centennial, Azacca
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+  - slug: hazealicious-p-o-g
+    name: POG Hazealicious
+    url: https://www.reubensbrews.com/beer/hazealicious-p-o-g/
+    abv: 6.0
+    hops_as_written: Citra®, Strata, Comet, Mosaic®, Azacca®
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra® }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: comet, name: Comet, as_written: Comet }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+      - { hop: azacca, name: Azacca, as_written: Azacca® }
+  - slug: proof-of-haze
+    name: Proof of Haze
+    url: https://www.reubensbrews.com/beer/proof-of-haze/
+    abv: 5.6
+    hops_as_written: Simcoe, Citra, Krush, Strata
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: pto
+    name: Pto
+    url: https://www.reubensbrews.com/beer/pto/
+    abv: 4.0
+    hops_as_written: Saaz, Superdelic, HBC 630
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: superdelic, name: Superdelic, as_written: Superdelic }
+      - { hop: null, name: HBC 630, as_written: HBC 630 }
+  - slug: puffs-with-hbc-630-hops
+    name: Puffs (with HBC 630 hops)
+    url: https://www.reubensbrews.com/beer/puffs-with-hbc-630-hops/
+    abv: 7.0
+    hops_as_written: Azacca, Mosaic, HBC 630
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: null, name: HBC 630, as_written: HBC 630 }
+  - slug: puffs-of-classified
+    name: Puffs of [Classified]
+    url: https://www.reubensbrews.com/beer/puffs-of-classified/
+    abv: 7.6
+    hops_as_written: We could tell you, but then we'd have to kill you
+    hops:
+      - { hop: null, name: We could tell you, as_written: We could tell you }
+      - { hop: null, name: but then we'd have to kill you, as_written: but then we'd have to kill you }
+  - slug: puffs-of-eldo
+    name: Puffs of Eldo
+    url: https://www.reubensbrews.com/beer/puffs-of-eldo/
+    abv: 7.6
+    hops_as_written: El Dorado®
+    hops:
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado® }
+  - slug: puffs-of-fluff
+    name: Puffs of Fluff
+    url: https://www.reubensbrews.com/beer/puffs-of-fluff/
+    abv: 7.5
+    hops_as_written: Luminosa, Azacca, Mosaic, Citra
+    hops:
+      - { hop: luminosa, name: Luminosa, as_written: Luminosa }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: puffs-of-galaxy
+    name: Puffs of Galaxy
+    url: https://www.reubensbrews.com/beer/puffs-of-galaxy/
+    abv: 7.6
+    hops_as_written: Azacca, Citra, Mosaic, Galaxy®
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy® }
+  - slug: puffs-of-nectaron
+    name: Puffs of Nectaron
+    url: https://www.reubensbrews.com/beer/puffs-of-nectaron/
+    abv: 7.6
+    hops_as_written: Azacca, Citra, Mosaic, Nectarine
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: null, name: Nectarine, as_written: Nectarine }
+  - slug: puffs-of-wonder
+    name: Puffs of Wonder
+    url: https://www.reubensbrews.com/beer/puffs-of-wonder/
+    abv: 7.0
+    hops_as_written: Idaho 7, Citra, Mosaic
+    hops:
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: puffy-ipa
+    name: Puffy IPA
+    url: https://www.reubensbrews.com/beer/puffy-ipa/
+    abv: 6.5
+    hops_as_written: Citra, Simcoe, Mosaic, Chinook
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: pumpkin-stout-latte
+    name: Pumpkin Stout Latte
+    url: https://www.reubensbrews.com/beer/pumpkin-stout-latte/
+    abv: 6.66
+    hops_as_written: Cascade
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: quad-crush
+    name: Quad Crush
+    url: https://www.reubensbrews.com/beer/quad-crush/
+    abv: 12.0
+    hops_as_written: Simcoe, Citra, Citra Cryo
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Citra Cryo }
+  - slug: rain-city-roast
+    name: Rain City Roast
+    url: https://www.reubensbrews.com/beer/rain-city-roast/
+    abv: 5.0
+    hops_as_written: Mt. Hood
+    hops:
+      - { hop: mount-hood, name: Mt Hood, as_written: Mt Hood }
+  - slug: razzmatazz
+    name: Razzmatazz
+    url: https://www.reubensbrews.com/beer/razzmatazz/
+    abv: 3.2
+    hops_as_written: Mt. Hood
+    hops:
+      - { hop: mount-hood, name: Mt Hood, as_written: Mt Hood }
+  - slug: recreational-ipa
+    name: Recreational IPA
+    url: https://www.reubensbrews.com/beer/recreational-ipa/
+    abv: 6.3
+    hops_as_written: Simcoe, Citra, Columbus
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: reuben-claus
+    name: Reuben Claus
+    url: https://www.reubensbrews.com/beer/reuben-claus/
+    abv: 5.9
+    hops_as_written: Caramel, ESB, Carapils, Pale Chocolate, Black, Munich, Marris Otter
+    hops:
+      - { hop: null, name: Pale Chocolate, as_written: Pale Chocolate }
+  - slug: reubens-azacca-crush
+    name: Reuben's Azacca Crush
+    url: https://www.reubensbrews.com/beer/reubens-azacca-crush/
+    abv: 6.0
+    hops_as_written: Azacca®
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca® }
+  - slug: reubens-brightside
+    name: Reuben's Brightside
+    url: https://www.reubensbrews.com/beer/reubens-brightside/
+    abv: 6.0
+    hops_as_written: Mosaic, Amarillo, Nelson Sauvin, Simcoe
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: reubens-chinook-crush
+    name: Reuben's Chinook Crush
+    url: https://www.reubensbrews.com/beer/reubens-chinook-crush/
+    abv: 6.0
+    hops_as_written: Michigan State Chinook
+    hops:
+      - { hop: null, name: Michigan State Chinook, as_written: Michigan State Chinook }
+  - slug: reubens-citra-crush
+    name: Reuben's Citra Crush
+    url: https://www.reubensbrews.com/beer/reubens-citra-crush/
+    abv: 7.0
+    hops_as_written: Citra, Simcoe
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: reubens-crush-cancer
+    name: Reuben's Crush Cancer
+    url: https://www.reubensbrews.com/beer/reubens-crush-cancer/
+    abv: 7.0
+    hops_as_written: Citra®, Mosaic®, Azacca®
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra® }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+      - { hop: azacca, name: Azacca, as_written: Azacca® }
+  - slug: reubens-crush-hunger
+    name: Reuben's Crush Hunger
+    url: https://www.reubensbrews.com/beer/reubens-crush-hunger/
+    abv: 7.0
+    hops_as_written: Citra, Chinook, Sabro
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+  - slug: crush-the-groove-5-rights-collab
+    name: Reuben's Crush the Groove
+    url: https://www.reubensbrews.com/beer/crush-the-groove-5-rights-collab/
+    abv: 7.0
+    hops_as_written: Citra, El Dorado, HBC 1019, Idaho 7
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+  - slug: reubens-crush-the-slopes
+    name: Reuben's Crush the Slopes
+    url: https://www.reubensbrews.com/beer/reubens-crush-the-slopes/
+    abv: 7.0
+    hops_as_written: Mosaic, Amarillo, Comet, and Sabro
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: comet, name: Comet, as_written: Comet }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+  - slug: reubens-crush-the-vote
+    name: Reuben's Crush the Vote
+    url: https://www.reubensbrews.com/beer/reubens-crush-the-vote/
+    abv: 7.0
+    hops_as_written: Citra, Galaxy, Mosiac, Vic Secret
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: mosaic, name: Mosiac, as_written: Mosiac }
+      - { hop: vic-secret, name: Vic Secret, as_written: Vic Secret }
+  - slug: reubens-fresh-hop-triple-crush
+    name: Reuben's Fresh Hop Triple Crush
+    url: https://www.reubensbrews.com/beer/reubens-fresh-hop-triple-crush/
+    abv: 10.0
+    hops_as_written: Fresh Hop Citra
+    hops:
+      - { hop: citra, name: Citra, fresh: true, as_written: Fresh Hop Citra }
+  - slug: reubens-galaxy-crush
+    name: Reuben's Galaxy Crush
+    url: https://www.reubensbrews.com/beer/reubens-galaxy-crush/
+    abv: 7.0
+    hops_as_written: Simcoe, Citra, Galaxy
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: reubens-gorgeous-ipa
+    name: Reuben's Gorgeous IPA
+    url: https://www.reubensbrews.com/beer/reubens-gorgeous-ipa/
+    abv: 7.0
+    hops_as_written: Galaxy, Nelson Sauvin
+    hops:
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: reubens-grunge-crush
+    name: Reuben's Grunge Crush
+    url: https://www.reubensbrews.com/beer/reubens-grunge-crush/
+    abv: 6.0
+    hops_as_written: Grüngeist™
+    hops:
+      - { hop: null, name: Grüngeist, as_written: Grüngeist™ }
+  - slug: reubens-krush-crush
+    name: Reuben's Krush Crush™
+    url: https://www.reubensbrews.com/beer/reubens-krush-crush/
+    abv: 7.0
+    hops_as_written: Simcoe, Citra, Krush
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: Krush, as_written: Krush }
+  - slug: reubens-mosaic-crush
+    name: Reuben's Mosaic Crush
+    url: https://www.reubensbrews.com/beer/reubens-mosaic-crush/
+    abv: 7.0
+    hops_as_written: Simcoe, Citra, Mosaic®
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+  - slug: reubens-nonstop-crush
+    name: Reuben's Nonstop Crush
+    url: https://www.reubensbrews.com/beer/reubens-nonstop-crush/
+    abv: 7.0
+    hops_as_written: Galaxy, Nelson Sauvin, Vic Secret
+    hops:
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: vic-secret, name: Vic Secret, as_written: Vic Secret }
+  - slug: reubens-oregon-crush
+    name: Reuben's Oregon Crush
+    url: https://www.reubensbrews.com/beer/reubens-oregon-crush/
+    abv: 6.0
+    hops_as_written: Strata®, Citra®
+    hops:
+      - { hop: strata, name: Strata, as_written: Strata® }
+      - { hop: citra, name: Citra, as_written: Citra® }
+  - slug: reubens-pnw-crush
+    name: Reuben's PNW Crush
+    url: https://www.reubensbrews.com/beer/reubens-pnw-crush/
+    abv: 7.0
+    hops_as_written: Azacca, Strata, Idaho 7, and Mosaic
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: reubens-refresh-non-alcoholic-ipa
+    name: "Reuben's Refresh: Non-Alcoholic IPA"
+    url: https://www.reubensbrews.com/beer/reubens-refresh-non-alcoholic-ipa/
+    hops_as_written: Simcoe, Cryo Mosaic, Cryo Simcoe
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Cryo Mosaic }
+      - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Cryo Simcoe }
+  - slug: reubens-secret-crush
+    name: Reuben's Secret Crush
+    url: https://www.reubensbrews.com/beer/reubens-secret-crush/
+    abv: 6.0
+    hops_as_written: Vic Secret™
+    hops:
+      - { hop: vic-secret, name: Vic Secret, as_written: Vic Secret™ }
+  - slug: reubens-strata-crush
+    name: Reuben's Strata Crush™
+    url: https://www.reubensbrews.com/beer/reubens-strata-crush/
+    abv: 7.0
+    hops_as_written: Simcoe, Strata, Citra
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: reubens-stunning-ipa
+    name: Reuben's Stunning IPA
+    url: https://www.reubensbrews.com/beer/reubens-stunning-ipa/
+    abv: 8.5
+    hops_as_written: Galaxy, Nelson Sauvin
+    hops:
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: reubens-super-crush
+    name: Reuben's Super Crush
+    url: https://www.reubensbrews.com/beer/reubens-super-crush/
+    abv: 7.0
+    hops_as_written: Citra®, Mosaic®, Galaxy®
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra® }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy® }
+  - slug: roasted-rye
+    name: Roasted Rye IPA
+    url: https://www.reubensbrews.com/beer/roasted-rye/
+    abv: 7.0
+    hops_as_written: Cascade, Simcoe
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: rock-bock
+    name: Rock Bock
+    url: https://www.reubensbrews.com/beer/rock-bock/
+    abv: 7.5
+    hops_as_written: Hallertau Mittelfrüh, Luminosa
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+      - { hop: luminosa, name: Luminosa, as_written: Luminosa }
+  - slug: run-the-whirl
+    name: Run the Whirl
+    url: https://www.reubensbrews.com/beer/run-the-whirl/
+    abv: 5.7
+    hops_as_written: Amarillo, Cashmere, Mosaic, Simcoe
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: saison-dreamin
+    name: Saison Dreamin'
+    url: https://www.reubensbrews.com/beer/saison-dreamin/
+    abv: 5.7
+    hops_as_written: Amarillo, Mt. Hood
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: mount-hood, name: Mt Hood, as_written: Mt Hood }
+  - slug: seattle-sports-beer
+    name: Seattle Sports Beer
+    url: https://www.reubensbrews.com/beer/seattle-sports-beer/
+    abv: 4.6
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: serious-ipa
+    name: Serious IPA
+    url: https://www.reubensbrews.com/beer/serious-ipa/
+    abv: 6.6
+    hops_as_written: Citra, Michigan Chinook, Simcoe, Strata
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: chinook, name: Chinook, as_written: Michigan Chinook }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: serious-pilsner
+    name: Serious Pilsner
+    url: https://www.reubensbrews.com/beer/serious-pilsner/
+    abv: 5.8
+    hops_as_written: Lorien, Saaz, Magnum
+    hops:
+      - { hop: lorien, name: Lorien, as_written: Lorien }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+  - slug: show-me-the-mosaic-hop-idol-2020-runner-up
+    name: Show Me The Mosaic (Hop Idol 2020 Runner-Up)
+    url: https://www.reubensbrews.com/beer/show-me-the-mosaic-hop-idol-2020-runner-up/
+    abv: 7.7
+    hops_as_written: Mosaic®, Chinook
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: silk-pearls
+    name: Silk & Pearls
+    url: https://www.reubensbrews.com/beer/silk-pearls/
+    abv: 14.0
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: silver-fern
+    name: Silver Fern
+    url: https://www.reubensbrews.com/beer/silver-fern/
+    abv: 5.6
+    hops_as_written: Taiheke, Nectaron, Saphir
+    hops:
+      - { hop: taiheke, name: Taiheke, as_written: Taiheke }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+  - slug: skyglow-ipa
+    name: Skyglow IPA
+    url: https://www.reubensbrews.com/beer/skyglow-ipa/
+    abv: 6.7
+    hops_as_written: Simcoe, Mosaic, Vic Secret, HBC 1019
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: vic-secret, name: Vic Secret, as_written: Vic Secret }
+      - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
+  - slug: smashing
+    name: Smashing
+    url: https://www.reubensbrews.com/beer/smashing/
+    abv: 10.5
+    hops_as_written: Amarillo, Citra, Columbus, Mosaic, Simcoe
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: smoked-porter
+    name: Smoked Porter
+    url: https://www.reubensbrews.com/beer/smoked-porter/
+    abv: 6.9
+    hops_as_written: Nugget
+    hops:
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+  - slug: south-up
+    name: South-Up
+    url: https://www.reubensbrews.com/beer/south-up/
+    abv: 6.7
+    hops_as_written: Vic Secret, Nelson Sauvin, Taiheke, Galaxy
+    hops:
+      - { hop: vic-secret, name: Vic Secret, as_written: Vic Secret }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: taiheke, name: Taiheke, as_written: Taiheke }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: southsun
+    name: Southsun
+    url: https://www.reubensbrews.com/beer/southsun/
+    abv: 4.8
+    hops_as_written: Czech Saaz, Magnum
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+  - slug: spring-bock
+    name: Spring Bock
+    url: https://www.reubensbrews.com/beer/spring-bock/
+    abv: 6.5
+    hops_as_written: Perle, Saphir
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+  - slug: sprinkles-ipa
+    name: Sprinkles IPA
+    url: https://www.reubensbrews.com/beer/sprinkles-ipa/
+    abv: 7.3
+    hops_as_written: Simcoe, Mosaic, Citra, Nelson Sauvin, Columbus
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: stay-frosty
+    name: Stay Frosty IPA
+    url: https://www.reubensbrews.com/beer/stay-frosty/
+    abv: 6.9
+    hops_as_written: Simcoe, Centennial, Cascade, Columbus
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: sticky-notes-fresh-hop-extra-pale-ale
+    name: 'Sticky Notes: Fresh Hop Extra Pale Ale'
+    url: https://www.reubensbrews.com/beer/sticky-notes-fresh-hop-extra-pale-ale/
+    abv: 5.4
+    hops_as_written: Fresh Strata hop plus Audacia and Meridian
+    hops:
+      - { hop: strata, name: Strata, fresh: true, as_written: Fresh Strata hop }
+      - { hop: audacia, name: Audacia, as_written: Audacia }
+      - { hop: meridian, name: Meridian, as_written: Meridian }
+  - slug: stouter-limits
+    name: Stouter Limits
+    url: https://www.reubensbrews.com/beer/stouter-limits/
+    abv: 12.5
+    hops_as_written: Magnum, East Kent Goldings
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+      - { hop: east-kent-golding, name: East Kent Goldings, as_written: East Kent Goldings }
+  - slug: strawberries-sunshine
+    name: Strawberries & Sunshine
+    url: https://www.reubensbrews.com/beer/strawberries-sunshine/
+    abv: 5.5
+    hops_as_written: Magnum
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+  - slug: striker-american-wheat
+    name: Striker American Wheat
+    url: https://www.reubensbrews.com/beer/striker-american-wheat/
+    abv: 5.0
+    hops_as_written: Citra, Loral Noble
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: loral, name: Loral, as_written: Loral Noble }
+  - slug: substation
+    name: Substation IPA
+    url: https://www.reubensbrews.com/beer/substation/
+    abv: 7.2
+    hops_as_written: Simcoe, Chinook, Citra, Mosaic, Talus, CTZ
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: talus, name: Talus, as_written: Talus }
+      - { hop: columbus, name: CTZ, as_written: CTZ }
+  - slug: summer-ipa
+    name: Summer IPA
+    url: https://www.reubensbrews.com/beer/summer-ipa/
+    abv: 6.5
+    hops_as_written: Simcoe, Columbus, Chinook, Cascade, Centennial, Mosaic
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: sun-compass
+    name: Sun Compass
+    url: https://www.reubensbrews.com/beer/sun-compass/
+    abv: 5.3
+    hops_as_written: Saphir, Tettnanger
+    hops:
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+  - slug: sun-spark-ginger-saison
+    name: Sun Spark Ginger Saison
+    url: https://www.reubensbrews.com/beer/sun-spark-ginger-saison/
+    abv: 6.2
+    hops_as_written: Mandarina Bavaria
+    hops:
+      - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina Bavaria }
+  - slug: superdelic-crush
+    name: Superdelic Crush
+    url: https://www.reubensbrews.com/beer/superdelic-crush/
+    abv: 7.0
+    hops_as_written: Krush, Simcoe, citra
+    hops:
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: citra, name: citra, as_written: citra }
+  - slug: 10th-anniversary-series-supreme-triumvirate-with-brouwers-and-bottleworks
+    name: Supreme Triumvirate
+    url: https://www.reubensbrews.com/beer/10th-anniversary-series-supreme-triumvirate-with-brouwers-and-bottleworks/
+    abv: 9.0
+    hops_as_written: Citra®, Amarillo®, Mosaic®
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra® }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo® }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+  - slug: svetle-pivo
+    name: Světlé Pivo
+    url: https://www.reubensbrews.com/beer/svetle-pivo/
+    abv: 4.6
+    hops_as_written: Saaz, Tettnanger
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+  - slug: tart-cherry-weiss
+    name: Tart Cherry Weiss
+    url: https://www.reubensbrews.com/beer/tart-cherry-weiss/
+    abv: 3.2
+    hops_as_written: Mt. Hood
+    hops:
+      - { hop: mount-hood, name: Mt Hood, as_written: Mt Hood }
+  - slug: tea-time-iced-tea-radler
+    name: Tea Time - Iced Tea Radler
+    url: https://www.reubensbrews.com/beer/tea-time-iced-tea-radler/
+    abv: 3.5
+    hops_as_written: Hallertau Mittelfruh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Hallertau Mittelfruh }
+  - slug: temple-of-the-stars-hop-idol-2021-winner
+    name: Temple of the Stars
+    url: https://www.reubensbrews.com/beer/temple-of-the-stars-hop-idol-2021-winner/
+    abv: 8.0
+    hops_as_written: Citra, Galaxy
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: the-flemish-connection
+    name: The Flemish Connection
+    url: https://www.reubensbrews.com/beer/the-flemish-connection/
+    abv: 7.3
+    hops_as_written: Citra, Mosaic, Azacca, Cascade
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: the-golden-promise
+    name: The Golden Promise
+    url: https://www.reubensbrews.com/beer/the-golden-promise/
+    abv: 8.9
+    hops_as_written: HBC 1019, HBC 586, Chinook
+    hops:
+      - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: the-lions-share
+    name: The Lion's Share
+    url: https://www.reubensbrews.com/beer/the-lions-share/
+    abv: 12.6
+    hops_as_written: Amarillo, Chinook
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: the-new-pale
+    name: The New Pale
+    url: https://www.reubensbrews.com/beer/the-new-pale/
+    abv: 5.6
+    hops_as_written: Taiheke, Nectaron, Saphir
+    hops:
+      - { hop: taiheke, name: Taiheke, as_written: Taiheke }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+  - slug: the-phantasm-menace
+    name: The Phantasm Menace
+    url: https://www.reubensbrews.com/beer/the-phantasm-menace-2/
+    abv: 6.0
+    hops_as_written: Simcoe, Nelson, Mosaic, Galaxy Abstrax
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: galaxy, name: Galaxy, form: Abstrax, as_written: Galaxy Abstrax }
+  - slug: then-and-now-7th-anniversary-ipa
+    name: Then and Now - 7th Anniversary IPA
+    url: https://www.reubensbrews.com/beer/then-and-now-7th-anniversary-ipa/
+    abv: 9.0
+    hops_as_written: Mosaic®, Galaxy, Nelson, Sabro
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+  - slug: third-culture-kids
+    name: Third Culture Kids
+    url: https://www.reubensbrews.com/beer/third-culture-kids/
+    abv: 6.5
+    hops_as_written: Simcoe, Mosaic, Columbus, El Dorado
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+  - slug: thirsty-wolf-italian-style-pilsner
+    name: Thirsty Wolf - Italian-Style Pilsner
+    url: https://www.reubensbrews.com/beer/thirsty-wolf-italian-style-pilsner/
+    abv: 5.3
+    hops_as_written: Styrin Wolf, Saphir
+    hops:
+      - { hop: styrian-wolf, name: Styrin Wolf, as_written: Styrin Wolf }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+  - slug: this-charming-can
+    name: This Charming Can
+    url: https://www.reubensbrews.com/beer/this-charming-can/
+    abv: 9.0
+    hops_as_written: Simcoe®, Citra®, and Cryo Sabro®
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe® }
+      - { hop: citra, name: Citra, as_written: Citra® }
+      - { hop: sabro, name: Sabro, form: Cryo, as_written: Cryo Sabro® }
+  - slug: three-ryes-men-apple-pie
+    name: 'Three Ryes Men: Apple Pie'
+    url: https://www.reubensbrews.com/beer/three-ryes-men-apple-pie/
+    abv: 13.7
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: three-ryes-men-pineapple-upside-down-cake
+    name: 'Three Ryes Men: Pineapple Upside Down Cake'
+    url: https://www.reubensbrews.com/beer/three-ryes-men-pineapple-upside-down-cake/
+    abv: 13.7
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: three-ryes-men-rum-ball
+    name: 'Three Ryes Men: Rum Ball'
+    url: https://www.reubensbrews.com/beer/three-ryes-men-rum-ball/
+    abv: 13.7
+    hops_as_written: Chinook
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: too-cool-for-school
+    name: Too Cool for School
+    url: https://www.reubensbrews.com/beer/too-cool-for-school/
+    abv: 6.8
+    hops_as_written: Simcoe, Amarillo, Michigan Chinook, Vista
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: chinook, name: Chinook, as_written: Michigan Chinook }
+      - { hop: vista, name: Vista, as_written: Vista }
+  - slug: tour-de-ballard
+    name: Tour de Ballard
+    url: https://www.reubensbrews.com/beer/tour-de-ballard/
+    abv: 3.5
+    hops_as_written: Simcoe
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: trail-magic-trail-ipa-occasions-series
+    name: Trail Magic IPA
+    url: https://www.reubensbrews.com/beer/trail-magic-trail-ipa-occasions-series/
+    abv: 5.0
+    hops_as_written: Simcoe, Zumo, Citra, Talus
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: null, name: Zumo, as_written: Zumo }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: talus, name: Talus, as_written: Talus }
+  - slug: triple-frosty
+    name: Triple Frosty
+    url: https://www.reubensbrews.com/beer/triple-frosty/
+    abv: 10.5
+    hops_as_written: Cascade, Centennial, Columbus, Simcoe, Cryo Simcoe
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Cryo Simcoe }
+  - slug: tropical-funk
+    name: Tropical Funk
+    url: https://www.reubensbrews.com/beer/tropical-funk/
+    abv: 5.9
+    hops_as_written: Citra, Mosaic
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: up-the-bridges
+    name: Up The Bridges
+    url: https://www.reubensbrews.com/beer/up-the-bridges/
+    abv: 5.5
+    hops_as_written: HBC 1019, Cascade, Michigan Chinook, Cashmere
+    hops:
+      - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Michigan Chinook }
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+  - slug: wembley-ipa
+    name: Wembley IPA
+    url: https://www.reubensbrews.com/beer/wembley-ipa/
+    abv: 7.0
+    hops_as_written: Simcoe®, Chinook (Michigan), Citra®, Mosaic®, Columbus
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe® }
+      - { hop: chinook, name: Chinook, product: Michigan, as_written: Chinook (Michigan) }
+      - { hop: citra, name: Citra, as_written: Citra® }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: west-of-paris
+    name: West of Paris
+    url: https://www.reubensbrews.com/beer/west-of-paris/
+    abv: 5.7
+    hops_as_written: Simcoe, Chinook, Lorien, 1019, Aramis
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: lorien, name: Lorien, as_written: Lorien }
+      - { hop: null, name: '1019', as_written: '1019' }
+      - { hop: aramis, name: Aramis, as_written: Aramis }
+  - slug: westport-lager
+    name: Westport Lager
+    url: https://www.reubensbrews.com/beer/westport-lager/
+    abv: 4.2
+    hops_as_written: Czech Saaz
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
+  - slug: what-comes-next
+    name: What Comes Next
+    url: https://www.reubensbrews.com/beer/what-comes-next/
+    abv: 7.8
+    hops_as_written: Cryo Pop, Mosaic Cryo, Centennial Cryo, Simcoe, Citra
+    hops:
+      - { hop: null, name: Pop, form: Cryo, as_written: Cryo Pop }
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic Cryo }
+      - { hop: centennial, name: Centennial, form: Cryo, as_written: Centennial Cryo }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: white-river-wheat
+    name: White River Wheat
+    url: https://www.reubensbrews.com/beer/white-river-wheat/
+    abv: 5.0
+    hops_as_written: Mt. Hood
+    hops:
+      - { hop: mount-hood, name: Mt Hood, as_written: Mt Hood }
+  - slug: wild-sky
+    name: Wild Sky
+    url: https://www.reubensbrews.com/beer/wild-sky/
+    abv: 5.8
+    hops_as_written: Luminosa, Citra, HBC 586
+    hops:
+      - { hop: luminosa, name: Luminosa, as_written: Luminosa }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+  - slug: winter-melon-vibes
+    name: Winter Melon Vibes
+    url: https://www.reubensbrews.com/beer/winter-melon-vibes/
+    hops_as_written: Galaxy Abstrax
+    hops:
+      - { hop: galaxy, name: Galaxy, form: Abstrax, as_written: Galaxy Abstrax }
+  - slug: winter-mornings
+    name: Winter Mornings
+    url: https://www.reubensbrews.com/beer/winter-mornings/
+    abv: 8.2
+    hops_as_written: Cascade
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: wolfsburg-spezial
+    name: Wolfsburg Spezial
+    url: https://www.reubensbrews.com/beer/wolfsburg-spezial/
+    abv: 6.5
+    hops_as_written: Hallertau
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Hallertau, as_written: Hallertau }
+  - slug: xocolatl-stout
+    name: Xocolatl Stout
+    url: https://www.reubensbrews.com/beer/xocolatl-stout/
+    abv: 13.5
+    hops_as_written: Magnum
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+  - slug: yakima-pure
+    name: Yakima Pure
+    url: https://www.reubensbrews.com/beer/yakima-pure/
+    hops_as_written: Mosaic
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: yakima-squeeze
+    name: Yakima Squeeze
+    url: https://www.reubensbrews.com/beer/yakima-squeeze/
+    abv: 7.2
+    hops_as_written: Nectaron, Fresh Simcoe, Fresh Citra
+    hops:
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: simcoe, name: Simcoe, fresh: true, as_written: Fresh Simcoe }
+      - { hop: citra, name: Citra, fresh: true, as_written: Fresh Citra }
+  - slug: you-are-not-alone-ipa
+    name: You Are Not Alone IPA
+    url: https://www.reubensbrews.com/beer/you-are-not-alone-ipa/
+    abv: 8.5
+    hops_as_written: Mosaic™, Grungeist, Chinook
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic™ }
+      - { hop: null, name: Grungeist, as_written: Grungeist }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: youll-be-back
+    name: You'll Be Back
+    url: https://www.reubensbrews.com/beer/youll-be-back/
+    abv: 8.0
+    hops_as_written: Citra®, Amarillo®, Mosaic®
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra® }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo® }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic® }
+  - slug: zappa-crush
+    name: Zappa Crush
+    url: https://www.reubensbrews.com/beer/zappa-crush/
+    abv: 7.0
+    hops_as_written: Simcoe, Zappa, Citra
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: zappa, name: Zappa, as_written: Zappa }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: zumo-beta
+    name: Zumo Beta
+    url: https://www.reubensbrews.com/beer/zumo-beta/
+    abv: 5.7
+    hops_as_written: Simcoe, Citra, Amarillo, Zumo
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: null, name: Zumo, as_written: Zumo }

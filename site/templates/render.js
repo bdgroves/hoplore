@@ -263,7 +263,7 @@ export function renderHop({ hop, similar, taxonomy, sources, meta, acreageYears 
     <div>
       ${aromaBlock(hop, taxonomy)}
       ${usageBlock(hop, taxonomy)}
-      ${hopBeersBlock(hop.beers, base)}
+      ${hopBeersBlock(hop.beers, base, hop.name)}
       ${substitutesBlock(hop, similar)}
       ${pedigreeLine ? `<section class="block"><h2>Pedigree</h2><p>${pedigreeLine}</p></section>` : ''}
       ${hop.meta.notes ? `<section class="block"><h2>Notes on this record</h2><p>${esc(hop.meta.notes)}</p></section>` : ''}

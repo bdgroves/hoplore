@@ -1,0 +1,110 @@
+brewery:
+  slug: elysian
+  name: Elysian Brewing
+  city: Seattle
+  state: WA
+  url: https://www.elysianbrewing.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-27'
+beers:
+  - slug: bifrost
+    name: Bifrost
+    url: https://www.elysianbrewing.com/beer/bifrost/
+    abv: 8.3
+    hops_as_written: Magnum, Chinook, and Amarillo
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: contact-haze
+    name: Contact Haze
+    url: https://www.elysianbrewing.com/beer/contact-haze/
+    abv: 6.0
+    hops_as_written: El dorado, Mosaic, Southern Passion, Sabro, Citra, and Sultana
+    hops:
+      - { hop: el-dorado, name: El Dorado, as_written: El dorado }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: southern-passion, name: Southern Passion, as_written: Southern Passion }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: sultana, name: Sultana, as_written: Sultana }
+  - slug: dawn-again
+    name: Dawn Again
+    url: https://www.elysianbrewing.com/beer/dawn-again/
+    abv: 5.5
+    hops_as_written: Cashmere, Sabro, Chinook
+    hops:
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: dayglow
+    name: Dayglow
+    url: https://www.elysianbrewing.com/beer/dayglow/
+    abv: 7.4
+    hops_as_written: It drops with tropical, sunshiny Mosaic and twinkles with touches of El Dorado and Centennial
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+  - slug: dragonstooth-stout
+    name: Dragonstooth Stout
+    url: https://www.elysianbrewing.com/beer/dragonstooth-stout/
+    abv: 8.1
+    hops_as_written: Bittered with Magnum, finished with Cascade and Centennial
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+  - slug: easy-dust-non-alcoholic-ipa
+    name: Easy Dust Non-Alcoholic IPA
+    url: https://www.elysianbrewing.com/beer/easy-dust-non-alcoholic-ipa/
+    abv: 0.5
+    hops_as_written: Citra, Centennial & Amarillo
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: jacktail
+    name: Jacktail
+    url: https://www.elysianbrewing.com/beer/jacktail/
+    abv: 6.1
+    hops_as_written: Citra, Idaho 7
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+  - slug: juice-dust-juicy-ipa
+    name: Juice Dust Juicy IPA
+    url: https://www.elysianbrewing.com/beer/juice-dust-juicy-ipa/
+    abv: 8.2
+    hops_as_written: Chinook, Citra, Amarillo
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: night-owl
+    name: Night Owl
+    url: https://www.elysianbrewing.com/beer/night-owl/
+    abv: 6.7
+    hops_as_written: Lightly bittered with Magnum
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+  - slug: phaze-dust-imperial-hazy-ipa
+    name: Phaze Dust Imperial Hazy IPA
+    url: https://www.elysianbrewing.com/beer/phaze-dust-imperial-hazy-ipa/
+    abv: 8.2
+    hops_as_written: Chinook, Amarillo, Luminosa, Citra Incognito, Citra Cryo
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: luminosa, name: Luminosa, as_written: Luminosa }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Citra }
+  - slug: space-dust-ipa
+    name: Space Dust IPA
+    url: https://www.elysianbrewing.com/beer/space-dust-ipa/
+    abv: 8.2
+    hops_as_written: Chinook, Citra, & Amarillo
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }

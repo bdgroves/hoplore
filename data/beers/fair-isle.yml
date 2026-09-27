@@ -1,0 +1,446 @@
+brewery:
+  slug: fair-isle
+  name: Fair Isle Brewing
+  city: Seattle
+  state: WA
+  url: https://fairislebrewing.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-27'
+beers:
+  - slug: adelaide
+    name: Adelaide
+    url: https://www.fairislebrewing.com/beer/adelaide/
+    abv: 9.8
+    hops_as_written: Magnum , Mandarina Bavaria
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+      - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina Bavaria }
+  - slug: alexandra
+    name: Alexandra
+    url: https://www.fairislebrewing.com/beer/alexandra/
+    abv: 4.7
+    hops_as_written: Mandarina Bavaria
+    hops:
+      - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina Bavaria }
+  - slug: alicel
+    name: Alicel
+    url: https://www.fairislebrewing.com/beer/alicel/
+    abv: 5.3
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: almota
+    name: Almota
+    url: https://www.fairislebrewing.com/beer/almota/
+    abv: 5.3
+    hops_as_written: Mandarina Bavaria
+    hops:
+      - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina Bavaria }
+  - slug: ami-jean
+    name: Ami Jean
+    url: https://www.fairislebrewing.com/beer/ami-jean/
+    abv: 7.1
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: ana
+    name: Ana
+    url: https://www.fairislebrewing.com/beer/ana/
+    abv: 7.3
+    hops_as_written: Second-Use Mosaic
+    hops:
+      - { hop: mosaic, name: Mosaic, form: second use, as_written: Second-Use Mosaic }
+  - slug: ba-cheri
+    name: BA Cheri
+    url: https://www.fairislebrewing.com/beer/ba-cheri/
+    abv: 7.2
+    hops_as_written: Citra , Second-Use Mosaic
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, form: second use, as_written: Second-Use Mosaic }
+  - slug: baker
+    name: Baker
+    url: https://www.fairislebrewing.com/beer/baker/
+    abv: 4.9
+    hops_as_written: Hallertau Mittelfrüh , Magnum
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+  - slug: bobbi
+    name: Bobbi
+    url: https://www.fairislebrewing.com/beer/bobbi/
+    abv: 6.1
+    hops_as_written: Citra , Simcoe
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: camellia
+    name: Camellia
+    url: https://www.fairislebrewing.com/beer/camellia/
+    abv: 7.2
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: carrie
+    name: Carrie
+    url: https://www.fairislebrewing.com/beer/carrie/
+    abv: 7.2
+    hops_as_written: Nelson Sauvin Dry
+    hops:
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin Dry }
+  - slug: claude
+    name: Claude
+    url: https://www.fairislebrewing.com/beer/claude/
+    abv: 7.2
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: diane
+    name: Diane
+    url: https://www.fairislebrewing.com/beer/diane/
+    abv: 8.2
+    hops_as_written: Azacca , Loral
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: loral, name: Loral, as_written: Loral }
+  - slug: eldon
+    name: Eldon
+    url: https://www.fairislebrewing.com/beer/eldon/
+    abv: 6.3
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: eleanor
+    name: Eleanor
+    url: https://www.fairislebrewing.com/beer/eleanor/
+    abv: 6.7
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: eugene
+    name: Eugene
+    url: https://www.fairislebrewing.com/beer/eugene/
+    abv: 7.1
+    hops_as_written: Second-Use Citra , Second-Use Mosaic , Strata
+    hops:
+      - { hop: citra, name: Citra, form: second use, as_written: Second-Use Citra }
+      - { hop: mosaic, name: Mosaic, form: second use, as_written: Second-Use Mosaic }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: fay-fuller
+    name: Fay Fuller
+    url: https://www.fairislebrewing.com/beer/fay-fuller/
+    abv: 5.2
+    hops_as_written: Hallertau Blanc , Tettnanger
+    hops:
+      - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+  - slug: franz-meredith
+    name: Franz Meredith
+    url: https://www.fairislebrewing.com/beer/franz-meredith/
+    abv: 3.6
+    hops_as_written: Strisselspalt
+    hops:
+      - { hop: strisselspalt, name: Strisselspalt, as_written: Strisselspalt }
+  - slug: gemma
+    name: Gemma
+    url: https://www.fairislebrewing.com/beer/gemma/
+    abv: 4.9
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: gus
+    name: Gus
+    url: https://www.fairislebrewing.com/beer/gus/
+    abv: 5.7
+    hops_as_written: Idaho Gem Dry
+    hops:
+      - { hop: idaho-gem, name: Idaho Gem, as_written: Idaho Gem Dry }
+  - slug: hannah
+    name: Hannah
+    url: https://www.fairislebrewing.com/beer/hannah/
+    abv: 4.9
+    hops_as_written: Hallertau Blanc
+    hops:
+      - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
+  - slug: harlen
+    name: Harlen
+    url: https://www.fairislebrewing.com/beer/harlen/
+    abv: 3.9
+    hops_as_written: Saaz
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: heinrich
+    name: Heinrich
+    url: https://www.fairislebrewing.com/beer/heinrich/
+    abv: 5.3
+    hops_as_written: Goldings , Mandarina Bavaria
+    hops:
+      - { hop: golding-uk, name: Goldings, as_written: Goldings }
+      - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina Bavaria }
+  - slug: helsar
+    name: Helsar
+    url: https://www.fairislebrewing.com/beer/helsar/
+    abv: 4.8
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: henderson
+    name: Henderson
+    url: https://www.fairislebrewing.com/beer/henderson/
+    abv: 7.1
+    hops_as_written: Crystal , Hallertau Blanc
+    hops:
+      - { hop: crystal, name: Crystal, as_written: Crystal }
+      - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
+  - slug: himmat
+    name: Himmat
+    url: https://www.fairislebrewing.com/beer/himmat/
+    abv: 6.5
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: house-lager
+    name: House Lager
+    url: https://www.fairislebrewing.com/beer/house-lager/
+    abv: 4.9
+    hops_as_written: Tettnanger
+    hops:
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+  - slug: isabelle
+    name: Isabelle
+    url: https://www.fairislebrewing.com/beer/isabelle/
+    abv: 8.6
+    hops_as_written: Hallertau Mittelfrüh , Loral
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+      - { hop: loral, name: Loral, as_written: Loral }
+  - slug: jean-michel
+    name: Jean-Michel
+    url: https://www.fairislebrewing.com/beer/jean-michel/
+    abv: 6.9
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: kc-s7-b
+    name: KC S:7.b
+    url: https://www.fairislebrewing.com/beer/kc-s7-b/
+    abv: 5.7
+    hops_as_written: Dolcita , Krush
+    hops:
+      - { hop: dolcita, name: Dolcita, as_written: Dolcita }
+      - { hop: krush, name: Krush, as_written: Krush }
+  - slug: kc-s7-d
+    name: KC S:7.d
+    url: https://www.fairislebrewing.com/beer/kc-s7-d/
+    abv: 5.8
+    hops_as_written: Vera Dry
+    hops:
+      - { hop: vera, name: Vera, as_written: Vera Dry }
+  - slug: leila
+    name: Leila
+    url: https://www.fairislebrewing.com/beer/leila/
+    abv: 5.1
+    hops_as_written: Goldings , Hüll Melon
+    hops:
+      - { hop: golding-uk, name: Goldings, as_written: Goldings }
+      - { hop: huell-melon, name: Hüll Melon, as_written: Hüll Melon }
+  - slug: lou-graham
+    name: Lou-Graham
+    url: https://www.fairislebrewing.com/beer/lou-graham/
+    abv: 7.1
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: luuk
+    name: Luuk
+    url: https://www.fairislebrewing.com/beer/luuk/
+    abv: 4.7
+    hops_as_written: Crystal
+    hops:
+      - { hop: crystal, name: Crystal, as_written: Crystal }
+  - slug: lydia
+    name: Lydia
+    url: https://www.fairislebrewing.com/beer/lydia/
+    abv: 7.8
+    hops_as_written: Goldings , Sterling
+    hops:
+      - { hop: golding-uk, name: Goldings, as_written: Goldings }
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: madame-r-galle
+    name: Madame R. Galle
+    url: https://www.fairislebrewing.com/beer/madame-r-galle/
+    abv: 6.2
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: madrone
+    name: Madrone
+    url: https://www.fairislebrewing.com/beer/madrone/
+    abv: 5.9
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: maud
+    name: Maud
+    url: https://www.fairislebrewing.com/beer/maud/
+    abv: 1.0
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: myrtle
+    name: Myrtle
+    url: https://www.fairislebrewing.com/beer/myrtle/
+    abv: 4.1
+    hops_as_written: Cashmere , Loral
+    hops:
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+      - { hop: loral, name: Loral, as_written: Loral }
+  - slug: odelette
+    name: Odelette
+    url: https://www.fairislebrewing.com/beer/odelette/
+    abv: 7.7
+    hops_as_written: Sterling
+    hops:
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: paulie
+    name: Paulie
+    url: https://www.fairislebrewing.com/beer/paulie/
+    abv: 4.3
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: pierre
+    name: Pierre
+    url: https://www.fairislebrewing.com/beer/pierre/
+    abv: 5.4
+    hops_as_written: Saaz
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: rachelle
+    name: Rachelle
+    url: https://www.fairislebrewing.com/beer/rachelle/
+    abv: 5.1
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: rankin-gingersnap
+    name: Rankin
+    url: https://www.fairislebrewing.com/beer/rankin-gingersnap/
+    abv: 13.3
+    hops_as_written: Northern Brewer
+    hops:
+      - { hop: northern-brewer, name: Northern Brewer, as_written: Northern Brewer }
+  - slug: rankin-raspberry
+    name: Rankin
+    url: https://www.fairislebrewing.com/beer/rankin-raspberry/
+    abv: 12.8
+    hops_as_written: Northern Brewer
+    hops:
+      - { hop: northern-brewer, name: Northern Brewer, as_written: Northern Brewer }
+  - slug: rankin
+    name: Rankin
+    url: https://www.fairislebrewing.com/beer/rankin/
+    abv: 13.3
+    hops_as_written: Northern Brewer
+    hops:
+      - { hop: northern-brewer, name: Northern Brewer, as_written: Northern Brewer }
+  - slug: rankin-nitro
+    name: Rankin on Nitro
+    url: https://www.fairislebrewing.com/beer/rankin-nitro/
+    abv: 13.3
+    hops_as_written: Northern Brewer
+    hops:
+      - { hop: northern-brewer, name: Northern Brewer, as_written: Northern Brewer }
+  - slug: renee
+    name: Renee
+    url: https://www.fairislebrewing.com/beer/renee/
+    abv: 5.5
+    hops_as_written: Dolcita , Krush
+    hops:
+      - { hop: dolcita, name: Dolcita, as_written: Dolcita }
+      - { hop: krush, name: Krush, as_written: Krush }
+  - slug: roman
+    name: Roman
+    url: https://www.fairislebrewing.com/beer/roman/
+    hops_as_written: Perle
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: rutherford
+    name: Rutherford
+    url: https://www.fairislebrewing.com/beer/rutherford/
+    abv: 6.8
+    hops_as_written: Enigma , Wakatu
+    hops:
+      - { hop: enigma, name: Enigma, as_written: Enigma }
+      - { hop: wakatu, name: Wakatu, as_written: Wakatu }
+  - slug: salacia
+    name: Sustainable sea farming with passion and purpose.
+    url: https://www.fairislebrewing.com/beer/salacia/
+    abv: 5.0
+    hops_as_written: Hallertau Mittelfrüh , Tettnanger
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+  - slug: tove
+    name: Tove
+    url: https://www.fairislebrewing.com/beer/tove/
+    abv: 6.4
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: wilson
+    name: 'W&L No. 018: Wilson'
+    url: https://www.fairislebrewing.com/beer/wilson/
+    hops_as_written: Citra Dry
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra Dry }
+  - slug: coen
+    name: 'W&L No. 022: Coen'
+    url: https://www.fairislebrewing.com/beer/coen/
+    hops_as_written: Simcoe Dry
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe Dry }
+  - slug: wl-no-30-iggy
+    name: 'W&L No. 030: Iggy'
+    url: https://www.fairislebrewing.com/beer/wl-no-30-iggy/
+    abv: 6.2
+    hops_as_written: Citra , Mosaic
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: wl-no-31-desdemona
+    name: 'W&L No. 031: Desdemona'
+    url: https://www.fairislebrewing.com/beer/wl-no-31-desdemona/
+    abv: 5.4
+    hops_as_written: Enigma Dry
+    hops:
+      - { hop: enigma, name: Enigma, as_written: Enigma Dry }
+  - slug: wl-no-033-camillio
+    name: 'W&L No. 033: Camillo'
+    url: https://www.fairislebrewing.com/beer/wl-no-033-camillio/
+    abv: 8.6
+    hops_as_written: Azacca , Loral
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: loral, name: Loral, as_written: Loral }
+  - slug: josephine
+    name: 'W&L No. 038: Josephine'
+    url: https://www.fairislebrewing.com/beer/josephine/
+    abv: 5.9
+    hops_as_written: Cascade
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: waltrude
+    name: Waltrude
+    url: https://www.fairislebrewing.com/beer/waltrude/
+    abv: 4.7
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: wren
+    name: Wren
+    url: https://www.fairislebrewing.com/beer/wren/
+    abv: 7.3
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }

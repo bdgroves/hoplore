@@ -17,3 +17,6 @@ function apply() {
   count.textContent = `${shown} beer${shown === 1 ? '' : 's'} match “${input.value.trim()}”`;
 }
 input?.addEventListener('input', apply);
+// Links from hop pages arrive as /beers/?q=citra.
+const q = new URLSearchParams(location.search).get('q');
+if (q && input) { input.value = q; apply(); }

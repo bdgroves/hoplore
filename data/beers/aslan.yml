@@ -1,0 +1,798 @@
+brewery:
+  slug: aslan
+  name: Aslan Brewing
+  city: Bellingham
+  state: WA
+  url: https://www.aslanbrewing.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-27'
+beers:
+  - slug: beers-7-deep
+    name: 7 Deep
+    url: https://www.aslanbrewing.com/beers/7-deep/
+    abv: 5.6
+    hops_as_written: Tradition
+    hops:
+      - { hop: hallertau-tradition, name: Tradition, as_written: Tradition }
+  - slug: beers-8-deep
+    name: 8 Deep
+    url: https://www.aslanbrewing.com/beers/8-deep/
+    abv: 5.2
+    hops_as_written: Cascade, Talus
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: talus, name: Talus, as_written: Talus }
+  - slug: beers-b-proud-2026
+    name: B Proud
+    url: https://www.aslanbrewing.com/beers/b-proud-2026/
+    abv: 6.4
+    hops_as_written: Ekuanot, Talus
+    hops:
+      - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
+      - { hop: talus, name: Talus, as_written: Talus }
+  - slug: beers-b-proud
+    name: B Proud
+    url: https://www.aslanbrewing.com/beers/b-proud/
+    abv: 6.4
+    hops_as_written: Ekuanot, Talus
+    hops:
+      - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
+      - { hop: talus, name: Talus, as_written: Talus }
+  - slug: beers-batch-15
+    name: Batch 15
+    url: https://www.aslanbrewing.com/beers/batch-15/
+    abv: 6.7
+    hops_as_written: Citra, Azacca, Mosaic, Idaho 7
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+  - slug: beers-batch-2000
+    name: Batch 2000
+    url: https://www.aslanbrewing.com/beers/batch-2000/
+    abv: 6.7
+    hops_as_written: Azacca, Citra, Idaho 7, Mosaic
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: beers-bay-drifter
+    name: Bay Drifter
+    url: https://www.aslanbrewing.com/beers/bay-drifter/
+    abv: 4.5
+    hops_as_written: Smaragd
+    hops:
+      - { hop: smaragd, name: Smaragd, as_written: Smaragd }
+  - slug: beers-baya-gose
+    name: Baya Gose
+    url: https://www.aslanbrewing.com/beers/baya-gose/
+    abv: 4.5
+    hops_as_written: Perle
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: beers-beer-of-choice
+    name: Beer Of Choice
+    url: https://www.aslanbrewing.com/beers/beer-of-choice/
+    abv: 4.5
+    hops_as_written: Spalt Select
+    hops:
+      - { hop: spalter-select, name: Spalt Select, as_written: Spalt Select }
+  - slug: beers-bham-brown
+    name: Bham Brown
+    url: https://www.aslanbrewing.com/beers/bham-brown/
+    abv: 5.0
+    hops_as_written: Adeena
+    hops:
+      - { hop: adeena, name: Adeena, as_written: Adeena }
+  - slug: beers-bitburger-aslan
+    name: Bitburger x Aslan
+    url: https://www.aslanbrewing.com/beers/bitburger-aslan/
+    abv: 5.8
+    hops_as_written: Cascade, Centennial, Chinook, Perle, Simcoe
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: beers-captain-ron
+    name: Captain Ron
+    url: https://www.aslanbrewing.com/beers/captain-ron/
+    abv: 7.0
+    hops_as_written: Amarillo, Centennial, Chinook, Ekuanot, HBC 586, and Talus
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: talus, name: Talus, as_written: Talus }
+  - slug: beers-chai-milk-stout
+    name: Chai Milk Stout
+    url: https://www.aslanbrewing.com/beers/chai-milk-stout/
+    abv: 4.8
+    hops_as_written: Idaho 7, Smaragd
+    hops:
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: smaragd, name: Smaragd, as_written: Smaragd }
+  - slug: beers-charlie-foxtrot
+    name: Charlie Foxtrot
+    url: https://www.aslanbrewing.com/beers/charlie-foxtrot/
+    hops_as_written: Cascade, Centennial, Chinook, Columbus, Crystal, Sabro
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: crystal, name: Crystal, as_written: Crystal }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+  - slug: beers-cherry-lime-disco
+    name: Cherry Lime Disco
+    url: https://www.aslanbrewing.com/beers/cherry-lime-disco/
+    abv: 4.5
+    hops_as_written: Perle
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: beers-city-pop
+    name: City Pop*
+    url: https://www.aslanbrewing.com/beers/city-pop/
+    abv: 4.2
+    hops_as_written: Amarillo, Callista
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: callista, name: Callista, as_written: Callista }
+  - slug: beers-classic
+    name: Classic
+    url: https://www.aslanbrewing.com/beers/classic/
+    abv: 4.2
+    hops_as_written: Adeena
+    hops:
+      - { hop: adeena, name: Adeena, as_written: Adeena }
+  - slug: beers-coastal-pils
+    name: Coastal Pils
+    url: https://www.aslanbrewing.com/beers/coastal-pils/
+    abv: 4.8
+    hops_as_written: Perle
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: beers-cosmic-dreams
+    name: Cosmic Dreams
+    url: https://www.aslanbrewing.com/beers/cosmic-dreams/
+    abv: 6.0
+    hops_as_written: Eureka, Amarillo, El Dorado, Simcoe
+    hops:
+      - { hop: eureka, name: Eureka, as_written: Eureka }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: beers-cream-ale
+    name: Cream Ale
+    url: https://www.aslanbrewing.com/beers/cream-ale/
+    abv: 6.7
+    hops_as_written: Adeena
+    hops:
+      - { hop: adeena, name: Adeena, as_written: Adeena }
+  - slug: beers-crossing-columbia
+    name: Crossing Columbia
+    url: https://www.aslanbrewing.com/beers/crossing-columbia/
+    abv: 6.7
+    hops_as_written: Citra, Krush (HBC 586), Mandarina Bavaria, Mosaic
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: Krush, product: HBC 586, as_written: Krush (HBC 586) }
+      - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina Bavaria }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: beers-das-boot
+    name: Das Boot
+    url: https://www.aslanbrewing.com/beers/das-boot/
+    abv: 5.6
+    hops_as_written: Smaragd
+    hops:
+      - { hop: smaragd, name: Smaragd, as_written: Smaragd }
+  - slug: beers-dawn-patrol
+    name: Dawn Patrol
+    url: https://www.aslanbrewing.com/beers/dawn-patrol/
+    abv: 5.4
+    hops_as_written: Ekuanot, Mosaic, Sabro, Simcoe
+    hops:
+      - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: beers-deception-pass-2025
+    name: Deception Pass
+    url: https://www.aslanbrewing.com/beers/deception-pass-2025/
+    abv: 5.1
+    hops_as_written: Callista
+    hops:
+      - { hop: callista, name: Callista, as_written: Callista }
+  - slug: beers-deception-pass
+    name: Deception Pass
+    url: https://www.aslanbrewing.com/beers/deception-pass/
+    abv: 5.1
+    hops_as_written: Callista
+    hops:
+      - { hop: callista, name: Callista, as_written: Callista }
+  - slug: beers-disco-lemonade
+    name: Disco Lemonade
+    url: https://www.aslanbrewing.com/beers/disco-lemonade/
+    abv: 4.5
+    hops_as_written: Perle
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: beers-dunkel
+    name: Dunkel
+    url: https://www.aslanbrewing.com/beers/dunkel/
+    abv: 5.2
+    hops_as_written: Perle
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: beers-earth-to-beer
+    name: Earth To Beer
+    url: https://www.aslanbrewing.com/beers/earth-to-beer/
+    abv: 5.2
+    hops_as_written: Cascade, Talus
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: talus, name: Talus, as_written: Talus }
+  - slug: beers-elevenses
+    name: Elevenses
+    url: https://www.aslanbrewing.com/beers/elevenses/
+    abv: 6.4
+    hops_as_written: Krush, Strata, Talus
+    hops:
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: talus, name: Talus, as_written: Talus }
+  - slug: beers-evil-ipa
+    name: Evil IPA
+    url: https://www.aslanbrewing.com/beers/evil-ipa/
+    abv: 6.66
+    hops_as_written: Amarillo, Azacca, HBC 586
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+  - slug: beers-evolution
+    name: Evolution
+    url: https://www.aslanbrewing.com/beers/evolution/
+    abv: 6.7
+    hops_as_written: Amarillo, Centennial, Chinook, Citra, Simcoe
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: beers-fermentada
+    name: Fermentada*
+    url: https://www.aslanbrewing.com/beers/fermentada/
+    abv: 5.0
+    hops_as_written: Saaz
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: beers-fish-have-feelings
+    name: Fish Have Feelings
+    url: https://www.aslanbrewing.com/beers/fish-have-feelings/
+    abv: 7.2
+    hops_as_written: Centennial, Chinook, Ekuanot, Idaho 7, Strata
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: beers-flanders-red
+    name: Flanders Red
+    url: https://www.aslanbrewing.com/beers/flanders-red/
+    abv: 5.5
+    hops_as_written: Premiant, Strisselspalt
+    hops:
+      - { hop: premiant, name: Premiant, as_written: Premiant }
+      - { hop: strisselspalt, name: Strisselspalt, as_written: Strisselspalt }
+  - slug: beers-forestalgia
+    name: Forestalgia
+    url: https://www.aslanbrewing.com/beers/forestalgia/
+    abv: 4.8
+    hops_as_written: Amarillo, Idaho Gem
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: idaho-gem, name: Idaho Gem, as_written: Idaho Gem }
+  - slug: beers-frances-farmer
+    name: Frances Farmer
+    url: https://www.aslanbrewing.com/beers/frances-farmer/
+    abv: 5.6
+    hops_as_written: Tradition, Premiant, Perle
+    hops:
+      - { hop: hallertau-tradition, name: Tradition, as_written: Tradition }
+      - { hop: premiant, name: Premiant, as_written: Premiant }
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: beers-2025-frauenbier
+    name: Frauenbier
+    url: https://www.aslanbrewing.com/beers/2025-frauenbier/
+    abv: 4.8
+    hops_as_written: Perle , Smaragd
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: smaragd, name: Smaragd, as_written: Smaragd }
+  - slug: beers-2026-frauenbier
+    name: Frauenbier
+    url: https://www.aslanbrewing.com/beers/2026-frauenbier/
+    abv: 4.8
+    hops_as_written: Adeena, Ariana, Callista
+    hops:
+      - { hop: adeena, name: Adeena, as_written: Adeena }
+      - { hop: ariana, name: Ariana, as_written: Ariana }
+      - { hop: callista, name: Callista, as_written: Callista }
+  - slug: beers-frauenbier-2022
+    name: Frauenbier
+    url: https://www.aslanbrewing.com/beers/frauenbier-2022/
+    abv: 4.8
+    hops_as_written: Perle
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: beers-frauenbier-2023
+    name: Frauenbier
+    url: https://www.aslanbrewing.com/beers/frauenbier-2023/
+    abv: 4.8
+    hops_as_written: Perle, Smaragd
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: smaragd, name: Smaragd, as_written: Smaragd }
+  - slug: beers-fresh-hop-kolsch
+    name: Fresh Hop Kolsch
+    url: https://www.aslanbrewing.com/beers/fresh-hop-kolsch/
+    abv: 4.7
+    hops_as_written: Columbus
+    hops:
+      - { hop: columbus, name: Columbus, fresh: true, as_written: Columbus }
+  - slug: beers-giant-squid
+    name: Giant Squid
+    url: https://www.aslanbrewing.com/beers/giant-squid/
+    abv: 6.66
+    hops_as_written: Amarillo, Azacca, HBC 586
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+  - slug: beers-ginger-rye
+    name: Ginger Rye
+    url: https://www.aslanbrewing.com/beers/ginger-rye/
+    abv: 5.2
+    hops_as_written: Centennial, Chinook
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: beers-gliding-over-all
+    name: Gliding Over All
+    url: https://www.aslanbrewing.com/beers/gliding-over-all/
+    abv: 6.0
+    hops_as_written: Sabro, Chinook
+    hops:
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: beers-gold-goose
+    name: Gold Goose
+    url: https://www.aslanbrewing.com/beers/gold-goose/
+    abv: 5.0
+    hops_as_written: Aramis, Strisselspalt
+    hops:
+      - { hop: aramis, name: Aramis, as_written: Aramis }
+      - { hop: strisselspalt, name: Strisselspalt, as_written: Strisselspalt }
+  - slug: beers-grizz-rizz
+    name: Grizz Rizz
+    url: https://www.aslanbrewing.com/beers/grizz-rizz/
+    abv: 7.0
+    hops_as_written: Citra, El Dorado, Simcoe, Talus
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: talus, name: Talus, as_written: Talus }
+  - slug: beers-hefe
+    name: Hefe
+    url: https://www.aslanbrewing.com/beers/hefe/
+    abv: 5.0
+    hops_as_written: Spalt Select
+    hops:
+      - { hop: spalter-select, name: Spalt Select, as_written: Spalt Select }
+  - slug: beers-hive-mind
+    name: Hive Mind
+    url: https://www.aslanbrewing.com/beers/hive-mind/
+    abv: 4.3
+    hops_as_written: Smaragd
+    hops:
+      - { hop: smaragd, name: Smaragd, as_written: Smaragd }
+  - slug: beers-hooks-stash
+    name: Hook's Stash
+    url: https://www.aslanbrewing.com/beers/hooks-stash/
+    abv: 4.6
+    hops_as_written: El Dorado, Strata
+    hops:
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: beers-jazz-juice
+    name: Jazz Juice
+    url: https://www.aslanbrewing.com/beers/jazz-juice/
+    abv: 5.8
+    hops_as_written: Callista, Citra, El Dorado, HBC 586
+    hops:
+      - { hop: callista, name: Callista, as_written: Callista }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+  - slug: beers-jetski-referee
+    name: Jetski Referee
+    url: https://www.aslanbrewing.com/beers/jetski-referee/
+    abv: 6.7
+    hops_as_written: HBC 586, Idaho 7, Sabro
+    hops:
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+  - slug: beers-jules
+    name: Jules
+    url: https://www.aslanbrewing.com/beers/jules/
+    abv: 5.2
+    hops_as_written: Strisselspalt, Tradition
+    hops:
+      - { hop: strisselspalt, name: Strisselspalt, as_written: Strisselspalt }
+      - { hop: hallertau-tradition, name: Tradition, as_written: Tradition }
+  - slug: beers-kernza-lager
+    name: Kernza Lager
+    url: https://www.aslanbrewing.com/beers/kernza-lager/
+    abv: 4.5
+    hops_as_written: Chinook, Pekko
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: pekko, name: Pekko, as_written: Pekko }
+  - slug: beers-leo-rising
+    name: Leo Rising
+    url: https://www.aslanbrewing.com/beers/leo-rising/
+    abv: 5.0
+    hops_as_written: Centennial, Strata
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: beers-leos-legacy
+    name: Leo’S Legacy
+    url: https://www.aslanbrewing.com/beers/leos-legacy/
+    abv: 4.75
+    hops_as_written: Chinook, Spalt Select
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: spalter-select, name: Spalt Select, as_written: Spalt Select }
+  - slug: beers-love-the-land
+    name: Love the Land
+    url: https://www.aslanbrewing.com/beers/love-the-land/
+    abv: 6.5
+    hops_as_written: Azacca, Citra, Idaho 7, Pekko, Sabro
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: pekko, name: Pekko, as_written: Pekko }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+  - slug: beers-love-the-land1
+    name: Love The Land
+    url: https://www.aslanbrewing.com/beers/love-the-land1/
+    abv: 6.5
+    hops_as_written: Azacca, Citra, Pekko, Sabro
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: pekko, name: Pekko, as_written: Pekko }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+  - slug: beers-maibock
+    name: Maibock
+    url: https://www.aslanbrewing.com/beers/maibock/
+    abv: 6.5
+    hops_as_written: Adeena, Spalt Select
+    hops:
+      - { hop: adeena, name: Adeena, as_written: Adeena }
+      - { hop: spalter-select, name: Spalt Select, as_written: Spalt Select }
+  - slug: beers-mane-attraction
+    name: Mane Attraction*
+    url: https://www.aslanbrewing.com/beers/mane-attraction/
+    abv: 5.0
+    hops_as_written: Adeena, Pekko, Callista, Barbe Rouge, Krush, Citra
+    hops:
+      - { hop: adeena, name: Adeena, as_written: Adeena }
+      - { hop: pekko, name: Pekko, as_written: Pekko }
+      - { hop: callista, name: Callista, as_written: Callista }
+      - { hop: barbe-rouge, name: Barbe Rouge, as_written: Barbe Rouge }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: beers-marigold-experimental
+    name: Marigold
+    url: https://www.aslanbrewing.com/beers/marigold-experimental/
+    abv: 6.0
+    hops_as_written: Amarillo, Centennial, Citra, Mosaic
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: beers-math-rock
+    name: Math Rock
+    url: https://www.aslanbrewing.com/beers/math-rock/
+    abv: 6.05
+    hops_as_written: Aramis, Pekko
+    hops:
+      - { hop: aramis, name: Aramis, as_written: Aramis }
+      - { hop: pekko, name: Pekko, as_written: Pekko }
+  - slug: beers-melopepo
+    name: Melopepo
+    url: https://www.aslanbrewing.com/beers/melopepo/
+    abv: 6.5
+    hops_as_written: Cascade, Huell Melon, Simcoe
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: huell-melon, name: Huell Melon, as_written: Huell Melon }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: beers-monarch
+    name: Monarch
+    url: https://www.aslanbrewing.com/beers/monarch/
+    abv: 7.4
+    hops_as_written: Cascade, Chinook, Mosaic, Simcoe
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: beers-moon-calendar
+    name: Moon Calendar
+    url: https://www.aslanbrewing.com/beers/moon-calendar/
+    abv: 6.5
+    hops_as_written: Cascade, Idaho 7, Nelson Sauvin, Simcoe
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: beers-north-forest
+    name: North Forest
+    url: https://www.aslanbrewing.com/beers/north-forest/
+    abv: 5.1
+    hops_as_written: Adeena
+    hops:
+      - { hop: adeena, name: Adeena, as_written: Adeena }
+  - slug: beers-outshine-12oz
+    name: Outshine
+    url: https://www.aslanbrewing.com/beers/outshine-12oz/
+    abv: 6.7
+    hops_as_written: Azacca, Centennial, Citra, HBC 586
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+  - slug: beers-outshine
+    name: Outshine
+    url: https://www.aslanbrewing.com/beers/outshine/
+    abv: 6.7
+    hops_as_written: Azacca, Cascade, Centennial, Citra
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: beers-pacific-cooler
+    name: Pacific Cooler
+    url: https://www.aslanbrewing.com/beers/pacific-cooler/
+    abv: 8.2
+    hops_as_written: Barbe Rouge, Mosaic, Nelson Sauvin
+    hops:
+      - { hop: barbe-rouge, name: Barbe Rouge, as_written: Barbe Rouge }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: beers-palmera
+    name: Palmera
+    url: https://www.aslanbrewing.com/beers/palmera/
+    abv: 6.5
+    hops_as_written: Callista, El Dorado, Nelson Sauvin
+    hops:
+      - { hop: callista, name: Callista, as_written: Callista }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: beers-peated-frances
+    name: Peated Frances
+    url: https://www.aslanbrewing.com/beers/peated-frances/
+    abv: 7.2
+    hops_as_written: T radition, Premiant, Perle
+    hops:
+      - { hop: hallertau-tradition, name: T radition, as_written: T radition }
+      - { hop: premiant, name: Premiant, as_written: Premiant }
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: beers-penumbra
+    name: Penumbra
+    url: https://www.aslanbrewing.com/beers/penumbra/
+    abv: 6.5
+    hops_as_written: Citra Cryo, Mosaic, Talus
+    hops:
+      - { hop: citra, name: Citra, form: Cryo, as_written: Citra Cryo }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: talus, name: Talus, as_written: Talus }
+  - slug: beers-purrsuasion
+    name: Purrsuasion
+    url: https://www.aslanbrewing.com/beers/purrsuasion/
+    abv: 5.3
+    hops_as_written: HBC 586
+    hops:
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+  - slug: beers-raspberry-disco-lemonade
+    name: Raspberry Disco Lemonade
+    url: https://www.aslanbrewing.com/beers/raspberry-disco-lemonade/
+    abv: 4.5
+    hops_as_written: Perle
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: beers-smoked-bock-helles
+    name: Rauch Bock Hell
+    url: https://www.aslanbrewing.com/beers/smoked-bock-helles/
+    abv: 5.9
+    hops_as_written: Hersbrucker
+    hops:
+      - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
+  - slug: beers-rose-sauvage
+    name: Rosé Sauvage
+    url: https://www.aslanbrewing.com/beers/rose-sauvage/
+    abv: 5.0
+    hops_as_written: Hallertau Blanc, Nelson Sauvin
+    hops:
+      - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: beers-satans-airport
+    name: Satan's Airport
+    url: https://www.aslanbrewing.com/beers/satans-airport/
+    abv: 8.5
+    hops_as_written: Amarillo, Cascade, Centennial, Eureka
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: eureka, name: Eureka, as_written: Eureka }
+  - slug: beers-sauvage
+    name: Sauvage
+    url: https://www.aslanbrewing.com/beers/sauvage/
+    abv: 5.0
+    hops_as_written: Nelson Sauvin
+    hops:
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: beers-say-it-loud
+    name: Say It Loud
+    url: https://www.aslanbrewing.com/beers/say-it-loud/
+    abv: 5.4
+    hops_as_written: Mosaic, Talus
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: talus, name: Talus, as_written: Talus }
+  - slug: beers-sea-to-sea
+    name: Sea To Sea
+    url: https://www.aslanbrewing.com/beers/sea-to-sea/
+    abv: 5.5
+    hops_as_written: Smaragd
+    hops:
+      - { hop: smaragd, name: Smaragd, as_written: Smaragd }
+  - slug: beers-skid-vicious
+    name: Skid Vicious
+    url: https://www.aslanbrewing.com/beers/skid-vicious/
+    abv: 4.2
+    hops_as_written: Pekko
+    hops:
+      - { hop: pekko, name: Pekko, as_written: Pekko }
+  - slug: beers-softer-times
+    name: Softer Times
+    url: https://www.aslanbrewing.com/beers/softer-times/
+    hops_as_written: Barbe Rouge, Mandarina Bavaria
+    hops:
+      - { hop: barbe-rouge, name: Barbe Rouge, as_written: Barbe Rouge }
+      - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina Bavaria }
+  - slug: beers-sparkling-hop-water
+    name: Sparkling Hop Water
+    url: https://www.aslanbrewing.com/beers/sparkling-hop-water/
+    hops_as_written: Whole Cone Mosaic & Simcoe
+    hops:
+      - { hop: mosaic, name: Mosaic, form: whole cone, as_written: Whole Cone Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: beers-stratadelic
+    name: Stratadelic
+    url: https://www.aslanbrewing.com/beers/stratadelic/
+    abv: 6.5
+    hops_as_written: Strata
+    hops:
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: beers-tateyama
+    name: Tateyama
+    url: https://www.aslanbrewing.com/beers/tateyama/
+    abv: 4.5
+    hops_as_written: Adeena
+    hops:
+      - { hop: adeena, name: Adeena, as_written: Adeena }
+  - slug: beers-tenth-life
+    name: Tenth Life
+    url: https://www.aslanbrewing.com/beers/tenth-life/
+    abv: 6.7
+    hops_as_written: Ekuanot, Centennial, Azacca, El Dorado, Mosaic
+    hops:
+      - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: beers-the-long-dark
+    name: The Long Dark
+    url: https://www.aslanbrewing.com/beers/the-long-dark/
+    abv: 5.1
+    hops_as_written: Saaz
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: beers-tide-breaker
+    name: Tide Breaker
+    url: https://www.aslanbrewing.com/beers/tide-breaker/
+    abv: 6.2
+    hops_as_written: Amarillo, Chinook, Krush, Mosaic, Strata
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: beers-turn-n-burn
+    name: Turn N’ Burn
+    url: https://www.aslanbrewing.com/beers/turn-n-burn/
+    abv: 4.9
+    hops_as_written: Ariana, Spalt Select
+    hops:
+      - { hop: ariana, name: Ariana, as_written: Ariana }
+      - { hop: spalter-select, name: Spalt Select, as_written: Spalt Select }
+  - slug: beers-unidos-yppnd
+    name: Unidos
+    url: https://www.aslanbrewing.com/beers/unidos-yppnd/
+    abv: 4.6
+    hops_as_written: Perle, Hersbrucker
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
+  - slug: beers-vienna-lager1
+    name: Vienna Lager
+    url: https://www.aslanbrewing.com/beers/vienna-lager1/
+    abv: 4.6
+    hops_as_written: Perle, Adeena
+    hops:
+      - { hop: perle, name: Perle, as_written: Perle }
+      - { hop: adeena, name: Adeena, as_written: Adeena }
+  - slug: beers-guild-collab-westies-with-our-besties
+    name: Wa Brewers Guild Collab
+    url: https://www.aslanbrewing.com/beers/guild-collab-westies-with-our-besties/
+    abv: 6.5
+    hops_as_written: Cascade, Cryo, Citra, Idaho 7, Simcoe
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: beers-worlds-first
+    name: World's First Regenerative Organic Certified IPA
+    url: https://www.aslanbrewing.com/beers/worlds-first/
+    abv: 6.4
+    hops_as_written: Chinook, Strata
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: beers-yakima-select
+    name: Yakima Select
+    url: https://www.aslanbrewing.com/beers/yakima-select/
+    abv: 4.8
+    hops_as_written: Talus
+    hops:
+      - { hop: talus, name: Talus, as_written: Talus }
+  - slug: beers-sumava
+    name: Šumava
+    url: https://www.aslanbrewing.com/beers/sumava/
+    abv: 4.5
+    hops_as_written: Saaz
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }

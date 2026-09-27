@@ -1,0 +1,85 @@
+brewery:
+  slug: ecliptic
+  name: Ecliptic Brewing
+  city: Portland
+  state: OR
+  url: https://eclipticbrewing.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-27'
+beers:
+  - slug: astro-fresh-hop-italian-style
+    name: Astro Fresh Hop Italian-Style
+    url: https://eclipticbrewing.com/beer/astro-fresh-hop-italian-style/
+    abv: 5.5
+    hops_as_written: ' BEER ABOUT Astro Fresh Hop Italian-Style Astro, originating from the Greek word for star, shines with Mount Rainier hops.  A crisp, clean lager to celebrate the annual hop harvest.'
+    hops:
+      - { hop: mount-rainier, name: Mount Rainier, fresh: true, as_written: Mount Rainier }
+  - slug: ecliptic-capella
+    name: Capella Porter
+    url: https://eclipticbrewing.com/beer/ecliptic-capella/
+    abv: 5.2
+    hops_as_written: ' A collection of American hops (Nugget, Chinook, Centennial and Cascade) brighten this lively porter.'
+    hops:
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: ligo
+    name: LIGO West Coast IPA
+    url: https://eclipticbrewing.com/beer/ligo/
+    abv: 6.5
+    hops_as_written: ' BEER ABOUT LIGO West Coast IPA LIGO West Coast IPA is brewed with Pale Malt and features a modern hop profile highlighted with Mosaic, Simcoe and Strata.'
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: oort
+    name: Oort Imperial Stout
+    url: https://eclipticbrewing.com/beer/oort/
+    hops_as_written: ' Chinook, Cascade and Sterling hops lend a balanced bitterness and subtle hop flavor to this brew that’s as black as the vacuum of space.'
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: orange-giant
+    name: Orange Giant Barleywine
+    url: https://eclipticbrewing.com/beer/orange-giant/
+    abv: 12.5
+    hops_as_written: ' Copious amounts of Chinook and Nugget hops combine for a nice resin hop flavor.'
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+  - slug: ecliptic-orbiter
+    name: Orbiter IPA
+    url: https://eclipticbrewing.com/beer/ecliptic-orbiter/
+    abv: 7.4
+    hops_as_written: ' BEER ABOUT Orbiter IPA Orbiter IPA unites a constellation of hops (Cascade, Centennial, Chinook and Columbus and Simcoe) to create a formidable IPA.  Bright and citrusy hop flavors shine in a medium body with caramel malt character.'
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: phaser
+    name: Phaser Hazy IPA
+    url: https://eclipticbrewing.com/beer/phaser/
+    abv: 6.5
+    hops_as_written: ' BEER ABOUT Phaser Hazy IPA Juicy and unfiltered, Phaser Hazy IPA stuns with a lively array of fruity hop notes.  Phaser features Citra, Azacca, Mosaic, and Calypso hops.'
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: calypso, name: Calypso, as_written: Calypso }
+  - slug: ecliptic-starburst
+    name: Starburst IPA
+    url: https://eclipticbrewing.com/beer/ecliptic-starburst/
+    abv: 7.8
+    hops_as_written: ' BEER ABOUT Starburst IPA A starburst galaxy produces an exceptionally high amount of stars, similar to how Ecliptic Starburst IPA produces a soaring amount of hop flavor.  Brewed with Amarillo, Azacca, Centennial, Citra, Mosaic and Simcoe hops for fresh flavors of citrus, fruit and pine.  100% Pale malt makes for a super clean finish and puts the focus on the hop flavors and aromas.  Dry hoppe...'
+    hops:
+      - { hop: galaxy, name: Galaxy, as_written: galaxy }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }

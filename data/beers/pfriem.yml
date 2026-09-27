@@ -651,7 +651,7 @@ beers:
     abv: 6.9
     hops_as_written: Strata
     hops:
-      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: strata, name: Strata, fresh: true, as_written: Strata }
   - slug: fresh-hop-pale
     name: Fresh Hop Strata Pale
     url: https://www.pfriembeer.com/beer/fresh-hop-pale/
@@ -679,7 +679,7 @@ beers:
     abv: 6.2
     hops_as_written: Aged Whole Leaf Noble Hops
     hops:
-      - { hop: null, name: Aged Whole Leaf Noble, as_written: Aged Whole Leaf Noble Hops }
+      - { hop: null, name: Aged Whole Leaf, as_written: Aged Whole Leaf Noble Hops }
   - slug: german-coast-pils
     name: German Coast Pils
     url: https://www.pfriembeer.com/beer/german-coast-pils/
@@ -864,7 +864,7 @@ beers:
     abv: 6.0
     hops_as_written: Aged Whole Leaf Noble Hops
     hops:
-      - { hop: null, name: Aged Whole Leaf Noble, as_written: Aged Whole Leaf Noble Hops }
+      - { hop: null, name: Aged Whole Leaf, as_written: Aged Whole Leaf Noble Hops }
   - slug: lemon-zest-farmhouse-ale
     name: Lemon Zest Farmhouse Ale
     url: https://www.pfriembeer.com/beer/lemon-zest-farmhouse-ale/
@@ -1220,7 +1220,7 @@ beers:
     hops:
       - { hop: krush, name: Krush, as_written: Krush }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
-      - { hop: null, name: 'Riwaka Advanced  Products Euphorics: Pineapple Paradise', as_written: 'Riwaka Advanced Hop Products Euphorics: Pineapple Paradise' }
+      - { hop: null, name: 'Riwaka Advanced Products Euphorics: Pineapple Paradise', as_written: 'Riwaka Advanced Hop Products Euphorics: Pineapple Paradise' }
   - slug: pfriem-great-notion-hazy-ipa
     name: Pfriem + Great Notion Hazy IPA
     url: https://www.pfriembeer.com/beer/pfriem-great-notion-hazy-ipa/
@@ -1405,14 +1405,14 @@ beers:
     abv: 6.6
     hops_as_written: Aged Whole Leaf Noble
     hops:
-      - { hop: null, name: Aged Whole Leaf Noble, as_written: Aged Whole Leaf Noble }
+      - { hop: null, name: Aged Whole Leaf, as_written: Aged Whole Leaf Noble }
   - slug: spontanee-3-year-blend
     name: Spontanée 3 Year Blend
     url: https://www.pfriembeer.com/beer/spontanee-3-year-blend/
     abv: 5.8
     hops_as_written: Aged whole leaf noble
     hops:
-      - { hop: null, name: Aged whole leaf noble, as_written: Aged whole leaf noble }
+      - { hop: null, name: Aged whole leaf, as_written: Aged whole leaf noble }
   - slug: star-party-ipa
     name: Star Party IPA
     url: https://www.pfriembeer.com/beer/star-party-ipa/

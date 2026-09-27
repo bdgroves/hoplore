@@ -227,6 +227,23 @@ export function renderBeers({ breweries, bySlug, meta }) {
     .join('\n');
 
   const total = order.reduce((n, b) => n + b.beers.length, 0);
+
+  // Which hops these breweries reach for most: each beer counts a hop once.
+  const use = new Map();
+  for (const b of order) for (const beer of b.beers) for (const e of hopBill(beer)) if (e.slug) use.set(e.slug, (use.get(e.slug) ?? 0) + 1);
+  const top = [...use.entries()].sort((x, y) => y[1] - x[1]).slice(0, 15);
+  const topBlock = top.length
+    ? `<section class="block most-used">
+    <h2>The hops they reach for <span class="fine">· how many of these ${total} beers use each one</span></h2>
+    <ol class="bars">
+      ${top
+        .map(([slug, n]) => `<li><span class="bar-name"><a href="${base}hops/${slug}/">${esc(bySlug[slug]?.name ?? slug)}</a></span>
+        <span class="bar-track"><span class="bar-fill" style="width:${((n / top[0][1]) * 100).toFixed(1)}%;--mark:var(--gold)"></span></span>
+        <span class="bar-val num">${n}</span><span class="bar-delta num">${Math.round((n / total) * 100)}%</span></li>`)
+        .join('\n      ')}
+    </ol>
+  </section>`
+    : '';
   const body = `
 <header class="masthead" style="padding-top:1.5rem">
   <div class="wrap">
@@ -250,6 +267,7 @@ export function renderBeers({ breweries, bySlug, meta }) {
     <div class="jump">${jump}</div>
   </div>
   <p class="fine" id="bq-count" hidden></p>
+  ${topBlock}
   ${fresh.length ? `<section class="block fresh-season" id="fresh-hop">
     <h2>Fresh hop season <span class="fine">· ${fresh.length} beer${fresh.length === 1 ? '' : 's'} brewed with hops straight off the bine</span></h2>
     <ul class="beerlist">
@@ -269,18 +287,23 @@ ${footer(base, meta)}
   });
 }
 
-/** Block for a hop's own page: which beers it's in. */
-export function hopBeersBlock(list, base) {
+/** Block for a hop's own page: which beers it's in. Fresh-hop beers first,
+ *  then a dozen more; the full list is a search on the beers page. */
+export function hopBeersBlock(list, base, hopName = '') {
   if (!list?.length) return '';
+  const sorted = [...list].sort((a, b) => Number(b.fresh) - Number(a.fresh));
+  const shown = sorted.slice(0, 12);
+  const breweries = new Set(list.map((x) => x.brewery.slug)).size;
   return `<section class="block">
-    <h2>In the glass</h2>
+    <h2>In the glass <span class="fine">· ${list.length} beer${list.length === 1 ? '' : 's'} from ${breweries} brewer${breweries === 1 ? 'y' : 'ies'}</span></h2>
     <ul class="beerlist compact">
-      ${list
+      ${shown
         .map(
           (x) => `<li><a href="${base}beers/${x.brewery.slug}/${x.beer.slug}/">${esc(x.beer.name)}</a>
         <span class="fine">${esc(x.brewery.name)}${x.fresh ? ' · <span class="fresh">fresh hop</span>' : ''}</span></li>`
         )
         .join('\n      ')}
     </ul>
+    ${list.length > shown.length ? `<p class="fine"><a href="${base}beers/?q=${encodeURIComponent(hopName.toLowerCase())}">All ${list.length} beers with ${esc(hopName)} →</a></p>` : ''}
   </section>`;
 }

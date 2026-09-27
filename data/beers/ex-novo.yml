@@ -1306,7 +1306,7 @@ beers:
     hops_as_written: Citra Hyperboost, El Dorado Dry Hops Citra T90, El Dorado T90
     hops:
       - { hop: citra, name: Citra, form: HyperBoost, as_written: Citra Hyperboost }
-      - { hop: null, name: El Dorado Dry  Citra, form: T90, as_written: El Dorado Dry Hops Citra T90 }
+      - { hop: null, name: El Dorado Dry Citra, form: T90, as_written: El Dorado Dry Hops Citra T90 }
       - { hop: el-dorado, name: El Dorado, form: T90, as_written: El Dorado T90 }
   - slug: twice-in-a-lifetime
     name: Twice In A Lifetime

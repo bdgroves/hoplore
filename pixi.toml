@@ -102,6 +102,7 @@ test-usda-nass = "python tools/ingest/test_usda_nass.py"
 # from the copies saved by tools/ingest/snapshot.py. See sheets.yml.
 sheets = "python tools/ingest/sheets.py"
 beers = "python tools/ingest/beers.py"
+scanned-beer = "python tools/ingest/scanned_beer.py"
 barthhaas-aromas = "python tools/ingest/barthhaas_aromas.py"
 snapshot = "python tools/ingest/snapshot.py"
 

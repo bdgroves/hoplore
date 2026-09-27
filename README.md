@@ -46,7 +46,8 @@ That's the whole thesis. Nobody hand-writes a published range in this repo. You 
 - **A page per hop** — every source plotted on its own range bar, the oil breakdown, aroma, beer styles, pedigree, and ranked substitutes.
 - **[The hop landscape](https://brooksgroves.com/hoplore/landscape/)** — every hop with published figures on one chart, bittering power against aroma oil. Each hop carries a cross out to the widest range any source reported, so a big cross means the sources disagree or the crop swings year to year. Every hop page links in with that hop lit up.
 - **[Where America's hops grow](https://brooksgroves.com/hoplore/grown/)** — Washington grows three-quarters of the US crop, and this is the page that shows it: acres for every variety USDA counts in Washington, Oregon and Idaho, 2015 to 2025, straight from the National Hop Report. Every hop that's in the survey gets its own *Where it's grown* chart too — Citra is the No. 1 hop by acreage in both Washington and Oregon.
-- **[What's in the can](https://brooksgroves.com/hoplore/beers/)** — pick a beer, see its hops. 500+ beers from Pacific Northwest breweries — Fort George in Astoria, pFriem, Double Mountain and Kings & Daughters in Hood River, Breakside and Ex Novo in Portland, 7 Seas in Tacoma — each with a page of its own, each hop opened up — aroma, alpha, oil breakdown, how many acres of it Washington and Oregon grew — with Cryo and fresh-hop additions called out (Fresh Hop Mirrored Realities: fresh Strata from Coleman Farms). Every hop page lists the beers it's in.
+- **[What's in the can](https://brooksgroves.com/hoplore/beers/)** — pick a beer, see its hops. 1,300+ beers from 15 Pacific Northwest breweries — Seattle (Cloudburst, Reuben's, Fair Isle, Elysian, Holy Mountain, Fremont), Bellingham (Aslan), Tacoma (7 Seas), Hood River (pFriem, Double Mountain, Kings & Daughters), Portland (Breakside, Ex Novo, Ecliptic) and Astoria (Fort George) — each with a page of its own, each hop opened up — aroma, alpha, oil breakdown, how many acres of it Washington and Oregon grew — with Cryo and fresh-hop additions called out (Fresh Hop Mirrored Realities: fresh Strata from Coleman Farms). Every hop page lists the beers it's in.
+- **[Scan a beer](https://brooksgroves.com/hoplore/scan/)** — photograph a can, a bottle or a tap list (or paste the brewery's text) and see its hops. Claude reads the picture through the site's Cloudflare Worker, so no key is ever in the browser; keeping it opens a prefilled GitHub issue that a workflow turns into data.
 - **Honesty built into the page.** A hop with only a placeholder citation gets a red "needs a citation" badge. A stub with no numbers says *awaiting data*. A brewing role that hasn't been sourced says *role ?* instead of quietly guessing. An oil breakdown that doesn't account for enough of the oil isn't drawn at all — rather than scaling two trace compounds up to 100% and inventing the rest.
 
 It all works with JavaScript off. JavaScript adds search, filters and tooltips on top.
@@ -239,7 +240,9 @@ Next, roughly in order of how much I want it:
 - [ ] A mini landscape on every hop page, with that hop and its substitutes highlighted
 - [ ] Side-by-side compare for 2–4 hops
 - [ ] More sources: NZ Hops, Hop Products Australia, Charles Faram — for the ~30 hops no current source covers
-- [ ] More breweries on What's in the can — Seattle and more of Tacoma next (most Tacoma breweries don't publish hop lists yet)
+- [x] Seattle breweries on What's in the can
+- [x] Scan a beer: photograph a can or paste the text, see the hops, add it with one GitHub issue
+- [ ] Stoup, Georgetown and the other breweries whose beer pages are drawn by JavaScript
 - [ ] Plant patents as a source: public domain, breeder-authored, and they carry the pedigree marketing sheets leave out
 - [ ] Crop-year data, so you can watch alpha drift across harvests instead of reading one eternal average
 - [ ] BeerXML / BeerJSON import: paste a recipe, get told what's substitutable
