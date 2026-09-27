@@ -67,29 +67,24 @@ links back to the repo.
 `false` means they do not carry that variety — proprietary HBC and YCR hops like
 Citra, Mosaic and Simcoe are licensed elsewhere, so there is no sheet to fetch.
 
-### Why `--discover` probes instead of lists
+### How `--discover` finds their catalog
 
-The variety-data-sheets index page renders its grid client-side — a plain
-`requests` fetch sees the nav and footer (51 `<a>` tags) and zero variety
-links. Their WordPress sitemap doesn't cover it either: `sitemap.xml`'s eight
-child sitemaps are post/page/news/blog/events/mediapr/category/type, and none
-of those list a `variety-data-sheets` URL. Checked by hand, not assumed.
+The variety-data-sheets index page renders its grid client-side and their
+WordPress sitemap doesn't list the sheets (both checked by hand), so there's
+no listing to read. But every sheet links to others: a **"NEXT HOP >"** link
+that chains the whole catalog, plus "Hop Alternatives" links. `--discover`
+walks those links breadth-first from Centennial and returns every sheet that
+actually loads, keyed by the name in their URL (`Hallertauer-Tradition`) with
+the display name taken from the link text.
 
-So `discover_varieties()` doesn't scrape a listing — there isn't one
-available without rendering JavaScript. It probes instead: for every variety
-in `data/reference/varieties.yml` not already resolved (true or false) in
-`hopsteiner_map.yml`, it guesses a URL (`slug_candidates()` — title-case,
-hyphenated, plus a German-transliterated variant) and keeps whatever comes
-back `200`. A miss means *unconfirmed*, not *Hopsteiner doesn't have it* —
-`hopsteiner_map.yml`'s `Hallertauer-Mittelfrueh` for our `Hallertau Mittelfrüh`
-is proof the mechanical guess doesn't always match their actual URL.
+`--catalog` does the same walk and writes the result to
+`catalogs/hopsteiner.json`, so what they publish is on record in the repo.
+The **Snapshot a source catalog** workflow runs it on GitHub's runners.
 
-If you want true discovery of varieties nobody has entered into the
-reference list yet, that needs either a headless-browser fetch (Playwright —
-a real dependency this project has otherwise avoided) or finding whatever
-JSON endpoint the JS grid actually calls (open the index page in a browser,
-DevTools → Network → XHR). Neither is implemented; this is the deliberately
-lighter-weight version.
+(This replaced an earlier approach that guessed URLs from the reference list.
+Guessing could only confirm names we already knew, and it got their naming
+wrong often enough — `Hallertau-Tradition` for `Hallertauer-Tradition` — that
+62 guesses turned out false.)
 
 **Gotcha already hit once:** the probe uses `GET`, not `HEAD`. An earlier
 version used `HEAD` on the theory that it's cheaper (no response body), and

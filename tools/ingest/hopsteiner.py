@@ -356,110 +356,92 @@ def report(sheet: Sheet, record: CommentedMap | None, verbose: bool) -> None:
 # ---------------------------------------------------------------------- discover
 
 
-REFERENCE_FILE = ROOT / "data" / "reference" / "varieties.yml"
+SEED = "Centennial"
+CATALOG_FILE = Path(__file__).parent / "catalogs" / "hopsteiner.json"
+SHEET_LINK = re.compile(r"/variety-data-sheets/([^/?#]+)/?$")
 
 
-def load_reference() -> dict[str, str]:
-    """{slug: display name} from data/reference/varieties.yml."""
-    entries = yaml.load(REFERENCE_FILE.read_text(encoding="utf-8")) or []
-    return {e["slug"]: e["name"] for e in entries if e.get("slug") and e.get("name")}
-
-
-def slug_candidates(name: str) -> list[str]:
-    """
-    Guess the URL segment Hopsteiner might use for a display name, e.g.
-    "Mount Hood" -> "Mount-Hood". Not reliable for every naming quirk —
-    hopsteiner_map.yml's confirmed "Hallertauer-Mittelfrueh" for our
-    "Hallertau Mittelfrüh" is not a mechanical transform of the name at all,
-    it is a different word form on top of the transliteration. Treat a miss
-    as "unconfirmed", never as "Hopsteiner doesn't carry this".
-    """
-    base = name.strip()
-    translit = (
-        base.replace("ü", "ue").replace("Ü", "Ue")
-        .replace("ö", "oe").replace("Ö", "Oe")
-        .replace("ä", "ae").replace("Ä", "Ae")
-        .replace("ß", "ss")
-    )
-    seen: list[str] = []
-    for text in (base, translit):
-        cleaned = re.sub(r"[!'’.®™]", "", text)
-        cleaned = re.sub(r"\s+", "-", cleaned.strip())
-        if cleaned and cleaned not in seen:
-            seen.append(cleaned)
-    return seen
+def page_links(html: str) -> dict[str, str]:
+    """Every link on a sheet that points at another sheet: {their-name: link text}."""
+    soup = BeautifulSoup(html, "lxml")
+    found: dict[str, str] = {}
+    for a in soup.find_all("a", href=True):
+        m = SHEET_LINK.search(a["href"])
+        if not m:
+            continue
+        name = m.group(1)
+        text = a.get_text(" ", strip=True)
+        # "NEXT HOP >" and friends are navigation, not a name.
+        if not text or re.search(r"next|prev|back", text, re.I):
+            text = ""
+        if name not in found or (text and not found[name]):
+            found[name] = text
+    return found
 
 
 def discover_varieties(delay: float) -> dict[str, str]:
     """
-    Hopsteiner's variety-data-sheets index page renders its grid client-side.
-    A plain HTML fetch of that page sees zero variety links (confirmed:
-    51 <a> tags, all nav/footer, none pointing at an individual variety).
-    Their WordPress sitemap does not cover it either — sitemap.xml's eight
-    child sitemaps are post/page/news/blog/events/mediapr/category/type,
-    and none of those list a variety-data-sheets URL. Checked by hand before
-    writing this; see the project's HANDOFF.md for the transcript.
+    Walk Hopsteiner's catalog by following links between data sheets.
 
-    So this does not scrape a listing — there isn't one available to us
-    without rendering JavaScript. Instead it *probes*: for every variety in
-    data/reference/varieties.yml that hopsteiner_map.yml has not already
-    resolved (true or false), it guesses a URL via slug_candidates() and
-    keeps the guesses that come back 200.
+    Their index page renders its grid client-side and their sitemap doesn't
+    list the sheets (both checked by hand), so there is no listing to read.
+    But every sheet links to others: a "NEXT HOP >" link that chains the
+    whole catalog, plus "Hop Alternatives" links. A breadth-first walk from
+    one known sheet therefore reaches every variety they publish -- a real
+    listing, not the reference-list URL guessing this replaced (which could
+    only confirm names we already knew, and got "Hallertauer Tradition"
+    wrong as "Hallertau-Tradition").
 
-    This can only confirm names HopLore already knows about. It cannot find
-    a cultivar nobody has heard of yet — that would need either a rendered
-    fetch (see tools/ingest/README.md) or manual discovery of whatever API
-    the JS grid actually calls.
-
-    Uses GET, not HEAD. A prior version used HEAD and it was wrong: on a
-    real batch of 118 candidates HEAD returned 200 for all of them, but a
-    real GET (during --apply, minutes later) 404'd on 60 of those same
-    URLs. This server evidently doesn't validate the path the same way for
-    both methods — treat any HEAD-based result from this site as unreliable.
-    GET is heavier (the full page body, ~50KB, gets downloaded and thrown
-    away) but it's the only method that's actually been confirmed to agree
-    with what --apply's real fetch sees.
-
-    Returns {our-slug: confirmed-url}, keyed by our slug rather than theirs,
-    since there is no "their slug" for a candidate until it resolves.
+    Returns {their-url-name: display name}. Uses GET via fetch(), cached --
+    see the HEAD/GET gotcha in tools/ingest/README.md.
     """
-    mapping = load_map()
-    reference = load_reference()
-    candidates = {slug: name for slug, name in reference.items() if slug not in mapping}
-
-    found: dict[str, str] = {}
-    for slug, name in candidates.items():
-        for guess in slug_candidates(name):
-            url = f"{BASE}{guess}/"
-            time.sleep(delay)
-            try:
-                resp = requests.get(url, headers={"User-Agent": UA}, timeout=15, allow_redirects=True)
-            except requests.RequestException:
-                continue
-            if resp.status_code == 200:
-                found[slug] = url
-                break
-
-    return found
+    names: dict[str, str] = {}
+    queue = [SEED]
+    seen: set[str] = set()
+    loaded: set[str] = set()
+    while queue:
+        name = queue.pop(0)
+        if name in seen:
+            continue
+        seen.add(name)
+        try:
+            html = fetch(f"{BASE}{name}/", delay)
+        except requests.RequestException:
+            continue  # a dead link on their side; it isn't a variety we can read
+        loaded.add(name)
+        for linked, text in page_links(html).items():
+            if text and not names.get(linked):
+                names[linked] = text
+            names.setdefault(linked, "")
+            if linked not in seen:
+                queue.append(linked)
+    # Only names whose own page actually loaded count as catalog entries.
+    return {n: (names.get(n) or n.replace("-", " ")) for n in sorted(loaded)}
 
 
 def discover(delay: float, as_json: bool) -> None:
     varieties = discover_varieties(delay)
-
     if as_json:
-        print(json.dumps({"source": SOURCE_ID, "varieties": varieties}, indent=2))
+        print(json.dumps({"source": SOURCE_ID, "varieties": varieties}, indent=2, ensure_ascii=False))
         return
+    mapped = {v for v in load_map().values() if v}
+    print(f"\n{len(varieties)} data sheets reachable from {SEED}:\n")
+    for name, display in varieties.items():
+        flag = "" if name in mapped else "   <- not in hopsteiner_map.yml"
+        print(f"  {name:<32} {display}{flag}")
+    print()
 
-    print(f"\n{len(varieties)} reference variety URL(s) confirmed by probing (of the ones not already in hopsteiner_map.yml):\n")
-    for slug in sorted(varieties):
-        url = varieties[slug]
-        guessed_name = url.rstrip("/").rsplit("/", 1)[-1]
-        print(f"  {slug:<24} {url}")
-        print(f"    -> paste into hopsteiner_map.yml:  {slug}: {guessed_name}")
-    print(
-        "\nA slug not listed here was not confirmed — that means \"unknown\", not \"absent\". "
-        "See discover_varieties()'s docstring for why a full listing isn't available.\n"
+
+def write_catalog(delay: float) -> None:
+    """Snapshot the crawled catalog to catalogs/hopsteiner.json (for the repo)."""
+    varieties = discover_varieties(delay)
+    CATALOG_FILE.parent.mkdir(exist_ok=True)
+    CATALOG_FILE.write_text(
+        json.dumps({"source": SOURCE_ID, "crawled": time.strftime("%Y-%m-%d"), "seed": SEED,
+                    "count": len(varieties), "varieties": varieties}, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
     )
+    print(f"wrote {CATALOG_FILE.relative_to(ROOT)}: {len(varieties)} varieties")
 
 
 # -------------------------------------------------------------------------- CLI
@@ -476,6 +458,7 @@ def main() -> int:
     parser.add_argument("--all", action="store_true", help="every mapped variety")
     parser.add_argument("--discover", action="store_true", help="list what Hopsteiner publishes")
     parser.add_argument("--json", action="store_true", help="with --discover, machine-readable output")
+    parser.add_argument("--catalog", action="store_true", help="crawl the catalog and write catalogs/hopsteiner.json")
     parser.add_argument("--apply", action="store_true", help="write changes to data/hops/")
     parser.add_argument("--force", action="store_true", help="replace existing hopsteiner observations")
     parser.add_argument("--refresh", action="store_true", help="ignore the local cache")
@@ -484,6 +467,9 @@ def main() -> int:
     parser.add_argument("--verbose", action="store_true", help="show fields we do not model")
     args = parser.parse_args()
 
+    if args.catalog:
+        write_catalog(args.delay)
+        return 0
     if args.discover:
         discover(args.delay, args.json)
         return 0
