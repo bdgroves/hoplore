@@ -1,0 +1,246 @@
+{
+  "source": "hbc",
+  "crawled": "2026-09-27",
+  "url": "https://www.hopbreeding.com/",
+  "count": 10,
+  "varieties": {
+    "hbc-1019": "Dolcita",
+    "hbc-586": "Krush",
+    "hbc-394": "Citra",
+    "hbc-369": "Mosaic",
+    "hbc-366": "Ekuanot",
+    "hbc-291": "Loral",
+    "hbc-438": "Sabro",
+    "hbc-682": "TerraFlux",
+    "hbc-692": "Talus",
+    "hbc-1325": "TerraSurge"
+  },
+  "details": {
+    "hbc-1019": {
+      "name": "Dolcita",
+      "aromas": [],
+      "values": {
+        "alpha_acid": [
+          7.5,
+          12.9
+        ],
+        "beta_acid": [
+          7.2,
+          12.2
+        ],
+        "total_oil": [
+          1.0,
+          2.7
+        ]
+      }
+    },
+    "hbc-586": {
+      "name": "Krush",
+      "aromas": [],
+      "values": {
+        "alpha_acid": [
+          10.1,
+          14.1
+        ],
+        "beta_acid": [
+          6.3,
+          9.4
+        ],
+        "total_oil": [
+          1.5,
+          3.0
+        ]
+      }
+    },
+    "hbc-394": {
+      "name": "Citra",
+      "aromas": [
+        "-forward"
+      ],
+      "values": {
+        "alpha_acid": [
+          11.0,
+          13.0
+        ],
+        "beta_acid": [
+          3.5,
+          4.5
+        ],
+        "cohumulone": [
+          22.0,
+          24.0
+        ],
+        "total_oil": [
+          2.2,
+          2.8
+        ],
+        "myrcene": [
+          60.0,
+          65.0
+        ],
+        "caryophyllene": [
+          6.0,
+          8.0
+        ],
+        "humulene": [
+          11.0,
+          13.0
+        ],
+        "farnesene": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "hbc-369": {
+      "name": "Mosaic",
+      "aromas": [],
+      "values": {
+        "alpha_acid": [
+          11.5,
+          13.5
+        ],
+        "beta_acid": [
+          3.2,
+          3.9
+        ],
+        "cohumulone": [
+          24.0,
+          26.0
+        ],
+        "total_oil": [
+          1.0,
+          1.5
+        ],
+        "myrcene": [
+          47.0,
+          53.0
+        ],
+        "caryophyllene": [
+          5.2,
+          7.8
+        ],
+        "humulene": [
+          13.0,
+          16.0
+        ],
+        "farnesene": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "hbc-366": {
+      "name": "Ekuanot",
+      "aromas": [],
+      "values": {
+        "alpha_acid": [
+          14.5,
+          15.5
+        ],
+        "beta_acid": [
+          4.5,
+          5.5
+        ],
+        "cohumulone": [
+          32.0,
+          38.0
+        ],
+        "total_oil": [
+          2.5,
+          4.5
+        ]
+      }
+    },
+    "hbc-291": {
+      "name": "Loral",
+      "aromas": [],
+      "values": {
+        "alpha_acid": [
+          11.3,
+          12.2
+        ],
+        "beta_acid": [
+          4.9,
+          5.3
+        ],
+        "cohumulone": [
+          21.0,
+          24.0
+        ],
+        "total_oil": [
+          1.8,
+          2.9
+        ]
+      }
+    },
+    "hbc-438": {
+      "name": "Sabro",
+      "aromas": [],
+      "values": {
+        "alpha_acid": [
+          12.0,
+          16.0
+        ],
+        "total_oil": [
+          2.5,
+          3.5
+        ]
+      }
+    },
+    "hbc-682": {
+      "name": "TerraFlux",
+      "aromas": [],
+      "values": {
+        "alpha_acid": [
+          14.0,
+          23.0
+        ],
+        "beta_acid": [
+          4.0,
+          8.9
+        ],
+        "total_oil": [
+          1.0,
+          5.0
+        ]
+      }
+    },
+    "hbc-692": {
+      "name": "Talus",
+      "aromas": [],
+      "values": {
+        "alpha_acid": [
+          8.9,
+          9.5
+        ],
+        "beta_acid": [
+          8.3,
+          10.2
+        ],
+        "total_oil": [
+          1.0,
+          2.2
+        ]
+      }
+    },
+    "hbc-1325": {
+      "name": "TerraSurge",
+      "aromas": [],
+      "values": {
+        "alpha_acid": [
+          16.0,
+          22.0
+        ],
+        "beta_acid": [
+          5.8,
+          8.1
+        ],
+        "total_oil": [
+          1.4,
+          4.5
+        ]
+      }
+    }
+  }
+}
