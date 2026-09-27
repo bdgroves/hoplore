@@ -489,7 +489,7 @@ function substitutesBlock(hop, similar) {
         </div>
         <div class="sub-meta num">aroma ${pct(s.parts.aroma)} · oils ${pct(s.parts.oils)} · chemistry ${pct(s.parts.chemistry)}${s.purpose_shift ? ` · shifts ${esc(s.purpose_shift)}` : ''}${
           s.coverage != null && s.coverage < 1
-            ? ` <span class="sub-partial" title="Scored on ${Math.round(s.coverage * 100)}% of the axes; held back because the rest of this hop isn't measured yet. Unshrunk score ${Math.round(s.raw_score * 100)}.">partial data</span>`
+            ? ` <span class="sub-partial" title="Scored on ${Math.round(s.coverage * 100)}% of the axes; it can only earn that share of the score. On the axes we do have it scores ${Math.round(s.measured_score * 100)}.">partial data</span>`
             : ''
         }</div>
         ${s.note ? `<p class="sub-note">${esc(s.note)}</p>` : ''}
@@ -499,9 +499,9 @@ function substitutesBlock(hop, similar) {
     </ul>
     <p class="callout">Scored on aroma overlap, oil composition and acid
     chemistry, then nudged up where a brewer has vouched for the swap by hand.
-    A hop measured on only one of the three axes has its score pulled toward
-    the middle — one number is weaker evidence than three, and shouldn't
-    outrank a hop we actually know. Anything under 50 is a different beer,
+    An axis we haven't measured earns nothing, so a hop known only by its acid
+    numbers caps out around 30 — the score is how much evidence there is for
+    the swap, not just how close the numbers happen to be. Anything under 50 is a different beer,
     not a substitution.</p>
   </section>`;
 }

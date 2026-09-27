@@ -19,19 +19,22 @@
 const WEIGHTS = { chemistry: 0.3, oils: 0.3, aroma: 0.4 };
 const TOTAL_WEIGHT = Object.values(WEIGHTS).reduce((a, b) => a + b, 0);
 
-// A score computed from one axis is not the same claim as a score computed
-// from three, and must not outrank one. Scores are shrunk toward 0.5 ("we
-// don't know") in proportion to how much of the hop is actually measured:
+// An unmeasured axis contributes nothing. The score is the share of the FULL
+// weight a hop actually earned, not an average over whichever axes happened
+// to be on file:
 //
-//   adjusted = 0.5 + (raw - 0.5) * coverage
+//   score = sum(value * weight) / TOTAL_WEIGHT
 //
-// Without this, a record with only alpha/beta/cohumulone on file scores its
-// bare chemistry number while a fully-measured hop carries the weight of a
-// mediocre aroma match — so Simcoe's top substitute came back as Nugget
-// (chemistry only, 81) ahead of brewer-tested Citra (all three axes, 75).
-// Shrinkage is symmetric on purpose: a bad partial score is pulled up too,
-// because one axis is equally weak evidence of a bad match.
-const shrink = (raw, coverage) => 0.5 + (raw - 0.5) * coverage;
+// Two earlier versions got this wrong in opposite directions. Dividing by
+// the available weight reported a one-axis score at full strength, so
+// Simcoe's top swap came back as chemistry-only Nugget (81) over
+// brewer-tested Citra (75). Shrinking toward 0.5 instead put a floor under
+// ignorance: every one of Nelson Sauvin's suggestions was a chemistry-only
+// stub at ~60, above hops we know well and know are poor matches.
+//
+// Earning it outright fixes both. A chemistry-only match caps at 30 and falls
+// under the "under 50 is a different beer" line without special-casing.
+// parts{} and measured_score still report what the measured axes said.
 
 // Expected spread of each field across the whole hop world, used to normalise
 // differences so 2% alpha does not get compared against 40% cohumulone.
@@ -90,14 +93,13 @@ function score(a, b, aromaTags) {
   }
 
   const coverage = weight / TOTAL_WEIGHT;
-  const raw = weight ? total / weight : 0;
 
   return {
     slug: b.slug,
-    score: weight ? round(shrink(raw, coverage)) : 0,
-    // What the axes on file actually said, before shrinkage. Kept so the
-    // difference between "poor match" and "barely measured" stays visible.
-    raw_score: weight ? round(raw) : 0,
+    score: round(total / TOTAL_WEIGHT),
+    // What the measured axes said on their own, ignoring the unmeasured
+    // ones -- keeps "strong but unconfirmed" distinguishable from "poor".
+    measured_score: weight ? round(total / weight) : 0,
     coverage: round(coverage, 2),
     parts: {
       chemistry: chemistry === null ? null : round(chemistry),
