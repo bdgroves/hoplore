@@ -1,0 +1,12 @@
+FAIL https://www.yakimachief.com/robots.txt: 429 Client Error: Too Many Requests for url: https://www.yakimachief.com/robots.txt
+FAIL https://www.yakimachief.com/sitemap.xml: 429 Client Error: Too Many Requests for url: https://www.yakimachief.com/sitemap.xml
+FAIL https://www.yakimachief.com/variety/idaho-gem-brand: 429 Client Error: Too Many Requests for url: https://www.yakimachief.com/variety/idaho-gem-brand
+FAIL https://www.yakimachief.com/idaho-gem.html: 429 Client Error: Too Many Requests for url: https://www.yakimachief.com/idaho-gem.html
+ok   https://indiehops.com/hops/strata/ (200, 97556 bytes)
+ok   https://indiehops.com/ih-varieties (200, 103890 bytes)
+ok   https://indiehops.com/hops/cascade (200, 90027 bytes)
+FAIL https://www.drjohnhops.com/cultivars/: 403 Client Error: Forbidden for url: https://www.drjohnhops.com/cultivars/
+ok   https://fortgeorgebrewery.com/beer/ (200, 161943 bytes)
+ok   https://fortgeorgebrewery.com/beer/vortex-ipa/ (200, 74968 bytes)
+ok   https://fortgeorgebrewery.com/beer/fresh-hop-mirrored-realities/ (200, 74904 bytes)
+ok   https://fortgeorgebrewery.com/sitemap.xml (200, 1326 bytes)
