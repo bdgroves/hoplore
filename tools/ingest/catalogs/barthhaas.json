@@ -105,487 +105,2573 @@
     "admiral": {
       "name": "Admiral",
       "code": "ADM",
-      "origin": "Great Britain"
+      "origin": "Great Britain",
+      "tastes": [
+        [
+          "zitrus",
+          "Lemon"
+        ],
+        [
+          "rote-beeren",
+          "Cranberry"
+        ],
+        [
+          "sahnekaramell",
+          "Cream"
+        ],
+        [
+          "wurzig",
+          "Pepper"
+        ],
+        [
+          "krautig",
+          "Mate Tea"
+        ]
+      ]
     },
     "agnus": {
       "name": "Agnus",
       "code": "AGN",
-      "origin": "Czech Republic"
+      "origin": "Czech Republic",
+      "tastes": [
+        [
+          "holzig-aromatisch",
+          "Tobacco"
+        ],
+        [
+          "holzig-aromatisch",
+          "Leather"
+        ],
+        [
+          "wurzig",
+          "Lovage"
+        ],
+        [
+          "susse-fruchte",
+          "Dried Fruits"
+        ],
+        [
+          "sahnekaramell",
+          "Honey"
+        ]
+      ]
     },
     "amarillor-vgxp01-cv": {
       "name": "Amarillo®",
       "code": "VG1",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Apricot"
+        ],
+        [
+          "zitrus",
+          "Grapefruit"
+        ],
+        [
+          "susse-fruchte",
+          "Honeydew Melon"
+        ],
+        [
+          "sahnekaramell",
+          "Yoghurt"
+        ],
+        [
+          "krautig",
+          "Black Tea"
+        ]
+      ]
     },
     "aramis": {
       "name": "Aramis",
       "code": "ARS",
-      "origin": "France"
+      "origin": "France",
+      "tastes": [
+        [
+          "sahnekaramell",
+          "Caramel"
+        ],
+        [
+          "menthol",
+          "Mint"
+        ],
+        [
+          "zitrus",
+          "Lemon Grass"
+        ],
+        [
+          "blumig",
+          "Rose"
+        ]
+      ]
     },
     "ariana": {
       "name": "Ariana Hops",
       "code": "ANA",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Passion Fruit"
+        ],
+        [
+          "rote-beeren",
+          "Strawberry"
+        ],
+        [
+          "grune-fruchte",
+          "Pear"
+        ],
+        [
+          "zitrus",
+          "Orange"
+        ],
+        [
+          "sahnekaramell",
+          "Caramel"
+        ]
+      ]
     },
     "aurora": {
       "name": "Aurora",
       "code": "SSA",
-      "origin": "Slovenia"
+      "origin": "Slovenia",
+      "tastes": [
+        [
+          "blumig",
+          "Apple Blossom"
+        ],
+        [
+          "susse-fruchte",
+          "Dried Fruits"
+        ],
+        [
+          "zitrus",
+          "Lime"
+        ],
+        [
+          "wurzig",
+          "Pepper"
+        ],
+        [
+          "wurzig",
+          "Juniper"
+        ]
+      ]
     },
     "azaccatm": {
       "name": "Azacca™",
       "code": "AZA",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "zitrus",
+          "Grapefruit"
+        ],
+        [
+          "susse-fruchte",
+          "Pineapple"
+        ],
+        [
+          "grune-fruchte",
+          "Gooseberry"
+        ],
+        [
+          "susse-fruchte",
+          "Peach"
+        ],
+        [
+          "krautig",
+          "Basil"
+        ]
+      ]
     },
     "boadicea": {
       "name": "Boadicea",
       "code": "BOA",
-      "origin": "Great Britain"
+      "origin": "Great Britain",
+      "tastes": [
+        [
+          "menthol",
+          "Mint"
+        ],
+        [
+          "holzig-aromatisch",
+          "Barrique"
+        ],
+        [
+          "zitrus",
+          "Lime"
+        ],
+        [
+          "holzig-aromatisch",
+          "Tobacco"
+        ],
+        [
+          "susse-fruchte",
+          "Dried Fruits"
+        ]
+      ]
     },
     "bobek": {
       "name": "Bobek",
       "code": "SGB",
-      "origin": "Slovenia"
+      "origin": "Slovenia",
+      "tastes": [
+        [
+          "zitrus",
+          "Lemon"
+        ],
+        [
+          "menthol",
+          "Sage"
+        ],
+        [
+          "grun",
+          "Hay"
+        ],
+        [
+          "blumig",
+          "Geranium"
+        ],
+        [
+          "grun",
+          "Green Pepper"
+        ]
+      ]
     },
     "bramling-cross": {
       "name": "Bramling Cross",
       "code": "BRX",
-      "origin": "Great Britain"
+      "origin": "Great Britain",
+      "tastes": [
+        [
+          "blumig",
+          "Camomile Blossom"
+        ],
+        [
+          "zitrus",
+          "Grapefruit"
+        ],
+        [
+          "grune-fruchte",
+          "Gooseberry"
+        ],
+        [
+          "sahnekaramell",
+          "Caramel"
+        ],
+        [
+          "sahnekaramell",
+          "Vanilla"
+        ]
+      ]
     },
     "brewers-gold": {
       "name": "Brewers Gold",
       "code": "BGO",
-      "origin": "Great Britain"
+      "origin": "Great Britain",
+      "tastes": [
+        [
+          "zitrus",
+          "Lemon"
+        ],
+        [
+          "menthol",
+          "Lemon Balm"
+        ],
+        [
+          "wurzig",
+          "Lovage"
+        ],
+        [
+          "rote-beeren",
+          "Red Currant"
+        ]
+      ]
     },
     "bru-1tm": {
       "name": "Bru-1™",
       "code": "BR1",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Pineapple"
+        ],
+        [
+          "krautig",
+          "Fennel"
+        ],
+        [
+          "blumig",
+          "Rose"
+        ],
+        [
+          "menthol",
+          "Eucalyptus"
+        ],
+        [
+          "krautig",
+          "Mate Tea"
+        ]
+      ]
     },
     "callista": {
       "name": "Callista",
       "code": "CAL",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "rote-beeren",
+          "Strawberry"
+        ],
+        [
+          "susse-fruchte",
+          "Passion Fruit"
+        ],
+        [
+          "zitrus",
+          "Orange"
+        ],
+        [
+          "grune-fruchte",
+          "Pear"
+        ],
+        [
+          "sahnekaramell",
+          "Caramel"
+        ]
+      ]
     },
     "cascade": {
       "name": "Cascade",
       "code": "CAS",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "rote-beeren",
+          "Blackberry"
+        ],
+        [
+          "susse-fruchte",
+          "Plum"
+        ],
+        [
+          "zitrus",
+          "Lime"
+        ],
+        [
+          "sahnekaramell",
+          "Caramel"
+        ],
+        [
+          "rote-beeren",
+          "Black Currant"
+        ]
+      ]
     },
     "celeia": {
       "name": "Celeia",
       "code": "SGC",
-      "origin": "Slovenia"
+      "origin": "Slovenia",
+      "tastes": [
+        [
+          "zitrus",
+          "Lime"
+        ],
+        [
+          "grune-fruchte",
+          "Pear"
+        ],
+        [
+          "holzig-aromatisch",
+          "Incense"
+        ],
+        [
+          "krautig",
+          "Thyme"
+        ],
+        [
+          "grun",
+          "Hay"
+        ]
+      ]
     },
     "centennial": {
       "name": "Centennial",
       "code": "CEN",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "grune-fruchte",
+          "Pear"
+        ],
+        [
+          "zitrus",
+          "Bergamot"
+        ],
+        [
+          "susse-fruchte",
+          "Lychee"
+        ],
+        [
+          "susse-fruchte",
+          "Pineapple"
+        ],
+        [
+          "holzig-aromatisch",
+          "Cedar"
+        ]
+      ]
     },
     "chelan": {
       "name": "Chelan",
       "code": "CHE",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "rote-beeren",
+          "Strawberry"
+        ],
+        [
+          "sahnekaramell",
+          "Cream"
+        ],
+        [
+          "grune-fruchte",
+          "Gooseberry"
+        ]
+      ]
     },
     "chinook": {
       "name": "Chinook",
       "code": "CHI",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "zitrus",
+          "Grapefruit"
+        ],
+        [
+          "krautig",
+          "Fennel"
+        ],
+        [
+          "krautig",
+          "Basil"
+        ],
+        [
+          "susse-fruchte",
+          "Pineapple"
+        ],
+        [
+          "rote-beeren",
+          "Black Currant"
+        ]
+      ]
     },
     "citrar": {
       "name": "Citra®",
       "code": "CIT",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Mango"
+        ],
+        [
+          "rote-beeren",
+          "Blackberry"
+        ],
+        [
+          "zitrus",
+          "Grapefruit"
+        ],
+        [
+          "grune-fruchte",
+          "Gooseberry"
+        ],
+        [
+          "susse-fruchte",
+          "Pineapple"
+        ]
+      ]
     },
     "cluster": {
       "name": "Cluster",
       "code": "CLU",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "rote-beeren",
+          "Strawberry"
+        ],
+        [
+          "blumig",
+          "Geranium"
+        ],
+        [
+          "sahnekaramell",
+          "Cream"
+        ],
+        [
+          "zitrus",
+          "Grapefruit"
+        ],
+        [
+          "wurzig",
+          "Pepper"
+        ]
+      ]
     },
     "columbus": {
       "name": "Columbus",
       "code": "CBS",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "zitrus",
+          "Ginger"
+        ],
+        [
+          "vegetal",
+          "Leek"
+        ],
+        [
+          "grun",
+          "Tomato Leaves"
+        ],
+        [
+          "wurzig",
+          "Fennel Seeds"
+        ],
+        [
+          "vegetal",
+          "Garlic"
+        ]
+      ]
     },
     "comet": {
       "name": "Comet",
       "code": "COM",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "grune-fruchte",
+          "Quince"
+        ],
+        [
+          "blumig",
+          "Elderflower"
+        ],
+        [
+          "susse-fruchte",
+          "Passion Fruit"
+        ],
+        [
+          "grune-fruchte",
+          "Gooseberry"
+        ],
+        [
+          "susse-fruchte",
+          "Guava"
+        ]
+      ]
     },
     "crystal": {
       "name": "Crystal",
       "code": "CRY",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Apricot"
+        ],
+        [
+          "blumig",
+          "Camomile Blossom"
+        ],
+        [
+          "zitrus",
+          "Lemon Grass"
+        ],
+        [
+          "susse-fruchte",
+          "Plum"
+        ],
+        [
+          "krautig",
+          "Black Tea"
+        ]
+      ]
     },
     "diamant": {
       "name": "Diamant",
       "code": "DNT",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "blumig",
+          "Lavender"
+        ],
+        [
+          "zitrus",
+          "Lemon"
+        ],
+        [
+          "krautig",
+          "Fennel"
+        ],
+        [
+          "rote-beeren",
+          "Blueberry"
+        ],
+        [
+          "grun",
+          "Green Pepper"
+        ]
+      ]
     },
     "dolcita-hops": {
       "name": "Dolcita™ Hops",
       "code": "DOL",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Peach"
+        ],
+        [
+          "sahnekaramell",
+          "Coconut"
+        ],
+        [
+          "susse-fruchte",
+          "Pineapple"
+        ]
+      ]
     },
     "east-kent-golding": {
       "name": "East Kent Goldings",
       "code": "EKG",
-      "origin": "Great Britain"
+      "origin": "Great Britain",
+      "tastes": [
+        [
+          "wurzig",
+          "Gingerbread"
+        ],
+        [
+          "holzig-aromatisch",
+          "Woodruff"
+        ],
+        [
+          "zitrus",
+          "Lemon"
+        ],
+        [
+          "holzig-aromatisch",
+          "Earthy"
+        ],
+        [
+          "krautig",
+          "Dill"
+        ]
+      ]
     },
     "eclipse": {
       "name": "Eclipse® Hops",
       "code": "ECL",
-      "origin": "Australia"
+      "origin": "Australia",
+      "tastes": [
+        [
+          "zitrus",
+          "Grapefruit"
+        ],
+        [
+          "susse-fruchte",
+          "Kiwi"
+        ],
+        [
+          "zitrus",
+          "Tangerine"
+        ],
+        [
+          "krautig",
+          "Basil"
+        ],
+        [
+          "holzig-aromatisch",
+          "Cedar"
+        ]
+      ]
     },
     "ekuanotr": {
       "name": "Ekuanot®",
       "code": "EKU",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "zitrus",
+          "Grapefruit"
+        ],
+        [
+          "grune-fruchte",
+          "Gooseberry"
+        ],
+        [
+          "susse-fruchte",
+          "Guava"
+        ],
+        [
+          "krautig",
+          "Fennel"
+        ],
+        [
+          "zitrus",
+          "Orange"
+        ]
+      ]
     },
     "el-dorado": {
       "name": "El Dorado® Hops",
       "code": "ELD",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Watermelon"
+        ],
+        [
+          "grune-fruchte",
+          "Pear"
+        ],
+        [
+          "susse-fruchte",
+          "Apricot"
+        ],
+        [
+          "zitrus",
+          "Tangerine"
+        ],
+        [
+          "menthol",
+          "Menthol"
+        ]
+      ]
     },
     "ella": {
       "name": "Ella™",
       "code": "ELL",
-      "origin": "Australia"
+      "origin": "Australia",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Peach"
+        ],
+        [
+          "blumig",
+          "Lavender"
+        ],
+        [
+          "zitrus",
+          "Lime"
+        ],
+        [
+          "rote-beeren",
+          "Black Currant"
+        ],
+        [
+          "grun",
+          "Green Pepper"
+        ]
+      ]
     },
     "endeavour": {
       "name": "Endeavour",
       "code": "END",
-      "origin": "Great Britain"
+      "origin": "Great Britain",
+      "tastes": [
+        [
+          "wurzig",
+          "Gingerbread"
+        ],
+        [
+          "rote-beeren",
+          "Blackberry"
+        ],
+        [
+          "zitrus",
+          "Bergamot"
+        ],
+        [
+          "susse-fruchte",
+          "Watermelon"
+        ]
+      ]
     },
     "enigma": {
       "name": "Enigma®",
       "code": "ENI",
-      "origin": "Australia"
+      "origin": "Australia",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Passion Fruit"
+        ],
+        [
+          "wurzig",
+          "Nutmeg"
+        ],
+        [
+          "zitrus",
+          "Lime"
+        ],
+        [
+          "susse-fruchte",
+          "Pineapple"
+        ],
+        [
+          "rote-beeren",
+          "Red Currant"
+        ]
+      ]
     },
     "extra-styrian-dana": {
       "name": "Extra Styrian Dana",
       "code": "DAN",
-      "origin": "Slovenia"
+      "origin": "Slovenia",
+      "tastes": [
+        [
+          "wurzig",
+          "Juniper"
+        ],
+        [
+          "zitrus",
+          "Orange"
+        ],
+        [
+          "vegetal",
+          "Wild Garlic"
+        ],
+        [
+          "grune-fruchte",
+          "Pear"
+        ],
+        [
+          "grun",
+          "Hay"
+        ]
+      ]
     },
     "first-gold": {
       "name": "First Gold",
       "code": "FGO",
-      "origin": "Great Britain"
+      "origin": "Great Britain",
+      "tastes": [
+        [
+          "krautig",
+          "Marjoram"
+        ],
+        [
+          "rote-beeren",
+          "Strawberry"
+        ],
+        [
+          "sahnekaramell",
+          "Yoghurt"
+        ],
+        [
+          "vegetal",
+          "Celeriac"
+        ],
+        [
+          "holzig-aromatisch",
+          "Cognac"
+        ]
+      ]
     },
     "fuggles": {
       "name": "Fuggle",
       "code": "FUG",
-      "origin": "Great Britain"
+      "origin": "Great Britain",
+      "tastes": [
+        [
+          "wurzig",
+          "Curry"
+        ],
+        [
+          "vegetal",
+          "Celeriac"
+        ],
+        [
+          "grun",
+          "Hay"
+        ],
+        [
+          "sahnekaramell",
+          "Tonka Bean"
+        ],
+        [
+          "krautig",
+          "Green Tea"
+        ]
+      ]
     },
     "galaxy": {
       "name": "Galaxy®",
       "code": "GXY",
-      "origin": "Australia"
+      "origin": "Australia",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Peach"
+        ],
+        [
+          "susse-fruchte",
+          "Pineapple"
+        ],
+        [
+          "rote-beeren",
+          "Blueberry"
+        ],
+        [
+          "grune-fruchte",
+          "Gooseberry"
+        ],
+        [
+          "rote-beeren",
+          "Black Currant"
+        ]
+      ]
     },
     "galena": {
       "name": "Galena",
       "code": "GAL",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "zitrus",
+          "Lime"
+        ],
+        [
+          "grune-fruchte",
+          "Gooseberry"
+        ],
+        [
+          "grune-fruchte",
+          "Pear"
+        ],
+        [
+          "susse-fruchte",
+          "Pineapple"
+        ],
+        [
+          "holzig-aromatisch",
+          "Cognac"
+        ]
+      ]
     },
     "glacier": {
       "name": "Glacier",
       "code": "GLC",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Plum"
+        ],
+        [
+          "blumig",
+          "Elderflower"
+        ],
+        [
+          "vegetal",
+          "Artichoke"
+        ],
+        [
+          "rote-beeren",
+          "Blackberry"
+        ],
+        [
+          "zitrus",
+          "Lemon"
+        ]
+      ]
     },
     "hallertau-blanc": {
       "name": "Hallertau Blanc",
       "code": "HBC",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "zitrus",
+          "Grapefruit"
+        ],
+        [
+          "grune-fruchte",
+          "White Wine Grapes"
+        ],
+        [
+          "zitrus",
+          "Lemon Grass"
+        ],
+        [
+          "grun",
+          "Cucumber"
+        ],
+        [
+          "grune-fruchte",
+          "Quince"
+        ]
+      ]
     },
     "hallertau-tradition": {
       "name": "Hallertauer Tradition",
       "code": "HTR",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "zitrus",
+          "Lemon"
+        ],
+        [
+          "krautig",
+          "Oregano"
+        ],
+        [
+          "susse-fruchte",
+          "Apricot"
+        ],
+        [
+          "blumig",
+          "Lily of the Valley"
+        ],
+        [
+          "holzig-aromatisch",
+          "Cognac"
+        ]
+      ]
     },
     "hallertauer-magnum": {
       "name": "Hallertauer Magnum",
       "code": "HMG",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "wurzig",
+          "Pepper"
+        ],
+        [
+          "holzig-aromatisch",
+          "Cedar"
+        ],
+        [
+          "menthol",
+          "Mint"
+        ],
+        [
+          "zitrus",
+          "Orange"
+        ],
+        [
+          "sahnekaramell",
+          "Cream"
+        ]
+      ]
     },
     "hallertauer-mittelfrueh": {
       "name": "Hallertauer Mittelfrüh",
       "code": "HAL",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "blumig",
+          "Lilac"
+        ],
+        [
+          "blumig",
+          "Carnation"
+        ],
+        [
+          "zitrus",
+          "Bergamot"
+        ],
+        [
+          "holzig-aromatisch",
+          "Resin"
+        ],
+        [
+          "rote-beeren",
+          "Red Currant"
+        ]
+      ]
     },
     "hallertauer-taurus": {
       "name": "Hallertauer Taurus",
       "code": "HTU",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "wurzig",
+          "Pepper"
+        ],
+        [
+          "holzig-aromatisch",
+          "Tobacco"
+        ],
+        [
+          "sahnekaramell",
+          "Chocolate"
+        ],
+        [
+          "susse-fruchte",
+          "Banana"
+        ],
+        [
+          "zitrus",
+          "Lemon"
+        ]
+      ]
     },
     "harmonie": {
       "name": "Harmonie",
       "code": "HRM",
-      "origin": "Czech Republic"
+      "origin": "Czech Republic",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Apricot"
+        ],
+        [
+          "sahnekaramell",
+          "Caramel"
+        ],
+        [
+          "krautig",
+          "Green Tea"
+        ]
+      ]
     },
     "herkules": {
       "name": "Herkules",
       "code": "HKS",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "menthol",
+          "Lemon Balm"
+        ],
+        [
+          "zitrus",
+          "Lemon Grass"
+        ],
+        [
+          "grun",
+          "Tomato Leaves"
+        ],
+        [
+          "susse-fruchte",
+          "Apricot"
+        ],
+        [
+          "krautig",
+          "Tarragon"
+        ]
+      ]
     },
     "hersbrucker-spaet": {
       "name": "Hersbrucker Spät",
       "code": "HEB",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "zitrus",
+          "Grapefruit"
+        ],
+        [
+          "blumig",
+          "Camomile Blossom"
+        ],
+        [
+          "susse-fruchte",
+          "Kiwi"
+        ],
+        [
+          "zitrus",
+          "Lemon"
+        ],
+        [
+          "krautig",
+          "Black Tea"
+        ]
+      ]
     },
     "huell-classic": {
       "name": "Huell Classic Hops",
       "code": "CLA",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "grun",
+          "Green Grassy"
+        ],
+        [
+          "grun",
+          "Hay"
+        ],
+        [
+          "menthol",
+          "Menthol"
+        ],
+        [
+          "wurzig",
+          "Pepper"
+        ],
+        [
+          "wurzig",
+          "Chilli"
+        ]
+      ]
     },
     "huell-melon": {
       "name": "Huell Melon",
       "code": "HMN",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Honeydew Melon"
+        ],
+        [
+          "rote-beeren",
+          "Strawberry"
+        ],
+        [
+          "sahnekaramell",
+          "Caramel"
+        ],
+        [
+          "susse-fruchte",
+          "Peach"
+        ],
+        [
+          "sahnekaramell",
+          "Yoghurt"
+        ]
+      ]
     },
     "kazbek": {
       "name": "Kazbek",
       "code": "KAZ",
-      "origin": "Czech Republic"
+      "origin": "Czech Republic",
+      "tastes": [
+        [
+          "zitrus",
+          "Orange"
+        ],
+        [
+          "susse-fruchte",
+          "Pineapple"
+        ],
+        [
+          "susse-fruchte",
+          "Mango"
+        ],
+        [
+          "rote-beeren",
+          "Raspberry"
+        ],
+        [
+          "zitrus",
+          "Lemon"
+        ]
+      ]
     },
     "krush": {
       "name": "Krush® Hops",
       "code": "KRU",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Mango"
+        ],
+        [
+          "zitrus",
+          "Orange"
+        ],
+        [
+          "susse-fruchte",
+          "Peach"
+        ],
+        [
+          "susse-fruchte",
+          "Guava"
+        ],
+        [
+          "susse-fruchte",
+          "Passion Fruit"
+        ]
+      ]
     },
     "loralr": {
       "name": "Loral®",
       "code": "LOR",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "blumig",
+          "Geranium"
+        ],
+        [
+          "krautig",
+          "Thyme"
+        ],
+        [
+          "zitrus",
+          "Bergamot"
+        ],
+        [
+          "rote-beeren",
+          "Red Currant"
+        ],
+        [
+          "grun",
+          "Fresh Cut Grass"
+        ]
+      ]
     },
     "lublin": {
       "name": "Lublin",
       "code": "LUB",
-      "origin": "Poland"
+      "origin": "Poland",
+      "tastes": [
+        [
+          "wurzig",
+          "Juniper"
+        ],
+        [
+          "blumig",
+          "Apple Blossom"
+        ],
+        [
+          "wurzig",
+          "Curry"
+        ],
+        [
+          "krautig",
+          "Dill"
+        ],
+        [
+          "holzig-aromatisch",
+          "Cedar"
+        ]
+      ]
     },
     "luna": {
       "name": "Luna® Hops",
       "code": "LNA",
-      "origin": "Australia"
+      "origin": "Australia",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Mango"
+        ],
+        [
+          "zitrus",
+          "Pomelo"
+        ],
+        [
+          "zitrus",
+          "Lemon Grass"
+        ],
+        [
+          "rote-beeren",
+          "Blackberry"
+        ]
+      ]
     },
     "magnat": {
       "name": "Magnat",
       "code": "MGN",
-      "origin": "Poland"
+      "origin": "Poland",
+      "tastes": [
+        [
+          "zitrus",
+          "Lemon"
+        ],
+        [
+          "holzig-aromatisch",
+          "Pine"
+        ],
+        [
+          "blumig",
+          "Camomile Blossom"
+        ],
+        [
+          "wurzig",
+          "Lovage"
+        ],
+        [
+          "zitrus",
+          "Ginger"
+        ]
+      ]
     },
     "mandarina-bavaria": {
       "name": "Mandarina Bavaria",
       "code": "MBA",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "zitrus",
+          "Tangerine"
+        ],
+        [
+          "rote-beeren",
+          "Strawberry"
+        ],
+        [
+          "grune-fruchte",
+          "Gooseberry"
+        ],
+        [
+          "zitrus",
+          "Orange"
+        ],
+        [
+          "rote-beeren",
+          "Black Currant"
+        ]
+      ]
     },
     "marynka": {
       "name": "Marynka",
       "code": "MAR",
-      "origin": "Poland"
+      "origin": "Poland",
+      "tastes": [
+        [
+          "grun",
+          "Hay"
+        ],
+        [
+          "wurzig",
+          "Liquorice"
+        ],
+        [
+          "zitrus",
+          "Lemon"
+        ],
+        [
+          "sahnekaramell",
+          "Chocolate"
+        ],
+        [
+          "holzig-aromatisch",
+          "Tobacco"
+        ]
+      ]
     },
     "millennium": {
       "name": "Millennium",
       "code": "MLM",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "sahnekaramell",
+          "Chocolate"
+        ],
+        [
+          "rote-beeren",
+          "Strawberry"
+        ],
+        [
+          "sahnekaramell",
+          "Toffee"
+        ],
+        [
+          "grune-fruchte",
+          "Pear"
+        ],
+        [
+          "holzig-aromatisch",
+          "Cedar"
+        ]
+      ]
     },
     "monroe": {
       "name": "Monroe",
       "code": "MON",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Cherry"
+        ],
+        [
+          "susse-fruchte",
+          "Plum"
+        ],
+        [
+          "rote-beeren",
+          "Strawberry"
+        ],
+        [
+          "sahnekaramell",
+          "Yoghurt"
+        ],
+        [
+          "rote-beeren",
+          "Red Currant"
+        ]
+      ]
     },
     "mosaicr": {
       "name": "Mosaic®",
       "code": "MOS",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Pineapple"
+        ],
+        [
+          "susse-fruchte",
+          "Mango"
+        ],
+        [
+          "susse-fruchte",
+          "Passion Fruit"
+        ],
+        [
+          "grune-fruchte",
+          "Gooseberry"
+        ],
+        [
+          "vegetal",
+          "Onion"
+        ]
+      ]
     },
     "mt-hood": {
       "name": "Mt. Hood",
       "code": "MTH",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "krautig",
+          "Fennel"
+        ],
+        [
+          "krautig",
+          "Tarragon"
+        ],
+        [
+          "zitrus",
+          "Lemon"
+        ],
+        [
+          "sahnekaramell",
+          "Honey"
+        ],
+        [
+          "wurzig",
+          "Curry"
+        ]
+      ]
     },
     "nugget": {
       "name": "Nugget",
       "code": "NUG",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "zitrus",
+          "Lemon"
+        ],
+        [
+          "blumig",
+          "Geranium"
+        ],
+        [
+          "susse-fruchte",
+          "Lychee"
+        ],
+        [
+          "grune-fruchte",
+          "Pear"
+        ],
+        [
+          "rote-beeren",
+          "Red Currant"
+        ]
+      ]
     },
     "opal": {
       "name": "Opal",
       "code": "OPL",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "wurzig",
+          "Liquorice"
+        ],
+        [
+          "wurzig",
+          "Cinnamon"
+        ],
+        [
+          "zitrus",
+          "Bergamot"
+        ],
+        [
+          "holzig-aromatisch",
+          "Barrique"
+        ],
+        [
+          "holzig-aromatisch",
+          "Woodruff"
+        ]
+      ]
     },
     "perle": {
       "name": "Perle",
       "code": "PER",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "zitrus",
+          "Lemon"
+        ],
+        [
+          "krautig",
+          "Marjoram"
+        ],
+        [
+          "wurzig",
+          "Pepper"
+        ],
+        [
+          "susse-fruchte",
+          "Dried Fruits"
+        ],
+        [
+          "grune-fruchte",
+          "Pear"
+        ]
+      ]
     },
     "pilgrim": {
       "name": "Pilgrim",
       "code": "PGM",
-      "origin": "Great Britain"
+      "origin": "Great Britain",
+      "tastes": [
+        [
+          "krautig",
+          "Thyme"
+        ],
+        [
+          "zitrus",
+          "Lime"
+        ],
+        [
+          "menthol",
+          "Mint"
+        ],
+        [
+          "wurzig",
+          "Pepper"
+        ],
+        [
+          "krautig",
+          "Marjoram"
+        ]
+      ]
     },
     "polaris": {
       "name": "Polaris",
       "code": "PLA",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "menthol",
+          "Mint"
+        ],
+        [
+          "susse-fruchte",
+          "Banana"
+        ],
+        [
+          "zitrus",
+          "Bergamot"
+        ],
+        [
+          "susse-fruchte",
+          "Pineapple"
+        ],
+        [
+          "grune-fruchte",
+          "Pear"
+        ]
+      ]
     },
     "premiant": {
       "name": "Premiant",
       "code": "PRE",
-      "origin": "Czech Republic"
+      "origin": "Czech Republic",
+      "tastes": [
+        [
+          "sahnekaramell",
+          "Chocolate"
+        ],
+        [
+          "zitrus",
+          "Lemon Grass"
+        ],
+        [
+          "blumig",
+          "Lavender"
+        ],
+        [
+          "wurzig",
+          "Curry"
+        ],
+        [
+          "holzig-aromatisch",
+          "Leather"
+        ]
+      ]
     },
     "progress": {
       "name": "Progress",
       "code": "PRO",
-      "origin": "Great Britain"
+      "origin": "Great Britain",
+      "tastes": [
+        [
+          "krautig",
+          "Coriander"
+        ],
+        [
+          "sahnekaramell",
+          "Cream"
+        ],
+        [
+          "menthol",
+          "Menthol"
+        ],
+        [
+          "holzig-aromatisch",
+          "Earthy"
+        ],
+        [
+          "rote-beeren",
+          "Black Currant"
+        ]
+      ]
     },
     "relax": {
       "name": "Relax",
       "code": "RLX",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "blumig",
+          "Lavender"
+        ],
+        [
+          "holzig-aromatisch",
+          "Leather"
+        ],
+        [
+          "susse-fruchte",
+          "Lychee"
+        ],
+        [
+          "holzig-aromatisch",
+          "Cognac"
+        ],
+        [
+          "grun",
+          "Green Pepper"
+        ]
+      ]
     },
     "saaz-late": {
       "name": "Saaz Late",
       "code": "SAL",
-      "origin": "Czech Republic"
+      "origin": "Czech Republic",
+      "tastes": [
+        [
+          "blumig",
+          "Camomile Blossom"
+        ],
+        [
+          "rote-beeren",
+          "Raspberry"
+        ],
+        [
+          "zitrus",
+          "Lemon"
+        ],
+        [
+          "grun",
+          "Hay"
+        ],
+        [
+          "rote-beeren",
+          "Red Currant"
+        ]
+      ]
     },
     "saazer": {
       "name": "Saazer",
       "code": "SAZ",
-      "origin": "Czech Republic"
+      "origin": "Czech Republic",
+      "tastes": [
+        [
+          "krautig",
+          "Thyme"
+        ],
+        [
+          "blumig",
+          "Geranium"
+        ],
+        [
+          "holzig-aromatisch",
+          "Pine"
+        ],
+        [
+          "grun",
+          "Cucumber"
+        ],
+        [
+          "grun",
+          "Hay"
+        ]
+      ]
     },
     "sabror": {
       "name": "Sabro®",
       "code": "SAB",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "sahnekaramell",
+          "Coconut"
+        ],
+        [
+          "susse-fruchte",
+          "Passion Fruit"
+        ],
+        [
+          "susse-fruchte",
+          "Mango"
+        ],
+        [
+          "zitrus",
+          "Grapefruit"
+        ],
+        [
+          "sahnekaramell",
+          "Cream"
+        ]
+      ]
     },
     "saphir": {
       "name": "Saphir",
       "code": "SIR",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "zitrus",
+          "Lemon"
+        ],
+        [
+          "wurzig",
+          "Juniper"
+        ],
+        [
+          "rote-beeren",
+          "Strawberry"
+        ],
+        [
+          "blumig",
+          "Lily of the Valley"
+        ],
+        [
+          "krautig",
+          "Black Tea"
+        ]
+      ]
     },
     "sladek": {
       "name": "Sladek",
       "code": "SLD",
-      "origin": "Czech Republic"
+      "origin": "Czech Republic",
+      "tastes": [
+        [
+          "wurzig",
+          "Gingerbread"
+        ],
+        [
+          "susse-fruchte",
+          "Watermelon"
+        ],
+        [
+          "holzig-aromatisch",
+          "Cognac"
+        ],
+        [
+          "zitrus",
+          "Orange"
+        ],
+        [
+          "grun",
+          "Nettle"
+        ]
+      ]
     },
     "smaragd": {
       "name": "Smaragd",
       "code": "SGD",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "holzig-aromatisch",
+          "Cognac"
+        ],
+        [
+          "sahnekaramell",
+          "Butter"
+        ],
+        [
+          "wurzig",
+          "Liquorice"
+        ],
+        [
+          "krautig",
+          "Tarragon"
+        ],
+        [
+          "vegetal",
+          "Leek"
+        ]
+      ]
     },
     "sorachi-ace": {
       "name": "Sorachi Ace",
       "code": "SOR",
-      "origin": "Japan"
+      "origin": "Japan",
+      "tastes": [
+        [
+          "zitrus",
+          "Orange"
+        ],
+        [
+          "susse-fruchte",
+          "Lychee"
+        ],
+        [
+          "zitrus",
+          "Lemon Grass"
+        ],
+        [
+          "susse-fruchte",
+          "Plum"
+        ],
+        [
+          "sahnekaramell",
+          "Yoghurt"
+        ]
+      ]
     },
     "sovereign": {
       "name": "Sovereign",
       "code": "SOV",
-      "origin": "Great Britain"
+      "origin": "Great Britain",
+      "tastes": [
+        [
+          "grune-fruchte",
+          "Quince"
+        ],
+        [
+          "wurzig",
+          "Gingerbread"
+        ],
+        [
+          "susse-fruchte",
+          "Apricot"
+        ],
+        [
+          "grun",
+          "Green Pepper"
+        ],
+        [
+          "krautig",
+          "Green Tea"
+        ]
+      ]
     },
     "spalt-spalter": {
       "name": "Spalt Spalter",
       "code": "SPA",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "sahnekaramell",
+          "Tonka Bean"
+        ],
+        [
+          "holzig-aromatisch",
+          "Barrique"
+        ],
+        [
+          "wurzig",
+          "Cinnamon"
+        ],
+        [
+          "wurzig",
+          "Juniper"
+        ],
+        [
+          "krautig",
+          "Green Tea"
+        ]
+      ]
     },
     "spalter-select": {
       "name": "Spalter Select",
       "code": "SSE",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "krautig",
+          "Thyme"
+        ],
+        [
+          "zitrus",
+          "Lemon"
+        ],
+        [
+          "grun",
+          "Cucumber"
+        ],
+        [
+          "wurzig",
+          "Lovage"
+        ],
+        [
+          "krautig",
+          "Green Tea"
+        ]
+      ]
     },
     "strisselspalt": {
       "name": "Strisselspalt",
       "code": "FSP",
-      "origin": "France"
+      "origin": "France",
+      "tastes": [
+        [
+          "zitrus",
+          "Lemon"
+        ],
+        [
+          "zitrus",
+          "Lemon Grass"
+        ],
+        [
+          "menthol",
+          "Eucalyptus"
+        ],
+        [
+          "sahnekaramell",
+          "Yoghurt"
+        ],
+        [
+          "blumig",
+          "Camomile Blossom"
+        ]
+      ]
     },
     "styrian-savinjski-golding": {
       "name": "Styrian Savinjski Golding",
       "code": "SSG",
-      "origin": "Slovenia"
+      "origin": "Slovenia",
+      "tastes": [
+        [
+          "holzig-aromatisch",
+          "Incense"
+        ],
+        [
+          "grune-fruchte",
+          "Pear"
+        ],
+        [
+          "grun",
+          "Green Pepper"
+        ]
+      ]
     },
     "summitr": {
       "name": "Summit®",
       "code": "SUM",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "vegetal",
+          "Wild Garlic"
+        ],
+        [
+          "grune-fruchte",
+          "Gooseberry"
+        ],
+        [
+          "holzig-aromatisch",
+          "Incense"
+        ],
+        [
+          "krautig",
+          "Rosemary"
+        ],
+        [
+          "grun",
+          "Green Pepper"
+        ]
+      ]
     },
     "sybilla": {
       "name": "Sybilla",
       "code": "SYB",
-      "origin": "Poland"
+      "origin": "Poland",
+      "tastes": [
+        [
+          "holzig-aromatisch",
+          "Tobacco"
+        ],
+        [
+          "holzig-aromatisch",
+          "Barrique"
+        ],
+        [
+          "sahnekaramell",
+          "Chocolate"
+        ],
+        [
+          "zitrus",
+          "Orange"
+        ],
+        [
+          "susse-fruchte",
+          "Dried Fruits"
+        ]
+      ]
     },
     "talustm": {
       "name": "Talus™",
       "code": "TAL",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "zitrus",
+          "Grapefruit"
+        ],
+        [
+          "susse-fruchte",
+          "Mango"
+        ],
+        [
+          "holzig-aromatisch",
+          "Cedar"
+        ],
+        [
+          "blumig",
+          "Rose"
+        ],
+        [
+          "rote-beeren",
+          "Red Currant"
+        ]
+      ]
     },
     "tango": {
       "name": "Tango",
       "code": "TGO",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "zitrus",
+          "Lemon"
+        ],
+        [
+          "susse-fruchte",
+          "Passion Fruit"
+        ],
+        [
+          "grune-fruchte",
+          "Apple"
+        ],
+        [
+          "holzig-aromatisch",
+          "Resin"
+        ],
+        [
+          "zitrus",
+          "Grapefruit"
+        ]
+      ]
     },
     "terrafluxtm-hops": {
       "name": "HBC 682 c.v.",
       "code": "PAH",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "holzig-aromatisch",
+          "Resin"
+        ],
+        [
+          "wurzig",
+          "Pepper"
+        ],
+        [
+          "susse-fruchte",
+          "Plum"
+        ],
+        [
+          "holzig-aromatisch",
+          "Earthy"
+        ],
+        [
+          "vegetal",
+          "Leek"
+        ]
+      ]
     },
     "tettnang-tettnanger": {
       "name": "Tettnang Tettnanger",
       "code": "TET",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "blumig",
+          "Lily of the Valley"
+        ],
+        [
+          "zitrus",
+          "Bergamot"
+        ],
+        [
+          "holzig-aromatisch",
+          "Cognac"
+        ],
+        [
+          "grun",
+          "Cucumber"
+        ],
+        [
+          "krautig",
+          "Marjoram"
+        ]
+      ]
     },
     "titan": {
       "name": "Titan",
       "code": "TTN",
-      "origin": "Germany"
+      "origin": "Germany",
+      "tastes": [
+        [
+          "blumig",
+          "Geranium"
+        ],
+        [
+          "wurzig",
+          "Pepper"
+        ],
+        [
+          "wurzig",
+          "Curry"
+        ],
+        [
+          "wurzig",
+          "Aniseed"
+        ],
+        [
+          "krautig",
+          "Fennel"
+        ]
+      ]
     },
     "topaz": {
       "name": "Topaz™",
       "code": "TOP",
-      "origin": "Australia"
+      "origin": "Australia",
+      "tastes": [
+        [
+          "zitrus",
+          "Grapefruit"
+        ],
+        [
+          "susse-fruchte",
+          "Cherry"
+        ],
+        [
+          "zitrus",
+          "Orange"
+        ],
+        [
+          "holzig-aromatisch",
+          "Tobacco"
+        ],
+        [
+          "susse-fruchte",
+          "Peach"
+        ]
+      ]
     },
     "triskel": {
       "name": "Triskel",
       "code": "TKL",
-      "origin": "France"
+      "origin": "France",
+      "tastes": [
+        [
+          "vegetal",
+          "Artichoke"
+        ],
+        [
+          "holzig-aromatisch",
+          "Tobacco"
+        ],
+        [
+          "susse-fruchte",
+          "Honeydew Melon"
+        ],
+        [
+          "grun",
+          "Nettle"
+        ],
+        [
+          "zitrus",
+          "Lime"
+        ]
+      ]
     },
     "tsingdao-flower": {
       "name": "Tsingdao Flower",
       "code": "QID",
-      "origin": "China"
+      "origin": "China",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Honeydew Melon"
+        ],
+        [
+          "holzig-aromatisch",
+          "Tobacco"
+        ],
+        [
+          "rote-beeren",
+          "Blueberry"
+        ],
+        [
+          "holzig-aromatisch",
+          "Myrrh"
+        ],
+        [
+          "rote-beeren",
+          "Black Currant"
+        ]
+      ]
     },
     "vic-secret": {
       "name": "Vic Secret™",
       "code": "VIS",
-      "origin": "Australia"
+      "origin": "Australia",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Pineapple"
+        ],
+        [
+          "wurzig",
+          "Pepper"
+        ],
+        [
+          "zitrus",
+          "Ginger"
+        ],
+        [
+          "krautig",
+          "Marjoram"
+        ],
+        [
+          "zitrus",
+          "Lime"
+        ]
+      ]
     },
     "vital": {
       "name": "Vital",
       "code": "VIT",
-      "origin": "Czech Republic"
+      "origin": "Czech Republic",
+      "tastes": [
+        [
+          "susse-fruchte",
+          "Plum"
+        ],
+        [
+          "wurzig",
+          "Liquorice"
+        ],
+        [
+          "blumig",
+          "Lavender"
+        ],
+        [
+          "grun",
+          "Nettle"
+        ],
+        [
+          "holzig-aromatisch",
+          "Cedar"
+        ]
+      ]
     },
     "whitbread-golding-variety-wgv": {
       "name": "Whitbread Goldings Variety",
       "code": "WGV",
-      "origin": "Great Britain"
+      "origin": "Great Britain",
+      "tastes": [
+        [
+          "wurzig",
+          "Liquorice"
+        ],
+        [
+          "susse-fruchte",
+          "Guava"
+        ],
+        [
+          "susse-fruchte",
+          "Apricot"
+        ],
+        [
+          "holzig-aromatisch",
+          "Earthy"
+        ],
+        [
+          "krautig",
+          "Mate Tea"
+        ]
+      ]
     },
     "willamette": {
       "name": "Willamette",
       "code": "WIL",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "zitrus",
+          "Lemon"
+        ],
+        [
+          "holzig-aromatisch",
+          "Myrrh"
+        ],
+        [
+          "wurzig",
+          "Curry"
+        ],
+        [
+          "holzig-aromatisch",
+          "Cedar"
+        ],
+        [
+          "rote-beeren",
+          "Red Currant"
+        ]
+      ]
     },
     "wye-challenger": {
       "name": "Challenger",
       "code": "CHA",
-      "origin": "Great Britain"
+      "origin": "Great Britain",
+      "tastes": [
+        [
+          "menthol",
+          "Sage"
+        ],
+        [
+          "susse-fruchte",
+          "Banana"
+        ],
+        [
+          "sahnekaramell",
+          "Tonka Bean"
+        ],
+        [
+          "vegetal",
+          "Artichoke"
+        ],
+        [
+          "holzig-aromatisch",
+          "Earthy"
+        ]
+      ]
     },
     "wye-target": {
       "name": "Target",
       "code": "TRG",
-      "origin": "Great Britain"
+      "origin": "Great Britain",
+      "tastes": [
+        [
+          "blumig",
+          "Elderflower"
+        ],
+        [
+          "sahnekaramell",
+          "Caramel"
+        ],
+        [
+          "holzig-aromatisch",
+          "Tobacco"
+        ],
+        [
+          "menthol",
+          "Sage"
+        ],
+        [
+          "susse-fruchte",
+          "Plum"
+        ]
+      ]
     },
     "zeus": {
       "name": "Zeus",
       "code": "ZEU",
-      "origin": "United States"
+      "origin": "United States",
+      "tastes": [
+        [
+          "krautig",
+          "Fennel"
+        ],
+        [
+          "wurzig",
+          "Liquorice"
+        ],
+        [
+          "menthol",
+          "Lemon Balm"
+        ],
+        [
+          "grun",
+          "Nettle"
+        ],
+        [
+          "vegetal",
+          "Leek"
+        ]
+      ]
     }
   }
 }
