@@ -1,18 +1,111 @@
 # Pages the snapshot workflow saves into tools/ingest/raw/pages/.
 # Results of the last run: raw/pages/last-run.txt
-# Yakima Chief Hops (grower-owned, Yakima): variety pages with full oil breakdowns
-https://www.yakimachief.com/robots.txt
-https://www.yakimachief.com/sitemap.xml
-https://www.yakimachief.com/variety/idaho-gem-brand
-https://www.yakimachief.com/idaho-gem.html
-# Indie Hops (Portland): Strata, Meridian and Oregon-grown classics
-https://indiehops.com/hops/strata/
+
+# Indie Hops (Portland, Oregon): Strata, their newer releases, and Oregon-grown classics
 https://indiehops.com/ih-varieties
+https://indiehops.com/hops/strata
+https://indiehops.com/hops/audacia
+https://indiehops.com/hops/lorien
+https://indiehops.com/hops/luminosa
+https://indiehops.com/hops/meridian
 https://indiehops.com/hops/cascade
-# USDA public releases, via the breeder
-https://www.drjohnhops.com/cultivars/
-# Fort George Brewery (Astoria): beer pages list the hops
+https://indiehops.com/hops/centennial
+https://indiehops.com/hops/chinook
+https://indiehops.com/hops/crystal
+https://indiehops.com/hops/us-fuggle
+https://indiehops.com/hops/liberty
+https://indiehops.com/hops/mt-hood
+https://indiehops.com/hops/nugget
+https://indiehops.com/hops/sterling
+https://indiehops.com/hops/us-tettnanger
+https://indiehops.com/hops/willamette
+
+# Charles Faram hop oracle (UK merchant): specs for US hops our breeder sources don't cover
+https://charlesfaram.com/hop-oracle/
+https://charlesfaram.com/hop-oracle/pekko-hop/
+https://charlesfaram.com/hop-oracle/jarrylo/
+https://charlesfaram.com/hop-oracle/idaho-gem-hop/
+https://charlesfaram.com/hop-oracle/triumph/
+https://charlesfaram.com/hop-oracle/vista/
+https://charlesfaram.com/hop-oracle/ultra/
+https://charlesfaram.com/hop-oracle/newport/
+https://charlesfaram.com/hop-oracle/teamaker/
+https://charlesfaram.com/hop-oracle/mackinac/
+https://charlesfaram.com/hop-oracle/alora/
+https://charlesfaram.com/hop-oracle/denali/
+https://charlesfaram.com/hop-oracle/zappa/
+https://charlesfaram.com/hop-oracle/elani/
+https://charlesfaram.com/hop-oracle/meridian/
+https://charlesfaram.com/hop-oracle/strata/
+
+# John I. Haas (Yakima) spec sheet
+https://www.johnihaas.com/wp-content/uploads/2020/09/Haas_HopSpecSheets-IdahoGem_110520.pdf
+
+# Single-variety owners
+https://yakhops.com/elani/
+https://neomexicanus.com/wp-content/uploads/2024/10/Zappa-Hops_2022-Fact-Sheet_final_web-1.pdf
+
+# Fort George Brewery (Astoria, Oregon): every beer page lists its hops
 https://fortgeorgebrewery.com/beer/
-https://fortgeorgebrewery.com/beer/vortex-ipa/
+https://fortgeorgebrewery.com/beer/18th-anniversary-barleywine/
+https://fortgeorgebrewery.com/beer/3-way-ipa-hazy-double-2026/
+https://fortgeorgebrewery.com/beer/3-way-ipa-new-zealand-west-coast-2026/
+https://fortgeorgebrewery.com/beer/3-way-ipa-west-coast-2026/
+https://fortgeorgebrewery.com/beer/adversarial-patterns/
+https://fortgeorgebrewery.com/beer/bananaza/
+https://fortgeorgebrewery.com/beer/barrel-aged-coconut-cavatica/
+https://fortgeorgebrewery.com/beer/beach-eagle/
+https://fortgeorgebrewery.com/beer/beau-rivage/
+https://fortgeorgebrewery.com/beer/blackberry-limelight/
+https://fortgeorgebrewery.com/beer/cathedral-tree/
+https://fortgeorgebrewery.com/beer/cavatica-stout/
+https://fortgeorgebrewery.com/beer/chordata/
+https://fortgeorgebrewery.com/beer/city-of-dreams-2/
+https://fortgeorgebrewery.com/beer/city-of-rainbows/
+https://fortgeorgebrewery.com/beer/confluence-of-fate/
+https://fortgeorgebrewery.com/beer/country-funk/
+https://fortgeorgebrewery.com/beer/daly-special/
+https://fortgeorgebrewery.com/beer/design-trends/
+https://fortgeorgebrewery.com/beer/dwaynes-world/
+https://fortgeorgebrewery.com/beer/electric-surfboard/
+https://fortgeorgebrewery.com/beer/etymology/
+https://fortgeorgebrewery.com/beer/fantastic-barrels-and-where-to-find-them-2025/
+https://fortgeorgebrewery.com/beer/fantastic-barrels-and-where-to-find-them/
+https://fortgeorgebrewery.com/beer/fields-of-green/
 https://fortgeorgebrewery.com/beer/fresh-hop-mirrored-realities/
-https://fortgeorgebrewery.com/sitemap.xml
+https://fortgeorgebrewery.com/beer/full-pastry-send/
+https://fortgeorgebrewery.com/beer/island-towns/
+https://fortgeorgebrewery.com/beer/javathehop/
+https://fortgeorgebrewery.com/beer/laza-tiger-cherry-blend-with-ugandan-vanilla-and-saigon-cinnamon/
+https://fortgeorgebrewery.com/beer/laza-tiger-with-brooks-cherries/
+https://fortgeorgebrewery.com/beer/laza-tiger-with-rainier-cherries/
+https://fortgeorgebrewery.com/beer/lifes-a-peach-and-then-you-pie/
+https://fortgeorgebrewery.com/beer/low-key-ipa/
+https://fortgeorgebrewery.com/beer/lower-columbia-lager/
+https://fortgeorgebrewery.com/beer/lycosa/
+https://fortgeorgebrewery.com/beer/magnanimous-ipa/
+https://fortgeorgebrewery.com/beer/magnetic-fields/
+https://fortgeorgebrewery.com/beer/matryoshka-2026/
+https://fortgeorgebrewery.com/beer/mirrored-realities/
+https://fortgeorgebrewery.com/beer/mutant-skull/
+https://fortgeorgebrewery.com/beer/one-big-holiday/
+https://fortgeorgebrewery.com/beer/pass-the-balaton/
+https://fortgeorgebrewery.com/beer/peaches-peaches-peaches-peaches-peaches/
+https://fortgeorgebrewery.com/beer/pilsner/
+https://fortgeorgebrewery.com/beer/pizza-pals-2025/
+https://fortgeorgebrewery.com/beer/short-sands/
+https://fortgeorgebrewery.com/beer/sometimes-things-take-longer/
+https://fortgeorgebrewery.com/beer/spreading-roots/
+https://fortgeorgebrewery.com/beer/spruce-budd/
+https://fortgeorgebrewery.com/beer/strawberry-knoll/
+https://fortgeorgebrewery.com/beer/subterranean-nectaron/
+https://fortgeorgebrewery.com/beer/sunrise-oatmeal-pale-ale/
+https://fortgeorgebrewery.com/beer/thunder-blanket/
+https://fortgeorgebrewery.com/beer/tide-land/
+https://fortgeorgebrewery.com/beer/vor-tai-p-a/
+https://fortgeorgebrewery.com/beer/vortex-ipa/
+https://fortgeorgebrewery.com/beer/wild-gooseberry-chase/
+https://fortgeorgebrewery.com/beer/wild-mountain-mixed-berry/
+https://fortgeorgebrewery.com/beer/wild-mountain-nectarine/
+https://fortgeorgebrewery.com/beer/wild-mountain-with-raspberry/
+https://fortgeorgebrewery.com/beer/worlds-collide/
