@@ -10,7 +10,7 @@ on:
       source:
         description: Which source
         type: choice
-        options: [hopsteiner, barthhaas, hbc, usda_nass]
+        options: [hopsteiner, barthhaas, hbc, usda_nass, snapshot]
         default: hopsteiner
 
 permissions:
@@ -35,6 +35,9 @@ jobs:
         env:
           SOURCE: ${{ inputs.source }}
         run: |
+          if [ "$SOURCE" = snapshot ]; then
+            pixi run -e data python tools/ingest/snapshot.py | tee -a "$GITHUB_STEP_SUMMARY"; exit 0
+          fi
           if [ "$SOURCE" = usda_nass ]; then
             pixi run -e data python tools/ingest/usda_nass.py --fetch | tee -a "$GITHUB_STEP_SUMMARY"; exit 0
           fi
