@@ -1,0 +1,18 @@
+brewery:
+  slug: reuben-s-brews
+  name: Reuben's Brews
+  city: Seattle
+  state: WA
+  url: https://www.google.com/search?q=Reuben's+Brews
+generated_by: 'HopLove scans (/scan/): photographed or pasted by a person, hops matched by tools/ingest/scanned_beer.py'
+retrieved: '2026-09-27'
+beers:
+  - slug: fresh-hop-double-crush
+    name: Fresh Hop Double Crush
+    url: https://www.google.com/search?q=Reuben's+Brews
+    abv: 8.0
+    hops_as_written: Freshly picked simcoe
+    scanned_from: photo
+    scanned: '2026-09-27'
+    hops:
+      - { hop: simcoe, name: Simcoe, fresh: true, as_written: fresh Simcoe }
