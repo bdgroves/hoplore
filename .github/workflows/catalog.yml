@@ -37,11 +37,13 @@ jobs:
         run: |
           set -o pipefail
           if [ "$SOURCE" = breweries ]; then
-            pixi run -e data python tools/ingest/snapshot.py --breweries | tee -a "$GITHUB_STEP_SUMMARY"
+            # Logs go into the repo: a run whose log you can't read is a run you can't fix.
+            LOG=tools/ingest/raw/pages/breweries-log.txt
+            pixi run -e data python tools/ingest/snapshot.py --breweries > "$LOG" 2>&1 || echo "crawler exited $?" >> "$LOG"
             if [ -s tools/ingest/raw/pages/render_urls.txt ]; then
-              npm i --no-save playwright-core@1.56.0 >/dev/null
-              node tools/ingest/render.mjs | tail -40 | tee -a "$GITHUB_STEP_SUMMARY"
+              { npm i --no-save playwright-core@1.56.0 && node tools/ingest/render.mjs; } >> "$LOG" 2>&1 || echo "render exited $?" >> "$LOG"
             fi
+            tail -60 "$LOG" >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
           if [ "$SOURCE" = snapshot ]; then
