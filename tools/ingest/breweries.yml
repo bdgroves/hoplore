@@ -67,3 +67,62 @@
   url: https://www.7seasbrewing.com/
   listing: ['https://www.7seasbrewing.com/beers/', 'https://www.7seasbrewing.com/beer-releases/']
   match: '^https://www\.7seasbrewing\.com/(beers/[a-z0-9-]+/|[0-9]{4}-[a-z0-9-]*fresh-hop[a-z0-9-]*/|uno-mas-is-back/)$'
+
+# --- Seattle and around ---
+
+- slug: elysian
+  name: Elysian Brewing
+  city: Seattle
+  state: WA
+  url: https://www.elysianbrewing.com/
+  sitemaps: ['https://www.elysianbrewing.com/sitemap.xml']
+  match: '^https://www\.elysianbrewing\.com/beer/[a-z0-9-]+$'
+
+- slug: fair-isle
+  name: Fair Isle Brewing
+  city: Seattle
+  state: WA
+  url: https://fairislebrewing.com/
+  sitemaps: ['https://fairislebrewing.com/sitemap.xml']
+  match: '^https://fairislebrewing\.com/beer/[a-z0-9-]+/$'
+
+- slug: holy-mountain
+  name: Holy Mountain Brewing
+  city: Seattle
+  state: WA
+  url: https://holymountainbrewing.com/
+  sitemaps: ['https://holymountainbrewing.com/sitemap.xml']
+  match: '^https://holymountainbrewing\.com/beer/[a-z0-9-]+/$'
+
+- slug: cloudburst
+  name: Cloudburst Brewing
+  city: Seattle
+  state: WA
+  url: https://cloudburstbrew.com/
+  sitemaps: ['https://cloudburstbrew.com/sitemap.xml']
+  match: '^https://cloudburstbrew\.com/beer/[a-z0-9-]*[a-z](-[0-9])?/$'
+  limit: 450
+
+- slug: reubens
+  name: Reuben's Brews
+  city: Seattle
+  state: WA
+  url: https://reubensbrews.com/
+  sitemaps: ['https://reubensbrews.com/beer-sitemap.xml']
+  match: '^https://reubensbrews\.com/beer/[a-z0-9-]+/$'
+
+- slug: fremont
+  name: Fremont Brewing
+  city: Seattle
+  state: WA
+  url: https://www.fremontbrewing.com/
+  listing: ['https://www.fremontbrewing.com/taplist']
+  match: '^$'
+
+- slug: aslan
+  name: Aslan Brewing
+  city: Bellingham
+  state: WA
+  url: https://www.aslanbrewing.com/
+  sitemaps: ['https://www.aslanbrewing.com/sitemap.xml']
+  match: '^https://www\.aslanbrewing\.com/beers/(?!category|tag)[a-z0-9-]+$'

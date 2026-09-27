@@ -144,25 +144,5 @@ https://www.crosbyhops.com/hops/varieties/wai-iti
 https://www.crosbyhops.com/hops/varieties/waimea
 https://www.crosbyhops.com/hops/varieties/willamette
 https://www.crosbyhops.com/hops/varieties/zappa
-# --- Seattle recon round 2 ---
-https://www.stoupbrewing.com/beer/citra-fresh-hop-fiend-ipa-2024-6163.html
-https://www.stoupbrewing.com/beer/platinum-ipa-mixed-4-pack-w-urban-family-1303.html
-https://www.stoupbrewing.com/beer/fest-bier-7928.html
-https://cloudburstbrew.com/beer/mosaicin-me-crazy-ipa-5/
-https://cloudburstbrew.com/beer/everythings-pine-ipa-2/
-https://cloudburstbrew.com/beer/born-again/
-https://fairislebrewing.com/beer/renee/
-https://fairislebrewing.com/beer/kc-s7-d/
-https://fairislebrewing.com/beer/alexandra/
-https://www.aslanbrewing.com/beers/evil-ipa
-https://www.aslanbrewing.com/beers/category/IPA+Series
-https://www.aslanbrewing.com/beers/tag/Vienna+Lager
-https://holymountainbrewing.com/beer/country-death-song/
-https://holymountainbrewing.com/beer/watchmans-house/
-https://holymountainbrewing.com/beer/fedallahs-hearse/
-https://www.elysianbrewing.com/beer/space-dust-ipa
-https://www.elysianbrewing.com/beer/juice-dust-juicy-ipa
-https://www.elysianbrewing.com/beer/ipa-series
-https://reubensbrews.com/beer-sitemap.xml
-https://www.fremontbrewing.com/our-beer
+# Fremont Brewing's taplist (one page, re-read every run)
 https://www.fremontbrewing.com/taplist

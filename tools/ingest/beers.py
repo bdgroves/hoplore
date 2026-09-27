@@ -47,6 +47,8 @@ FORMS = [
     ("t90", "T90"),
     ("lupomax", "LupoMax"),
     ("pellets", None),
+    ("dry hop", None),
+    ("dry", None),
     ("extract", "extract"),
     ("t45", "T45"),
     ("cyo", "Cryo"),
@@ -185,6 +187,8 @@ def page_text(path: Path) -> tuple[BeautifulSoup, str | None, str]:
     soup = BeautifulSoup(path.read_text(encoding="utf-8", errors="ignore"), "lxml")
     h1 = soup.find("h1")
     name = h1.get_text(" ", strip=True) if h1 else None
+    if not name and soup.title and soup.title.string:
+        name = re.split(r"\s[|\u2013\u2014-]\s", soup.title.string.strip())[0].strip() or None
     for tag in soup(["script", "style", "noscript", "nav", "footer"]):
         tag.decompose()
     return soup, name, re.sub(r"\s+", " ", soup.get_text(" "))
@@ -204,30 +208,60 @@ def abv_of(text: str) -> float | None:
         return None
 
 
-def names_in(text: str, index: dict[str, str]) -> list[dict]:
+# Variety names that are also ordinary words ("crystal malt", "the summit",
+# "a triumph"). In prose they only count next to hop context: the word hop,
+# or another variety named nearby.
+AMBIGUOUS = {
+    "comet", "crystal", "summit", "cluster", "galena", "glacier", "target", "challenger", "sterling", "liberty",
+    "nugget", "magnum", "warrior", "triumph", "vista", "eclipse", "enigma", "delta", "horizon", "pilgrim",
+    "progress", "phoenix", "admiral", "sovereign", "ultra", "vanguard", "eureka", "apollo", "bravo", "luna",
+    "relax", "harmonie", "contessa", "zeus", "ella", "tango", "sultana", "titan", "topaz", "ariana", "aurora",
+    "belma", "vera", "thora", "vital", "monroe", "chelan", "millennium", "newport", "lotus", "opal", "polaris",
+    "mistral", "trident", "flint", "calypso", "atlas", "aramis", "endeavour", "godiva", "boadicea", "super galena",
+    "pacifica", "southern cross", "green bullet", "first gold", "golding", "fuggle", "mackinac", "tahoma",
+    "denali", "alora", "altus", "lemondrop", "teamaker", "santiam", "willamette", "saphir", "smaragd", "premiant",
+}
+
+
+def names_in(text: str, index: dict[str, str], field: bool = False) -> list[dict]:
     """For prose hop notes ("Simcoe and Centennial in the kettle, Cryo Simcoe
     in the dry hop, fresh hop Centennial from ..."): find every known variety
-    name in the text, longest names first, and note Cryo / fresh next to it."""
+    name in the text, longest names first, and note Cryo / fresh next to it.
+    Matching ignores case (breweries shout: "only brewed with... MOSAIC"),
+    except for names that are also ordinary words, which need context."""
     candidates = sorted(NAME_FORMS, key=len, reverse=True)
     taken: list[tuple[int, int]] = []
-    found: list[tuple[int, dict]] = []
+    found: list[tuple[int, dict, bool]] = []
     for label in candidates:
-        for m in re.finditer(rf"(?<![A-Za-z]){re.escape(label)}(?![A-Za-z])", text):
+        ambiguous = label.lower() in AMBIGUOUS
+        flags = 0 if ambiguous else re.I
+        for m in re.finditer(rf"(?<![A-Za-z]){re.escape(label)}(?![A-Za-z])", text, flags):
             a, b = m.span()
             if any(a < y and b > x for x, y in taken):
                 continue
+            if ambiguous and re.match(r"\s+malts?\b", text[b:b + 8], re.I):
+                continue  # "Crystal malt"
             taken.append((a, b))
             before, after = text[max(0, a - 18):a].lower(), text[b:b + 12].lower()
-            item = {"hop": NAME_FORMS[label], "name": m.group(0), "as_written": m.group(0)}
+            name = m.group(0)
+            if name.isupper() and not re.search(r"\d", name):
+                name = name.title()
+            item = {"hop": NAME_FORMS[label], "name": name, "as_written": m.group(0)}
             if "cryo" in before.split()[-1:] or after.strip().startswith("cryo"):
                 item["form"] = "Cryo"
             if re.search(r"fresh(?:[- ]hop)?\s*$", before):
                 item["fresh"] = True
             if fm := re.match(r"\s*(?:hops?\s+)?from\s+([A-Z][\w'&.\s]{1,40}?(?:Farms?|Ranch|Agriculture|Hops))", text[b:b + 70]):
                 item["farm"] = fm.group(1).strip()
-            found.append((a, item))
+            found.append((a, item, ambiguous))
+    confident = [a for a, _, amb in found if not amb]
     out, seen = [], set()
-    for _, item in sorted(found, key=lambda x: x[0]):
+    for a, item, amb in sorted(found, key=lambda x: x[0]):
+        if amb and not field:
+            near_hop = re.search(r"\bhop", text[max(0, a - 30):a + 40], re.I)
+            near_variety = any(abs(a - c) < 60 for c in confident)
+            if not (near_hop or near_variety):
+                continue
         key = (item["hop"], item.get("form"), item.get("fresh"))
         if key not in seen:
             seen.add(key)
@@ -274,7 +308,7 @@ def parse_double_mountain(path: Path) -> tuple | None:
     _, name, text = page_text(path)
     hops = between(text, r"\bHops", r"Malts?|Yeast|Appearance|Aroma|Mouthfeel|Flavor|Food")
     m = re.search(r"\bABV\s*([\d.]+)", text)
-    return name, float(m.group(1)) if m else None, hops, "prose"
+    return name, float(m.group(1)) if m else None, hops, "field"
 
 
 def parse_ex_novo(path: Path) -> tuple | None:
@@ -322,6 +356,49 @@ def parse_7seas(path: Path) -> tuple | None:
     return name, abv_of(text), " ".join(bits) or None, "prose"
 
 
+def parse_elysian(path: Path) -> tuple | None:
+    soup, name, text = page_text(path)
+    m = re.search(r"\bHops ([A-Z].{1,160}?)(?= FIND\b| Yeast\b| ABV\b| IBU\b| Malts?\b|$)", text)
+    title = soup.title.string.split("|")[0].strip() if soup.title and soup.title.string else name
+    return title, abv_of(text), m.group(1).strip() if m else None, "list"
+
+
+def parse_fair_isle(path: Path) -> tuple | None:
+    # Fair Isle sets the value before its label: "... Saison Style Mandarina Bavaria Hops Copeland Pilsner Malt Grain"
+    soup, name, text = page_text(path)
+    m = re.search(r"\bStyle (.{1,160}?) Hops\b", text)
+    return name, abv_of(text), m.group(1).strip() if m else None, "list"
+
+
+def parse_aslan(path: Path) -> tuple | None:
+    soup, name, text = page_text(path)
+    m = re.search(r"\bHOPS?:\s*(.{1,200}?)(?=\s+[A-Z]{3,}\s*:|\s+Aslan Brewing|$)", text)
+    title = soup.title.string.split("\u2014")[0].strip() if soup.title and soup.title.string else name
+    return title, abv_of(text), m.group(1).strip() if m else None, "list"
+
+
+def parse_description(path: Path) -> tuple | None:
+    """Breweries that write a paragraph: the whole description is scanned for
+    variety names (see names_in for how ordinary words are kept out)."""
+    soup, name, text = page_text(path)
+    body = soup.find("main") or soup.find("article") or soup
+    desc = re.sub(r"\s+", " ", body.get_text(" "))
+    desc = re.split(r"View all beers|Back to all beers|Beer Finder", desc)[0]
+    title = soup.title.string.split("|")[0].strip() if soup.title and soup.title.string else name
+    return title, abv_of(text), desc[-1500:] or None, "prose"
+
+
+def parse_fremont_taplist(path: Path) -> list[tuple]:
+    """Fremont's taplist is one page; only its fresh-hop beers name hops
+    ("Field to Ferment: Pale Ale Made With Centennial Fresh Hops")."""
+    _, _, text = page_text(path)
+    out = []
+    for m in re.finditer(r"([A-Z][\w'’ .&-]{2,40}?): ([\w -]{2,40}?) Made With ([A-Z][\w ,&]+?) (Fresh )?Hops", text):
+        hops = ", ".join(("Fresh " if m.group(4) else "") + h.strip() for h in re.split(r",|&| and ", m.group(3)) if h.strip())
+        out.append((m.group(1).strip(), None, hops, "list"))
+    return out
+
+
 PARSERS = {
     "fort-george": (parse_fort_george, "fortgeorgebrewery.com", "beer_*.html"),
     "double-mountain": (parse_double_mountain, "doublemountainbrewery.com", "beer_*.html"),
@@ -330,6 +407,13 @@ PARSERS = {
     "breakside": (parse_breakside, "breakside.com", "our_beer_*.html"),
     "ecliptic": (parse_prose_generic, "eclipticbrewing.com", "beer_*.html"),
     "7-seas": (parse_7seas, "7seasbrewing.com", "*.html"),
+    "elysian": (parse_elysian, "elysianbrewing.com", "beer_*.html"),
+    "fair-isle": (parse_fair_isle, "fairislebrewing.com", "beer_*.html"),
+    "aslan": (parse_aslan, "aslanbrewing.com", "beers_*.html"),
+    "holy-mountain": (parse_description, "holymountainbrewing.com", "beer_*.html"),
+    "cloudburst": (parse_description, "cloudburstbrew.com", "beer_*.html"),
+    "reubens": (parse_description, "reubensbrews.com", "beer_*.html"),
+    "fremont": (parse_fremont_taplist, "fremontbrewing.com", "taplist.html"),
 }
 
 
@@ -357,7 +441,7 @@ def build_beer(brewery: dict, path: Path, parsed: tuple, index: dict[str, str]) 
                 farm = None
             items.append(item)
     else:
-        items = names_in(hops_line, index)
+        items = names_in(hops_line, index, field=(mode == "field"))
         if m := re.search(r"from ([A-Z][\w'&.\s]{2,40}?(?:Farms?|Ranch|Hops|Agriculture))", hops_line):
             for item in items:
                 if item.get("fresh"):
@@ -423,10 +507,18 @@ def main() -> int:
         pages = sorted((RAW / folder).glob(pattern))
         beers, seen = [], set()
         for path in pages:
-            beer = build_beer(brewery, path, parse(path), index)
-            if beer and beer["slug"] not in seen:
-                seen.add(beer["slug"])
-                beers.append(beer)
+            parsed = parse(path)
+            # A taplist page holds many beers; everything else holds one.
+            for one in parsed if isinstance(parsed, list) else [parsed]:
+                beer = build_beer(brewery, path, one, index)
+                if beer is None:
+                    continue
+                if isinstance(parsed, list):
+                    beer["slug"] = re.sub(r"[^a-z0-9]+", "-", beer["name"].lower()).strip("-")
+                    beer["url"] = brewery["url"]
+                if beer["slug"] not in seen:
+                    seen.add(beer["slug"])
+                    beers.append(beer)
         if not beers:
             print(f"{brewery['slug']}: no beers with hop lists in {len(pages)} saved page(s)")
             continue

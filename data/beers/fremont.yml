@@ -1,0 +1,33 @@
+brewery:
+  slug: fremont
+  name: Fremont Brewing
+  city: Seattle
+  state: WA
+  url: https://www.fremontbrewing.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-27'
+beers:
+  - slug: field-to-ferment
+    name: Field to Ferment
+    url: https://www.fremontbrewing.com/
+    hops_as_written: Fresh Centennial
+    hops:
+      - { hop: centennial, name: Centennial, fresh: true, as_written: Fresh Centennial }
+  - slug: fresh-hop-lager
+    name: Fresh Hop Lager
+    url: https://www.fremontbrewing.com/
+    hops_as_written: Fresh Amarillo
+    hops:
+      - { hop: amarillo, name: Amarillo, fresh: true, as_written: Fresh Amarillo }
+  - slug: fresh-hop-lush
+    name: Fresh Hop Lush
+    url: https://www.fremontbrewing.com/
+    hops_as_written: Fresh Citra
+    hops:
+      - { hop: citra, name: Citra, fresh: true, as_written: Fresh Citra }
+  - slug: juice-box-hero
+    name: Juice Box Hero
+    url: https://www.fremontbrewing.com/
+    hops_as_written: Fresh Dolcita
+    hops:
+      - { hop: dolcita, name: Dolcita, fresh: true, as_written: Fresh Dolcita }
