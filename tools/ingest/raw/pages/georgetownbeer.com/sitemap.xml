@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- This is the parent sitemap linking to additional sitemaps for products, collections and pages as shown below. The sitemap can not be edited manually, but is kept up to date in real time. -->
+  <sitemap>
+    <loc>https://georgetownbeer.com/sitemap_agentic_discovery.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://georgetownbeer.com/sitemap_products_1.xml?from=6793809606&amp;to=7443731742800</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://georgetownbeer.com/sitemap_pages_1.xml?from=146620806&amp;to=93276307536</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://georgetownbeer.com/sitemap_collections_1.xml?from=207795334&amp;to=273535762512</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://georgetownbeer.com/sitemap_blogs_1.xml</loc>
+  </sitemap>
+</sitemapindex>
