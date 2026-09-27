@@ -1,0 +1,69 @@
+slug: belma
+name: Belma
+purpose: aroma
+country: US
+kind: cultivar
+
+ownership:
+  mark: registered
+  public_domain: false
+
+pedigree:
+  breeder: unknown
+  parents: { unknown: true }
+  refs: [crosby]
+
+aroma:
+  summary: >
+    Clean and bright: ripe strawberry, melon and citrus with soft floral notes and a hint of grapefruit, per Crosby Hops. Low cohumulone, easy in single-hop beers.
+  tags: [strawberry, melon, citrus, grapefruit, floral]
+  refs: [crosby]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-27'
+  notes: >
+    Purpose aroma per Crosby's description; breeder not stated on the page.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: crosby, low: 8.0, high: 12.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: crosby, low: 4.0, high: 8.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: crosby, low: 1.0, high: 2.5 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: crosby, low: 34.0, high: 38.0 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: crosby, low: 40.0, high: 60.0 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: crosby, low: 5.0, high: 10.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: crosby, low: 5.0, high: 15.0 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: crosby, low: 0.1, high: 0.1 }

@@ -213,7 +213,7 @@ beers:
     abv: 4.2
     hops_as_written: Adeena
     hops:
-      - { hop: null, name: Adeena, as_written: Adeena }
+      - { hop: adeena, name: Adeena, as_written: Adeena }
   - slug: lycosa
     name: Lycosa
     url: https://fortgeorgebrewery.com/beer/lycosa/

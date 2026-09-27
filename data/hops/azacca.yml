@@ -45,11 +45,13 @@ analytics:
     observations:
       - { source: hopsteiner, low: 14.0, high: 16.0, note: Data sheet last changed 2023-05-31. }
       - { source: barthhaas, low: 11.0, high: 16.0, note: Range over the last 4 crop years. }
+      - { source: crosby, low: 14.0, high: 16.0 }
   beta_acid:
     unit: percent
     observations:
       - { source: hopsteiner, low: 4.0, high: 5.0, note: Data sheet last changed 2023-05-31. }
       - { source: barthhaas, low: 3.9, high: 5.5, note: Range over the last 4 crop years. }
+      - { source: crosby, low: 4.0, high: 5.5 }
   cohumulone:
     unit: percent_of_alpha
     observations:
@@ -58,12 +60,19 @@ analytics:
     unit: ml_per_100g
     observations:
       - { source: hopsteiner, low: 1.6, high: 2.5, note: Data sheet last changed 2023-05-31. }
+      - { source: crosby, low: 1.65, high: 2.5 }
 oils:
   myrcene:
     unit: percent_of_total_oil
     observations:
       - { source: barthhaas, low: 18.9, high: 55.0, note: Range over the last 4 crop years. }
+      - { source: crosby, low: 46.0, high: 55.0 }
   humulene:
     unit: percent_of_total_oil
     observations:
       - { source: barthhaas, low: 13.4, high: 22.7, note: Range over the last 4 crop years. }
+      - { source: crosby, low: 14.0, high: 18.0 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: crosby, low: 8.0, high: 12.0 }

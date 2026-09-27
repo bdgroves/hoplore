@@ -1,0 +1,44 @@
+slug: thora
+name: Thora
+purpose: dual
+country: US
+kind: cultivar
+
+ownership:
+  mark: public
+  public_domain: true
+
+pedigree:
+  breeder: usda-ars
+  parents: { unknown: true }
+  refs: [crosby]
+
+aroma:
+  summary: >
+    A new public hop from the USDA Agricultural Research Service and the Hop Quality Group, the first from their decade-long collaboration, per Crosby Hops. Named for the Old Norse word for thunder.
+  tags: []
+  refs: [crosby]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-27'
+  notes: >
+    purpose defaulted to dual, unconfirmed -- Crosby Hops describes its intensity but not its role.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: crosby, low: 8.7, high: 8.7 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: crosby, low: 3.2, high: 4.3 }

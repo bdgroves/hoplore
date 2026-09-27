@@ -45,11 +45,13 @@ analytics:
     observations:
       - { source: hopsteiner, low: 2.5, high: 5.5, note: Data sheet last changed 2020-01-09. }
       - { source: barthhaas, low: 1.9, high: 5.5, note: Range over the last 4 crop years. }
+      - { source: crosby, low: 1.9, high: 5.5 }
   beta_acid:
     unit: percent
     observations:
       - { source: hopsteiner, low: 3.0, high: 5.0, note: Data sheet last changed 2020-01-09. }
       - { source: barthhaas, low: 3.5, high: 6.5, note: Range over the last 4 crop years. }
+      - { source: crosby, low: 3.5, high: 6.5 }
   cohumulone:
     unit: percent_of_alpha
     observations:

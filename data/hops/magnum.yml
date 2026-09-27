@@ -33,7 +33,7 @@ substitutes: []
 
 meta:
   status: stub
-  verification: single-source
+  verification: corroborated
   last_reviewed: '2026-09-27'
   notes: >
     purpose defaulted to dual, unconfirmed -- was not researched individually
@@ -43,10 +43,12 @@ analytics:
     unit: percent
     observations:
       - { source: hopsteiner, low: 11.0, high: 16.0, note: Data sheet last changed 2020-01-09. }
+      - { source: crosby, low: 9.0, high: 18.0 }
   beta_acid:
     unit: percent
     observations:
       - { source: hopsteiner, low: 5.0, high: 7.0, note: Data sheet last changed 2020-01-09. }
+      - { source: crosby, low: 4.0, high: 7.0 }
   cohumulone:
     unit: percent_of_alpha
     observations:
@@ -55,6 +57,7 @@ analytics:
     unit: ml_per_100g
     observations:
       - { source: hopsteiner, low: 1.9, high: 2.8, note: Data sheet last changed 2020-01-09. }
+      - { source: crosby, low: 1.5, high: 3.9 }
 oils:
   farnesene:
     unit: percent_of_total_oil
@@ -64,3 +67,7 @@ oils:
     unit: percent_of_total_oil
     observations:
       - { source: hopsteiner, low: 0.2, high: 0.3, note: Data sheet last changed 2020-01-09. }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: crosby, low: 27.4, high: 27.4 }

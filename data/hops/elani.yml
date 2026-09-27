@@ -41,10 +41,12 @@ analytics:
     observations:
       - { source: charles-faram, low: 9.0, high: 11.0 }
       - { source: yqh, low: 4.0, high: 7.0 }
+      - { source: crosby, low: 5.0, high: 7.0 }
   beta_acid:
     unit: percent
     observations:
       - { source: charles-faram, low: 4.0, high: 7.0 }
+      - { source: crosby, low: 1.6, high: 2.4 }
   cohumulone:
     unit: percent_of_alpha
     observations:
@@ -54,3 +56,17 @@ analytics:
     observations:
       - { source: charles-faram, low: 1.3, high: 2.0 }
       - { source: yqh, low: 1.6, high: 2.4 }
+      - { source: crosby, low: 1.6, high: 2.4 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: crosby, low: 54.0, high: 54.0 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: crosby, low: 5.2, high: 5.2 }
+  geraniol:
+    unit: percent_of_total_oil
+    observations:
+      - { source: crosby, low: 0.25, high: 0.25 }

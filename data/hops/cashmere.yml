@@ -29,7 +29,7 @@ substitutes: []
 
 meta:
   status: stub
-  verification: single-source
+  verification: corroborated
   last_reviewed: '2026-09-27'
   notes: >
     purpose defaulted to dual, unconfirmed. Country: breeding origin from general knowledge, not yet cited.
@@ -38,15 +38,36 @@ analytics:
     unit: percent
     observations:
       - { source: hopsteiner, low: 7.0, high: 10.0, note: Data sheet last changed 2020-01-09. }
+      - { source: crosby, low: 7.7, high: 9.1 }
   beta_acid:
     unit: percent
     observations:
       - { source: hopsteiner, low: 4.0, high: 7.0, note: Data sheet last changed 2020-01-09. }
+      - { source: crosby, low: 3.5, high: 4.5 }
   cohumulone:
     unit: percent_of_alpha
     observations:
       - { source: hopsteiner, low: 22.0, high: 25.0, note: Data sheet last changed 2020-01-09. }
+      - { source: crosby, low: 22.0, high: 24.0 }
   total_oil:
     unit: ml_per_100g
     observations:
       - { source: hopsteiner, low: 0.5, high: 1.8, note: Data sheet last changed 2020-01-09. }
+      - { source: crosby, low: 1.2, high: 1.4 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: crosby, low: 39.0, high: 42.0 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: crosby, low: 12.0, high: 13.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: crosby, low: 20.0, high: 35.0 }
+  geraniol:
+    unit: percent_of_total_oil
+    observations:
+      - { source: crosby, low: 0.4, high: 0.7 }

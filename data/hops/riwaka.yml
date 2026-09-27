@@ -33,8 +33,8 @@ substitutes: []
 
 meta:
   status: stub
-  verification: single-source
-  last_reviewed: '2026-09-14'
+  verification: corroborated
+  last_reviewed: '2026-09-27'
   notes: >
     purpose defaulted to dual, unconfirmed -- was not researched individually
     for this bulk scaffold pass. Correct before publishing.
@@ -43,10 +43,14 @@ analytics:
     unit: percent
     observations:
       - { source: hopsteiner, low: 4.5, high: 6.5, note: Data sheet last changed 2021-07-07. }
+      - { source: nzhops, low: 4.5, high: 6.5 }
+      - { source: crosby, low: 4.5, high: 6.5 }
   beta_acid:
     unit: percent
     observations:
       - { source: hopsteiner, low: 4.0, high: 5.0, note: Data sheet last changed 2021-07-07. }
+      - { source: nzhops, low: 4.0, high: 5.0 }
+      - { source: crosby, low: 4.0, high: 5.0 }
   cohumulone:
     unit: percent_of_alpha
     observations:
@@ -55,8 +59,36 @@ analytics:
     unit: ml_per_100g
     observations:
       - { source: hopsteiner, low: 1.0, high: 1.5, note: Data sheet last changed 2021-07-07. }
+      - { source: nzhops, low: 0.9, high: 1.5 }
+      - { source: crosby, low: 0.9, high: 1.5 }
 oils:
   linalool:
     unit: percent_of_total_oil
     observations:
       - { source: hopsteiner, low: 0.0, high: 1.0, note: Data sheet last changed 2021-07-07. }
+      - { source: nzhops, low: 0.6, high: 1.2 }
+      - { source: crosby, low: 0.4, high: 1.2 }
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: nzhops, low: 55.0, high: 65.0 }
+      - { source: crosby, low: 55.0, high: 65.0 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: nzhops, low: 4.0, high: 7.0 }
+      - { source: crosby, low: 4.0, high: 7.0 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: nzhops, low: 0.5, high: 1.0 }
+      - { source: crosby, low: 0.5, high: 1.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: nzhops, low: 5.0, high: 15.0 }
+      - { source: crosby, low: 9.0, high: 13.0 }
+  geraniol:
+    unit: percent_of_total_oil
+    observations:
+      - { source: nzhops, low: 1.5, high: 2.5 }

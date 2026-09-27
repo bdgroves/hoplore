@@ -125,10 +125,15 @@ cls-farms:
 
 crosby:
   publisher: Crosby Hop Farm
-  title: Hop variety specifications
-  url: https://crosbyhops.com/hops/
+  title: Hop variety pages
+  url: https://www.crosbyhops.com/hops/varieties
+  retrieved: '2026-09-27'
   tier: merchant
   weight: 0.7
+  note: >
+    Family hop farm in Woodburn, Oregon (since 1900). Figures are the first
+    Brewing Values block on each page (T-90 pellets); "up to" figures are
+    ceilings and are skipped.
 
 yvh:
   publisher: Yakima Valley Hops

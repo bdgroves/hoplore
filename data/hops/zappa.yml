@@ -40,11 +40,13 @@ analytics:
     observations:
       - { source: charles-faram, low: 6.0, high: 8.0 }
       - { source: cls-farms, low: 6.0, high: 8.0, note: '2022 fact sheet; the oil figures are single analyses, not ranges.' }
+      - { source: crosby, low: 6.0, high: 8.0 }
   beta_acid:
     unit: percent
     observations:
       - { source: charles-faram, low: 8.0, high: 9.0 }
       - { source: cls-farms, low: 8.0, high: 9.0, note: '2022 fact sheet; the oil figures are single analyses, not ranges.' }
+      - { source: crosby, low: 8.0, high: 9.0 }
   cohumulone:
     unit: percent_of_alpha
     observations:
@@ -53,26 +55,35 @@ analytics:
     unit: ml_per_100g
     observations:
       - { source: cls-farms, low: 1.8, high: 2.5, note: '2022 fact sheet; the oil figures are single analyses, not ranges.' }
+      - { source: crosby, low: 1.8, high: 2.5 }
 oils:
   myrcene:
     unit: percent_of_total_oil
     observations:
       - { source: charles-faram, low: 60.0, high: 70.0 }
       - { source: cls-farms, low: 64.37, high: 64.37, note: '2022 fact sheet; the oil figures are single analyses, not ranges.' }
+      - { source: crosby, low: 64.0, high: 64.0 }
   humulene:
     unit: percent_of_total_oil
     observations:
       - { source: charles-faram, low: 1.0, high: 10.0 }
       - { source: cls-farms, low: 4.62, high: 4.62, note: '2022 fact sheet; the oil figures are single analyses, not ranges.' }
+      - { source: crosby, low: 4.6, high: 4.6 }
   caryophyllene:
     unit: percent_of_total_oil
     observations:
       - { source: cls-farms, low: 8.55, high: 8.55, note: '2022 fact sheet; the oil figures are single analyses, not ranges.' }
+      - { source: crosby, low: 8.5, high: 8.5 }
   linalool:
     unit: percent_of_total_oil
     observations:
       - { source: cls-farms, low: 0.82, high: 0.82, note: '2022 fact sheet; the oil figures are single analyses, not ranges.' }
+      - { source: crosby, low: 0.8, high: 0.8 }
   geraniol:
     unit: percent_of_total_oil
     observations:
       - { source: cls-farms, low: 0.67, high: 0.67, note: '2022 fact sheet; the oil figures are single analyses, not ranges.' }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: crosby, low: 0.0, high: 0.0 }

@@ -1,0 +1,65 @@
+slug: adeena
+name: Adeena
+purpose: aroma
+country: US
+kind: cultivar
+
+ownership:
+  mark: registered
+  public_domain: false
+
+pedigree:
+  breeder: unknown
+  parents: { unknown: true }
+  refs: [crosby]
+
+aroma:
+  summary: >
+    A noble-style American aroma hop: herbal and lightly spicy, with a floral nose and a hint of lemon and citrus, per Crosby Hops. Built for lagers and pilsners.
+  tags: [herbal, spice, floral, lemon, noble]
+  refs: [crosby]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-27'
+  notes: >
+    Crosby Hops credits Latitude 46 with developing it; the breeder isn't named. Purpose aroma per Crosby's description.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: crosby, low: 3.5, high: 5.5 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: crosby, low: 3.0, high: 4.6 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: crosby, low: 0.8, high: 2.5 }
+oils:
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: crosby, low: 31.3, high: 45.4 }
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: crosby, low: 27.3, high: 29.43 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: crosby, low: 14.6, high: 21.9 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: crosby, low: 4.3, high: 6.6 }

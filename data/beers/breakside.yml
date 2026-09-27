@@ -534,7 +534,7 @@ beers:
     hops_as_written: Krush, Thora
     hops:
       - { hop: krush, name: Krush, as_written: Krush }
-      - { hop: null, name: Thora, as_written: Thora }
+      - { hop: thora, name: Thora, as_written: Thora }
   - slug: summertime
     name: Summertime
     url: https://breakside.com/our/beer/summertime-2/

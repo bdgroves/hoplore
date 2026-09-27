@@ -44,11 +44,13 @@ analytics:
     observations:
       - { source: hopsteiner, low: 4.0, high: 6.0, note: Data sheet last changed 2020-01-09. }
       - { source: indiehops-oregon, low: 6.0, high: 9.0 }
+      - { source: crosby, low: 5.5, high: 8.5 }
   beta_acid:
     unit: percent
     observations:
       - { source: hopsteiner, low: 5.0, high: 6.0, note: Data sheet last changed 2020-01-09. }
       - { source: indiehops-oregon, low: 4.0, high: 6.0 }
+      - { source: crosby, low: 4.5, high: 6.0 }
   cohumulone:
     unit: percent_of_alpha
     observations:
@@ -59,25 +61,31 @@ analytics:
     observations:
       - { source: hopsteiner, low: 0.8, high: 1.2, note: Data sheet last changed 2020-01-09. }
       - { source: indiehops-oregon, low: 1.3, high: 1.9 }
+      - { source: crosby, low: 1.0, high: 2.0 }
 oils:
   farnesene:
     unit: percent_of_total_oil
     observations:
       - { source: hopsteiner, low: 13.0, high: 15.0, note: Data sheet last changed 2020-01-09. }
       - { source: indiehops-oregon, low: 11.0, high: 17.0 }
+      - { source: crosby, low: 15.0, high: 19.0 }
   linalool:
     unit: percent_of_total_oil
     observations:
       - { source: hopsteiner, low: 0.7, high: 0.9, note: Data sheet last changed 2020-01-09. }
+      - { source: crosby, low: 0.6, high: 0.9 }
   myrcene:
     unit: percent_of_total_oil
     observations:
       - { source: indiehops-oregon, low: 46.0, high: 46.0 }
+      - { source: crosby, low: 35.0, high: 45.0 }
   humulene:
     unit: percent_of_total_oil
     observations:
       - { source: indiehops-oregon, low: 19.0, high: 23.0 }
+      - { source: crosby, low: 16.0, high: 18.0 }
   caryophyllene:
     unit: percent_of_total_oil
     observations:
       - { source: indiehops-oregon, low: 5.0, high: 7.0 }
+      - { source: crosby, low: 5.0, high: 8.0 }

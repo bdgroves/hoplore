@@ -15,7 +15,7 @@ Every hop spec sheet on the internet hands you one confident number. `Alpha: 5.5
 
 Nobody says. So I built a database that does.
 
-**181 cultivars. 149 backed by real breeder and lab sources, 69 of them by two or more. Every number traceable to whoever actually said it.**
+**196 cultivars. 172 backed by real breeder, grower and merchant sources, 95 of them by two or more. Every number traceable to whoever actually said it.**
 
 ---
 
@@ -46,7 +46,7 @@ That's the whole thesis. Nobody hand-writes a published range in this repo. You 
 - **A page per hop** — every source plotted on its own range bar, the oil breakdown, aroma, beer styles, pedigree, and ranked substitutes.
 - **[The hop landscape](https://brooksgroves.com/hoplore/landscape/)** — every hop with published figures on one chart, bittering power against aroma oil. Each hop carries a cross out to the widest range any source reported, so a big cross means the sources disagree or the crop swings year to year. Every hop page links in with that hop lit up.
 - **[Where America's hops grow](https://brooksgroves.com/hoplore/grown/)** — Washington grows three-quarters of the US crop, and this is the page that shows it: acres for every variety USDA counts in Washington, Oregon and Idaho, 2015 to 2025, straight from the National Hop Report. Every hop that's in the survey gets its own *Where it's grown* chart too — Citra is the No. 1 hop by acreage in both Washington and Oregon.
-- **[What's in the can](https://brooksgroves.com/hoplore/beers/)** — pick a beer, see its hops. Starting with Fort George in Astoria: every beer whose page lists its hops gets a page of its own, each hop opened up — aroma, alpha, oil breakdown, how many acres of it Washington and Oregon grew — with Cryo and fresh-hop additions called out (Fresh Hop Mirrored Realities: fresh Strata from Coleman Farms). Every hop page lists the beers it's in.
+- **[What's in the can](https://brooksgroves.com/hoplore/beers/)** — pick a beer, see its hops. 500+ beers from Pacific Northwest breweries — Fort George in Astoria, pFriem, Double Mountain and Kings & Daughters in Hood River, Breakside and Ex Novo in Portland, 7 Seas in Tacoma — each with a page of its own, each hop opened up — aroma, alpha, oil breakdown, how many acres of it Washington and Oregon grew — with Cryo and fresh-hop additions called out (Fresh Hop Mirrored Realities: fresh Strata from Coleman Farms). Every hop page lists the beers it's in.
 - **Honesty built into the page.** A hop with only a placeholder citation gets a red "needs a citation" badge. A stub with no numbers says *awaiting data*. A brewing role that hasn't been sourced says *role ?* instead of quietly guessing. An oil breakdown that doesn't account for enough of the oil isn't drawn at all — rather than scaling two trace compounds up to 100% and inventing the rest.
 
 It all works with JavaScript off. JavaScript adds search, filters and tooltips on top.
@@ -195,11 +195,11 @@ Nobody gets to skip this section.
 
 | | count | what that means |
 |---|---|---|
-| Cultivars | **181** | every one has a record, a page and an API endpoint |
-| Backed by a real source | **149** | Hopsteiner, BarthHaas and Yakima Chief Ranches, tier `breeder` |
-| With a full oil breakdown (myrcene) | **77** | the rest are waiting on a source that publishes it |
+| Cultivars | **196** | every one has a record, a page and an API endpoint |
+| Backed by a real source | **172** | breeders (Hopsteiner, BarthHaas, YCR, HBC, NZ Hops, Indie Hops) plus growers and merchants |
+| With a full oil breakdown (myrcene) | **109** | the rest are waiting on a source that publishes it |
 | Still citing a placeholder somewhere | **12** | mostly aroma prose and pedigree from the first seed pass |
-| No numbers yet | **32** | real varieties, no source found that covers them |
+| No numbers yet | **24** | real varieties, no source found that covers them |
 
 I bootstrapped the first records from general brewing knowledge so there'd be something to build the tooling against. Every one of those citations points at `seed-general-knowledge`, tier `unsourced`, weight 0.1, and is flagged everywhere. When a real source arrives, the placeholder number it contradicts gets deleted rather than kept alongside — the rollup publishes the *union* of source ranges, so a padded guess would drag the published figure away from what the breeder measured. Citra went from a guessed 10–15% alpha to the breeder's 11–13% that way.
 
@@ -239,7 +239,7 @@ Next, roughly in order of how much I want it:
 - [ ] A mini landscape on every hop page, with that hop and its substitutes highlighted
 - [ ] Side-by-side compare for 2–4 hops
 - [ ] More sources: NZ Hops, Hop Products Australia, Charles Faram — for the ~30 hops no current source covers
-- [ ] More breweries on What's in the can — Washington next
+- [ ] More breweries on What's in the can — Seattle and more of Tacoma next (most Tacoma breweries don't publish hop lists yet)
 - [ ] Plant patents as a source: public domain, breeder-authored, and they carry the pedigree marketing sheets leave out
 - [ ] Crop-year data, so you can watch alpha drift across harvests instead of reading one eternal average
 - [ ] BeerXML / BeerJSON import: paste a recipe, get told what's substitutable

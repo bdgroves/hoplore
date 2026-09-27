@@ -77,7 +77,7 @@ FIELD_MAP = {
     "total oil": ("analytics", "total_oil", "ml_per_100g"),
     "myrcene": ("oils", "myrcene", "percent_of_total_oil"),
     "humulene": ("oils", "humulene", "percent_of_total_oil"),
-    "caryophyllene": ("oils", "caryophyllene", "percent_of_total_oil"),
+    "caryophyl": ("oils", "caryophyllene", "percent_of_total_oil"),  # "Caryophyline" on some sheets
     "farnesen": ("oils", "farnesene", "percent_of_total_oil"),  # BarthHaas spells it "farnesen"
     "linalool": ("oils", "linalool", "percent_of_total_oil"),
     "geraniol": ("oils", "geraniol", "percent_of_total_oil"),

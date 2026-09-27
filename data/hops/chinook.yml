@@ -46,11 +46,13 @@ analytics:
       - { source: hopsteiner, low: 12.0, high: 14.0, note: Data sheet last changed 2020-01-09. }
       - { source: barthhaas, low: 10.7, high: 15.0, note: Range over the last 4 crop years. }
       - { source: indiehops-oregon, low: 12.0, high: 14.0 }
+      - { source: crosby, low: 10.7, high: 15.0 }
   beta_acid:
     unit: percent
     observations:
       - { source: hopsteiner, low: 3.0, high: 4.0, note: Data sheet last changed 2020-01-09. }
       - { source: indiehops-oregon, low: 3.5, high: 4.5 }
+      - { source: crosby, low: 4.0, high: 6.0 }
   cohumulone:
     unit: percent_of_alpha
     observations:
@@ -61,6 +63,7 @@ analytics:
     observations:
       - { source: hopsteiner, low: 1.5, high: 2.5, note: Data sheet last changed 2020-01-09. }
       - { source: indiehops-oregon, low: 1.5, high: 2.2 }
+      - { source: crosby, low: 1.5, high: 2.5 }
 oils:
   farnesene:
     unit: percent_of_total_oil
@@ -71,20 +74,24 @@ oils:
     observations:
       - { source: hopsteiner, low: 0.2, high: 0.4, note: Data sheet last changed 2020-01-09. }
       - { source: barthhaas, low: 0.3, high: 0.9, note: Range over the last 4 crop years. }
+      - { source: crosby, low: 0.3, high: 0.9 }
   myrcene:
     unit: percent_of_total_oil
     observations:
       - { source: barthhaas, low: 12.0, high: 30.0, note: Range over the last 4 crop years. }
       - { source: indiehops-oregon, low: 35.0, high: 40.0 }
+      - { source: crosby, low: 12.0, high: 30.0 }
   caryophyllene:
     unit: percent_of_total_oil
     observations:
       - { source: barthhaas, low: 6.7, high: 11.0, note: Range over the last 4 crop years. }
       - { source: indiehops-oregon, low: 10.0, high: 10.0 }
+      - { source: crosby, low: 6.7, high: 11.0 }
   geraniol:
     unit: percent_of_total_oil
     observations:
       - { source: barthhaas, low: 0.1, high: 1.5, note: Range over the last 4 crop years. }
+      - { source: crosby, low: 0.1, high: 1.5 }
   humulene:
     unit: percent_of_total_oil
     observations:

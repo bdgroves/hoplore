@@ -26,22 +26,23 @@ analytics:
       - { source: hopsteiner, low: 9.5, high: 11.5, note: Data sheet last changed 2020-01-09. }
       - { source: barthhaas, low: 7.8, high: 11.5, note: Range over the last 4 crop years. }
       - { source: indiehops-oregon, low: 9.5, high: 11.5 }
+      - { source: crosby, low: 7.8, high: 11.5 }
   beta_acid:
     unit: percent
-    observations: [{ source: hopsteiner, low: 3.5, high: 4.5, note: Data sheet last changed 2020-01-09. }, { source: barthhaas, low: 3.3, high: 4.5, note: Range over the last 4 crop years. }, { source: indiehops-oregon, low: 3.5, high: 4.5 }]
+    observations: [{ source: hopsteiner, low: 3.5, high: 4.5, note: Data sheet last changed 2020-01-09. }, { source: barthhaas, low: 3.3, high: 4.5, note: Range over the last 4 crop years. }, { source: indiehops-oregon, low: 3.5, high: 4.5 }, { source: crosby, low: 3.3, high: 4.5 }]
   cohumulone:
     unit: percent_of_alpha
     observations: [{ source: hopsteiner, low: 29.0, high: 30.0, note: Data sheet last changed 2020-01-09. }, { source: indiehops-oregon, low: 29.0, high: 30.0 }]
   total_oil:
     unit: ml_per_100g
-    observations: [{ source: hopsteiner, low: 0.8, high: 2.3, note: Data sheet last changed 2020-01-09. }, { source: barthhaas, low: 1.6, high: 2.5, note: Range over the last 4 crop years. }, { source: indiehops-oregon, low: 1.5, high: 2.3 }]
+    observations: [{ source: hopsteiner, low: 0.8, high: 2.3, note: Data sheet last changed 2020-01-09. }, { source: barthhaas, low: 1.6, high: 2.5, note: Range over the last 4 crop years. }, { source: indiehops-oregon, low: 1.5, high: 2.3 }, { source: crosby, low: 1.6, high: 2.5 }]
 oils:
   myrcene:
     unit: percent_of_total_oil
-    observations: [{ source: barthhaas, low: 30.7, high: 65.7, note: Range over the last 4 crop years. }, { source: indiehops-oregon, low: 45.0, high: 55.0 }]
+    observations: [{ source: barthhaas, low: 30.7, high: 65.7, note: Range over the last 4 crop years. }, { source: indiehops-oregon, low: 45.0, high: 55.0 }, { source: crosby, low: 30.0, high: 65.0 }]
   humulene:
     unit: percent_of_total_oil
-    observations: [{ source: barthhaas, low: 7.5, high: 16.4, note: Range over the last 4 crop years. }, { source: indiehops-oregon, low: 10.0, high: 18.0 }]
+    observations: [{ source: barthhaas, low: 7.5, high: 16.4, note: Range over the last 4 crop years. }, { source: indiehops-oregon, low: 10.0, high: 18.0 }, { source: crosby, low: 7.5, high: 16.4 }]
   caryophyllene:
     unit: percent_of_total_oil
     observations: [{ source: indiehops-oregon, low: 5.0, high: 8.0 }]
@@ -59,6 +60,7 @@ oils:
     unit: percent_of_total_oil
     observations:
       - { source: barthhaas, low: 0.3, high: 1.5, note: Range over the last 4 crop years. }
+      - { source: crosby, low: 0.3, high: 1.5 }
 usage:
   timing: [bittering, late-boil, whirlpool, dry-hop]
   beer_styles: [american-ipa, west-coast-ipa, double-ipa, american-pale-ale, american-amber, american-stout, barleywine]

@@ -26,16 +26,16 @@ aroma:
 analytics:
   alpha_acid:
     unit: percent
-    observations: [{ source: ychr, low: 11.5, high: 13.5 }, { source: barthhaas, low: 10.4, high: 14.0, note: Range over the last 4 crop years. }, { source: hbc, low: 11.5, high: 13.5 }]
+    observations: [{ source: ychr, low: 11.5, high: 13.5 }, { source: barthhaas, low: 10.4, high: 14.0, note: Range over the last 4 crop years. }, { source: hbc, low: 11.5, high: 13.5 }, { source: crosby, low: 10.0, high: 15.0 }]
   beta_acid:
     unit: percent
-    observations: [{ source: ychr, low: 3.2, high: 3.9 }, { source: barthhaas, low: 2.8, high: 4.0, note: Range over the last 4 crop years. }, { source: hbc, low: 3.2, high: 3.9 }]
+    observations: [{ source: ychr, low: 3.2, high: 3.9 }, { source: barthhaas, low: 2.8, high: 4.0, note: Range over the last 4 crop years. }, { source: hbc, low: 3.2, high: 3.9 }, { source: crosby, low: 3.0, high: 4.5 }]
   cohumulone:
     unit: percent_of_alpha
     observations: [{ source: ychr, low: 24.0, high: 26.0 }, { source: hbc, low: 24.0, high: 26.0 }]
   total_oil:
     unit: ml_per_100g
-    observations: [{ source: ychr, low: 1.0, high: 1.5 }, { source: hbc, low: 1.0, high: 1.5 }]
+    observations: [{ source: ychr, low: 1.0, high: 1.5 }, { source: hbc, low: 1.0, high: 1.5 }, { source: crosby, low: 0.5, high: 3.0 }]
   alpha_retention_6mo_20c:
     unit: percent
     observations:
@@ -43,13 +43,13 @@ analytics:
 oils:
   myrcene:
     unit: percent_of_total_oil
-    observations: [{ source: ychr, low: 47.0, high: 53.0 }, { source: barthhaas, low: 24.5, high: 56.7, note: Range over the last 4 crop years. }, { source: hbc, low: 47.0, high: 53.0 }]
+    observations: [{ source: ychr, low: 47.0, high: 53.0 }, { source: barthhaas, low: 24.5, high: 56.7, note: Range over the last 4 crop years. }, { source: hbc, low: 47.0, high: 53.0 }, { source: crosby, low: 45.0, high: 65.0 }]
   humulene:
     unit: percent_of_total_oil
-    observations: [{ source: ychr, low: 13.0, high: 16.0 }, { source: barthhaas, low: 8.8, high: 16.0, note: Range over the last 4 crop years. }, { source: hbc, low: 13.0, high: 16.0 }]
+    observations: [{ source: ychr, low: 13.0, high: 16.0 }, { source: barthhaas, low: 8.8, high: 16.0, note: Range over the last 4 crop years. }, { source: hbc, low: 13.0, high: 16.0 }, { source: crosby, low: 9.0, high: 16.0 }]
   caryophyllene:
     unit: percent_of_total_oil
-    observations: [{ source: ychr, low: 5.2, high: 7.8 }, { source: barthhaas, low: 3.8, high: 8.8, note: Range over the last 4 crop years. }, { source: hbc, low: 5.2, high: 7.8 }]
+    observations: [{ source: ychr, low: 5.2, high: 7.8 }, { source: barthhaas, low: 3.8, high: 8.8, note: Range over the last 4 crop years. }, { source: hbc, low: 5.2, high: 7.8 }, { source: crosby, low: 3.0, high: 8.0 }]
   other:
     unit: percent_of_total_oil
     observations: [{ source: seed-general-knowledge, low: 15, high: 30 }]
@@ -62,10 +62,12 @@ oils:
     unit: percent_of_total_oil
     observations:
       - { source: barthhaas, low: 0.5, high: 0.9, note: Range over the last 4 crop years. }
+      - { source: crosby, low: 0.4, high: 0.8 }
   geraniol:
     unit: percent_of_total_oil
     observations:
       - { source: barthhaas, low: 0.5, high: 1.0, note: Range over the last 4 crop years. }
+      - { source: crosby, low: 0.4, high: 1.0 }
 usage:
   timing: [whirlpool, dry-hop, bittering]
   beer_styles: [hazy-ipa, american-ipa, double-ipa, american-pale-ale, west-coast-ipa]

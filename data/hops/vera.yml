@@ -1,0 +1,49 @@
+slug: vera
+name: Vera
+aliases: [HRC-003, W1108-333]
+purpose: aroma
+country: US
+kind: cultivar
+
+ownership:
+  mark: trademark
+  public_domain: true
+
+pedigree:
+  breeder: usda-ars
+  parents: { unknown: true }
+  refs: [crosby]
+
+aroma:
+  summary: >
+    Tropical, stone fruit and citrus with a candy-like sweetness -- pineapple Life Savers in a hazy IPA, per Crosby Hops. A public release from USDA-ARS with the Hop Research Council.
+  tags: [tropical, stone-fruit, citrus, pineapple, candy]
+  refs: [crosby]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-27'
+  notes: >
+    Purpose aroma per Crosby's description. Public release (USDA-ARS and the Hop Research Council).
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: crosby, low: 3.5, high: 5.5 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: crosby, low: 4.5, high: 5.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: crosby, low: 0.8, high: 1.3 }

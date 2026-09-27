@@ -27,7 +27,7 @@ from html import escape
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from barthhaas import FIELD_MAP, Observation, load_record, parse_brand, save_record, yaml  # noqa: E402
+from barthhaas import CEILINGS, FIELD_MAP, Observation, load_record, map_label, parse_brand, parse_range, save_record, yaml  # noqa: E402
 from common import apply_observations, reconcile  # noqa: E402
 
 HERE = Path(__file__).parent
@@ -74,6 +74,26 @@ def observations_for(sheet: dict) -> tuple[list[Observation], list[str]]:
             section, unit = TARGETS[metric]
             observations.append(Observation(metric, section, unit, float(low), float(high), metric))
         notes.append("values keyed by hand, each checked against the saved page")
+    elif path.suffix == ".pdf":
+        # Spec PDFs set "Alpha Acids 2.5-3.5%" at the start of a line, often
+        # with an aroma-wheel label run on after it. Read label + first range.
+        observations, seen = [], set()
+        for line in text.splitlines():
+            m = re.match(r"^\s*(Alpha Acids?|Beta Acids?|Co-?humulone|Total Oils?|Myrcene|Humulene|Caryophyllene|"
+                         r"Farnesene|Linalool|Geraniol)\s*:?\s*([\d.]+(?:\s*[-\u2013]\s*[\d.]+)?)\s*(%|mL|ml)", line, re.I)
+            if not m:
+                continue
+            target = map_label(m.group(1).lower().replace("co-humulone", "cohumulone"))
+            bounds = parse_range(m.group(2))
+            if not target or not bounds or target[1] in seen:
+                continue
+            section, metric, unit = target
+            seen.add(metric)
+            low, high = bounds
+            if (ceiling := CEILINGS.get(metric)) and high > ceiling:
+                notes.append(f"excluded {metric} {low}-{high}: over the plausible ceiling")
+                continue
+            observations.append(Observation(metric, section, unit, low, high, m.group(1)))
     else:
         parsed = parse_brand(html, sheet["slug"], sheet["slug"], sheet["url"])
         observations = parsed.observations

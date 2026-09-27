@@ -32,7 +32,53 @@ substitutes: []
 
 meta:
   status: draft
-  verification: unverified
+  verification: corroborated
   last_reviewed: '2026-09-27'
   notes: >
     Purpose dual: NZ Hops sells it both as a bittering hop and as a late addition.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: nzhops, low: 17.0, high: 20.0 }
+      - { source: crosby, low: 17.0, high: 19.5 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: nzhops, low: 8.0, high: 10.0 }
+      - { source: crosby, low: 7.7, high: 8.6 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: nzhops, low: 1.5, high: 2.0 }
+      - { source: crosby, low: 1.0, high: 2.3 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: nzhops, low: 20.0, high: 30.0 }
+      - { source: crosby, low: 29.5, high: 29.5 }
+  linalool:
+    unit: percent_of_total_oil
+    observations:
+      - { source: nzhops, low: 0.8, high: 1.5 }
+      - { source: crosby, low: 0.8, high: 0.8 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: nzhops, low: 5.0, high: 6.0 }
+      - { source: crosby, low: 9.7, high: 9.7 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: nzhops, low: 0.1, high: 0.5 }
+      - { source: crosby, low: 0.1, high: 0.1 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: nzhops, low: 14.0, high: 16.0 }
+      - { source: crosby, low: 20.5, high: 20.5 }
+  geraniol:
+    unit: percent_of_total_oil
+    observations:
+      - { source: nzhops, low: 0.8, high: 1.2 }

@@ -33,8 +33,8 @@ substitutes: []
 
 meta:
   status: stub
-  verification: single-source
-  last_reviewed: '2026-09-14'
+  verification: corroborated
+  last_reviewed: '2026-09-27'
   notes: >
     purpose defaulted to dual, unconfirmed -- was not researched individually
     for this bulk scaffold pass. Correct before publishing.
@@ -43,10 +43,12 @@ analytics:
     unit: percent
     observations:
       - { source: hopsteiner, low: 12.0, high: 14.5, note: Data sheet last changed 2020-01-09. }
+      - { source: nzhops, low: 11.0, high: 14.0 }
   beta_acid:
     unit: percent
     observations:
       - { source: hopsteiner, low: 6.0, high: 6.5, note: Data sheet last changed 2020-01-09. }
+      - { source: nzhops, low: 5.0, high: 6.0 }
   cohumulone:
     unit: percent_of_alpha
     observations:
@@ -55,12 +57,31 @@ analytics:
     unit: ml_per_100g
     observations:
       - { source: hopsteiner, low: 0.9, high: 1.4, note: Data sheet last changed 2020-01-09. }
+      - { source: nzhops, low: 1.5, high: 2.25 }
 oils:
   farnesene:
     unit: percent_of_total_oil
     observations:
       - { source: hopsteiner, low: 5.0, high: 6.0, note: Data sheet last changed 2020-01-09. }
+      - { source: nzhops, low: 6.0, high: 8.0 }
   linalool:
     unit: percent_of_total_oil
     observations:
       - { source: hopsteiner, low: 1.1, high: 1.2, note: Data sheet last changed 2020-01-09. }
+      - { source: nzhops, low: 0.5, high: 1.0 }
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: nzhops, low: 35.0, high: 50.0 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: nzhops, low: 5.0, high: 7.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: nzhops, low: 17.0, high: 20.0 }
+  geraniol:
+    unit: percent_of_total_oil
+    observations:
+      - { source: nzhops, low: 0.5, high: 1.0 }

@@ -321,7 +321,7 @@ beers:
     abv: 5.0
     hops_as_written: Adeena, Hallertau Mittelfruh, Perle, Tettnang
     hops:
-      - { hop: null, name: Adeena, as_written: Adeena }
+      - { hop: adeena, name: Adeena, as_written: Adeena }
       - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Hallertau Mittelfruh }
       - { hop: perle, name: Perle, as_written: Perle }
       - { hop: tettnang, name: Tettnang, as_written: Tettnang }
@@ -1024,7 +1024,7 @@ beers:
     abv: 3.0
     hops_as_written: Adeena, Lorian
     hops:
-      - { hop: null, name: Adeena, as_written: Adeena }
+      - { hop: adeena, name: Adeena, as_written: Adeena }
       - { hop: lorien, name: Lorian, as_written: Lorian }
   - slug: perle-haggard
     name: Perle Haggard

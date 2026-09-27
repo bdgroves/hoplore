@@ -45,11 +45,13 @@ analytics:
     observations:
       - { source: hopsteiner, low: 8.0, high: 10.5, note: Data sheet last changed 2020-01-09. }
       - { source: barthhaas, low: 9.4, high: 12.4, note: Range over the last 4 crop years. }
+      - { source: crosby, low: 9.0, high: 12.0 }
   beta_acid:
     unit: percent
     observations:
       - { source: hopsteiner, low: 3.0, high: 6.0, note: Data sheet last changed 2020-01-09. }
       - { source: barthhaas, low: 3.0, high: 6.1, note: Range over the last 4 crop years. }
+      - { source: crosby, low: 3.0, high: 6.0 }
   cohumulone:
     unit: percent_of_alpha
     observations:
@@ -71,7 +73,9 @@ oils:
     unit: percent_of_total_oil
     observations:
       - { source: barthhaas, low: 38.0, high: 51.0, note: Range over the last 4 crop years. }
+      - { source: crosby, low: 38.0, high: 51.0 }
   humulene:
     unit: percent_of_total_oil
     observations:
       - { source: barthhaas, low: 0.5, high: 0.6, note: Range over the last 4 crop years. }
+      - { source: crosby, low: 0.5, high: 0.6 }

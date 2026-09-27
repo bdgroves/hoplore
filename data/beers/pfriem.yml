@@ -1448,7 +1448,7 @@ beers:
     abv: 5.8
     hops_as_written: Thora (HQG-4), Mosaic
     hops:
-      - { hop: null, name: Thora, product: HQG-4, as_written: Thora (HQG-4) }
+      - { hop: thora, name: Thora, product: HQG-4, as_written: Thora (HQG-4) }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
   - slug: tiki-saturn-hazy-ipa
     name: Tiki Saturn Hazy IPA

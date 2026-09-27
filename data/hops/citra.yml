@@ -32,9 +32,10 @@ analytics:
       - { source: ychr, low: 11.0, high: 13.0 }
       - { source: barthhaas, low: 11.0, high: 14.3, note: Range over the last 4 crop years. }
       - { source: hbc, low: 11.0, high: 13.0 }
+      - { source: crosby, low: 11.0, high: 14.3 }
   beta_acid:
     unit: percent
-    observations: [{ source: ychr, low: 3.5, high: 4.5 }, { source: barthhaas, low: 2.7, high: 4.5, note: Range over the last 4 crop years. }, { source: hbc, low: 3.5, high: 4.5 }]
+    observations: [{ source: ychr, low: 3.5, high: 4.5 }, { source: barthhaas, low: 2.7, high: 4.5, note: Range over the last 4 crop years. }, { source: hbc, low: 3.5, high: 4.5 }, { source: crosby, low: 2.7, high: 4.5 }]
   cohumulone:
     unit: percent_of_alpha
     observations: [{ source: ychr, low: 22.0, high: 24.0 }, { source: hbc, low: 22.0, high: 24.0 }]
@@ -48,13 +49,13 @@ analytics:
 oils:
   myrcene:
     unit: percent_of_total_oil
-    observations: [{ source: ychr, low: 60.0, high: 65.0 }, { source: barthhaas, low: 28.6, high: 66.0, note: Range over the last 4 crop years. }, { source: hbc, low: 60.0, high: 65.0 }]
+    observations: [{ source: ychr, low: 60.0, high: 65.0 }, { source: barthhaas, low: 28.6, high: 66.0, note: Range over the last 4 crop years. }, { source: hbc, low: 60.0, high: 65.0 }, { source: crosby, low: 29.0, high: 66.0 }]
   humulene:
     unit: percent_of_total_oil
-    observations: [{ source: ychr, low: 11.0, high: 13.0 }, { source: barthhaas, low: 7.9, high: 13.2, note: Range over the last 4 crop years. }, { source: hbc, low: 11.0, high: 13.0 }]
+    observations: [{ source: ychr, low: 11.0, high: 13.0 }, { source: barthhaas, low: 7.9, high: 13.2, note: Range over the last 4 crop years. }, { source: hbc, low: 11.0, high: 13.0 }, { source: crosby, low: 7.9, high: 13.2 }]
   caryophyllene:
     unit: percent_of_total_oil
-    observations: [{ source: ychr, low: 6.0, high: 8.0 }, { source: barthhaas, low: 3.7, high: 9.0, note: Range over the last 4 crop years. }, { source: hbc, low: 6.0, high: 8.0 }]
+    observations: [{ source: ychr, low: 6.0, high: 8.0 }, { source: barthhaas, low: 3.7, high: 9.0, note: Range over the last 4 crop years. }, { source: hbc, low: 6.0, high: 8.0 }, { source: crosby, low: 3.7, high: 9.0 }]
   farnesene:
     unit: percent_of_total_oil
     observations: [{ source: ychr, low: 0.0, high: 0.0 }, { source: hbc, low: 0.0, high: 0.0 }]
@@ -65,6 +66,7 @@ oils:
     unit: percent_of_total_oil
     observations:
       - { source: barthhaas, low: 0.5, high: 1.1, note: Range over the last 4 crop years. }
+      - { source: crosby, low: 0.5, high: 1.1 }
   geraniol:
     unit: percent_of_total_oil
     observations:
