@@ -792,3 +792,20 @@ a:hover { text-decoration-color: var(--rust); }
 .fresh-season h2 { color: var(--sage); }
 .fresh-season .beerlist li { grid-template-columns: minmax(10rem, 16rem) 11rem 1fr; }
 @media (max-width: 46rem) { .fresh-season .beerlist li { grid-template-columns: 1fr auto; } }
+
+/* ------------------------------------------------------------------- scan */
+
+.scan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+@media (max-width: 46rem) { .scan-grid { grid-template-columns: 1fr; } }
+.scan h2 { font-size: 1.05rem; margin-bottom: 0.6rem; }
+.dropzone { display: grid; place-items: center; min-height: 14rem; border: 2px dashed var(--mist); background: var(--cream); cursor: pointer; padding: 1rem; text-align: center; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; color: var(--stone); }
+.dropzone.over, .dropzone:hover { border-color: var(--gold); }
+.dropzone img { max-width: 100%; max-height: 22rem; }
+.scan textarea, .scan input[type="text"] { width: 100%; font: inherit; font-size: 0.95rem; background: var(--white); color: var(--ink); border: 1px solid var(--mist); padding: 0.6rem; }
+.scan-label { display: block; margin: 0.8rem 0 0.3rem; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); }
+.scan-go { font-size: 0.72rem; padding: 0.55rem 1.1rem; background: var(--ink); color: var(--parchment); border-color: var(--ink); }
+.scan-go:hover { background: var(--rust); border-color: var(--rust); color: var(--white); }
+.scan-go:disabled { opacity: 0.5; cursor: wait; }
+.scan h2.scan-beer { font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 900; margin: 0.2rem 0 0.4rem; }
+.scan-keep { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-top: 1rem; }
+.scan-keep .fine { max-width: 52ch; }

@@ -1,0 +1,55 @@
+name: Add a scanned beer
+
+# The /scan/ page opens an issue holding a beer as YAML. This adds it to
+# data/beers/scanned/, validates, commits, redeploys and closes the issue.
+# Only issues opened by the repository owner are acted on; anyone else's
+# scan issue is left for a human to look at.
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write
+  issues: write
+  actions: write
+
+concurrency:
+  group: ingest
+  cancel-in-progress: false
+
+jobs:
+  add:
+    if: contains(github.event.issue.body, 'hoplove-beer-scan') && github.event.issue.user.login == github.repository_owner && github.event.issue.state == 'open'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: prefix-dev/setup-pixi@v0.10.2
+        with:
+          environments: data default
+          cache: true
+
+      - name: Add the beer
+        id: add
+        env:
+          SCAN_BODY: ${{ github.event.issue.body }}
+        run: pixi run -e data python tools/ingest/scanned_beer.py
+
+      - name: Validate
+        run: pixi run validate
+
+      - name: Commit, deploy, close
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number }}
+          PAGE: ${{ steps.add.outputs.page }}
+          SUMMARY: ${{ steps.add.outputs.summary }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/beers/scanned
+          git commit -m "Scanned beer: $SUMMARY" -m "From issue #$NUMBER."
+          git pull --rebase --autostash && git push
+          gh workflow run deploy.yml --ref main
+          gh issue close "$NUMBER" --comment "Added: $SUMMARY. It'll be at https://brooksgroves.com/hoplore/$PAGE in a minute or two, once the site rebuilds. 🍺❤️"

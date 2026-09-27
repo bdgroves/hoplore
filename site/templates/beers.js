@@ -233,6 +233,7 @@ export function renderBeers({ breweries, bySlug, meta }) {
     <nav class="nav" style="border-top:0;padding-top:0">
       <a href="${base}">All hops</a>
       <a href="${base}grown/">Where the hops grow</a>
+      <a href="${base}scan/">Scan a beer 📷</a>
     </nav>
     <h1 class="page-title">What's in the can</h1>
     <p class="standfirst">Pick a beer, see its hops — what each one is, what it

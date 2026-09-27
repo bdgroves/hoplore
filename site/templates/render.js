@@ -127,6 +127,7 @@ export function renderIndex({ hops, taxonomy, meta }) {
       <a href="landscape/">Hop landscape</a>
       <a href="grown/">Where the hops grow</a>
       <a href="beers/">What's in the can</a>
+      <a href="scan/">Scan a beer 📷</a>
       <a href="api/v1/hops.json">Download the data</a>
       <a href="api/v1/schema/hop.schema.json">Schema</a>
       <a href="https://github.com/bdgroves/hoplore">GitHub</a>
