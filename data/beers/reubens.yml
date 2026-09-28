@@ -61,7 +61,7 @@ beers:
     hops_as_written: Citra, Mosaic, Sabro
     hops:
       - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: mosaic, name: Mosaic, fresh: true, as_written: Mosaic }
       - { hop: sabro, name: Sabro, as_written: Sabro }
   - slug: alpenglow-galaxy-edition
     name: 'Alpenglow: Galaxy Edition'
