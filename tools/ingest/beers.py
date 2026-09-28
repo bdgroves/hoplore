@@ -494,6 +494,43 @@ def parse_pelican(path: Path) -> tuple | None:
     return name, abv_of(text), prose, "prose"
 
 
+def parse_fast_fashion(path: Path) -> list | None:
+    """Fast Fashion's page at The Masonry lists its whole archive, one beer
+    per entry: "<strong>Gyoshō</strong>, 6.3%, DDH IPA - … Hopped with …"."""
+    import html as htmllib
+    raw = path.read_text(encoding="utf-8", errors="ignore")
+    out = []
+    for name, abv, desc in re.findall(r"<strong>([^<]{2,80})</strong>\s*,\s*([\d.]+)%\s*,\s*([^<]{10,800})", raw):
+        name = htmllib.unescape(name).strip()
+        desc = re.sub(r"\s+", " ", htmllib.unescape(desc)).strip()
+        try:
+            abv_f = float(abv)
+        except ValueError:
+            abv_f = None
+        out.append((name, abv_f, desc, "prose"))
+    return out or None
+
+
+def parse_triceratops(path: Path) -> list | None:
+    """Squarespace 'All Beers': a bold name line, then the description."""
+    soup = BeautifulSoup(path.read_text(encoding="utf-8", errors="ignore"), "lxml")
+    out = []
+    for strong in soup.find_all("strong"):
+        p = strong.parent
+        if p is None or p.name != "p" or p.get_text(" ", strip=True) != strong.get_text(" ", strip=True):
+            continue
+        name = strong.get_text(" ", strip=True)
+        desc = []
+        for sib in p.find_next_siblings():
+            if sib.find("strong") and sib.get_text(" ", strip=True) == sib.find("strong").get_text(" ", strip=True):
+                break
+            desc.append(sib.get_text(" ", strip=True))
+        text = " ".join(desc)
+        if name and text:
+            out.append((name, abv_of(text), text[:1200], "prose"))
+    return out or None
+
+
 def parse_description(path: Path) -> tuple | None:
     """Breweries that write a paragraph: the whole description is scanned for
     variety names (see names_in for how ordinary words are kept out)."""
@@ -545,6 +582,8 @@ PARSERS = {
     "structures": (parse_structures, "structuresbrewing.com", "*.html"),
     "pelican": (parse_pelican, "pelicanbrewing.com", "beer_*.html"),
     "great-notion": (parse_shopify, "greatnotion.com", "products_*.html"),
+    "fast-fashion": (parse_fast_fashion, "themasonryseattle.com", "fast-fashion.html"),
+    "triceratops": (parse_triceratops, "triceratopsbrewing.com", "all-beers.html"),
 }
 
 

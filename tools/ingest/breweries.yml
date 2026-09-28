@@ -238,20 +238,5 @@
   keep_listing: true
   match: '^$'
 
-- slug: hood-river-brewing
-  name: Hood River Brewing
-  city: Hood River
-  state: OR
-  url: https://hoodriverbrewing.com/
-  listing: ['https://hoodriverbrewing.com/our-beer']
-  keep_listing: true
-  match: '^$'
-
-- slug: brothers-cascadia
-  name: Brothers Cascadia Brewing
-  city: Vancouver
-  state: WA
-  url: https://brotherscascadiabrewing.com/
-  listing: ['https://brotherscascadiabrewing.com/vancouver-brothers-cascadia-brewing-drink-menu']
-  keep_listing: true
-  match: '^$'
+# Hood River Brewing and Brothers Cascadia were tried (2026-09): neither site
+# names the hop varieties in its beers, so they're left out.

@@ -1,0 +1,752 @@
+brewery:
+  slug: fast-fashion
+  name: Fast Fashion
+  city: Seattle
+  state: WA
+  url: https://themasonryseattle.com/fast-fashion/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-28'
+beers:
+  - slug: after-hours
+    name: After Hours
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 9.86
+    hops_as_written: DDH Triple IPA - Brewed in collaboration with Human People. Hopped with El Dorado, Freestyle Motueka, and Freestyle Waimea
+    hops:
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+      - { hop: waimea, name: Waimea, as_written: Waimea }
+  - slug: afternoon-tea
+    name: Afternoon Tea
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 6.4
+    hops_as_written: West Coast IPA - Hopped with Idaho 7, Freestyle Nelson and Mosaic.
+    hops:
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: all-dressed
+    name: All Dressed
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.2
+    hops_as_written: NZ Pilsner - Hopped with Freestyle Peacherine and Rakau
+    hops:
+      - { hop: rakau, name: Rakau, as_written: Rakau }
+  - slug: backwards-in-heels
+    name: Backwards in Heels
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 4.2
+    hops_as_written: West Coast American Pale Ale - Brewed in collaboration with Aslan, Brouwers, Bosk, Bottleworks, Fair Isle, Floodland, Headless Mumby, Holy Mountain, Ilk, Pike, Stillwater, Stoup, Seattle Cider, and Yonder. Featuring Freestyle Nelson Hops.
+    hops:
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+  - slug: bagel-mode
+    name: Bagel Mode
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 6.7
+    hops_as_written: West Coast IPA - Brewed in collaboration with Cellarmaker. Featuring El Dorado, Freestyle Nelson and Galaxy hops.
+    hops:
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: bargin-bin
+    name: Bargin Bin
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.0
+    hops_as_written: DDH IPA - Brewed with Freestyle NZ Cascade, Mosaic and Simcoe
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: baso-fibonacci
+    name: Baso Fibonacci
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.2
+    hops_as_written: IPA - Brewed in collaboration with Baso Fibonacci. Featuring Freestyle Motueka, NZ Cascade and Segal Ranch Anchovy Hops.
+    hops:
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: anchovy, name: Anchovy, as_written: Anchovy }
+  - slug: bia-bia-bia
+    name: Bia Bia Bia
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 4.0
+    hops_as_written: Vietnamese Style Lager - Brewed in collaboration with Lowercase Brewing. Hopped with Hallertau Mittelfrüh.
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Hallertau, as_written: Hallertau }
+  - slug: birding
+    name: Birding
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.2
+    hops_as_written: German Style Pilsner - Brewed in collaboration with Human Robot. Featuring Saaz, Spalter Select, and Traditional Hops.
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: spalter-select, name: Spalter Select, as_written: Spalter Select }
+  - slug: bonk
+    name: Bonk
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 6.5
+    hops_as_written: DDH IPA - Brewed in collaboration with Beak Brewery. Featuring Freestyle Manilita and Motueka
+    hops:
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+  - slug: budget-beer
+    name: Budget Beer
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.0
+    hops_as_written: West Coast IPA - Brewed in collaboration with Georgetown Brewing Co. Hopped with Citra, Columbus Lupomax and Mandarina Bavaria.
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina Bavaria }
+  - slug: burger-party
+    name: Burger Party
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.5
+    hops_as_written: West Coast Pilsner - Brewed in celebration of The Tulip Shop's 5th Anniversary. Featuring Freestyle Rakau and Mosaic Hops.
+    hops:
+      - { hop: rakau, name: Rakau, as_written: Rakau }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: busdriver
+    name: Busdriver
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 6.5
+    hops_as_written: DDH IPA - Brewed with Mosaic, Strata, and Freestyle Waimea Hops.
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: waimea, name: Waimea, as_written: Waimea }
+  - slug: catch-of-the-day
+    name: Catch of the Day
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 6.8
+    hops_as_written: Fresh Hop India Pale Ale - Brewed Exclusively with Segal Ranch Anchovy Hops
+    hops:
+      - { hop: anchovy, name: Anchovy, as_written: Anchovy }
+  - slug: celestial-varnish
+    name: Celestial Varnish
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.0
+    hops_as_written: DDH IPA - Brewed with Citra, Cashmere, and Idaho 7
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+  - slug: chimichurri
+    name: Chimichurri
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.2
+    hops_as_written: West Coast Pale Ale - Hopped with Citra Abstrax, Citra Lupomax, Centennial Abstrax and Centennial.
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+  - slug: chuck-s-on-chucks
+    name: Chuck’s on Chucks
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 6.8
+    hops_as_written: DDH India Pale Ale - Hopped with Freestyle Nelson Sauvin, Galaxy, & Citra Lupomax. Order Now
+    hops:
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: coastal-spanner
+    name: Coastal Spanner
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.5
+    hops_as_written: West Coast Pilsner - Brewed in collaboration with Firestone Walker. Featuring Freestyle Rakau and Mosaic Hops.
+    hops:
+      - { hop: rakau, name: Rakau, as_written: Rakau }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: cold-spell
+    name: Cold Spell
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.3
+    hops_as_written: West Coast IPA - Brewed in collaboration with Willibald. Featuring Simcoe Hops.
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: commercial-break
+    name: Commercial Break
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.5
+    hops_as_written: DDH India Pale Ale - Brewed with Citra, NZ Cascade, and Waimea hops
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: waimea, name: Waimea, as_written: Waimea }
+  - slug: compound-interest
+    name: Compound Interest
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.3
+    hops_as_written: DDH IPA - Brewed in collaboration with Community Pint. Hopped with Centennial, Freestyle Nelson and Segal Anchovy.
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: anchovy, name: Anchovy, as_written: Anchovy }
+  - slug: construct-break-blue
+    name: Construct Break – Blue
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.0
+    hops_as_written: Hoppy Rice Lager - Brewed in Collaboration with Queer/Bar. Featuring Freestyle Peacherine and Freestyle Motueka hops.
+    hops:
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+  - slug: construct-break-pink
+    name: Construct Break – Pink
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.0
+    hops_as_written: Hoppy Rice Lager - Brewed in Collaboration with Queer/Bar. Featuring Freestyle Peacherine and Freestyle Motueka hops.
+    hops:
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+  - slug: construct-break-white
+    name: Construct Break – White
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.0
+    hops_as_written: Hoppy Rice Lager - Brewed in Collaboration with Queer/Bar. Featuring Freestyle Peacherine and Freestyle Motueka hops.
+    hops:
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+  - slug: cownterbeer
+    name: Cownterbeer
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.4
+    hops_as_written: Oat Cream Pale Ale - Hopped with Segal Ranch Anchovy and Freestyle Nelson. Order Now
+    hops:
+      - { hop: anchovy, name: Anchovy, as_written: Anchovy }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+  - slug: crop-top
+    name: Crop Top
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.2
+    hops_as_written: German Style Pilsner - Brewed with Seitz Farm Saaz Hops
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: cruise-control
+    name: Cruise Control
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.2
+    hops_as_written: DDH India Pale Ale - Brewed With Freestyle Peacherine and Freestyle Nelson Hops
+    hops:
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+  - slug: death-at-the-bar
+    name: Death At The Bar
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 9.5
+    hops_as_written: Triple India Pale Ale - Brewed in Collaboration with Brujos. Featuring Citra, Idaho 7, Strata, and Segal Ranch Anchovy hops.
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: anchovy, name: Anchovy, as_written: Anchovy }
+  - slug: double-bagel-mode
+    name: Double Bagel Mode
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 8.2
+    hops_as_written: West Coast Double India Pale Ale - Brewed with Freestyle Nelson Sauvin and Talus. Order Now
+    hops:
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: talus, name: Talus, as_written: Talus }
+  - slug: elegia
+    name: Elegia
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.5
+    hops_as_written: West Coast India Pale Ale - Brewed with Citra, Simcoe, and Strata Hops
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: fast-casual
+    name: Fast Casual
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.7
+    hops_as_written: West Coast Pilsner - Brewed with Citra and Simcoe
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: fast-lane
+    name: Fast Lane
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.2
+    hops_as_written: DDH IPA - Collaboration with Halfway Crooks and Resident Culture. Brewed with Strata and Citra. Order Now
+    hops:
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: feedback-loop
+    name: Feedback Loop
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 6.8
+    hops_as_written: DDH India Pale Ale - Brewed With Galaxy, Simcoe, and 2 Lots of Freestyle Motueka Hops
+    hops:
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+  - slug: fish-food
+    name: Fish Food
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 6.2
+    hops_as_written: West Coast IPA - Hopped with Freestyle Kohia, Nelson Hop Kief, Mosaic and Segal Ranch Anchovy.
+    hops:
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: anchovy, name: Anchovy, as_written: Anchovy }
+  - slug: fix-in-post
+    name: Fix In Post
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 6.0
+    hops_as_written: Fresh Hop IPA - Brewed in collaboration with CLS Farms and Mellotone Beer Project. Hopped with CLS Farms Fresh El Dorado and Freshly Kilned El Dorado.
+    hops:
+      - { hop: el-dorado, name: El Dorado, fresh: true, as_written: El Dorado }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+  - slug: fontaines-dc
+    name: Fontaines DC
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 4.4
+    hops_as_written: Heirloom Corn Lager - brewed in collaboration with The Showbox and Fontaines DC. Featuring Heirloom Blue Corn, Hallertau Mittelfrüh and Motueka.
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Hallertau, as_written: Hallertau }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+  - slug: fresh-flight
+    name: Fresh Flight
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 6.0
+    hops_as_written: Fresh Hop Ale - Brewed in collaboration with Mountain Culture. Hopped exclusively with Segal Ranch Anchovy hops.
+    hops:
+      - { hop: anchovy, name: Anchovy, as_written: Anchovy }
+  - slug: friendly
+    name: Friendly
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.2
+    hops_as_written: Hoppy Rye Pils - Brewed in collaboration with Creature Comforts Brewery. Featuring Saphire, Hallertau Blanc, and Freestyle Nelson Hops.
+    hops:
+      - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+  - slug: game-beer
+    name: Game Beer
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 6.8
+    hops_as_written: DDH India Pale Ale - Hopped with Simcoe and Strata
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: gyosh
+    name: Gyoshō
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 6.3
+    hops_as_written: DDH IPA - Brewed in collaboration with West Coast Brewing. Hopped with Freestyle NZ Cascade, Segal Ranch Anchovy, and Strata.
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: anchovy, name: Anchovy, as_written: Anchovy }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: haute-dish
+    name: Haute Dish
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.5
+    hops_as_written: West Coast IPA - Brewed with Freestyle Nelson, Simcoe, and Strata Hops
+    hops:
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: here-and-nowhere-else
+    name: Here and Nowhere Else
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.3
+    hops_as_written: DDH IPA - Brewed with Citra, Freestyle Motueka, and Freestyle Nelson
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+  - slug: hidden-gems
+    name: Hidden Gems
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.2
+    hops_as_written: DDH India Pale Ale - Brewed with Citra and Freestyle Nelson. Order Online
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+  - slug: hometeam
+    name: Hometeam
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.2
+    hops_as_written: German Style Pilsner - Brewed in collaboration with Charles Peterson and Hometeam. Featuring Saaz, Spalter Select, and Traditional Hops.
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: spalter-select, name: Spalter Select, as_written: Spalter Select }
+  - slug: hop-scran
+    name: Hop Scran
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 6.4
+    hops_as_written: DDH India Pale Ale - Double Dry-Hopped India Pale Ale Brewed with Phantasm, Enigma, and Freestyle Nelson
+    hops:
+      - { hop: enigma, name: Enigma, as_written: Enigma }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+  - slug: hot-pizza-with-anchovy
+    name: Hot Pizza with Anchovy
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.2
+    hops_as_written: DDH India Pale Ale - Hopped with Citralupomax, Sabrolupomax, Mosaiclupomax, and Segalranch Anchovy Hops
+    hops:
+      - { hop: anchovy, name: Anchovy, as_written: Anchovy }
+  - slug: i-need-this
+    name: I Need This
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.8
+    hops_as_written: DDH IPA - Brewed in collaboration with Willibald. Hopped with Freestyle Rakau and Freestyle Waimea
+    hops:
+      - { hop: rakau, name: Rakau, as_written: Rakau }
+      - { hop: waimea, name: Waimea, as_written: Waimea }
+  - slug: idles
+    name: Idles
+    url: https://themasonryseattle.com/fast-fashion/
+    hops_as_written: A Hoppy Lagered Non-Alc. Brew - Brewed in collaboration with The Showbox & Idles. Featuring Citra Hops.
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: is-fast-fashion-old-news
+    name: Is Fast Fashion Old News?
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.0
+    hops_as_written: Dry Irish Stout - Hopped with First Gold. Order Now
+    hops:
+      - { hop: first-gold, name: First Gold, as_written: First Gold }
+  - slug: katlyn-hubner
+    name: Katlyn Hubner
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.2
+    hops_as_written: India Pale Ale - Brewed in collaboration with Hometeam and Katlyn Hubner. Featuring Freestyle Motueka, NZ Cascade, and Segal Ranch Anchovy Hops.
+    hops:
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: anchovy, name: Anchovy, as_written: Anchovy }
+  - slug: landscape-drinkers
+    name: Landscape Drinkers
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.0
+    hops_as_written: Fresh Hop Ale - Brewed in collaboration with Schenker Beer Company and Cis Farms. Featuring CLS Farms Wet El Dorado and a touch of Citra.
+    hops:
+      - { hop: el-dorado, name: El Dorado, fresh: true, as_written: El Dorado }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: leglock
+    name: Leglock
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 8.2
+    hops_as_written: DDH Double IPA - Brewed in collaboration with Range Brewing. Featuring Freestyle Rakakau Hops and Freestyle Motueka Hop Kief.
+    hops:
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+  - slug: luxury-tax
+    name: Luxury Tax
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.7
+    hops_as_written: DDH IPA - Brewed with Freestyle NZ Cascade and Idaho 7
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+  - slug: marine-layer
+    name: Marine Layer
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.0
+    hops_as_written: West Coast Pale Ale - Brewed in collaboration with Structures Brewing. Featuring Citra, Hallertau Blanc, and Freestyle Montueka.
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
+  - slug: mignonette
+    name: Mignonette
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.0
+    hops_as_written: DDH IPA - Brewed with Citra, Segal Ranch Anchovy, El Dorado, Abstrax Citra, and Abstrax Segal Ranch Anchovy Hops
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: anchovy, name: Anchovy, as_written: Anchovy }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+  - slug: music-for-the-masses
+    name: Music for the Masses
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.1
+    hops_as_written: DDH IPA - Brewed with Freestyle Motueka, Rakau, and Waimea Hops
+    hops:
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+      - { hop: rakau, name: Rakau, as_written: Rakau }
+      - { hop: waimea, name: Waimea, as_written: Waimea }
+  - slug: nice-stuff-bowl
+    name: Nice Stuff – Bowl
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 4.0
+    hops_as_written: Belgian-Style Pale Ale - Brewed in collaboration with Human People and Keeping Together. Featuring Seitz Farm Traditional Hops and Freestyle Riwaka Hop Kief.
+    hops:
+      - { hop: riwaka, name: Riwaka, as_written: Riwaka }
+  - slug: nice-stuff-coffee
+    name: Nice Stuff – Coffee
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 4.0
+    hops_as_written: Belgian-Style Pale Ale - Brewed in collaboration with Human People and Keeping Together. Featuring Seitz Farm Traditional Hops and Freestyle Riwaka Hop Kief.
+    hops:
+      - { hop: riwaka, name: Riwaka, as_written: Riwaka }
+  - slug: nice-stuff-slide
+    name: Nice Stuff – Slide
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 4.0
+    hops_as_written: Belgian-Style Pale Ale - Brewed in collaboration with Human People and Keeping Together. Featuring Seitz Farm Traditional Hops and Freestyle Riwaka Hop Kief.
+    hops:
+      - { hop: riwaka, name: Riwaka, as_written: Riwaka }
+  - slug: nice-stuff-spoon
+    name: Nice Stuff – Spoon
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 4.0
+    hops_as_written: Belgian-Style Pale Ale - Brewed in collaboration with Human People and Keeping Together. Featuring Seitz Farm Traditional Hops and Freestyle Riwaka Hop Kief.
+    hops:
+      - { hop: riwaka, name: Riwaka, as_written: Riwaka }
+  - slug: perpetual-stew
+    name: Perpetual Stew
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.2
+    hops_as_written: DDH IPA - Brewed with El Dorado, Sabro, Idaho 7, and Freestyle Motueka.
+    hops:
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+  - slug: pier-bier
+    name: Pier Bier
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 4.5
+    hops_as_written: American Pale Ale - Hopped with Freestyle NZ Cascade and Simcoe.
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: pigeon-hole
+    name: Pigeon Hole
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.2
+    hops_as_written: Czech Amber Lager - Brewed in collaboration with Human Robot. Featuring Saaz Hops.
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: pils
+    name: Pils
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.6
+    hops_as_written: Pilsner - Hopped with Hersbrucker and Tettnang. Order Now
+    hops:
+      - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: pocket-fan
+    name: Pocket Fan
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.0
+    hops_as_written: India Pale Ale - Brewed with Freestyle Nelson and Phantasm Powder
+    hops:
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+  - slug: pocket-forensics
+    name: Pocket Forensics
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 6.8
+    hops_as_written: DDH IPA - Brewed with El Dorado, Freestyle NZ Cascade, and Cashmere Hops
+    hops:
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+  - slug: prof
+    name: Prof
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 4.7
+    hops_as_written: Japanese Rice Lager - Brewed in collaboration with The Showbox and Prof. Featuring Saaz and Tettnang Hops
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: real-talk
+    name: Real Talk
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 6.6
+    hops_as_written: India Pale Ale - Hopped with Freestyle Motueka, Freestyle Waimea, and Idaho 7
+    hops:
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+      - { hop: waimea, name: Waimea, as_written: Waimea }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+  - slug: reality-is-an-atmosphere-centennial
+    name: 'Reality is an Atmosphere: Centennial'
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 6.0
+    hops_as_written: Belgian Pale Ale - Collaboration with Keeping Together. Brewed with Segal Ranch Whole Cone Centennial, Motueka, and Tradition.
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+  - slug: reality-is-an-atmosphere-chinook
+    name: 'Reality is An Atmosphere: Chinook'
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.5
+    hops_as_written: Belgian Pale Ale - Collaboration with Keeping Together. Brewed with Belgian Cascade, Saaz, and Whole Cone Chinook Hops.
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: red-clay-strays
+    name: Red Clay Strays
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.2
+    hops_as_written: German Style Pilsner - Brewed in collaboration with The Showbox and Red Clay Strays. Featuring Hallertau Mittelfrüh, Hersbrucker and Tettnang Hops
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Hallertau, as_written: Hallertau }
+      - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: reflection
+    name: Reflection
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.2
+    hops_as_written: Schwarzbier Style Black Lager - Brewed with Hallertau Mittelfruh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau Mittelfruh }
+  - slug: reign-man
+    name: Reign Man
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.2
+    hops_as_written: DDH Pale Ale - Brewed in collaboration with Community Gardens and Shawn Kemp. Hopped with Mosaic, Freestyle Motueka and Freestyle Nelson.
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+  - slug: salad-days
+    name: Salad Days
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 6.2
+    hops_as_written: IPA - Hopped with Cashmere, Ekuanot Lupomax, Azacca Lupomax and Freestyle Nelson
+    hops:
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+      - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+  - slug: season-to-taste
+    name: Season to Taste
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 6.2
+    hops_as_written: DDH India Pale Ale - With Phantasm, Freestyle New Zealand Cascade, and Freestyle Nelson
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+  - slug: second-generation-ipa
+    name: Second Generation IPA
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 6.7
+    hops_as_written: India Pale Ale - Hopped with Mosaic and Citra
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: shared-delusion
+    name: Shared Delusion
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 10.0
+    hops_as_written: Triple India Pale Ale - Brewed with Citra, Freestyle Nelson Sauvin, Anchovy Hops, and Phantasm Powder
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: anchovy, name: Anchovy, as_written: Anchovy }
+  - slug: shareware
+    name: Shareware
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 4.7
+    hops_as_written: German Style Altbier - Brewed in collaboration with Halfway Crooks. Hopped with Tettnang and Tradition.
+    hops:
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: shift-change
+    name: Shift Change
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 4.5
+    hops_as_written: Best Bitter - Brewed in collaboration with Track Brewing. Hopped with Fuggle and Golding.
+    hops:
+      - { hop: fuggle, name: Fuggle, as_written: Fuggle }
+  - slug: shrimp-with-white-wine
+    name: Shrimp with White Wine
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.0
+    hops_as_written: DDH India Pale Ale - Brewed with Citra, Motueka, Segal Ranch Anchoy, and Phantasm
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+  - slug: smash-fashion
+    name: Smash Fashion
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.5
+    hops_as_written: Modernish West Coast Pale Ale - Brewed with Simcoe and Segal Ranch Anchovy
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: anchovy, name: Anchovy, as_written: Anchovy }
+  - slug: specialty-cuts
+    name: Specialty Cuts
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 8.0
+    hops_as_written: DDH DIPA - Brewed in collaboration with Taproom Beer Co. Featuring Chinook, Citra and Freestyle Nelson hops.
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+  - slug: spiritual-technology
+    name: Spiritual Technology
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.1
+    hops_as_written: DDH IPA - Brewed with Citra and Strata Hops
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: sunday-gravy
+    name: Sunday Gravy
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.5
+    hops_as_written: Italian Style Pilsner - Brewed with Hallertau Mittelfruh, Hersbrucker, and Saphir Hops
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau Mittelfruh }
+      - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+  - slug: the-dip
+    name: The Dip
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.2
+    hops_as_written: NZ Pilsner - Brewed in collaboration with The Showbox and The Dip. Hopped with Freestyle Peacherine and Rakau
+    hops:
+      - { hop: rakau, name: Rakau, as_written: Rakau }
+  - slug: the-glove
+    name: The Glove
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 4.0
+    hops_as_written: Mexican Style Lager - Brewed in collaboration with Community Gardens, Shawn Kemp and Gary Payton. Hopped with Freestyle Motueka and Saaz.
+    hops:
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: toys-not-included
+    name: Toys Not Included
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 4.5
+    hops_as_written: American Pale Ale - Brewed in collaboration with Hometeam. Featuring Freestyle NZ Cascade, and Simcoe hops.
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: trippy-lifting
+    name: Trippy Lifting
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.6
+    hops_as_written: Extra Pale Ale - Brewed with New Zealand Cascade and Segalranch Anchovy Hops
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: anchovy, name: Anchovy, as_written: Anchovy }
+  - slug: tulip-pils
+    name: Tulip Pils
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 5.3
+    hops_as_written: Pilsner - Made in celebration of the Tulip Shop's 3rd Anniversary. Hopped with Hersbrucker, and Freestyle Motueka
+    hops:
+      - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+  - slug: twisting-melon
+    name: Twisting Melon
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 8.2
+    hops_as_written: DDH Double India Pale Ale - Hopped with Mosaic, Segal Ranch Anchovy, and Citralupomax
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: anchovy, name: Anchovy, as_written: Anchovy }
+  - slug: wabi-sabi
+    name: Wabi Sabi
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 4.7
+    hops_as_written: Japanese Rice Lager - Brewed in celebration of Blue Owl Workshop's 15th anniversary. Hopped with Saaz and Tettnang.
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+  - slug: work-trip
+    name: Work Trip
+    url: https://themasonryseattle.com/fast-fashion/
+    abv: 7.3
+    hops_as_written: DDH IPA - Brewed with Freestyle Motueka, Subzero Hop Kief, Motueka, and NZ Cascade Hops
+    hops:
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+      - { hop: cascade, name: Cascade, as_written: Cascade }

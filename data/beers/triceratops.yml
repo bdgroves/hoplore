@@ -1,0 +1,68 @@
+brewery:
+  slug: triceratops
+  name: Triceratops Brewing
+  city: Tumwater
+  state: WA
+  url: https://www.triceratopsbrewing.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-28'
+beers:
+  - slug: citrasaurus-down-double-ipa
+    name: CitraSaurus Down Double IPA
+    url: https://www.triceratopsbrewing.com/
+    hops_as_written: 'At the end of a long day on the slopes, every rider looks forward to two things: a comfy seat and a good beer. We brewed this warming Double IPA with three different malts and an avalanche of tropical Citra hops to keep your taste buds happy. Now go find someplace for that aching behind.'
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: irish-lager
+    name: Irish Lager
+    url: https://www.triceratopsbrewing.com/
+    hops_as_written: A premium lager brewed with Pilsner malt from Ireland and East Kent Golding hops, this beer appeals with its simplicity. Floral, earthy and slightly grassy on the nose, the aroma brings to mind a spring meadow, while the golden color suggests a light, crisp taste with notes of honey.
+    hops:
+      - { hop: east-kent-golding, name: East Kent Golding, as_written: East Kent Golding }
+  - slug: molly-ipa
+    name: Molly IPA
+    url: https://www.triceratopsbrewing.com/
+    hops_as_written: This beer, named for our brewer’s middle child, showcases the Pekko hop. A complex and unusual variety, Pekko lends mint and sage character that helps to give this IPA a clean, crisp taste with a pleasant herbal bite. Subtle notes of cantaloupe and pear round out the flavor.
+    hops:
+      - { hop: pekko, name: Pekko, as_written: Pekko }
+  - slug: peachy-keene
+    name: Peachy Keene
+    url: https://www.triceratopsbrewing.com/
+    hops_as_written: Brewed to celebrate the birth of our sales rep's first child, Peachy Keene is loaded with the bright, tropical aroma of Azacca hops, the juicy flavor of ripe stone fruit, and a touch of flaked wheat to add body. It's a beer for the end of a season and a new beginning.
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+  - slug: pennsyltucky-vienna-style-lager
+    name: Pennsyltucky Vienna-Style Lager
+    url: https://www.triceratopsbrewing.com/
+    hops_as_written: This smooth, Vienna-style lager is inspired by the brewing traditions of Central Pennsylvania. Caramunich malt gives this classic style a nice, roasty flavor while the Cluster hops provide a little bite and a touch of earthy bitterness. 🏆 Bronze medal winner at the 2018 Washington Beer Awards
+    hops:
+      - { hop: cluster, name: Cluster, as_written: Cluster }
+  - slug: r-g-barton-s-export-stout
+    name: R. G. Barton’s Export Stout
+    url: https://www.triceratopsbrewing.com/
+    hops_as_written: Brewed with flaked and roasted barley, two different kinds of dark malt, and slightly spicy East Kent Golding hops for balance, this Irish-style Export Stout is our tribute to makers and craftsmen. Dark as espresso with a medium body and notes of coffee and bittersweet chocolate, Barton's is a beer to savor at the end of a long day or the completion of a satisfying project.
+    hops:
+      - { hop: east-kent-golding, name: East Kent Golding, as_written: East Kent Golding }
+  - slug: sami-ipa
+    name: Sami IPA
+    url: https://www.triceratopsbrewing.com/
+    hops_as_written: Sammy, our oldest, is a lover of all things floral and sweet, and this IPA is no exception. Building on a foundation of honey-accented Pilsner malt, we use generous additions of Lemondrop, and Strata hops to bring out notes of citrus candy and berry.
+    hops:
+      - { hop: lemondrop, name: Lemondrop, as_written: Lemondrop }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: shogun-assassin-ipa
+    name: Shogun Assassin IPA
+    url: https://www.triceratopsbrewing.com/
+    hops_as_written: "Like a finely crafted weapon, Shogun Assassin is balanced and beautiful. Forged from flavorful Skagit Valley Pilsner malt, it's a dangerously drinkable IPA that attacks with a trio of bold American hops: Citra, Azacca, and Bravo. Choose the sword."
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: bravo, name: Bravo, as_written: Bravo }
+  - slug: triceramob-ipa
+    name: TriceraMOB IPA
+    url: https://www.triceratopsbrewing.com/
+    hops_as_written: We got together with our friends at Aberdeen’s Mount Olympus Brewing to brush up on our hoppy ABC’s. Aiming for a beer that’s big on flavor and drinkability we used Azacca, Bravo, and Citra hops to impart bold notes of lime, mango, and grapefruit. Meanwhile, white wheat and rolled oats in the mash keep it soft and pillowy. But all you really need to know is that it’s fundamentally delicious.
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: bravo, name: Bravo, as_written: Bravo }
+      - { hop: citra, name: Citra, as_written: Citra }
