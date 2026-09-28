@@ -4,6 +4,9 @@ purpose: dual
 country: DE
 international_code: CAL
 kind: cultivar
+# Grüngeist is the name Callista sells under from US farms (Hop Alliance lists
+# "Callista GR Hop Pellets \"Grüngeist\""); brewers write either.
+aliases: [Grüngeist, Grungeist]
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).
 # purpose is an unconfirmed default -- see meta.notes. No analytics recorded
