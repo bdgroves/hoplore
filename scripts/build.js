@@ -15,7 +15,7 @@ import { buildSimilarity } from './lib/similarity.js';
 import { renderIndex, renderHop } from '../site/templates/render.js';
 import { renderLandscape } from '../site/templates/landscape.js';
 import { renderGrown, acreageFor } from '../site/templates/acreage.js';
-import { renderBeer, renderBeers, beersByHop, pairingsByHop, attachLookalikes } from '../site/templates/beers.js';
+import { renderBeer, renderBeers, beersByHop, pairingsByHop, attachLookalikes, renderFreshHop } from '../site/templates/beers.js';
 import { renderScan } from '../site/templates/scan.js';
 import { renderCompare } from '../site/templates/compare.js';
 import { renderAbout } from '../site/templates/about.js';
@@ -158,6 +158,7 @@ const bySlug = Object.fromEntries(hops.map((h) => [h.slug, h]));
 const beerPaths = [];
 if (breweries.length) {
   write(out('beers/index.html'), renderBeers({ breweries, bySlug, meta, recent }));
+  write(out('fresh-hop/index.html'), renderFreshHop({ breweries, bySlug, meta }));
   for (const b of breweries) {
     for (const beer of b.beers) {
       const path = `beers/${b.brewery.slug}/${beer.slug}/`;
@@ -171,6 +172,21 @@ for (const hop of hops) {
   write(out(`hops/${hop.slug}/index.html`), renderHop({ hop, similar: similar[hop.slug] ?? [], taxonomy, sources, meta, acreageYears: acreage?.years }));
 }
 
+// Old names keep their old addresses: /hops/denali/ forwards to Sultana,
+// /hops/equinox/ to Ekuanot.
+const taken = new Set(hops.map((h) => h.slug));
+for (const hop of hops) {
+  for (const old of hop.previously_named ?? []) {
+    const slug = String(old).toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    if (!slug || taken.has(slug)) continue;
+    taken.add(slug);
+    write(
+      out(`hops/${slug}/index.html`),
+      `<!doctype html><meta charset="utf-8"><title>${old} is now ${hop.name}</title><link rel="canonical" href="../${hop.slug}/"><meta http-equiv="refresh" content="0; url=../${hop.slug}/"><p>${old} is now called <a href="../${hop.slug}/">${hop.name}</a>.</p>`
+    );
+  }
+}
+
 cpSync(join(ROOT, 'site', 'assets'), out('assets'), { recursive: true });
 
 write(out('.nojekyll'), '');
@@ -178,7 +194,7 @@ write(out('robots.txt'), `User-agent: *\nAllow: /\nSitemap: /sitemap.xml\n`);
 write(
   out('sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    ['', 'landscape/', ...(acreage ? ['grown/'] : []), 'scan/', 'compare/', 'about/', ...(breweries.length ? ['beers/', ...beerPaths] : []), ...hops.map((h) => `hops/${h.slug}/`)]
+    ['', 'landscape/', ...(acreage ? ['grown/'] : []), 'scan/', 'compare/', 'about/', ...(breweries.length ? ['beers/', 'fresh-hop/', ...beerPaths] : []), ...hops.map((h) => `hops/${h.slug}/`)]
       .map((p) => `  <url><loc>https://brooksgroves.com/hoplore/${p}</loc></url>`)
       .join('\n') +
     `\n</urlset>\n`

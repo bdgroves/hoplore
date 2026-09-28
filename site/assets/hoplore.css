@@ -955,3 +955,12 @@ body.searching .brewery > p.fine { display: none; }
 .tip-btn.big { font-size: 0.85rem; padding: 0.8rem 1.4rem; }
 .tip-jar { border-top: 3px solid var(--gold); }
 .tip-jar p { max-width: 62ch; }
+
+/* ------------------------------------------------------ fresh hop guide */
+.fh-lede { max-width: 64ch; }
+.fh-list, .fh-farms { list-style: none; padding: 0; margin: 0.4rem 0 0; }
+.fh-list li, .fh-farms li { padding: 0.5rem 0; border-bottom: 1px solid var(--wire-soft); }
+.fh-list li > a { text-decoration: none; }
+.fh-hops { display: block; font-size: 0.92rem; margin-top: 0.15rem; }
+.fh-hops .fresh { color: var(--sage); font-weight: 700; }
+.fresh-guide .brewery h2 { font-size: 1.25rem; }

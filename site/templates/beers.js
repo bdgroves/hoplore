@@ -382,7 +382,7 @@ export function renderBeers({ breweries, bySlug, meta, recent = [] }) {
   ${glass}
   ${topBlock}
   ${fresh.length ? `<section class="block fresh-season" id="fresh-hop">
-    <h2>Fresh hop season <span class="fine">· ${fresh.length} beer${fresh.length === 1 ? '' : 's'} brewed with hops straight off the bine</span></h2>
+    <h2>Fresh hop season <span class="fine">· ${fresh.length} beer${fresh.length === 1 ? '' : 's'} brewed with hops straight off the bine · <a href="${base}fresh-hop/">the full guide, with the farms →</a></span></h2>
     <ul class="beerlist">
       ${fresh.join('\n      ')}
     </ul>
@@ -476,4 +476,118 @@ function myGlassBlocks({ breweries, bySlug, recent, base }) {
     </ul>
   </section>
   ${hopsBlock}`;
+}
+
+/** /fresh-hop/: every fresh (wet) hop beer on file, by brewery, with the
+ *  hops and farms behind them. A seasonal page worth sharing each fall. */
+export function renderFreshHop({ breweries, bySlug, meta }) {
+  const base = '../';
+  const order = [...breweries].sort(
+    (a, b) => b.brewery.state.localeCompare(a.brewery.state) || a.brewery.city.localeCompare(b.brewery.city) || a.brewery.name.localeCompare(b.brewery.name)
+  );
+  const hopName = (e) => (e.slug && bySlug[e.slug] ? bySlug[e.slug].name : e.name);
+  const groups = order
+    .map((b) => ({ b, beers: b.beers.filter((beer) => hopBill(beer).some((e) => e.fresh)) }))
+    .filter((g) => g.beers.length);
+  const total = groups.reduce((n, g) => n + g.beers.length, 0);
+
+  // Which hops go in fresh, and which farms get named.
+  const byHop = new Map();
+  const farms = new Map();
+  for (const g of groups) {
+    for (const beer of g.beers) {
+      for (const e of hopBill(beer)) {
+        if (!e.fresh) continue;
+        if (e.slug) byHop.set(e.slug, (byHop.get(e.slug) ?? 0) + 1);
+        const farm = e.fresh.farm;
+        if (farm) {
+          const f = farms.get(farm) ?? { n: 0, hops: new Set(), breweries: new Set() };
+          f.n += 1;
+          f.hops.add(hopName(e));
+          f.breweries.add(g.b.brewery.name);
+          farms.set(farm, f);
+        }
+      }
+    }
+  }
+  const topHops = [...byHop.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12);
+  const farmList = [...farms.entries()].sort((a, b) => b[1].n - a[1].n);
+  const had = groups.flatMap((g) => g.beers.filter((beer) => beer.mine)).length;
+
+  const row = (b, beer) => {
+    const bill = hopBill(beer);
+    const fresh = bill.filter((e) => e.fresh);
+    const rest = bill.filter((e) => !e.fresh);
+    const farmsHere = [...new Set(fresh.map((e) => e.fresh.farm).filter(Boolean))];
+    const mine = beer.mine ? ` <span class="had">${beer.mine.rating ? caps(beer.mine.rating.stars, { small: true }) : '✓ Brooks had it'}</span>` : '';
+    return `<li><a href="${base}beers/${b.brewery.slug}/${beer.slug}/"><b>${esc(beer.name)}</b></a>${mine}
+        <span class="fh-hops"><span class="fresh">${fresh.map((e) => esc(hopName(e))).join(', ')}</span>${rest.length ? ` <span class="fine">+ ${rest.map((e) => esc(hopName(e))).join(', ')}</span>` : ''}${farmsHere.length ? ` <span class="fine">· from ${farmsHere.map(esc).join(', ')}</span>` : ''}</span></li>`;
+  };
+
+  const body = `
+<header class="masthead" style="padding-top:1.5rem">
+  <div class="wrap">
+    <nav class="nav" style="border-top:0;padding-top:0">
+      <a href="${base}">All hops</a>
+      <a href="${base}beers/">What's in the can</a>
+      <a href="${base}scan/">Scan a beer 📷</a>
+      <a href="${base}about/">How it works</a>
+    </nav>
+    <h1 class="page-title">Fresh hop <em>season</em></h1>
+    <p class="standfirst">Once a year, late August into October, Northwest brewers drive to the hop farms,
+    load up hops that were on the bine that morning, and get them into beer before they wilt. No drying,
+    no pellets. Here are ${total} of those beers from ${groups.length} breweries — and the hops and farms behind them.</p>
+  </div>
+</header>
+<main id="main" class="wrap beers fresh-guide">
+  <section class="block">
+    <h2>What fresh hop means</h2>
+    <p class="fh-lede">Normal hops are kilned dry within hours of picking so they keep. Fresh (or "wet") hops skip that:
+    they're mostly water, so brewers use four to six times as much, and the beer tastes greener and brighter — grassy,
+    juicy, a bit like walking through the field. They don't keep, so drink them young.
+    ${had ? `Brooks has had ${had} of these so far.` : ''}</p>
+  </section>
+
+  ${topHops.length ? `<section class="block most-used">
+    <h2>The hops that go in fresh <span class="fine">· how many of these ${total} beers use each one straight off the bine</span></h2>
+    <ol class="bars">
+      ${topHops
+        .map(([slug, n]) => `<li><span class="bar-name"><a href="${base}hops/${slug}/">${esc(bySlug[slug]?.name ?? slug)}</a></span>
+        <span class="bar-track"><span class="bar-fill" style="width:${((n / topHops[0][1]) * 100).toFixed(1)}%;--mark:var(--sage)"></span></span>
+        <span class="bar-val num">${n}</span></li>`)
+        .join('\n      ')}
+    </ol>
+  </section>` : ''}
+
+  ${farmList.length ? `<section class="block">
+    <h2>The farms <span class="fine">· named by the breweries</span></h2>
+    <ul class="fh-farms">
+      ${farmList
+        .map(([farm, f]) => `<li><b>${esc(farm)}</b> <span class="fine">${f.n} beer${f.n === 1 ? '' : 's'} · ${[...f.hops].map(esc).join(', ')} · for ${[...f.breweries].map(esc).join(', ')}</span></li>`)
+        .join('\n      ')}
+    </ul>
+  </section>` : ''}
+
+  ${groups
+    .map(
+      (g) => `<section class="block brewery" id="${g.b.brewery.slug}">
+    <h2>${esc(g.b.brewery.name)} <span class="fine">· ${esc(g.b.brewery.city)}, ${esc(g.b.brewery.state)} · ${g.beers.length}</span></h2>
+    <ul class="fh-list">
+      ${g.beers.map((beer) => row(g.b, beer)).join('\n      ')}
+    </ul>
+  </section>`
+    )
+    .join('\n  ')}
+  <p class="fine">Green hops were added fresh; the rest of the bill follows in grey. Lists come from each brewery's own
+  site and are refreshed twice a week, so new releases turn up as the season goes. Some beers are from past seasons.</p>
+  ${tip('Found your fresh hop fix?')}
+</main>
+${footer(base, meta)}`;
+
+  return shell({
+    title: `Fresh hop season: ${total} Northwest fresh hop beers and their hops | HopLove`,
+    description: `${total} fresh (wet) hop beers from ${groups.length} Pacific Northwest breweries, with the hops that went in straight off the bine and the farms they came from.`,
+    body,
+    base,
+  });
 }

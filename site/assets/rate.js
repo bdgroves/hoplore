@@ -20,6 +20,46 @@ export const isMe = (() => {
   }
 })();
 
+// Saving. When Brooks's Worker has the /hoplove/save route (see
+// tools/worker/), a scan or rating goes straight in with one tap and no
+// GitHub account. Until then -- or if the Worker says no -- it opens the
+// prefilled GitHub issue as before. The owner key (set once with ?key=…)
+// is what makes a save Brooks's rather than a visitor's suggestion.
+const WORKER = 'https://brooks-anthropic-proxy.bdgroves1970.workers.dev';
+const ownerKey = (() => {
+  try {
+    const k = new URLSearchParams(location.search).get('key');
+    if (k) localStorage.setItem('hoplove_key', k);
+    return localStorage.getItem('hoplove_key') || '';
+  } catch {
+    return '';
+  }
+})();
+export const oneTap = fetch(`${WORKER}/hoplove/ping`, { method: 'GET' })
+  .then((r) => r.ok)
+  .catch(() => false);
+let canOneTap = false;
+oneTap.then((ok) => { canOneTap = ok; });
+
+/** Save a scan or rating. Returns a promise of { ok, url?, message }. */
+export function save(kind, title, body) {
+  if (!canOneTap) {
+    window.open(`https://github.com/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`, '_blank', 'noopener');
+    return Promise.resolve({ ok: true, message: 'Opened on GitHub — submit it there.' });
+  }
+  return fetch(`${WORKER}/hoplove/save`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...(ownerKey ? { 'X-HopLove-Key': ownerKey } : {}) },
+    body: JSON.stringify({ kind, title, body }),
+  })
+    .then(async (r) => {
+      const d = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(d.error || `the save returned ${r.status}`);
+      return { ok: true, url: d.url, message: d.owner ? 'Saved — it’ll be on the site in a couple of minutes.' : 'Sent to Brooks — thanks! He’ll look it over.' };
+    })
+    .catch((e) => ({ ok: false, message: `Couldn’t save: ${e.message}.` }));
+}
+
 export function makeRater(el, initial = 3.5) {
   el.classList.add('rater');
   el.innerHTML = `<span class="caps big" aria-hidden="true"><span class="caps-row">●●●●●</span><span class="caps-fill">●●●●●</span></span>
@@ -58,6 +98,11 @@ if (glass && isMe) {
       `stars: ${rater.value}`, `note: ${q(note || null)}`].join('\n');
     const body = `<!-- hoplove-rating -->\nSubmit to record this rating on HopLove.\n\n\`\`\`yaml\n${yaml}\n\`\`\`\n`;
     const title = `Rating: ${d.name} (${d.breweryName}) ${rater.value}`;
-    window.open(`https://github.com/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`, '_blank', 'noopener');
+    const btn = glass.querySelector('#rate-save');
+    btn.disabled = true;
+    save('rating', title, body).then((r) => {
+      btn.disabled = false;
+      btn.insertAdjacentHTML('afterend', `<span class="fine save-msg"> ${r.message}</span>`);
+    });
   });
 }

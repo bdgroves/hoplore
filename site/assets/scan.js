@@ -2,7 +2,7 @@
 // Cloudflare Worker proxy, which holds the API key), matches the hop names to
 // HopLove records, and can open a GitHub issue that adds the beer.
 
-import { makeRater, isMe } from './rate.js';
+import { makeRater, isMe, save, oneTap } from './rate.js';
 
 const WORKER_URL = 'https://brooks-anthropic-proxy.bdgroves1970.workers.dev';
 // Fastest first; if the Worker or the model turns it down, or the answer
@@ -209,7 +209,11 @@ function keep() {
   ].join('\n');
   const body = `<!-- hoplove-beer-scan -->\nFix anything misread below, then submit. Submitting adds the beer to HopLove.\n\n\`\`\`yaml\n${yaml}\n\`\`\`\n`;
   const title = `Beer: ${last.beer} (${last.brewery || 'unknown brewery'})${isMe && $('#rate-on').checked ? ` ${rater.value}` : ''}`;
-  window.open(`https://github.com/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`, '_blank', 'noopener');
+  $('#keep').disabled = true;
+  save('scan', title, body).then((r) => {
+    $('#keep').disabled = false;
+    status(r.message);
+  });
 }
 
 const rater = makeRater($('#scan-rater'), 3.5);
@@ -220,6 +224,12 @@ if (!isMe) {
   $('#keep').textContent = 'Suggest it for HopLove';
   $('#keep-note').textContent = 'Opens a GitHub issue with this beer filled in, for Brooks to look over and add. You’ll need a GitHub account.';
 }
+oneTap.then((ok) => {
+  if (!ok) return;
+  $('#keep-note').textContent = isMe
+    ? 'Saves it straight to HopLove; the site rebuilds in a couple of minutes.'
+    : 'Sends it to Brooks to look over and add. No account needed.';
+});
 // Touching the caps or the note means you want the rating kept.
 $('#scan-rater').addEventListener('input', () => { $('#rate-on').checked = true; });
 $('#scan-rater').addEventListener('click', () => { $('#rate-on').checked = true; });

@@ -3,6 +3,7 @@ name: Sultana
 purpose: dual
 country: US
 kind: cultivar
+previously_named: [Denali]
 
 # Stub created from the Hopsteiner catalog crawl (catalogs/hopsteiner.json).
 # purpose is an unconfirmed default -- see meta.notes. No analytics yet:

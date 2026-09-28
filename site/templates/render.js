@@ -81,7 +81,7 @@ export const tip = (line = 'Found what you were after?') =>
 export const footer = (base, meta) => `
 <section class="colophon">
   <div class="wrap">
-    <nav class="colophon-nav"><a href="${base}about/">How it works</a><a href="${base}beers/">What's in the can</a><a href="${base}scan/">Scan a beer</a><a href="${base}compare/">Hop vs hop</a><a href="${base}">All hops</a><a href="${TIP_URL}" rel="noopener">Buy Brooks a beer 🍺</a></nav>
+    <nav class="colophon-nav"><a href="${base}about/">How it works</a><a href="${base}beers/">What's in the can</a><a href="${base}scan/">Scan a beer</a><a href="${base}compare/">Hop vs hop</a><a href="${base}fresh-hop/">Fresh hop season</a><a href="${base}">All hops</a><a href="${TIP_URL}" rel="noopener">Buy Brooks a beer 🍺</a></nav>
     <p>HopLove is an open dataset first and a website second. Every figure on this
     site is rolled up from cited observations in
     <code>data/hops/</code>, and the same build that made this page wrote
@@ -132,7 +132,8 @@ export function renderIndex({ hops, taxonomy, meta }) {
     it bitters and where it was grown. Every number is a citation, not a claim.</p>
     <p class="cta"><a class="chip scan-go" href="beers/">What's in the can →</a>
     <a class="chip" href="scan/">Scan a beer 📷</a>
-    <a class="chip" href="compare/">Hop vs hop</a></p>
+    <a class="chip" href="compare/">Hop vs hop</a>
+    <a class="chip" href="fresh-hop/">Fresh hop season 🌿</a></p>
     <p class="fine new-here">New here? <a href="about/">Here's how it works →</a></p>
     <div class="stats">
       <div><b>${hops.length}</b> cultivars</div>

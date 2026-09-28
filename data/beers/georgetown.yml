@@ -509,7 +509,6 @@ beers:
     hops_as_written: Summit,Denali, Simcoe
     hops:
       - { hop: summit, name: Summit, as_written: Summit }
-      - { hop: denali, name: Denali, as_written: Denali }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
   - slug: burton
     name: Burton
