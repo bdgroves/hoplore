@@ -141,6 +141,16 @@ beers:
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: krush, name: Krush, as_written: Krush }
       - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: sticky-situation-fresh-hop-ipa
+    name: Sticky Situation Fresh Hop IPA
+    url: https://balebreaker.com/beer/sticky-situation-fresh-hop-ipa/
+    abv: 6.7
+    hops_as_written: Fresh Mosaic® + Mosaic® Cryo, Citra® Cryo, Columbus Cryo
+    hops:
+      - { hop: mosaic, name: Mosaic, fresh: true, as_written: Mosaic }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: columbus, name: Columbus, form: Cryo, as_written: Columbus }
   - slug: topcutter-ipa
     name: Topcutter IPA
     url: https://balebreaker.com/beer/topcutter-ipa/

@@ -1002,3 +1002,20 @@ beers:
     hops_as_written: Simcoe
     hops:
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: the-brothers-roy-andys-version
+    name: The Brothers Roy, Andy's Version
+    url: https://georgetownbeer.com/products/the-brothers-roy-andys-version
+    abv: 6.9
+    hops_as_written: Columbus, Citra, Fresh Citra from Roy Farms
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: citra, name: Citra, fresh: true, farm: Roy Farms, as_written: Citra }
+  - slug: the-brothers-roy-mikes-version
+    name: The Brothers Roy, Mike's Version
+    url: https://georgetownbeer.com/products/the-brothers-roy-mikes-version
+    abv: 6.9
+    hops_as_written: Columbus, Citra, Fresh Organic Citra from Roy Farms
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: citra, name: Citra, as_written: Citra }
