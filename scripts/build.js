@@ -15,7 +15,7 @@ import { buildSimilarity } from './lib/similarity.js';
 import { renderIndex, renderHop } from '../site/templates/render.js';
 import { renderLandscape } from '../site/templates/landscape.js';
 import { renderGrown, acreageFor } from '../site/templates/acreage.js';
-import { renderBeer, renderBeers, beersByHop } from '../site/templates/beers.js';
+import { renderBeer, renderBeers, beersByHop, pairingsByHop } from '../site/templates/beers.js';
 import { renderScan } from '../site/templates/scan.js';
 import { attachMine } from '../site/templates/mine.js';
 
@@ -24,6 +24,7 @@ const { sources, taxonomy, hops: raw, acreage, breweries, checkins, ratings } = 
 // Before beersByHop, so hop pages know which of their beers Brooks has had.
 const recent = attachMine(breweries, checkins, ratings);
 const inBeers = beersByHop(breweries);
+const paired = pairingsByHop(breweries);
 
 rmSync(DIST, { recursive: true, force: true });
 
@@ -31,7 +32,10 @@ const hops = raw.map((h) => {
   const hop = rollupHop(h, sources);
   const grown = acreageFor(hop.slug, acreage);
   const withGrown = grown ? { ...hop, acreage: grown } : hop;
-  return inBeers[hop.slug] ? { ...withGrown, beers: inBeers[hop.slug] } : withGrown;
+  const withBeers = inBeers[hop.slug] ? { ...withGrown, beers: inBeers[hop.slug] } : withGrown;
+  // Needs a few beers before "usually paired with" means anything.
+  const p = paired[hop.slug];
+  return p && p.beers >= 5 ? { ...withBeers, paired: { beers: p.beers, with: p.with.slice(0, 8).map(([slug, n]) => ({ slug, n })) } } : withBeers;
 });
 const similar = buildSimilarity(hops, taxonomy.aromaTags);
 

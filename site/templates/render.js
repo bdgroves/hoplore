@@ -219,6 +219,29 @@ function row(hop, taxonomy) {
 
 /** The hop in one glance, in bar words: smell, bite, where to drink it, what
  *  to swap it for. The numbers underneath are for the brewers. */
+let NAMES = {};
+const nameFor = (slug) => NAMES[slug] ?? slug;
+
+/** "Brewed alongside": the hops that share a bill with this one most often. */
+function pairedBlock(hop, base, meta) {
+  const p = hop.paired;
+  if (!p) return '';
+  const top = p.with[0]?.n ?? 1;
+  return `<section class="block paired">
+    <h2>Brewed alongside <span class="fine">· in ${p.beers.toLocaleString('en-US')} beers that use ${esc(hop.name)} with other hops</span></h2>
+    <ol class="bars">
+      ${p.with
+        .map(
+          (x) => `<li><span class="bar-name"><a href="${base}hops/${x.slug}/">${esc(nameFor(x.slug))}</a></span>
+        <span class="bar-track"><span class="bar-fill" style="width:${((x.n / top) * 100).toFixed(1)}%;--mark:var(--sage)"></span></span>
+        <span class="bar-val num">${x.n}</span><span class="bar-delta num">${Math.round((x.n / p.beers) * 100)}%</span></li>`
+        )
+        .join('\n      ')}
+    </ol>
+    <p class="fine">Counted from the hop lists of every beer in <a href="${base}beers/">What's in the can</a>: what Pacific Northwest brewers actually put next to ${esc(hop.name)}.</p>
+  </section>`;
+}
+
 function quickTake(hop, similar, taxonomy, base) {
   const tags = (hop.aroma?.tags ?? []).slice(0, 5).map((t) => taxonomy.aromaTags[t]?.label ?? t);
   const bite = bitterWord(hop.analytics?.alpha_acid);
@@ -230,6 +253,7 @@ function quickTake(hop, similar, taxonomy, base) {
     tags.length && ['Smells like', esc(tags.join(', '))],
     bite && ['Bitterness', `${bite} <span class="fine">(${fmt(hop.analytics.alpha_acid.low)}–${fmt(hop.analytics.alpha_acid.high)}% alpha)</span>`],
     beers.length && ['In the glass', `<a href="#in-the-glass">${beers.length.toLocaleString('en-US')} beer${beers.length === 1 ? '' : 's'} here</a>${fresh ? ` · ${fresh} fresh hop` : ''}${had ? ` · Brooks has had ${had}` : ''}`],
+    hop.paired && ['Usually paired with', hop.paired.with.slice(0, 3).map((p) => `<a href="${base}hops/${p.slug}/">${esc(nameFor(p.slug))}</a>`).join(', ')],
     swap && ['Swap it for', `<a href="${base}hops/${swap.slug}/">${esc(swap.name)}</a>`],
   ].filter(Boolean);
   if (!cells.length) return '';
@@ -239,6 +263,7 @@ function quickTake(hop, similar, taxonomy, base) {
 }
 
 export function renderHop({ hop, similar, taxonomy, sources, meta, acreageYears }) {
+  NAMES = meta.names ?? {};
   const base = '../../';
   const country = taxonomy.countries[hop.country]?.label ?? hop.country;
 
@@ -294,6 +319,7 @@ export function renderHop({ hop, similar, taxonomy, sources, meta, acreageYears 
       ${aromaBlock(hop, taxonomy)}
       ${usageBlock(hop, taxonomy)}
       ${hopBeersBlock(hop.beers, base, hop.name)}
+      ${pairedBlock(hop, base, meta)}
       ${substitutesBlock(hop, similar)}
       ${pedigreeLine ? `<section class="block"><h2>Pedigree</h2><p>${pedigreeLine}</p></section>` : ''}
       ${hop.meta.notes ? `<section class="block"><h2>Notes on this record</h2><p>${esc(hop.meta.notes)}</p></section>` : ''}

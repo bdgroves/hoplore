@@ -48,6 +48,26 @@ export function beersByHop(breweries) {
   return out;
 }
 
+/** slug -> { beers, with: [[slug, n], …] }: which hops share a hop bill with
+ *  this one across every beer on file, most often first. Counted from the
+ *  breweries' own lists, so it's what PNW brewers actually do. */
+export function pairingsByHop(breweries) {
+  const out = {};
+  for (const b of breweries) {
+    for (const beer of b.beers) {
+      const slugs = [...new Set(hopBill(beer).map((e) => e.slug).filter(Boolean))];
+      if (slugs.length < 2) continue;
+      for (const a of slugs) {
+        const row = (out[a] ??= { beers: 0, with: new Map() });
+        row.beers += 1;
+        for (const o of slugs) if (o !== a) row.with.set(o, (row.with.get(o) ?? 0) + 1);
+      }
+    }
+  }
+  for (const k of Object.keys(out)) out[k] = { beers: out[k].beers, with: [...out[k].with.entries()].sort((x, y) => y[1] - x[1]) };
+  return out;
+}
+
 // --------------------------------------------------------------- pieces
 
 /** Alpha acid in words: what a beer drinker means by "how bitter". */

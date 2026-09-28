@@ -244,6 +244,7 @@ Next, roughly in order of how much I want it:
 - [x] Seattle breweries on What's in the can
 - [x] Scan a beer: photograph a can or paste the text, see the hops, add it with one GitHub issue
 - [x] Untappd check-ins and Untappd-style ratings joined to the hops
+- [x] Hop pairings counted from real brewery hop lists ("Brewed alongside")
 - [ ] Stoup, Georgetown and the other breweries whose beer pages are drawn by JavaScript
 - [ ] Plant patents as a source: public domain, breeder-authored, and they carry the pedigree marketing sheets leave out
 - [ ] Crop-year data, so you can watch alpha drift across harvests instead of reading one eternal average
