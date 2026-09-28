@@ -50,19 +50,26 @@ export function beersByHop(breweries) {
 
 // --------------------------------------------------------------- pieces
 
+/** Alpha acid in words: what a beer drinker means by "how bitter". */
+export function bitterWord(a) {
+  if (!a) return null;
+  const mid = (a.low + a.high) / 2;
+  return mid < 5 ? 'Gentle' : mid < 9 ? 'Moderate' : mid < 13 ? 'High' : 'Very high';
+}
+
 function alphaBar(a) {
-  if (!a) return '<p class="hc-none">No alpha figures on file yet.</p>';
+  if (!a) return '<p class="hc-none">No bitterness figures on file yet.</p>';
   const max = 20;
   const l = Math.min(a.low, max) / max * 100;
   const w = Math.max(1.5, (Math.min(a.high, max) - Math.min(a.low, max)) / max * 100);
-  return `<div class="hc-metric"><span>Alpha</span>
+  return `<div class="hc-metric"><span title="Alpha acid: what makes a hop bitter">Bitterness <b class="bw">${bitterWord(a)}</b></span>
       <span class="hc-track" aria-hidden="true"><span class="hc-span" style="left:${l.toFixed(1)}%;width:${w.toFixed(1)}%"></span></span>
-      <b class="num">${fmt(a.low)}–${fmt(a.high)}%</b></div>`;
+      <b class="num">${fmt(a.low)}–${fmt(a.high)}% α</b></div>`;
 }
 
 function oilLine(o) {
   if (!o) return '';
-  return `<div class="hc-metric"><span>Total oil</span>
+  return `<div class="hc-metric"><span title="Total oil: the aromatic part of the hop, mL per 100 g">Aroma oil</span>
       <span class="hc-track" aria-hidden="true"><span class="hc-span oil" style="left:${(Math.min(o.low, 4) / 4 * 100).toFixed(1)}%;width:${Math.max(1.5, (Math.min(o.high, 4) - Math.min(o.low, 4)) / 4 * 100).toFixed(1)}%"></span></span>
       <b class="num">${fmt(o.low)}–${fmt(o.high)} mL</b></div>`;
 }
@@ -133,14 +140,27 @@ function togetherBlock(bill, bySlug, taxonomy) {
     origins.set(c, (origins.get(c) ?? 0) + 1);
   }
   const originText = [...origins.entries()].sort((a, b) => b[1] - a[1]).map(([c, n]) => `${n} from ${COUNTRY[c] ?? c}`).join(', ');
-  return `<section class="block">
-    <h2>What the hops bring together</h2>
+  return `<section class="block taste">
+    <h2>What it'll taste like</h2>
     <ul class="tags together">
       ${ranked.map(([t, n]) => `<li${n > 1 ? ' class="shared"' : ''}>${esc(taxonomy.aromaTags[t]?.label ?? t)}${n > 1 ? ` <span class="num">×${n}</span>` : ''}</li>`).join('\n      ')}
     </ul>
-    <p class="fine">Aroma descriptors across the ${known.length} hops on file, most shared first. ${esc(originText)}.</p>
+    <p class="fine">What the ${known.length} hops smell like, most shared first — from the hop growers' and breeders' own notes, not the brewery's. ${esc(originText)}.</p>
   </section>`;
 }
+
+/** For anyone new to hop talk: the words on these cards, in a sentence each. */
+const GLOSSARY = `<details class="block glossary">
+    <summary>New to hop talk? What these words mean</summary>
+    <dl>
+      <dt>Bitterness (alpha acid)</dt><dd>How much bite a hop gives when it's boiled. Under 5% is gentle, 13%+ is a bruiser. It's why a West Coast IPA snaps and a pilsner doesn't.</dd>
+      <dt>Aroma oil</dt><dd>The smelly part of the hop — where the citrus, pine and tropical fruit come from. More oil, more punch when it's added late or dry-hopped.</dd>
+      <dt>Myrcene, humulene…</dt><dd>The main oils. Lots of myrcene reads fruity and resinous; humulene and caryophyllene read woody, herbal, spicy.</dd>
+      <dt>Aroma / bittering / dual purpose</dt><dd>What brewers mostly use the hop for: smell, bite, or both.</dd>
+      <dt>Fresh (wet) hop</dt><dd>Hops straight from the field into the beer, same day, never dried. Only at harvest, late August into October.</dd>
+      <dt>Cryo, CGX, LupoMax, Incognito</dt><dd>The same hop, processed: concentrated powder or extract, for more aroma with less vegetal taste.</dd>
+    </dl>
+  </details>`;
 
 // --------------------------------------------------------------- pages
 
@@ -168,6 +188,7 @@ export function renderBeer({ brewery, beer, bySlug, taxonomy, meta }) {
 
 <main id="main" class="wrap beer">
   ${fresh ? `<p class="callout fresh-note"><b>Fresh hop beer.</b> Fresh (or “wet”) hops go from the bine to the kettle within hours, never kilned. The figures below are for the dried hop; fresh ones carry the same oils in a greener, brighter form, and brewers use several times the weight.</p>` : ''}
+  ${togetherBlock(bill, bySlug, taxonomy)}
   <section class="block">
     <h2>The hop bill</h2>
     <ul class="hopcards">
@@ -177,7 +198,7 @@ export function renderBeer({ brewery, beer, bySlug, taxonomy, meta }) {
     ${beer.scanned ? `Read off a ${esc(beer.scanned_from ?? 'photo')} of the ${beer.scanned_from === 'text' ? 'brewery\'s text' : 'can'} with <a href="${base}scan/">Scan a beer</a>, ${esc(beer.scanned)}.` : `From <a href="${esc(beer.url)}">the brewery's page for this beer</a>.`} Forms like Cryo and CO2 extract are
     the same variety processed differently.</p>
   </section>
-  ${togetherBlock(bill, bySlug, taxonomy)}
+  ${GLOSSARY}
   ${mineBlock(brewery, beer, base)}
 </main>
 ${footer(base, meta)}`;
@@ -196,17 +217,22 @@ export function renderBeers({ breweries, bySlug, meta, recent = [] }) {
     (a, b) => b.brewery.state.localeCompare(a.brewery.state) || a.brewery.city.localeCompare(b.brewery.city) || a.brewery.name.localeCompare(b.brewery.name)
   );
   const hopName = (e) => (e.slug && bySlug[e.slug] ? bySlug[e.slug].name : e.name);
-  const row = (b, beer, showBrewery = false) => {
+  const SHOW = 12; // rows per list before "Show all"
+  const row = (b, beer, showBrewery = false, i = 0) => {
     const bill = hopBill(beer);
-    const search = [beer.name, b.brewery.name, b.brewery.city, ...bill.map(hopName)].join(' ').toLowerCase();
+    const search = [beer.name, b.brewery.name, b.brewery.city, ...bill.map(hopName), bill.some((e) => e.fresh) ? 'fresh hop wet hop' : ''].join(' ').toLowerCase();
     const had = beer.mine ? ` <span class="had" title="${beer.mine.rating ? `Brooks rated it ${beer.mine.rating.stars}` : 'Brooks had it'}">${beer.mine.rating ? `● ${beer.mine.rating.stars}` : '✓'}</span>` : '';
-    return `<li data-search="${esc(search)}"><a href="${b.brewery.slug}/${beer.slug}/"><b>${esc(beer.name)}</b>${had}</a>
+    return `<li data-search="${esc(search)}"${i >= SHOW ? ' data-more' : ''}><a href="${b.brewery.slug}/${beer.slug}/"><b>${esc(beer.name)}</b>${had}</a>
           <span class="num fine">${showBrewery ? esc(b.brewery.name) : beer.abv != null ? `${fmt(beer.abv)}%` : ''}</span>
           <span class="beer-hops">${bill.map((e) => `<span${e.fresh ? ' class="fresh"' : ''}>${esc(hopName(e))}</span>`).join('')}</span></li>`;
   };
 
   // Fresh hop season gets its own list: those beers only exist for a few weeks.
-  const fresh = order.flatMap((b) => b.beers.filter((beer) => hopBill(beer).some((e) => e.fresh)).map((beer) => row(b, beer, true)));
+  const fresh = order
+    .flatMap((b) => b.beers.filter((beer) => hopBill(beer).some((e) => e.fresh)).map((beer) => [b, beer]))
+    .map(([b, beer], i) => row(b, beer, true, i));
+  const more = (n, what) =>
+    n > SHOW ? `<button type="button" class="chip show-all">Show all ${n.toLocaleString('en-US')} ${what}</button>` : '';
 
   const cities = new Map();
   for (const b of order) {
@@ -223,8 +249,9 @@ export function renderBeers({ breweries, bySlug, meta, recent = [] }) {
       (b) => `<section class="block brewery" id="${b.brewery.slug}">
     <h2>${esc(b.brewery.name)} <span class="fine">· ${esc(b.brewery.city)}, ${esc(b.brewery.state)} · ${b.beers.length} beer${b.beers.length === 1 ? '' : 's'}</span></h2>
     <ul class="beerlist">
-      ${b.beers.map((beer) => row(b, beer)).join('\n      ')}
+      ${b.beers.map((beer, i) => row(b, beer, false, i)).join('\n      ')}
     </ul>
+    ${more(b.beers.length, `from ${esc(b.brewery.name)}`)}
     <p class="fine">Hop lists from <a href="${esc(b.brewery.url)}">${esc(b.brewery.name)}</a>'s own beer pages, retrieved ${esc(b.retrieved)}.</p>
   </section>`
     )
@@ -269,9 +296,13 @@ export function renderBeers({ breweries, bySlug, meta, recent = [] }) {
       <label for="bq">Find a beer, a brewery or a hop</label>
       <input id="bq" type="search" autocomplete="off" placeholder="strata, vortex, pfriem…">
     </div>
-    <div class="jump">${jump}</div>
+    <p class="try">Try <button type="button" class="chip" data-q="fresh hop">fresh hop</button><button type="button" class="chip" data-q="citra">citra</button><button type="button" class="chip" data-q="strata">strata</button><button type="button" class="chip" data-q="nelson">nelson</button><button type="button" class="chip" data-q="seattle">seattle</button></p>
   </div>
-  <p class="fine" id="bq-count" hidden></p>
+  <p class="bq-count" id="bq-count" hidden></p>
+  <details class="browse">
+    <summary>Browse by brewery <span class="fine">· ${order.length} breweries, ${cities.size} towns</span></summary>
+    <div class="jump">${jump}</div>
+  </details>
   ${glass}
   ${topBlock}
   ${fresh.length ? `<section class="block fresh-season" id="fresh-hop">
@@ -279,6 +310,7 @@ export function renderBeers({ breweries, bySlug, meta, recent = [] }) {
     <ul class="beerlist">
       ${fresh.join('\n      ')}
     </ul>
+    ${more(fresh.length, 'fresh hop beers')}
   </section>` : ''}
 ${sections}
 </main>
@@ -305,7 +337,7 @@ export function hopBeersBlock(list, base, hopName = '') {
   const yours = had.length
     ? `<p class="had-it">Brooks has had ${had.length === 1 ? 'one of them' : `${had.length} of them`}${stars.length ? ` · ${caps(avg(stars))} <span class="fine">average${stars.length > 1 ? ` of ${stars.length}` : ''}</span>` : ''}</p>`
     : '';
-  return `<section class="block">
+  return `<section class="block" id="in-the-glass">
     <h2>In the glass <span class="fine">· ${list.length} beer${list.length === 1 ? '' : 's'} from ${breweries} brewer${breweries === 1 ? 'y' : 'ies'}</span></h2>
     ${yours}
     <ul class="beerlist compact">

@@ -154,6 +154,7 @@
   match: '^https://www\.stoupbrewing\.com/beer/[a-z0-9-]+-\d+\.html$'
   fetch: 'https://www.stoupbrewing.com/templates/sections/beeriodic-table-section-2023.dialog-beer.php?beer_id={id}'
   fetch_id: '-(\d+)\.html$'
+  slug_strip: '-\d+$'
   page_url: 'https://www.stoupbrewing.com/{path}.html'
 
 - slug: bale-breaker

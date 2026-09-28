@@ -666,6 +666,13 @@ def main() -> int:
                 if beer["slug"] not in seen:
                     seen.add(beer["slug"])
                     beers.append(beer)
+        if brewery.get("slug_strip"):
+            # Stoup's URLs end in a database id (…-ipa-2049); drop it where
+            # the slug stays unique without it.
+            bare = [re.sub(brewery["slug_strip"], "", b["slug"]) for b in beers]
+            for b, short in zip(beers, bare):
+                if bare.count(short) == 1:
+                    b["slug"] = short
         if not beers:
             print(f"{brewery['slug']}: no beers with hop lists in {len(pages)} saved page(s)")
             continue

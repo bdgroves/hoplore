@@ -324,7 +324,7 @@ h1, h2, h3 {
 
 /* --------------------------------------------------------------- hop sheet */
 
-.sheet { padding: 0 0 5rem; }
+.sheet { padding-bottom: 5rem; }
 
 .sheet-head {
   border-bottom: 1px solid var(--ink);
@@ -688,7 +688,7 @@ table.forms tr.form-note td {
 .how.fresh, .fresh { color: var(--bine); border-color: var(--bine); font-weight: 600; }
 .hc-aroma { margin: 0; font-size: 0.92rem; }
 .hc-none { margin: 0; font-size: 0.85rem; color: var(--ink-faint); }
-.hc-metric { display: grid; grid-template-columns: 4.6rem 1fr auto; gap: 0.6rem; align-items: center; font-size: 0.82rem; color: var(--ink-soft); }
+.hc-metric { display: grid; grid-template-columns: 6rem 1fr auto; gap: 0.6rem; align-items: center; font-size: 0.82rem; color: var(--ink-soft); }
 .hc-metric b { color: var(--ink); font-weight: 500; }
 .hc-track { position: relative; height: 0.45rem; background: var(--paper-deep); border-radius: 99px; }
 .hc-span { position: absolute; top: 0; bottom: 0; background: var(--ink); border-radius: 99px; }
@@ -860,3 +860,32 @@ body.reading .dropzone { border-color: var(--gold); animation: reading 1.2s ease
 .wordmark-emoji { font-style: normal; font-size: 0.45em; vertical-align: 0.35em; letter-spacing: 0; }
 .cta { display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1.2rem 0 0.4rem; }
 .cta .chip { text-decoration: none; font-size: 0.72rem; padding: 0.55rem 1.1rem; }
+
+/* ------------------------------------------------ beers: search first */
+.beerlist li[hidden] { display: none !important; }
+section:not(.open) > .beerlist li[data-more] { display: none; }
+body.searching section > .beerlist li[data-more]:not([hidden]) { display: grid; }
+body.searching .show-all, body.searching .browse { display: none; }
+.show-all { margin-top: 0.8rem; font-size: 0.7rem; }
+.try { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; margin: 0.7rem 0 0; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); }
+.try .chip { font-size: 0.66rem; cursor: pointer; }
+.bq-count { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.04em; color: var(--rust); margin: 0.6rem 0 0; }
+.browse { margin: 1rem 0 0.5rem; }
+.browse summary { cursor: pointer; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); padding: 0.4rem 0; }
+.browse .jump { margin-top: 0.6rem; }
+.beers #bq { font-size: 1.1rem; }
+
+.hc-metric .bw { display: block; font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--rust); font-weight: 500; }
+.glossary summary { cursor: pointer; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--rust); }
+.glossary dl { margin: 0.8rem 0 0; display: grid; gap: 0.2rem 1.2rem; grid-template-columns: minmax(10rem, 14rem) 1fr; }
+.glossary dt { font-weight: 700; }
+.glossary dd { margin: 0 0 0.6rem; color: var(--ink-soft); }
+@media (max-width: 46rem) { .glossary dl { grid-template-columns: 1fr; } .glossary dd { margin-bottom: 0.8rem; } }
+
+/* Hop page: the quick take, and on phones the drinker's half first. */
+.quick-take { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 0.8rem 1.5rem; margin: 1.2rem 0 0; padding: 1rem 1.1rem; background: var(--paper-lift); border: 1px solid var(--wire-soft); border-left: 3px solid var(--gold); }
+.quick-take dt { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--stone); }
+.quick-take dd { margin: 0.2rem 0 0; font-size: 0.98rem; }
+@media (max-width: 60rem) { .cols > div:nth-child(2) { order: -1; } }
+body.searching .brewery > p.fine { display: none; }
+.nerd-links { margin-top: 2rem; }

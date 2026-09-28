@@ -1,6 +1,6 @@
 import { hopAcreageBlock } from './acreage.js';
 import { FONTS, THEME_INIT, THEME_TOGGLE, SITE_FOOTER, siteHeader } from './chrome.js';
-import { hopBeersBlock } from './beers.js';
+import { hopBeersBlock, bitterWord } from './beers.js';
 
 /** Plain string templates. No framework — the whole site is static HTML over
  *  the same JSON the API serves, so the site can never drift from the data. */
@@ -217,6 +217,27 @@ function row(hop, taxonomy) {
 
 // ---------------------------------------------------------------- hop sheet
 
+/** The hop in one glance, in bar words: smell, bite, where to drink it, what
+ *  to swap it for. The numbers underneath are for the brewers. */
+function quickTake(hop, similar, taxonomy, base) {
+  const tags = (hop.aroma?.tags ?? []).slice(0, 5).map((t) => taxonomy.aromaTags[t]?.label ?? t);
+  const bite = bitterWord(hop.analytics?.alpha_acid);
+  const beers = hop.beers ?? [];
+  const had = beers.filter((x) => x.mine).length;
+  const fresh = beers.filter((x) => x.fresh).length;
+  const swap = similar?.[0];
+  const cells = [
+    tags.length && ['Smells like', esc(tags.join(', '))],
+    bite && ['Bitterness', `${bite} <span class="fine">(${fmt(hop.analytics.alpha_acid.low)}–${fmt(hop.analytics.alpha_acid.high)}% alpha)</span>`],
+    beers.length && ['In the glass', `<a href="#in-the-glass">${beers.length.toLocaleString('en-US')} beer${beers.length === 1 ? '' : 's'} here</a>${fresh ? ` · ${fresh} fresh hop` : ''}${had ? ` · Brooks has had ${had}` : ''}`],
+    swap && ['Swap it for', `<a href="${base}hops/${swap.slug}/">${esc(swap.name)}</a>`],
+  ].filter(Boolean);
+  if (!cells.length) return '';
+  return `<dl class="quick-take">
+      ${cells.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('\n      ')}
+    </dl>`;
+}
+
 export function renderHop({ hop, similar, taxonomy, sources, meta, acreageYears }) {
   const base = '../../';
   const country = taxonomy.countries[hop.country]?.label ?? hop.country;
@@ -242,11 +263,10 @@ export function renderHop({ hop, similar, taxonomy, sources, meta, acreageYears 
 <header class="masthead" style="padding-top:1.5rem">
   <div class="wrap">
     <nav class="nav" style="border-top:0;padding-top:0">
-      <a href="${base}">All varieties</a>
+      <a href="${base}">All hops</a>
+      <a href="${base}beers/">What's in the can</a>
+      <a href="${base}scan/">Scan a beer 📷</a>
       <a href="${base}landscape/#${hop.slug}">Where it sits in the landscape</a>
-      ${hop.acreage ? `<a href="${base}grown/">Where America's hops grow</a>` : ''}
-      <a href="${base}api/v1/hops/${hop.slug}.json">This hop as JSON</a>
-      <a href="https://github.com/bdgroves/hoplore/blob/main/data/hops/${hop.slug}.yml">Edit the source file</a>
     </nav>
   </div>
 </header>
@@ -260,6 +280,7 @@ export function renderHop({ hop, similar, taxonomy, sources, meta, acreageYears 
       ${idents.map(([k, v]) => `<div>${esc(k)} <b>${esc(v)}</b></div>`).join('\n      ')}
       <span class="provenance" data-verification="${hop.meta.verification}">${verificationLabel(hop.meta.verification)}</span>
     </div>
+    ${quickTake(hop, similar, taxonomy, base)}
   </div>
 
   <div class="cols">
@@ -276,6 +297,8 @@ export function renderHop({ hop, similar, taxonomy, sources, meta, acreageYears 
       ${substitutesBlock(hop, similar)}
       ${pedigreeLine ? `<section class="block"><h2>Pedigree</h2><p>${pedigreeLine}</p></section>` : ''}
       ${hop.meta.notes ? `<section class="block"><h2>Notes on this record</h2><p>${esc(hop.meta.notes)}</p></section>` : ''}
+      <p class="fine nerd-links">For brewers and data folks: <a href="${base}api/v1/hops/${hop.slug}.json">this hop as JSON</a> ·
+      <a href="https://github.com/bdgroves/hoplore/blob/main/data/hops/${hop.slug}.yml">the source file</a>${hop.acreage ? ` · <a href="${base}grown/">where America's hops grow</a>` : ''}</p>
     </div>
   </div>
 </main>
