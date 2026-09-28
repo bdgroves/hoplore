@@ -1,0 +1,66 @@
+name: Refresh the beers
+
+# Twice a week: crawl every brewery in tools/ingest/breweries.yml for beer
+# pages it hasn't seen (saved pages are kept -- a brewed beer's hop list
+# doesn't change), re-read Fremont's taplist, rebuild data/beers/, validate,
+# commit and redeploy. New releases -- fresh hop season especially -- show
+# up without anyone lifting a finger. Also runs from the Actions tab.
+
+on:
+  schedule:
+    - cron: '23 14 * * 1,4'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: ingest
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: prefix-dev/setup-pixi@v0.10.2
+        with:
+          environments: data default
+          cache: true
+
+      - name: Crawl the breweries
+        run: |
+          LOG=tools/ingest/raw/pages/breweries-log.txt
+          pixi run -e data python tools/ingest/snapshot.py --breweries > "$LOG" 2>&1 || echo "crawler exited $?" >> "$LOG"
+          if [ -n "$(tr -d '[:space:]' < tools/ingest/raw/pages/render_urls.txt)$(tr -d '[:space:]' < tools/ingest/raw/pages/render_listings.txt 2>/dev/null)" ]; then
+            { npm i --no-save playwright-core@1.56.0 && node tools/ingest/render.mjs; } >> "$LOG" 2>&1 || echo "render exited $?" >> "$LOG"
+          fi
+          # Taplists and other one-page sources that change week to week.
+          pixi run -e data python tools/ingest/snapshot.py >> "$LOG" 2>&1 || echo "snapshot exited $?" >> "$LOG"
+          grep -v "^  FAIL" "$LOG" | tail -40 >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Rebuild the beer lists
+        run: |
+          pixi run -e data python tools/ingest/beers.py | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Validate
+        run: pixi run validate
+
+      - name: Commit and deploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tools/ingest/raw data/beers
+          if git diff --cached --quiet -- data/beers; then
+            # Only raw pages changed (or nothing): keep them, but no redeploy.
+            git diff --cached --quiet || { git commit -q -m "Brewery pages: weekly crawl (no new beers)"; git pull --rebase --autostash && git push; }
+            echo "No new beers." >> "$GITHUB_STEP_SUMMARY"; exit 0
+          fi
+          NEW=$(git diff --cached --numstat -- data/beers | awk '{a+=$1} END {print a+0}')
+          git commit -q -m "Refresh the beers: new hop lists from the breweries' sites" -m "~$NEW lines added across data/beers/. Run ${{ github.run_id }}."
+          git pull --rebase --autostash && git push
+          gh workflow run deploy.yml --ref main

@@ -218,3 +218,40 @@
   match: '^(https://greatnotion\.com)?/products/[a-z0-9_-]+$'
   base: https://greatnotion.com
   page_url: 'https://greatnotion.com/{path}'
+
+# One-page beer lists: the listing page itself is saved and parsed (keep_listing).
+- slug: fast-fashion
+  name: Fast Fashion
+  city: Seattle
+  state: WA
+  url: https://themasonryseattle.com/fast-fashion/
+  listing: ['https://themasonryseattle.com/fast-fashion/']
+  keep_listing: true
+  match: '^$'
+
+- slug: triceratops
+  name: Triceratops Brewing
+  city: Tumwater
+  state: WA
+  url: https://www.triceratopsbrewing.com/
+  listing: ['https://www.triceratopsbrewing.com/all-beers']
+  keep_listing: true
+  match: '^$'
+
+- slug: hood-river-brewing
+  name: Hood River Brewing
+  city: Hood River
+  state: OR
+  url: https://hoodriverbrewing.com/
+  listing: ['https://hoodriverbrewing.com/our-beer']
+  keep_listing: true
+  match: '^$'
+
+- slug: brothers-cascadia
+  name: Brothers Cascadia Brewing
+  city: Vancouver
+  state: WA
+  url: https://brotherscascadiabrewing.com/
+  listing: ['https://brotherscascadiabrewing.com/vancouver-brothers-cascadia-brewing-drink-menu']
+  keep_listing: true
+  match: '^$'
