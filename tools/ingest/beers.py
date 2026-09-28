@@ -16,6 +16,7 @@ pellets), and fresh-hop additions keep the farm when the brewery names it.
 from __future__ import annotations
 
 import io
+import json
 import re
 import sys
 import time
@@ -400,6 +401,47 @@ def parse_aslan(path: Path) -> tuple | None:
     return title, abv_of(text), m.group(1).strip() if m else None, "list"
 
 
+def parse_georgetown(path: Path) -> tuple | None:
+    """Shopify product pages with a 'For beer geeks' block: Malts - … Hops - …"""
+    _, name, text = page_text(path)
+    hops = between(text, r"\bHops\s*-(?:\s*Hops\s*-)?", r"Yeast|OG|TG|ABV|Best By|Availability|Malts?|Adjuncts?")
+    m = re.search(r"\bABV\s*-\s*([\d.]+)", text)
+    return name, float(m.group(1)) if m else abv_of(text), hops, "field"
+
+
+def parse_bale_breaker(path: Path) -> tuple | None:
+    soup, _, text = page_text(path)
+    title = soup.title.string if soup.title and soup.title.string else ""
+    name = re.split(r"\s[-|\u2013]\s", title.strip())[0].strip() or None
+    hops = between(text, r"\bHops:", r"Yeast|Availability|Available In|Malts?|Adjuncts?|DOWNLOAD")
+    return name, abv_of(text), hops, "field"
+
+
+def parse_block15(path: Path) -> tuple | None:
+    _, name, text = page_text(path)
+    hops = between(text, r"\bHops", r"Grains|Availability|Sales Materials|Yeast|Malts?")
+    m = re.search(r"•\s*([\d.]+)%", text)
+    return name, float(m.group(1)) if m else abv_of(text), hops, "field"
+
+
+def parse_stoup(path: Path) -> tuple | None:
+    """Stoup's beer pages are drawn from a JSON endpoint; snapshot.py saves
+    its html (see breweries.yml 'fetch')."""
+    raw = path.read_text(encoding="utf-8", errors="ignore")
+    try:
+        raw = json.loads(raw)["html"]
+    except (ValueError, KeyError, TypeError):
+        pass
+    soup = BeautifulSoup(raw, "lxml")
+    head = soup.find(["h1", "h2", "h3"])
+    name = head.get_text(" ", strip=True) if head else None
+    if name:
+        name = re.sub(r"\s*\((?:19|20)\d\d\)\s*", " ", name).strip()  # "(2026)" is the release, not the beer
+    text = re.sub(r"\s+", " ", soup.get_text(" "))
+    m = re.search(r"ABV\W*([\d.]+)", text)
+    return name, abv_of(text) or (float(m.group(1)) if m else None), text[:2500], "prose"
+
+
 def parse_description(path: Path) -> tuple | None:
     """Breweries that write a paragraph: the whole description is scanned for
     variety names (see names_in for how ordinary words are kept out)."""
@@ -444,6 +486,11 @@ PARSERS = {
     "cloudburst": (parse_description, "cloudburstbrew.com", "beer_*.html"),
     "reubens": (parse_reubens, "reubensbrews.com", "beer_*.html"),
     "fremont": (parse_fremont_taplist, "fremontbrewing.com", "taplist.html"),
+    "georgetown": (parse_georgetown, "georgetownbeer.com", "products_*.html"),
+    "bale-breaker": (parse_bale_breaker, "balebreaker.com", "beer_*.html"),
+    "block-15": (parse_block15, "block15.com", "*.html"),
+    "stoup": (parse_stoup, "stoupbrewing.com", "beer_*.html"),
+    "structures": (parse_description, "structuresbrewing.com", "*.html"),
 }
 
 
@@ -481,9 +528,14 @@ def build_beer(brewery: dict, path: Path, parsed: tuple, index: dict[str, str]) 
     if re.search(r"\b(?:fresh|wet)[- ]hop", name, re.I) and len({i.get("hop") for i in items}) == 1:
         for i in items:
             i["fresh"] = True
+    elif re.search(r"\b(?:fresh|wet)[- ]hop", name, re.I) and not any(i.get("fresh") for i in items):
+        # "Citra Slicker Wet Hop IPA": the hop in the beer's name is the fresh one.
+        for i in items:
+            if i.get("name") and re.search(rf"\b{re.escape(i['name'])}\b", name, re.I):
+                i["fresh"] = True
     if not items:
         return None
-    slug = re.sub(r"^(beer|our_beer|product)_", "", path.stem)
+    slug = re.sub(r"^(beer|our_beer|products?)_", "", path.stem)
     slug = re.sub(r"_[A-Z0-9]{16,}$", "", slug).replace("_", "-").lower()
     slug = re.sub(r"-2$", "", slug)  # WordPress's "-2" on a reused title
     beer = CommentedMap()
@@ -492,7 +544,7 @@ def build_beer(brewery: dict, path: Path, parsed: tuple, index: dict[str, str]) 
     if name.isupper():
         name = re.sub(r"\b(Ipa|Esb|Ipl|Dipa|Neipa|Wc|Xpa|Ddh)\b", lambda m: m.group(1).upper(), name.title())
     beer["name"] = name
-    beer["url"] = source_url(path)
+    beer["url"] = source_url(path, brewery)
     if abv and 0.5 <= abv <= 18:  # outside that it's a misread (a price, an IBU, a typo on the page)
         beer["abv"] = abv
     beer["hops_as_written"] = hops_line if len(hops_line) <= 400 else hops_line[:397] + "..."
@@ -505,8 +557,11 @@ def build_beer(brewery: dict, path: Path, parsed: tuple, index: dict[str, str]) 
     return beer
 
 
-def source_url(path: Path) -> str:
+def source_url(path: Path, brewery: dict | None = None) -> str:
     """Rebuild the page URL from the saved file's name (see snapshot.target)."""
+    if brewery and brewery.get("page_url"):
+        # page_url: "https://host/{path}" -- for sites whose URLs don't end in a slash.
+        return brewery["page_url"].format(path=path.stem.replace("_", "/"))
     host = path.parent.name
     host = host if host.count(".") > 1 or host in ("breakside.com", "exnovobrew.com", "doublemountainbrewery.com",
                                                     "eclipticbrewing.com", "fortgeorgebrewery.com") else "www." + host
@@ -534,8 +589,9 @@ def main() -> int:
     index = record_index()
     load_name_forms()
     breweries = YAML(typ="safe").load((HERE / "breweries.yml").read_text(encoding="utf-8"))
+    only = sys.argv[sys.argv.index("--only") + 1].split(",") if "--only" in sys.argv else None
     for brewery in breweries:
-        if brewery["slug"] not in PARSERS:
+        if brewery["slug"] not in PARSERS or (only and brewery["slug"] not in only):
             continue
         parse, folder, pattern = PARSERS[brewery["slug"]]
         pages = sorted((RAW / folder).glob(pattern))

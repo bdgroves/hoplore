@@ -103,8 +103,12 @@ def crawl_breweries() -> int:
             out = target(url, "text/html")
             if out.exists():
                 continue
+            fetch = url
+            if brewery.get("fetch"):
+                # The page is a shell; its content comes from an endpoint.
+                fetch = brewery["fetch"].format(id=re.search(brewery["fetch_id"], url).group(1))
             try:
-                r = requests.get(url, headers={"User-Agent": UA}, timeout=60)
+                r = requests.get(fetch, headers={"User-Agent": UA}, timeout=60)
                 r.raise_for_status()
             except requests.RequestException as error:
                 log.append(f"  FAIL {url}: {error}")

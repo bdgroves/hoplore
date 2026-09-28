@@ -141,30 +141,20 @@
     - 'https://georgetownbeer.com/collections/beer-archive?page=4'
   match: '^(https://georgetownbeer\.com)?(/collections/[a-z0-9-]+)?/products/[a-z0-9-]+$'
   base: https://georgetownbeer.com
+  page_url: 'https://georgetownbeer.com/{path}'
 
 - slug: stoup
   name: Stoup Brewing
   city: Seattle
   state: WA
   url: https://www.stoupbrewing.com/
-  # The style pages are drawn by JavaScript; render.mjs renders them and
-  # follows any per-beer links.
-  render_listing: true
-  listing:
-    - 'https://www.stoupbrewing.com/beers/ipa-256.html'
-    - 'https://www.stoupbrewing.com/beers/hazy-492.html'
-    - 'https://www.stoupbrewing.com/beers/northwest-270.html'
-    - 'https://www.stoupbrewing.com/beers/pale-260.html'
-    - 'https://www.stoupbrewing.com/beers/pilsner-263.html'
-    - 'https://www.stoupbrewing.com/beers/lager-268.html'
-    - 'https://www.stoupbrewing.com/beers/german-267.html'
-    - 'https://www.stoupbrewing.com/beers/fresh-hop-1222.html'
-    - 'https://www.stoupbrewing.com/beers/experimental-2065.html'
-    - 'https://www.stoupbrewing.com/beers/collaboration.html'
-    - 'https://www.stoupbrewing.com/beers/wheat-265.html'
-    - 'https://www.stoupbrewing.com/beers/english-420.html'
-    - 'https://www.stoupbrewing.com/beers/hops-driven.html'
-  match: '^https://www\.stoupbrewing\.com/beers?/(?!.*-on-tap\.html)(?!(?:yeast|hops|malt)-driven)[^?#]+/[^?#]+$'
+  # Each beer page is an empty shell filled by JavaScript from a JSON
+  # endpoint keyed by the number at the end of its URL; that's what's saved.
+  sitemaps: ['https://www.stoupbrewing.com/sitemap.xml']
+  match: '^https://www\.stoupbrewing\.com/beer/[a-z0-9-]+-\d+\.html$'
+  fetch: 'https://www.stoupbrewing.com/templates/sections/beeriodic-table-section-2023.dialog-beer.php?beer_id={id}'
+  fetch_id: '-(\d+)\.html$'
+  page_url: 'https://www.stoupbrewing.com/{path}.html'
 
 - slug: bale-breaker
   name: Bale Breaker Brewing
@@ -173,21 +163,33 @@
   url: https://balebreaker.com/
   listing: ['https://balebreaker.com/beers/']
   match: '^https://balebreaker\.com/beer/[a-z0-9-]+/$'
+  page_url: 'https://balebreaker.com/{path}/'
 
 - slug: structures
   name: Structures Brewing
   city: Bellingham
   state: WA
   url: https://www.structuresbrewing.com/
-  listing: ['https://www.structuresbrewing.com/ourbeer']
-  match: '^https://www\.structuresbrewing\.com/(?!(?:old-town|state-street|ourbeer|events-1|shop|about|cart|locations|find-our-beer|contact)$)[a-z0-9-]+$'
+  sitemaps: ['https://www.structuresbrewing.com/sitemap.xml']
+  match: '^https://www\.structuresbrewing\.com/(?!(?:old-town|state-street|ourbeer|events-1|shop|about|cart|locations|find-our-beer|contact|home-1)$)[a-z0-9-]+$'
+  page_url: 'https://www.structuresbrewing.com/{path}'
 
 - slug: block-15
   name: Block 15 Brewing
   city: Corvallis
   state: OR
   url: https://www.block15.com/
-  # Beers are described on the listing pages themselves.
+  # Pages drawn by JavaScript: the series pages are rendered and every beer
+  # page they link to is rendered and saved.
   render_listing: true
-  listing: ['https://www.block15.com/beer']
-  match: '^https://(www\.)?block15\.com/(?!order|shop|cart|account|contact|visit|events|jobs|about)[a-z0-9-]*(beer|series|release|fresh|seasonal|year-round|ipa|lager)[a-z0-9-]*/?$'
+  listing:
+    - 'https://www.block15.com/beer'
+    - 'https://block15.com/year-round-beers'
+    - 'https://block15.com/seasonal-beers'
+    - 'https://block15.com/specialty-beers'
+    - 'https://block15.com/exploratory-beers'
+    - 'https://block15.com/collaboration-beers'
+    - 'https://block15.com/cellar-aged-beers'
+    - 'https://block15.com/lagered-by-the-sun'
+  page_url: 'https://block15.com/{path}'
+  match: '^https://(www\.)?block15\.com/(?!(?:order|shop|cart|account|contact|visit|events|jobs|about|beer|privacy|terms|search|blog|news|locations|restaurant|menu|pub|brewery|careers|faq)(?:[/-]|$))[a-z0-9-]+/?$'

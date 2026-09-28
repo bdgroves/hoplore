@@ -1,0 +1,1001 @@
+brewery:
+  slug: georgetown
+  name: Georgetown Brewing
+  city: Seattle
+  state: WA
+  url: https://georgetownbeer.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-28'
+beers:
+  - slug: 0-69
+    name: 0-69
+    url: https://georgetownbeer.com/products/0-69
+    hops_as_written: Citra, Mosaic, Amarillo, El Dorado
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+  - slug: 13th-doctor
+    name: 13th Doctor
+    url: https://georgetownbeer.com/products/13th-doctor
+    abv: 3.6
+    hops_as_written: Citra, El Dorado
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+  - slug: 18lb
+    name: 18lb
+    url: https://georgetownbeer.com/products/18lb
+    abv: 9.0
+    hops_as_written: Centennial, Northern Brewer
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: northern-brewer, name: Northern Brewer, as_written: Northern Brewer }
+  - slug: '1969'
+    name: '1969'
+    url: https://georgetownbeer.com/products/1969
+    abv: 6.7
+    hops_as_written: Citra, Strata, Simcoe
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: 20-year-beer
+    name: 20 Year Beer
+    url: https://georgetownbeer.com/products/20-year-beer
+    abv: 4.1
+    hops_as_written: Cascade
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: 2hazy4u
+    name: 2Hazy4U
+    url: https://georgetownbeer.com/products/2hazy4u
+    abv: 7.0
+    hops_as_written: Columbus, Citra, Cryo Krush, Dolcita
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush }
+      - { hop: dolcita, name: Dolcita, as_written: Dolcita }
+  - slug: 2t
+    name: 5Point5
+    url: https://georgetownbeer.com/products/2t
+    abv: 5.5
+    hops_as_written: Citra, Cascade, Columbus, Mosaic, Centennial
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+  - slug: 74ths-35th
+    name: 74th's 35th
+    url: https://georgetownbeer.com/products/74ths-35th
+    abv: 6.8
+    hops_as_written: Simcoe, Chinook, Citra, Krush, Cryo Sabro
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: sabro, name: Sabro, form: Cryo, as_written: Sabro }
+  - slug: 8-degrees
+    name: 8 Degrees
+    url: https://georgetownbeer.com/products/8-degrees
+    abv: 3.1
+    hops_as_written: Czech Saaz
+    hops:
+      - { hop: saaz-cz, name: Czech Saaz, as_written: Czech Saaz }
+  - slug: 9-pound
+    name: 9 Pound
+    url: https://georgetownbeer.com/products/9-pound
+    abv: 6.5
+    hops_as_written: Summit, Chinook
+    hops:
+      - { hop: summit, name: Summit, as_written: Summit }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: achilles-galaxy
+    name: Achilles Galaxy
+    url: https://georgetownbeer.com/products/achilles-galaxy
+    abv: 6.0
+    hops_as_written: Summit, Citra, Galaxy, Mosaic, El Dorado
+    hops:
+      - { hop: summit, name: Summit, as_written: Summit }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+  - slug: agent-angelo
+    name: Agent Angelo
+    url: https://georgetownbeer.com/products/agent-angelo
+    abv: 4.9
+    hops_as_written: Saphir, Sterling
+    hops:
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: ales-for-als
+    name: Ales for ALS
+    url: https://georgetownbeer.com/products/ales-for-als
+    abv: 6.7
+    hops_as_written: ALS hop blend from YCH (HBC 630, Loral, Citra, Mosaic, Sabro, Ekuanot, Simcoe, Ahtanum
+    hops:
+      - { hop: loral, name: Loral, as_written: Loral }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+      - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: ahtanum, name: Ahtanum, as_written: Ahtanum }
+  - slug: all-bundled-up
+    name: All Bundled Up
+    url: https://georgetownbeer.com/products/all-bundled-up
+    abv: 6.5
+    hops_as_written: Citra, El Dorado, Columbus
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: all-in
+    name: All In
+    url: https://georgetownbeer.com/products/all-in
+    abv: 5.7
+    hops_as_written: Cascade, Centennial, Amarillo
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: alpharoma
+    name: AlphAroma
+    url: https://georgetownbeer.com/products/alpharoma
+    abv: 6.9
+    hops_as_written: AlphAroma (Rakau)
+    hops:
+      - { hop: rakau, name: Rakau, as_written: Rakau }
+  - slug: andre
+    name: Andre
+    url: https://georgetownbeer.com/products/andre
+    abv: 6.4
+    hops_as_written: Idaho 7, Citra, Azacca
+    hops:
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+  - slug: anyday
+    name: Anyday
+    url: https://georgetownbeer.com/products/anyday
+    abv: 6.3
+    hops_as_written: Simcoe, Galaxy
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: april
+    name: April
+    url: https://georgetownbeer.com/products/april
+    abv: 7.8
+    hops_as_written: Citra, Strata, Columbus
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: arc-of-infinity
+    name: Arc of Infinity
+    url: https://georgetownbeer.com/products/arc-of-infinity
+    abv: 6.7
+    hops_as_written: Cryo Columbus, Ekuanot, Centennial, Mosaic, Chinook, Simcoe, Krush, HBC 638, Citra
+    hops:
+      - { hop: columbus, name: Columbus, form: Cryo, as_written: Columbus }
+      - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: arco-etrusco
+    name: Arco Etrusco
+    url: https://georgetownbeer.com/products/arco-etrusco
+    abv: 6.6
+    hops_as_written: Summit
+    hops:
+      - { hop: summit, name: Summit, as_written: Summit }
+  - slug: arctic-delay
+    name: Arctic Delay
+    url: https://georgetownbeer.com/products/arctic-delay
+    abv: 6.2
+    hops_as_written: Citra, Azacca, Idaho 7
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+  - slug: artio
+    name: Artio
+    url: https://georgetownbeer.com/products/artio
+    abv: 6.5
+    hops_as_written: Columbus, Citra, Chinook, El Dorado, Krush, Mosaic
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: august
+    name: August
+    url: https://georgetownbeer.com/products/august
+    abv: 6.6
+    hops_as_written: Citra, Mosaic
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: baby-reida
+    name: Baby Reida
+    url: https://georgetownbeer.com/products/baby-reida
+    abv: 5.0
+    hops_as_written: Chinook, Fuggle, Golding
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: fuggle, name: Fuggle, as_written: Fuggle }
+  - slug: backpack-brigade
+    name: Backpack Brigade
+    url: https://georgetownbeer.com/products/backpack-brigade
+    abv: 6.7
+    hops_as_written: Loral, Citra, Ekuanot , Krush, Vista and Nelson Sauvin
+    hops:
+      - { hop: loral, name: Loral, as_written: Loral }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: vista, name: Vista, as_written: Vista }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: balloons-on-parade
+    name: Balloons On Parade
+    url: https://georgetownbeer.com/products/balloons-on-parade
+    abv: 7.1
+    hops_as_written: Citra, Simcoe, El Dorado, Idaho 7
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+  - slug: bam-bam
+    name: Bam Bam
+    url: https://georgetownbeer.com/products/bam-bam
+    abv: 8.0
+    hops_as_written: Summit, Saaz, Crystal, Sterling
+    hops:
+      - { hop: summit, name: Summit, as_written: Summit }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: crystal, name: Crystal, as_written: Crystal }
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: band-camp
+    name: Band Camp
+    url: https://georgetownbeer.com/products/band-camp
+    abv: 6.7
+    hops_as_written: Columbus, Citra, Strata, Idaho 7
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+  - slug: banjoe
+    name: Banjoe
+    url: https://georgetownbeer.com/products/banjoe
+    abv: 5.6
+    hops_as_written: Fuggle, Chinook, Simcoe
+    hops:
+      - { hop: fuggle, name: Fuggle, as_written: Fuggle }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: ba-18lb
+    name: Barrel Aged 18lb
+    url: https://georgetownbeer.com/products/ba-18lb
+    abv: 9.7
+    hops_as_written: Summit, Centennial, Chinook
+    hops:
+      - { hop: summit, name: Summit, as_written: Summit }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: barrel-aged-choppers
+    name: Barrel Aged Chopper's
+    url: https://georgetownbeer.com/products/barrel-aged-choppers
+    abv: 7.9
+    hops_as_written: Centennial, Cascade
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: barrel-aged-lisas
+    name: Barrel Aged Lisa's Chocolate Stout
+    url: https://georgetownbeer.com/products/barrel-aged-lisas
+    abv: 7.3
+    hops_as_written: Columbus
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: barrel-aged-mega-meow
+    name: Barrel Aged Mega Meow
+    url: https://georgetownbeer.com/products/barrel-aged-mega-meow
+    abv: 10.1
+    hops_as_written: Columbus, Centennial, Chinook
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: basket-case
+    name: Basket Case
+    url: https://georgetownbeer.com/products/basket-case
+    abv: 5.1
+    hops_as_written: Sterling, Hallertau Mittelfruh
+    hops:
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau Mittelfruh }
+  - slug: because-i-said-so
+    name: Because I Said So
+    url: https://georgetownbeer.com/products/because-i-said-so
+    abv: 4.75
+    hops_as_written: Chinook, Simcoe
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: beer-church
+    name: Beer Church
+    url: https://georgetownbeer.com/products/beer-church
+    abv: 7.1
+    hops_as_written: Simcoe, Mosaic, Krush, Nectaron
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+  - slug: bells-beach
+    name: Bells Beach
+    url: https://georgetownbeer.com/products/bells-beach
+    abv: 7.4
+    hops_as_written: Galaxy, Nelson Sauvin
+    hops:
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: beneath-the-shade-tree-1
+    name: Beneath The Shade Tree
+    url: https://georgetownbeer.com/products/beneath-the-shade-tree-1
+    abv: 7.2
+    hops_as_written: Simcoe, Nelson Sauvin
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: best-friend-brody
+    name: Best Friend Brody
+    url: https://georgetownbeer.com/products/best-friend-brody
+    abv: 6.2
+    hops_as_written: Citra, El Dorado, Mosaic, Krush
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: krush, name: Krush, as_written: Krush }
+  - slug: bialous
+    name: Bialous
+    url: https://georgetownbeer.com/products/bialous
+    abv: 4.8
+    hops_as_written: Saphir, Sterling
+    hops:
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: big-trouble
+    name: Big Trouble
+    url: https://georgetownbeer.com/products/big-trouble
+    abv: 4.1
+    hops_as_written: Crystal
+    hops:
+      - { hop: crystal, name: Crystal, as_written: Crystal }
+  - slug: bigelow
+    name: Bigelow
+    url: https://georgetownbeer.com/products/bigelow
+    abv: 7.8
+    hops_as_written: Apollo, Columbus, Chinook, Summit, Citra
+    hops:
+      - { hop: apollo, name: Apollo, as_written: Apollo }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: summit, name: Summit, as_written: Summit }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: billytodd
+    name: BillyTodd
+    url: https://georgetownbeer.com/products/billytodd
+    abv: 7.0
+    hops_as_written: Citra, Simcoe, Strata, Cryo Columbus
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: columbus, name: Columbus, form: Cryo, as_written: Columbus }
+  - slug: bird
+    name: Bird
+    url: https://georgetownbeer.com/products/bird
+    abv: 7.1
+    hops_as_written: Mosaic, Idaho 7
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+  - slug: bitter-horseman
+    name: Bitter Horseman
+    url: https://georgetownbeer.com/products/bitter-horseman
+    abv: 4.3
+    hops_as_written: Challenger, East Kent Golding
+    hops:
+      - { hop: challenger, name: Challenger, as_written: Challenger }
+      - { hop: east-kent-golding, name: East Kent Golding, as_written: East Kent Golding }
+  - slug: black-gates
+    name: Black Gates
+    url: https://georgetownbeer.com/products/black-gates
+    abv: 7.3
+    hops_as_written: Columbus, Simoce, Nelson Sauvin
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: bobs-beer
+    name: Bob's Beer
+    url: https://georgetownbeer.com/products/bobs-beer
+    abv: 6.6
+    hops_as_written: Columbus, Cryo Sabro, Comet
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: sabro, name: Sabro, form: Cryo, as_written: Sabro }
+      - { hop: comet, name: Comet, as_written: Comet }
+  - slug: bobs-ipa
+    name: Bob's IPA
+    url: https://georgetownbeer.com/products/bobs-ipa
+    abv: 6.6
+    hops_as_written: Columbus, Citra, Idaho 7
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+  - slug: bodhizafa
+    name: Bodhizafa
+    url: https://georgetownbeer.com/products/bodhizafa
+    abv: 6.9
+    hops_as_written: Chinook, Citra, Mosaic, Columbus
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: bodhizilla
+    name: Bodhizilla
+    url: https://georgetownbeer.com/products/bodhizilla
+    abv: 8.0
+    hops_as_written: Columbus, Citra, Mosaic, Chinook
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: boop-beep
+    name: Boop & Beep
+    url: https://georgetownbeer.com/products/boop-beep
+    abv: 6.9
+    hops_as_written: Columbus, Simcoe, Citra, Strata
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: brass-kracken-10-tacles
+    name: Brass Kracken 10-Tacles
+    url: https://georgetownbeer.com/products/brass-kracken-10-tacles
+    abv: 7.1
+    hops_as_written: Columbus, Cryo Sabro, Krush, Centennial, Comet
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: sabro, name: Sabro, form: Cryo, as_written: Sabro }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: comet, name: Comet, as_written: Comet }
+  - slug: brave-new-josh
+    name: Brave New Josh
+    url: https://georgetownbeer.com/products/brave-new-josh
+    abv: 4.9
+    hops_as_written: Columbus, Saaz, Hallertau Mittlefruh
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: hallertau-mittelfrueh, name: Hallertau, as_written: Hallertau }
+  - slug: bunker
+    name: Bunker
+    url: https://georgetownbeer.com/products/bunker
+    abv: 6.4
+    hops_as_written: Summit,Denali, Simcoe
+    hops:
+      - { hop: summit, name: Summit, as_written: Summit }
+      - { hop: denali, name: Denali, as_written: Denali }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: burton
+    name: Burton
+    url: https://georgetownbeer.com/products/burton
+    abv: 6.0
+    hops_as_written: Citra, Simcoe
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: butternut-v-walnut
+    name: Butternut v. Walnut
+    url: https://georgetownbeer.com/products/butternut-v-walnut
+    abv: 7.1
+    hops_as_written: Strata, Comet, Simcoe
+    hops:
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: comet, name: Comet, as_written: Comet }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: camp-gt
+    name: Camp GT
+    url: https://georgetownbeer.com/products/camp-gt
+    abv: 5.0
+    hops_as_written: Summit, Chinook
+    hops:
+      - { hop: summit, name: Summit, as_written: Summit }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: camp-stories
+    name: Camp Stories
+    url: https://georgetownbeer.com/products/camp-stories
+    abv: 5.9
+    hops_as_written: Summit, Citra, Galaxy, Mosaic, Simcoe
+    hops:
+      - { hop: summit, name: Summit, as_written: Summit }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: camp-stories-chapter-two
+    name: Camp Stories Chapter 2
+    url: https://georgetownbeer.com/products/camp-stories-chapter-two
+    abv: 6.1
+    hops_as_written: Rakau, Citra®, El Dorado, Mosaic
+    hops:
+      - { hop: rakau, name: Rakau, as_written: Rakau }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: camp-stories-1
+    name: Camp Stories Chapter 3
+    url: https://georgetownbeer.com/products/camp-stories-1
+    abv: 5.4
+    hops_as_written: Citra, Mosaic, Chinook
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: carpenter
+    name: Carpenter
+    url: https://georgetownbeer.com/products/carpenter
+    abv: 4.9
+    hops_as_written: Sterling
+    hops:
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: cat-szn
+    name: Cat Szn
+    url: https://georgetownbeer.com/products/cat-szn
+    abv: 7.2
+    hops_as_written: Citra, Simcoe, Strata, Idaho 7, Mosaic
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: catch-some-rays
+    name: Catch Some Ray's
+    url: https://georgetownbeer.com/products/catch-some-rays
+    abv: 6.9
+    hops_as_written: Strata, Citra, Chinook
+    hops:
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: chairman-chucks
+    name: Chairman Chuck's
+    url: https://georgetownbeer.com/products/chairman-chucks
+    abv: 7.1
+    hops_as_written: Citra, Anchovy, Mosaic, Strata, Rakau, Cryo Columbus
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: rakau, name: Rakau, as_written: Rakau }
+      - { hop: columbus, name: Columbus, form: Cryo, as_written: Columbus }
+  - slug: chaotic-good
+    name: Chaotic Good
+    url: https://georgetownbeer.com/products/chaotic-good
+    abv: 6.4
+    hops_as_written: Bru-1 hops, El Dorado, Cashmere, Ahtanum, Citra, Loral, Sabro, Mosaic
+    hops:
+      - { hop: bru-1, name: Bru-1, as_written: Bru-1 }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+      - { hop: ahtanum, name: Ahtanum, as_written: Ahtanum }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: loral, name: Loral, as_written: Loral }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: chardell
+    name: Chardell
+    url: https://georgetownbeer.com/products/chardell
+    abv: 6.6
+    hops_as_written: HBC 1134, Sterling
+    hops:
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: chase
+    name: Chase
+    url: https://georgetownbeer.com/products/chase
+    abv: 6.1
+    hops_as_written: Columbus, Citra, Mosaic, Galaxy
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: chateauneuf-du-chad
+    name: Chateauneuf du Chad
+    url: https://georgetownbeer.com/products/chateauneuf-du-chad
+    abv: 10.5
+    hops_as_written: Centennial, Northern Brewer
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: northern-brewer, name: Northern Brewer, as_written: Northern Brewer }
+  - slug: chekov
+    name: Chekov
+    url: https://georgetownbeer.com/products/chekov
+    abv: 5.2
+    hops_as_written: Pekko
+    hops:
+      - { hop: pekko, name: Pekko, as_written: Pekko }
+  - slug: choppers
+    name: Chopper's
+    url: https://georgetownbeer.com/products/choppers
+    abv: 5.8
+    hops_as_written: Cascade, Centennial
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+  - slug: citrus-galaxy
+    name: Citrus Galaxy
+    url: https://georgetownbeer.com/products/citrus-galaxy
+    abv: 6.5
+    hops_as_written: Columbus, Citra, Simcoe, Galaxy, Azacca
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+  - slug: cloud-cover
+    name: Cloud Cover
+    url: https://georgetownbeer.com/products/cloud-cover
+    abv: 6.9
+    hops_as_written: Citra, Mosaic, ADHA 1631
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: cocopo
+    name: CoCoPo
+    url: https://georgetownbeer.com/products/cocopo
+    abv: 5.3
+    hops_as_written: Apollo, HBC 438
+    hops:
+      - { hop: apollo, name: Apollo, as_written: Apollo }
+  - slug: coldwave
+    name: Coldwave
+    url: https://georgetownbeer.com/products/coldwave
+    abv: 6.9
+    hops_as_written: Columbus, Citra, Mosaic, Chinook
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: comet-lager
+    name: Comet Lager
+    url: https://georgetownbeer.com/products/comet-lager
+    abv: 4.2
+    hops_as_written: Comet
+    hops:
+      - { hop: comet, name: Comet, as_written: Comet }
+  - slug: cometzano
+    name: Cometzano
+    url: https://georgetownbeer.com/products/cometzano
+    abv: 6.2
+    hops_as_written: Columbus, Azacca, Comet, Galaxy
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: comet, name: Comet, as_written: Comet }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: computown
+    name: CompuTown
+    url: https://georgetownbeer.com/products/computown
+    abv: 7.5
+    hops_as_written: Citra, Strata, Cryo Columbus
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: columbus, name: Columbus, form: Cryo, as_written: Columbus }
+  - slug: connect
+    name: Connect
+    url: https://georgetownbeer.com/products/connect
+    abv: 6.7
+    hops_as_written: Idaho 7, Strata, Simcoe
+    hops:
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: cool-cat
+    name: Cool Cat
+    url: https://georgetownbeer.com/products/cool-cat
+    abv: 6.8
+    hops_as_written: Columbus, Simcoe, Mosaic Dynaboost™ Hop Extract, Citra, El Dorado
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+  - slug: cousin-eddie
+    name: Cousin Eddie
+    url: https://georgetownbeer.com/products/cousin-eddie
+    abv: 7.1
+    hops_as_written: Columbus, Simcoe, Mosaic, Amarillo®
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: craigalicious
+    name: Craigalicious
+    url: https://georgetownbeer.com/products/craigalicious
+    abv: 5.0
+    hops_as_written: Saaz, Hallertau
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: hallertau-mittelfrueh, name: Hallertau, as_written: Hallertau }
+  - slug: crossloaded
+    name: Crossloaded
+    url: https://georgetownbeer.com/products/crossloaded
+    abv: 6.5
+    hops_as_written: Cascade, Strata, El Dorado, Citra
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: crosstown-traffic
+    name: Crosstown Traffic
+    url: https://georgetownbeer.com/products/crosstown-traffic
+    abv: 6.6
+    hops_as_written: Citra, Chinook, Idaho 7
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+  - slug: dalton
+    name: Dalton
+    url: https://georgetownbeer.com/products/dalton
+    abv: 6.5
+    hops_as_written: Columbus, Citra, Krush, Chinook
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: dark-lark
+    name: Dark Lark
+    url: https://georgetownbeer.com/products/dark-lark
+    abv: 12.8
+    hops_as_written: Sterling, Summit, Centennial, Chinook
+    hops:
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+      - { hop: summit, name: Summit, as_written: Summit }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: december
+    name: December
+    url: https://georgetownbeer.com/products/december
+    abv: 6.9
+    hops_as_written: Citra, HBC 586, Strata
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: demar
+    name: Demar
+    url: https://georgetownbeer.com/products/demar
+    abv: 7.2
+    hops_as_written: Citra, HBC 586, Strata
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: denny-party
+    name: Denny Party
+    url: https://georgetownbeer.com/products/denny-party
+    abv: 6.0
+    hops_as_written: Apollo CO2 Extract, Amarillo®, Galaxy
+    hops:
+      - { hop: apollo, name: Apollo, as_written: Apollo }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: dh
+    name: Dh
+    url: https://georgetownbeer.com/products/dh
+    abv: 4.8
+    hops_as_written: Mosaic, Summit
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: summit, name: Summit, as_written: Summit }
+  - slug: dogtown
+    name: DogTown
+    url: https://georgetownbeer.com/products/dogtown
+    abv: 7.0
+    hops_as_written: Citra, Krush, ADHA 1631, Columbus, Cryo Sabro, Chinook
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: sabro, name: Sabro, form: Cryo, as_written: Sabro }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: dome-dinger
+    name: Dome Dinger
+    url: https://georgetownbeer.com/products/dome-dinger
+    abv: 5.5
+    hops_as_written: Hallertau Mittlefrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Hallertau, as_written: Hallertau }
+  - slug: donkey-deux
+    name: Donkey Deux
+    url: https://georgetownbeer.com/products/donkey-deux
+    abv: 8.4
+    hops_as_written: Northern Brewer, Tetnanger, Perle
+    hops:
+      - { hop: northern-brewer, name: Northern Brewer, as_written: Northern Brewer }
+      - { hop: perle, name: Perle, as_written: Perle }
+  - slug: doofers
+    name: Doofer's
+    url: https://georgetownbeer.com/products/doofers
+    abv: 7.1
+    hops_as_written: Citra, Simcoe, Strata, Cryo Columbus
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: columbus, name: Columbus, form: Cryo, as_written: Columbus }
+  - slug: draft-only
+    name: Draft Only
+    url: https://georgetownbeer.com/products/draft-only
+    abv: 7.2
+    hops_as_written: Columbus, Cascade, Centennial, Comet, Chinook
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: comet, name: Comet, as_written: Comet }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: ecosphere
+    name: Ecosphere
+    url: https://georgetownbeer.com/products/ecosphere
+    abv: 5.6
+    hops_as_written: Roy Farms Chinook, Amarillo, and Centennial
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+  - slug: ecotone
+    name: Ecotone
+    url: https://georgetownbeer.com/products/ecotone
+    abv: 6.5
+    hops_as_written: Roy Farms Chinook, Roy Farms Strata
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: eddie
+    name: Eddie
+    url: https://georgetownbeer.com/products/eddie
+    abv: 6.9
+    hops_as_written: Columbus, Simcoe, Mosaic, Amarillo®
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: gusto-crema
+    name: Gusto Crema
+    url: https://georgetownbeer.com/products/gusto-crema
+    abv: 4.6
+    hops_as_written: Sterling
+    hops:
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: johnny-utah
+    name: Johnny Utah
+    url: https://georgetownbeer.com/products/johnny-utah
+    abv: 5.6
+    hops_as_written: Citra, Mosaic
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: juniorzafa
+    name: Juniorzafa
+    url: https://georgetownbeer.com/products/juniorzafa
+    abv: 5.4
+    hops_as_written: Citra, Mosaic, Chinook
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: lucille
+    name: Lucille
+    url: https://georgetownbeer.com/products/lucille
+    abv: 7.0
+    hops_as_written: Columbus, Simcoe, Chinook, Comet, Krush
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: comet, name: Comet, as_written: Comet }
+      - { hop: krush, name: Krush, as_written: Krush }
+  - slug: macro-dose
+    name: Macro Dose
+    url: https://georgetownbeer.com/products/macro-dose
+    abv: 3.2
+    hops_as_written: Cryo Citra, Cryo Mosaic, Dyanboost Mosaic, Krush, Hyperboost Citra, Simcoe
+    hops:
+      - { hop: citra, name: Citra, form: Cryo, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: maggies
+    name: Maggie's
+    url: https://georgetownbeer.com/products/maggies
+    abv: 4.2
+    hops_as_written: Cascade
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: makeda
+    name: Makeda
+    url: https://georgetownbeer.com/products/makeda
+    abv: 6.5
+    hops_as_written: Cascade, Saphir
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+  - slug: mannys
+    name: Manny's
+    url: https://georgetownbeer.com/products/mannys
+    abv: 5.4
+    hops_as_written: Columbus, Cascade
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: rogers
+    name: Roger's
+    url: https://georgetownbeer.com/products/rogers
+    abv: 4.9
+    hops_as_written: Sterling
+    hops:
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: super-lucy
+    name: Super Lucy
+    url: https://georgetownbeer.com/products/super-lucy
+    abv: 8.1
+    hops_as_written: Simcoe, Mosaic, Citra, Columbus, Comet
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: comet, name: Comet, as_written: Comet }
+  - slug: tavern-beer
+    name: Tavern Beer
+    url: https://georgetownbeer.com/products/tavern-beer
+    abv: 4.2
+    hops_as_written: Simcoe
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }

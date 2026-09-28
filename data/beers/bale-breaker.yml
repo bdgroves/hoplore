@@ -1,0 +1,143 @@
+brewery:
+  slug: bale-breaker
+  name: Bale Breaker Brewing
+  city: Yakima
+  state: WA
+  url: https://balebreaker.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-28'
+beers:
+  - slug: pilsner
+    name: Bale Breaker Pilsner
+    url: https://balebreaker.com/beer/pilsner/
+    abv: 4.8
+    hops_as_written: Simcoe®, HBC 1134, Palisade®
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: palisade, name: Palisade, as_written: Palisade }
+  - slug: bottomcutter-iipa
+    name: Bottomcutter IIPA
+    url: https://balebreaker.com/beer/bottomcutter-iipa/
+    abv: 8.2
+    hops_as_written: Citra®, Simcoe®, Ekuanot®, Mosaic®, Columbus
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: citra-slicker-wet-hop-ipa
+    name: Citra Slicker Wet Hop IPA
+    url: https://balebreaker.com/beer/citra-slicker-wet-hop-ipa/
+    abv: 6.2
+    hops_as_written: Mosaic®, Citra®, Loral™, Citra® wet hops
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, fresh: true, as_written: Citra }
+      - { hop: loral, name: Loral, as_written: Loral }
+  - slug: daybreak-pale-ale
+    name: Daybreak Pale Ale
+    url: https://balebreaker.com/beer/daybreak-pale-ale/
+    abv: 5.5
+    hops_as_written: Simcoe®, Mosaic®
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: dormancy
+    name: Dormancy Breakfast Stout
+    url: https://balebreaker.com/beer/dormancy/
+    abv: 6.8
+    hops_as_written: Simcoe® and Ahtanium™
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: duskbound-hazy-ipa
+    name: Duskbound Hazy IPA
+    url: https://balebreaker.com/beer/duskbound-hazy-ipa/
+    abv: 6.3
+    hops_as_written: Citra®, Dolcita™, Mosaic®
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: dolcita, name: Dolcita, as_written: Dolcita }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: field-41-yakima-pale-ale
+    name: Field 41 Yakima Pale Ale
+    url: https://balebreaker.com/beer/field-41-yakima-pale-ale/
+    abv: 4.2
+    hops_as_written: Simcoe®, Dolcita™, Mosaic®, Loral®, Cascade
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: dolcita, name: Dolcita, as_written: Dolcita }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: loral, name: Loral, as_written: Loral }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: five-star-dive-bar-light-beer
+    name: Five Star Dive Bar Light Beer
+    url: https://balebreaker.com/beer/five-star-dive-bar-light-beer/
+    abv: 4.1
+    hops_as_written: HBC 1134, Palisade®, American Noble Blend
+    hops:
+      - { hop: palisade, name: Palisade, as_written: Palisade }
+  - slug: frenz-collaboration-series
+    name: Frenz Collaboration Series
+    url: https://balebreaker.com/beer/frenz-collaboration-series/
+    abv: 6.5
+    hops_as_written: KRUSH™, MOSAIC®, SIMCOE®
+    hops:
+      - { hop: krush, name: Krush, as_written: KRUSH }
+      - { hop: mosaic, name: Mosaic, as_written: MOSAIC }
+      - { hop: simcoe, name: Simcoe, as_written: SIMCOE }
+  - slug: fresh-hop-topcutter-ipa
+    name: Fresh Hop Topcutter IPA
+    url: https://balebreaker.com/beer/fresh-hop-topcutter-ipa/
+    abv: 6.8
+    hops_as_written: Fresh Simcoe®, Citra®, Mosaic®, Warrior®
+    hops:
+      - { hop: simcoe, name: Simcoe, fresh: true, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: warrior, name: Warrior, as_written: Warrior }
+  - slug: green-rush-fresh-hop-ipa
+    name: Green Rush Fresh Hop IPA
+    url: https://balebreaker.com/beer/green-rush-fresh-hop-ipa/
+    abv: 6.9
+    hops_as_written: Fresh Simcoe®, Citra® Cryo, Krush (HBC 586)
+    hops:
+      - { hop: simcoe, name: Simcoe, fresh: true, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: Krush, as_written: Krush }
+  - slug: hazy-ipa-rotator-series
+    name: Hazy IPA Rotator Series
+    url: https://balebreaker.com/beer/hazy-ipa-rotator-series/
+    abv: 6.5
+    hops_as_written: Citra®, Krush™, and Dolcita™
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: dolcita, name: Dolcita, as_written: Dolcita }
+  - slug: mango-tropical-ipa
+    name: Mango Tropical IPA
+    url: https://balebreaker.com/beer/mango-tropical-ipa/
+    abv: 5.9
+    hops_as_written: Dolcita™, Citra®
+    hops:
+      - { hop: dolcita, name: Dolcita, as_written: Dolcita }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: skyward-ipa
+    name: Skyward IPA
+    url: https://balebreaker.com/beer/skyward-ipa/
+    abv: 6.5
+    hops_as_written: Citra®, Mosaic®, Krush™, Columbus
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: topcutter-ipa
+    name: Topcutter IPA
+    url: https://balebreaker.com/beer/topcutter-ipa/
+    abv: 6.8
+    hops_as_written: Simcoe®, Citra®, Mosaic®
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
