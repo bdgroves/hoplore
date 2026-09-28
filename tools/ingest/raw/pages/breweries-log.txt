@@ -14,9 +14,9 @@ reubens: 441 beer page(s)
 fremont: 0 beer page(s)
 aslan: 101 beer page(s)
 georgetown: 114 beer page(s)
-stoup: 0 beer page(s)
+stoup: 505 beer page(s)
 bale-breaker: 16 beer page(s)
-structures: 0 beer page(s)
+structures: 17 beer page(s)
 block-15: 0 beer page(s)
 
 added 8 packages, and audited 9 packages in 2s
@@ -25,28 +25,37 @@ added 8 packages, and audited 9 packages in 2s
   run `npm fund` for details
 
 found 0 vulnerabilities
-listing https://www.stoupbrewing.com/beers/ipa-256.html +0
-listing https://www.stoupbrewing.com/beers/hazy-492.html +0
-listing https://www.stoupbrewing.com/beers/northwest-270.html +0
-listing https://www.stoupbrewing.com/beers/pale-260.html +0
-listing https://www.stoupbrewing.com/beers/pilsner-263.html +0
-listing https://www.stoupbrewing.com/beers/lager-268.html +0
-listing https://www.stoupbrewing.com/beers/german-267.html +0
-listing https://www.stoupbrewing.com/beers/fresh-hop-1222.html +0
-listing https://www.stoupbrewing.com/beers/experimental-2065.html +0
-listing https://www.stoupbrewing.com/beers/collaboration.html +0
-listing https://www.stoupbrewing.com/beers/wheat-265.html +0
-listing https://www.stoupbrewing.com/beers/english-420.html +0
-listing https://www.stoupbrewing.com/beers/hops-driven.html +0
-listing https://www.block15.com/beer +11
-rendered https://block15.com/sticky-hands-imperial-ipa
-rendered https://block15.com/deep-seek-west-coast-ipa
-rendered https://block15.com/green-truck-american-light-lager
-rendered https://block15.com/year-round-beers
-rendered https://block15.com/seasonal-beers
-rendered https://block15.com/specialty-beers
-rendered https://block15.com/exploratory-beers
-rendered https://block15.com/collaboration-beers
-rendered https://block15.com/cellar-aged-beers
-rendered https://block15.com/lagered-by-the-sun
-24 page(s) rendered
+listing https://www.block15.com/beer +25
+listing https://block15.com/year-round-beers +5
+listing https://block15.com/seasonal-beers +2
+listing https://block15.com/specialty-beers +1
+listing https://block15.com/exploratory-beers +0
+listing https://block15.com/collaboration-beers +0
+listing https://block15.com/cellar-aged-beers +2
+listing https://block15.com/lagered-by-the-sun +0
+rendered https://block15.com/downtown-pub
+rendered https://block15.com/southtown-tap-room
+rendered https://block15.com/large-party-reservations
+rendered https://block15.com/gift-cards
+rendered https://block15.com/mug-club-store
+rendered https://block15.com/keg-sales
+rendered https://block15.com/our-story
+rendered https://block15.com/beverage-programs
+rendered https://block15.com/local-and-sustainable
+rendered https://block15.com/charitable-programs
+rendered https://block15.com/sponsorships
+rendered https://block15.com/mug-club
+rendered https://block15.com/store
+rendered https://block15.com/newsletter
+rendered https://block15.com/media-kit
+rendered https://block15.com/fluffhead-hazy-ipa
+rendered https://block15.com/gloria-pilsner
+rendered https://block15.com/joy-hazy-pale-ale
+rendered https://block15.com/nebula-oat-stout
+rendered https://block15.com/ridgeback-red-ale
+rendered https://block15.com/fresh-flow-hazy-ipa
+rendered https://block15.com/fresh-pow-hazy-ipa
+rendered https://block15.com/selection-series-ipa
+rendered https://block15.com/bourbon-month
+rendered https://block15.com/late-fall-bottle-release
+33 page(s) rendered
