@@ -49,6 +49,8 @@ def brewery_urls(brewery: dict) -> list[str]:
         if url.startswith("/") and brewery.get("base"):
             url = brewery["base"] + url
         url = url.replace("http://", "https://", 1)
+        # Shopify links a product under each collection too; one URL per beer.
+        url = re.sub(r"/collections/[^/]+(?=/products/)", "", url)
         if pattern.match(url) and url not in found:
             found.append(url)
 
@@ -59,11 +61,21 @@ def brewery_urls(brewery: dict) -> list[str]:
             continue
         for loc in re.findall(r"<loc>\s*([^<]+?)\s*</loc>", xml):
             take(loc)
+    if brewery.get("render_listing"):
+        # The listing itself is drawn by JavaScript: render.mjs renders it,
+        # saves it, and follows the links that match.
+        return []
     for page in brewery.get("listing", []):
         try:
-            html = requests.get(page, headers={"User-Agent": UA}, timeout=60).text
+            r = requests.get(page, headers={"User-Agent": UA}, timeout=60)
+            html = r.text
         except requests.RequestException:
             continue
+        if brewery.get("keep_listing") and r.ok:
+            # Some breweries describe every beer on the listing page itself.
+            out = target(page, "text/html")
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_bytes(r.content)
         for href in re.findall(r'href="([^"#?]+)"', html):
             take(href)
     return found[: brewery.get("limit", 1000)]
@@ -77,8 +89,11 @@ def crawl_breweries() -> int:
 
     breweries = YAML(typ="safe").load((HERE / "breweries.yml").read_text(encoding="utf-8"))
     render: list[str] = []
+    listings: list[str] = []
     log: list[str] = []
     for brewery in breweries:
+        if brewery.get("render_listing"):
+            listings.extend(f"{brewery['match']}\t{page}" for page in brewery.get("listing", []))
         urls = brewery_urls(brewery)
         log.append(f"{brewery['slug']}: {len(urls)} beer page(s)")
         if brewery.get("render"):
@@ -98,6 +113,7 @@ def crawl_breweries() -> int:
             out.write_bytes(r.content)
             time.sleep(1.0)
     (OUT / "render_urls.txt").write_text("\n".join(render) + "\n", encoding="utf-8")
+    (OUT / "render_listings.txt").write_text("\n".join(listings) + "\n", encoding="utf-8")
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "breweries-run.txt").write_text("\n".join(log) + "\n", encoding="utf-8")
     print("\n".join(log))

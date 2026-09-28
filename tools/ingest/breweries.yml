@@ -126,3 +126,68 @@
   url: https://www.aslanbrewing.com/
   sitemaps: ['https://www.aslanbrewing.com/sitemap.xml']
   match: '^https://www\.aslanbrewing\.com/beers/(?!category|tag)[a-z0-9-]+$'
+
+- slug: georgetown
+  name: Georgetown Brewing
+  city: Seattle
+  state: WA
+  url: https://georgetownbeer.com/
+  # A Shopify shop: every beer, current and archived, is a product page.
+  listing:
+    - 'https://georgetownbeer.com/pages/available-beer'
+    - 'https://georgetownbeer.com/collections/beer-archive'
+    - 'https://georgetownbeer.com/collections/beer-archive?page=2'
+    - 'https://georgetownbeer.com/collections/beer-archive?page=3'
+    - 'https://georgetownbeer.com/collections/beer-archive?page=4'
+  match: '^(https://georgetownbeer\.com)?(/collections/[a-z0-9-]+)?/products/[a-z0-9-]+$'
+  base: https://georgetownbeer.com
+
+- slug: stoup
+  name: Stoup Brewing
+  city: Seattle
+  state: WA
+  url: https://www.stoupbrewing.com/
+  # The style pages are drawn by JavaScript; render.mjs renders them and
+  # follows any per-beer links.
+  render_listing: true
+  listing:
+    - 'https://www.stoupbrewing.com/beers/ipa-256.html'
+    - 'https://www.stoupbrewing.com/beers/hazy-492.html'
+    - 'https://www.stoupbrewing.com/beers/northwest-270.html'
+    - 'https://www.stoupbrewing.com/beers/pale-260.html'
+    - 'https://www.stoupbrewing.com/beers/pilsner-263.html'
+    - 'https://www.stoupbrewing.com/beers/lager-268.html'
+    - 'https://www.stoupbrewing.com/beers/german-267.html'
+    - 'https://www.stoupbrewing.com/beers/fresh-hop-1222.html'
+    - 'https://www.stoupbrewing.com/beers/experimental-2065.html'
+    - 'https://www.stoupbrewing.com/beers/collaboration.html'
+    - 'https://www.stoupbrewing.com/beers/wheat-265.html'
+    - 'https://www.stoupbrewing.com/beers/english-420.html'
+    - 'https://www.stoupbrewing.com/beers/hops-driven.html'
+  match: '^https://www\.stoupbrewing\.com/beers?/(?!.*-on-tap\.html)(?!(?:yeast|hops|malt)-driven)[^?#]+/[^?#]+$'
+
+- slug: bale-breaker
+  name: Bale Breaker Brewing
+  city: Yakima
+  state: WA
+  url: https://balebreaker.com/
+  listing: ['https://balebreaker.com/beers/']
+  match: '^https://balebreaker\.com/beer/[a-z0-9-]+/$'
+
+- slug: structures
+  name: Structures Brewing
+  city: Bellingham
+  state: WA
+  url: https://www.structuresbrewing.com/
+  listing: ['https://www.structuresbrewing.com/ourbeer']
+  match: '^https://www\.structuresbrewing\.com/(?!(?:old-town|state-street|ourbeer|events-1|shop|about|cart|locations|find-our-beer|contact)$)[a-z0-9-]+$'
+
+- slug: block-15
+  name: Block 15 Brewing
+  city: Corvallis
+  state: OR
+  url: https://www.block15.com/
+  # Beers are described on the listing pages themselves.
+  render_listing: true
+  listing: ['https://www.block15.com/beer']
+  match: '^https://(www\.)?block15\.com/(?!order|shop|cart|account|contact|visit|events|jobs|about)[a-z0-9-]*(beer|series|release|fresh|seasonal|year-round|ipa|lager)[a-z0-9-]*/?$'

@@ -40,7 +40,7 @@ jobs:
             # Logs go into the repo: a run whose log you can't read is a run you can't fix.
             LOG=tools/ingest/raw/pages/breweries-log.txt
             pixi run -e data python tools/ingest/snapshot.py --breweries > "$LOG" 2>&1 || echo "crawler exited $?" >> "$LOG"
-            if [ -s tools/ingest/raw/pages/render_urls.txt ]; then
+            if [ -n "$(tr -d '[:space:]' < tools/ingest/raw/pages/render_urls.txt)$(tr -d '[:space:]' < tools/ingest/raw/pages/render_listings.txt 2>/dev/null)" ]; then
               { npm i --no-save playwright-core@1.56.0 && node tools/ingest/render.mjs; } >> "$LOG" 2>&1 || echo "render exited $?" >> "$LOG"
             fi
             tail -60 "$LOG" >> "$GITHUB_STEP_SUMMARY"

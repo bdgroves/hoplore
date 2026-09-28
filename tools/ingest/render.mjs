@@ -12,6 +12,12 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const OUT = join(HERE, 'raw', 'pages');
 const list = join(OUT, 'render_urls.txt');
 const urls = existsSync(list) ? readFileSync(list, 'utf8').split('\n').map((s) => s.trim()).filter(Boolean) : [];
+// "match<TAB>listing url" lines: listing pages drawn by JavaScript. Each is
+// rendered and saved, and its links that match are rendered too.
+const listingsFile = join(OUT, 'render_listings.txt');
+const listings = existsSync(listingsFile)
+  ? readFileSync(listingsFile, 'utf8').split('\n').filter((l) => l.includes('\t')).map((l) => l.split('\t'))
+  : [];
 
 function target(url) {
   const u = new URL(url);
@@ -23,6 +29,23 @@ function target(url) {
 const browser = await chromium.launch({ executablePath: process.env.CHROME || '/usr/bin/google-chrome' });
 const page = await browser.newPage({ userAgent: 'Mozilla/5.0 (compatible; HopLove/0.1; +https://github.com/bdgroves/hoplore)' });
 let saved = 0;
+for (const [match, url] of listings) {
+  try {
+    await page.goto(url, { waitUntil: 'networkidle', timeout: 45000 });
+    await page.waitForTimeout(2500);
+    const out = target(url);
+    mkdirSync(dirname(out), { recursive: true });
+    writeFileSync(out, await page.content());
+    saved++;
+    const re = new RegExp(match);
+    const hrefs = await page.$$eval('a[href]', (as) => as.map((a) => a.href.split('#')[0]));
+    let added = 0;
+    for (const h of hrefs) if (re.test(h) && !urls.includes(h) && h !== url) { urls.push(h); added++; }
+    console.log('listing', url, `+${added}`);
+  } catch (e) {
+    console.log('FAIL listing', url, e.message.split('\n')[0]);
+  }
+}
 for (const url of urls) {
   const out = target(url);
   if (existsSync(out) && readFileSync(out, 'utf8').length > 5000) continue;
