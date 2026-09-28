@@ -146,3 +146,8 @@ https://www.crosbyhops.com/hops/varieties/willamette
 https://www.crosbyhops.com/hops/varieties/zappa
 # Fremont Brewing's taplist (one page, re-read every run)
 https://www.fremontbrewing.com/taplist
+# New-to-HopLove varieties Pacific Northwest brewers are already using
+https://yakimavalleyhops.com/products/hbc-630-hops
+https://yakimavalleyhops.com/products/zumo-hops
+https://yakimavalleyhops.com/products/hbc-1134-hops
+https://hopalliance.com/products/peacharine-hops-2025

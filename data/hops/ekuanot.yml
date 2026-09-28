@@ -4,6 +4,7 @@ purpose: dual
 country: US
 international_code: EKU
 kind: cultivar
+previously_named: [Equinox, HBC 366]
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).
 # purpose is an unconfirmed default -- see meta.notes. No analytics recorded

@@ -4,6 +4,7 @@ purpose: dual
 country: JP
 international_code: SOR
 kind: cultivar
+aliases: [Sorachi]
 
 # Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).
 # purpose is an unconfirmed default -- see meta.notes. No analytics recorded
