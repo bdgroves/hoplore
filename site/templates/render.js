@@ -125,7 +125,8 @@ export function renderIndex({ hops, taxonomy, meta }) {
     beer — or snap a picture of one — and see what each hop smells like, how hard
     it bitters and where it was grown. Every number is a citation, not a claim.</p>
     <p class="cta"><a class="chip scan-go" href="beers/">What's in the can →</a>
-    <a class="chip" href="scan/">Scan a beer 📷</a></p>
+    <a class="chip" href="scan/">Scan a beer 📷</a>
+    <a class="chip" href="compare/">Hop vs hop</a></p>
     <div class="stats">
       <div><b>${hops.length}</b> cultivars</div>
       <div><b>${meta.sourceCount}</b> sources</div>
@@ -137,6 +138,7 @@ export function renderIndex({ hops, taxonomy, meta }) {
       <a href="grown/">Where the hops grow</a>
       <a href="beers/">What's in the can</a>
       <a href="scan/">Scan a beer 📷</a>
+      <a href="compare/">Hop vs hop</a>
       <a href="api/v1/hops.json">Download the data</a>
       <a href="api/v1/schema/hop.schema.json">Schema</a>
       <a href="https://github.com/bdgroves/hoplore">GitHub</a>
@@ -254,7 +256,7 @@ function quickTake(hop, similar, taxonomy, base) {
     bite && ['Bitterness', `${bite} <span class="fine">(${fmt(hop.analytics.alpha_acid.low)}–${fmt(hop.analytics.alpha_acid.high)}% alpha)</span>`],
     beers.length && ['In the glass', `<a href="#in-the-glass">${beers.length.toLocaleString('en-US')} beer${beers.length === 1 ? '' : 's'} here</a>${fresh ? ` · ${fresh} fresh hop` : ''}${had ? ` · Brooks has had ${had}` : ''}`],
     hop.paired && ['Usually paired with', hop.paired.with.slice(0, 3).map((p) => `<a href="${base}hops/${p.slug}/">${esc(nameFor(p.slug))}</a>`).join(', ')],
-    swap && ['Swap it for', `<a href="${base}hops/${swap.slug}/">${esc(swap.name)}</a>`],
+    swap && ['Swap it for', `<a href="${base}hops/${swap.slug}/">${esc(swap.name)}</a> · <a href="${base}compare/?a=${hop.slug}&b=${swap.slug}">compare them →</a>`],
   ].filter(Boolean);
   if (!cells.length) return '';
   return `<dl class="quick-take">

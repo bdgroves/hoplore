@@ -68,6 +68,58 @@ export function pairingsByHop(breweries) {
   return out;
 }
 
+/** Adds beer.like = up to five other beers with the closest hop bill
+ *  (Jaccard over the hops on file, at least two shared, or the same single
+ *  hop), other breweries first on a tie. */
+export function attachLookalikes(breweries) {
+  const all = [];
+  for (const b of breweries) for (const beer of b.beers) {
+    const set = new Set(hopBill(beer).map((e) => e.slug).filter(Boolean));
+    if (set.size) all.push({ b, beer, set });
+  }
+  const byHop = new Map();
+  all.forEach((x, i) => { for (const h of x.set) (byHop.get(h) ?? byHop.set(h, []).get(h)).push(i); });
+  all.forEach((x, i) => {
+    const shared = new Map();
+    for (const h of x.set) for (const j of byHop.get(h)) if (j !== i) shared.set(j, (shared.get(j) ?? 0) + 1);
+    const scored = [];
+    for (const [j, n] of shared) {
+      const y = all[j];
+      if (y.beer.name === x.beer.name && y.b === x.b) continue;
+      if (n < 2 && !(x.set.size === 1 && y.set.size === 1)) continue;
+      scored.push({ j, n, score: n / (x.set.size + y.set.size - n) });
+    }
+    scored.sort((p, q) => q.score - p.score || q.n - p.n || Number(all[p.j].b !== x.b) < Number(all[q.j].b !== x.b) || 0);
+    // Keep the list from being one brewery's back catalogue: at most two per brewery.
+    const per = new Map();
+    const pick = [];
+    for (const c of scored) {
+      const y = all[c.j];
+      const k = y.b.brewery.slug;
+      if ((per.get(k) ?? 0) >= 2) continue;
+      per.set(k, (per.get(k) ?? 0) + 1);
+      pick.push({ brewery: y.b.brewery, beer: { slug: y.beer.slug, name: y.beer.name, abv: y.beer.abv }, shared: [...x.set].filter((h) => y.set.has(h)), score: c.score });
+      if (pick.length === 5) break;
+    }
+    if (pick.length) x.beer.like = pick;
+  });
+}
+
+function likeBlock(beer, bySlug, base) {
+  if (!beer.like?.length) return '';
+  return `<section class="block like">
+    <h2>Beers like this one <span class="fine">· the closest hop bills on file</span></h2>
+    <ul class="beerlist compact">
+      ${beer.like
+        .map(
+          (x) => `<li><a href="${base}beers/${x.brewery.slug}/${x.beer.slug}/">${esc(x.beer.name)}</a>
+        <span class="fine">${esc(x.brewery.name)} · shares ${x.shared.map((h) => esc(bySlug[h]?.name ?? h)).join(', ')}</span></li>`
+        )
+        .join('\n      ')}
+    </ul>
+  </section>`;
+}
+
 // --------------------------------------------------------------- pieces
 
 /** Alpha acid in words: what a beer drinker means by "how bitter". */
@@ -218,6 +270,7 @@ export function renderBeer({ brewery, beer, bySlug, taxonomy, meta }) {
     ${beer.scanned ? `Read off a ${esc(beer.scanned_from ?? 'photo')} of the ${beer.scanned_from === 'text' ? 'brewery\'s text' : 'can'} with <a href="${base}scan/">Scan a beer</a>, ${esc(beer.scanned)}.` : `From <a href="${esc(beer.url)}">the brewery's page for this beer</a>.`} Forms like Cryo and CO2 extract are
     the same variety processed differently.</p>
   </section>
+  ${likeBlock(beer, bySlug, base)}
   ${GLOSSARY}
   ${mineBlock(brewery, beer, base)}
 </main>
@@ -303,6 +356,7 @@ export function renderBeers({ breweries, bySlug, meta, recent = [] }) {
       <a href="${base}">All hops</a>
       <a href="${base}grown/">Where the hops grow</a>
       <a href="${base}scan/">Scan a beer 📷</a>
+      <a href="${base}compare/">Hop vs hop</a>
     </nav>
     <h1 class="page-title">What's in the can</h1>
     <p class="standfirst">Pick a beer, see its hops — what each one is, what it

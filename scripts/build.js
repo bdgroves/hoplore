@@ -15,8 +15,9 @@ import { buildSimilarity } from './lib/similarity.js';
 import { renderIndex, renderHop } from '../site/templates/render.js';
 import { renderLandscape } from '../site/templates/landscape.js';
 import { renderGrown, acreageFor } from '../site/templates/acreage.js';
-import { renderBeer, renderBeers, beersByHop, pairingsByHop } from '../site/templates/beers.js';
+import { renderBeer, renderBeers, beersByHop, pairingsByHop, attachLookalikes } from '../site/templates/beers.js';
 import { renderScan } from '../site/templates/scan.js';
+import { renderCompare } from '../site/templates/compare.js';
 import { attachMine } from '../site/templates/mine.js';
 
 const API_VERSION = 'v1';
@@ -25,6 +26,7 @@ const { sources, taxonomy, hops: raw, acreage, breweries, checkins, ratings } = 
 const recent = attachMine(breweries, checkins, ratings);
 const inBeers = beersByHop(breweries);
 const paired = pairingsByHop(breweries);
+attachLookalikes(breweries);
 
 rmSync(DIST, { recursive: true, force: true });
 
@@ -84,15 +86,17 @@ write(
   })
 );
 
-write(api('hops.json'), envelope({ hops }));
+// The public API carries the beers but not Brooks's check-ins on them.
+const publicHop = (hop) => (hop.beers ? { ...hop, beers: hop.beers.map(({ mine, ...x }) => x) } : hop);
+write(api('hops.json'), envelope({ hops: hops.map(publicHop) }));
 write(api('sources.json'), envelope({ sources }));
 write(api('taxonomy.json'), envelope({ taxonomy }));
 write(api('similar.json'), envelope({ similar }));
 if (acreage) write(api('acreage.json'), envelope({ acreage }));
-if (breweries.length) write(api('beers.json'), envelope({ breweries: breweries.map(({ file, ...b }) => ({ ...b, beers: b.beers.map(({ mine, ...beer }) => beer) })) }));
+if (breweries.length) write(api('beers.json'), envelope({ breweries: breweries.map(({ file, ...b }) => ({ ...b, beers: b.beers.map(({ mine, like, ...beer }) => beer) })) }));
 
 for (const hop of hops) {
-  write(api(`hops/${hop.slug}.json`), envelope({ hop, similar: similar[hop.slug] ?? [] }));
+  write(api(`hops/${hop.slug}.json`), envelope({ hop: publicHop(hop), similar: similar[hop.slug] ?? [] }));
   write(api(`similar/${hop.slug}.json`), envelope({ slug: hop.slug, similar: similar[hop.slug] ?? [] }));
 }
 
@@ -141,6 +145,7 @@ write(out('index.html'), renderIndex({ hops, taxonomy, meta }));
 write(out('landscape/index.html'), renderLandscape({ hops, meta }));
 if (acreage) write(out('grown/index.html'), renderGrown({ acreage, hops, meta }));
 write(out('scan/index.html'), renderScan({ meta }));
+write(out('compare/index.html'), renderCompare({ meta }));
 const bySlug = Object.fromEntries(hops.map((h) => [h.slug, h]));
 const beerPaths = [];
 if (breweries.length) {
@@ -165,7 +170,7 @@ write(out('robots.txt'), `User-agent: *\nAllow: /\nSitemap: /sitemap.xml\n`);
 write(
   out('sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    ['', 'landscape/', ...(acreage ? ['grown/'] : []), 'scan/', ...(breweries.length ? ['beers/', ...beerPaths] : []), ...hops.map((h) => `hops/${h.slug}/`)]
+    ['', 'landscape/', ...(acreage ? ['grown/'] : []), 'scan/', 'compare/', ...(breweries.length ? ['beers/', ...beerPaths] : []), ...hops.map((h) => `hops/${h.slug}/`)]
       .map((p) => `  <url><loc>https://brooksgroves.com/hoplore/${p}</loc></url>`)
       .join('\n') +
     `\n</urlset>\n`
