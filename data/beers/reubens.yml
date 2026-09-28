@@ -487,7 +487,7 @@ beers:
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
-      - { hop: null, name: HBC 843, as_written: HBC 843 }
+      - { hop: hbc-843, name: HBC 843, as_written: HBC 843 }
   - slug: downtown-debut
     name: Downtown Debut
     url: https://www.reubensbrews.com/beer/downtown-debut/
@@ -1004,7 +1004,7 @@ beers:
     hops:
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: chinook, name: Chinook, as_written: Chinook }
-      - { hop: null, name: HBC 522, as_written: HBC 522 }
+      - { hop: hbc-522, name: HBC 522, as_written: HBC 522 }
       - { hop: citra, name: Citra, as_written: Citra }
   - slug: holiday-gose
     name: Holiday Gose
@@ -1380,7 +1380,7 @@ beers:
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
-      - { hop: null, name: HBC 843, as_written: HBC 843 }
+      - { hop: hbc-843, name: HBC 843, as_written: HBC 843 }
   - slug: misguided-youth
     name: Misguided Youth
     url: https://www.reubensbrews.com/beer/misguided-youth/
@@ -1905,7 +1905,7 @@ beers:
     abv: 6.0
     hops_as_written: Grüngeist™
     hops:
-      - { hop: null, name: Grüngeist, as_written: Grüngeist™ }
+      - { hop: callista, name: Grüngeist, as_written: Grüngeist™ }
   - slug: reubens-krush-crush
     name: Reuben's Krush Crush™
     url: https://www.reubensbrews.com/beer/reubens-krush-crush/
@@ -2535,7 +2535,7 @@ beers:
     hops_as_written: Mosaic™, Grungeist, Chinook
     hops:
       - { hop: mosaic, name: Mosaic, as_written: Mosaic™ }
-      - { hop: null, name: Grungeist, as_written: Grungeist }
+      - { hop: callista, name: Grungeist, as_written: Grungeist }
       - { hop: chinook, name: Chinook, as_written: Chinook }
   - slug: youll-be-back
     name: You'll Be Back

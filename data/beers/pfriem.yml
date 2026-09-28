@@ -739,7 +739,7 @@ beers:
     hops:
       - { hop: chinook, name: Chinook, as_written: Chinook }
       - { hop: simcoe, name: Simcoe, form: HyperBoost, as_written: Simcoe Hyperboost }
-      - { hop: null, name: HBC-638, as_written: HBC-638 }
+      - { hop: hbc-638, name: HBC-638, as_written: HBC-638 }
       - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cyo }
       - { hop: dolcita, name: HBC-1019, as_written: HBC-1019 }
   - slug: ipa

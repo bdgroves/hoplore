@@ -1,0 +1,75 @@
+slug: hbc-638
+name: HBC 638
+purpose: dual
+country: US
+kind: experimental
+
+ownership:
+  holder: Hop Breeding Company
+  public_domain: false
+
+pedigree:
+  breeder: hbc
+  parents: { unknown: true }
+  refs: [john-i-haas]
+
+aroma:
+  summary: >
+    Centennial's bright citrus and flowers with a tropical punch on top: mango, pineapple, cherry, peach, strawberry, per John I. Haas. An experimental from the Hop Breeding Company.
+  tags: [mango, pineapple, stone-fruit, citrus, floral, strawberry]
+  refs: [john-i-haas, yvh]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-28'
+  notes: >
+    purpose defaulted to dual, unconfirmed -- neither source states a role. Two merchants agree on the figures, but both sell it, so it stays single-source until a breeder sheet turns up.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: john-i-haas, low: 12.0, high: 16.0 }
+      - { source: yvh, low: 12.0, high: 16.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: john-i-haas, low: 3.0, high: 6.0 }
+      - { source: yvh, low: 3.0, high: 6.0 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: john-i-haas, low: 28.5, high: 30.5 }
+      - { source: yvh, low: 28.0, high: 31.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: john-i-haas, low: 1.7, high: 3.0 }
+      - { source: yvh, low: 1.5, high: 3.0 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: john-i-haas, low: 33.0, high: 38.0 }
+      - { source: yvh, low: 33.0, high: 40.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: john-i-haas, low: 15.0, high: 20.0 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: john-i-haas, low: 11.0, high: 15.0 }
+      - { source: yvh, low: 10.0, high: 15.0 }
+  linalool:
+    unit: percent_of_total_oil
+    observations:
+      - { source: john-i-haas, low: 0.2, high: 0.5 }

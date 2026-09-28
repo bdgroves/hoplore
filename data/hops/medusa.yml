@@ -1,0 +1,35 @@
+slug: medusa
+name: Medusa
+purpose: aroma
+country: US
+kind: cultivar
+
+ownership:
+  mark: trademark
+  public_domain: false
+
+pedigree:
+  breeder: cls-farms
+  parents: { unknown: true, note: "A native neomexicanus hop (Colorado and New Mexico), a different species from European hops." }
+  refs: [yvh]
+
+aroma:
+  summary: >
+    Guava, melon, apricot and citrus, from a wild American hop species with a multi-headed cone, per Yakima Valley Hops. Grown only by CLS Farms, which has since stopped growing it; Zappa is its neomexicanus sibling.
+  tags: [guava, melon, apricot, citrus]
+  refs: [yvh]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-28'
+  notes: >
+    The source gives no figures, only "naturally low alpha acids" and aroma use. No longer grown, per Yakima Valley Hops, but it still turns up on brewery pages.

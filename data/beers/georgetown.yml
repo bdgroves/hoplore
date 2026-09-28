@@ -192,6 +192,7 @@ beers:
       - { hop: chinook, name: Chinook, as_written: Chinook }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: hbc-638, name: HBC 638, as_written: HBC 638 }
       - { hop: citra, name: Citra, as_written: Citra }
   - slug: arco-etrusco
     name: Arco Etrusco
@@ -599,6 +600,7 @@ beers:
     hops_as_written: Citra, Anchovy, Mosaic, Strata, Rakau, Cryo Columbus
     hops:
       - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: anchovy, name: Anchovy, as_written: Anchovy }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: strata, name: Strata, as_written: Strata }
       - { hop: rakau, name: Rakau, as_written: Rakau }

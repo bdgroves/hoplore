@@ -1,0 +1,73 @@
+slug: hbc-522
+name: HBC 522
+purpose: dual
+country: US
+kind: experimental
+
+ownership:
+  holder: Hop Breeding Company
+  public_domain: false
+
+pedigree:
+  breeder: hbc
+  parents: { seed: columbus, note: "A 2006 cross of Columbus with male 986-2." }
+  refs: [john-i-haas]
+
+aroma:
+  summary: >
+    Like Centennial and Cascade: floral, orange and grapefruit, and pine needles, per John I. Haas.
+  tags: [floral, orange, grapefruit, pine, citrus]
+  refs: [john-i-haas]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-28'
+  notes: >
+    purpose defaulted to dual, unconfirmed -- Haas recommends it for lagers through imperial IPA without naming a role.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: john-i-haas, low: 9.5, high: 12.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: john-i-haas, low: 4.5, high: 5.5 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: john-i-haas, low: 1.4, high: 2.3 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: john-i-haas, low: 36.9, high: 36.9 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: john-i-haas, low: 8.44, high: 8.44 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: john-i-haas, low: 13.2, high: 13.2 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: john-i-haas, low: 0.52, high: 0.52 }
+  linalool:
+    unit: percent_of_total_oil
+    observations:
+      - { source: john-i-haas, low: 0.64, high: 0.64 }
+  geraniol:
+    unit: percent_of_total_oil
+    observations:
+      - { source: john-i-haas, low: 0.05, high: 0.05 }

@@ -322,6 +322,7 @@ beers:
     abv: 6.4
     hops_as_written: ' Best Guess IPA IPA | 6.4% ABV | 50 IBU We’ve been playing around with HBC 522 going on 8? 9? years, so when Yakima Chief asked us to brew with it again as part of their FWD program, we didn’t bat an eye. Originally bred as a Centennial replacement, it’s now more of a Cascade replacement? Essentially a new “C” hop but with better agronomics and thus, better yields. In the past, we got notes of ...'
     hops:
+      - { hop: hbc-522, name: HBC 522, as_written: HBC 522 }
       - { hop: centennial, name: Centennial, as_written: Centennial }
       - { hop: cascade, name: Cascade, as_written: Cascade }
       - { hop: citra, name: Citra, as_written: Citra }
@@ -1380,7 +1381,9 @@ beers:
       - { hop: vista, name: Vista, as_written: Vista }
       - { hop: strata, name: Strata, as_written: Strata }
       - { hop: triumph, name: Triumph, as_written: Triumph }
+      - { hop: medusa, name: Medusa, as_written: Medusa }
       - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
+      - { hop: hbc-522, name: HBC 522, as_written: HBC 522 }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
   - slug: like-dinosaurs-ipa
@@ -1400,6 +1403,7 @@ beers:
     hops_as_written: ' Like Really Chill Extra Pale Ale | 5.3% ABV | 40 IBU What exactly IS an extra pale ale? Especially in this world of heavy-handed hop usage, that we admittedly contribute to? Well, at the heart of the style is a pale ale – a pleasant balance of hops in bitterness, flavor, & aroma. But then, it’s taken down a notch in the malt character and alcohol department. As for the hops – nuance and modera...'
     hops:
       - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: callista, name: Grüngeist, as_written: Grüngeist }
   - slug: like-whoa
     name: Like Whoa
     url: https://www.cloudburstbrew.com/beer/like-whoa/
@@ -2454,6 +2458,7 @@ beers:
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: luminosa, name: Luminosa, as_written: Luminosa }
       - { hop: bru-1, name: Bru-1, as_written: Bru-1 }
+      - { hop: callista, name: Grungeist, as_written: Grungeist }
   - slug: summer-sunset
     name: Summer Sunset
     url: https://www.cloudburstbrew.com/beer/summer-sunset/

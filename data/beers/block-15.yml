@@ -138,6 +138,7 @@ beers:
     hops_as_written: 'teiner thin-film Apollo extract. Banker’s Bills will be available at Block 15 locations starting July 24th, and around the PNW the following week. Coming Soon A special project made with Brittney, our Intern from the OSU Fermentation Science Program Past Collaborations Alumni Club: High Desert West Coast IPA • 6.10% Collab with: Barley Browns Beer Release Date: June 2026 Buzzworks West Coast IP...'
     hops:
       - { hop: apollo, name: Apollo, as_written: Apollo }
+      - { hop: anchovy, name: Anchovy, as_written: Anchovy }
       - { hop: nectaron, name: Nectaron, as_written: Nectaron }
       - { hop: sultana, name: Sultana, as_written: Sultana }
       - { hop: cascade, name: Cascade, as_written: Cascade }

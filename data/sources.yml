@@ -198,3 +198,12 @@ hop-alliance:
   retrieved: '2026-09-28'
   tier: merchant
   weight: 0.6
+
+patent-hbc-843:
+  publisher: Hop Breeding Company (US Patent and Trademark Office)
+  title: "Plant patent USPP34982: Hop plant named 'HBC 843'"
+  url: https://patents.google.com/patent/USPP34982
+  retrieved: '2026-09-28'
+  tier: breeder
+  weight: 1.0
+  note: The breeder's own filing; its table gives single averages, not ranges.

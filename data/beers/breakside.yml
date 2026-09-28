@@ -50,7 +50,7 @@ beers:
       - { hop: crystal, name: Crystal, as_written: Crystal }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: zumo, name: Zumo, as_written: Zumo }
-      - { hop: null, name: HBC 638, as_written: HBC 638 }
+      - { hop: hbc-638, name: HBC 638, as_written: HBC 638 }
   - slug: joyrx
     name: Beer that Benefits
     url: https://breakside.com/our/beer/joyrx/

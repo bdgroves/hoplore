@@ -1,0 +1,48 @@
+slug: anchovy
+name: Anchovy
+aliases: [24B-05]
+purpose: aroma
+country: US
+kind: experimental
+
+ownership:
+  public_domain: false
+
+pedigree:
+  breeder: segal-ranch
+  parents: { unknown: true }
+  refs: [yvh]
+
+aroma:
+  summary: >
+    Nothing fishy about it: watermelon hard candy, raspberry and pine, per Yakima Valley Hops. An experimental from Segal Ranch, named by Seattle's Fast Fashion Brewing.
+  tags: [melon, candy, berry, pine]
+  refs: [yvh]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-28'
+  notes: >
+    purpose defaulted to aroma, unconfirmed -- only a merchant describes it so far. Experimental selection 24B-05.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: yvh, low: 12.6, high: 12.6 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: yvh, low: 3.6, high: 3.6 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: yvh, low: 1.61, high: 1.61 }

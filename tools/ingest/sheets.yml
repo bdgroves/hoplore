@@ -449,3 +449,62 @@
     alpha_acid: 10.4
     beta_acid: 5.4
     total_oil: 1.7
+- slug: hbc-638
+  source: john-i-haas
+  file: johnihaas.com/wp-content_uploads_2022_01_MiniSpecSheets-HBC638.pdf
+  url: https://www.johnihaas.com/wp-content/uploads/2022/01/MiniSpecSheets-HBC638.pdf
+  values:
+    alpha_acid: [12, 16]
+    beta_acid: [3, 6]
+    cohumulone: [28.5, 30.5]
+    total_oil: [1.7, 3.0]
+    myrcene: [33, 38]
+    humulene: [15, 20]
+    caryophyllene: [11, 15]
+    linalool: [0.2, 0.5]
+- slug: hbc-638
+  source: yvh
+  file: yakimavalleyhops.com/products_hbc-638-hops.html
+  url: https://yakimavalleyhops.com/products/hbc-638-hops
+  values:
+    alpha_acid: [12, 16]
+    beta_acid: [3.0, 6.0]
+    cohumulone: [28, 31]
+    total_oil: [1.5, 3.0]
+    myrcene: [33, 40]
+    caryophyllene: [10, 15]
+- slug: hbc-522
+  source: john-i-haas
+  file: johnihaas.com/wp-content_uploads_2020_09_Haas_HopSpecSheets-HBC522_091520.pdf
+  url: https://www.johnihaas.com/wp-content/uploads/2020/09/Haas_HopSpecSheets-HBC522_091520.pdf
+  values:
+    alpha_acid: [9.5, 12.0]
+    beta_acid: [4.5, 5.5]
+    total_oil: [1.4, 2.3]
+    myrcene: 36.9
+    caryophyllene: 8.44
+    humulene: 13.2
+    farnesene: 0.52
+    linalool: 0.64
+    geraniol: 0.05
+- slug: hbc-843
+  source: patent-hbc-843
+  file: patents.google.com/patent_USPP34982.html
+  url: https://patents.google.com/patent/USPP34982
+  values:
+    alpha_acid: [14, 15]
+    beta_acid: 4.5
+    cohumulone: 27.5
+    total_oil: 1.2
+    humulene: 11
+    caryophyllene: 6.1
+    farnesene: 0.47
+    linalool: 0.24
+- slug: anchovy
+  source: yvh
+  file: yakimavalleyhops.com/products_anchovy-hops.html
+  url: https://yakimavalleyhops.com/products/anchovy-hops
+  values:
+    alpha_acid: 12.6
+    beta_acid: 3.6
+    total_oil: 1.61

@@ -747,6 +747,7 @@ beers:
     abv: 5.8
     hops_as_written: "Equal Rights? Helles Yeah! ABV: 5.80 IBU: 24.00 SRM: 4.00 Categories: German, Lager The women of Stoup brewed this fun take on a German Helles for our 2024 Pink Boots Collaboration Brew. We started with a traditional helles grain bill, and added whirlpool and dry hop additions of this year's PInk Boots Hop Blend from Yakima Chief Hops, a blend of HBC 638, El Dorado, Ahtanum and Idaho 7. A porti..."
     hops:
+      - { hop: hbc-638, name: HBC 638, as_written: HBC 638 }
       - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
       - { hop: ahtanum, name: Ahtanum, as_written: Ahtanum }
       - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
@@ -792,6 +793,7 @@ beers:
       - { hop: cascade, name: Cascade, as_written: Cascade }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: hbc-522, name: HBC 522, as_written: HBC 522 }
   - slug: fx-lager
     name: F!X Lager
     url: https://www.stoupbrewing.com/beer/fx-lager-2704.html
@@ -869,6 +871,7 @@ beers:
       - { hop: warrior, name: Warrior, as_written: Warrior }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: hbc-522, name: HBC 522, as_written: HBC 522 }
   - slug: fourcast-ipa
     name: Fourcast IPA
     url: https://www.stoupbrewing.com/beer/fourcast-ipa-7794.html
