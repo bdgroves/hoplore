@@ -55,6 +55,10 @@ export function attachMine(breweries, checkins = [], ratings = []) {
       (series ? b?.beers.find((x) => squashBeer(x.name) === series) : null) ??
       // "Fresh Hop Topcutter" is "Fresh Hop Topcutter IPA" on the brewery's site.
       (bare.length >= 4 ? b?.beers.find((x) => styleless(x.name) === bare) : null) ??
+      // "Fresh Hop Static Shatter" is the fresh-hop beer the brewery calls "Static Shatter".
+      (/^(?:fresh|wet)[- ]hop\s/i.test(c.beer)
+        ? b?.beers.find((x) => x.hops?.some((h) => h.fresh) && styleless(x.name) === styleless(c.beer.replace(/^(?:fresh|wet)[- ]hop\s+/i, '')))
+        : null) ??
       null;
     if (beer) mine(beer).checkins.push(c);
     out.push({ ...c, match: beer ? { brewery: b.brewery, beer } : null, breweryMatch: b?.brewery ?? null });

@@ -417,8 +417,15 @@ def parse_bale_breaker(path: Path) -> tuple | None:
     return name, abv_of(text), hops, "field"
 
 
-def parse_block15(path: Path) -> tuple | None:
+def parse_block15(path: Path) -> tuple | list | None:
     _, name, text = page_text(path)
+    if path.name == "beer.html":
+        # The beer page announces the fresh hop releases in a paragraph each:
+        # "Releasing September 4th: Static Shatter Our annual Fresh Hop … uses fresh Strata hops …"
+        out = []
+        for m in re.finditer(r"Releasing [A-Z][a-z]+ \d+\w*: (.+?) ((?:Our|For|A|An|This|The|Brewed) .{20,400}?\.)(?= Releasing |\s[A-Z][a-z]+ [A-Z]|$)", text):
+            out.append((m.group(1).strip(" -"), None, m.group(2), "prose"))
+        return out or None
     hops = between(text, r"\bHops", r"Grains|Availability|Sales Materials|Yeast|Malts?")
     m = re.search(r"•\s*([\d.]+)%", text)
     return name, float(m.group(1)) if m else abv_of(text), hops, "field"
@@ -428,18 +435,38 @@ def parse_stoup(path: Path) -> tuple | None:
     """Stoup's beer pages are drawn from a JSON endpoint; snapshot.py saves
     its html (see breweries.yml 'fetch')."""
     raw = path.read_text(encoding="utf-8", errors="ignore")
+    name = None
     try:
-        raw = json.loads(raw)["html"]
+        doc = json.loads(raw)
+        raw, name = doc["html"], doc.get("title")
     except (ValueError, KeyError, TypeError):
         pass
     soup = BeautifulSoup(raw, "lxml")
-    head = soup.find(["h1", "h2", "h3"])
-    name = head.get_text(" ", strip=True) if head else None
+    if not name:
+        head = soup.find(["h1", "h2", "h3", "strong"])
+        name = head.get_text(" ", strip=True) if head else None
     if name:
+        name = re.sub(r"^\[Retired\]\s*", "", name)
         name = re.sub(r"\s*\((?:19|20)\d\d\)\s*", " ", name).strip()  # "(2026)" is the release, not the beer
     text = re.sub(r"\s+", " ", soup.get_text(" "))
     m = re.search(r"ABV\W*([\d.]+)", text)
     return name, abv_of(text) or (float(m.group(1)) if m else None), text[:2500], "prose"
+
+
+def parse_structures(path: Path) -> tuple | None:
+    """Squarespace pages, two layouts: "JUNIOR A hazy pale ale brewed with … 4.1%"
+    or "A hazy pale ale brewed with … 4.1% JUNIOR"."""
+    soup, _, _ = page_text(path)
+    main = soup.find("main") or soup
+    text = re.sub(r"\s+", " ", main.get_text(" ")).strip()
+    caps = r"[A-Z][A-Z0-9'&!.-]*(?: [A-Z][A-Z0-9'&!.-]*)*"
+    if m := re.match(rf"({caps})\s+(?=[A-Z][a-z])(.{{20,600}}?)\s([\d.]+)%", text):
+        name, desc, abv = m.group(1), m.group(2), m.group(3)
+    elif m := re.search(rf"([^%]{{20,600}}?)\s([\d.]+)%\s+({caps})(?=\s[A-Z][a-z]|\s*$)", text):
+        desc, abv, name = m.group(1), m.group(2), m.group(3)
+    else:
+        return None
+    return name.strip(), float(abv), desc.strip(), "prose"
 
 
 def parse_description(path: Path) -> tuple | None:
@@ -490,7 +517,7 @@ PARSERS = {
     "bale-breaker": (parse_bale_breaker, "balebreaker.com", "beer_*.html"),
     "block-15": (parse_block15, "block15.com", "*.html"),
     "stoup": (parse_stoup, "stoupbrewing.com", "beer_*.html"),
-    "structures": (parse_description, "structuresbrewing.com", "*.html"),
+    "structures": (parse_structures, "structuresbrewing.com", "*.html"),
     "pelican": (parse_prose_generic, "pelicanbrewing.com", "beer_*.html"),
     "great-notion": (parse_prose_generic, "greatnotion.com", "products_*.html"),
 }
@@ -600,6 +627,8 @@ def main() -> int:
         beers, seen = [], set()
         for path in pages:
             parsed = parse(path)
+            if parsed is None:
+                continue
             # A taplist page holds many beers; everything else holds one.
             for one in parsed if isinstance(parsed, list) else [parsed]:
                 beer = build_beer(brewery, path, one, index)

@@ -7,6 +7,12 @@ brewery:
 generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
 retrieved: '2026-09-28'
 beers:
+  - slug: animal-cookies-fresh-hop
+    name: Animal Cookies - Fresh Hop
+    url: https://www.block15.com/
+    hops_as_written: For the first time, our Hazy IPA gets the Fresh Hop treatment with fresh Centennial CGX NUVO hops from Crosby Hop Farm in Woodburn, Oregon.
+    hops:
+      - { hop: centennial, name: Centennial, fresh: true, farm: Crosby Hop Farm, as_written: Centennial }
   - slug: deep-seek-west-coast-ipa
     name: Deep Seek
     url: https://block15.com/deep-seek-west-coast-ipa
@@ -19,6 +25,52 @@ beers:
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: nectaron, name: Nectaron, as_written: Nectaron }
       - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+  - slug: fluffhead-hazy-ipa
+    name: Fluffhead
+    url: https://block15.com/fluffhead-hazy-ipa
+    abv: 6.8
+    hops_as_written: Citra, Mosaic, CTZ CO2 Extract, Azacca, Amarillo, Chinook
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: fresh-flow-hazy-ipa
+    name: Fresh Flow
+    url: https://block15.com/fresh-flow-hazy-ipa
+    abv: 6.5
+    hops_as_written: 'Chinook, Cascade, Sultana, Apollo CO2 extract Dry Hop: Mosaic, Citra, Chinook, Nelson Sauvin, Eclipse, Vic Secret Brewed Fresh May through July Fresh Flow Hazy IPA The perfect companion for summertime outdoor adventures. Featured Artist Located in Ashland, Oregon, Artist Chris Herbst creates outdoor-inspired pieces using the mountains, rivers, and oceans of the Pacific Northwest. Chris is a big...'
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: sultana, name: Sultana, as_written: Sultana }
+      - { hop: apollo, name: Apollo, as_written: Apollo }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: eclipse, name: Eclipse, as_written: Eclipse }
+      - { hop: vic-secret, name: Vic Secret, as_written: Vic Secret }
+  - slug: fresh-pow-hazy-ipa
+    name: Fresh Pow
+    url: https://block15.com/fresh-pow-hazy-ipa
+    abv: 7.0
+    hops_as_written: 'Chinook, Strata CGX, CTZ, Apollo CO2 extract, Apollo Salvo Dry Hop: Nelson Sauvin, Mosaic, Sultana, Talus'
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: apollo, name: Apollo, as_written: Apollo }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: sultana, name: Sultana, as_written: Sultana }
+      - { hop: talus, name: Talus, as_written: Talus }
+  - slug: gloria-pilsner
+    name: Gloria!
+    url: https://block15.com/gloria-pilsner
+    abv: 5.0
+    hops_as_written: Mt. Hood, Lorien
+    hops:
+      - { hop: mount-hood, name: Mt. Hood, as_written: Mt. Hood }
   - slug: green-truck-american-light-lager
     name: Green Truck
     url: https://block15.com/green-truck-american-light-lager
@@ -26,6 +78,40 @@ beers:
     hops_as_written: Contessa
     hops:
       - { hop: contessa, name: Contessa, as_written: Contessa }
+  - slug: joy-hazy-pale-ale
+    name: Joy
+    url: https://block15.com/joy-hazy-pale-ale
+    abv: 5.6
+    hops_as_written: CTZ, Azacca, Mosaic Incognito, Citra, Cashmere, Talus, Azacca Hopzoil
+    hops:
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+      - { hop: talus, name: Talus, as_written: Talus }
+  - slug: nebula-oat-stout
+    name: Nebula
+    url: https://block15.com/nebula-oat-stout
+    abv: 6.0
+    hops_as_written: CTZ, Crystal
+    hops:
+      - { hop: crystal, name: Crystal, as_written: Crystal }
+  - slug: ridgeback-red-ale
+    name: Ridgeback Red
+    url: https://block15.com/ridgeback-red-ale
+    abv: 5.5
+    hops_as_written: Sterling, Cascade, Chinook, Centennial
+    hops:
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+  - slug: static-shatter
+    name: Static Shatter
+    url: https://www.block15.com/
+    hops_as_written: Our annual Fresh Hop American IPA uses fresh Strata hops from Coleman’s Alluvial Farm in Independence, Oregon.
+    hops:
+      - { hop: strata, name: Strata, fresh: true, as_written: Strata }
   - slug: sticky-hands-imperial-ipa
     name: Sticky Hands
     url: https://block15.com/sticky-hands-imperial-ipa
@@ -39,6 +125,12 @@ beers:
       - { hop: strata, name: Strata, as_written: Strata }
       - { hop: columbus, name: Columbus, as_written: Columbus }
       - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: sticky-hands-fresh-hop-edition
+    name: Sticky Hands - Fresh Hop Edition
+    url: https://www.block15.com/
+    hops_as_written: A Fresh Hop version of our flagship Imperial IPA is back for 2026, using fresh Citra hops from Westwood Farms in Gervais, Oregon. *Release dates may be subject to change depending on hop harvest windows.
+    hops:
+      - { hop: citra, name: Citra, fresh: true, farm: Westwood Farms, as_written: Citra }
   - slug: collaboration-beers
     name: Synergy Series
     url: https://block15.com/collaboration-beers

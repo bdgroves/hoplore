@@ -192,7 +192,7 @@
     - 'https://block15.com/cellar-aged-beers'
     - 'https://block15.com/lagered-by-the-sun'
   page_url: 'https://block15.com/{path}'
-  match: '^https://(www\.)?block15\.com/(?!(?:order|shop|cart|account|contact|visit|events|jobs|about|beer|privacy|terms|search|blog|news|locations|restaurant|menu|pub|brewery|careers|faq)(?:[/-]|$))[a-z0-9-]+/?$'
+  match: '^https://(www\.)?block15\.com/(?!(?:order|shop|cart|account|contact|visit|events|jobs|about|beer|privacy|terms|search|blog|news|locations|restaurant|menu|pub|brewery|careers|faq|newsletter|gift)(?:[/-]|$))[a-z0-9-]+/?$'
 
 - slug: pelican
   name: Pelican Brewing

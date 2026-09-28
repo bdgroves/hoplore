@@ -1,0 +1,79 @@
+brewery:
+  slug: structures
+  name: Structures Brewing
+  city: Bellingham
+  state: WA
+  url: https://www.structuresbrewing.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-28'
+beers:
+  - slug: dih
+    name: Die In Haze
+    url: https://www.structuresbrewing.com/dih
+    abv: 12.5
+    hops_as_written: Quad IPA Triple-dry hopped with Citra, Nelson, and Mosaic. Notes of red starburst, papaya, and ripe dankness
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: dreamthieves
+    name: Dreamthieves
+    url: https://www.structuresbrewing.com/dreamthieves
+    abv: 12.5
+    hops_as_written: Quad IPA Triple-dry hopped with Mosaic, Simcoe, Cryo Simcoe, Citra, and Citra Incognito.
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: edel-pils
+    name: Edel Pilsner
+    url: https://www.structuresbrewing.com/edel-pils
+    abv: 4.9
+    hops_as_written: Our German Pilsner brewed with Tettnanger and Spalt hops. Notes of wildflowers, white grapes, and candied orange peel burst from the glass.
+    hops:
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+  - slug: floral
+    name: Floral
+    url: https://www.structuresbrewing.com/floral
+    abv: 6.8
+    hops_as_written: Collaboration with The Max Higbee Center brewed with Amarillo, El Dorado and Centennial. A pillowy soft body, notes of citrus and grapefruit
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+  - slug: joj
+    name: Juice On Juice
+    url: https://www.structuresbrewing.com/joj
+    abv: 8.6
+    hops_as_written: Our favorite Double IPA, double dry hopped with the best Citra and Mosaic we could source!
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: junior
+    name: Junior
+    url: https://www.structuresbrewing.com/junior
+    abv: 4.1
+    hops_as_written: A beautiful, hazy pale ale brewed with Amarillo, Simcoe, and Riwaka. By far one of our favorites around the brewery.
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: riwaka, name: Riwaka, as_written: Riwaka }
+  - slug: lol
+    name: Life Of Leisure
+    url: https://www.structuresbrewing.com/lol
+    abv: 5.8
+    hops_as_written: Hazy IPA double dry hopped with Mosaic, Strata, and Simcoe. Notes of Strawberries, Guava, and Key Lime
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: subterranean
+    name: Subterranean
+    url: https://www.structuresbrewing.com/subterranean
+    abv: 6.8
+    hops_as_written: West Coast IPA double dry hopped with Simcoe, Mosaic, and Comet with dried blueberry and cotton candy notes.
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: comet, name: Comet, as_written: Comet }
