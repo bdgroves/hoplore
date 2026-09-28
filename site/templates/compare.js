@@ -12,6 +12,7 @@ export function renderCompare({ meta }) {
       <a href="${base}">All hops</a>
       <a href="${base}beers/">What's in the can</a>
       <a href="${base}scan/">Scan a beer 📷</a>
+      <a href="${base}about/">How it works</a>
     </nav>
     <h1 class="page-title">Hop <em>vs</em> hop</h1>
     <p class="standfirst">Pick two hops and see them side by side: what each smells

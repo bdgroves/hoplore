@@ -150,6 +150,12 @@ async function start() {
   const q = new URLSearchParams(location.search);
   $('#cmp-a').value = bySlug.get(q.get('a'))?.name ?? '';
   $('#cmp-b').value = bySlug.get(q.get('b'))?.name ?? '';
+  // From a hop page's "Compare it": start against its closest swap.
+  if (q.get('a') && !q.get('b')) {
+    const d = await hop(q.get('a'));
+    const top = d?.similar?.[0];
+    if (top) $('#cmp-b').value = top.name;
+  }
   render();
 }
 

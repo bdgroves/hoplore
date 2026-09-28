@@ -932,3 +932,18 @@ body.searching .brewery > p.fine { display: none; }
   .cmp tr > th, .cmp td[colspan] { grid-column: 1 / -1; }
   .cmp td { min-width: 0; }
 }
+
+/* --------------------------------------------------------------- about */
+.ways { list-style: none; padding: 0; margin: 0.8rem 0 0; display: grid; gap: 1.2rem; }
+.ways li { display: grid; grid-template-columns: 2.6rem 1fr; gap: 1rem; align-items: start; }
+.ways-n { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--ink); color: var(--parchment); font-family: var(--font-display); font-weight: 900; font-size: 1.2rem; }
+.ways h3 { font-size: 1.2rem; margin: 0.2rem 0 0.3rem; }
+.ways h3 a { text-decoration: none; }
+.ways p { margin: 0; max-width: 62ch; }
+.about-dl { display: grid; grid-template-columns: minmax(11rem, 15rem) 1fr; gap: 0.3rem 1.5rem; margin: 0.8rem 0 0; }
+.about-dl dt { font-weight: 700; }
+.about-dl dd { margin: 0 0 0.9rem; color: var(--ink-soft); max-width: 64ch; }
+@media (max-width: 46rem) { .about-dl { grid-template-columns: 1fr; } }
+.about-me p { max-width: 64ch; }
+.new-here { margin-top: 0.2rem; }
+.colophon-nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; }

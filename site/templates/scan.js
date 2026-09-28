@@ -14,6 +14,7 @@ export function renderScan({ meta }) {
     <nav class="nav" style="border-top:0;padding-top:0">
       <a href="${base}">All hops</a>
       <a href="${base}beers/">What's in the can</a>
+      <a href="${base}about/">How it works</a>
     </nav>
     <h1 class="page-title">Scan a <em>beer</em></h1>
     <p class="standfirst">Take a picture of the can, the bottle or the tap list —

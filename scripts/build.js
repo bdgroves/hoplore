@@ -18,6 +18,7 @@ import { renderGrown, acreageFor } from '../site/templates/acreage.js';
 import { renderBeer, renderBeers, beersByHop, pairingsByHop, attachLookalikes } from '../site/templates/beers.js';
 import { renderScan } from '../site/templates/scan.js';
 import { renderCompare } from '../site/templates/compare.js';
+import { renderAbout } from '../site/templates/about.js';
 import { attachMine } from '../site/templates/mine.js';
 
 const API_VERSION = 'v1';
@@ -146,6 +147,13 @@ write(out('landscape/index.html'), renderLandscape({ hops, meta }));
 if (acreage) write(out('grown/index.html'), renderGrown({ acreage, hops, meta }));
 write(out('scan/index.html'), renderScan({ meta }));
 write(out('compare/index.html'), renderCompare({ meta }));
+write(
+  out('about/index.html'),
+  renderAbout({
+    meta,
+    stats: { hops: hops.length, beers: breweries.reduce((n, b) => n + b.beers.length, 0), breweries: breweries.length, sources: Object.keys(sources).length },
+  })
+);
 const bySlug = Object.fromEntries(hops.map((h) => [h.slug, h]));
 const beerPaths = [];
 if (breweries.length) {
@@ -170,7 +178,7 @@ write(out('robots.txt'), `User-agent: *\nAllow: /\nSitemap: /sitemap.xml\n`);
 write(
   out('sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    ['', 'landscape/', ...(acreage ? ['grown/'] : []), 'scan/', 'compare/', ...(breweries.length ? ['beers/', ...beerPaths] : []), ...hops.map((h) => `hops/${h.slug}/`)]
+    ['', 'landscape/', ...(acreage ? ['grown/'] : []), 'scan/', 'compare/', 'about/', ...(breweries.length ? ['beers/', ...beerPaths] : []), ...hops.map((h) => `hops/${h.slug}/`)]
       .map((p) => `  <url><loc>https://brooksgroves.com/hoplore/${p}</loc></url>`)
       .join('\n') +
     `\n</urlset>\n`
