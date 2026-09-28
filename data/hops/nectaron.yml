@@ -4,24 +4,20 @@ purpose: dual
 country: NZ
 kind: cultivar
 
-# Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).
-# purpose is an unconfirmed default -- see meta.notes. No analytics recorded
-# yet: run `pixi run -e data hopsteiner nectaron --apply` to pull real values.
-
 ownership:
-  mark: public
-  public_domain: true
+  mark: registered
+  public_domain: false
 
 pedigree:
-  breeder: unknown
-  parents: { unknown: true }
-  refs: []
+  breeder: hri-nz
+  parents: { unknown: true, note: 'A full sister to Waimea.' }
+  refs: [charles-faram]
 
 aroma:
   summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+    Intense ripe fruit -- pineapple, passionfruit, peach -- for hop-forward beers, per Charles Faram. A full sister to Waimea from Plant & Food Research, named for breeder Dr Ron Beatson; released 2020.
+  tags: [pineapple, passionfruit, peach, tropical, stone-fruit]
+  refs: [charles-faram]
 
 usage:
   timing: []
@@ -32,9 +28,38 @@ products: { cryo: false, lupomax: false }
 substitutes: []
 
 meta:
-  status: stub
-  verification: unverified
-  last_reviewed: '2026-09-14'
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-28'
   notes: >
-    purpose defaulted to dual, unconfirmed -- was not researched individually
-    for this bulk scaffold pass. Correct before publishing.
+    purpose defaulted to dual, unconfirmed -- the source doesn't state a role.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 10.5, high: 11.5 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 4.5, high: 5.0 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 26.0, high: 28.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: charles-faram, low: 1.6, high: 1.9 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 55.0, high: 65.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 13.0, high: 18.0 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 0.2, high: 0.2 }

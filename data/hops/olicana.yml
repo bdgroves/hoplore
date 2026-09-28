@@ -1,27 +1,23 @@
 slug: olicana
 name: Olicana
-purpose: dual
+purpose: aroma
 country: GB
 kind: cultivar
 
-# Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).
-# purpose is an unconfirmed default -- see meta.notes. No analytics recorded
-# yet: run `pixi run -e data hopsteiner olicana --apply` to pull real values.
-
 ownership:
-  mark: public
-  public_domain: true
+  mark: registered
+  public_domain: false
 
 pedigree:
-  breeder: unknown
-  parents: { unknown: true }
-  refs: []
+  breeder: charles-faram
+  parents: { seed: cascade, note: 'A Cascade seedling, sister to Jester.' }
+  refs: [charles-faram]
 
 aroma:
   summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+    Delicate fruit that shows best as a dry hop or in lighter beers, per Charles Faram. Jester's sister, a Cascade seedling, named by Ilkley Brewery; debuted in 2014.
+  tags: [citrus, tropical]
+  refs: [charles-faram]
 
 usage:
   timing: []
@@ -32,9 +28,34 @@ products: { cryo: false, lupomax: false }
 substitutes: []
 
 meta:
-  status: stub
-  verification: unverified
-  last_reviewed: '2026-09-14'
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-28'
   notes: >
-    purpose defaulted to dual, unconfirmed -- was not researched individually
-    for this bulk scaffold pass. Correct before publishing.
+    Aroma variety per Charles Faram.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 7.0, high: 9.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 4.0, high: 6.0 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 28.0, high: 32.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: charles-faram, low: 0.5, high: 0.5 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 19.0, high: 20.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 8.0, high: 9.0 }

@@ -4,24 +4,20 @@ purpose: dual
 country: GB
 kind: cultivar
 
-# Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).
-# purpose is an unconfirmed default -- see meta.notes. No analytics recorded
-# yet: run `pixi run -e data hopsteiner harlequin --apply` to pull real values.
-
 ownership:
-  mark: public
-  public_domain: true
+  mark: registered
+  public_domain: false
 
 pedigree:
-  breeder: unknown
-  parents: { unknown: true }
-  refs: []
+  breeder: charles-faram
+  parents: { seed: godiva, note: 'A daughter of Godiva, granddaughter of Jester.' }
+  refs: [charles-faram]
 
 aroma:
   summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+    New World fruit with a hint of English earth: delicate and tropical in pale beers, marmalade and candied fruit with darker malts, per Charles Faram. Named for its patterned bracts; released 2019.
+  tags: [tropical, orange, candy, earthy]
+  refs: [charles-faram]
 
 usage:
   timing: []
@@ -32,9 +28,44 @@ products: { cryo: false, lupomax: false }
 substitutes: []
 
 meta:
-  status: stub
-  verification: unverified
-  last_reviewed: '2026-09-14'
+  status: draft
+  verification: corroborated
+  last_reviewed: '2026-09-28'
   notes: >
-    purpose defaulted to dual, unconfirmed -- was not researched individually
-    for this bulk scaffold pass. Correct before publishing.
+    purpose defaulted to dual, unconfirmed -- the source doesn't state a role.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 9.5, high: 12.0 }
+      - { source: yvh, low: 9.0, high: 12.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 7.0, high: 9.0 }
+      - { source: yvh, low: 7.0, high: 9.0 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 27.0, high: 31.0 }
+      - { source: yvh, low: 27.0, high: 31.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: charles-faram, low: 1.0, high: 1.6 }
+      - { source: yvh, low: 1.0, high: 1.8 }
+oils:
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 5.0, high: 5.0 }
+      - { source: yvh, low: 10.0, high: 10.0 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 10.0, high: 10.0 }
+      - { source: yvh, low: 5.0, high: 15.0 }
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: yvh, low: 55.0, high: 65.0 }

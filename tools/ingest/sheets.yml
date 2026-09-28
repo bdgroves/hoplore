@@ -508,3 +508,53 @@
     alpha_acid: 12.6
     beta_acid: 3.6
     total_oil: 1.61
+
+# --- Figures for hops that had a page but none (Charles Faram Hop Oracle, Yakima Valley Hops) ---
+- slug: barbe-rouge
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_barbe-rouge.html
+  url: https://charlesfaram.com/hop-oracle/barbe-rouge/
+- slug: godiva
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_godiva.html
+  url: https://charlesfaram.com/hop-oracle/godiva/
+  exclude:
+    myrcene: "published as a bare 0.45 next to percentages -- a fraction or a volume, not a share of the oil"
+- slug: harlequin
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_harlequin.html
+  url: https://charlesfaram.com/hop-oracle/harlequin/
+  exclude:
+    myrcene: "published as a bare 0.6 next to percentages; Yakima Valley Hops gives 55-65%"
+- slug: jester
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_jester.html
+  url: https://charlesfaram.com/hop-oracle/jester/
+- slug: mistral
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_mistral.html
+  url: https://charlesfaram.com/hop-oracle/mistral/
+- slug: nectaron
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_nectaron.html
+  url: https://charlesfaram.com/hop-oracle/nectaron/
+- slug: olicana
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_olicana.html
+  url: https://charlesfaram.com/hop-oracle/olicana/
+- slug: superdelic
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_superdelic.html
+  url: https://charlesfaram.com/hop-oracle/superdelic/
+- slug: harlequin
+  source: yvh
+  file: yakimavalleyhops.com/products_harlequin-hops.html
+  url: https://yakimavalleyhops.com/products/harlequin-hops
+- slug: jester
+  source: yvh
+  file: yakimavalleyhops.com/products_jester-hops.html
+  url: https://yakimavalleyhops.com/products/jester-hops
+- slug: superdelic
+  source: yvh
+  file: yakimavalleyhops.com/products_superdelic-hops.html
+  url: https://yakimavalleyhops.com/products/superdelic-hops
