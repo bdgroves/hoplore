@@ -1,0 +1,155 @@
+brewery:
+  slug: great-notion
+  name: Great Notion Brewing
+  city: Portland
+  state: OR
+  url: https://greatnotion.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-28'
+beers:
+  - slug: alpha
+    name: Alpha
+    url: https://greatnotion.com/products/alpha
+    abv: 6.8
+    hops_as_written: Quantity Decrease quantity for Alpha  Alpha – Great Notion Skip to content Our hop waters and sodas ship nationwide! Shop by Location Shipping Anchorage, Alaska California Kentucky Nebraska New Hampshire North Dakota Ohio Oregon Pennsylvania Washington Washington DC Vermont Virginia Nationwide Oregon Alberta Northwest Beaverton Washington Ballard Georgetown California Sacramento Fulfillment Cen...
+    hops:
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: black-magic-dreams
+    name: Black Magic Dreams
+    url: https://greatnotion.com/products/black-magic-dreams
+    abv: 7.0
+    hops_as_written: Quantity Decrease quantity for Black Magic Dreams  Black Magic Dreams – Great Notion Skip to content Our hop waters and sodas ship nationwide! Shop by Location Shipping Anchorage, Alaska California Kentucky Nebraska New Hampshire North Dakota Ohio Oregon Pennsylvania Washington Washington DC Vermont Virginia Nationwide Oregon Alberta Northwest Beaverton Washington Ballard Georgetown California ...
+    hops:
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: vic-secret, name: Vic Secret, as_written: Vic Secret }
+  - slug: devils-night
+    name: Devil's Night
+    url: https://greatnotion.com/products/devils-night
+    abv: 5.1
+    hops_as_written: Quantity Decrease quantity for Devil&#39;s Night  Devil's Night – Great Notion Skip to content Our hop waters and sodas ship nationwide! Shop by Location Shipping Anchorage, Alaska California Kentucky Nebraska New Hampshire North Dakota Ohio Oregon Pennsylvania Washington Washington DC Vermont Virginia Nationwide Oregon Alberta Northwest Beaverton Washington Ballard Georgetown California Sacram...
+    hops:
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau Mittelfruh }
+  - slug: easy-lift
+    name: Easy Lift
+    url: https://greatnotion.com/products/easy-lift
+    abv: 6.3
+    hops_as_written: Quantity Decrease quantity for Easy Lift  Easy Lift – Great Notion Skip to content Our hop waters and sodas ship nationwide! Shop by Location Shipping Anchorage, Alaska California Kentucky Nebraska New Hampshire North Dakota Ohio Oregon Pennsylvania Washington Washington DC Vermont Virginia Nationwide Oregon Alberta Northwest Beaverton Washington Ballard Georgetown California Sacramento Fulfill...
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+  - slug: elite-lager
+    name: Elite Lager
+    url: https://greatnotion.com/products/elite-lager
+    abv: 5.0
+    hops_as_written: Quantity Decrease quantity for Elite Lager  Elite Lager – Great Notion Skip to content Our hop waters and sodas ship nationwide! Shop by Location Shipping Anchorage, Alaska California Kentucky Nebraska New Hampshire North Dakota Ohio Oregon Pennsylvania Washington Washington DC Vermont Virginia Nationwide Oregon Alberta Northwest Beaverton Washington Ballard Georgetown California Sacramento Ful...
+    hops:
+      - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
+  - slug: laser-wolf
+    name: Laser Wolf
+    url: https://greatnotion.com/products/laser-wolf
+    abv: 7.0
+    hops_as_written: Quantity Decrease quantity for Laser Wolf  Laser Wolf – Great Notion Skip to content Our hop waters and sodas ship nationwide! Shop by Location Shipping Anchorage, Alaska California Kentucky Nebraska New Hampshire North Dakota Ohio Oregon Pennsylvania Washington Washington DC Vermont Virginia Nationwide Oregon Alberta Northwest Beaverton Washington Ballard Georgetown California Sacramento Fulfi...
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: northleft-1
+    name: Northleft
+    url: https://greatnotion.com/products/northleft-1
+    abv: 6.8
+    hops_as_written: Quantity Decrease quantity for Northleft  Northleft – Great Notion Skip to content Our hop waters and sodas ship nationwide! Shop by Location Shipping Anchorage, Alaska California Kentucky Nebraska New Hampshire North Dakota Ohio Oregon Pennsylvania Washington Washington DC Vermont Virginia Nationwide Oregon Alberta Northwest Beaverton Washington Ballard Georgetown California Sacramento Fulfill...
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: krush, name: Krush, as_written: Krush }
+  - slug: fresh-hop-northleft
+    name: Northleft (Fresh Hop)
+    url: https://greatnotion.com/products/fresh-hop-northleft
+    abv: 6.8
+    hops_as_written: Quantity Decrease quantity for Northleft (Fresh Hop)  Northleft (Fresh Hop) – Great Notion Skip to content Our hop waters and sodas ship nationwide! Shop by Location Shipping Anchorage, Alaska California Kentucky Nebraska New Hampshire North Dakota Ohio Oregon Pennsylvania Washington Washington DC Vermont Virginia Nationwide Oregon Alberta Northwest Beaverton Washington Ballard Georgetown Calif...
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: citra, name: Citra, fresh: true, as_written: Citra }
+  - slug: notionlite
+    name: Notion Lite
+    url: https://greatnotion.com/products/notionlite
+    abv: 4.2
+    hops_as_written: Quantity Decrease quantity for Notion Lite  Notion Lite – Great Notion Skip to content Our hop waters and sodas ship nationwide! Shop by Location Shipping Anchorage, Alaska California Kentucky Nebraska New Hampshire North Dakota Ohio Oregon Pennsylvania Washington Washington DC Vermont Virginia Nationwide Oregon Alberta Northwest Beaverton Washington Ballard Georgetown California Sacramento Ful...
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau Mittelfruh }
+  - slug: oktoberfest
+    name: Oktoberfest
+    url: https://greatnotion.com/products/oktoberfest
+    abv: 5.4
+    hops_as_written: Quantity Decrease quantity for Oktoberfest  Oktoberfest – Great Notion Skip to content Our hop waters and sodas ship nationwide! Shop by Location Shipping Anchorage, Alaska California Kentucky Nebraska New Hampshire North Dakota Ohio Oregon Pennsylvania Washington Washington DC Vermont Virginia Nationwide Oregon Alberta Northwest Beaverton Washington Ballard Georgetown California Sacramento Ful...
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau Mittelfruh }
+      - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina Bavaria }
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: over-ripe-ipa
+    name: Over Ripe
+    url: https://greatnotion.com/products/over_ripe_ipa
+    abv: 7.0
+    hops_as_written: Quantity Decrease quantity for Over Ripe  Over Ripe – Great Notion Skip to content Our hop waters and sodas ship nationwide! Shop by Location Shipping Anchorage, Alaska California Kentucky Nebraska New Hampshire North Dakota Ohio Oregon Pennsylvania Washington Washington DC Vermont Virginia Nationwide Oregon Alberta Northwest Beaverton Washington Ballard Georgetown California Sacramento Fulfill...
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: motueka, name: Motueka, as_written: Motueka }
+      - { hop: azacca, name: Azacca, as_written: Azacca }
+  - slug: ridin-low-1
+    name: Ridin' Low
+    url: https://greatnotion.com/products/ridin-low-1
+    abv: 7.2
+    hops_as_written: Quantity Decrease quantity for Ridin&#39; Low  Ridin' Low – Great Notion Skip to content Our hop waters and sodas ship nationwide! Shop by Location Shipping Anchorage, Alaska California Kentucky Nebraska New Hampshire North Dakota Ohio Oregon Pennsylvania Washington Washington DC Vermont Virginia Nationwide Oregon Alberta Northwest Beaverton Washington Ballard Georgetown California Sacramento F...
+    hops:
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: riwaka, name: Riwaka, as_written: Riwaka }
+  - slug: rimske-pivo
+    name: Rimske Pivo
+    url: https://greatnotion.com/products/rimske-pivo
+    abv: 4.7
+    hops_as_written: Quantity Decrease quantity for Rimske Pivo  Rimske Pivo – Great Notion Skip to content Our hop waters and sodas ship nationwide! Shop by Location Shipping Anchorage, Alaska California Kentucky Nebraska New Hampshire North Dakota Ohio Oregon Pennsylvania Washington Washington DC Vermont Virginia Nationwide Oregon Alberta Northwest Beaverton Washington Ballard Georgetown California Sacramento Ful...
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+  - slug: ripe-ipa
+    name: Ripe
+    url: https://greatnotion.com/products/ripe_ipa
+    abv: 7.0
+    hops_as_written: Citra hops and a hazy IPA named Ripe have been making waves in the Pacific Northwest since 2015. Our award winning IPA is generously dry hopped with Citra and Citra Lupomax hops that give Ripe it's juicy backbone of mandarin and mango notes.  Ripe – Great Notion Skip to content Our hop waters and sodas ship nationwide! Shop by Location Shipping Anchorage, Alaska California Kentucky Nebraska New...
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Citra }
+  - slug: ripe-af
+    name: Ripe AF
+    url: https://greatnotion.com/products/ripe-af
+    abv: 0.5
+    hops_as_written: Quantity Decrease quantity for Ripe AF  Ripe AF – Great Notion Skip to content Our hop waters and sodas ship nationwide! Shop by Location Shipping Anchorage, Alaska California Kentucky Nebraska New Hampshire North Dakota Ohio Oregon Pennsylvania Washington Washington DC Vermont Virginia Nationwide Oregon Alberta Northwest Beaverton Washington Ballard Georgetown California Sacramento Fulfillment...
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: super-ripe
+    name: Super Ripe
+    url: https://greatnotion.com/products/super_ripe
+    abv: 9.1
+    hops_as_written: Quantity Decrease quantity for Super Ripe  Super Ripe – Great Notion Skip to content Our hop waters and sodas ship nationwide! Shop by Location Shipping Anchorage, Alaska California Kentucky Nebraska New Hampshire North Dakota Ohio Oregon Pennsylvania Washington Washington DC Vermont Virginia Nationwide Oregon Alberta Northwest Beaverton Washington Ballard Georgetown California Sacramento Fulfi...
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: fresh-hop-van-beer
+    name: Van Beer (Fresh Hop)
+    url: https://greatnotion.com/products/fresh-hop-van-beer
+    abv: 7.2
+    hops_as_written: Quantity Decrease quantity for Van Beer (Fresh Hop)  Van Beer (Fresh Hop) – Great Notion Skip to content Our hop waters and sodas ship nationwide! Shop by Location Shipping Anchorage, Alaska California Kentucky Nebraska New Hampshire North Dakota Ohio Oregon Pennsylvania Washington Washington DC Vermont Virginia Nationwide Oregon Alberta Northwest Beaverton Washington Ballard Georgetown Califor...
+    hops:
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: strata, name: Strata, fresh: true, farm: Coleman Agriculture, as_written: Strata }
+  - slug: west-coast-ripe
+    name: West Coast Ripe
+    url: https://greatnotion.com/products/west-coast-ripe
+    abv: 6.6
+    hops_as_written: Quantity Decrease quantity for West Coast Ripe  West Coast Ripe – Great Notion Skip to content Our hop waters and sodas ship nationwide! Shop by Location Shipping Anchorage, Alaska California Kentucky Nebraska New Hampshire North Dakota Ohio Oregon Pennsylvania Washington Washington DC Vermont Virginia Nationwide Oregon Alberta Northwest Beaverton Washington Ballard Georgetown California Sacram...
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }

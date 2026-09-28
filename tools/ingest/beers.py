@@ -469,6 +469,31 @@ def parse_structures(path: Path) -> tuple | None:
     return name.strip(), float(abv), desc.strip(), "prose"
 
 
+def parse_shopify(path: Path) -> tuple | None:
+    """A Shopify product page: the name from the <title>, the description
+    between the price block and the quantity picker."""
+    soup, _, text = page_text(path)
+    title = soup.title.string if soup.title and soup.title.string else ""
+    name = re.split(r"\s[\u2013|-]\s", title.strip())[0].strip() or None
+    m = re.search(r"(?:Shipping calculated at checkout|Tax included\.?)\s*(.{20,1500}?)\s*(?:Quantity|Add to cart|Sold out)", text)
+    desc = " ".join(filter(None, [m.group(1) if m else None, parse_prose_generic(path)[2]])) or None
+    abv = re.search(r"\|\s*([\d.]+)%", text)
+    return name, float(abv.group(1)) if abv else abv_of(desc or ""), desc, "prose"
+
+
+def parse_pelican(path: Path) -> tuple | None:
+    """'Ingredients: Two-Row malt, … Magnum hops, Mosaic hops, Strata hops, Water, …'"""
+    soup, _, text = page_text(path)
+    title = soup.title.string if soup.title and soup.title.string else ""
+    name = re.split(r"\s[\u2013|-]\s", title.strip())[0].strip() or None
+    field = between(text, r"Ingredients:", r"Water|Pure brewers|[A-Z][a-z]+ yeast")
+    hops = ", ".join(re.findall(r"([A-Z][\w.' -]+?) hops\b", field or "")) or None
+    if hops:
+        return name, abv_of(text), hops, "field"
+    _, _, prose, _ = parse_prose_generic(path)
+    return name, abv_of(text), prose, "prose"
+
+
 def parse_description(path: Path) -> tuple | None:
     """Breweries that write a paragraph: the whole description is scanned for
     variety names (see names_in for how ordinary words are kept out)."""
@@ -518,8 +543,8 @@ PARSERS = {
     "block-15": (parse_block15, "block15.com", "*.html"),
     "stoup": (parse_stoup, "stoupbrewing.com", "beer_*.html"),
     "structures": (parse_structures, "structuresbrewing.com", "*.html"),
-    "pelican": (parse_prose_generic, "pelicanbrewing.com", "beer_*.html"),
-    "great-notion": (parse_prose_generic, "greatnotion.com", "products_*.html"),
+    "pelican": (parse_pelican, "pelicanbrewing.com", "beer_*.html"),
+    "great-notion": (parse_shopify, "greatnotion.com", "products_*.html"),
 }
 
 
@@ -590,7 +615,8 @@ def source_url(path: Path, brewery: dict | None = None) -> str:
     """Rebuild the page URL from the saved file's name (see snapshot.target)."""
     if brewery and brewery.get("page_url"):
         # page_url: "https://host/{path}" -- for sites whose URLs don't end in a slash.
-        return brewery["page_url"].format(path=path.stem.replace("_", "/"))
+        # One directory deep, so only the first "_" was a "/": products_ripe_ipa.
+        return brewery["page_url"].format(path=path.stem.replace("_", "/", 1))
     host = path.parent.name
     host = host if host.count(".") > 1 or host in ("breakside.com", "exnovobrew.com", "doublemountainbrewery.com",
                                                     "eclipticbrewing.com", "fortgeorgebrewery.com") else "www." + host

@@ -1,0 +1,82 @@
+brewery:
+  slug: pelican
+  name: Pelican Brewing
+  city: Pacific City
+  state: OR
+  url: https://pelicanbrewing.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-28'
+beers:
+  - slug: bad-santa
+    name: Bad Santa
+    url: https://www.pelicanbrewing.com/beer/bad-santa/
+    abv: 7.5
+    hops_as_written: ' Toasted malt and roast character blends seamlessly with the alluring herbal hop aroma that comes from copious amounts of Fuggle hops.'
+    hops:
+      - { hop: fuggle, name: Fuggle, as_written: Fuggle }
+  - slug: beak-breaker
+    name: Beak Breaker
+    url: https://www.pelicanbrewing.com/beer/beak-breaker/
+    abv: 9.0
+    hops_as_written: ' Beak Breaker – Pelican Brewing Company What do hopheads love about hops? Great big punchy aromas.  At Pelican Brewing we’ve been packing hop aroma into beer for over 20 years.  With massive additions of Mosaic, Citra, and Centennial hops this beer delivers a bright citrus-tropical aroma with notes of ruby red grapefruit and sweet pine, blasting your olfactory sense…enough to break your beak! -...'
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+  - slug: beak-breaker-hazy
+    name: Beak Breaker Hazy
+    url: https://www.pelicanbrewing.com/beer/beak-breaker-hazy/
+    abv: 8.7
+    hops_as_written: Magnum, Mosaic, Strata
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: beak-breaker-tropical
+    name: Beak Breaker Tropical
+    url: https://www.pelicanbrewing.com/beer/beak-breaker-tropical/
+    hops_as_written: Magnum, Citra, El Dorado, Nectaron
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+  - slug: blackberry
+    name: Blackberry
+    url: https://www.pelicanbrewing.com/beer/blackberry/
+    abv: 5.0
+    hops_as_written: Strata, Made from real blackberries Enhanced by Strata
+    hops:
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: flock-party
+    name: Flock Party
+    url: https://www.pelicanbrewing.com/beer/flock-party/
+    abv: 6.8
+    hops_as_written: Bravo, Centennial, Strata
+    hops:
+      - { hop: bravo, name: Bravo, as_written: Bravo }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: strata, name: Strata, as_written: Strata }
+  - slug: mother-of-all-storms
+    name: Mother
+    url: https://www.pelicanbrewing.com/beer/mother-of-all-storms/
+    abv: 14.0
+    hops_as_written: ' ABV: 14% IBU: 40 Plato: 32° Ingredients: Golden Promise Malt, Munich Malt, Melanoidin Malt, Caramel Malt, Torrified Wheat, Magnum Hops, Glacier Hops, Pure Ale Yeast, Pure Coastal Water Available from November-December in 22oz bottles and on draft in select locations.'
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+      - { hop: glacier, name: Glacier, as_written: Glacier }
+  - slug: mr-lagers-neighborhood
+    name: Mr. Lager’s Neighborhood
+    url: https://www.pelicanbrewing.com/beer/mr-lagers-neighborhood/
+    abv: 5.7
+    hops_as_written: ' A bright hop bill featuring Strata and Cashmere hops delivers notes of honeydew, tangerine, and marionberry.'
+    hops:
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+  - slug: pelican-west-coast-india-pale-ale
+    name: Pelican West Coast India Pale Ale
+    url: https://www.pelicanbrewing.com/beer/pelican-west-coast-india-pale-ale/
+    abv: 7.4
+    hops_as_written: Ekuanot Cryo
+    hops:
+      - { hop: ekuanot, name: Ekuanot, form: Cryo, as_written: Ekuanot }

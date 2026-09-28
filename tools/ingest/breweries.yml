@@ -200,7 +200,8 @@
   state: OR
   url: https://pelicanbrewing.com/
   listing: ['https://pelicanbrewing.com/beer/']
-  match: '^https://pelicanbrewing\.com/beer/[a-z0-9-]+/$'
+  # Not the hop waters (Sparkle Hops): they're not beer.
+  match: '^https://pelicanbrewing\.com/beer/(?!sparkle|[a-z]+-plus-)[a-z0-9-]+/$'
 
 - slug: great-notion
   name: Great Notion Brewing
