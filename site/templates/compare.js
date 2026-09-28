@@ -8,12 +8,6 @@ export function renderCompare({ meta }) {
   const body = `
 <header class="masthead" style="padding-top:1.5rem">
   <div class="wrap">
-    <nav class="nav" style="border-top:0;padding-top:0">
-      <a href="${base}">All hops</a>
-      <a href="${base}beers/">What's in the can</a>
-      <a href="${base}scan/">Scan a beer 📷</a>
-      <a href="${base}about/">How it works</a>
-    </nav>
     <h1 class="page-title">Hop <em>vs</em> hop</h1>
     <p class="standfirst">Pick two hops and see them side by side: what each smells
     like, how hard it bitters, what brewers pair it with, and which beers use both.</p>
@@ -35,6 +29,7 @@ ${footer(base, meta)}
 
   return shell({
     title: 'Compare two hops side by side | HopLove',
+    active: 'compare',
     description: 'Put any two hops next to each other: aroma, bitterness, oils, what brewers pair them with, and the beers that use both.',
     body,
     base,

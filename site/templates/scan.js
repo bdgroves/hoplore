@@ -11,11 +11,6 @@ export function renderScan({ meta }) {
   const body = `
 <header class="masthead" style="padding-top:1.5rem">
   <div class="wrap">
-    <nav class="nav" style="border-top:0;padding-top:0">
-      <a href="${base}">All hops</a>
-      <a href="${base}beers/">What's in the can</a>
-      <a href="${base}about/">How it works</a>
-    </nav>
     <h1 class="page-title">Scan a <em>beer</em></h1>
     <p class="standfirst">Take a picture of the can, the bottle or the tap list —
     or paste the brewery's description — and HopLove reads the hops off it and
@@ -75,6 +70,7 @@ ${footer(base, meta)}
 
   return shell({
     title: 'Scan a beer — read the hops off a can | HopLove',
+    active: 'scan',
     description: 'Photograph a can, bottle or tap list and see every hop in the beer: aroma, alpha acid and where it was grown.',
     body,
     base,

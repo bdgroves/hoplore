@@ -39,7 +39,27 @@ const OIL_COLOR = {
   other: '#bcb7a4',
 };
 
-export function shell({ title, description, body, base = '', bodyClass = '' }) {
+/** HopLove's own tabs: the features, as big readable buttons on every page. */
+export const FEATURES = [
+  { key: 'beers', href: 'beers/', icon: '🍺', label: "What's in the can", blurb: 'Find a beer, see every hop in it and what it’ll taste like.' },
+  { key: 'scan', href: 'scan/', icon: '📷', label: 'Scan a beer', blurb: 'Snap the can or tap list and it reads the hops for you.' },
+  { key: 'fresh', href: 'fresh-hop/', icon: '🌿', label: 'Fresh hop', blurb: 'This season’s fresh hop beers and the farms behind them.' },
+  { key: 'compare', href: 'compare/', icon: '⚖️', label: 'Hop vs hop', blurb: 'Put two hops side by side and settle the argument.' },
+  { key: 'science', href: 'science/', icon: '🧪', label: 'Hop science', blurb: 'The acids and oils that make a hop, molecule by molecule.' },
+  { key: 'hops', href: '', icon: '🔎', label: 'All hops', blurb: 'Every hop on file, with its smell, bite and sources.' },
+  { key: 'about', href: 'about/', icon: '❓', label: 'How it works', blurb: 'New here? Start with the four ways in.' },
+];
+
+export const appBar = (base, active) => `<nav class="appbar" aria-label="HopLove">
+  <div class="appbar-inner">
+    <a class="appbar-home" href="${base}" aria-label="HopLove home"><img src="${base}assets/hoplove-badge.png" alt="" width="40" height="40"><span>HopLove</span></a>
+    <div class="appbar-tabs">
+      ${FEATURES.filter((f) => f.key !== 'hops' || active !== 'home').map((f) => `<a href="${base}${f.href}"${f.key === active ? ' aria-current="page"' : ''}><span aria-hidden="true">${f.icon}</span>${f.label}</a>`).join('\n      ')}
+    </div>
+  </div>
+</nav>`;
+
+export function shell({ title, description, body, base = '', bodyClass = '', active = '' }) {
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -59,7 +79,8 @@ export function shell({ title, description, body, base = '', bodyClass = '' }) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="${FONTS}" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍺</text></svg>">
+<link rel="icon" type="image/png" href="${base}assets/favicon.png">
+<link rel="apple-touch-icon" href="${base}assets/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/site-footer.css">
 <link rel="stylesheet" href="${base}assets/hoplore.css">
 ${THEME_INIT}
@@ -67,6 +88,8 @@ ${THEME_INIT}
 <body class="${bodyClass}" id="top">
 <a class="skip" href="#main">Skip to content</a>
 ${siteHeader(base)}
+${appBar(base, active)}
+<script>document.querySelector('.appbar-tabs [aria-current]')?.scrollIntoView({ block: 'nearest', inline: 'center' });</script>
 ${body}
 ${THEME_TOGGLE}
 </body>
@@ -126,15 +149,14 @@ export function renderIndex({ hops, taxonomy, meta }) {
   const body = `
 <header class="masthead">
   <div class="wrap">
-    <h1 class="wordmark">Hop<span>Love</span> <i class="wordmark-emoji" aria-hidden="true">🍺❤️</i></h1>
+    <div class="hero-brand"><img class="hero-badge" src="assets/hoplove-badge.png" alt="HopLove sticker: a hop cone with a heart" width="160" height="160">
+    <h1 class="wordmark">Hop<span>Love</span></h1></div>
     <p class="standfirst">Look at a can, know the hops. Pick a Pacific Northwest
     beer — or snap a picture of one — and see what each hop smells like, how hard
     it bitters and where it was grown. Every number is a citation, not a claim.</p>
-    <p class="cta"><a class="chip scan-go" href="beers/">What's in the can →</a>
-    <a class="chip" href="scan/">Scan a beer 📷</a>
-    <a class="chip" href="compare/">Hop vs hop</a>
-    <a class="chip" href="fresh-hop/">Fresh hop season 🌿</a></p>
-    <p class="fine new-here">New here? <a href="about/">Here's how it works →</a></p>
+    <ul class="tiles">
+      ${FEATURES.filter((f) => f.key !== 'hops').map((f) => `<li><a href="${f.href}"><span class="tile-icon" aria-hidden="true">${f.icon}</span><b>${f.label}</b><span>${f.blurb}</span></a></li>`).join('\n      ')}
+    </ul>
     <div class="stats">
       <div><b>${hops.length}</b> cultivars</div>
       <div><b>${meta.sourceCount}</b> sources</div>
@@ -144,10 +166,6 @@ export function renderIndex({ hops, taxonomy, meta }) {
     <nav class="nav">
       <a href="landscape/">Hop landscape</a>
       <a href="grown/">Where the hops grow</a>
-      <a href="beers/">What's in the can</a>
-      <a href="scan/">Scan a beer 📷</a>
-      <a href="compare/">Hop vs hop</a>
-      <a href="about/">How it works</a>
       <a href="api/v1/hops.json">Download the data</a>
       <a href="api/v1/schema/hop.schema.json">Schema</a>
       <a href="https://github.com/bdgroves/hoplore">GitHub</a>
@@ -187,6 +205,7 @@ ${footer('', meta)}
 
   return shell({
     title: 'HopLove 🍺❤️ — look at a can, know the hops',
+    active: 'home',
     description: `What’s in 1,300+ Pacific Northwest beers, hop by hop, plus brewing values, oil breakdowns and substitutions for ${hops.length} hop cultivars. Open data, free JSON API, every number cited.`,
     body,
   });
@@ -299,11 +318,9 @@ export function renderHop({ hop, similar, taxonomy, sources, meta, acreageYears 
 <header class="masthead" style="padding-top:1.5rem">
   <div class="wrap">
     <nav class="nav" style="border-top:0;padding-top:0">
-      <a href="${base}">All hops</a>
-      <a href="${base}beers/">What's in the can</a>
-      <a href="${base}scan/">Scan a beer 📷</a>
-      <a href="${base}compare/?a=${hop.slug}">Compare it</a>
-      <a href="${base}about/">How it works</a>
+      <a href="${base}">← All hops</a>
+      <a href="${base}compare/?a=${hop.slug}">Compare ${esc(hop.name)} with…</a>
+      <a href="${base}landscape/#${hop.slug}">Where it sits in the landscape</a>
     </nav>
   </div>
 </header>
@@ -365,6 +382,7 @@ ${footer(base, meta)}`;
 
   return shell({
     title: `${hop.name} hop — brewing values, oils and substitutes | HopLove`,
+    active: 'hops',
     description: hop.aroma?.summary?.slice(0, 180) ?? `${hop.name}: a ${hop.purpose} hop from ${country}.`,
     body,
     base,

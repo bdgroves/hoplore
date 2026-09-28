@@ -8,12 +8,6 @@ export function renderAbout({ meta, stats }) {
   const body = `
 <header class="masthead" style="padding-top:1.5rem">
   <div class="wrap">
-    <nav class="nav" style="border-top:0;padding-top:0">
-      <a href="${base}">All hops</a>
-      <a href="${base}beers/">What's in the can</a>
-      <a href="${base}scan/">Scan a beer 📷</a>
-      <a href="${base}compare/">Hop vs hop</a>
-    </nav>
     <h1 class="page-title">How it <em>works</em></h1>
     <p class="standfirst">You're holding a beer. The can says Citra and Mosaic. What does
     that actually mean? HopLove tells you — what each hop smells like, how hard it
@@ -127,6 +121,7 @@ ${footer(base, meta)}`;
 
   return shell({
     title: 'How HopLove works | HopLove',
+    active: 'about',
     description: 'How to find a beer, read its hops, scan a can and compare hops on HopLove — and where it all comes from.',
     body,
     base,

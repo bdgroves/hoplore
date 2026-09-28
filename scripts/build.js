@@ -19,6 +19,7 @@ import { renderBeer, renderBeers, beersByHop, pairingsByHop, attachLookalikes, r
 import { renderScan } from '../site/templates/scan.js';
 import { renderCompare } from '../site/templates/compare.js';
 import { renderAbout } from '../site/templates/about.js';
+import { renderScience } from '../site/templates/science.js';
 import { attachMine } from '../site/templates/mine.js';
 
 const API_VERSION = 'v1';
@@ -147,6 +148,7 @@ write(out('landscape/index.html'), renderLandscape({ hops, meta }));
 if (acreage) write(out('grown/index.html'), renderGrown({ acreage, hops, meta }));
 write(out('scan/index.html'), renderScan({ meta }));
 write(out('compare/index.html'), renderCompare({ meta }));
+write(out('science/index.html'), renderScience({ hops, meta }));
 write(
   out('about/index.html'),
   renderAbout({
@@ -194,7 +196,7 @@ write(out('robots.txt'), `User-agent: *\nAllow: /\nSitemap: /sitemap.xml\n`);
 write(
   out('sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    ['', 'landscape/', ...(acreage ? ['grown/'] : []), 'scan/', 'compare/', 'about/', ...(breweries.length ? ['beers/', 'fresh-hop/', ...beerPaths] : []), ...hops.map((h) => `hops/${h.slug}/`)]
+    ['', 'landscape/', ...(acreage ? ['grown/'] : []), 'scan/', 'compare/', 'about/', 'science/', ...(breweries.length ? ['beers/', 'fresh-hop/', ...beerPaths] : []), ...hops.map((h) => `hops/${h.slug}/`)]
       .map((p) => `  <url><loc>https://brooksgroves.com/hoplore/${p}</loc></url>`)
       .join('\n') +
     `\n</urlset>\n`

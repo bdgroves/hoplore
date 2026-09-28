@@ -279,6 +279,7 @@ ${footer(base, meta)}`;
 
   return shell({
     title: `${beer.name} by ${brewery.name}: the hops, explained | HopLove`,
+    active: 'beers',
     description: `${beer.name} (${brewery.name}) is hopped with ${bill.map((e) => e.name).join(', ')}. What each hop is, what it smells like, and where it's grown.`,
     body,
     base,
@@ -353,13 +354,6 @@ export function renderBeers({ breweries, bySlug, meta, recent = [] }) {
   const body = `
 <header class="masthead" style="padding-top:1.5rem">
   <div class="wrap">
-    <nav class="nav" style="border-top:0;padding-top:0">
-      <a href="${base}">All hops</a>
-      <a href="${base}grown/">Where the hops grow</a>
-      <a href="${base}scan/">Scan a beer 📷</a>
-      <a href="${base}compare/">Hop vs hop</a>
-      <a href="${base}about/">How it works</a>
-    </nav>
     <h1 class="page-title">What's in the can</h1>
     <p class="standfirst">Pick a beer, see its hops — what each one is, what it
     smells like, how hard it bitters, and where it was grown. ${total.toLocaleString('en-US')} beers from
@@ -395,6 +389,7 @@ ${footer(base, meta)}
 
   return shell({
     title: "What's in the can — beers and their hops, explained | HopLove",
+    active: 'beers',
     description: `${total.toLocaleString('en-US')} Pacific Northwest beers with every hop in them opened up: aroma, alpha acid, oils and where it was grown.`,
     body,
     base,
@@ -527,12 +522,6 @@ export function renderFreshHop({ breweries, bySlug, meta }) {
   const body = `
 <header class="masthead" style="padding-top:1.5rem">
   <div class="wrap">
-    <nav class="nav" style="border-top:0;padding-top:0">
-      <a href="${base}">All hops</a>
-      <a href="${base}beers/">What's in the can</a>
-      <a href="${base}scan/">Scan a beer 📷</a>
-      <a href="${base}about/">How it works</a>
-    </nav>
     <h1 class="page-title">Fresh hop <em>season</em></h1>
     <p class="standfirst">Once a year, late August into October, Northwest brewers drive to the hop farms,
     load up hops that were on the bine that morning, and get them into beer before they wilt. No drying,
@@ -586,6 +575,7 @@ ${footer(base, meta)}`;
 
   return shell({
     title: `Fresh hop season: ${total} Northwest fresh hop beers and their hops | HopLove`,
+    active: 'fresh',
     description: `${total} fresh (wet) hop beers from ${groups.length} Pacific Northwest breweries, with the hops that went in straight off the bine and the farms they came from.`,
     body,
     base,
