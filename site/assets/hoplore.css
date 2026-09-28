@@ -1031,3 +1031,26 @@ body.searching .brewery > p.fine { display: none; }
 
 /* a fade at the right edge says "there's more, swipe" */
 @media (max-width: 46rem) { .appbar-tabs { mask-image: linear-gradient(90deg, #000 85%, transparent); -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); } }
+
+/* --- app bar, take two: every tab always visible, nothing to scroll ---- */
+.appbar-inner { flex-wrap: wrap; }
+.appbar-tabs { flex: 1; flex-wrap: wrap; overflow: visible; mask-image: none; -webkit-mask-image: none; margin: 0; padding: 0; justify-content: flex-end; }
+.appbar-tabs a { flex: none; }
+.appbar-tabs .tab-short { display: none; }
+/* Narrower desktops and tablets: logo on its own line, tabs in an even grid. */
+@media (max-width: 78rem) {
+  .appbar-inner { flex-direction: column; align-items: stretch; gap: 0.5rem; padding-top: 0.6rem; padding-bottom: 0.7rem; }
+  .appbar-tabs { display: grid; grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr)); gap: 0.4rem; }
+  .appbar-tabs a { justify-content: center; }
+}
+/* Phones: app-style buttons, icon over a short label, four to a row. */
+@media (max-width: 46rem) {
+  .appbar-tabs { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.35rem; margin: 0; padding: 0; mask-image: none; -webkit-mask-image: none; }
+  .appbar-tabs a { flex-direction: column; gap: 0.15rem; padding: 0.45rem 0.2rem; border-radius: 12px; font-size: 0.74rem; line-height: 1.15; text-align: center; white-space: normal; }
+  .appbar-tabs .tab-icon { font-size: 1.25rem; line-height: 1; }
+  .appbar-tabs .tab-long { display: none; }
+  .appbar-tabs .tab-short { display: inline; }
+}
+@media (max-width: 78rem) {
+  .appbar-tabs { flex: none; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}

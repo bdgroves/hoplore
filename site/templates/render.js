@@ -41,20 +41,20 @@ const OIL_COLOR = {
 
 /** HopLove's own tabs: the features, as big readable buttons on every page. */
 export const FEATURES = [
-  { key: 'beers', href: 'beers/', icon: '🍺', label: "What's in the can", blurb: 'Find a beer, see every hop in it and what it’ll taste like.' },
-  { key: 'scan', href: 'scan/', icon: '📷', label: 'Scan a beer', blurb: 'Snap the can or tap list and it reads the hops for you.' },
-  { key: 'fresh', href: 'fresh-hop/', icon: '🌿', label: 'Fresh hop', blurb: 'This season’s fresh hop beers and the farms behind them.' },
-  { key: 'compare', href: 'compare/', icon: '⚖️', label: 'Hop vs hop', blurb: 'Put two hops side by side and settle the argument.' },
-  { key: 'science', href: 'science/', icon: '🧪', label: 'Hop science', blurb: 'The acids and oils that make a hop, molecule by molecule.' },
-  { key: 'hops', href: '', icon: '🔎', label: 'All hops', blurb: 'Every hop on file, with its smell, bite and sources.' },
-  { key: 'about', href: 'about/', icon: '❓', label: 'How it works', blurb: 'New here? Start with the four ways in.' },
+  { key: 'beers', href: 'beers/', icon: '🍺', short: 'The can', label: "What's in the can", blurb: 'Find a beer, see every hop in it and what it’ll taste like.' },
+  { key: 'scan', href: 'scan/', icon: '📷', short: 'Scan', label: 'Scan a beer', blurb: 'Snap the can or tap list and it reads the hops for you.' },
+  { key: 'fresh', href: 'fresh-hop/', icon: '🌿', short: 'Fresh hop', label: 'Fresh hop', blurb: 'This season’s fresh hop beers and the farms behind them.' },
+  { key: 'compare', href: 'compare/', icon: '⚖️', short: 'Hop vs hop', label: 'Hop vs hop', blurb: 'Put two hops side by side and settle the argument.' },
+  { key: 'science', href: 'science/', icon: '🧪', short: 'Science', label: 'Hop science', blurb: 'The acids and oils that make a hop, molecule by molecule.' },
+  { key: 'hops', href: '', icon: '🔎', short: 'All hops', label: 'All hops', blurb: 'Every hop on file, with its smell, bite and sources.' },
+  { key: 'about', href: 'about/', icon: '❓', short: 'How to', label: 'How it works', blurb: 'New here? Start with the four ways in.' },
 ];
 
 export const appBar = (base, active) => `<nav class="appbar" aria-label="HopLove">
   <div class="appbar-inner">
     <a class="appbar-home" href="${base}" aria-label="HopLove home"><img src="${base}assets/hoplove-badge.png" alt="" width="40" height="40"><span>HopLove</span></a>
     <div class="appbar-tabs">
-      ${FEATURES.filter((f) => f.key !== 'hops' || active !== 'home').map((f) => `<a href="${base}${f.href}"${f.key === active ? ' aria-current="page"' : ''}><span aria-hidden="true">${f.icon}</span>${f.label}</a>`).join('\n      ')}
+      ${FEATURES.map((f) => `<a href="${base}${f.href}"${f.key === active || (f.key === 'hops' && active === 'home') ? ' aria-current="page"' : ''}><span class="tab-icon" aria-hidden="true">${f.icon}</span><span class="tab-long">${f.label}</span><span class="tab-short" aria-hidden="true">${f.short}</span></a>`).join('\n      ')}
     </div>
   </div>
 </nav>`;
@@ -89,7 +89,6 @@ ${THEME_INIT}
 <a class="skip" href="#main">Skip to content</a>
 ${siteHeader(base)}
 ${appBar(base, active)}
-<script>document.querySelector('.appbar-tabs [aria-current]')?.scrollIntoView({ block: 'nearest', inline: 'center' });</script>
 ${body}
 ${THEME_TOGGLE}
 </body>
