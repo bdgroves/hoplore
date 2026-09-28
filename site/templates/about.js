@@ -1,6 +1,6 @@
 /** How HopLove works, in bar words, and what it is. /about/ */
 
-import { shell, footer, esc } from './render.js';
+import { shell, footer, esc, TIP_URL } from './render.js';
 
 export function renderAbout({ meta, stats }) {
   const base = '../';
@@ -101,13 +101,22 @@ export function renderAbout({ meta, stats }) {
     </dl>
   </section>
 
+  <section class="block tip-jar">
+    <h2>Buy Brooks a beer</h2>
+    <p>HopLove is free and staying that way. Keeping it running costs a little — mostly the camera, which pays
+    per photo it reads. If it's saved you from a bad six-pack, or settled an argument at the bar, a beer's worth
+    of thanks helps cover it.</p>
+    <p><a class="tip-btn big" href="${TIP_URL}" rel="noopener">Buy Brooks a beer 🍺</a></p>
+    <p class="fine">Through Ko-fi. One-off, any amount, no account needed.</p>
+  </section>
+
   <section class="block about-me">
     <h2>About HopLove</h2>
     <p>HopLove is a side project by <a href="https://brooksgroves.com/">Brooks Groves</a>, a GIS and data guy in
     Lakewood, Washington, who wanted to look at a can of fresh hop IPA and actually know what was in it. It started as
     a hop database that shows its sources (the working name was HopLore) and grew a beer list, a camera and a lot of
     fresh hop season.</p>
-    <p>Nobody pays for it and nobody's selling you hops. It isn't affiliated with any brewery, breeder, farm or
+    <p>Nobody's selling you hops, and there are no ads. It isn't affiliated with any brewery, breeder, farm or
     merchant; the variety names belong to their owners. The code and data are on
     <a href="https://github.com/bdgroves/hoplore">GitHub</a>.</p>
     <p class="fine">${stats.hops} hops · ${n(stats.beers)} beers · ${stats.breweries} breweries · ${stats.sources} sources ·
