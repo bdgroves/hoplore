@@ -49,6 +49,13 @@ export function shell({ title, description, body, base = '', bodyClass = '' }) {
 <meta name="description" content="${esc(description)}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HopLove">
+<meta property="og:image" content="https://brooksgroves.com/hoplore/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://brooksgroves.com/hoplore/assets/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="${FONTS}" rel="stylesheet">
@@ -113,10 +120,12 @@ export function renderIndex({ hops, taxonomy, meta }) {
   const body = `
 <header class="masthead">
   <div class="wrap">
-    <h1 class="wordmark">Hop<span>Lore</span></h1>
-    <p class="standfirst">A hop database that shows its working. Every number
-    here is a citation, not a claim — and when the breeder and the merchant
-    disagree, you get to see both.</p>
+    <h1 class="wordmark">Hop<span>Love</span> <i class="wordmark-emoji" aria-hidden="true">🍺❤️</i></h1>
+    <p class="standfirst">Look at a can, know the hops. Pick a Pacific Northwest
+    beer — or snap a picture of one — and see what each hop smells like, how hard
+    it bitters and where it was grown. Every number is a citation, not a claim.</p>
+    <p class="cta"><a class="chip scan-go" href="beers/">What's in the can →</a>
+    <a class="chip" href="scan/">Scan a beer 📷</a></p>
     <div class="stats">
       <div><b>${hops.length}</b> cultivars</div>
       <div><b>${meta.sourceCount}</b> sources</div>
@@ -166,8 +175,8 @@ ${footer('', meta)}
 <script src="assets/index.js" type="module"></script>`;
 
   return shell({
-    title: 'HopLove — an open hop variety database that shows its sources',
-    description: `Brewing values, oil breakdowns and substitutions for ${hops.length} hop cultivars. Open data, free JSON API, every number cited.`,
+    title: 'HopLove 🍺❤️ — look at a can, know the hops',
+    description: `What’s in 1,300+ Pacific Northwest beers, hop by hop, plus brewing values, oil breakdowns and substitutions for ${hops.length} hop cultivars. Open data, free JSON API, every number cited.`,
     body,
   });
 }

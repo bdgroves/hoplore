@@ -62,7 +62,7 @@ export function renderScan({ meta }) {
     </div>
     <div class="scan-keep">
       <button id="keep" class="chip scan-go" type="button">Add to HopLove</button>
-      <span class="fine">Opens a GitHub issue with this beer filled in; submit it and the site
+      <span class="fine" id="keep-note">Opens a GitHub issue with this beer filled in; submit it and the site
       adds the beer and rebuilds in a couple of minutes. Check the hop names first —
       the picture is read by a model, and a misread name is easy to fix in the issue.</span>
     </div>

@@ -5,7 +5,7 @@ brewery:
   state: OR
   url: https://exnovobrew.com/
 generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
-retrieved: '2026-09-27'
+retrieved: '2026-09-28'
 beers:
   - slug: 1995-called
     name: 1995 Called
@@ -253,7 +253,6 @@ beers:
   - slug: corrales-is-more
     name: Corrales is More
     url: https://exnovobrew.com/beer/corrales-is-more/
-    abv: 0.3
     hops_as_written: Perle, Saaz
     hops:
       - { hop: perle, name: Perle, as_written: Perle }
@@ -346,7 +345,7 @@ beers:
     abv: 4.6
     hops_as_written: Aged whole leaf spalt, Amarillo, HBC 586, Strata
     hops:
-      - { hop: null, name: Aged whole leaf spalt, as_written: Aged whole leaf spalt }
+      - { hop: spalt-spalter, name: spalt, form: aged whole cone, as_written: Aged whole leaf spalt }
       - { hop: amarillo, name: Amarillo, as_written: Amarillo }
       - { hop: krush, name: HBC 586, as_written: HBC 586 }
       - { hop: strata, name: Strata, as_written: Strata }

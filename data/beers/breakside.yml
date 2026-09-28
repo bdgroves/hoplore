@@ -5,7 +5,7 @@ brewery:
   state: OR
   url: https://breakside.com/
 generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
-retrieved: '2026-09-27'
+retrieved: '2026-09-28'
 beers:
   - slug: distantfriends
     name: '#Distantfriends'
@@ -28,7 +28,7 @@ beers:
     abv: 6.5
     hops_as_written: Aged Whole Leaf Cascade
     hops:
-      - { hop: null, name: Aged Whole Leaf Cascade, as_written: Aged Whole Leaf Cascade }
+      - { hop: cascade, name: Cascade, form: aged whole cone, as_written: Aged Whole Leaf Cascade }
   - slug: the-sublime-helles-lager-copy
     name: Bayside
     url: https://breakside.com/our/beer/the-sublime-helles-lager-copy/
@@ -416,7 +416,6 @@ beers:
   - slug: perpetual-motion
     name: Perpetual Motion
     url: https://breakside.com/our/beer/perpetual-motion/
-    abv: 23.0
     hops_as_written: Liberty
     hops:
       - { hop: liberty, name: Liberty, as_written: Liberty }

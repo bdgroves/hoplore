@@ -162,7 +162,7 @@ export function renderBeer({ brewery, beer, bySlug, taxonomy, meta }) {
     <h1 class="page-title">${esc(beer.name)}</h1>
     <p class="standfirst">${beer.abv != null ? `<span class="num">${fmt(beer.abv)}%</span> ABV. ` : ''}${bill.length} hop${bill.length === 1 ? '' : 's'}${fresh ? `, ${bill.filter((e) => e.fresh).length === 1 ? 'one' : bill.filter((e) => e.fresh).length} of them straight off the bine` : ''} —
     here's what each one is and what it brings.</p>
-    ${beer.mine ? `<p class="had-it"><a href="#rate">${beer.mine.rating ? caps(beer.mine.rating.stars) : '✓'} <span>${beer.mine.checkins.length ? `You've had it${beer.mine.checkins.length > 1 ? ` ${beer.mine.checkins.length} times` : ''}` : 'You rated it'}</span></a></p>` : ''}
+    ${beer.mine ? `<p class="had-it"><a href="#rate">${beer.mine.rating ? caps(beer.mine.rating.stars) : '✓'} <span>${beer.mine.checkins.length ? `Brooks had it${beer.mine.checkins.length > 1 ? ` ${beer.mine.checkins.length} times` : ''}` : 'Brooks rated it'}</span></a></p>` : ''}
   </div>
 </header>
 
@@ -199,7 +199,7 @@ export function renderBeers({ breweries, bySlug, meta, recent = [] }) {
   const row = (b, beer, showBrewery = false) => {
     const bill = hopBill(beer);
     const search = [beer.name, b.brewery.name, b.brewery.city, ...bill.map(hopName)].join(' ').toLowerCase();
-    const had = beer.mine ? ` <span class="had" title="${beer.mine.rating ? `You rated it ${beer.mine.rating.stars}` : "You've had it"}">${beer.mine.rating ? `● ${beer.mine.rating.stars}` : '✓'}</span>` : '';
+    const had = beer.mine ? ` <span class="had" title="${beer.mine.rating ? `Brooks rated it ${beer.mine.rating.stars}` : 'Brooks had it'}">${beer.mine.rating ? `● ${beer.mine.rating.stars}` : '✓'}</span>` : '';
     return `<li data-search="${esc(search)}"><a href="${b.brewery.slug}/${beer.slug}/"><b>${esc(beer.name)}</b>${had}</a>
           <span class="num fine">${showBrewery ? esc(b.brewery.name) : beer.abv != null ? `${fmt(beer.abv)}%` : ''}</span>
           <span class="beer-hops">${bill.map((e) => `<span${e.fresh ? ' class="fresh"' : ''}>${esc(hopName(e))}</span>`).join('')}</span></li>`;
@@ -259,7 +259,7 @@ export function renderBeers({ breweries, bySlug, meta, recent = [] }) {
     </nav>
     <h1 class="page-title">What's in the can</h1>
     <p class="standfirst">Pick a beer, see its hops — what each one is, what it
-    smells like, how hard it bitters, and where it was grown. ${total} beers from
+    smells like, how hard it bitters, and where it was grown. ${total.toLocaleString('en-US')} beers from
     ${order.length} breweries across Washington and Oregon, hop lists straight from the brewery.</p>
   </div>
 </header>
@@ -287,7 +287,7 @@ ${footer(base, meta)}
 
   return shell({
     title: "What's in the can — beers and their hops, explained | HopLove",
-    description: `${total} Pacific Northwest beers with every hop in them opened up: aroma, alpha acid, oils and where it was grown.`,
+    description: `${total.toLocaleString('en-US')} Pacific Northwest beers with every hop in them opened up: aroma, alpha acid, oils and where it was grown.`,
     body,
     base,
   });
@@ -303,7 +303,7 @@ export function hopBeersBlock(list, base, hopName = '') {
   const breweries = new Set(list.map((x) => x.brewery.slug)).size;
   const stars = had.map((x) => x.mine.rating?.stars).filter((v) => v != null);
   const yours = had.length
-    ? `<p class="had-it">You've had ${had.length === 1 ? 'one of them' : `${had.length} of them`}${stars.length ? ` · ${caps(avg(stars))} <span class="fine">average${stars.length > 1 ? ` of ${stars.length}` : ''}</span>` : ''}</p>`
+    ? `<p class="had-it">Brooks has had ${had.length === 1 ? 'one of them' : `${had.length} of them`}${stars.length ? ` · ${caps(avg(stars))} <span class="fine">average${stars.length > 1 ? ` of ${stars.length}` : ''}</span>` : ''}</p>`
     : '';
   return `<section class="block">
     <h2>In the glass <span class="fine">· ${list.length} beer${list.length === 1 ? '' : 's'} from ${breweries} brewer${breweries === 1 ? 'y' : 'ies'}</span></h2>
@@ -347,7 +347,7 @@ function myGlassBlocks({ breweries, bySlug, recent, base }) {
   const loved = inGlass.filter((r) => r.rated.length >= 2);
   const hopsBlock = inGlass.length
     ? `<section class="block in-my-glass">
-    <h2>${loved.length ? 'Hops you love' : 'Hops in your glass'} <span class="fine">· ${loved.length ? 'average rating of the beers you’ve had with each (two or more rated)' : 'how many of the beers you’ve had use each one'}</span></h2>
+    <h2>${loved.length ? 'Hops Brooks loves' : 'Hops in Brooks’s glass'} <span class="fine">· ${loved.length ? 'average rating of the beers he’s had with each (two or more rated)' : 'how many of the beers he’s had use each one'}</span></h2>
     <ol class="bars">
       ${inGlass
         .map(
@@ -357,12 +357,12 @@ function myGlassBlocks({ breweries, bySlug, recent, base }) {
         )
         .join('\n      ')}
     </ol>
-    ${loved.length ? '' : '<p class="fine">Rate a few beers (on Untappd, or with “Rate it” on any beer page) and this turns into the hops you love, ranked.</p>'}
+    ${loved.length ? '' : '<p class="fine">Once more of these are rated, this turns into the hops he loves, ranked.</p>'}
   </section>`
     : '';
 
-  return `<section class="block my-recent" id="your-glass">
-    <h2>Your glass <span class="fine">· latest Untappd check-ins, ${known} of ${recent.length} matched to their hops</span></h2>
+  return `<section class="block my-recent" id="brooks-glass">
+    <h2>In Brooks’s glass <span class="fine">· his latest Untappd check-ins, ${known} of ${recent.length} matched to their hops</span></h2>
     <ul class="ci-cards">
       ${shown.map(card).join('\n      ')}
     </ul>

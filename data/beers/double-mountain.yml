@@ -5,7 +5,7 @@ brewery:
   state: OR
   url: https://doublemountainbrewery.com/
 generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
-retrieved: '2026-09-27'
+retrieved: '2026-09-28'
 beers:
   - slug: centennial
     name: Centennial IPA
@@ -43,6 +43,16 @@ beers:
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: strata, name: Strata, fresh: true, as_written: Strata }
       - { hop: strata, name: Strata, as_written: Strata }
+  - slug: hey-love
+    name: Hey Love
+    url: https://doublemountainbrewery.com/beer/hey/love/
+    abv: 5.8
+    hops_as_written: 'Kettle: Citra, HBC 586, Cluster, Cascade; DH: Cascade, HBC 586, Brewer’s Gold'
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: cluster, name: Cluster, as_written: Cluster }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
   - slug: hop-lion
     name: Hop Lion IPA
     url: https://doublemountainbrewery.com/beer/hop-lion/
@@ -54,6 +64,24 @@ beers:
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: love-shed
+    name: It’s About the Beer
+    url: https://doublemountainbrewery.com/beer/love/shed-2/
+    abv: 6.0
+    hops_as_written: Simcoe, Centennial, and Citra in the kettle, Cascade and Centennial in the hop back, Cryo Centennial, T90 Centennial, and Citra dry hop
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: centennial, name: Centennial, form: Cryo, as_written: Centennial }
+  - slug: jiro
+    name: Jiro
+    url: https://doublemountainbrewery.com/beer/jiro/
+    abv: 4.8
+    hops_as_written: Sterling and Brewer’s Gold in the kettle
+    hops:
+      - { hop: sterling, name: Sterling, as_written: Sterling }
   - slug: killer-green
     name: Killer Green
     url: https://doublemountainbrewery.com/beer/killer-green/
@@ -75,34 +103,6 @@ beers:
       - { hop: centennial, name: Centennial, as_written: Centennial }
       - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Simcoe }
       - { hop: centennial, name: Centennial, fresh: true, as_written: Centennial }
-  - slug: hey-love
-    name: Hey Love
-    url: https://doublemountainbrewery.com/beer/hey/love/
-    abv: 5.8
-    hops_as_written: 'Kettle: Citra, HBC 586, Cluster, Cascade; DH: Cascade, HBC 586, Brewer’s Gold'
-    hops:
-      - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
-      - { hop: cluster, name: Cluster, as_written: Cluster }
-      - { hop: cascade, name: Cascade, as_written: Cascade }
-  - slug: love-shed
-    name: It’s About the Beer
-    url: https://doublemountainbrewery.com/beer/love/shed-2/
-    abv: 6.0
-    hops_as_written: Simcoe, Centennial, and Citra in the kettle, Cascade and Centennial in the hop back, Cryo Centennial, T90 Centennial, and Citra dry hop
-    hops:
-      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
-      - { hop: centennial, name: Centennial, as_written: Centennial }
-      - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: cascade, name: Cascade, as_written: Cascade }
-      - { hop: centennial, name: Centennial, form: Cryo, as_written: Centennial }
-  - slug: jiro
-    name: Jiro
-    url: https://doublemountainbrewery.com/beer/jiro/
-    abv: 4.8
-    hops_as_written: Sterling and Brewer’s Gold in the kettle
-    hops:
-      - { hop: sterling, name: Sterling, as_written: Sterling }
   - slug: iowa-bar-fight
     name: Meet the Iowa Bar Fight
     url: https://doublemountainbrewery.com/beer/iowa-bar-fight/

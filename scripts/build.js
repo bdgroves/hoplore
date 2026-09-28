@@ -85,7 +85,7 @@ write(api('sources.json'), envelope({ sources }));
 write(api('taxonomy.json'), envelope({ taxonomy }));
 write(api('similar.json'), envelope({ similar }));
 if (acreage) write(api('acreage.json'), envelope({ acreage }));
-if (breweries.length) write(api('beers.json'), envelope({ breweries: breweries.map(({ file, ...b }) => b) }));
+if (breweries.length) write(api('beers.json'), envelope({ breweries: breweries.map(({ file, ...b }) => ({ ...b, beers: b.beers.map(({ mine, ...beer }) => beer) })) }));
 
 for (const hop of hops) {
   write(api(`hops/${hop.slug}.json`), envelope({ hop, similar: similar[hop.slug] ?? [] }));

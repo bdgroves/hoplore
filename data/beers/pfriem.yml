@@ -5,7 +5,7 @@ brewery:
   state: OR
   url: https://www.pfriembeer.com/
 generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
-retrieved: '2026-09-27'
+retrieved: '2026-09-28'
 beers:
   - slug: 14th-anniversary-to-thee-lager
     name: 14th Anniversary To Thee Lager

@@ -2,7 +2,7 @@
 // Cloudflare Worker proxy, which holds the API key), matches the hop names to
 // HopLove records, and can open a GitHub issue that adds the beer.
 
-import { makeRater } from './rate.js';
+import { makeRater, isMe } from './rate.js';
 
 const WORKER_URL = 'https://brooks-anthropic-proxy.bdgroves1970.workers.dev';
 // Fastest first; if the Worker or the model turns it down, or the answer
@@ -205,14 +205,21 @@ function keep() {
     `beer: ${q(last.beer)}`, `style: ${q(last.style)}`, `abv: ${last.abv ?? 'null'}`,
     `hops: [${last.hops.map(q).join(', ')}]`, `hops_as_written: ${q(last.hops_as_written)}`,
     `scanned_from: ${q(last.scanned_from)}`, 'brewery_url: null',
-    ...($('#rate-on').checked ? [`stars: ${rater.value}`, `note: ${q($('#scan-note').value.trim() || null)}`] : []),
+    ...(isMe && $('#rate-on').checked ? [`stars: ${rater.value}`, `note: ${q($('#scan-note').value.trim() || null)}`] : []),
   ].join('\n');
   const body = `<!-- hoplove-beer-scan -->\nFix anything misread below, then submit. Submitting adds the beer to HopLove.\n\n\`\`\`yaml\n${yaml}\n\`\`\`\n`;
-  const title = `Beer: ${last.beer} (${last.brewery || 'unknown brewery'})${$('#rate-on').checked ? ` ${rater.value}` : ''}`;
+  const title = `Beer: ${last.beer} (${last.brewery || 'unknown brewery'})${isMe && $('#rate-on').checked ? ` ${rater.value}` : ''}`;
   window.open(`https://github.com/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`, '_blank', 'noopener');
 }
 
 const rater = makeRater($('#scan-rater'), 3.5);
+// Visitors can read any beer; adding and rating are Brooks's (the workflow
+// only acts on his issues), so they get a "suggest" button instead.
+if (!isMe) {
+  $('.scan-rate').hidden = true;
+  $('#keep').textContent = 'Suggest it for HopLove';
+  $('#keep-note').textContent = 'Opens a GitHub issue with this beer filled in, for Brooks to look over and add. You’ll need a GitHub account.';
+}
 // Touching the caps or the note means you want the rating kept.
 $('#scan-rater').addEventListener('input', () => { $('#rate-on').checked = true; });
 $('#scan-rater').addEventListener('click', () => { $('#rate-on').checked = true; });

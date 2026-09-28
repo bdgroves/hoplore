@@ -76,7 +76,7 @@ const when = (d) => {
   return new Date(Date.UTC(y, m - 1, day)).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 };
 
-/** "Your glass" on a beer page: rating, check-ins, and a way to rate it. */
+/** "In Brooks's glass" on a beer page: rating, check-ins, and a way to rate it. */
 export function mineBlock(brewery, beer, base) {
   const m = beer.mine;
   const rating = m?.rating;
@@ -98,12 +98,12 @@ export function mineBlock(brewery, beer, base) {
     ${rating.via === 'hoplove' && rating.note ? `<p class="ci-note">${esc(rating.note)}</p>` : ''}`
     : list.length
       ? `<p class="fine">Checked in ${list.length === 1 ? 'once' : `${list.length} times`}, no rating yet.</p>`
-      : `<p class="fine">Not in your glass yet.</p>`;
+      : `<p class="fine">Brooks hasn’t had this one yet.</p>`;
   return `<section class="block my-glass" id="rate" data-brewery="${esc(brewery.slug)}" data-beer="${esc(beer.slug)}" data-name="${esc(beer.name)}" data-brewery-name="${esc(brewery.name)}">
-    <h2>Your glass</h2>
+    <h2>In Brooks’s glass</h2>
     ${head}
     ${had}
-    <details class="rate-it"><summary>${rating ? 'Re-rate it' : 'Rate it'}</summary>
+    <details class="rate-it" hidden><summary>${rating ? 'Re-rate it' : 'Rate it'}</summary>
       <div class="rater" data-stars="${rating?.stars ?? 3.5}"></div>
       <label for="rate-note" class="fine">A note, if you like</label>
       <textarea id="rate-note" rows="2" maxlength="600" placeholder="dank pine resin, grapefruit…"></textarea>

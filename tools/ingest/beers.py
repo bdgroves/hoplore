@@ -62,8 +62,8 @@ FORMS = [
 # Words in front of a variety: a form, or where it was grown. The form is
 # kept; the origin is dropped from the name so "German Tettnang" finds
 # Tettnang.
-PREFIX_FORMS = {"frozen": "frozen", "second-use": "second use", "cryo-": "Cryo", "cryo": "Cryo", "cgx": "CGX", "abstrax quantum:": "Quantum", "lupomax": "LupoMax", "lupuln2": "LupuLN2", "whole leaf": "whole cone", "whole cone": "whole cone"}
-ORIGINS = r"(?:german|gr|nz|us|usa|american|czech|oregon|washington|yakima|aged|estate|local|hallertau|slovenian|uk|english|mi|michigan|new zealand|australian|yakima valley|willamette valley)"
+PREFIX_FORMS = {"aged whole leaf": "aged whole cone", "aged whole cone": "aged whole cone", "frozen": "frozen", "second-use": "second use", "cryo-": "Cryo", "cryo": "Cryo", "cgx": "CGX", "abstrax quantum:": "Quantum", "lupomax": "LupoMax", "lupuln2": "LupuLN2", "whole leaf": "whole cone", "whole cone": "whole cone"}
+ORIGINS = r"(?:michigan state|german|gr|nz|us|usa|american|czech|oregon|washington|yakima|aged|estate|local|hallertau|slovenian|uk|english|mi|michigan|new zealand|australian|yakima valley|willamette valley)"
 
 # Not hops: malts, numbers and spec words that leak into a hop field.
 NOT_HOPS = re.compile(r"^(two row|2-row|vienna|munich|pilsner|pils|wheat|oats?|malt|\d+ ?ibu|ibu|abv|lactic.*|euphorics.*|yeast.*|aged|none|caramel.*|carapils|black|ginger|lime juice|linc .*|mar+is otter|esb|honey malt|golden promise|rye|spelt|flaked .*)$", re.I)
@@ -493,7 +493,7 @@ def build_beer(brewery: dict, path: Path, parsed: tuple, index: dict[str, str]) 
         name = re.sub(r"\b(Ipa|Esb|Ipl|Dipa|Neipa|Wc|Xpa|Ddh)\b", lambda m: m.group(1).upper(), name.title())
     beer["name"] = name
     beer["url"] = source_url(path)
-    if abv:
+    if abv and 0.5 <= abv <= 18:  # outside that it's a misread (a price, an IBU, a typo on the page)
         beer["abv"] = abv
     beer["hops_as_written"] = hops_line if len(hops_line) <= 400 else hops_line[:397] + "..."
     hops = CommentedSeq()

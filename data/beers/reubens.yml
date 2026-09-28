@@ -5,7 +5,7 @@ brewery:
   state: WA
   url: https://reubensbrews.com/
 generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
-retrieved: '2026-09-27'
+retrieved: '2026-09-28'
 beers:
   - slug: 2-x-2-x
     name: 2 x 2 x 2
@@ -1818,7 +1818,7 @@ beers:
     abv: 6.0
     hops_as_written: Michigan State Chinook
     hops:
-      - { hop: null, name: Michigan State Chinook, as_written: Michigan State Chinook }
+      - { hop: chinook, name: Chinook, as_written: Michigan State Chinook }
   - slug: reubens-citra-crush
     name: Reuben's Citra Crush
     url: https://www.reubensbrews.com/beer/reubens-citra-crush/

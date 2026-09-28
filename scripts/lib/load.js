@@ -65,7 +65,14 @@ export function loadDataset() {
     const seen = new Set(have.beers.map((b) => b.slug));
     have.beers = [...have.beers, ...(doc.beers ?? []).filter((b) => !seen.has(b.slug))];
   }
-  const breweries = [...bySlug.values()];
+  // A crawled beer none of whose "hops" matched a record is usually a page
+  // that listed malts, "aged hops" or a joke where the hops go; it stays in
+  // the data but not on the site. A scanned beer always shows: a person
+  // chose to add it.
+  for (const doc of bySlug.values()) {
+    doc.beers = doc.beers.filter((beer) => beer.scanned || (beer.hops ?? []).some((h) => h.hop));
+  }
+  const breweries = [...bySlug.values()].filter((doc) => doc.beers.length);
 
   // Brooks's own drinking: Untappd check-ins (tools/ingest/untappd.py) and
   // ratings set on HopLove (tools/ingest/rating.py). Both optional.

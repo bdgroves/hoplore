@@ -5,6 +5,21 @@
 
 const REPO = 'bdgroves/hoplore';
 
+// Rating is Brooks's: the controls only show in a browser that has opened
+// any HopLove page with ?me once (?me=0 forgets it). Anyone else's rating
+// issue would be ignored by the workflow anyway; this just keeps the page
+// from offering a button that does nothing for them.
+export const isMe = (() => {
+  try {
+    const q = new URLSearchParams(location.search).get('me');
+    if (q === '0') localStorage.removeItem('hoplove_me');
+    else if (q !== null) localStorage.setItem('hoplove_me', '1');
+    return localStorage.getItem('hoplove_me') === '1';
+  } catch {
+    return false;
+  }
+})();
+
 export function makeRater(el, initial = 3.5) {
   el.classList.add('rater');
   el.innerHTML = `<span class="caps big" aria-hidden="true"><span class="caps-row">●●●●●</span><span class="caps-fill">●●●●●</span></span>
@@ -31,7 +46,8 @@ export function makeRater(el, initial = 3.5) {
 }
 
 const glass = document.querySelector('.my-glass');
-if (glass) {
+if (glass && isMe) {
+  glass.querySelector('.rate-it').hidden = false;
   const holder = glass.querySelector('.rater');
   const rater = makeRater(holder, Number(holder.dataset.stars) || 3.5);
   glass.querySelector('#rate-save').addEventListener('click', () => {
