@@ -17,6 +17,15 @@ const squashBeer = (t) =>
     .replace(/\([^)]*\b(?:19|20)\d\d\b[^)]*\)/g, '')
     .replace(/[^a-z0-9]/g, '');
 
+// The same, without a trailing style: "Topcutter IPA" -> "topcutter".
+const styleless = (t) =>
+  squashBeer(
+    String(t ?? '').replace(
+      /(?:\s+(?:west coast|hazy|juicy|double|imperial|india|session|fresh hop|wet hop|american|northwest|nw|cold))*\s+(?:ipa|iipa|dipa|pale ale|pale|ale|lager|pilsner|pils|stout|porter|sour|saison)\s*$/i,
+      ''
+    )
+  );
+
 /** Adds beer.mine = { checkins, rating } to every beer Brooks has had or
  *  rated, and returns the check-ins (newest first) each with .match. */
 export function attachMine(breweries, checkins = [], ratings = []) {
@@ -40,9 +49,12 @@ export function attachMine(breweries, checkins = [], ratings = []) {
     const want = squashBeer(c.beer);
     // "Field to Ferment: Centennial" is a release of "Field to Ferment".
     const series = c.beer.includes(':') ? squashBeer(c.beer.split(':')[0]) : null;
+    const bare = styleless(c.beer);
     const beer =
       b?.beers.find((x) => squashBeer(x.name) === want || squashBeer(x.slug) === want) ??
       (series ? b?.beers.find((x) => squashBeer(x.name) === series) : null) ??
+      // "Fresh Hop Topcutter" is "Fresh Hop Topcutter IPA" on the brewery's site.
+      (bare.length >= 4 ? b?.beers.find((x) => styleless(x.name) === bare) : null) ??
       null;
     if (beer) mine(beer).checkins.push(c);
     out.push({ ...c, match: beer ? { brewery: b.brewery, beer } : null, breweryMatch: b?.brewery ?? null });

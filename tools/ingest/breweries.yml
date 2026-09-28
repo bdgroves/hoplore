@@ -193,3 +193,26 @@
     - 'https://block15.com/lagered-by-the-sun'
   page_url: 'https://block15.com/{path}'
   match: '^https://(www\.)?block15\.com/(?!(?:order|shop|cart|account|contact|visit|events|jobs|about|beer|privacy|terms|search|blog|news|locations|restaurant|menu|pub|brewery|careers|faq)(?:[/-]|$))[a-z0-9-]+/?$'
+
+- slug: pelican
+  name: Pelican Brewing
+  city: Pacific City
+  state: OR
+  url: https://pelicanbrewing.com/
+  listing: ['https://pelicanbrewing.com/beer/']
+  match: '^https://pelicanbrewing\.com/beer/[a-z0-9-]+/$'
+
+- slug: great-notion
+  name: Great Notion Brewing
+  city: Portland
+  state: OR
+  url: https://greatnotion.com/
+  # A Shopify shop; hops are named in the product description.
+  listing:
+    - 'https://greatnotion.com/collections/all-ipa-products'
+    - 'https://greatnotion.com/collections/all-lager-products'
+    - 'https://greatnotion.com/collections/all-special-products'
+    - 'https://greatnotion.com/collections/all-sour-products'
+  match: '^(https://greatnotion\.com)?/products/[a-z0-9_-]+$'
+  base: https://greatnotion.com
+  page_url: 'https://greatnotion.com/{path}'

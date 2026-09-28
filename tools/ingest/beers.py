@@ -491,6 +491,8 @@ PARSERS = {
     "block-15": (parse_block15, "block15.com", "*.html"),
     "stoup": (parse_stoup, "stoupbrewing.com", "beer_*.html"),
     "structures": (parse_description, "structuresbrewing.com", "*.html"),
+    "pelican": (parse_prose_generic, "pelicanbrewing.com", "beer_*.html"),
+    "great-notion": (parse_prose_generic, "greatnotion.com", "products_*.html"),
 }
 
 
