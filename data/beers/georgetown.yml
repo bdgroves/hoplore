@@ -120,6 +120,7 @@ beers:
     abv: 6.7
     hops_as_written: ALS hop blend from YCH (HBC 630, Loral, Citra, Mosaic, Sabro, Ekuanot, Simcoe, Ahtanum
     hops:
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
       - { hop: loral, name: Loral, as_written: Loral }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
@@ -622,6 +623,7 @@ beers:
     abv: 6.6
     hops_as_written: HBC 1134, Sterling
     hops:
+      - { hop: hbc-1134, name: HBC 1134, as_written: HBC 1134 }
       - { hop: sterling, name: Sterling, as_written: Sterling }
   - slug: chase
     name: Chase

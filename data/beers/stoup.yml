@@ -732,6 +732,7 @@ beers:
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: loral, name: Loral, as_written: Loral }
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
   - slug: enigma-ipa
     name: Enigma IPA
     url: https://www.stoupbrewing.com/beer/enigma-ipa-180.html
@@ -1199,6 +1200,7 @@ beers:
     abv: 6.8
     hops_as_written: "[Retired] If Looks Could Chill Cold IPA - Pink Boots 2022 ABV: 6.80 IBU: 55.00 SRM: 3.00 Categories: Yeast Driven, Experimental, IPA, Northwest The women of Stoup came together to brew a Cold IPA for this year's Pink Boots Collaboration Brew. A base of Pilsner malt with flaked rice sets the stage with a light, crisp base. Warrior Extract for bittering and 2020 Pink Boots Hop Blend in the whirlp..."
     hops:
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
       - { hop: idaho-gem, name: Idaho Gem, as_written: Idaho Gem }
       - { hop: loral, name: Loral, as_written: Loral }
       - { hop: talus, name: Talus, as_written: Talus }
@@ -1249,6 +1251,7 @@ beers:
     hops:
       - { hop: cascade, name: Cascade, as_written: Cascade }
       - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
   - slug: joy-ride-ipa
@@ -1290,6 +1293,7 @@ beers:
     abv: 5.7
     hops_as_written: "[Retired] Kettle to Table IPA ABV: 5.70 IBU: 38.00 SRM: 4.00 Categories: Hop Driven, IPA Who's into culinary buzzwords? Not us! Ok, maybe just this one time because this beer is FRESH! We used some fun hops in this one, HBC 630, Mandarina Bavaria, Wai-iti, Citra and Loral for an unquestionable orange citrus, lime, and raspberry candy hop presence. Bitterness is gentle so as not to distract from..."
     hops:
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
       - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina Bavaria }
       - { hop: wai-iti, name: Wai-iti, as_written: Wai-iti }
       - { hop: citra, name: Citra, as_written: Citra }
@@ -1944,6 +1948,7 @@ beers:
       - { hop: summer, name: Summer, as_written: Summer }
       - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
       - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
   - slug: raspberry-berliner-weiss
     name: Raspberry Berliner Weiss
     url: https://www.stoupbrewing.com/beer/raspberry-berliner-weiss-1539.html
@@ -1992,6 +1997,7 @@ beers:
     hops:
       - { hop: loral, name: Loral, as_written: Loral }
       - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
   - slug: ride-the-lupulin-ipa-2021-hop-mob
     name: Ride the Lupulin IPA (2021 Hop Mob)
     url: https://www.stoupbrewing.com/beer/ride-the-lupulin-ipa-2021-hop-mob-1317.html
@@ -2180,6 +2186,7 @@ beers:
     abv: 6.8
     hops_as_written: "Smooches IPA ABV: 6.80 IBU: 50.00 SRM: 4.00 Categories: Hop Driven, IPA, Northwest So our relationship with you, dear Stoup Consumer, is such that we really feel it's time to tell you how we feel. We like you a lot. We know it's maybe too soon for the big \"L\" word, but we searched high and low for just the right way to sign off on our conversations with you. Something that shows our affection w..."
     hops:
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
       - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
       - { hop: cashmere, name: Cashmere, as_written: Cashmere }
   - slug: so-worth-it-ipa
@@ -2273,6 +2280,7 @@ beers:
     abv: 7.0
     hops_as_written: "[Retired] Stoupersonic IPA ABV: 7.00 IBU: 68.00 SRM: 4.00 Categories: Hop Driven, IPA, Northwest Imagine it's 1979 and you live in Seattle (the grittier, rainier, quirkier Seattle only the locals-if you can find one-remember). The Seattle Supersonics win the NBA championship and the whole city celebrates. What a great day. Now, imagine it's 2020, the Sonics are back in the championship and...wa..."
     hops:
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
       - { hop: triumph, name: Triumph, as_written: Triumph }
   - slug: stoupidly-wicked-ipa
     name: STOUPidly Wicked! IPA
@@ -2466,6 +2474,7 @@ beers:
     hops_as_written: "Time to VOTE IPA ABV: 6.30 IBU: 61.00 SRM: 4.00 Categories: IPA, Northwest, Hop Driven It's time to VOTE!! Grab that ballot, fill it out and mail it back. Or walk/dance/run it to a ballot box for the sheer joy of expressing your right and responsibility to choose our elected officials. Wear a sticker that says \"I Voted!\" or post it on social media or just call a few friends to remind them to VO..."
     hops:
       - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
   - slug: tomorrows-sunrise-ipa
     name: Tomorrow's Sunrise IPA
     url: https://www.stoupbrewing.com/beer/tomorrows-sunrise-ipa-1372.html
@@ -2563,6 +2572,7 @@ beers:
       - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
       - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
       - { hop: azacca, name: Azacca, as_written: Azacca }
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
   - slug: ur-bock
     name: Ur-Bock
     url: https://www.stoupbrewing.com/beer/ur-bock-255.html
@@ -2714,6 +2724,7 @@ beers:
     hops:
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: loral, name: Loral, as_written: Loral }
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
       - { hop: talus, name: Talus, as_written: Talus }
   - slug: american-wheat-beer
     name: Wheat The Rich
@@ -2737,6 +2748,7 @@ beers:
     hops_as_written: "WORTle IPA ABV: 6.70 IBU: 40.00 SRM: 3.00 Categories: Hop Driven, IPA, Northwest For all of you out there agonizing over your first word, this beer's for you! STEAM, BATCH, MALTS, YEAST, GRAIN...the options are endless. Will this be a green letter day or a yellow letter day? Who the heck knows?! We just know that a beer loaded with Cryo Pop, Loral and HBC 630 hops is just the right beer to pair..."
     hops:
       - { hop: loral, name: Loral, as_written: Loral }
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
   - slug: xtra-wicket-pale-ale
     name: Xtra Wicket Pale Ale
     url: https://www.stoupbrewing.com/beer/xtra-wicket-pale-ale-141.html

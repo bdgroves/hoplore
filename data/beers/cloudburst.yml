@@ -115,6 +115,7 @@ beers:
     hops_as_written: ' Ahead of the Curve Dry Hopped Helles | 4.4% ABV | 30 IBU Mark our words – someday this hybrid style will catch fire and be all the rage in craft beer, maybe even ALL OF BEER. It has everything people say they want – lower alcohol, low bitterness, a touch of crackery pilsner malt for body, pleasant hop flavor and aromatics, and a crisp, dry finish. It checks those boxes and then some! But becau...'
     hops:
       - { hop: callista, name: Callista, as_written: Callista }
+      - { hop: peacharine, name: Peacharine, as_written: Peacharine }
       - { hop: citra, name: Citra, as_written: Citra }
   - slug: alesong-anniversary-collab-ipa
     name: Alesong Anniversary Collab IPA
@@ -899,6 +900,7 @@ beers:
     abv: 6.5
     hops_as_written: ' Flip of the Coin IPA IPA | 6.5% ABV | 55 IBU Of all the hop combos we’ve implemented in our 8+ years, this one is new to us. BUT – it should make sense. HBC 630 has notes of cherry and fruit punch, Idaho 7 brings some pineapple flair & Citra rounds it all out with tangerine & peach. Basically, a dole fruit cup in hop form. There’s always some potential for an unknown outcome, but this one you ...'
     hops:
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
       - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
       - { hop: citra, name: Citra, as_written: Citra }
   - slug: for-me-this-is-heaven
@@ -1139,6 +1141,7 @@ beers:
     hops:
       - { hop: summer, name: Summer, as_written: Summer }
       - { hop: saaz-cz, name: Saaz, as_written: Saaz }
+      - { hop: peacharine, name: Peacharine, as_written: Peacharine }
       - { hop: citra, name: Citra, form: Cryo, as_written: Citra }
   - slug: heavily-redacted-ipa
     name: Heavily Redacted IPA
@@ -1372,10 +1375,12 @@ beers:
     hops:
       - { hop: krush, name: Krush, as_written: Krush }
       - { hop: superdelic, name: Superdelic, as_written: Superdelic }
+      - { hop: peacharine, name: Peacharine, as_written: Peacharine }
       - { hop: talus, name: Talus, as_written: Talus }
       - { hop: vista, name: Vista, as_written: Vista }
       - { hop: strata, name: Strata, as_written: Strata }
       - { hop: triumph, name: Triumph, as_written: Triumph }
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
   - slug: like-dinosaurs-ipa
@@ -1520,6 +1525,7 @@ beers:
     abv: 6.8
     hops_as_written: ' Meet Cute IPA IPA | 6.8% ABV | 50 IBU Hey everybody! We’d like to introduce you to HBC 1134, brought to you by Yakima Chief’s FWD program. HBC 1134 – these are drinkers of Cloudburst beer! ~ ~ ~ ~ ~ This experimental hop was more intended for lighter beers – like pilsners, pales, other lagers – since it leans noble in its agronomics and aromatics…. BUT WE DECIDED TO PUT IT IN AN IPA ANYWAYS. F...'
     hops:
+      - { hop: hbc-1134, name: HBC 1134, as_written: HBC 1134 }
       - { hop: citra, name: Citra, as_written: Citra }
   - slug: memory-of-a-memory-ipa
     name: Memory Of A Memory IPA
@@ -1850,6 +1856,7 @@ beers:
     abv: 6.4
     hops_as_written: ' Part Of The Decoration IPA IPA | 6.4% ABV | 42 IBU Is this where hazy IPAs are going? As ubiquitous as any other beverage – cola, tea, seltzer, juice, milk – where nobody cares, and they’re pretty much all the same, all just sitting on a shelf, ho hum meh blah BORING. On one hand – it’s pretty cool that a fairly new style of beer can take the world by storm in less than a decade, so much so th...'
     hops:
+      - { hop: peacharine, name: Peacharine, as_written: Peacharine }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: amarillo, name: Amarillo, as_written: Amarillo }
@@ -2046,6 +2053,7 @@ beers:
     abv: 4.7
     hops_as_written: ' Quiet Lightning New Zealand Pilsner | 4.7% ABV | 39 IBU We’re ALL IN on this type of Pilsner, and we hope you are too. At first you might not see it coming – it’s light, it’s nuanced, a slightly hoppier Pilsner derivative. But it’s bright and crisp, and those southern hemisphere hop flavors build to FLASH BANG of passionfruit, lemon chiffon and beach grass thanks to a blend of Peacharine, Nels...'
     hops:
+      - { hop: peacharine, name: Peacharine, as_written: Peacharine }
       - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
       - { hop: riwaka, name: Riwaka, as_written: Riwaka }
       - { hop: saaz-cz, name: Czech Saaz, as_written: Czech Saaz }
@@ -2159,6 +2167,7 @@ beers:
     abv: 5.2
     hops_as_written: ' Rolling Hills New Zealand Style Pilsner | 5.2% ABV | 30 IBU Over the rivers and through the woods, on a kiwi adventure we go. This pretty little pils is a scenic drive through winding roads and all the views – coastlines and mountains and farmland and forest. We used a blend of Peacharine (mostly), Nelson (a little bit), and Riwaka (just a touch) that resulted in notes of wild flowers, native ...'
     hops:
+      - { hop: peacharine, name: Peacharine, as_written: Peacharine }
       - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
       - { hop: riwaka, name: Riwaka, as_written: Riwaka }
   - slug: same-ghost-every-night-ipa
@@ -2340,6 +2349,7 @@ beers:
     abv: 5.1
     hops_as_written: ' Sorry To Bother You Pale | 5.1% ABV | 45 IBU We know you’re busy. We are too. Hop harvest has begun – which means long days on the road and longer days on the brew deck. But ALSO lots of catching up with farmer friends and socializing with brewery friends passing through for selection. So, while we have you – check out this pretty little pale ale we made! It’s brewed with NZ Peacharine, Citra,...'
     hops:
+      - { hop: peacharine, name: Peacharine, as_written: Peacharine }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
   - slug: sounds-about-right
@@ -2452,6 +2462,7 @@ beers:
     hops:
       - { hop: summer, name: Summer, as_written: Summer }
       - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: peacharine, name: Peacharine, as_written: Peacharine }
   - slug: sway-my-way-ipa
     name: Sway My Way IPA
     url: https://www.cloudburstbrew.com/beer/sway-my-way-ipa/
@@ -2905,6 +2916,7 @@ beers:
     abv: 6.5
     hops_as_written: ' Up Chuck The Boogie IPA IPA | 6.5% ABV | 58 IBU Fun fact: Chuck Shin, owner of the mini-empire known as Chuck’s Hop Shop, has been asking us for an exclusive IPA going on SIX YEARS. Yes, that’s also how long we’ve been in existence. And FINALLY we found a spot in our production schedule to have Chuck’s humans, representing all 3 locations, come down and help us brew a small batch of IPA. We ev...'
     hops:
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
       - { hop: strata, name: Strata, as_written: Strata }
       - { hop: motueka, name: Motueka, as_written: Motueka }
       - { hop: galaxy, name: Galaxy, as_written: Galaxy }
@@ -3313,4 +3325,5 @@ beers:
     hops:
       - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau Mittelfruh }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: peacharine, name: Peacharine, as_written: Peacharine }
       - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }

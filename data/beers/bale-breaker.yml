@@ -14,6 +14,7 @@ beers:
     hops_as_written: Simcoe®, HBC 1134, Palisade®
     hops:
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: hbc-1134, name: HBC 1134, as_written: HBC 1134 }
       - { hop: palisade, name: Palisade, as_written: Palisade }
   - slug: bottomcutter-iipa
     name: Bottomcutter IIPA
@@ -76,6 +77,7 @@ beers:
     abv: 4.1
     hops_as_written: HBC 1134, Palisade®, American Noble Blend
     hops:
+      - { hop: hbc-1134, name: HBC 1134, as_written: HBC 1134 }
       - { hop: palisade, name: Palisade, as_written: Palisade }
   - slug: frenz-collaboration-series
     name: Frenz Collaboration Series
@@ -114,6 +116,13 @@ beers:
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: krush, name: Krush, as_written: Krush }
       - { hop: dolcita, name: Dolcita, as_written: Dolcita }
+  - slug: la-mas-buena-mexican-lager-with-lime
+    name: La Mas Buena Mexican Lager with Lime
+    url: https://balebreaker.com/beer/la-mas-buena-mexican-lager-with-lime/
+    abv: 5.0
+    hops_as_written: HBC 1134
+    hops:
+      - { hop: hbc-1134, name: HBC 1134, as_written: HBC 1134 }
   - slug: mango-tropical-ipa
     name: Mango Tropical IPA
     url: https://balebreaker.com/beer/mango-tropical-ipa/

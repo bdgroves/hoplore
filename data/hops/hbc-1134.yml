@@ -1,0 +1,52 @@
+slug: hbc-1134
+name: HBC 1134
+purpose: aroma
+country: US
+kind: experimental
+
+ownership:
+  holder: Hop Breeding Company
+  public_domain: false
+
+pedigree:
+  breeder: hbc
+  parents: { unknown: true }
+  refs: [yvh]
+
+aroma:
+  summary: >
+    A lager hop: rose, pine, herbs and lemon with a hint of grapefruit, per Yakima Valley Hops -- bred by the Hop Breeding Company to cross American character with a noble-hop feel.
+  tags: [rose, pine, herbal, lemon, grapefruit]
+  refs: [yvh]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-28'
+  notes: >
+    purpose defaulted to aroma, unconfirmed -- a merchant says it was developed for modern lagers.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: yvh, low: 9.8, high: 12.5 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: yvh, low: 3.0, high: 4.5 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: yvh, low: 20.0, high: 30.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: yvh, low: 1.8, high: 3.0 }

@@ -1130,7 +1130,7 @@ beers:
     abv: 7.3
     hops_as_written: Peacharine, Citra
     hops:
-      - { hop: null, name: Peacharine, as_written: Peacharine }
+      - { hop: peacharine, name: Peacharine, as_written: Peacharine }
       - { hop: citra, name: Citra, as_written: Citra }
   - slug: peacharine-pale
     name: Peacharine Pale
@@ -1138,7 +1138,7 @@ beers:
     abv: 5.8
     hops_as_written: Peacharine, Citra
     hops:
-      - { hop: null, name: Peacharine, as_written: Peacharine }
+      - { hop: peacharine, name: Peacharine, as_written: Peacharine }
       - { hop: citra, name: Citra, as_written: Citra }
   - slug: pear-golden-ale
     name: Pear Golden Ale
@@ -1388,7 +1388,7 @@ beers:
       - { hop: tettnang, name: Tettnang, as_written: Tettnang }
       - { hop: barbe-rouge, name: Barbe Rouge, as_written: Barbe Rouge }
       - { hop: mistral, name: Mistral, as_written: Mistral }
-      - { hop: null, name: HBC 630, as_written: HBC 630 }
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
   - slug: south-pacific-ipa
     name: South Pacific IPA
     url: https://www.pfriembeer.com/beer/south-pacific-ipa/

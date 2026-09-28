@@ -417,7 +417,7 @@ beers:
     hops_as_written: Simcoe, Zumo, Citra, Amarillo
     hops:
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
-      - { hop: null, name: Zumo, as_written: Zumo }
+      - { hop: zumo, name: Zumo, as_written: Zumo }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: amarillo, name: Amarillo, as_written: Amarillo }
   - slug: cold-frame
@@ -1059,7 +1059,7 @@ beers:
     hops_as_written: Citra Noble, HBC 1134, Superdelic, Krush, Strata
     hops:
       - { hop: citra, name: Citra, as_written: Citra Noble }
-      - { hop: null, name: HBC 1134, as_written: HBC 1134 }
+      - { hop: hbc-1134, name: HBC 1134, as_written: HBC 1134 }
       - { hop: superdelic, name: Superdelic, as_written: Superdelic }
       - { hop: krush, name: Krush, as_written: Krush }
       - { hop: strata, name: Strata, as_written: Strata }
@@ -1675,7 +1675,7 @@ beers:
     hops:
       - { hop: saaz-cz, name: Saaz, as_written: Saaz }
       - { hop: superdelic, name: Superdelic, as_written: Superdelic }
-      - { hop: null, name: HBC 630, as_written: HBC 630 }
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
   - slug: puffs-with-hbc-630-hops
     name: Puffs (with HBC 630 hops)
     url: https://www.reubensbrews.com/beer/puffs-with-hbc-630-hops/
@@ -1684,7 +1684,7 @@ beers:
     hops:
       - { hop: azacca, name: Azacca, as_written: Azacca }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
-      - { hop: null, name: HBC 630, as_written: HBC 630 }
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
   - slug: puffs-of-classified
     name: Puffs of [Classified]
     url: https://www.reubensbrews.com/beer/puffs-of-classified/
@@ -2398,7 +2398,7 @@ beers:
     hops_as_written: Simcoe, Zumo, Citra, Talus
     hops:
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
-      - { hop: null, name: Zumo, as_written: Zumo }
+      - { hop: zumo, name: Zumo, as_written: Zumo }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: talus, name: Talus, as_written: Talus }
   - slug: triple-frosty
@@ -2564,4 +2564,4 @@ beers:
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: amarillo, name: Amarillo, as_written: Amarillo }
-      - { hop: null, name: Zumo, as_written: Zumo }
+      - { hop: zumo, name: Zumo, as_written: Zumo }

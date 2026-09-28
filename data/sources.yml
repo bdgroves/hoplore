@@ -190,3 +190,11 @@ beermaverick:
     A compiled secondary source. Useful for cross-checking and for its honest
     admission that upstream sources contradict each other. Cited where a range
     came from their compilation rather than from a sheet we read ourselves.
+
+hop-alliance:
+  publisher: Hop Alliance
+  title: Retail hop listings
+  url: https://hopalliance.com/collections/all-hops
+  retrieved: '2026-09-28'
+  tier: merchant
+  weight: 0.6

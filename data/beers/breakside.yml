@@ -49,7 +49,7 @@ beers:
       - { hop: chinook, name: Chinook, as_written: Chinook }
       - { hop: crystal, name: Crystal, as_written: Crystal }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
-      - { hop: null, name: Zumo, as_written: Zumo }
+      - { hop: zumo, name: Zumo, as_written: Zumo }
       - { hop: null, name: HBC 638, as_written: HBC 638 }
   - slug: joyrx
     name: Beer that Benefits
@@ -208,6 +208,12 @@ beers:
     hops_as_written: Fresh Citra
     hops:
       - { hop: citra, name: Citra, fresh: true, as_written: Fresh Citra }
+  - slug: fresh-hop-equinox-ipa
+    name: Fresh Hop Equinox IPA
+    url: https://breakside.com/our/beer/fresh-hop-equinox-ipa/
+    hops_as_written: Fresh Equinox
+    hops:
+      - { hop: ekuanot, name: Equinox, fresh: true, as_written: Fresh Equinox }
   - slug: fresh-hop-simcoe-ipa
     name: Fresh Hop Simcoe IPA
     url: https://breakside.com/our/beer/fresh-hop-simcoe-ipa/
@@ -253,7 +259,7 @@ beers:
     abv: 4.5
     hops_as_written: HBC 1134, Hersbrucker
     hops:
-      - { hop: null, name: HBC 1134, as_written: HBC 1134 }
+      - { hop: hbc-1134, name: HBC 1134, as_written: HBC 1134 }
       - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
   - slug: giuseppe-warlock-double-ipa
     name: Giuseppe Warlock Double IPA
@@ -287,7 +293,7 @@ beers:
     abv: 5.5
     hops_as_written: HBC 1134, Sterling, Hersbrucker
     hops:
-      - { hop: null, name: HBC 1134, as_written: HBC 1134 }
+      - { hop: hbc-1134, name: HBC 1134, as_written: HBC 1134 }
       - { hop: sterling, name: Sterling, as_written: Sterling }
       - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
   - slug: kid-in-a-candy-shop

@@ -1,0 +1,47 @@
+slug: zumo
+name: Zumo
+purpose: aroma
+country: US
+kind: cultivar
+
+ownership:
+  public_domain: false
+
+pedigree:
+  breeder: segal-ranch
+  parents: { unknown: true }
+  refs: [yvh]
+
+aroma:
+  summary: >
+    Lime zest, orange and a lot of citrus, per Yakima Valley Hops. From Segal Ranch in the lower Yakima Valley; aimed at Mexican lagers, and turning up in pale ales and IPAs.
+  tags: [lime, orange, citrus]
+  refs: [yvh]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-28'
+  notes: >
+    purpose defaulted to aroma, unconfirmed -- only a merchant describes its use so far.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: yvh, low: 5.5, high: 6.5 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: yvh, low: 4.0, high: 5.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: yvh, low: 0.5, high: 1.0 }

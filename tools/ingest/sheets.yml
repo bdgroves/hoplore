@@ -414,3 +414,38 @@
   source: crosby
   file: crosbyhops.com/hops_varieties_zappa.html
   url: https://www.crosbyhops.com/hops/varieties/zappa
+
+# --- Varieties PNW brewers already list that HopLove lacked (merchant pages) ---
+- slug: hbc-630
+  source: yvh
+  file: yakimavalleyhops.com/products_hbc-630-hops.html
+  url: https://yakimavalleyhops.com/products/hbc-630-hops
+  values:
+    alpha_acid: [13, 14]
+    beta_acid: [5.6, 6.3]
+    total_oil: [2.5, 3]
+- slug: hbc-1134
+  source: yvh
+  file: yakimavalleyhops.com/products_hbc-1134-hops.html
+  url: https://yakimavalleyhops.com/products/hbc-1134-hops
+  values:
+    alpha_acid: [9.8, 12.5]
+    beta_acid: [3.0, 4.5]
+    cohumulone: [20.0, 30.0]
+    total_oil: [1.8, 3.0]
+- slug: zumo
+  source: yvh
+  file: yakimavalleyhops.com/products_zumo-hops.html
+  url: https://yakimavalleyhops.com/products/zumo-hops
+  values:
+    alpha_acid: [5.5, 6.5]
+    beta_acid: [4.0, 5.0]
+    total_oil: [0.5, 1.0]
+- slug: peacharine
+  source: hop-alliance
+  file: hopalliance.com/products_peacharine-hops-2025.html
+  url: https://hopalliance.com/products/peacharine-hops-2025
+  values:
+    alpha_acid: 10.4
+    beta_acid: 5.4
+    total_oil: 1.7

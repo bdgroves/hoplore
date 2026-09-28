@@ -1,0 +1,48 @@
+slug: peacharine
+name: Peacharine
+purpose: dual
+country: NZ
+kind: cultivar
+
+ownership:
+  mark: trademark
+  public_domain: false
+
+pedigree:
+  breeder: unknown
+  parents: { unknown: true }
+  refs: [hop-alliance]
+
+aroma:
+  summary: >
+    Peach and nectarine over a citrus backbone, with sweet fruit, lime zest and a floral lift, per Hop Alliance. A New Zealand variety.
+  tags: [peach, stone-fruit, citrus, lime, floral]
+  refs: [hop-alliance]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-28'
+  notes: >
+    Dual purpose per Hop Alliance, a merchant; the breeder isn't named in the source.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: hop-alliance, low: 10.4, high: 10.4 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: hop-alliance, low: 5.4, high: 5.4 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: hop-alliance, low: 1.7, high: 1.7 }

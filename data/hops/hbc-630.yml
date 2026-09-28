@@ -1,0 +1,48 @@
+slug: hbc-630
+name: HBC 630
+purpose: dual
+country: US
+kind: experimental
+
+ownership:
+  holder: Hop Breeding Company
+  public_domain: false
+
+pedigree:
+  breeder: hbc
+  parents: { unknown: true }
+  refs: [yvh]
+
+aroma:
+  summary: >
+    Berries and cream: cherry and raspberry up front, with sweet, candy-like notes of peach and banana, per Yakima Valley Hops. An experimental from the Hop Breeding Company (Haas and Yakima Chief Ranches).
+  tags: [berry, candy, peach, creamy, sweet]
+  refs: [yvh]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-28'
+  notes: >
+    purpose defaulted to dual, unconfirmed -- only a merchant describes it so far. Pacific Northwest brewers (pFriem among them) already list it by number.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: yvh, low: 13.0, high: 14.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: yvh, low: 5.6, high: 6.3 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: yvh, low: 2.5, high: 3.0 }

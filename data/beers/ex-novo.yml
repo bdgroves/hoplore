@@ -132,7 +132,7 @@ beers:
     hops:
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: galaxy, name: Galaxy, as_written: Galaxy }
-      - { hop: null, name: HBC 630, as_written: HBC 630 }
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
   - slug: black-is-beautiful
     name: Black is Beautiful
@@ -982,7 +982,7 @@ beers:
     hops:
       - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
       - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
-      - { hop: null, name: HBC 630, as_written: HBC 630 }
+      - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
   - slug: over-the-falls
     name: Over the Falls
