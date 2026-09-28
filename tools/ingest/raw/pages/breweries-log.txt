@@ -1,10 +1,10 @@
  WARN the lock file is up-to-date but uses an older format (v6), run `pixi lock` to upgrade to v7 for improved reproducibility
-fort-george: 62 beer page(s)
+fort-george: 0 beer page(s)
 double-mountain: 24 beer page(s)
 pfriem: 277 beer page(s)
 ex-novo: 191 beer page(s)
 breakside: 275 beer page(s)
-ecliptic: 11 beer page(s)
+ecliptic: 0 beer page(s)
 7-seas: 2 beer page(s)
 elysian: 16 beer page(s)
 fair-isle: 128 beer page(s)
@@ -15,17 +15,19 @@ fremont: 0 beer page(s)
 aslan: 101 beer page(s)
 georgetown: 114 beer page(s)
 stoup: 505 beer page(s)
-bale-breaker: 16 beer page(s)
+bale-breaker: 0 beer page(s)
 structures: 17 beer page(s)
 block-15: 0 beer page(s)
+pelican: 26 beer page(s)
+great-notion: 29 beer page(s)
 
-added 8 packages, and audited 9 packages in 2s
+added 8 packages, and audited 9 packages in 1s
 
 3 packages are looking for funding
   run `npm fund` for details
 
 found 0 vulnerabilities
-listing https://www.block15.com/beer +25
+listing https://www.block15.com/beer +23
 listing https://block15.com/year-round-beers +5
 listing https://block15.com/seasonal-beers +2
 listing https://block15.com/specialty-beers +1
@@ -33,29 +35,4 @@ listing https://block15.com/exploratory-beers +0
 listing https://block15.com/collaboration-beers +0
 listing https://block15.com/cellar-aged-beers +2
 listing https://block15.com/lagered-by-the-sun +0
-rendered https://block15.com/downtown-pub
-rendered https://block15.com/southtown-tap-room
-rendered https://block15.com/large-party-reservations
-rendered https://block15.com/gift-cards
-rendered https://block15.com/mug-club-store
-rendered https://block15.com/keg-sales
-rendered https://block15.com/our-story
-rendered https://block15.com/beverage-programs
-rendered https://block15.com/local-and-sustainable
-rendered https://block15.com/charitable-programs
-rendered https://block15.com/sponsorships
-rendered https://block15.com/mug-club
-rendered https://block15.com/store
-rendered https://block15.com/newsletter
-rendered https://block15.com/media-kit
-rendered https://block15.com/fluffhead-hazy-ipa
-rendered https://block15.com/gloria-pilsner
-rendered https://block15.com/joy-hazy-pale-ale
-rendered https://block15.com/nebula-oat-stout
-rendered https://block15.com/ridgeback-red-ale
-rendered https://block15.com/fresh-flow-hazy-ipa
-rendered https://block15.com/fresh-pow-hazy-ipa
-rendered https://block15.com/selection-series-ipa
-rendered https://block15.com/bourbon-month
-rendered https://block15.com/late-fall-bottle-release
-33 page(s) rendered
+8 page(s) rendered
