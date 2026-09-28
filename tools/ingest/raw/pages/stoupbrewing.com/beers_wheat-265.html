@@ -1,0 +1,523 @@
+<html class="no-js "><head><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-LMFC27CVGZ&amp;cx=c&amp;gtm=4e69o0h2"></script><script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/kemdRjWFxNjgsGdhRslyEPwU/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-toUWaWp6L6nokvZl8QQUGm7dsWYyqVz4D3KmfSkWqx5lUaKsDkc76RU6HbKjCLLn"></script><script>
+	document.addEventListener("DOMContentLoaded", function(event) {
+		if (window.location.hash.length && !window.location.hash.startsWith('#!') && document.querySelector(window.location.hash)) {
+			console.log('goto '+window.location.hash);
+			setTimeout(function() {
+				gsap.to(window, {duration:1, scrollTo:{y:window.location.hash, offsetY:80, autoKill:false}})
+			},1000);
+		}
+	});
+</script>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><!--<![endif]-->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Stoup Brewing - Peruse our Library of Beers - 170+ and growing.</title>
+	<meta name="description" content="There is always something new on tap at Stoup.  Take a look and see what you can find.">
+	<meta name="viewport" content="width=device-width">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+			<style>
+			#loading-mask {background:#fff;position:absolute;top:0;height:300%;width:100%;z-index:999999;opacity: 1;transition: opacity 1s;}
+		</style>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				setTimeout(function (){
+					document.getElementById("loading-mask").style.opacity = 0;
+					setTimeout(function (){
+						document.getElementById("loading-mask").style.display = "none";
+					}, 1000);
+				}, 1000);
+			});
+		</script>
+				<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&amp;display=swap" rel="stylesheet">
+	<script src="/js/js_redirects.js?u=1787793607"></script>
+<style type="text/css">date-input-polyfill {
+  background: #fff;
+  color: #000;
+  text-shadow: none;
+  border: 0;
+  padding: 0;
+  height: auto;
+  width: auto;
+  line-height: normal;
+  border-radius: 0;
+  font-family: sans-serif;
+  font-size: 14px;
+  position: absolute !important;
+  text-align: center;
+  box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  z-index: 1; }
+  date-input-polyfill[data-open="false"] {
+    display: none; }
+  date-input-polyfill[data-open="true"] {
+    display: block; }
+  date-input-polyfill select, date-input-polyfill table, date-input-polyfill th, date-input-polyfill td {
+    background: #fff;
+    color: #000;
+    text-shadow: none;
+    border: 0;
+    padding: 0;
+    height: auto;
+    width: auto;
+    line-height: normal;
+    border-radius: 0;
+    font-family: sans-serif;
+    font-size: 14px;
+    box-shadow: none; }
+  date-input-polyfill select, date-input-polyfill button {
+    border: 0;
+    border-bottom: 1px solid #E0E0E0;
+    height: 24px;
+    vertical-align: top; }
+  date-input-polyfill select {
+    width: 50%; }
+    date-input-polyfill select:first-of-type {
+      border-right: 1px solid #E0E0E0;
+      width: 30%; }
+  date-input-polyfill button {
+    padding: 0;
+    width: 20%;
+    background: #E0E0E0; }
+  date-input-polyfill table {
+    border-collapse: collapse; }
+  date-input-polyfill th, date-input-polyfill td {
+    width: 32px;
+    padding: 4px;
+    text-align: center; }
+  date-input-polyfill td[data-day] {
+    cursor: pointer; }
+    date-input-polyfill td[data-day]:hover {
+      background: #E0E0E0; }
+  date-input-polyfill [data-selected] {
+    font-weight: bold;
+    background: #D8EAF6; }
+
+input[data-has-picker]::-ms-clear {
+  display: none; }
+</style></head>
+<body class="page-menu-color-black template-page-2023-design variation- page-id-4324 parent-id-1" data-page-name="Beer" style="">
+<div id="loading-mask" style="opacity: 0; display: none;"></div>
+<div id="blocking-background"></div>
+<div id="page-border-left"></div>
+<div id="page-border-right"></div>
+<div id="page-border-bottom"></div>
+<div id="age-gate" style="opacity:0;">
+	<div class="prompt">
+		<h1 id="age-gate-header">Are you<br>over 21?</h1><br><button id="age-gate-yes">Yes</button><button id="age-gate-no">No</button>
+	</div>
+	<img id="age-gate-img" src="/img/Stoup-CircleBadge-Grey.png">
+</div>
+<header>
+	<a href="/contact/" class="contact-link" id="contact-icon"><img src="/img/icon-email.webp" alt="Contact"></a>
+	<a href="#" class="search-link" id="search-icon"><img src="/img/icon-search.webp" alt="Search"></a>
+	<a class="cart-link snipcart-checkout" href="#" id="cart-icon"><i class="icon-bag"></i></a>
+	<div id="logo"><a href="/" id="logolink"><img class="logo" src="/img/Stoup-Wordmark-White.png"></a></div>
+	<div class="hamburger hamburger--squeeze" id="menuHamburger" onclick="openAndCloseNav()"><div class="hamburger-box"><div class="hamburger-inner"></div></div></div>
+</header>
+<div id="mainNav" class="overlay">
+	<div class="overlay-content">
+		<div class="locations">
+			<a href="/ballard/"><img src="/img/icon-ballard.png"></a>
+			<a href="/capitol-hill/"><img src="/img/icon-capitol-hill.png"></a>
+			<a href="/kenmore/"><img src="/img/icon-kenmore.png"></a>
+			<a href="/seatac/"><img src="/img/icon-seatac.png"></a>
+		</div>
+		<ul>
+			<li><a href="/beers/">Beer</a></li>
+			<li><a href="/book-a-party/">Book a Party</a></li>
+			<li><a href="/stoup-events/">Stoup Events</a></li>
+			<li><a href="/about/">Our Story</a></li>
+			<li><a href="/news/">News</a></li>
+			<li><a href="/contact/">Contact</a></li>
+			<li><a target="_blank" href="https://stoup.brist.store/">Merch</a></li>
+			<li><a target="_blank" href="https://www.toasttab.com/stoup-brewing-ballard-1108-nw-52nd-st/giftcards">Gift Cards</a></li>
+			</ul>
+	</div>
+</div>
+<div id="smooth-wrapper">
+<div id="smooth-content">
+<section class="  template-fixed-hero-image-section-2023 desktop-height-large mobile-height-quarter" data-section-count="1" id="section-4335"><a id="slug-48"></a><div class="bg" style="--background-img: url(https://s3.us-west-2.amazonaws.com/stoupbrewing.com/uploads/202403/19/111320_316/upload.webp); background-position: 50% 40%;"></div>
+</section><section class="  template-beeriodic-table-section-2023" data-section-count="2" id="section-4325"><a id="slug-44"></a><div class="wrap">
+	<h2>Beeriodic Table</h2>
+	<div class="beeriodic-table">
+		<div class="icons">
+			<div class="category-on-tap">
+				<a class="on-tap category" href="/beers/ballard-on-tap.html" data-category-id="3466" data-total="23"><img src="/img/ontap-ballard.webp"><img class="swap" src="/img/ontap-ballard-swap.webp"><span>Ballard On Tap</span></a><a class="on-tap category" href="/beers/kenmore-on-tap.html" data-category-id="3467" data-total="22"><img src="/img/ontap-kenmore.webp"><img class="swap" src="/img/ontap-kenmore-swap.webp"><span>Kenmore On Tap</span></a><a class="on-tap category" href="/beers/capitol-hill-on-tap.html" data-category-id="3468" data-total="26"><img src="/img/ontap-capitol-hill.webp"><img class="swap" src="/img/ontap-capitol-hill-swap.webp"><span>Capitol Hill On Tap</span></a>			</div>
+			<div class="category-driven">
+				<a class="driven category" href="/beers/yeast-driven.html" data-category-id="4853" data-total="72"><img src="/img/driven-yeast.webp"><img class="swap" src="/img/driven-yeast-swap.webp"><span>Yeast driven</span></a><a class="driven category" href="/beers/hops-driven.html" data-category-id="4854" data-total="239"><img src="/img/driven-hops.webp"><img class="swap" src="/img/driven-hops-swap.webp"><span>Hop driven</span></a><a class="driven category" href="/beers/malt-driven.html" data-category-id="4855" data-total="101"><img src="/img/driven-malt.webp"><img class="swap" src="/img/driven-malt-swap.webp"><span>Malt driven</span></a>			</div>
+		</div>
+		<a class="category" href="/beers/barrel-aged-422.html" data-category-id="422" data-total="18" style="--category-color: #ff6c0e;"><strong>Ba</strong><span>Barrel Aged</span><em>18</em></a><a class="category" href="/beers/english-420.html" data-category-id="420" data-total="9" style="--category-color: #3d4543;"><strong>En</strong><span>English</span><em>9</em></a><a class="category" href="/beers/german-267.html" data-category-id="267" data-total="25" style="--category-color: #ff6b02;"><strong>Gr</strong><span>German</span><em>25</em></a><a class="category" href="/beers/hazy-492.html" data-category-id="492" data-total="26" style="--category-color: #f7be00;"><strong>Ha</strong><span>Hazy</span><em>26</em></a><a class="category" href="/beers/ipa-256.html" data-category-id="256" data-total="225" style="--category-color: #f7be00;"><strong>I</strong><span>IPA</span><em>225</em></a><a class="category" href="/beers/lager-268.html" data-category-id="268" data-total="46" style="--category-color: #5fdfbf;"><strong>L</strong><span>Lager</span><em>46</em></a><a class="category" href="/beers/northwest-270.html" data-category-id="270" data-total="192" style="--category-color: #ff6c0e;"><strong>NW</strong><span>Northwest</span><em>192</em></a><a class="category" href="/beers/pale-260.html" data-category-id="260" data-total="9" style="--category-color: #ff6c0e;"><strong>Pa</strong><span>Pale</span><em>9</em></a><a class="category" href="/beers/pilsner-263.html" data-category-id="263" data-total="17" style="--category-color: #f4f630;"><strong>Pi</strong><span>Pilsner</span><em>17</em></a><a class="category" href="/beers/porter-264.html" data-category-id="264" data-total="6" style="--category-color: #222222;"><strong>P</strong><span>Porter</span><em>6</em></a><a class="category" href="/beers/stout-257.html" data-category-id="257" data-total="17" style="--category-color: #222222;"><strong>S</strong><span>Stout</span><em>17</em></a><a class="category" href="/beers/sour-421.html" data-category-id="421" data-total="28" style="--category-color: #f7be00;"><strong>So</strong><span>Sour</span><em>28</em></a><a class="category active" href="/beers/wheat-265.html" data-category-id="265" data-total="12" style="--category-color: #ffca3d;"><strong>Wh</strong><span>Wheat</span><em>12</em></a><a class="category" href="/beers/fresh-hop-1222.html" data-category-id="1222" data-total="42" style="--category-color: #02af9c;"><strong>Fr</strong><span>Fresh Hop</span><em>42</em></a><a class="category" href="/beers/experimental-2065.html" data-category-id="2065" data-total="9" style="--category-color: #00af9a;"><strong>Ex</strong><span>Experimental</span><em>9</em></a>		<a class="category" href="/beers/collaboration.html" data-category-id="collaboration" data-total="48" style="--category-color: #5fdfbf;"><strong>C</strong><span>Collabs</span><em>48</em></a>
+	</div>
+	<div class="beers loading fade" data-category-id="265" data-offset="0" data-total="">
+		<div class="category-title"></div>
+		<div class="beer-legend"><img src="/img/hops-pavement.webp"><span>&nbsp;&nbsp;=&nbsp;Currently On Tap</span></div>
+		<a href="#" class="triggerLoad loading"><span class="title">Show More</span><img src="/img/hops-white.webp"></a>
+		<template id="btTemplateBeer">
+
+		</template>
+		<dialog class="btDialog">
+			<button class="close">X</button>
+			<div class="inner"></div>
+			<div class="loadanim"><img src="/img/hops-pavement.webp"></div>
+		</dialog>
+	</div>
+</div>
+
+<script>
+let btCategoryLinks = document.querySelectorAll(".template-beeriodic-table-section-2023#section-4325 a.category");
+let btBeers = document.querySelector(".template-beeriodic-table-section-2023#section-4325 .beers");
+let btLegend = btBeers.querySelector(".beer-legend");
+let btTriggerLoad = document.querySelector(".template-beeriodic-table-section-2023#section-4325 .triggerLoad");
+let btDialog = btBeers.querySelector("dialog.btDialog");
+let btBaseLocation = "/beers/";
+let btMetaTitle = document.querySelector("head title");
+let btMetaTitleOrig = btMetaTitle.innerText;
+let btMetaDesc = document.querySelector("meta[name='description']");
+let btMetaDescOrig = btMetaDesc.getAttribute("content");
+let btBeersObserver = new IntersectionObserver(function (entries) {
+	if (!entries[0].isIntersecting) {
+		btBeers.classList.toggle("inview", false);
+	}
+	else {
+		btBeers.classList.toggle("inview", true);
+	}
+}, {rootMargin: "0px 0px -100px 0px"});
+btBeersObserver.observe(btBeers);
+
+document.addEventListener("DOMContentLoaded", function(event) {
+
+	/* category click */
+	btCategoryLinks.forEach(function(link) {
+		link.addEventListener("click", function(e) {
+			e.preventDefault();
+			if (!this.classList.contains("active")) {
+				const id = this.getAttribute("data-category-id");
+				const total = this.getAttribute("data-total");
+				const offset = 0;
+				const title = this.querySelector("span").textContent;
+				history.pushState(null, "", this.getAttribute("href"));
+				btLoadBeers(id, total, offset, title);
+			}
+		});
+	});
+
+	/* show more beer */
+	btTriggerLoad.addEventListener("click", function(e) {
+		e.preventDefault();
+		const id = btBeers.getAttribute("data-category-id");
+		const total = btBeers.getAttribute("data-total");
+		const offset = btBeers.getAttribute("data-offset");
+		const title = btBeers.querySelector(".category-title").innerText;
+		btLoadBeers(id, total, offset, title);
+	});
+
+	/* beer dialog open */
+	btBeers.addEventListener("click", function(e) {
+		if (e.target.closest("a.beer")) {
+			e.preventDefault();
+			const link = e.target.closest("a.beer");
+			const id = link.getAttribute("data-beer-id");
+			const title = link.querySelector("span").innerText;
+			console.log(id);
+			history.pushState(null, "", link.getAttribute("href"));
+			btDialogBeer(id);
+		}
+	});
+
+	/* beer dialog close */
+	btBeers.addEventListener("click", function(e) {
+		if (e.target.closest("button.close")) {
+			e.preventDefault();
+			btDialogClose();
+		}
+	});
+	btDialog.addEventListener('click', function(event) {
+		var rect = btDialog.getBoundingClientRect();
+		var isInDialog = (rect.top <= event.clientY && event.clientY <= rect.top + rect.height && rect.left <= event.clientX && event.clientX <= rect.left + rect.width);
+		if (!isInDialog) {
+			btDialogClose();
+		}
+	});
+
+		if (document.querySelector("a.category[data-category-id='265']")) {
+		document.querySelector("a.category[data-category-id='265']").click();
+	}
+	else if (document.querySelector("a.category[href*='265']")) {
+		document.querySelector("a.category[href*='265']").click();
+	}
+	});
+
+if (typeof window.sleeper === 'undefined') {
+	window.sleeper = function(ms) {
+		return function(x) {
+			return new Promise(resolve => setTimeout(() => resolve(x), ms));
+		};
+	}
+}
+
+if (typeof window.btLoadBeers === 'undefined') {
+	window.btLoadBeers = function(category_id, total, offset = 0, title = "") {
+		let limit = 12;
+		let delay = 1000;
+		if (offset == 0) {limit = 11;delay=0;}
+		//toggle view
+		btCategoryLinks.forEach(function(el) {
+			el.classList.toggle("active", false);
+		});
+		document.querySelector("a.category[data-category-id='"+category_id+"']").classList.toggle("active", true);
+		btBeers.classList.toggle("loading", true);
+		btBeers.classList.toggle("loaded", false);
+		btTriggerLoad.classList.toggle("loading", true);
+		if (offset == 0) {
+			btBeers.classList.toggle("fade", true);
+			btLegend.classList.toggle("active", false);
+			btTriggerLoad.classList.toggle("active", false);
+		}
+		btBeers.setAttribute("data-category-id", category_id);
+		btBeers.setAttribute("data-offset", offset);
+
+		if (btBeers.classList.contains("inview") === false) {
+			gsap.to(smoother, {
+				// don't let it go beyond the maximum scrollable area
+				scrollTop: Math.min(
+					ScrollTrigger.maxScroll(window),
+					smoother.offset(btBeers, "top 50%") //adjust % for top of beers in viewport
+				),
+				duration: 1,
+			});
+		}
+
+		//fetch beers
+		var qstr = new URLSearchParams({
+				category_id: category_id,
+				offset: offset,
+				limit: limit
+		});
+		fetch("/templates/sections/beeriodic-table-section-2023.ajax.php?"+qstr).then(function (response) {
+			if (response.ok) {
+				return response.json();
+			}
+			else {
+				throw new Error('Non 200s response');
+			}
+		}).then(sleeper(1000)).then(function (json) {
+			if (offset == 0) {
+				document.querySelectorAll(".beer").forEach(function(el) {
+					el.classList.toggle("active", false);
+				});
+				document.querySelectorAll(".beer").forEach(function(el) {
+					btBeers.removeChild(el);
+				});
+			}
+			//add new beers
+			if (title.length) {
+				document.querySelector(".beers .category-title").innerText = title;
+				btMetaTitle.innerText = title+" - Stoup Brewing Beers";
+				btMetaDesc.setAttribute("content", title+" - Stoup Brewing Beers");
+			}
+			btTriggerLoad.classList.toggle("active", false);
+			btTriggerLoad.classList.toggle("loading", false);
+			btBeers.insertAdjacentHTML('beforeend', json.html);
+			btBeers.setAttribute("data-total", json.total);
+			offset = (json.offset + json.limit);
+			btBeers.setAttribute("data-offset", offset);
+			//display beers
+			document.querySelectorAll(".beer.cat"+category_id).forEach(function(el) {
+				el.classList.toggle("active", true);
+			});
+			if (offset < json.total) {
+				btTriggerLoad.classList.toggle("active", true);
+			}
+			btLegend.classList.toggle("active", true);
+			btBeers.classList.toggle("loading", false);
+			btBeers.classList.toggle("fade", false);
+			btBeers.classList.toggle("loaded", true);
+		}).catch(function (err) {
+			console.log('Something went wrong.', err);
+		});
+	}
+}
+
+if (typeof window.btDialogBeer === 'undefined') {
+	window.btDialogBeerChecks = 0;
+	window.btDialogBeer = function(beer_id) {
+		if (document.querySelector("html").classList.contains("age-gate-enabled")) {
+			if (window.btDialogBeerChecks < 1200) {
+				window.setTimeout(function() {
+					//console.log("check again");
+					btDialogBeer(beer_id);
+				}, 250);
+				window.btDialogBeerChecks++;
+			}
+			return true;
+		}
+		var qstr = new URLSearchParams({
+				beer_id: beer_id
+		});
+		btDialog.classList.toggle("loading", true);
+		btDialog.showModal();
+		fetch("/templates/sections/beeriodic-table-section-2023.dialog-beer.php?"+qstr).then(function (response) {
+			if (response.ok) {
+				return response.json();
+			}
+			else {
+				throw new Error('Non 200s response');
+			}
+		}).then(function (json) {
+			btDialog.querySelector(".inner").innerHTML = json.html;
+			btMetaTitle.innerText = json.meta_title;
+			btMetaDesc.setAttribute("content", json.meta_desc);
+			window.setTimeout(function() {
+				btDialog.classList.toggle("loading", false);
+			}, 300);
+		}).catch(function (err) {
+			console.log('Something went wrong.', err);
+			window.location.href = "/beers/";
+			//btDialog.innerHTML = 'Something went wrong.';
+			//btDialog.classList.toggle("loading", false);
+		});
+	}
+}
+
+if (typeof window.btDialogClose === 'undefined') {
+	window.btDialogClose = function() {
+		var url = btBaseLocation;
+		console.log(url);
+		var activeCategory = document.querySelector(".template-beeriodic-table-section-2023#section-4325 a.category.active");
+		if (activeCategory) {
+			url = activeCategory.getAttribute("href");
+			btMetaTitle.innerText = btBeers.querySelector(".category-title").innerText + " - Stoup Brewing Beers";
+			btMetaDesc.setAttribute("content", btBeers.querySelector(".category-title").innerText) + " - Stoup Brewing Beers";
+		}
+		else {
+			btMetaTitle.innerText = btMetaTitleOrig;
+			btMetaDesc.setAttribute("content", btMetaDescOrig);
+		}
+		console.log(url);
+		history.pushState(null, "", url);
+		btDialog.close();
+	}
+}
+
+</script></section><section class="  template-title-section-2023 padding-bottom-only" data-section-count="3" id="section-4846"><a id="beer-to-go-3"></a><h2>Beer to go?</h2></section><section class="  template-text-section-2023 padding-bottom-only    none no-fade" data-section-count="4" id="section-4847" style="background-color: rgb(255, 255, 255); background-position: 180% center;"><a id="slug-72"></a><div class="box-of-copy"><div style="text-align: center;">Do you need kegs for your home or office kegerator? <br>Or for your next house party? <br>We have kegs in 3 sizes and are happy to help:<br><br></div>
+<div style="text-align: center;"><a href="/beers-to-go/" title="teal-button">Learn More</a></div></div></section><footer>
+	<div class="inner">
+		<div class="contact-row">
+			<div id="footer-stay-in-touch">
+				<h3>Stay in Touch</h3>
+				<p>Join our mailing list and be our drinking buddy!</p>
+				<a id="newsletter-clicker" class="btn btn-orange-on-orange">Sign Me Up</a>
+			</div>
+			<img class="icon-hops" src="/img/hops-white-footer.webp">
+			<div id="footer-contact-us">
+				<h3>Contact Us</h3>
+				<p>Questions? Feedback? We want to hear from you!</p>
+				<a href="/contact/" class="btn btn-orange-on-orange">Send a Message</a>
+			</div>
+		</div>
+		<div class="locations">
+			<div class="ballard">
+				<h3><a href="/ballard/">BALLARD</a></h3>
+				<a href="https://goo.gl/maps/LAj6LUXHkgiykkyN6" target="_blank">1108 NW 52nd St</a><br> <a href="https://goo.gl/maps/LAj6LUXHkgiykkyN6" target="_blank">Seattle, WA 98107</a><br><br>(206) 457-5524<br><br>HOURS<br>Open 7 Days/Week <br>12pm-10pm<br><br>
+				<a href="https://www.facebook.com/StoupBrewing/" target="_blank"><i class="icon icon-facebook-square"></i></a>				<a href="https://www.instagram.com/stoupbrewing/" target="_blank"><i class="icon icon-instagram"></i></a>			</div>
+			<div class="capitol-hill">
+				<h3><a href="/capitol-hill/">CAPITOL HILL</a></h3>
+				<a href="https://goo.gl/maps/dvtahcRsJ6um49oEA" target="blank">1158 Broadway<br>Seattle, WA 98122</a><br><br>(206)&nbsp;659-8962<br><br>HOURS<br>SUN-W 12pm-10pm<br>TH-SAT 12pm-12am<br><br>
+				<a href="https://facebook.com/stoupbrewing_capitolhill" target="_blank"><i class="icon icon-facebook-square"></i></a>				<a href="https://instagram.com/stoupbrewing_capitolhill" target="_blank"><i class="icon icon-instagram"></i></a>			</div>
+			<div class="kenmore">
+				<h3><a href="/kenmore/">KENMORE</a></h3>
+				<a href="https://goo.gl/maps/4C3NxiP1gDU8PfH29" target="blank">6704 NE 181st St.<br>Kenmore, WA 98028</a><br><br>(425) 298-6516<br><br>HOURS<br>MON: Closed<br>T-THUR: 3–9pm<br>FRI-SAT: 12pm–9pm<br>SUN: 12pm-8pm<br><br>
+				<a href="https://facebook.com/stoupbrewingkenmore" target="_blank"><i class="icon icon-facebook-square"></i></a>				<a href="https://instagram.com/stoupbrewing_kenmore" target="_blank"><i class="icon icon-instagram"></i></a>			</div>
+			<div class="seatac">
+				<h3><a href="/seatac/">SEATAC</a></h3>
+				<p><a href="https://maps.app.goo.gl/PnKYcX7eXoocENov7" target="_blank">18400 International Blvd<br>SeaTac, WA 98188</a><br><br>(206) 457-5524<br><br>HOURS<br>Open 7 Days/Week<br>12pm-9pm</p>
+<p>POP-UP CLOSING END OF SEPTEMBER (9/30)</p><br><br>
+				<a href="https://www.facebook.com/StoupBrewing/" target="_blank"><i class="icon icon-facebook-square"></i></a>				<a href="https://www.instagram.com/stoupbrewing/" target="_blank"><i class="icon icon-instagram"></i></a>			</div>
+		</div>
+	</div>
+</footer>
+</div> </div> <link href="/css/sections-2023.min.css?u=1787793605" rel="stylesheet">
+<link href="/css/style-2023.css?u=1787793605" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css">
+<link href="/css/fontastic.css?u=1787793605" rel="stylesheet">
+<style>.template-beeriodic-table-section-2023 .beeriodic-table>.category[data-category-id="422"]:hover {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category.active[data-category-id="422"] {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category[data-category-id="420"]:hover {color:#ffffff;}.template-beeriodic-table-section-2023 .beeriodic-table>.category.active[data-category-id="420"] {color:#ffffff;}.template-beeriodic-table-section-2023 .beeriodic-table>.category[data-category-id="267"]:hover {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category.active[data-category-id="267"] {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category[data-category-id="492"]:hover {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category.active[data-category-id="492"] {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category[data-category-id="256"]:hover {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category.active[data-category-id="256"] {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category[data-category-id="268"]:hover {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category.active[data-category-id="268"] {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category[data-category-id="270"]:hover {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category.active[data-category-id="270"] {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category[data-category-id="260"]:hover {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category.active[data-category-id="260"] {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category[data-category-id="263"]:hover {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category.active[data-category-id="263"] {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category[data-category-id="264"]:hover {color:#ffffff;}.template-beeriodic-table-section-2023 .beeriodic-table>.category.active[data-category-id="264"] {color:#ffffff;}.template-beeriodic-table-section-2023 .beeriodic-table>.category[data-category-id="257"]:hover {color:#ffffff;}.template-beeriodic-table-section-2023 .beeriodic-table>.category.active[data-category-id="257"] {color:#ffffff;}.template-beeriodic-table-section-2023 .beeriodic-table>.category[data-category-id="421"]:hover {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category.active[data-category-id="421"] {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category[data-category-id="265"]:hover {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category.active[data-category-id="265"] {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category[data-category-id="1222"]:hover {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category.active[data-category-id="1222"] {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category[data-category-id="2065"]:hover {color:#3d4543;}.template-beeriodic-table-section-2023 .beeriodic-table>.category.active[data-category-id="2065"] {color:#3d4543;}</style><script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+<script src="/js/ScrollSmoother.min.js"></script>
+<script src="//unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/jquery.form.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nodep-date-input-polyfill@5.2.0/nodep-date-input-polyfill.dist.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/details-polyfill@1/index.min.js" async=""></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<script src="/js/section-fixed-hero-image-section-2023.js?u=1787793607"></script><script src="/js/text-section-2023.js?u=1787793607"></script><script src="https://www.google.com/recaptcha/api.js?render=6LfEFLMUAAAAAGRnWEQ2DTUvVCseFqlSc1RHV4d4"></script>
+	<script type="text/javascript">
+	var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-48261656-1'],['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
+	</script>
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-155639125-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-155639125-1');
+	</script>
+<script id="snipcart" data-api-key="NWIwYjFlNzYtZDUwMi00OTM2LWFkN2EtZjFmZDE3OWE3YmYzNjM3MTk5OTY3Njg0NDAzMDkz" data-cart-custom1-name="Name (Must match ID of individual receiving alcohol.)" data-cart-custom1-required="true" data-cart-custom2-name="Birthday (Must match ID of individual receiving alcohol.)" data-cart-custom2-required="true" src="https://cdn.snipcart.com/scripts/2.0/snipcart.js?v=20200326" type="text/javascript"></script>
+<script src="/js/scripts-2023.js?u=1787793607"></script>
+<link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css">
+<span style="display:none;" class="snipcart-summary"><span class="snipcart-total-price"></span></span>
+<script>
+document.addEventListener("DOMContentLoaded", function(event) {
+	document.getElementById('age-gate-yes').addEventListener('click', function() {
+		ageGateAccept();
+	});
+	document.getElementById('age-gate-no').addEventListener('click', function() {
+		document.getElementById('age-gate-header').innerHTML = 'Nice try french fry. See ya when you turn 21!';
+		document.getElementById('age-gate-yes').style.display = 'none';
+		document.getElementById('age-gate-no').style.display = 'none';
+		document.getElementById('age-gate-img').src = '/img/frenchfry.jpg';
+	});
+});
+function ageGateAccept() {
+	setCookie("age_check","1",90);
+	document.documentElement.classList.remove('age-gate-enabled');
+	gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+	let smoother;
+	function smootherSetup() {
+		smoother = ScrollSmoother.create({
+			smooth: 2,
+			effects: true,
+			normalizeScroll: true
+		});
+	}
+	smootherSetup();
+}
+</script>
+<dialog id="newsletter-modal">
+	<div class="modal-body">
+		<div class="newsletter-modal-content">
+			Stay up to date on our new beer releases and events in all of our taprooms
+			<br><br>
+			Where's your home base?<br><br>
+			<a class="btn-orange-on-white btn" href="https://www.toasttab.com/stoup-brewing-ballard-1108-nw-52nd-st/marketing-signup" target="_blank">Ballard</a><br><br>
+			<a class="btn-orange-on-white btn" href="https://www.toasttab.com/stoup-brewing-cap-hill-1158-broadway/marketing-signup" target="_blank">Capitol Hill</a><br><br>
+			<a class="btn-orange-on-white btn" href="https://www.toasttab.com/stoupkenmore/marketing-signup" target="_blank">Kenmore</a><br><br>
+		</div>
+	</div>
+</dialog>
+<div id="search-popup" class="modal">
+	<h2>Search Beers, Events, and More</h2><div id="search-input"><form method="GET" action="/search/"><input id="search-q" type="text" name="q" tabindex="1"><button type="submit" class="button">Search</button></form></div>
+</div>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;13af6793d66247ddbfe7d3520b41ae72&quot;,&quot;r&quot;:1,&quot;spa&quot;:2}" crossorigin="anonymous"></script>
+
+<div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; position: fixed; visibility: hidden; display: block; transition: right 0.3s; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation" name="a-x4tnxxaxb8z2" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfEFLMUAAAAAGRnWEQ2DTUvVCseFqlSc1RHV4d4&amp;co=aHR0cHM6Ly93d3cuc3RvdXBicmV3aW5nLmNvbTo0NDM.&amp;hl=en&amp;v=kemdRjWFxNjgsGdhRslyEPwU&amp;size=invisible&amp;anchor-ms=20000&amp;execute-ms=30000&amp;cb=4cyf7nw8zkhh"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div></body></html>

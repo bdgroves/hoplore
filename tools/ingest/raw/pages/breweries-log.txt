@@ -13,11 +13,40 @@ cloudburst: 450 beer page(s)
 reubens: 441 beer page(s)
 fremont: 0 beer page(s)
 aslan: 101 beer page(s)
+georgetown: 114 beer page(s)
+stoup: 0 beer page(s)
+bale-breaker: 16 beer page(s)
+structures: 0 beer page(s)
+block-15: 0 beer page(s)
 
-added 8 packages, and audited 9 packages in 4s
+added 8 packages, and audited 9 packages in 2s
 
 3 packages are looking for funding
   run `npm fund` for details
 
 found 0 vulnerabilities
-0 page(s) rendered
+listing https://www.stoupbrewing.com/beers/ipa-256.html +0
+listing https://www.stoupbrewing.com/beers/hazy-492.html +0
+listing https://www.stoupbrewing.com/beers/northwest-270.html +0
+listing https://www.stoupbrewing.com/beers/pale-260.html +0
+listing https://www.stoupbrewing.com/beers/pilsner-263.html +0
+listing https://www.stoupbrewing.com/beers/lager-268.html +0
+listing https://www.stoupbrewing.com/beers/german-267.html +0
+listing https://www.stoupbrewing.com/beers/fresh-hop-1222.html +0
+listing https://www.stoupbrewing.com/beers/experimental-2065.html +0
+listing https://www.stoupbrewing.com/beers/collaboration.html +0
+listing https://www.stoupbrewing.com/beers/wheat-265.html +0
+listing https://www.stoupbrewing.com/beers/english-420.html +0
+listing https://www.stoupbrewing.com/beers/hops-driven.html +0
+listing https://www.block15.com/beer +11
+rendered https://block15.com/sticky-hands-imperial-ipa
+rendered https://block15.com/deep-seek-west-coast-ipa
+rendered https://block15.com/green-truck-american-light-lager
+rendered https://block15.com/year-round-beers
+rendered https://block15.com/seasonal-beers
+rendered https://block15.com/specialty-beers
+rendered https://block15.com/exploratory-beers
+rendered https://block15.com/collaboration-beers
+rendered https://block15.com/cellar-aged-beers
+rendered https://block15.com/lagered-by-the-sun
+24 page(s) rendered
