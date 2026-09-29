@@ -1085,3 +1085,7 @@ body.searching .brewery > p.fine { display: none; }
 .scan-more { display: grid; grid-template-columns: 2fr 0.7fr 2fr 1fr; gap: 0.8rem; margin: 0.8rem 0 0.4rem; }
 .scan-more input { width: 100%; box-sizing: border-box; font: inherit; background: var(--white); color: var(--ink); border: 1px solid var(--mist); padding: 0.4rem 0.6rem; }
 @media (max-width: 46rem) { .scan-more { grid-template-columns: 1fr 1fr; } }
+
+/* Brooks's login button in the footer nav, dressed as one of the links. */
+.owner-link { background: none; border: 0; padding: 0; font: inherit; letter-spacing: inherit; text-transform: inherit; color: var(--stone); cursor: pointer; }
+.owner-link:hover { color: var(--ink); text-decoration: underline; }
