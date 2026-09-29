@@ -1,5 +1,13 @@
 source: Untappd, via https://brooksgroves.com/beers.json (tools/ingest/untappd.py) -- do not edit by hand
 checkins:
+  - id: 1604902212
+    date: '2026-09-29'
+    beer: Radiance (2026)
+    brewery: Single Hill Brewing
+    venue: Western State Hospital
+    comment: So many fresh hops in this big dog, and the color so radiant 🌞🌳🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_09_29/fc65c012040e08ff5384c41048d1efcc_c_1604902212_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1604902212
   - id: 1604767330
     date: '2026-09-27'
     beer: Fresh Cut (2026)

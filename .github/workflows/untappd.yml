@@ -1,6 +1,7 @@
 name: Untappd check-ins
 
-# Daily. Merges the latest check-ins from brooksgroves.com/beers.json into
+# Every six hours. Merges the latest check-ins -- straight from the Untappd
+# feed, plus brooksgroves.com/beers.json as a fallback -- into
 # data/untappd/checkins.yml (a growing history, not a rolling 20), reads the
 # star ratings off the check-in pages when Untappd allows it, and redeploys
 # if anything changed. Beer pages then show the check-in next to the hops.
@@ -9,7 +10,7 @@ on:
   push:
     paths: ['data/untappd/export.*']
   schedule:
-    - cron: '17 15 * * *'
+    - cron: '17 */6 * * *'
   workflow_dispatch:
 
 permissions:

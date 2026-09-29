@@ -1,15 +1,15 @@
 brewery:
-  slug: signal-hill
-  name: Signal Hill
+  slug: single-hill
+  name: Single Hill Brewing
   city: Yakima
   state: WA
-  url:
+  url: https://singlehillbrewing.com/
 generated_by: 'HopLove scans (/scan/): photographed or pasted by a person, hops matched by tools/ingest/scanned_beer.py'
 retrieved: '2026-09-29'
 beers:
   - slug: radiance
     name: Radiance
-    url:
+    url: https://singlehillbrewing.com/
     style: Fresh Hop IPA
     abv: 6.1
     hops_as_written: Harvest grown in Yakima with fresh wet Centennial fresh kilned Carpenter Sabro layered with Coleman Strata, Carpenter Talus, Sauve Simcoe & Loza Farms Amarillo

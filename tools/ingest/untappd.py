@@ -26,6 +26,7 @@ from __future__ import annotations
 import argparse
 import io
 import json
+import os
 import re
 import sys
 import time
@@ -121,6 +122,36 @@ def fetch_rating(link: str) -> float | None:
     return float(m.group(1)) if m and float(m.group(1)) > 0 else None
 
 
+RSS = os.environ.get("UNTAPPD_RSS_URL") or "https://untappd.com/rss/user/Bdgroves"
+
+
+def read_rss() -> list[dict]:
+    """Check-ins from the Untappd RSS feed, in beers.json's shape."""
+    import xml.etree.ElementTree as ET
+
+    try:
+        r = requests.get(RSS, headers={"User-Agent": "Mozilla/5.0 (compatible; brooksgroves-bot/1.0)"}, timeout=20)
+        r.raise_for_status()
+        channel = ET.fromstring(r.content).find("channel")
+    except (requests.RequestException, ET.ParseError) as error:
+        print(f"rss: {error}")
+        return []
+    out = []
+    for item in channel.findall("item") if channel is not None else []:
+        get = lambda name: (item.findtext(name) or "").strip()
+        desc = get("description")
+        img = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', desc)
+        out.append({
+            "title": get("title"),
+            "description": re.sub(r"<[^>]+>", "", desc).strip(),
+            "image": img.group(1) if img else "",
+            "link": get("link"),
+            "date": get("pubDate"),
+        })
+    print(f"rss: {len(out)} check-in(s)")
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--from", dest="source", help="read a local beers.json instead of fetching")
@@ -133,9 +164,16 @@ def main() -> int:
     elif args.source:
         data = json.loads(Path(args.source).read_text(encoding="utf-8"))
     else:
-        r = requests.get(URL, headers={"User-Agent": UA}, timeout=30)
-        r.raise_for_status()
-        data = r.json()
+        # Straight from Untappd's feed when it answers (fresh to the minute),
+        # and brooksgroves.com/beers.json as well (refreshed every few days)
+        # so a blocked feed never leaves HopLove empty-handed.
+        data = {"checkins": read_rss()}
+        try:
+            r = requests.get(URL, headers={"User-Agent": UA}, timeout=30)
+            r.raise_for_status()
+            data["checkins"] += r.json().get("checkins", [])
+        except requests.RequestException as error:
+            print(f"beers.json: {error}")
 
     yaml = YAML()
     yaml.width = 4096
