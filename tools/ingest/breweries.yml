@@ -238,5 +238,14 @@
   keep_listing: true
   match: '^$'
 
+- slug: single-hill
+  name: Single Hill Brewing
+  city: Yakima
+  state: WA
+  url: https://singlehillbrewing.com/
+  listing: ['https://singlehillbrewing.com/menu/']
+  keep_listing: true
+  match: '^$'
+
 # Hood River Brewing and Brothers Cascadia were tried (2026-09): neither site
 # names the hop varieties in its beers, so they're left out.
