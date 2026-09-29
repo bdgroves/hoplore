@@ -95,6 +95,14 @@ export function renderAbout({ meta, stats }) {
     </dl>
   </section>
 
+  <section class="block">
+    <h2>Brewers, growers, bars</h2>
+    <p>Want your beers on HopLove, a hop list fixed, or your farm credited? Easiest is a page on your own website
+    that names the hops in each beer — HopLove reads it on a schedule and keeps up as you add releases. Or just
+    <a href="mailto:contact@brooksgroves.com?subject=HopLove">email Brooks</a> at
+    <a href="mailto:contact@brooksgroves.com?subject=HopLove">contact@brooksgroves.com</a>.</p>
+  </section>
+
   <section class="block tip-jar">
     <h2>Buy Brooks a beer</h2>
     <p>HopLove is free and staying that way. Keeping it running costs a little — mostly the camera, which pays
