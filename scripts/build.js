@@ -24,9 +24,9 @@ import { renderScience } from '../site/templates/science.js';
 import { attachMine } from '../site/templates/mine.js';
 
 const API_VERSION = 'v1';
-const { sources, taxonomy, hops: raw, acreage, breweries, checkins, ratings } = loadDataset();
+const { sources, taxonomy, hops: raw, acreage, breweries, checkins, ratings, history } = loadDataset();
 // Before beersByHop, so hop pages know which of their beers Brooks has had.
-const recent = attachMine(breweries, checkins, ratings);
+const recent = attachMine(breweries, checkins, ratings, history);
 const inBeers = beersByHop(breweries);
 const paired = pairingsByHop(breweries);
 attachLookalikes(breweries);

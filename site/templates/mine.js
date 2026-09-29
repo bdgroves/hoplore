@@ -28,7 +28,7 @@ const styleless = (t) =>
 
 /** Adds beer.mine = { checkins, rating } to every beer Brooks has had or
  *  rated, and returns the check-ins (newest first) each with .match. */
-export function attachMine(breweries, checkins = [], ratings = []) {
+export function attachMine(breweries, checkins = [], ratings = [], history = []) {
   const byBrewery = new Map();
   for (const b of breweries) {
     for (const key of [squashBrewery(b.brewery.name), squashBrewery(b.brewery.slug)]) if (key) byBrewery.set(key, b);
@@ -43,23 +43,29 @@ export function attachMine(breweries, checkins = [], ratings = []) {
   };
   const mine = (beer) => (beer.mine ??= { checkins: [], rating: null });
 
-  const out = [];
-  for (const c of [...checkins].sort((a, b) => String(b.date).localeCompare(String(a.date)) || b.id - a.id)) {
-    const b = findBrewery(c.brewery);
-    const want = squashBeer(c.beer);
+  // Which HopLove beer an Untappd name is.
+  const findBeer = (beerName, breweryName) => {
+    const b = findBrewery(breweryName);
+    const want = squashBeer(beerName);
     // "Field to Ferment: Centennial" is a release of "Field to Ferment".
-    const series = c.beer.includes(':') ? squashBeer(c.beer.split(':')[0]) : null;
-    const bare = styleless(c.beer);
+    const series = beerName.includes(':') ? squashBeer(beerName.split(':')[0]) : null;
+    const bare = styleless(beerName);
     const beer =
       b?.beers.find((x) => squashBeer(x.name) === want || squashBeer(x.slug) === want) ??
       (series ? b?.beers.find((x) => squashBeer(x.name) === series) : null) ??
       // "Fresh Hop Topcutter" is "Fresh Hop Topcutter IPA" on the brewery's site.
       (bare.length >= 4 ? b?.beers.find((x) => styleless(x.name) === bare) : null) ??
       // "Fresh Hop Static Shatter" is the fresh-hop beer the brewery calls "Static Shatter".
-      (/^(?:fresh|wet)[- ]hop\s/i.test(c.beer)
-        ? b?.beers.find((x) => x.hops?.some((h) => h.fresh) && styleless(x.name) === styleless(c.beer.replace(/^(?:fresh|wet)[- ]hop\s+/i, '')))
+      (/^(?:fresh|wet)[- ]hop\s/i.test(beerName)
+        ? b?.beers.find((x) => x.hops?.some((h) => h.fresh) && styleless(x.name) === styleless(beerName.replace(/^(?:fresh|wet)[- ]hop\s+/i, '')))
         : null) ??
       null;
+    return { b, beer };
+  };
+
+  const out = [];
+  for (const c of [...checkins].sort((a, b) => String(b.date).localeCompare(String(a.date)) || b.id - a.id)) {
+    const { b, beer } = findBeer(c.beer, c.brewery);
     if (beer) mine(beer).checkins.push(c);
     out.push({ ...c, match: beer ? { brewery: b.brewery, beer } : null, breweryMatch: b?.brewery ?? null });
   }
@@ -70,6 +76,15 @@ export function attachMine(breweries, checkins = [], ratings = []) {
       const rated = beer.mine?.checkins.find((c) => c.rating != null);
       if (rated) beer.mine.rating = { stars: rated.rating, note: rated.comment ?? null, date: rated.date, via: 'untappd' };
     }
+  }
+  // Untappd Beer History (data/untappd/history.yml): every beer Brooks has
+  // had, with his rating -- fills in beers from before the check-in feed.
+  for (const h of history) {
+    const { beer } = findBeer(String(h.beer), String(h.brewery));
+    if (!beer) continue;
+    const m = mine(beer);
+    m.history = { first: h.first, last: h.last, total: h.total };
+    if (!m.rating && h.rating != null) m.rating = { stars: h.rating, note: null, date: h.last, via: 'untappd' };
   }
   for (const r of ratings) {
     const b = breweries.find((x) => x.brewery.slug === r.brewery);
@@ -109,12 +124,15 @@ export function mineBlock(brewery, beer, base) {
         .join('\n      ')}
     </ul>`
     : '';
+  const since = !list.length && m?.history?.total > 1 ? ` <span class="fine">· had it ${m.history.total} times</span>` : '';
   const head = rating
-    ? `<p class="my-rating">${caps(rating.stars)} <span class="fine">${rating.via === 'hoplove' ? 'rated here' : 'on Untappd'}, ${when(rating.date)}</span></p>
+    ? `<p class="my-rating">${caps(rating.stars)} <span class="fine">${rating.via === 'hoplove' ? 'rated here' : 'on Untappd'}, ${when(rating.date)}</span>${since}</p>
     ${rating.via === 'hoplove' && rating.note ? `<p class="ci-note">${esc(rating.note)}</p>` : ''}`
     : list.length
       ? `<p class="fine">Checked in ${list.length === 1 ? 'once' : `${list.length} times`}, no rating yet.</p>`
-      : `<p class="fine">Brooks hasn’t had this one yet.</p>`;
+      : m?.history
+        ? `<p class="fine">Had it ${m.history.total > 1 ? `${m.history.total} times, first` : 'on'} ${when(m.history.first)}.</p>`
+        : `<p class="fine">Brooks hasn’t had this one yet.</p>`;
   return `<section class="block my-glass" id="rate" data-brewery="${esc(brewery.slug)}" data-beer="${esc(beer.slug)}" data-name="${esc(beer.name)}" data-brewery-name="${esc(brewery.name)}">
     <h2>In Brooks’s glass</h2>
     ${head}

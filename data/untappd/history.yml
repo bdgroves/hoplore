@@ -1,0 +1,877 @@
+source: Brooks's Untappd Beer History page (tools/ingest/untappd_history.py) -- one entry per beer, with his rating
+beers:
+  - beer: Radiance (2026)
+    brewery: Single Hill Brewing
+    style: IPA - American
+    rating: 3.75
+    first: '2026-09-28'
+    last: '2026-09-28'
+    total: 1
+  - beer: Fresh Cut (2026)
+    brewery: Fortside Brewing Company
+    style: IPA - New England / Hazy
+    rating: 3.5
+    first: '2026-09-27'
+    last: '2026-09-27'
+    total: 1
+  - beer: Fresh Hop Double Crush
+    brewery: Reuben's Brews
+    style: IPA - Imperial / Double New England / Hazy
+    rating: 4.0
+    first: '2026-09-27'
+    last: '2026-09-27'
+    total: 1
+  - beer: Fresh Hop Junior (2026)
+    brewery: Structures Brewing
+    style: Pale Ale - New England / Hazy
+    rating: 4.0
+    first: '2026-09-25'
+    last: '2026-09-25'
+    total: 1
+  - beer: 'Field to Ferment: Centennial (2026)'
+    brewery: Fremont Brewing
+    style: Pale Ale - American
+    rating: 3.75
+    first: '2026-09-22'
+    last: '2026-09-22'
+    total: 1
+  - beer: Beak Breaker Hazy
+    brewery: Pelican Brewing Company
+    style: IPA - Imperial / Double New England / Hazy
+    rating: 3.5
+    first: '2026-09-20'
+    last: '2026-09-20'
+    total: 1
+  - beer: Fresh Hop Static Shatter (2026)
+    brewery: Block 15 Brewing Company
+    style: IPA - American
+    rating: 3.75
+    first: '2026-09-20'
+    last: '2026-09-20'
+    total: 1
+  - beer: Fresh Hop Topcutter (2026)
+    brewery: Bale Breaker Brewing Company
+    style: IPA - American
+    rating: 3.75
+    first: '2026-09-19'
+    last: '2026-09-19'
+    total: 1
+  - beer: Fresh Assassin (2026 Release)
+    brewery: Triceratops Brewing Company
+    style: IPA - American
+    rating: 3.75
+    first: '2026-09-19'
+    last: '2026-09-19'
+    total: 1
+  - beer: Simcoe Architect
+    brewery: Fort George Brewery
+    style: IPA - American
+    rating: 4.0
+    first: '2026-09-19'
+    last: '2026-09-19'
+    total: 1
+  - beer: Quality of Consciousness
+    brewery: Fort George Brewery
+    style: IPA - New England / Hazy
+    rating: 4.0
+    first: '2026-09-19'
+    last: '2026-09-19'
+    total: 1
+  - beer: Killer Green
+    brewery: Double Mountain Brewery & Cidery
+    style: IPA - American
+    rating: 3.75
+    first: '2026-09-12'
+    last: '2026-09-12'
+    total: 1
+  - beer: Fresh Hop Iowa Bar Fight
+    brewery: Double Mountain Brewery & Cidery
+    style: IPA - Other
+    rating: 3.75
+    first: '2026-09-12'
+    last: '2026-09-12'
+    total: 1
+  - beer: Cosmic Guava West Coast IPA
+    brewery: pFriem Family Brewers
+    style: IPA - American
+    rating: 3.75
+    first: '2026-09-12'
+    last: '2026-09-12'
+    total: 1
+  - beer: Punch Bowl Juicy IPA
+    brewery: Hood River Brewing Company
+    style: IPA - American
+    rating: 3.75
+    first: '2026-09-12'
+    last: '2026-09-12'
+    total: 1
+  - beer: Tomorrow Comes
+    brewery: Kings & Daughters Brewery
+    style: IPA - New England / Hazy
+    rating: 4.0
+    first: '2026-08-07'
+    last: '2026-09-11'
+    total: 2
+  - beer: Ripe IPA
+    brewery: Great Notion Brewing
+    style: IPA - New England / Hazy
+    rating: 3.75
+    first: '2026-09-07'
+    last: '2026-09-07'
+    total: 1
+  - beer: Hop Zine
+    brewery: Brothers Cascadia Brewing
+    style: IPA - American
+    rating: 4.0
+    first: '2026-09-07'
+    last: '2026-09-07'
+    total: 1
+  - beer: The Creative Process
+    brewery: Fast Fashion
+    style: IPA - American
+    rating: 4.0
+    first: '2026-09-06'
+    last: '2026-09-06'
+    total: 1
+  - beer: Mammuthus Magnificus
+    brewery: Tripping Animals Brewing Co.
+    style: IPA - Imperial / Double
+    rating: 3.75
+    first: '2026-09-06'
+    last: '2026-09-06'
+    total: 1
+  - beer: Golden Thread
+    brewery: Kings & Daughters Brewery
+    style: Pale Ale - New England / Hazy
+    rating: 3.75
+    first: '2026-08-28'
+    last: '2026-08-28'
+    total: 1
+  - beer: Nigiri
+    brewery: Fort George Brewery
+    style: Pale Ale - American
+    rating: 3.5
+    first: '2026-08-23'
+    last: '2026-08-23'
+    total: 1
+  - beer: Face To the Sun
+    brewery: Kings & Daughters Brewery
+    style: IPA - American
+    rating: 3.75
+    first: '2026-08-23'
+    last: '2026-08-23'
+    total: 1
+  - beer: Beach Llamas
+    brewery: Lumberbeard Brewing
+    style: IPA - New England / Hazy
+    rating: 3.5
+    first: '2026-08-22'
+    last: '2026-08-22'
+    total: 1
+  - beer: Free Dive
+    brewery: Kings & Daughters Brewery
+    style: IPA - New England / Hazy
+    rating: 4.0
+    first: '2026-08-22'
+    last: '2026-08-22'
+    total: 1
+  - beer: Alley Light
+    brewery: Kings & Daughters Brewery
+    style: IPA - American
+    rating: 3.75
+    first: '2026-08-16'
+    last: '2026-08-16'
+    total: 1
+  - beer: Sky Cowboy IPA
+    brewery: Stoup Brewing
+    style: IPA - American
+    rating: 3.5
+    first: '2026-08-13'
+    last: '2026-08-13'
+    total: 1
+  - beer: Design Trends
+    brewery: Fort George Brewery
+    style: Pale Ale - American
+    rating: 3.75
+    first: '2026-08-08'
+    last: '2026-08-08'
+    total: 1
+  - beer: Tough Love [BANISHED] 2025
+    brewery: Crux Fermentation Project
+    style: Stout - Imperial / Double
+    rating: 4.0
+    first: '2026-08-08'
+    last: '2026-08-08'
+    total: 1
+  - beer: Jet Ski Trailer
+    brewery: Fort George Brewery
+    style: IPA - American
+    rating: 3.75
+    first: '2026-08-08'
+    last: '2026-08-08'
+    total: 1
+  - beer: Hello, Lamppost
+    brewery: Kings & Daughters Brewery
+    style: IPA - Imperial / Double
+    rating: 3.75
+    first: '2026-08-07'
+    last: '2026-08-07'
+    total: 1
+  - beer: Easterly New England Style IPA
+    brewery: Narrows Brewing
+    style: IPA - New England / Hazy
+    rating: 3.75
+    first: '2026-08-01'
+    last: '2026-08-01'
+    total: 1
+  - beer: More Me, Less You
+    brewery: Georgetown Brewing Company
+    style: IPA - American
+    rating: 3.75
+    first: '2026-08-01'
+    last: '2026-08-01'
+    total: 1
+  - beer: Nectaron Studies
+    brewery: Stoup Brewing
+    style: IPA - American
+    rating: 3.5
+    first: '2026-08-01'
+    last: '2026-08-01'
+    total: 1
+  - beer: Commercial Break
+    brewery: Fast Fashion
+    style: IPA - Imperial / Double
+    rating: 4.0
+    first: '2026-07-25'
+    last: '2026-07-25'
+    total: 1
+  - beer: New England IPA
+    brewery: Hidden Brewery (Seven Stars)
+    style: IPA - New England / Hazy
+    rating: 3.5
+    first: '2026-07-19'
+    last: '2026-07-19'
+    total: 1
+  - beer: 4 Luppoli Originale
+    brewery: Birrificio Angelo Poretti
+    style: Lager - Pale
+    rating: 3.5
+    first: '2026-07-17'
+    last: '2026-07-17'
+    total: 1
+  - beer: Ichnusa Non Filtrata
+    brewery: Ichnusa
+    style: Kellerbier / Zwickelbier
+    rating: 4.0
+    first: '2026-07-17'
+    last: '2026-07-17'
+    total: 1
+  - beer: Blushing Bride
+    brewery: Coalition Brewing Company
+    style: Gluten-Free
+    rating: 3.5
+    first: '2026-07-16'
+    last: '2026-07-16'
+    total: 1
+  - beer: 420 Extra Pale Ale
+    brewery: SweetWater Brewing Company
+    style: Pale Ale - XPA (Extra Pale)
+    rating: 3.5
+    first: '2026-07-10'
+    last: '2026-07-10'
+    total: 1
+  - beer: Liquid Television
+    brewery: Vice Beer
+    style: IPA - American
+    rating: 3.75
+    first: '2026-07-04'
+    last: '2026-07-04'
+    total: 1
+  - beer: Sentinels of the Sea
+    brewery: Kings & Daughters Brewery
+    style: IPA - American
+    rating: 3.75
+    first: '2026-07-04'
+    last: '2026-07-04'
+    total: 1
+  - beer: Class 5
+    brewery: Alaskan Brewing Co.
+    style: Pale Ale - American
+    rating: 3.5
+    first: '2026-07-02'
+    last: '2026-07-02'
+    total: 1
+  - beer: All Who Wander
+    brewery: Kings & Daughters Brewery
+    style: IPA - New England / Hazy
+    rating: 4.0
+    first: '2026-06-30'
+    last: '2026-06-30'
+    total: 1
+  - beer: Busy Season
+    brewery: Kings & Daughters Brewery
+    style: IPA - New England / Hazy
+    rating: 4.0
+    first: '2026-06-29'
+    last: '2026-06-29'
+    total: 1
+  - beer: Source To Sea West Coast IPA
+    brewery: Icicle Brewing Company
+    style: IPA - American
+    rating: 4.0
+    first: '2026-06-28'
+    last: '2026-06-28'
+    total: 1
+  - beer: Spellbinder
+    brewery: Wren House Brewing Company
+    style: IPA - New England / Hazy
+    rating: 3.75
+    first: '2026-06-19'
+    last: '2026-06-19'
+    total: 1
+  - beer: Unplugged
+    brewery: Fremont Brewing
+    style: IPA - American
+    rating: 3.75
+    first: '2026-06-08'
+    last: '2026-06-08'
+    total: 1
+  - beer: S2N
+    brewery: E9 Brewing Co.
+    style: IPA - American
+    rating: 4.0
+    first: '2026-06-08'
+    last: '2026-06-08'
+    total: 1
+  - beer: Eighth Anniversary IPA
+    brewery: Single Hill Brewing
+    style: IPA - American
+    rating: 4.0
+    first: '2026-06-07'
+    last: '2026-06-07'
+    total: 1
+  - beer: Similar Interests
+    brewery: Cloudburst Brewing
+    style: IPA - American
+    rating: 4.0
+    first: '2026-06-07'
+    last: '2026-06-07'
+    total: 1
+  - beer: Moral Codes
+    brewery: The Lost Abbey
+    style: IPA - Imperial / Double
+    rating: 3.75
+    first: '2026-06-07'
+    last: '2026-06-07'
+    total: 1
+  - beer: Enchantments Hazy IPA Series - No. 26 - Jabberwocky
+    brewery: Icicle Brewing Company
+    style: IPA - New England / Hazy
+    rating: 4.0
+    first: '2026-05-31'
+    last: '2026-05-31'
+    total: 1
+  - beer: Castaway IPA
+    brewery: Kona Brewing Hawaii
+    style: IPA - American
+    rating: 3.5
+    first: '2026-05-26'
+    last: '2026-05-26'
+    total: 1
+  - beer: Hop Island
+    brewery: Honolulu Beerworks
+    style: IPA - American
+    rating: 3.75
+    first: '2026-05-26'
+    last: '2026-05-26'
+    total: 1
+  - beer: Big Swell IPA
+    brewery: Maui Brewing Company
+    style: IPA - American
+    rating: 3.75
+    first: '2026-05-26'
+    last: '2026-05-26'
+    total: 1
+  - beer: Overboard
+    brewery: Big Island Brewhaus
+    style: IPA - American
+    rating: 3.75
+    first: '2026-05-26'
+    last: '2026-05-26'
+    total: 1
+  - beer: IPA
+    brewery: Ola Brew Company
+    style: IPA - American
+    rating: 3.75
+    first: '2026-05-26'
+    last: '2026-05-26'
+    total: 1
+  - beer: Superdelic IPA
+    brewery: Ola Brew Company
+    style: IPA - American
+    rating: 3.75
+    first: '2026-05-26'
+    last: '2026-05-26'
+    total: 1
+  - beer: Hoptopus Double IPA
+    brewery: Ola Brew Company
+    style: IPA - Imperial / Double
+    rating: 4.0
+    first: '2026-05-26'
+    last: '2026-05-26'
+    total: 1
+  - beer: Kua Bay IPA
+    brewery: Kona Brewing Hawaii
+    style: IPA - American
+    rating: 3.75
+    first: '2026-05-13'
+    last: '2026-05-13'
+    total: 1
+  - beer: Daytime Karaoke
+    brewery: Superflux Beer Company
+    style: IPA - New England / Hazy
+    rating: 3.75
+    first: '2026-05-09'
+    last: '2026-05-09'
+    total: 1
+  - beer: Trash Panda
+    brewery: Parallel 49 Brewing Company
+    style: IPA - New England / Hazy
+    rating: 3.5
+    first: '2026-05-09'
+    last: '2026-05-09'
+    total: 1
+  - beer: Evergreen
+    brewery: Superflux Beer Company
+    style: IPA - American
+    rating: 3.75
+    first: '2026-05-09'
+    last: '2026-05-09'
+    total: 1
+  - beer: Do Fun Shit With People You Like Vol. 2
+    brewery: Superflux Beer Company
+    style: IPA - New England / Hazy
+    rating: 3.75
+    first: '2026-05-09'
+    last: '2026-05-09'
+    total: 1
+  - beer: Vin Van Collab
+    brewery: Superflux Beer Company
+    style: IPA - New England / Hazy
+    rating: 3.75
+    first: '2026-05-09'
+    last: '2026-05-09'
+    total: 1
+  - beer: Poetic Licence
+    brewery: Kicks Brewing
+    style: IPA - New England / Hazy
+    rating: 4.0
+    first: '2026-05-09'
+    last: '2026-05-09'
+    total: 1
+  - beer: Golden Haze
+    brewery: New Terrain Brewing Co.
+    style: IPA - New England / Hazy
+    rating: 4.0
+    first: '2026-05-08'
+    last: '2026-05-08'
+    total: 1
+  - beer: IPA
+    brewery: Odell Brewing Co.
+    style: IPA - American
+    rating: 3.75
+    first: '2026-05-07'
+    last: '2026-05-07'
+    total: 1
+  - beer: Smithwick's
+    brewery: Guinness
+    style: Red Ale - Irish
+    rating: 3.25
+    first: '2026-05-03'
+    last: '2026-05-03'
+    total: 1
+  - beer: To the Garden
+    brewery: Kings & Daughters Brewery
+    style: IPA - American
+    rating: 3.75
+    first: '2026-05-01'
+    last: '2026-05-01'
+    total: 1
+  - beer: Moon Check
+    brewery: Kings & Daughters Brewery
+    style: IPA - American
+    rating: 3.75
+    first: '2026-04-26'
+    last: '2026-04-26'
+    total: 1
+  - beer: Vigilante
+    brewery: Kings & Daughters Brewery
+    style: IPA - Triple
+    rating: 4.0
+    first: '2026-04-26'
+    last: '2026-04-26'
+    total: 1
+  - beer: Lucy In the Vortex With Diamonds
+    brewery: Georgetown Brewing Company
+    style: IPA - Imperial / Double
+    rating: 4.0
+    first: '2026-04-25'
+    last: '2026-04-25'
+    total: 1
+  - beer: Personal Record
+    brewery: Athletic Brewing Company
+    style: Non-Alcoholic - IPA
+    rating: 4.0
+    first: '2026-04-24'
+    last: '2026-04-24'
+    total: 1
+  - beer: 2026 Double Happiness Barrel Aged Imperial Stout with Vietnamese Coffee & Vanilla
+    brewery: Lucky Envelope Brewing
+    style: Porter - Imperial / Double
+    rating: 3.75
+    first: '2026-04-18'
+    last: '2026-04-18'
+    total: 1
+  - beer: North Best
+    brewery: Irrelevant Beer
+    style: IPA - American
+    rating: 3.75
+    first: '2026-04-18'
+    last: '2026-04-18'
+    total: 1
+  - beer: Cutoff Flannel
+    brewery: Lumberbeard Brewing
+    style: IPA - American
+    rating: 3.5
+    first: '2026-04-18'
+    last: '2026-04-18'
+    total: 1
+  - beer: Ma, He Did It!
+    brewery: Tripping Animals Brewing Co.
+    style: IPA - Triple New England / Hazy
+    rating: 4.0
+    first: '2026-04-18'
+    last: '2026-04-18'
+    total: 1
+  - beer: Strata/Citra Fuzz – Citra, Strata, Simcoe
+    brewery: Structures Brewing
+    style: IPA - New England / Hazy
+    rating: 3.75
+    first: '2026-04-18'
+    last: '2026-04-18'
+    total: 1
+  - beer: Upstream
+    brewery: Kings & Daughters Brewery
+    style: IPA - American
+    rating: 4.0
+    first: '2026-04-18'
+    last: '2026-04-18'
+    total: 1
+  - beer: Harp Premium Lager
+    brewery: Guinness
+    style: Lager - Pale
+    rating: 3.5
+    first: '2026-04-04'
+    last: '2026-04-04'
+    total: 1
+  - beer: Patagonia Provisions Non-Alcoholic Organic IPA
+    brewery: Deschutes Brewery
+    style: Non-Alcoholic - IPA
+    rating: 3.5
+    first: '2026-04-03'
+    last: '2026-04-03'
+    total: 1
+  - beer: Alefort Island
+    brewery: Fort George Brewery
+    style: IPA - American
+    rating: 3.5
+    first: '2026-03-29'
+    last: '2026-03-29'
+    total: 1
+  - beer: Riip At Your Own Risk
+    brewery: Fort George Brewery
+    style: IPA - American
+    rating: 3.75
+    first: '2026-03-29'
+    last: '2026-03-29'
+    total: 1
+  - beer: Reality Test (2026)
+    brewery: Fort George Brewery
+    style: IPA - American
+    rating: 4.0
+    first: '2026-03-29'
+    last: '2026-03-29'
+    total: 1
+  - beer: Vor Tai P.A.
+    brewery: Fort George Brewery
+    style: IPA - American
+    rating: 4.0
+    first: '2026-03-29'
+    last: '2026-03-29'
+    total: 1
+  - beer: OMEGATEX (2026)
+    brewery: Fort George Brewery
+    style: IPA - Imperial / Double
+    rating: 4.0
+    first: '2026-03-29'
+    last: '2026-03-29'
+    total: 1
+  - beer: Beta 37.4
+    brewery: Fort George Brewery
+    style: IPA - Imperial / Double New England / Hazy
+    rating: 4.0
+    first: '2026-03-29'
+    last: '2026-03-29'
+    total: 1
+  - beer: Dragon's Milk
+    brewery: New Holland Brewing
+    style: Stout - Imperial / Double
+    rating: 4.0
+    first: '2026-03-28'
+    last: '2026-03-28'
+    total: 1
+  - beer: Indian Summer IPA
+    brewery: Bill's Tavern & Brewhouse
+    style: IPA - American
+    rating: 3.5
+    first: '2026-03-27'
+    last: '2026-03-27'
+    total: 1
+  - beer: iOTA Hazy IPA
+    brewery: Phillips Brewing & Malting Co.
+    style: Non-Alcoholic - IPA
+    rating: 3.25
+    first: '2026-02-15'
+    last: '2026-02-15'
+    total: 1
+  - beer: Definitely Not Lizard People
+    brewery: Urban Family Brewing
+    style: IPA - New England / Hazy
+    rating: 3.75
+    first: '2025-12-31'
+    last: '2025-12-31'
+    total: 1
+  - beer: Glowed Up
+    brewery: Trap Door Brewing
+    style: IPA - New England / Hazy
+    rating: 3.75
+    first: '2025-09-28'
+    last: '2025-12-31'
+    total: 2
+  - beer: Wintertime IPA
+    brewery: Hetty Alice
+    style: IPA - American
+    rating: 3.75
+    first: '2025-12-28'
+    last: '2025-12-28'
+    total: 1
+  - beer: Doublecross
+    brewery: Crux Fermentation Project
+    style: Belgian Strong Dark Ale
+    rating: 3.75
+    first: '2025-12-28'
+    last: '2025-12-28'
+    total: 1
+  - beer: "'Tis the Season"
+    brewery: Kings & Daughters Brewery
+    style: IPA - American
+    rating: 3.25
+    first: '2025-12-27'
+    last: '2025-12-27'
+    total: 1
+  - beer: Atmospheric River
+    brewery: Kings & Daughters Brewery
+    style: IPA - New England / Hazy
+    rating: 4.0
+    first: '2025-12-27'
+    last: '2025-12-27'
+    total: 1
+  - beer: O'Leary's Coffee Milk Stout
+    brewery: E9 Brewing Co.
+    style: Stout - Milk / Sweet
+    rating: 3.75
+    first: '2025-12-27'
+    last: '2025-12-27'
+    total: 1
+  - beer: Skybright Winter Ale
+    brewery: Stemma Brewing Co.
+    style: Winter Ale
+    rating: 3.5
+    first: '2025-12-27'
+    last: '2025-12-27'
+    total: 1
+  - beer: Petal Party
+    brewery: Hetty Alice
+    style: IPA - New England / Hazy
+    rating: 3.75
+    first: '2025-12-25'
+    last: '2025-12-25'
+    total: 1
+  - beer: Malibu Grand Prix
+    brewery: Fort George Brewery
+    style: IPA - American
+    rating: 4.0
+    first: '2025-12-25'
+    last: '2025-12-25'
+    total: 1
+  - beer: Ice Cold IPA
+    brewery: Shaketown Brewing
+    style: IPA - Cold
+    rating: 3.5
+    first: '2025-12-13'
+    last: '2025-12-13'
+    total: 1
+  - beer: Graphic Hazy IPA
+    brewery: Gulfstream Brewing
+    style: IPA - American
+    rating: 3.75
+    first: '2025-12-11'
+    last: '2025-12-11'
+    total: 1
+  - beer: Fresh
+    brewery: Civil Society Brewing
+    style: IPA - New England / Hazy
+    rating: 3.75
+    first: '2025-12-10'
+    last: '2025-12-10'
+    total: 1
+  - beer: Hop Gun IPA
+    brewery: Funky Buddha Brewery
+    style: IPA - American
+    rating: 3.75
+    first: '2025-12-09'
+    last: '2025-12-09'
+    total: 1
+  - beer: Later Nick
+    brewery: Future Primitive Brewing
+    style: IPA - New England / Hazy
+    rating: 3.5
+    first: '2025-11-27'
+    last: '2025-11-27'
+    total: 1
+  - beer: Wormholes
+    brewery: Fort George Brewery
+    style: IPA - American
+    rating: 4.0
+    first: '2025-11-27'
+    last: '2025-11-27'
+    total: 1
+  - beer: 5th & Cascade
+    brewery: Kings & Daughters Brewery
+    style: IPA - New England / Hazy
+    rating: 3.75
+    first: '2025-11-27'
+    last: '2025-11-27'
+    total: 1
+  - beer: Sound Barrier
+    brewery: Stoup Brewing
+    style: IPA - American
+    rating: 3.75
+    first: '2025-11-26'
+    last: '2025-11-26'
+    total: 1
+  - beer: Christmas Crikey
+    brewery: Reuben's Brews
+    style: IPA - American
+    rating: 3.5
+    first: '2025-11-26'
+    last: '2025-11-26'
+    total: 1
+  - beer: Distinctive Holiday Ale (2023)
+    brewery: Cloudburst Brewing
+    style: Winter Warmer
+    rating: 3.75
+    first: '2025-11-23'
+    last: '2025-11-23'
+    total: 1
+  - beer: Mexican Hot Chocolate Cream Stout
+    brewery: Lucky Envelope Brewing
+    style: Stout - Milk / Sweet
+    rating: 3.75
+    first: '2025-11-22'
+    last: '2025-11-22'
+    total: 1
+  - beer: Northleft
+    brewery: Great Notion Brewing
+    style: IPA - New England / Hazy
+    rating: 3.75
+    first: '2025-10-12'
+    last: '2025-10-12'
+    total: 1
+  - beer: C.L.S. Farm Harvest - Centennial
+    brewery: Matchless Brewing
+    style: Pale Ale - American
+    rating: 3.5
+    first: '2025-10-12'
+    last: '2025-10-12'
+    total: 1
+  - beer: Fresh Hop Juice Jr. (2025)
+    brewery: Great Notion Brewing
+    style: IPA - New England / Hazy
+    rating: 3.75
+    first: '2025-10-10'
+    last: '2025-10-10'
+    total: 1
+  - beer: Fresh Hop Strata Hazy IPA (2025)
+    brewery: Lucky Envelope Brewing
+    style: IPA - New England / Hazy
+    rating: 3.75
+    first: '2025-10-10'
+    last: '2025-10-10'
+    total: 1
+  - beer: Little Green Men Fresh Hop Hazy IPA
+    brewery: Little Beast Brewing
+    style: IPA - New England / Hazy
+    rating: 3.75
+    first: '2025-10-10'
+    last: '2025-10-10'
+    total: 1
+  - beer: Fresh Hop Strata IPA
+    brewery: Ferment Brewing Company
+    style: IPA - New England / Hazy
+    rating: 3.5
+    first: '2025-10-07'
+    last: '2025-10-07'
+    total: 1
+  - beer: Fresh Hop Pinetop (2025)
+    brewery: Little Beast Brewing
+    style: IPA - American
+    rating: 3.5
+    first: '2025-10-07'
+    last: '2025-10-07'
+    total: 1
+  - beer: Hetty Clouds - Fresh Hop W/Chinook
+    brewery: Hetty Alice
+    style: IPA - New England / Hazy
+    rating: 3.5
+    first: '2025-10-06'
+    last: '2025-10-06'
+    total: 1
+  - beer: Fresh Hop Linoleum (2025)
+    brewery: Vice Beer
+    style: IPA - Other
+    rating: 4.25
+    first: '2025-10-05'
+    last: '2025-10-05'
+    total: 1
+  - beer: 2025 Fresh Hop Holographic Memory
+    brewery: Ladd & Lass Brewing
+    style: IPA - New England / Hazy
+    rating: 4.0
+    first: '2025-10-05'
+    last: '2025-10-05'
+    total: 1
+  - beer: Fresh IPA (2025)
+    brewery: Fort George Brewery
+    style: IPA - American
+    rating: 3.75
+    first: '2025-10-03'
+    last: '2025-10-03'
+    total: 1
+  - beer: Probably Something With Pally™
+    brewery: Von Ebert Brewing
+    style: IPA - Imperial / Double New England / Hazy
+    rating: 4.0
+    first: '2025-10-03'
+    last: '2025-10-03'
+    total: 1

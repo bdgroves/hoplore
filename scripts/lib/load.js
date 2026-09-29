@@ -91,10 +91,12 @@ export function loadDataset() {
   // ratings set on HopLove (tools/ingest/rating.py). Both optional.
   const checkinsPath = join(DATA, 'untappd', 'checkins.yml');
   const checkins = existsSync(checkinsPath) ? readYaml(checkinsPath).checkins ?? [] : [];
+  const historyPath = join(DATA, 'untappd', 'history.yml');
+  const history = existsSync(historyPath) ? readYaml(historyPath).beers ?? [] : [];
   const ratingsPath = join(DATA, 'ratings.yml');
   const ratings = existsSync(ratingsPath) ? readYaml(ratingsPath).ratings ?? [] : [];
 
-  return { sources, taxonomy, hops, acreage, breweries, checkins, ratings, overrides };
+  return { sources, taxonomy, hops, acreage, breweries, checkins, ratings, overrides, history };
 }
 
 export const schemas = () => ({
