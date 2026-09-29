@@ -248,5 +248,109 @@
   keep_listing: true
   match: '^$'
 
+# --- Added 2026-09-29 ---
+- slug: sunriver
+  name: Sunriver Brewing
+  city: Sunriver
+  state: OR
+  url: https://www.sunriverbrewingcompany.com/
+  listing: ['https://www.sunriverbrewingcompany.com/beer']
+  match: '^(https://www\.sunriverbrewingcompany\.com)?/beer/[a-z0-9-]+/?$'
+  base: https://www.sunriverbrewingcompany.com
+
+- slug: icicle
+  name: Icicle Brewing
+  city: Leavenworth
+  state: WA
+  url: https://iciclebrewing.com/
+  listing: ['https://iciclebrewing.com/beer/']
+  match: '^(https://iciclebrewing\.com)?/beers/[a-z0-9-]+/?$'
+  base: https://iciclebrewing.com
+
+- slug: ferment
+  name: Ferment Brewing
+  city: Hood River
+  state: OR
+  url: https://fermentbrewing.com/
+  listing: ['https://fermentbrewing.com/pages/beer', 'https://fermentbrewing.com/collections/all']
+  match: '^(https://fermentbrewing\.com)?(/collections/[a-z0-9-]+)?/products/[a-z0-9-]+$'
+  base: https://fermentbrewing.com
+  page_url: 'https://fermentbrewing.com/{path}'
+
+- slug: chuckanut
+  name: Chuckanut Brewery
+  city: Bellingham
+  state: WA
+  url: https://www.chuckanutbrewery.com/
+  listing: ['https://www.chuckanutbrewery.com/pages/master-list']
+  match: '^(https://www\.chuckanutbrewery\.com)?/pages/(?!master-list|contact|about|faq|events|locations|jobs|careers|privacy|terms|shop|visit|food|menu)[a-z0-9-]+$'
+  base: https://www.chuckanutbrewery.com
+  page_url: 'https://www.chuckanutbrewery.com/{path}'
+
+- slug: ladd-and-lass
+  name: Ladd & Lass Brewing
+  city: Seattle
+  state: WA
+  url: https://www.laddandlassbrewing.com/
+  listing: ['https://www.laddandlassbrewing.com/ontap', 'https://www.laddandlassbrewing.com/2026-fresh-hop-beers']
+  keep_listing: true
+  match: '^$'
+
+- slug: wander
+  name: Wander Brewing
+  city: Bellingham
+  state: WA
+  url: https://wanderbrewing.com/
+  listing: ['https://wanderbrewing.com/taplist/']
+  keep_listing: true
+  match: '^$'
+
+# Probes: sites the survey couldn't open. Only the listing page is saved,
+# to see whether they name hops; no parser until one is written.
+- slug: little-beast
+  name: Little Beast Brewing
+  city: Beaverton
+  state: OR
+  url: https://www.littlebeastbrewing.com/
+  listing: ['https://www.littlebeastbrewing.com/beer']
+  keep_listing: true
+  match: '^$'
+
+- slug: lucky-envelope
+  name: Lucky Envelope Brewing
+  city: Seattle
+  state: WA
+  url: https://www.luckyenvelopebrewing.com/
+  listing: ['https://www.luckyenvelopebrewing.com/', 'https://www.luckyenvelopebrewing.com/beer', 'https://www.luckyenvelopebrewing.com/beers']
+  keep_listing: true
+  match: '^$'
+
+- slug: matchless
+  name: Matchless Brewing
+  city: Tumwater
+  state: WA
+  url: https://www.matchlessbrewing.com/
+  listing: ['https://www.matchlessbrewing.com/taproom', 'https://www.matchlessbrewing.com/find-beer']
+  keep_listing: true
+  match: '^$'
+
+- slug: barley-browns
+  name: Barley Brown's Beer
+  city: Baker City
+  state: OR
+  url: https://www.barleybrownsbeer.com/
+  listing: ['https://www.barleybrownsbeer.com/taphouse', 'https://www.barleybrownsbeer.com/']
+  keep_listing: true
+  match: '^$'
+
+- slug: narrows
+  name: Narrows Brewing
+  city: Tacoma
+  state: WA
+  url: https://narrowsbrewing.com/
+  listing: ['https://narrowsbrewing.com/our-beers/']
+  keep_listing: true
+  match: '^https://narrowsbrewing\.com/(our-beers|beer|beers)/[a-z0-9-]+/?$'
+
 # Hood River Brewing and Brothers Cascadia were tried (2026-09): neither site
 # names the hop varieties in its beers, so they're left out.
