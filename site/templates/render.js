@@ -103,7 +103,7 @@ export const tip = (line = 'Found what you were after?') =>
 export const footer = (base, meta) => `
 <section class="colophon">
   <div class="wrap">
-    <nav class="colophon-nav"><a href="${base}about/">How it works</a><a href="${base}beers/">What's in the can</a><a href="${base}scan/">Scan a beer</a><a href="${base}compare/">Hop vs hop</a><a href="${base}fresh-hop/">Fresh hop season</a><a href="${base}">All hops</a><a href="${TIP_URL}" rel="noopener">Buy Brooks a beer 🍺</a><button type="button" class="owner-link" id="owner-link">🔒 Brooks</button></nav>
+    <nav class="colophon-nav"><a href="${base}about/">How it works</a><a href="${base}beers/">What's in the can</a><a href="${base}scan/">Scan a beer</a><a href="${base}compare/">Hop vs hop</a><a href="${base}fresh-hop/">Fresh hop season</a><a href="${base}">All hops</a><a href="${TIP_URL}" rel="noopener">Buy Brooks a beer 🍺</a><a href="mailto:contact@brooksgroves.com?subject=HopLove">✉️ Email Brooks</a><button type="button" class="owner-link" id="owner-link">🔒 Brooks</button></nav>
     <p>HopLove is an open dataset first and a website second. Every figure on this
     site is rolled up from cited observations in
     <code>data/hops/</code>, and the same build that made this page wrote

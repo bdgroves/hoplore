@@ -1093,3 +1093,6 @@ body.searching .brewery > p.fine { display: none; }
 /* 404 search */
 .nf-search { display: flex; gap: 0.5rem; max-width: 34rem; margin: 0.5rem 0 1rem; }
 .nf-search input { flex: 1; min-width: 0; font: inherit; padding: 0.6rem 0.8rem; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); border-radius: 2px; }
+
+/* "Something off? Email Brooks" on beer pages */
+.say-hi { margin: 1.25rem 0 0; }

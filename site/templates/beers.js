@@ -298,6 +298,7 @@ export function renderBeer({ brewery, beer, bySlug, taxonomy, meta }) {
   </section>
   ${likeBlock(beer, bySlug, base)}
   ${editBlock(brewery, beer, bySlug)}
+  <p class="fine say-hi">Something off with this beer, or know what’s in it? <a href="mailto:contact@brooksgroves.com?subject=${encodeURIComponent(`HopLove: ${beer.name} (${brewery.name})`)}">✉️ Email Brooks</a></p>
   ${tip('Know your hops now?')}
   ${GLOSSARY}
   ${mineBlock(brewery, beer, base)}
