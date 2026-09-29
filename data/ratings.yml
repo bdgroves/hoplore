@@ -1,5 +1,11 @@
 about: Brooks's own ratings, set on HopLove (tools/ingest/rating.py). 0.25-5 caps, like Untappd.
 ratings:
+  - brewery: fort-george
+    beer: low-key-ipa
+    name: Low Key IPA (Fort George Brewery)
+    stars: 3.5
+    note: Good beer when you have things to do!
+    date: '2026-09-29'
   - brewery: single-hill
     beer: radiance
     name: Radiance (Single Hill Brewing)
