@@ -129,7 +129,7 @@ export function renderScience({ hops, meta }) {
     easily — which is why a long boil strips them out and why aroma hops go in late, in the whirlpool, or into
     the fermenter as a dry hop.</p>
 
-    <div class="oil">
+    <div class="sci-oil">
       ${mol('myrcene', 'Myrcene', 'C10H16')}
       <div><h3>Myrcene <span class="swatch" style="--c:#c8922a"></span></h3>
       <p>Green and resinous — the "fresh-cut hop" smell (it's also in bay leaves and ripe mango). Usually the biggest share of the oil, especially in
@@ -138,7 +138,7 @@ export function renderScience({ hops, meta }) {
       ${leaders('myrcene')}</div>
     </div>
 
-    <div class="oil">
+    <div class="sci-oil">
       ${mol('humulene', 'Humulene', 'C15H24')}
       <div><h3>Humulene <span class="swatch" style="--c:#3f6b4f"></span></h3>
       <p>Woody, herbal, earthy — the classic "noble hop" note of German and English hops. Named after the hop
@@ -147,7 +147,7 @@ export function renderScience({ hops, meta }) {
       ${leaders('humulene')}</div>
     </div>
 
-    <div class="oil">
+    <div class="sci-oil">
       ${mol('caryophyllene', 'Caryophyllene', 'C15H24')}
       <div><h3>Caryophyllene <span class="swatch" style="--c:#8b3a2a"></span></h3>
       <p>Spicy, peppery, woody. The very same molecule gives black pepper and cloves part of their bite.
@@ -155,7 +155,7 @@ export function renderScience({ hops, meta }) {
       ${leaders('caryophyllene')}</div>
     </div>
 
-    <div class="oil">
+    <div class="sci-oil">
       ${mol('farnesene', 'Farnesene', 'C15H24')}
       <div><h3>Farnesene <span class="swatch" style="--c:#6f7f4a"></span></h3>
       <p>Floral, green, a hint of green apple. Many American hops have almost none; a few European aroma hops —
@@ -163,7 +163,7 @@ export function renderScience({ hops, meta }) {
       ${leaders('farnesene')}</div>
     </div>
 
-    <div class="oil">
+    <div class="sci-oil">
       ${mol('linalool', 'Linalool', 'C10H18O')}
       <div><h3>Linalool <span class="swatch" style="--c:#a8823f"></span></h3>
       <p>Floral, citrusy, lavender-like — it's one of the main scents of lavender and coriander. A small share of
@@ -171,7 +171,7 @@ export function renderScience({ hops, meta }) {
       ${leaders('linalool')}</div>
     </div>
 
-    <div class="oil">
+    <div class="sci-oil">
       ${mol('geraniol', 'Geraniol', 'C10H18O')}
       <div><h3>Geraniol <span class="swatch" style="--c:#7e6a3c"></span></h3>
       <p>Rose and geranium. The fun part: yeast can convert geraniol into citronellol, which smells more like

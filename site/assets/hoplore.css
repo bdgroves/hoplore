@@ -1011,10 +1011,10 @@ body.searching .brewery > p.fine { display: none; }
 .mol figcaption .num { color: var(--ink-soft); }
 .mol-3d { margin-left: auto; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.35rem 0.6rem; border: 1px solid var(--gold); background: transparent; color: var(--ink); border-radius: 999px; cursor: pointer; }
 .mol-3d:hover { background: var(--gold); color: #1c1a16; }
-.oil { display: grid; grid-template-columns: minmax(14rem, 20rem) 1fr; gap: 1.5rem; align-items: start; padding: 1.2rem 0; border-top: 1px solid var(--wire-soft); }
-.oil h3 { font-size: 1.3rem; margin: 0.2rem 0 0.4rem; display: flex; align-items: center; gap: 0.5rem; }
+.sci-oil { display: grid; grid-template-columns: minmax(14rem, 20rem) 1fr; gap: 1.5rem; align-items: start; padding: 1.2rem 0; border-top: 1px solid var(--wire-soft); }
+.sci-oil h3 { font-size: 1.3rem; margin: 0.2rem 0 0.4rem; display: flex; align-items: center; gap: 0.5rem; }
 .swatch { display: inline-block; width: 0.9rem; height: 0.9rem; border-radius: 3px; background: var(--c); }
-@media (max-width: 46rem) { .oil { grid-template-columns: 1fr; gap: 0.6rem; } }
+@media (max-width: 46rem) { .sci-oil { grid-template-columns: 1fr; gap: 0.6rem; } }
 .leaders { font-size: 0.92rem; }
 .leaders > span:first-child { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); margin-right: 0.3rem; }
 .kettle { list-style: none; counter-reset: k; padding: 0; margin: 0.8rem 0 0; display: grid; gap: 0.6rem; }
