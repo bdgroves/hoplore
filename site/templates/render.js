@@ -397,6 +397,7 @@ function analyticsBlock(hop, sources) {
 
   return `<section class="block">
     <h2>Brewing values</h2>
+    <p class="bar-legend fine"><span><i class="lg-span"></i>range on file</span><span><i class="lg-typ"></i>typical</span><span><i class="lg-dot"></i>breeder or lab</span><span><i class="lg-dot hollow"></i>merchant</span></p>
     ${metrics}
     ${ratio ? `<p class="callout">Alpha to beta runs about <span class="num">${ratio.label}</span>, which is what governs how fast the bitterness fades in storage.</p>` : ''}
   </section>`;
@@ -423,14 +424,16 @@ function rangeBar(key, m, sources) {
   return `<div class="metric">
       <div class="metric-head">
         <h3>${METRIC_LABEL[key] ?? key}</h3>
-        <p class="metric-value num"><b>${fmt(m.low)}–${fmt(m.high)}${unit}</b> <span>typical ${fmt(m.typical)}</span></p>
+        <p class="metric-value num"><b>${m.low === m.high ? fmt(m.low) : `${fmt(m.low)}–${fmt(m.high)}`}${unit}</b>${m.low === m.high ? '' : ` <span>typical ${fmt(m.typical)}</span>`}</p>
       </div>
-      <div class="bar">
-        <span class="bar-span" style="left:${pos(m.low).toFixed(2)}%;width:${(pos(m.high) - pos(m.low)).toFixed(2)}%"></span>
+      <div class="bar" role="img" aria-label="${esc(METRIC_LABEL[key] ?? key)}: ${fmt(m.low)} to ${fmt(m.high)}${unit}, typical ${fmt(m.typical)}">
+        <span class="bar-axis"></span>
+        <span class="bar-span" style="left:${pos(m.low).toFixed(2)}%;width:${Math.max(0.8, pos(m.high) - pos(m.low)).toFixed(2)}%"></span>
         <span class="bar-typical" style="left:${pos(m.typical).toFixed(2)}%"></span>
         ${dots}
+        <span class="bar-end num" style="left:${pos(m.low).toFixed(2)}%">${fmt(m.low)}</span>
+        ${m.high !== m.low ? `<span class="bar-end num" style="left:${pos(m.high).toFixed(2)}%">${fmt(m.high)}</span>` : ''}
       </div>
-      <div class="bar-scale num"><span>${fmt(min)}</span><span>${fmt(max)}</span></div>
       <details class="sources">
         <summary>${m.source_count} ${m.source_count === 1 ? 'source' : 'sources'}${wide ? ', and they disagree' : ''}${spread > 0 ? `, spread of ${fmt(spread)}${unit}` : ''}</summary>
         <ul class="sourcelist">

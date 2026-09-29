@@ -182,7 +182,10 @@ function show(s) {
   $('#result').hidden = false;
   $('#r-brewery').value = s.brewery || '';
   $('#r-beer').value = s.beer || '';
-  $('#r-where').textContent = [s.city, s.state].filter(Boolean).join(', ');
+  $('#r-city').value = s.city || '';
+  $('#r-state').value = s.state || '';
+  $('#r-style').value = s.style || '';
+  $('#r-abv').value = s.abv ?? '';
   $('#r-meta').textContent = [s.style, s.abv != null ? `${s.abv}% ABV` : null].filter(Boolean).join(' · ');
   $('#r-written').textContent = s.hops_as_written || s.hops.join(', ');
   $('#r-hops').innerHTML = s.items.map(card).join('');
@@ -194,6 +197,10 @@ function keep() {
   // What's in the boxes wins: the model's reading, or your fix to it.
   last.brewery = $('#r-brewery').value.trim() || null;
   last.beer = $('#r-beer').value.trim() || null;
+  last.city = $('#r-city').value.trim() || null;
+  last.state = $('#r-state').value.trim().toUpperCase().slice(0, 2) || null;
+  last.style = $('#r-style').value.trim() || null;
+  last.abv = Number.parseFloat($('#r-abv').value) || null;
   if (!last.brewery || !last.beer) {
     status(`Fill in the ${!last.beer ? 'beer' : 'brewery'} name first — it wasn't readable on the ${last.scanned_from}.`);
     $(!last.beer ? '#r-beer' : '#r-brewery').focus();

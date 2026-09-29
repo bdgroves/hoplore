@@ -85,10 +85,10 @@ export async function hoplove(request, env) {
   } catch {
     return json({ error: 'bad request' }, 400, origin);
   }
-  const kind = d.kind === 'rating' ? 'rating' : 'scan';
+  const kind = ['rating', 'edit'].includes(d.kind) ? d.kind : 'scan';
   let title = String(d.title || '').slice(0, 200);
   let body = String(d.body || '').slice(0, 20000);
-  const marker = kind === 'rating' ? 'hoplove-rating' : 'hoplove-beer-scan';
+  const marker = { rating: 'hoplove-rating', edit: 'hoplove-beer-edit', scan: 'hoplove-beer-scan' }[kind];
   if (!title || !body.includes(marker)) return json({ error: 'not a HopLove save' }, 400, origin);
 
   const owner = Boolean(env.HOPLOVE_KEY) && request.headers.get('X-HopLove-Key') === env.HOPLOVE_KEY;
@@ -98,7 +98,7 @@ export async function hoplove(request, env) {
     // A visitor's scan becomes a suggestion: the workflows only act on the
     // markers above, so swapping the marker keeps it out of the data until
     // Brooks looks. Ratings are Brooks's alone.
-    if (kind === 'rating') return json({ error: 'ratings are Brooks’s' }, 403, origin);
+    if (kind !== 'scan') return json({ error: 'ratings and edits are Brooks’s' }, 403, origin);
     if (!(await count(env, `s:${day}:${who}`, 10))) return json({ error: 'that’s plenty of suggestions for today — thanks!' }, 429, origin);
     body = body.replace('<!-- hoplove-beer-scan -->', '<!-- hoplove-suggestion -->\nSuggested from the scan page by a visitor. To add it, edit this line to `<!-- hoplove-beer-scan -->` and save.');
     title = `Suggested: ${title.replace(/^Beer:\s*/, '')}`;

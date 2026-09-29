@@ -221,6 +221,32 @@ function togetherBlock(bill, bySlug, taxonomy) {
   </section>`;
 }
 
+/** Brooks's Edit form (hidden for everyone else; see site/assets/edit.js):
+ *  fixes to the brewery or the beer go to data/beers/overrides.yml. */
+function editBlock(brewery, beer, bySlug) {
+  const line = (h) =>
+    [h.fresh ? 'Fresh' : '', h.name, h.form ?? '', h.farm ? `from ${h.farm}` : ''].filter(Boolean).join(' ');
+  const f = (id, label, value, attrs = '') =>
+    `<label class="ed-field"><span class="scan-label">${label}</span><input id="${id}" value="${esc(value ?? '')}" ${attrs}></label>`;
+  return `<details class="block edit-beer" hidden data-brewery="${esc(brewery.slug)}" data-beer="${esc(beer.slug)}">
+    <summary>✏️ Edit this beer</summary>
+    <p class="fine">Fix anything the scan or the brewery's site got wrong. Saving files the change; the page updates in a couple of minutes.</p>
+    <div class="ed-grid">
+      ${f('ed-brewery-name', 'Brewery', brewery.name)}
+      ${f('ed-brewery-city', 'Town', brewery.city === 'Unknown' ? '' : brewery.city, 'placeholder="Yakima"')}
+      ${f('ed-brewery-state', 'State', brewery.state, 'maxlength="2" placeholder="WA"')}
+      ${f('ed-brewery-url', 'Brewery website', brewery.url, 'placeholder="https://…"')}
+      ${f('ed-name', 'Beer', beer.name)}
+      ${f('ed-style', 'Style', beer.style, 'placeholder="Fresh Hop IPA"')}
+      ${f('ed-abv', 'ABV %', beer.abv, 'inputmode="decimal" placeholder="6.5"')}
+    </div>
+    <label class="ed-field"><span class="scan-label">Hops, one per line (write "Fresh" in front for fresh hops, "from Farm" after for the farm)</span>
+    <textarea id="ed-hops" rows="${Math.min(12, Math.max(4, beer.hops.length + 1))}">${esc(beer.hops.map(line).join('\n'))}</textarea></label>
+    <p><button type="button" class="chip scan-go" id="ed-save">Save changes</button> <span class="fine" id="ed-status" role="status"></span></p>
+  </details>
+  <script src="../../../assets/edit.js" type="module"></script>`;
+}
+
 /** For anyone new to hop talk: the words on these cards, in a sentence each. */
 const GLOSSARY = `<details class="block glossary">
     <summary>New to hop talk? What these words mean</summary>
@@ -250,7 +276,7 @@ export function renderBeer({ brewery, beer, bySlug, taxonomy, meta }) {
       <a href="${base}beers/">Beers</a>
       <a href="${base}beers/#${brewery.slug}">More from ${esc(brewery.name)}</a>
     </nav>
-    <p class="kicker">${esc(brewery.name)} · ${esc(brewery.city)}, ${esc(brewery.state)}</p>
+    <p class="kicker">${esc(brewery.name)}${brewery.city && brewery.city !== 'Unknown' ? ` · ${esc(brewery.city)}, ${esc(brewery.state)}` : ''}${beer.style ? ` · ${esc(beer.style)}` : ''}</p>
     <h1 class="page-title">${esc(beer.name)}</h1>
     <p class="standfirst">${beer.abv != null ? `<span class="num">${fmt(beer.abv)}%</span> ABV. ` : ''}${bill.length} hop${bill.length === 1 ? '' : 's'}${fresh ? `, ${bill.filter((e) => e.fresh).length === 1 ? 'one' : bill.filter((e) => e.fresh).length} of them straight off the bine` : ''} —
     here's what each one is and what it brings.</p>
@@ -267,10 +293,11 @@ export function renderBeer({ brewery, beer, bySlug, taxonomy, meta }) {
     ${cards}
     </ul>
     <p class="fine">In the order ${esc(brewery.name)} lists them: <q>${esc(beer.hops_as_written)}</q>.
-    ${beer.scanned ? `Read off a ${esc(beer.scanned_from ?? 'photo')} of the ${beer.scanned_from === 'text' ? 'brewery\'s text' : 'can'} with <a href="${base}scan/">Scan a beer</a>, ${esc(beer.scanned)}.` : `From <a href="${esc(beer.url)}">the brewery's page for this beer</a>.`} Forms like Cryo and CO2 extract are
+    ${beer.scanned ? `Read off a ${esc(beer.scanned_from ?? 'photo')} of the ${beer.scanned_from === 'text' ? 'brewery\'s text' : 'can'} with <a href="${base}scan/">Scan a beer</a>, ${esc(beer.scanned)}.` : (beer.url ? `From <a href="${esc(beer.url)}">the brewery's page for this beer</a>.` : '')} Forms like Cryo and CO2 extract are
     the same variety processed differently.</p>
   </section>
   ${likeBlock(beer, bySlug, base)}
+  ${editBlock(brewery, beer, bySlug)}
   ${tip('Know your hops now?')}
   ${GLOSSARY}
   ${mineBlock(brewery, beer, base)}
@@ -327,7 +354,7 @@ export function renderBeers({ breweries, bySlug, meta, recent = [] }) {
       ${b.beers.map((beer, i) => row(b, beer, false, i)).join('\n      ')}
     </ul>
     ${more(b.beers.length, `from ${esc(b.brewery.name)}`)}
-    <p class="fine">Hop lists from <a href="${esc(b.brewery.url)}">${esc(b.brewery.name)}</a>'s own beer pages, retrieved ${esc(b.retrieved)}.</p>
+    <p class="fine">${b.beers.every((x) => x.scanned) ? `Read off cans and tap lists with <a href="${base}scan/">Scan a beer</a>` : `Hop lists from ${b.brewery.url ? `<a href="${esc(b.brewery.url)}">${esc(b.brewery.name)}</a>` : esc(b.brewery.name)}'s own beer pages`}, ${esc(b.retrieved)}.</p>
   </section>`
     )
     .join('\n');

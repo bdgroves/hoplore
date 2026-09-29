@@ -122,7 +122,7 @@ def norm(text: str) -> str:
 
 
 # Farm names a brewery writes in front of a variety ("Crosby, Centennial").
-FARMS = {"crosby": "Crosby Hop Farm", "coleman": "Coleman Farms"}
+FARMS = {"crosby": "Crosby Hop Farm", "coleman": "Coleman Farms", "carpenter": "Carpenter Ranches", "sauve": "Sauve & Son Farm", "loza": "Loza Farms", "perrault": "Perrault Farms", "roy": "Roy Farms", "goschie": "Goschie Farms", "yakima chief ranches": "Yakima Chief Ranches", "loftus": "Loftus Ranches", "van horn": "Van Horn Farms", "black star": "Black Star Ranch"}
 
 
 def record_index() -> dict[str, str]:

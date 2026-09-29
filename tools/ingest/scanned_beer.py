@@ -27,7 +27,7 @@ from ruamel.yaml import YAML
 from ruamel.yaml.comments import CommentedMap, CommentedSeq
 
 sys.path.insert(0, str(Path(__file__).parent))
-from beers import parse_hop, record_index  # noqa: E402
+from beers import FARMS, parse_hop, record_index  # noqa: E402
 from rating import add_rating, clean_stars  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -70,6 +70,32 @@ def main() -> int:
         node.fa.set_flow_style()
         hops.append(node)
 
+    # The model often lists bare names ("Centennial") while the can says
+    # "fresh wet Centennial" or "Carpenter Sabro": read the words just before
+    # each hop in the printed text for fresh and farm.
+    printed = str(data.get("hops_as_written") or "")
+    for node in hops:
+        if node.get("fresh") and node.get("farm"):
+            continue
+        m = re.search(rf"((?:[\w&'.-]+\s+){{0,4}}){re.escape(str(node['name']))}\b", printed, re.I)
+        if not m:
+            continue
+        before = m.group(1).lower()
+        # "fresh wet Centennial" is fresh; "fresh kilned Sabro" was dried.
+        if not node.get("fresh") and re.search(r"\b(?:fresh|wet)\b(?!\s+kilned)", before) and "kilned" not in before.split()[-3:]:
+            node["fresh"] = True
+        if not node.get("farm"):
+            fm = re.search(r"([A-Z][\w&'.-]*(?:\s+[A-Z][\w&'.-]*)*\s+(?:Farms?|Ranch(?:es)?|Agriculture))\s*$", m.group(1).strip() + " ")
+            if fm:
+                node["farm"] = fm.group(1).strip()
+            else:
+                last = before.split()[-2:] if before.split() else []
+                for n in (2, 1):
+                    key = " ".join(last[-n:]) if len(last) >= n else None
+                    if key and key in FARMS:
+                        node["farm"] = FARMS[key]
+                        break
+
     OUT.mkdir(parents=True, exist_ok=True)
     # "Fortside Brewing Company" -> fortside, like the crawled breweries.
     slug = slugify(re.sub(r"\b(?:brewing|brewery|brewers|brews|beer|company|co)\b\.?", "", brewery, flags=re.I)) or slugify(brewery)
@@ -97,7 +123,7 @@ def main() -> int:
         meta["name"] = brewery
         meta["city"] = str(data.get("city") or "").strip() or "Unknown"
         meta["state"] = str(data.get("state") or "").strip().upper()[:2] or "WA"
-        meta["url"] = str(data.get("brewery_url") or "").strip() or f"https://www.google.com/search?q={brewery.replace(' ', '+')}"
+        meta["url"] = str(data.get("brewery_url") or "").strip() or None
         doc["brewery"] = meta
         doc["generated_by"] = "HopLove scans (/scan/): photographed or pasted by a person, hops matched by tools/ingest/scanned_beer.py"
         doc["retrieved"] = time.strftime("%Y-%m-%d", time.gmtime())
@@ -111,7 +137,9 @@ def main() -> int:
     beer = CommentedMap()
     beer["slug"] = beer_slug
     beer["name"] = beer_name
-    beer["url"] = str(data.get("source_url") or "").strip() or doc["brewery"]["url"]
+    beer["url"] = str(data.get("source_url") or "").strip() or doc["brewery"].get("url")
+    if str(data.get("style") or "").strip() not in ("", "None"):
+        beer["style"] = str(data["style"]).strip()[:80]
     if data.get("abv") not in (None, ""):
         try:
             beer["abv"] = float(data["abv"])

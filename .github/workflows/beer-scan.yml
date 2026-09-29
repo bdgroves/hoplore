@@ -113,3 +113,49 @@ jobs:
         run: |
           why=$(tail -1 scan.log 2>/dev/null || true)
           gh issue comment "$NUMBER" --body "Couldn't add this one yet: ${why:-the check failed (see the Actions run)}. Edit the issue to fix the YAML and saving the edit tries again."
+
+  edit:
+    if: contains(github.event.issue.body, 'hoplove-beer-edit') && github.event.issue.user.login == github.repository_owner && github.event.issue.state == 'open'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: prefix-dev/setup-pixi@v0.10.2
+        with:
+          environments: data default
+          cache: true
+
+      - name: Apply the edit
+        id: add
+        env:
+          EDIT_BODY: ${{ github.event.issue.body }}
+        run: |
+          set -o pipefail
+          pixi run -e data python tools/ingest/edit_beer.py | tee scan.log
+
+      - name: Validate
+        run: pixi run validate
+
+      - name: Commit, deploy, close
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number }}
+          PAGE: ${{ steps.add.outputs.page }}
+          SUMMARY: ${{ steps.add.outputs.summary }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/beers/overrides.yml
+          git commit -m "Edited: $SUMMARY" -m "From issue #$NUMBER."
+          git pull --rebase --autostash && git push
+          gh workflow run deploy.yml --ref main
+          gh issue close "$NUMBER" --comment "Edited $SUMMARY. It'll show on https://brooksgroves.com/hoplore/$PAGE in a minute or two. 🍺❤️"
+
+      - name: Say what went wrong
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number }}
+        run: |
+          why=$(tail -1 scan.log 2>/dev/null || true)
+          gh issue comment "$NUMBER" --body "Couldn't apply this edit: ${why:-the check failed (see the Actions run)}. Edit the issue to fix the YAML and saving the edit tries again."

@@ -9,7 +9,7 @@ import Ajv from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { loadDataset, schemas, c, METRIC_KEYS, OIL_KEYS, allMetrics, allRefs } from './lib/load.js';
 
-const { sources, taxonomy, hops, acreage, breweries, checkins, ratings } = loadDataset();
+const { sources, taxonomy, hops, acreage, breweries, checkins, ratings, overrides } = loadDataset();
 const schema = schemas();
 
 const ajv = new Ajv({ allErrors: true, strict: false });
@@ -235,6 +235,12 @@ for (const c of checkins) {
   checkinIds.add(c.id);
   if (!c.beer || !c.brewery || !/^\d{4}-\d{2}-\d{2}$/.test(String(c.date))) err(at, `check-in ${c.id} needs beer, brewery and a date`);
   if (c.rating != null && !isStars(c.rating)) err(at, `check-in ${c.id} has rating ${c.rating}; caps run 0.25-5 in quarters`);
+}
+for (const key of Object.keys(overrides?.beers ?? {})) {
+  if (!beerKeys.has(key)) warn('beers/overrides.yml', `no beer at beers/${key}/ to correct`);
+  for (const h of overrides.beers[key].hops ?? []) {
+    if (h.hop && !slugs.has(h.hop)) err('beers/overrides.yml', `${key}: "${h.as_written}" links to "${h.hop}", which has no record`);
+  }
 }
 for (const r of ratings) {
   const at = 'ratings.yml';

@@ -48,7 +48,7 @@ export function loadDataset() {
   // files for the same brewery slug merge; the crawled entry wins a tie.
   const beerFiles = existsSync(beersDir)
     ? [
-        ...readdirSync(beersDir).filter((f) => f.endsWith('.yml')).sort(),
+        ...readdirSync(beersDir).filter((f) => f.endsWith('.yml') && f !== 'overrides.yml').sort(),
         ...(existsSync(join(beersDir, 'scanned'))
           ? readdirSync(join(beersDir, 'scanned')).filter((f) => f.endsWith('.yml')).sort().map((f) => `scanned/${f}`)
           : []),
@@ -74,6 +74,19 @@ export function loadDataset() {
   }
   const breweries = [...bySlug.values()].filter((doc) => doc.beers.length);
 
+  // Hand corrections from the Edit form (tools/ingest/edit_beer.py), laid
+  // over whatever the crawler or a scan wrote.
+  const overridesPath = join(beersDir, 'overrides.yml');
+  const overrides = existsSync(overridesPath) ? readYaml(overridesPath) : {};
+  for (const doc of breweries) {
+    const b = overrides.breweries?.[doc.brewery?.slug];
+    if (b) doc.brewery = { ...doc.brewery, ...b };
+    for (const beer of doc.beers) {
+      const e = overrides.beers?.[`${doc.brewery.slug}/${beer.slug}`];
+      if (e) Object.assign(beer, e);
+    }
+  }
+
   // Brooks's own drinking: Untappd check-ins (tools/ingest/untappd.py) and
   // ratings set on HopLove (tools/ingest/rating.py). Both optional.
   const checkinsPath = join(DATA, 'untappd', 'checkins.yml');
@@ -81,7 +94,7 @@ export function loadDataset() {
   const ratingsPath = join(DATA, 'ratings.yml');
   const ratings = existsSync(ratingsPath) ? readYaml(ratingsPath).ratings ?? [] : [];
 
-  return { sources, taxonomy, hops, acreage, breweries, checkins, ratings };
+  return { sources, taxonomy, hops, acreage, breweries, checkins, ratings, overrides };
 }
 
 export const schemas = () => ({

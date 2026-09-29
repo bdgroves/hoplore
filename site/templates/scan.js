@@ -46,7 +46,12 @@ export function renderScan({ meta }) {
       <label><span class="scan-label">Brewery</span><input id="r-brewery" type="text" autocomplete="off"></label>
       <label><span class="scan-label">Beer</span><input id="r-beer" class="scan-beer" type="text" autocomplete="off" placeholder="The beer's name"></label>
     </div>
-    <p class="fine" id="r-where"></p>
+    <div class="scan-more">
+      <label><span class="scan-label">Town</span><input id="r-city" type="text" autocomplete="off" placeholder="Yakima"></label>
+      <label><span class="scan-label">State</span><input id="r-state" type="text" maxlength="2" autocomplete="off" placeholder="WA"></label>
+      <label><span class="scan-label">Style</span><input id="r-style" type="text" autocomplete="off" placeholder="Fresh Hop IPA"></label>
+      <label><span class="scan-label">ABV %</span><input id="r-abv" type="text" inputmode="decimal" autocomplete="off" placeholder="6.5"></label>
+    </div>
     <p class="fine" id="r-meta"></p>
     <p class="fine">As printed: <q id="r-written"></q></p>
     <ul class="hopcards" id="r-hops"></ul>

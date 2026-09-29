@@ -1054,3 +1054,34 @@ body.searching .brewery > p.fine { display: none; }
 @media (max-width: 78rem) {
   .appbar-tabs { flex: none; grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
+
+/* ---------------------------------------- range bars, take two: one clear
+   band for the range, one rust line for typical, same-size source dots
+   (filled = breeder or lab, hollow = merchant), the range ends labelled. */
+.bar { position: relative; height: 2.6rem; border-bottom: 0; }
+.bar-axis { position: absolute; left: 0; right: 0; top: 0.95rem; height: 2px; background: var(--wire-soft); border-radius: 2px; }
+.bar-span { position: absolute; top: 0.62rem; height: 0.7rem; background: color-mix(in srgb, var(--gold) 38%, transparent); border: 0; border-radius: 999px; }
+.bar-typical { position: absolute; top: 0.35rem; width: 3px; height: 1.25rem; margin-left: -1.5px; background: var(--rust); border-radius: 2px; }
+.bar-dot { position: absolute; top: 0.72rem; width: 0.55rem; height: 0.55rem; margin: 0; border-radius: 50%; background: var(--ink); border: 2px solid var(--paper); box-sizing: content-box; transform: translateX(-50%); }
+.bar-dot[data-tier="merchant"], .bar-dot[data-tier="aggregator"] { background: var(--paper); border: 2px solid var(--ink); width: 0.45rem; height: 0.45rem; }
+.bar-dot[data-tier="unsourced"] { background: var(--paper); border: 2px dashed var(--ink-faint); width: 0.45rem; height: 0.45rem; }
+.bar-end { position: absolute; top: 1.55rem; transform: translateX(-50%); font-size: 0.68rem; color: var(--ink-faint); white-space: nowrap; }
+.bar-scale { display: none; }
+.bar-legend { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin: -0.2rem 0 1rem; }
+.bar-legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.bar-legend i { display: inline-block; }
+.lg-span { width: 1.4rem; height: 0.55rem; border-radius: 999px; background: color-mix(in srgb, var(--gold) 38%, transparent); }
+.lg-typ { width: 3px; height: 0.9rem; background: var(--rust); border-radius: 2px; }
+.lg-dot { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--ink); }
+.lg-dot.hollow { background: var(--paper); border: 2px solid var(--ink); width: 0.4rem; height: 0.4rem; }
+
+/* ------------------------------------------------------- edit this beer */
+.edit-beer summary { cursor: pointer; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--rust); }
+.ed-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: 0.6rem 1rem; margin: 0.8rem 0; }
+.ed-field { display: block; }
+.ed-field input, .ed-field textarea { width: 100%; box-sizing: border-box; font: inherit; font-size: 0.95rem; background: var(--white); color: var(--ink); border: 1px solid var(--mist); padding: 0.45rem 0.6rem; border-radius: 4px; }
+.ed-field textarea { font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.5; }
+
+.scan-more { display: grid; grid-template-columns: 2fr 0.7fr 2fr 1fr; gap: 0.8rem; margin: 0.8rem 0 0.4rem; }
+.scan-more input { width: 100%; box-sizing: border-box; font: inherit; background: var(--white); color: var(--ink); border: 1px solid var(--mist); padding: 0.4rem 0.6rem; }
+@media (max-width: 46rem) { .scan-more { grid-template-columns: 1fr 1fr; } }
