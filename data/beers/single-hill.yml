@@ -1,0 +1,92 @@
+brewery:
+  slug: single-hill
+  name: Single Hill Brewing
+  city: Yakima
+  state: WA
+  url: https://singlehillbrewing.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-29'
+beers:
+  - slug: dankmaster-flash
+    name: Dankmaster Flash
+    url: https://singlehillbrewing.com/menu/
+    abv: 8.3
+    hops_as_written: This double dry-hopped IPA features the tropical & citrus highs of Mosaic, the dank & grapefruit punch of Columbus, and the lime and woodsy zest of Riwaka.
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: riwaka, name: Riwaka, as_written: Riwaka }
+  - slug: energy-cone
+    name: Energy Cone
+    url: https://singlehillbrewing.com/menu/
+    abv: 6.6
+    hops_as_written: 'Q: Are we not fresh hops? A: We are Energy Cone! Featuring fresh, wet Citra from Newhouse Farms, Carpenter Ranches, and Sauve & Son Farms. Whipped up with freshly kilned Van Horn Farms Cascade, Marc Desmarais Farms Columbus, Newhouse Ranches Comet, and CLS Farms Zappa.'
+    hops:
+      - { hop: citra, name: Citra, fresh: true, farm: 'Newhouse Farms, Carpenter Ranches, Sauve & Son Farm', as_written: Citra }
+      - { hop: cascade, name: Cascade, farm: Van Horn Farms, as_written: Cascade }
+      - { hop: columbus, name: Columbus, farm: Marc Desmarais Farms, as_written: Columbus }
+      - { hop: comet, name: Comet, farm: Newhouse Ranches, as_written: Comet }
+      - { hop: zappa, name: Zappa, farm: CLS Farms, as_written: Zappa }
+  - slug: last-light
+    name: Last Light
+    url: https://singlehillbrewing.com/menu/
+    abv: 6.0
+    hops_as_written: Brewed with fresh, wet Sauve & Son Simcoe and freshly dried Loza Farms Amarillo, Black Star Ranch Simcoe, & Van Horn Farms Cascade - Last Light brings a little darkness to harvest.
+    hops:
+      - { hop: simcoe, name: Simcoe, fresh: true, farm: Sauve & Son Farm, as_written: Simcoe }
+      - { hop: amarillo, name: Amarillo, farm: Loza Farms, as_written: Amarillo }
+      - { hop: simcoe, name: Simcoe, farm: Black Star Ranch, as_written: Simcoe }
+      - { hop: cascade, name: Cascade, farm: Van Horn Farms, as_written: Cascade }
+  - slug: no-opinions
+    name: No Opinions
+    url: https://singlehillbrewing.com/menu/
+    abv: 6.5
+    hops_as_written: Our friends at Lumberbeard stacked it up high on the Round 2 base of fresh, wet Sauve & Son Mosaic and Van Horn Farms Citra with a scaffolding of Loftus Ranches & Haas Dolcita, Black Star Ranch Simcoe, Perrault Farms Mosaic, and even more Van Horn Citra.
+    hops:
+      - { hop: mosaic, name: Mosaic, fresh: true, farm: Sauve & Son Farm, as_written: Mosaic }
+      - { hop: citra, name: Citra, fresh: true, farm: Van Horn Farms, as_written: Citra }
+      - { hop: dolcita, name: Dolcita, as_written: Dolcita }
+      - { hop: simcoe, name: Simcoe, farm: Black Star Ranch, as_written: Simcoe }
+      - { hop: mosaic, name: Mosaic, farm: Perrault Farms, as_written: Mosaic }
+      - { hop: citra, name: Citra, farm: Van Horn Farms, as_written: Citra }
+  - slug: no-palm-trees
+    name: No Palm Trees
+    url: https://singlehillbrewing.com/menu/
+    abv: 6.5
+    hops_as_written: Radiant illuminated the Round 2 base of fresh, wet Sauve & Son Mosaic and Van Horn Farms Citra with glowing rays of Black Star Ranch Simcoe, Van Horn Farms Citra, and Haas Krush.
+    hops:
+      - { hop: mosaic, name: Mosaic, fresh: true, farm: Sauve & Son Farm, as_written: Mosaic }
+      - { hop: citra, name: Citra, fresh: true, farm: Van Horn Farms, as_written: Citra }
+      - { hop: simcoe, name: Simcoe, farm: Black Star Ranch, as_written: Simcoe }
+      - { hop: citra, name: Citra, farm: Van Horn Farms, as_written: Citra }
+      - { hop: krush, name: Krush, as_written: Krush }
+  - slug: no-simcoe
+    name: No Simcoe
+    url: https://singlehillbrewing.com/menu/
+    abv: 6.5
+    hops_as_written: The team from Haas innovated on the Round 2 base of fresh, wet Sauve & Son Mosaic and Van Horn Farms Citra with a ton of Haas Krush and a touch of Carpenter Ranches Talus.
+    hops:
+      - { hop: mosaic, name: Mosaic, fresh: true, farm: Sauve & Son Farm, as_written: Mosaic }
+      - { hop: citra, name: Citra, fresh: true, farm: Van Horn Farms, as_written: Citra }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: talus, name: Talus, farm: Carpenter Ranches, as_written: Talus }
+  - slug: sightglass
+    name: Sightglass
+    url: https://singlehillbrewing.com/menu/
+    abv: 6.0
+    hops_as_written: This Hazy IPA features a pillowy pilsner malt base with Citra, Strata, and Krush hops for aromas of berry and key lime. Smooth on the palate, with a refreshing, fruit-forward finish.
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: krush, name: Krush, as_written: Krush }
+  - slug: skyfinder
+    name: Skyfinder
+    url: https://singlehillbrewing.com/menu/
+    abv: 6.8
+    hops_as_written: A sky-high fresh hop adventure featuring fresh, wet Roy Farms Strata and Haas Krush, with freshly dried Roy Strata, Black Star Ranch Simcoe, & Haas Krush.
+    hops:
+      - { hop: strata, name: Strata, fresh: true, farm: Roy Farms, as_written: Strata }
+      - { hop: krush, name: Krush, fresh: true, as_written: Krush }
+      - { hop: strata, name: Strata, farm: Roy Farms, as_written: Strata }
+      - { hop: simcoe, name: Simcoe, farm: Black Star Ranch, as_written: Simcoe }
+      - { hop: krush, name: Krush, as_written: Krush }

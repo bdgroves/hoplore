@@ -244,6 +244,7 @@
   state: WA
   url: https://singlehillbrewing.com/
   listing: ['https://singlehillbrewing.com/menu/']
+  page_url: 'https://singlehillbrewing.com/menu/'
   keep_listing: true
   match: '^$'
 

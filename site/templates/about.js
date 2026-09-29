@@ -101,7 +101,7 @@ export function renderAbout({ meta, stats }) {
     per photo it reads. If it's saved you from a bad six-pack, or settled an argument at the bar, a beer's worth
     of thanks helps cover it.</p>
     <p><a class="tip-btn big" href="${TIP_URL}" rel="noopener">Buy Brooks a beer 🍺</a></p>
-    <p class="fine">Through Ko-fi. One-off, any amount, no account needed.</p>
+    <p class="fine">Through Ko-fi. One-off, any amount.</p>
   </section>
 
   <section class="block about-me">

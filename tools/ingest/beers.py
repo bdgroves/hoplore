@@ -531,6 +531,68 @@ def parse_triceratops(path: Path) -> list | None:
     return out or None
 
 
+def parse_single_hill(path: Path) -> list | None:
+    """Single Hill's /menu/ is one table: a beer-name row (name, ABV, IBU)
+    followed by a beer-description row ("<strong>Style</strong> – prose").
+    The prose says which hops went in wet and which dried, so it's read in
+    segments (see segmented_names)."""
+    soup = BeautifulSoup(path.read_text(encoding="utf-8", errors="ignore"), "lxml")
+    out = []
+    for row in soup.select("tr.beer-name"):
+        cells = [td.get_text(" ", strip=True) for td in row.find_all("td")]
+        desc_row = row.find_next_sibling("tr")
+        if not cells or desc_row is None or "beer-description" not in (desc_row.get("class") or []):
+            continue
+        strong = desc_row.find("strong")
+        style = strong.get_text(" ", strip=True) if strong else ""
+        text = desc_row.get_text(" ", strip=True)
+        if style and text.startswith(style):
+            text = text[len(style):].lstrip(" –-")
+        abv = abv_of(" ".join(cells[1:2]))
+        out.append((cells[0], abv, re.sub(r"\s+", " ", text), "segments"))
+    return out or None
+
+
+FARM_BEFORE = re.compile(r"((?:[A-Z][\w'.]*\s+(?:&\s+)?){0,3}?(?:[A-Z][\w'.]*\s+)?(?:Farms?|Ranch(?:es)?|& Son))\s*$")
+FARM_AFTER = re.compile(r"^\s*from\s+((?:[A-Z][\w'.&\s]{1,40}?(?:Farms?|Ranch(?:es)?|Hops)(?:,?\s*(?:and\s+)?)?)+)")
+
+
+def farm_name(text: str) -> str:
+    text = re.sub(r"\s+", " ", text).strip(" ,")
+    key = norm(text.split(" Farm")[0].split(" Ranch")[0].replace(" & Son", ""))
+    return next((v for k, v in FARMS.items() if norm(k) == key), text)
+
+
+def segmented_names(text: str, index: dict[str, str]) -> list[dict]:
+    """ "fresh, wet Roy Farms Strata and Haas Krush, with freshly dried Roy
+    Strata ...": a hop is fresh only inside a "fresh, wet" stretch; "freshly
+    dried/kilned", "with" or a full stop ends the stretch. Farms are read
+    from just before the hop ("Roy Farms Strata", "Roy Strata") or from a
+    "from X Farms, Y Ranches" after it."""
+    out, seen = [], set()
+    for seg in re.split(r"(?=\bfresh,?\s+wet\b|\bwet,?\s+fresh\b|\bfreshly\s+(?:dried|kilned)\b|\bwith\b|\.\s)", text, flags=re.I):
+        fresh = bool(re.match(r"\s*(?:fresh,?\s+wet|wet,?\s+fresh)\b", seg, re.I))
+        for item in names_in(seg, index):
+            item.pop("fresh", None)
+            item.pop("farm", None)
+            if fresh:
+                item["fresh"] = True
+            at = seg.find(item["as_written"])
+            before = re.split(r",|\band\b|\bof\b|\bwet\b|\bdried\b|\bkilned\b", seg[:at])[-1]
+            if m := FARM_BEFORE.search(before):
+                item["farm"] = farm_name(m.group(1))
+            elif farm := next((v for n in (3, 2, 1) for k, v in FARMS.items() if norm(k) == norm(" ".join(before.split()[-n:]))), None):
+                item["farm"] = farm  # "even more Van Horn Citra", "Roy Strata"
+            elif m := FARM_AFTER.match(seg[at + len(item["as_written"]):]):
+                farms = [farm_name(f) for f in re.split(r",\s*(?:and\s+)?|\s+and\s+", m.group(1)) if f.strip()]
+                item["farm"] = ", ".join(farms)
+            key = (item["hop"], item.get("form"), item.get("fresh"))
+            if key not in seen:
+                seen.add(key)
+                out.append(item)
+    return out
+
+
 def parse_description(path: Path) -> tuple | None:
     """Breweries that write a paragraph: the whole description is scanned for
     variety names (see names_in for how ordinary words are kept out)."""
@@ -584,6 +646,7 @@ PARSERS = {
     "great-notion": (parse_shopify, "greatnotion.com", "products_*.html"),
     "fast-fashion": (parse_fast_fashion, "themasonryseattle.com", "fast-fashion.html"),
     "triceratops": (parse_triceratops, "triceratopsbrewing.com", "all-beers.html"),
+    "single-hill": (parse_single_hill, "singlehillbrewing.com", "menu.html"),
 }
 
 
@@ -610,6 +673,8 @@ def build_beer(brewery: dict, path: Path, parsed: tuple, index: dict[str, str]) 
                 item.setdefault("farm", farm)
                 farm = None
             items.append(item)
+    elif mode == "segments":
+        items = segmented_names(hops_line, index)
     else:
         items = names_in(hops_line, index, field=(mode == "field"))
         if m := re.search(r"from ([A-Z][\w'&.\s]{2,40}?(?:Farms?|Ranch|Hops|Agriculture))", hops_line):
@@ -701,7 +766,7 @@ def main() -> int:
                     continue
                 if isinstance(parsed, list):
                     beer["slug"] = re.sub(r"[^a-z0-9]+", "-", beer["name"].lower()).strip("-")
-                    beer["url"] = brewery["url"]
+                    beer["url"] = brewery.get("page_url") or brewery["url"]
                 if beer["slug"] not in seen:
                     seen.add(beer["slug"])
                     beers.append(beer)
