@@ -52,7 +52,7 @@ export const FEATURES = [
 
 export const appBar = (base, active) => `<nav class="appbar" aria-label="HopLove">
   <div class="appbar-inner">
-    <a class="appbar-home" href="${base}" aria-label="HopLove home"><img src="${base}assets/hoplove-badge.png" alt="" width="40" height="40"><span>HopLove</span></a>
+    <a class="appbar-home" href="${base}" aria-label="HopLove home"><img src="${base}assets/hoplove-mark.svg" alt="" width="31" height="40"><span>HopLove</span></a>
     <div class="appbar-tabs">
       ${FEATURES.map((f) => `<a href="${base}${f.href}"${f.key === active || (f.key === 'hops' && active === 'home') ? ' aria-current="page"' : ''}><span class="tab-icon" aria-hidden="true">${f.icon}</span><span class="tab-long">${f.label}</span><span class="tab-short" aria-hidden="true">${f.short}</span></a>`).join('\n      ')}
     </div>
@@ -79,6 +79,7 @@ export function shell({ title, description, body, base = '', bodyClass = '', act
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="${FONTS}" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="${base}assets/hoplove-mark.svg">
 <link rel="icon" type="image/png" href="${base}assets/favicon.png">
 <link rel="apple-touch-icon" href="${base}assets/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/site-footer.css">
@@ -149,7 +150,7 @@ export function renderIndex({ hops, taxonomy, meta, beerCount = 0 }) {
   const body = `
 <header class="masthead">
   <div class="wrap">
-    <div class="hero-brand"><img class="hero-badge" src="assets/hoplove-badge.png" alt="HopLove sticker: a hop cone with a heart" width="160" height="160">
+    <div class="hero-brand"><img class="hero-badge" src="assets/hoplove-mark.svg" alt="HopLove: a hop cone with a heart in it" width="124" height="160">
     <h1 class="wordmark">Hop<span>Love</span></h1></div>
     <p class="standfirst">Look at a can, know the hops. Pick a Pacific Northwest
     beer — or snap a picture of one — and see what each hop smells like, how hard

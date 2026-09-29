@@ -76,7 +76,7 @@ export function renderScience({ hops, meta }) {
         <b>Spin it in 3D</b> to see the real shape.</p>
       </div>
       <div class="sci-cone" aria-hidden="true">
-        <img src="${base}assets/hoplove-badge.png" alt="" width="220" height="220">
+        <img src="${base}assets/hoplove-mark.svg" alt="" width="171" height="220">
       </div>
     </div>
   </section>
