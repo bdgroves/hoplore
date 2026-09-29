@@ -19,6 +19,7 @@ import { renderBeer, renderBeers, beersByHop, pairingsByHop, attachLookalikes, r
 import { renderScan } from '../site/templates/scan.js';
 import { renderCompare } from '../site/templates/compare.js';
 import { renderAbout } from '../site/templates/about.js';
+import { renderNotFound } from '../site/templates/notfound.js';
 import { renderScience } from '../site/templates/science.js';
 import { attachMine } from '../site/templates/mine.js';
 
@@ -148,6 +149,7 @@ write(out('landscape/index.html'), renderLandscape({ hops, meta }));
 if (acreage) write(out('grown/index.html'), renderGrown({ acreage, hops, meta }));
 write(out('scan/index.html'), renderScan({ meta }));
 write(out('compare/index.html'), renderCompare({ meta }));
+write(out('404.html'), renderNotFound({ meta }));
 write(out('science/index.html'), renderScience({ hops, meta }));
 write(
   out('about/index.html'),
@@ -192,7 +194,7 @@ for (const hop of hops) {
 cpSync(join(ROOT, 'site', 'assets'), out('assets'), { recursive: true });
 
 write(out('.nojekyll'), '');
-write(out('robots.txt'), `User-agent: *\nAllow: /\nSitemap: /sitemap.xml\n`);
+write(out('robots.txt'), `User-agent: *\nAllow: /\nSitemap: https://brooksgroves.com/hoplore/sitemap.xml\n`);
 write(
   out('sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +

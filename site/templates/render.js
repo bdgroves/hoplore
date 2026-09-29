@@ -98,7 +98,7 @@ ${THEME_TOGGLE}
 /** The tip jar. HopLove is free; this is the one ask, and it stays small. */
 export const TIP_URL = 'https://ko-fi.com/brooksgroves';
 export const tip = (line = 'Found what you were after?') =>
-  `<p class="tip">${line} <a class="tip-btn" href="${TIP_URL}" rel="noopener">Buy Brooks a beer 🍺</a></p>`;
+  `<p class="tip-line">${line} <a class="tip-btn" href="${TIP_URL}" rel="noopener">Buy Brooks a beer 🍺</a></p>`;
 
 export const footer = (base, meta) => `
 <section class="colophon">

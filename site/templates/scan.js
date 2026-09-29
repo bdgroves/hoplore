@@ -67,7 +67,7 @@ export function renderScan({ meta }) {
       adds the beer and rebuilds in a couple of minutes. Check the hop names first —
       the picture is read by a model, and a misread name is easy to fix in the issue.</span>
     </div>
-    <p class="tip">Each photo costs Brooks a few cents to read. <a class="tip-btn" href="https://ko-fi.com/brooksgroves" rel="noopener">Buy him a beer 🍺</a></p>
+    <p class="tip-line">Each photo costs Brooks a few cents to read. <a class="tip-btn" href="https://ko-fi.com/brooksgroves" rel="noopener">Buy him a beer 🍺</a></p>
   </section>
 </main>
 ${footer(base, meta)}

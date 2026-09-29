@@ -949,7 +949,7 @@ body.searching .brewery > p.fine { display: none; }
 .colophon-nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; }
 
 /* ------------------------------------------------------------ tip jar */
-.tip { margin: 1.5rem 0; display: flex; flex-wrap: wrap; gap: 0.6rem 0.9rem; align-items: center; color: var(--ink-soft); font-size: 0.95rem; }
+.tip-line { margin: 1.5rem 0; display: flex; flex-wrap: wrap; gap: 0.6rem 0.9rem; align-items: center; color: var(--ink-soft); font-size: 0.95rem; }
 .tip-btn { display: inline-block; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; padding: 0.55rem 1rem; background: var(--gold); color: #1c1a16; border: 1px solid var(--gold); border-radius: 2px; }
 .tip-btn:hover { background: var(--rust); border-color: var(--rust); color: #fdfaf4; }
 .tip-btn.big { font-size: 0.85rem; padding: 0.8rem 1.4rem; }
@@ -1089,3 +1089,7 @@ body.searching .brewery > p.fine { display: none; }
 /* Brooks's login button in the footer nav, dressed as one of the links. */
 .owner-link { background: none; border: 0; padding: 0; font: inherit; letter-spacing: inherit; text-transform: inherit; color: var(--stone); cursor: pointer; }
 .owner-link:hover { color: var(--ink); text-decoration: underline; }
+
+/* 404 search */
+.nf-search { display: flex; gap: 0.5rem; max-width: 34rem; margin: 0.5rem 0 1rem; }
+.nf-search input { flex: 1; min-width: 0; font: inherit; padding: 0.6rem 0.8rem; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); border-radius: 2px; }
