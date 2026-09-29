@@ -5,7 +5,7 @@ brewery:
   state: WA
   url: https://www.7seasbrewing.com/
 generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
-retrieved: '2026-09-28'
+retrieved: '2026-09-29'
 beers:
   - slug: uno-mas-is-back
     name: Uno Más

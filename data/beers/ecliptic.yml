@@ -5,7 +5,7 @@ brewery:
   state: OR
   url: https://eclipticbrewing.com/
 generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
-retrieved: '2026-09-28'
+retrieved: '2026-09-29'
 beers:
   - slug: astro-fresh-hop-italian-style
     name: Astro Fresh Hop Italian-Style
