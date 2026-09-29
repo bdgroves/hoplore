@@ -1,0 +1,58 @@
+slug: pilot
+name: Pilot
+purpose: dual
+country: GB
+kind: cultivar
+
+ownership:
+  mark: public
+  public_domain: true
+
+pedigree:
+  breeder: wye
+  parents: { unknown: true, note: 'Bred at Wye College, a daughter of Pioneer; released 2001.' }
+  refs: [charles-faram]
+
+aroma:
+  summary: >
+    Clean bittering or a late hop with aromas of spice, lemon and marmalade; unusual essential oils for
+    a British hop, per Charles Faram.
+  tags: [spice, lemon, orange]
+  refs: [charles-faram]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-29'
+  notes: >
+    Added 2026-09-29 from charles-faram's page.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 7.0, high: 10.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 3.0, high: 3.5 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 28.0, high: 33.0 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 35.0, high: 40.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 30.5, high: 30.5 }

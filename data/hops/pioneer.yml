@@ -1,0 +1,61 @@
+slug: pioneer
+name: Pioneer
+purpose: dual
+country: GB
+kind: cultivar
+
+ownership:
+  mark: public
+  public_domain: true
+
+pedigree:
+  breeder: wye
+  parents: { unknown: true, note: 'Bred in 1984 at Wye College; mother of Pilot, grandmother of Sovereign.' }
+  refs: [charles-faram]
+
+aroma:
+  summary: >
+    Classic English qualities with a distinct, clean lemon and pine character, per Charles Faram.
+  tags: [lemon, pine]
+  refs: [charles-faram]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-29'
+  notes: >
+    Added 2026-09-29 from charles-faram's page.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 9.0, high: 12.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 3.5, high: 4.0 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 35.0, high: 39.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: charles-faram, low: 0.8, high: 1.8 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 35.0, high: 35.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 18.0, high: 25.0 }

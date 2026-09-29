@@ -1,0 +1,49 @@
+slug: bergamot
+name: Bergamot
+purpose: dual
+country: US
+kind: cultivar
+
+ownership:
+  mark: trademark
+  public_domain: false
+
+pedigree:
+  breeder: unknown
+  parents: { unknown: true }
+  refs: []
+
+aroma:
+  summary: >
+    Orange-forward and dank, with cherry, zest, lemongrass, lime, juniper and mango; very high oil, per
+    Hop Alliance.
+  tags: [orange, dank, lemongrass, lime, mango]
+  refs: [hop-alliance]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-29'
+  notes: >
+    Added 2026-09-29 from hop-alliance's page.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: hop-alliance, low: 5.93, high: 5.93 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: hop-alliance, low: 7.5, high: 7.5 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: hop-alliance, low: 1.82, high: 1.82 }

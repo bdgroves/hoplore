@@ -1,0 +1,61 @@
+slug: junga
+name: Junga
+purpose: dual
+country: PL
+kind: cultivar
+
+ownership:
+  mark: public
+  public_domain: true
+
+pedigree:
+  breeder: unknown
+  parents: { unknown: true, note: 'Developed from Northern Brewer and wild hops.' }
+  refs: [charles-faram]
+
+aroma:
+  summary: >
+    High-alpha Polish dual-purpose hop with blackcurrant, grapefruit and spicy notes, per Charles Faram.
+  tags: [blackcurrant, grapefruit, spice]
+  refs: [charles-faram]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-29'
+  notes: >
+    Added 2026-09-29 from charles-faram's page.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 10.0, high: 13.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 5.0, high: 8.0 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 29.0, high: 34.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: charles-faram, low: 2.0, high: 2.6 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 28.0, high: 33.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 30.0, high: 40.0 }

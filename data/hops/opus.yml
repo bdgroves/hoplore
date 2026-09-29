@@ -1,0 +1,61 @@
+slug: opus
+name: Opus
+purpose: aroma
+country: GB
+kind: cultivar
+
+ownership:
+  mark: registered
+  public_domain: false
+
+pedigree:
+  breeder: charles-faram
+  parents: { unknown: true, note: 'Crossed 2013, released 2016; sister to Emperor.' }
+  refs: [charles-faram]
+
+aroma:
+  summary: >
+    Best as a late hop: notes of thyme backed by a clean lemon finish, per Charles Faram.
+  tags: [herbal, lemon]
+  refs: [charles-faram]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-29'
+  notes: >
+    Added 2026-09-29 from charles-faram's page.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 5.0, high: 7.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 2.5, high: 3.5 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 32.0, high: 36.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: charles-faram, low: 0.8, high: 1.2 }
+oils:
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 27.0, high: 27.0 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 3.0, high: 3.0 }

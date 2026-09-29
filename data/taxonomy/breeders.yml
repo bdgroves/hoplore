@@ -66,3 +66,13 @@ charles-faram:
   country: GB
   url: https://charlesfaram.com/
   note: Worcestershire, England. Jester, Olicana, Godiva, Harlequin.
+
+ihps:
+  label: Slovenian Institute of Hop Research and Brewing
+  country: SI
+  note: Žalec, Slovenia. Bred the Styrian varieties.
+
+wchb:
+  label: West Coast Hop Breeding
+  country: US
+  note: Oregon. Celeste (WCHB-102).

@@ -14,6 +14,7 @@ beers:
     hops_as_written: This Comet-hopped IPA is BACK as our tribute to Loza Farms and their incredible work in Yakima Valley. Showcasing the renowned Comet hops grown by our friends at their Loza family-owned and operated 365-acre farm in Yakima Valley’s town of Wapato. As the only Latino-owned hop farm in the country, this year marks their 20th harvest! The Loza family story is both compelling and inspiring, but per...
     hops:
       - { hop: comet, name: Comet, as_written: Comet }
+      - { hop: most, name: Most, as_written: most }
   - slug: 2026-yakima-valley-fresh-hop-ipa
     name: Yakima Valley Fresh Hop IPA (2026)
     url: https://www.7seasbrewing.com/2026-yakima-valley-fresh-hop-ipa/

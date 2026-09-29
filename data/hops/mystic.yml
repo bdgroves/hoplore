@@ -1,0 +1,62 @@
+slug: mystic
+name: Mystic
+purpose: dual
+country: GB
+kind: cultivar
+
+ownership:
+  mark: trademark
+  public_domain: false
+
+pedigree:
+  breeder: charles-faram
+  parents: { unknown: true, note: 'A daughter of Jester; released 2017.' }
+  refs: [charles-faram]
+
+aroma:
+  summary: >
+    Clean and balanced: good bittering and citrus aromatics, with red fruit showing best as a late hop,
+    per Charles Faram.
+  tags: [citrus, berry]
+  refs: [charles-faram]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-29'
+  notes: >
+    Added 2026-09-29 from charles-faram's page.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 4.0, high: 7.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 3.0, high: 4.0 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 35.0, high: 38.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: charles-faram, low: 0.8, high: 1.2 }
+oils:
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 35.0, high: 35.0 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 0.5, high: 0.5 }

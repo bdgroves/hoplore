@@ -56,6 +56,8 @@ def page_text(path: Path) -> tuple[str, str]:
 def number_on_page(value: float, text: str) -> bool:
     flat = text.replace(",", ".")
     candidates = {f"{value:g}", f"{value:.1f}", f"{value:.2f}"}
+    if 0 < value < 1:  # ".90 mL/100g": a fraction printed without its leading zero
+        candidates |= {c[1:] for c in candidates if c.startswith("0.")}
     return any(re.search(rf"(?<![\d.]){re.escape(c)}(?![\d])", flat) for c in candidates)
 
 

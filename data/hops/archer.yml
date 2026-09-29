@@ -1,0 +1,66 @@
+slug: archer
+name: Archer
+purpose: aroma
+country: GB
+kind: cultivar
+
+ownership:
+  mark: registered
+  public_domain: false
+
+pedigree:
+  breeder: charles-faram
+  parents: { unknown: true, note: 'A seedling of Sovereign; released 2013.' }
+  refs: [charles-faram]
+
+aroma:
+  summary: >
+    An elevated twist on Goldings: extra fruit and floral, a very clean bitterness, and a distinct lime
+    character when used late or dry-hopped, per Charles Faram.
+  tags: [lime, floral, citrus]
+  refs: [charles-faram]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-29'
+  notes: >
+    Added 2026-09-29 from charles-faram's page.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 4.0, high: 6.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 2.0, high: 3.0 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 32.0, high: 38.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: charles-faram, low: 0.6, high: 0.8 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 20.0, high: 25.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 26.0, high: 30.0 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 0.4, high: 0.4 }

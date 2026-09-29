@@ -7,7 +7,7 @@ brewery:
 generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
 retrieved: '2026-09-29'
 beers:
-  - slug: pages-bakers-beer
+  - slug: bakers-beer
     name: Baker's Beer
     url: https://www.chuckanutbrewery.com/pages/bakers-beer
     abv: 5.3
@@ -15,7 +15,7 @@ beers:
     hops:
       - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau }
       - { hop: cascade, name: Cascade, as_written: Cascade }
-  - slug: pages-bavarian-ipa
+  - slug: bavarian-ipa
     name: Bavarian IPA
     url: https://www.chuckanutbrewery.com/pages/bavarian-ipa
     abv: 5.1
@@ -23,28 +23,28 @@ beers:
     hops:
       - { hop: ariana, name: Ariana, as_written: Ariana }
       - { hop: callista, name: Callista, as_written: Calista }
-  - slug: pages-citra-pilsner
+  - slug: citra-pilsner
     name: Citra Pilsner
     url: https://www.chuckanutbrewery.com/pages/citra-pilsner
     abv: 5.0
     hops_as_written: ' We took our tried and true Pilsner recipe and replaced some of the classic European noble hops with a good amount of Yakima Chief’s new American Noble Citra hops.  The combination of classic old world noble hops and new world American hop melds together to create notes of grapefruit, citrus and a spicy bitterness.'
     hops:
       - { hop: citra, name: Citra, as_written: Citra }
-  - slug: pages-copy-of-czech-style-dark-lager-abgb-collaboration
+  - slug: czech-style-dark-lager-abgb-collaboration
     name: Czech Style Amber Lager (Scuttlebutt Collaboration)
     url: https://www.chuckanutbrewery.com/pages/copy-of-czech-style-dark-lager-abgb-collaboration
     abv: 5.0
     hops_as_written: ' Find toasted bread and caramel flavors, balanced by a clean finish and classic spicy Saaz hops.'
     hops:
       - { hop: saaz-cz, name: Saaz, as_written: Saaz }
-  - slug: pages-esb
+  - slug: esb
     name: ESB
     url: https://www.chuckanutbrewery.com/pages/esb
     abv: 5.0
     hops_as_written: ' Brewed in collaboration with Machine House Brewery Ingredients MALT: Simpsons Maris Otter & Weyermann specialty malts HOPS: Willamette'
     hops:
       - { hop: willamette, name: Willamette, as_written: Willamette }
-  - slug: pages-franconian-lager
+  - slug: franconian-lager
     name: Euro Strong Lager
     url: https://www.chuckanutbrewery.com/pages/franconian-lager
     abv: 6.8
@@ -52,14 +52,14 @@ beers:
     hops:
       - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
       - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
-  - slug: pages-golden-ale
+  - slug: golden-ale
     name: Golden Ale
     url: https://www.chuckanutbrewery.com/pages/golden-ale
     abv: 4.5
     hops_as_written: ' Golden uses Simpson’s Maris Otter Malt and East Kent Golding (EKG) hops.'
     hops:
       - { hop: east-kent-golding, name: East Kent Golding, as_written: East Kent Golding }
-  - slug: pages-hoppy-lager
+  - slug: hoppy-lager
     name: Hoppy Lager
     url: https://www.chuckanutbrewery.com/pages/hoppy-lager
     abv: 4.5
@@ -68,14 +68,14 @@ beers:
       - { hop: chinook, name: Chinook, as_written: Chinook }
       - { hop: strata, name: Strata, as_written: Strata }
       - { hop: tettnang, name: Tettnanger, as_written: Tettnang }
-  - slug: pages-italian-style-pilsner
+  - slug: italian-style-pilsner
     name: Italian Style Pilsner
     url: https://www.chuckanutbrewery.com/pages/italian-style-pilsner
     abv: 4.9
     hops_as_written: ' In typical Italian fashion, the brewers along the Italian-German Border pushed their Pilsner to the next level! Dry hopping with noble hops while still maintaining its elegance and German roots.  This Spalter Select hop forward love letter to Italy is disappearing fast as the brewers just can’t get enough of it! This is a German Pilsner on steroids! A highly drinkable lager with huge notes of ...'
     hops:
       - { hop: spalter-select, name: Spalter Select, as_written: Spalter Select }
-  - slug: pages-new-zealand-style-pilsner
+  - slug: new-zealand-style-pilsner
     name: New Zealand Style Pilsner
     url: https://www.chuckanutbrewery.com/pages/new-zealand-style-pilsner
     abv: 5.0
@@ -83,7 +83,7 @@ beers:
     hops:
       - { hop: cascade, name: Cascade, as_written: Cascade }
       - { hop: riwaka, name: Riwaka, as_written: Riwaka }
-  - slug: pages-pale-ale
+  - slug: pale-ale
     name: Pale Ale
     url: https://www.chuckanutbrewery.com/pages/pale-ale
     abv: 5.5
@@ -91,7 +91,7 @@ beers:
     hops:
       - { hop: comet, name: Comet, as_written: Comet }
       - { hop: strata, name: Strata, as_written: Strata }
-  - slug: pages-summer-pale-ale
+  - slug: summer-pale-ale
     name: Summer Pale Ale
     url: https://www.chuckanutbrewery.com/pages/summer-pale-ale
     abv: 5.7
@@ -100,14 +100,14 @@ beers:
       - { hop: strata, name: Strata, as_written: Strata }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: galaxy, name: Galaxy, as_written: Galaxy }
-  - slug: pages-tulip-ale
+  - slug: tulip-ale
     name: Tulip Ale
     url: https://www.chuckanutbrewery.com/pages/tulip-ale
     abv: 5.2
     hops_as_written: ' Ingredients MALT: Skagit Valley Malting Pilsner malt & Linc specialty malts HOPS: Chinook & HBC1134'
     hops:
       - { hop: chinook, name: Chinook, as_written: Chinook }
-  - slug: pages-west-coast-ipa
+  - slug: west-coast-ipa
     name: West Coast IPA
     url: https://www.chuckanutbrewery.com/pages/west-coast-ipa
     abv: 6.5

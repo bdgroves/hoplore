@@ -40,6 +40,13 @@ beers:
     hops:
       - { hop: riwaka, name: Riwaka, as_written: Riwaka }
       - { hop: citra, name: Citra, as_written: Citra }
+  - slug: a-little-help
+    name: A Little Help
+    url: https://www.cloudburstbrew.com/beer/a-little-help/
+    abv: 7.0
+    hops_as_written: ' A Little Help TDH West Coast IPA | 7.0% ABV | 58 IBU To say that “we get by with a little help from our friends” would be a gross understatement. Over the course of 10+ years, we’ve had SO many friends help us out for SO many reasons (shout out to our hometown homies Holy Mountain & Stoup) but there’s one group that we’d like to credit with inspiring us to constantly improve and evolve our bee...'
+    hops:
+      - { hop: most, name: Most, as_written: most }
   - slug: a-little-much
     name: A Little Much
     url: https://www.cloudburstbrew.com/beer/a-little-much/
@@ -78,6 +85,7 @@ beers:
       - { hop: chinook, name: Chinook, as_written: Chinook }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: most, name: Most, as_written: most }
   - slug: abort-the-court-ipa
     name: Abort the Court IPA
     url: https://www.cloudburstbrew.com/beer/abort-the-court-ipa/
@@ -202,6 +210,7 @@ beers:
       - { hop: chinook, name: Chinook, as_written: Chinook }
       - { hop: columbus, name: Columbus, as_written: Columbus }
       - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: most, name: Most, as_written: most }
   - slug: as-expected
     name: As Expected
     url: https://www.cloudburstbrew.com/beer/as-expected/
@@ -443,6 +452,7 @@ beers:
     hops_as_written: ' Change My Mind IPA IPA | 6.9% ABV | 63 IBU Cascade hops are the most important hop variety in the world. The modern American craft brewing industry wouldn’t exist without them. They’ve been grown for almost 50 years! You can use them in pretty much every single beer style. They are recognizable, approachable, and complex. They often exhibit notes of lemon, pine, grapefruit, black tea and fresh...'
     hops:
       - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: most, name: Most, as_written: most }
       - { hop: citra, name: Citra, farm: Gasseling Ranch, as_written: Citra }
       - { hop: cascade, name: Cascade, form: Cryo, as_written: Cascade }
   - slug: chunderdome-ipa
@@ -505,6 +515,7 @@ beers:
     abv: 6.4
     hops_as_written: ' Clouded Mentally IPA IPA | 6.4% ABV | 55 IBU About a year ago, we were made aware – by industry friends and non-industry friends – that 10 Barrel Brewing released a beer called “Cloud Mentality Hop Burst Hazy IPA” with a purple/pink floral-esque cloudy background that had the “Cloud” text lined up with the “Burst” text. The combination of it all felt *a little* too close to home. Especially wi...'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: amarillo, name: Amarillo, as_written: Amarillo }
   - slug: comfy-cozy-ipa
@@ -553,12 +564,14 @@ beers:
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: strata, name: Strata, as_written: Strata }
       - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: karma, name: Karma, as_written: karma }
   - slug: cool-space-photos-ipa
     name: Cool Space Photos IPA
     url: https://www.cloudburstbrew.com/beer/cool-space-photos-ipa/
     abv: 6.7
     hops_as_written: ' Cool Space Photos IPA IPA | 6.7% ABV | 57 IBU Hey. Did you see those crazy photos from that new NASA space telescope? Well we did too. It’s the largest AND most powerful space telescope on the earth…but not necessarily in existence, because technically some other world could have one in a different galaxy and be like looking back at us, and like even more in depth, and see us making news about...'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: galaxy, name: Galaxy, as_written: galaxy }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: citra, name: Citra, as_written: Citra }
@@ -577,6 +590,7 @@ beers:
     abv: 6.6
     hops_as_written: ' Corporate Overlords IPA IPA | 6.6% ABV | 56 IBU Welp, it’s been almost 10 YEARS since AB-Inbev purchased an important, local Seattle brewery and it appears to be going really well. Like, beer-business-geniuses-with-#noregrets well… NOT! HAHAHAHA! The largest brewing entity in the world slowed down its purchasing spree 5ish years ago, and it’s been a fucking DOOZY ever since. In the last couple...'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: krush, name: Krush, as_written: Krush }
   - slug: cosmic-lust-ipa
@@ -622,6 +636,7 @@ beers:
     abv: 7.0
     hops_as_written: ' Do Over IPA IPA | 7.0% ABV | 62 IBU Every hop deserves a second chance. Most, maybe even a third. And that’s where Ekuanot comes in. Wait WAIT. DON’T YOU DARE STOP READING. We first had taste of Ekuanot as Hop #366 in 2013, before it was released to the public with the name Equinox….which then had to be changed with trademark reasons…so yeah, it wasn’t the smoothest roll out for a new hop vari...'
     hops:
+      - { hop: most, name: Most, as_written: Most }
       - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: ekuanot, name: Ekuanot, form: Cryo, as_written: Ekuanot }
@@ -632,6 +647,7 @@ beers:
     hops_as_written: ' Do You Still Hate Me? IPA | 6.7% ABV | 55 IBU Ok so like, we’ve been hearing about you and your disapproval…for Sabro hops. And yes, we get it. They are an assertively flavored and albeit polarizing hop. They’re also interesting, intriguing, unique and challenging – from the field to the brewhouse. And that doesn’t mean they aren’t worth revisiting from time to time – and trying new techniques...'
     hops:
       - { hop: sabro, name: Sabro, as_written: Sabro }
+      - { hop: most, name: Most, as_written: most }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: citra, name: Citra, as_written: Citra }
   - slug: do-you-still-hate-me-ipa
@@ -641,6 +657,7 @@ beers:
     hops_as_written: ' Do You Still Hate Me? IPA IPA | 6.4% ABV | 55 IBU Ok so like, we’ve been hearing about you and your disapproval…for Sabro hops. And yes, we get it. They are an assertively flavored and albeit polarizing hop. They’re also interesting, intriguing, unique and challenging – from the field to the brewhouse. And that doesn’t mean they aren’t worth revisiting from time to time – and trying new techni...'
     hops:
       - { hop: sabro, name: Sabro, as_written: Sabro }
+      - { hop: most, name: Most, as_written: most }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: citra, name: Citra, as_written: Citra }
   - slug: dorty-work
@@ -657,6 +674,7 @@ beers:
     abv: 8.8
     hops_as_written: ' Double Cone IPA | 8.8% ABV | 70 IBU In this version of Brew Your Friends Beer™, we brewed one of the bestest and brightest WEST COAST IMPERIAL IPAS on the PLANET. Alvarado Street Brewing has been brewing Double Cone since 2014, and it’s been one of the most decorated Imperial IPAs ever since. Most recently in 2023, it won a silver at the World Beer Cup. In 2020, it won a Silver at the GABF. Th...'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: krush, name: Krush, as_written: Krush }
@@ -668,6 +686,7 @@ beers:
     abv: 6.5
     hops_as_written: ' Dude Interrupting IPA IPA | 6.5% ABV | 60 IBU In our next iteration of beers named after public service announcements, we’d like to focus our attention on all the dudes. Dudes – we love you, but you gotta stop commenting/interjecting/interrupting/talking over our team. Especially if the person behind the bar does not look like you, as this most often occurs with a different gender than your ow...'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
       - { hop: columbus, name: Columbus, as_written: Columbus }
@@ -711,6 +730,7 @@ beers:
     abv: 7.8
     hops_as_written: ' Elder Hearted West Coast Double IPA | 7.8% ABV | 68 IBU For the final collaboration celebrating our 10 years of existence, we invited Vinnie Cilurzo of Russian River & John Mallett (formerly of Bell’s) to make a beer with us. If you just paused to process that last sentence….SAME. We never thought we’d have two of the most important brewmasters in the history of craft beer help make a beer wit...'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: centennial, name: Centennial, as_written: Centennial }
   - slug: emotional-motion-sickness-ipa
@@ -847,6 +867,7 @@ beers:
     abv: 7.2
     hops_as_written: ' Fair Fight DDH West Coast IPA | 7.2% ABV | 65 IBU Ok, so, we aren’t “fighters” per se. Like, the violent, physical type. You probably already knew that. BUT, we do believe in fighting for what’s right. You also probably knew this too. With a trip to Georgia in our near future for the Mighty Fine West Coast IPA Festival at Good Word Brewing, we were reminded of…Stacey Abram’s Fair Fight organiz...'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: chinook, name: Chinook, as_written: Chinook }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
@@ -919,6 +940,7 @@ beers:
     abv: 6.8
     hops_as_written: expense of MANY other people patiently waiting to order a beer behind them. And if one person gets a taste, then everyone else might want and expect one too, and now our never-ending line is so long that people are leaving for elsewhere. And don’t even get us started on the Untapped warriors that want to tick as many boxes as possible, rating beer off a .5 oz splash. Since then, we haven’t seen...
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: comet, name: Comet, as_written: Comet }
       - { hop: cascade, name: Cascade, as_written: Cascade }
@@ -1024,6 +1046,7 @@ beers:
     abv: 6.9
     hops_as_written: ' to get to the medal table – which means it has to be considered one of the top 2 within a flight of 7-9 randomly selected, double blind entries. Then it has to be in the top 3 beers in the next 3 rounds after that. And THEN it has to be in the Top 3 at the Medal Round. And every round has different judges at the table, from different countries, with different palates and different experiences/...'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: strata, name: Strata, as_written: Strata }
@@ -1386,6 +1409,7 @@ beers:
       - { hop: crystal, name: Crystal, as_written: Crystal }
       - { hop: centennial, name: Centennial, as_written: Centennial }
       - { hop: nugget, name: Nugget, as_written: Nugget }
+      - { hop: most, name: Most, as_written: Most }
   - slug: like-really-chill
     name: Like Really Chill
     url: https://www.cloudburstbrew.com/beer/like-really-chill/
@@ -1400,6 +1424,7 @@ beers:
     abv: 7.2
     hops_as_written: ' Like Whoa DDH New Zealand WCIPA | 7.2% ABV | 65 IBU We’ve been doing the homework on this style – i.e. drinking a lot of them – and have started to notice a trend. Many of the boldest (& most award winning) versions incorporate a non-NZ variety (HOW DARE THEY!) as a trick to amplify the passionfruit & fruit punch highlights…and that variety is…KRUSH. So, we decided to add some of that to this ...'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: krush, name: Krush, as_written: KRUSH }
       - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
       - { hop: nectaron, name: Nectaron, as_written: Nectaron }
@@ -1497,6 +1522,7 @@ beers:
     hops_as_written: ' Make A Splash Wet Hop IPA | 6.4% ABV | 50 IBU ZOMG IT’S OUR FIRST WET HOP BEER OF THE SEASON! With hops grown in Washington off to a slower start than usual, we dipped down to Oregon for some Centennial grown at Goschie Farms. Some of you may have noticed, we’ve been LOVING almost every “C” hop grown down South over the last few years – maybe it’s terroir, maybe it’s smaller acreages, maybe it...'
     hops:
       - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: most, name: Most, as_written: most }
   - slug: make-it-make-sense-ipa
     name: Make It Make Sense IPA
     url: https://www.cloudburstbrew.com/beer/make-it-make-sense-ipa/
@@ -1512,6 +1538,7 @@ beers:
     abv: 6.7
     hops_as_written: ' Mall Madness IPA IPA | 6.7% ABV | 60 IBU SICK! You just got dropped off at the mall to hang! You walk in through the entrance by Sears, grab some manic panic at Hot Topic, ignore your dad’s favorite shop called Brooks Brothers, get your belly pierced at Claire’s, pretend you’re not interested in the new Furby at KB Toys, touch all the crewneck sweaters at Abercrombie & Fitch hoping you get “di...'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: pacific-sunrise, name: Pacific Sunrise, as_written: Pacific Sunrise }
   - slug: meet-cute-ipa
     name: Meet Cute IPA
@@ -1562,6 +1589,7 @@ beers:
     abv: 6.9
     hops_as_written: ' More Than Most DDH New Zealand WCIPA | 6.9% ABV | 60 IBU For New Zealand style beers, Nelson is THAT hop. It put their growing region on the map. It got into the hands of American IPA brewers, and never left. It simply has no substitute nor imitator – it’s that unique. It’s been in every single one of these NZ/WCIPA recipes we’ve brewed and it always will be. Yeah, we add other hops – this go ...'
     hops:
+      - { hop: most, name: Most, as_written: Most }
       - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: rakau, name: Rakau, as_written: Rakau }
       - { hop: citra, name: Citra, as_written: Citra }
@@ -1572,6 +1600,7 @@ beers:
     hops_as_written: ' Mosaicin’ Me Crazy IPA IPA | 6.9% ABV | 60 IBU From the brewers that refuse to do single hop beers… but still previously brought you Snoozefest (& brought it back)… comes this IPA only brewed with… MOSAIC… AGAIN. Wait WAIT, don’t leave! Let us explain. On the surface level, it sure looks like a “single” hop IPA. BUTITSNOT. We used 7 uniquely different lots of Mosaic, from 4 different harvest y...'
     hops:
       - { hop: mosaic, name: Mosaic, as_written: MOSAIC }
+      - { hop: most, name: Most, as_written: most }
   - slug: mosaicin-me-crazy-ipa-3
     name: Mosaicin’ Me Crazy IPA
     url: https://www.cloudburstbrew.com/beer/mosaicin-me-crazy-ipa-3/
@@ -1579,6 +1608,7 @@ beers:
     hops_as_written: ' Mosaicin’ Me Crazy IPA IPA | 6.7% ABV | 60 IBU From the brewers that refuse to do single hop beers… but still previously brought you Snoozefest (& brought it back)… comes this IPA only brewed with… MOSAIC… AGAIN. Wait WAIT, don’t leave! Let us explain. On the surface level, it sure looks like a “single” hop IPA. BUTITSNOT. We used 9 uniquely different lots of Mosaic, from 6 different harvest y...'
     hops:
       - { hop: mosaic, name: Mosaic, as_written: MOSAIC }
+      - { hop: most, name: Most, as_written: most }
   - slug: mosaicin-me-crazy-ipa-4
     name: Mosaicin’ Me Crazy IPA
     url: https://www.cloudburstbrew.com/beer/mosaicin-me-crazy-ipa-4/
@@ -1586,6 +1616,7 @@ beers:
     hops_as_written: ' Mosaicin’ Me Crazy IPA IPA | 6.7% ABV | 58 IBU From the brewers that used to refuse to do single hop beers… but still previously did like 5 of them, plu s duplicates… comes this IPA only brewed with… MOSAIC… AGAIN. Wait WAIT, don’t leave! Let us explain. On the surface level, it sure looks like a “single” hop IPA. BUTITSNOT. We used 9 uniquely different lots of Mosaic, from 6 different harvest...'
     hops:
       - { hop: mosaic, name: Mosaic, as_written: MOSAIC }
+      - { hop: most, name: Most, as_written: most }
   - slug: mosaicin-me-crazy-ipa-5
     name: Mosaicin’ Me Crazy IPA
     url: https://www.cloudburstbrew.com/beer/mosaicin-me-crazy-ipa-5/
@@ -1593,6 +1624,7 @@ beers:
     hops_as_written: ' Mosaicin’ Me Crazy IPA IPA | 6.7% ABV | 58 IBU From the brewers that used to refuse to do single hop beers… but still previously did like 5 of them, plus duplicates… comes this IPA only brewed with… MOSAIC… AGAIN. Wait WAIT, don’t leave! Let us explain. On the surface level, it sure looks like a “single” hop IPA. BUTITSNOT. We used 10 uniquely different lots of Mosaic, from 5 different harvest...'
     hops:
       - { hop: mosaic, name: Mosaic, as_written: MOSAIC }
+      - { hop: most, name: Most, as_written: most }
   - slug: mosaicin-my-day
     name: Mosaicin’ My Day!
     url: https://www.cloudburstbrew.com/beer/mosaicin-my-day/
@@ -1632,6 +1664,7 @@ beers:
     abv: 7.1
     hops_as_written: ' Music Dance Experience IPA IPA | 7.1% ABV | 60 IBU We’d like to let you know that you passed the test. It was a perfect score. And we’re happy to introduce your new team of Innies in the Macrodata Refinement Division, where you get to stare at a computer monitor to find all the scary numbers. It’s important, trust us. Speaking of numbers, this beer has a new one in it that even most Outties ar...'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: citra, name: Citra, as_written: Citra }
   - slug: nelson-is-my-friend
     name: Nelson Is My Friend
@@ -1683,6 +1716,7 @@ beers:
     abv: 6.6
     hops_as_written: ' No Cheating IPA IPA | 6.6% ABV | 55 IBU This last week/month+ has been pretty tough, to say the least. For a light distraction, we’re naming our most recent release after a cute AF meme trend, where people on instagram (FUCK ZUCK, BTW) share the last picture in their phone of their pet a la no cheating (like, it cant be a curated one). So, here are our last pictures of all the pets whose paren...'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: vic-secret, name: Vic Secret, as_written: Vic Secret }
       - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
@@ -1733,6 +1767,13 @@ beers:
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: amarillo, name: Amarillo, as_written: Amarillo }
       - { hop: centennial, name: Centennial, as_written: Centennial }
+  - slug: nom-nom-for-us
+    name: Nom Nom For Us
+    url: https://www.cloudburstbrew.com/beer/nom-nom-for-us/
+    abv: 9.2
+    hops_as_written: ' Nom Nom For Us Fancy Beer | 9.2% ABV | 48 IBU Mmm David! This Imperial Stout is just…YUMMO. It was first aged in a Buffalo Trace oak barrel! AND THEN, it was aged on whole Marionberries from Sidhu Farms (Puyallup) and Madagascar Vanilla Beans! Wow. Wow. Wow-ee. YEP. After a few sippies, you won’t even remember your previous life as a socialite/muse/pop star, and most certainly not the lyrics t...'
+    hops:
+      - { hop: most, name: Most, as_written: most }
   - slug: none-more-dank
     name: None More Dank
     url: https://www.cloudburstbrew.com/beer/none-more-dank/
@@ -1767,6 +1808,7 @@ beers:
     abv: 5.6
     hops_as_written: ' Not Interested American Brown Ale | 5.6% ABV | 33 IBU Hey. Hi. Over here. We’d like to reintroduce you to one of our most exciting enthralling GROUNDBREAKING recipes of all time – our blessed BROWN ALE. Yes, like brown in color. No, we didn’t use any adjuncts. I mean, we did use some Golden Naked Oats – so if you like, you can call it an oatmeal brown ale. But mostly we used a plethora of othe...'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: crystal, name: Crystal, as_written: Crystal }
       - { hop: cascade, name: Cascade, as_written: Cascade }
@@ -1803,6 +1845,7 @@ beers:
     abv: 6.4
     hops_as_written: ' OMFG! IPA | 6.4% ABV | 55 IBU It’s been a minute since we did a collab (we’ve been BUSY, ok?!) but we figured the Grainmaker Beer Fest this Friday was as good a reason as any to make some beer with friends. Our, um, mutual friends, like for real. We’ve been tight with Our Mutual Friend Brewing out of Denver for most of our entire existence, and have appreciated their beers (the best brown ale ...'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: cashmere, name: Cashmere, as_written: Cashmere }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
   - slug: once-upon-a-party-ipa
@@ -1830,6 +1873,7 @@ beers:
     abv: 6.3
     hops_as_written: ' Outside the Box IPA IPA | 6.3% ABV | 59 IBU Okay, so most hops come from similar lineage/parentage (Tettnang, Golding, Brewer’s Gold, Fuggle, etc) although with all the breeding programs we have now, there’s a little more genetic diversity out there. But there’s one hop that’s way the fuck out there – Zappa. It’s been grown by CLS Farms in Moxee going on 11 years, and while acreage ebbs and fl...'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: tettnang, name: Tettnanger, as_written: Tettnang }
       - { hop: fuggle, name: Fuggle, as_written: Fuggle }
       - { hop: zappa, name: Zappa, as_written: Zappa }
@@ -1842,6 +1886,7 @@ beers:
     hops_as_written: ' Paradise Meadows IPA IPA | 6.9% ABV | 55 IBU This beer is basically the embodiment of this area of Mount Rainier National Park from mid-July to mid-August. Oh, you’re unfamiliar? We’ll let 1889 John Muir tell you about it – “The most luxuriant and the most extravagantly beautiful of all the alpine gardens I ever beheld in all my mountain-top wanderings.” That’s high praise from a well traveled...'
     hops:
       - { hop: mount-rainier, name: Mt. Rainier, as_written: Mount Rainier }
+      - { hop: most, name: Most, as_written: most }
       - { hop: citra, name: Citra, as_written: Citra }
   - slug: part-of-the-decoration-ipa
     name: Part Of The Decoration IPA
@@ -2024,6 +2069,13 @@ beers:
       - { hop: meridian, name: Meridian, as_written: Meridian }
       - { hop: strata, name: Strata, as_written: Strata }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: push-your-luck
+    name: Push Your Luck
+    url: https://www.cloudburstbrew.com/beer/push-your-luck/
+    abv: 6.4
+    hops_as_written: 'd Beer Cup Entries are due next week (side note: now is an EXCELLENT time to brewery hop!) and we wanted to remind you all how HARD it is to win a medal, especially in a larger category (150+ entries)…like where this beer is entered. Large categories usually have 4 – 5 rounds, which means it has to be considered one of the top 2-3 beers within a flight of 9-12 randomly selected, double blind en...'
+    hops:
+      - { hop: most, name: Most, as_written: most }
   - slug: put-away-wet
     name: Put Away Wet
     url: https://www.cloudburstbrew.com/beer/put-away-wet/
@@ -2031,6 +2083,13 @@ beers:
     hops_as_written: ' Put Away Wet Wet Hop IPA | 6.5% ABV | 65 IBU Our final wet hop brew of the season! We did 11 beers, 17 turns, which was ~250 total barrels. Plus, 3 more collab brews away from home. We drove 2,372 miles on 13 trips to 9 farms for 11 total varieties, back and forth, forever. We ate 43 tacos, 14 burritos, and a few tortas and tamales to boot. Also 1 quesadilla. Not gonna lie, we’re pretty tired....'
     hops:
       - { hop: talus, name: Talus, farm: Perrault Farms, as_written: Talus }
+  - slug: quantum-antigravity
+    name: Quantum Antigravity
+    url: https://www.cloudburstbrew.com/beer/quantum-antigravity/
+    abv: 5.6
+    hops_as_written: ' Quantum Antigravity Australian Pale Ale | 5.6% ABV | 40 IBU When describing gravity according to the principles of quantum mechanics, most researchers start by exploring black holes and neutron stars because you just can’t ignore gravity or quantum effects in those types of situations. Especially when integrating quantum field theory with the theory of relativity, all while accounting for spac...'
+    hops:
+      - { hop: most, name: Most, as_written: most }
   - slug: quiet-down
     name: Quiet Down
     url: https://www.cloudburstbrew.com/beer/quiet-down/
@@ -2234,6 +2293,7 @@ beers:
     hops_as_written: ' Shredded Wettuce Wet Hop West Coast IPA | 6.6% ABV | 65 IBU WARNING: This WCIPA contains JACKED UP WET Amarillo HOPS from Virgil Gamache Farms . What does that even mean? Well, let us explain. We wanted to amplify the wet hop character in this one – so we fired up our electric leaf shredder and coarse chopped up some of the unkilned green cones, exposing a METRIC FUCKTON more lupulin to our br...'
     hops:
       - { hop: amarillo, name: Amarillo, fresh: true, farm: Virgil Gamache Farms, as_written: Amarillo }
+      - { hop: epic, name: Epic, as_written: EPIC }
   - slug: shushhh
     name: Shushhh!!!
     url: https://www.cloudburstbrew.com/beer/shushhh/
@@ -2241,6 +2301,7 @@ beers:
     hops_as_written: ' Shushhh!!! Frozen Fresh Hop IPA | 6.7% ABV | 50 IBU This ain’t no ordinary frozen fresh hop brew, ok? Which, by the way, isn’t ordinary to begin with! FROZEN FRESH HOPS ARE AMAZING! That said, THIS particular product used an even more experimental process involving whole cone frozen fresh hops that we had to sign an NDA for. AN NDA! That’s shorthand for Non Disclosure Agreement, aka don’t tell...'
     hops:
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: most, name: Most, as_written: most }
   - slug: similar-interests-ipa
     name: Similar Interests IPA
     url: https://www.cloudburstbrew.com/beer/similar-interests-ipa/
@@ -2358,6 +2419,7 @@ beers:
     abv: 5.1
     hops_as_written: ' Sounds Like A Party Wet Hop Pale | 5.1% ABV | 50 IBU Most times you head to Yakima with a plan. Sometimes that plan goes out the window. The day before we brewed this beer was one of the latter. But you know what? It ended up for the better! Because we hit FIVE FARMS for FOUR varieties – Citra from Perrault , Cascade from Morrier , Cascade from Van Horn , Amarillo from Loza & El Dorado from CL...'
     hops:
+      - { hop: most, name: Most, as_written: Most }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: cascade, name: Cascade, as_written: Cascade }
       - { hop: amarillo, name: Amarillo, as_written: Amarillo }
@@ -2388,6 +2450,7 @@ beers:
     abv: 7.0
     hops_as_written: ' Space Program IPA IPA | 7.0% ABV | 62 IBU Ok, so if we had a BILLIONS of dollars, here’s what we’d do: -End world hunger -Fund universal healthcare -Create free childcare programs -Fund cancer and disease research -Make public university’s tuition free -Invest in renewable energy programs -Find better ways to recycle/re-use plastics -Develop more high speed rails -Buy you a green dress (but no...'
     hops:
+      - { hop: epic, name: Epic, as_written: epic }
       - { hop: galaxy, name: Galaxy, as_written: Galaxy }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
   - slug: sprang-sprung-ipa
@@ -2399,6 +2462,13 @@ beers:
       - { hop: strata, name: Strata, as_written: Strata }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: citra, name: Citra, as_written: Citra }
+  - slug: started-with-a-spark
+    name: Started With A Spark
+    url: https://www.cloudburstbrew.com/beer/started-with-a-spark/
+    abv: 5.7
+    hops_as_written: ' Started With A Spark Smoked Stout | 5.7% ABV | 35 IBU This beer is definitely for a very specific, niche drinker. One – because it’s a rich, roasty dark beer brewed with 13 (!?) malts. Two – because it’s lightly smokey thanks to several smoked malts from Skagit Valley Malt . And also – it’s pretty low in alcohol. Thus, we don’t expect most of you to gravitate towards it. But there is ONE human...'
+    hops:
+      - { hop: most, name: Most, as_written: most }
   - slug: statistically-speaking-ipa
     name: Statistically Speaking IPA
     url: https://www.cloudburstbrew.com/beer/statistically-speaking-ipa/
@@ -2524,6 +2594,7 @@ beers:
     abv: 6.7
     hops_as_written: ' Tastes Like Magenta IPA | 6.7% ABV | 60 IBU It might sound cRaZy, but the idea for this beer was to make it taste like purple. And in the most organic way possible – so like, just with hops. No fruits, no coloring, no gimmicks, no syrups. Just a carefully selected and implemented blend of Cashmere, Mosaic, Hallertau Blanc, Meridian, and Columbus Cryo hops because all of these varieties throw s...'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: cashmere, name: Cashmere, as_written: Cashmere }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
@@ -2535,6 +2606,7 @@ beers:
     abv: 6.7
     hops_as_written: ' Tastes Like Magenta IPA IPA | 6.7% ABV | 60 IBU It might sound cRaZy, but the idea for this beer was to make it taste like purple. And in the most organic way possible – so like, just with hops. No fruits, no coloring, no gimmicks, no syrups. Just a carefully selected and implemented blend of Cashmere, Mosaic, Hallertau Blanc, Meridian, and Columbus Cryo hops because all of these varieties thr...'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: cashmere, name: Cashmere, as_written: Cashmere }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
@@ -2597,6 +2669,7 @@ beers:
     abv: 5.4
     hops_as_written: ' Thatz Not Okay Unfiltered Czech-Style Pils | 5.4% ABV | 50 IBU Umm, so we’d like to have a word with you. As most of you know, we’ve been lowkey brewing traditional-style lagers since our conception. BUT recently we’ve really enjoyed not clarifying them. While we’ve never filtered any of our beers (because we don’t own a filter) we do occasionally add wort clarifiers to our kettle and during c...'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
   - slug: thats-baseball-baby
     name: That’s Baseball Baby
@@ -2683,6 +2756,7 @@ beers:
       - { hop: mosaic, name: Mosaic, fresh: true, farm: Perrault Farms, as_written: Mosaic }
       - { hop: krush, name: Krush, fresh: true, farm: Perrault Farms, as_written: Krush }
       - { hop: comet, name: Comet, farm: Loza Farms, as_written: Comet }
+      - { hop: most, name: Most, as_written: most }
   - slug: the-neez-beez-ipa
     name: The NEEZ BEEZ IPA
     url: https://www.cloudburstbrew.com/beer/the-neez-beez-ipa/
@@ -2810,6 +2884,7 @@ beers:
     hops_as_written: ' Touch Grass IPA IPA | 6.9% ABV | 60 IBU Ok ok ok so don’t you think it’s strange that there’s very little data on first wort hopping? And then double that fact when you use WHOLE CONE hops. Like, if we do this…how much bitterness will we get?! WHERE’S THE UTILIZATION CALCS. AND ARE THEY EVEN ACCURATE?? What about TEMP RAMP? WHAT ABOUT THE “FLAVOR LOCKING”?!? And that’s just the tip of the iceb...'
     hops:
       - { hop: chinook, name: Chinook, as_written: CHINOOK }
+      - { hop: most, name: Most, as_written: most }
       - { hop: amarillo, name: Amarillo, as_written: Amarillo }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: elani, name: Elani, as_written: YQH 1320 }
@@ -2832,6 +2907,7 @@ beers:
     hops:
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
+      - { hop: epic, name: Epic, as_written: epic }
   - slug: two-player-mode-ipa
     name: Two Player Mode IPA
     url: https://www.cloudburstbrew.com/beer/two-player-mode-ipa/
@@ -2840,6 +2916,7 @@ beers:
     hops:
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
+      - { hop: epic, name: Epic, as_written: epic }
   - slug: ungrammable-hang-zone-ipa
     name: Ungrammable Hang Zone IPA
     url: https://www.cloudburstbrew.com/beer/ungrammable-hang-zone-ipa/
@@ -2848,6 +2925,7 @@ beers:
     hops:
       - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
       - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+      - { hop: most, name: Most, as_written: most }
   - slug: unlikely-hero
     name: Unlikely Hero
     url: https://www.cloudburstbrew.com/beer/unlikely-hero/
@@ -2949,6 +3027,13 @@ beers:
       - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: krush, name: Krush, as_written: Krush }
+  - slug: very-koln
+    name: Very Köln
+    url: https://www.cloudburstbrew.com/beer/very-koln/
+    abv: 4.9
+    hops_as_written: ' Very Köln Kölsch Style Ale | 4.9% ABV | 22 IBU In our opinion, Kölsch is one of the more intimidating styles to brew – hence why we’ve never made one before. And to be honest, we didn’t even know what they’re supposed to taste like, as available German options are often old and battered, and American versions usually take some style liberties. So, Steve went to Cologne this past March, and dra...'
+    hops:
+      - { hop: most, name: Most, as_written: most }
   - slug: vip-lounge
     name: VIP Lounge
     url: https://www.cloudburstbrew.com/beer/vip-lounge/
@@ -2963,6 +3048,7 @@ beers:
     abv: 6.9
     hops_as_written: ' Wait Wait IPA IPA | 6.9% ABV | 58 IBU As most of you – our customers, our drinkers, our fans – have come to know, our IPA recipes are created with explicit intent (even if the names and descriptions might not make it seem that way). We start with a blank slate: build the malt bill, perseverate over the hop bill, go back to the malt bill to see if we should tweak it now that we have an idea of ...'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
       - { hop: vista, name: Vista, as_written: Vista }
@@ -2975,6 +3061,7 @@ beers:
     hops:
       - { hop: chinook, name: Chinook, as_written: Chinook }
       - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: most, name: Most, as_written: most }
   - slug: watch-til-the-end-ipa
     name: Watch Til The End IPA
     url: https://www.cloudburstbrew.com/beer/watch-til-the-end-ipa/
@@ -3101,6 +3188,7 @@ beers:
     hops_as_written: ' Wet Is As Wet Does Wet Hop IPA | 6.7% ABV | 65 IBU Some might think of Chinook as a simple hop. An afterthought. #oldnews Like, it HAS been around since 1985. But if you’ve been paying attention, some of your favorite brewers have been sprinkling it in your IPAs and Pales and Stouts and Reds – forever, every year, and more and more these days. In fact, some of the most award winning IPAs in ou...'
     hops:
       - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: most, name: Most, as_written: most }
   - slug: wet-is-just-a-number
     name: Wet Is Just A Number
     url: https://www.cloudburstbrew.com/beer/wet-is-just-a-number/
@@ -3126,6 +3214,7 @@ beers:
     hops:
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: most, name: Most, as_written: most }
   - slug: wetabout-us
     name: Wetabout Us?
     url: https://www.cloudburstbrew.com/beer/wetabout-us/

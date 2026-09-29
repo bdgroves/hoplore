@@ -1,0 +1,54 @@
+slug: bouclier
+name: Bouclier
+purpose: dual
+country: FR
+kind: cultivar
+
+ownership:
+  mark: public
+  public_domain: true
+
+pedigree:
+  breeder: unknown
+  parents: { unknown: true, note: 'A cross of Strisselspalt and a wild English male.' }
+  refs: [charles-faram]
+
+aroma:
+  summary: >
+    A classic European dual-purpose hop with very smooth bittering, bred from Strisselspalt, per Charles
+    Faram.
+  tags: [noble, herbal]
+  refs: [charles-faram]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-29'
+  notes: >
+    Added 2026-09-29 from charles-faram's page.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 7.0, high: 9.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 2.4, high: 3.3 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 20.0, high: 25.0 }
+oils:
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 34.0, high: 34.0 }

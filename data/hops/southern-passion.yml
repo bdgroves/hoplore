@@ -4,9 +4,6 @@ purpose: dual
 country: ZA
 kind: cultivar
 
-# Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).
-# purpose is an unconfirmed default -- see meta.notes. No analytics recorded
-# yet: run `pixi run -e data hopsteiner southern-passion --apply` to pull real values.
 
 ownership:
   mark: public
@@ -19,9 +16,9 @@ pedigree:
 
 aroma:
   summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+    A South African cross of Czech Saaz and German Hallertauer: ripe passionfruit, guava and coconut with citrus and red berries, and a sunny floral side for lagers, wits and Belgian ales, per Yakima Valley Hops.
+  tags: [passionfruit, guava, coconut, citrus, berry, floral]
+  refs: [yvh]
 
 usage:
   timing: []
@@ -32,9 +29,42 @@ products: { cryo: false, lupomax: false }
 substitutes: []
 
 meta:
-  status: stub
-  verification: unverified
-  last_reviewed: '2026-09-14'
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-29'
   notes: >
-    purpose defaulted to dual, unconfirmed -- was not researched individually
-    for this bulk scaffold pass. Correct before publishing.
+    Figures and description added 2026-09-29. Purpose kept at dual: Yakima Valley Hops does not state a brewing role.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: yvh, low: 5.0, high: 12.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: yvh, low: 4.0, high: 6.0 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: yvh, low: 16.6, high: 20.2 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: yvh, low: 0.7, high: 1.3 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: yvh, low: 20.0, high: 35.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: yvh, low: 17.0, high: 35.0 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: yvh, low: 8.0, high: 13.0 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: yvh, low: 1.0, high: 3.0 }

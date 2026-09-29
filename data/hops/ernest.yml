@@ -1,0 +1,65 @@
+slug: ernest
+name: Ernest
+purpose: dual
+country: GB
+kind: cultivar
+
+ownership:
+  mark: public
+  public_domain: true
+
+pedigree:
+  breeder: wye
+  parents: { unknown: true, note: 'Selected at Wye College in 1923 by Prof. Ernest Salmon as seedling OZ97a.' }
+  refs: [charles-faram]
+
+aroma:
+  summary: >
+    Clear "New World" character from a 1920s Wye College seedling: complex and fruity, especially
+    apricot, citrus and spice, per Charles Faram and Hop Alliance.
+  tags: [apricot, citrus, spice]
+  refs: [charles-faram]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: corroborated
+  last_reviewed: '2026-09-29'
+  notes: >
+    Added 2026-09-29 from charles-faram's page.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 5.0, high: 7.0 }
+      - { source: hop-alliance, low: 6.1, high: 6.1 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 4.0, high: 5.5 }
+      - { source: hop-alliance, low: 4.5, high: 5.0 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 50.0, high: 55.0 }
+      - { source: hop-alliance, low: 47.0, high: 50.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: hop-alliance, low: 0.7, high: 1.1 }
+oils:
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 10.0, high: 10.0 }
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: hop-alliance, low: 45.0, high: 55.0 }

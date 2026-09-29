@@ -1,0 +1,59 @@
+slug: southern-tropic
+name: Southern Tropic
+purpose: dual
+country: ZA
+kind: cultivar
+
+ownership:
+  mark: public
+  public_domain: true
+
+pedigree:
+  breeder: unknown
+  parents: { unknown: true, note: 'Bred as U3/108, from USDA650-09 x XJA2/574.' }
+  refs: [yvh]
+
+aroma:
+  summary: >
+    High alpha with big guava, mango and lychee, plenty of pine, resin and lemongrass, and a hint of
+    coconut or bubblegum, per Yakima Valley Hops.
+  tags: [guava, mango, pine, resinous, lemongrass, coconut]
+  refs: [yvh]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-29'
+  notes: >
+    Added 2026-09-29 from yvh's page. Yakima Valley Hops calls it high alpha and uses it for aroma in
+    IPAs.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: yvh, low: 17.0, high: 18.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: yvh, low: 6.4, high: 6.6 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: yvh, low: 26.0, high: 28.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: yvh, low: 1.3, high: 1.3 }
+oils:
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: yvh, low: 9.0, high: 10.25 }

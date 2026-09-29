@@ -53,6 +53,7 @@ beers:
     abv: 7.3
     hops_as_written: "[Retired] 306 IPA ABV: 7.30 IBU: 65.00 SRM: 4.00 Categories: Yeast Driven, IPA, Northwest, Yeast Driven 306. What a beautiful, beautiful number! We only needed 270, but why stop there? Why not flip a few states just to see what kind of epic tantrums would ensue? We were so happy with the number 306 that we considered tattooing it on our bodies. When that didn't pan out we thought, \"hey, let's n..."
     hops:
+      - { hop: epic, name: Epic, as_written: epic }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: talus, name: Talus, as_written: Talus }
       - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
@@ -391,6 +392,7 @@ beers:
     abv: 7.8
     hops_as_written: 'Chrome Posies Hazy DIPA ABV: 7.80 IBU: 56.00 SRM: 5.00 Categories: Hazy, IPA, Hop Driven Chrome Posies beams in with out of this world aromatics and notes of pineapple, peach, and passionfruit flair. We brew using the finest and most resinous hops in the galaxy to make this DIPA into pure electric bloom. Sip it and ride the chrome wave into a tropical hop daydream!'
     hops:
+      - { hop: most, name: Most, as_written: most }
       - { hop: galaxy, name: Galaxy, as_written: galaxy }
   - slug: chur-to-twelve-ipa
     name: Chur to Twelve IPA
@@ -1949,6 +1951,13 @@ beers:
       - { hop: loral, name: Loral, as_written: Loral }
       - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
       - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
+  - slug: rev-nats-viva-la-pineapple-cider
+    name: Rev Nat's
+    url: https://www.stoupbrewing.com/beer/rev-nats-viva-la-pineapple-cider-3048.html
+    abv: 6.0
+    hops_as_written: "[Retired] Rev Nat's ABV: 6.00 IBU: 0.00 SRM: 0.00 Categories: Hop Driven During a journey to the decennial meeting of the Scriblerus Society in Puntarenas, I was savoring a Chichita Panamá on the lido deck of a tramp steamer with Prof. Laurence Draper when we were abruptly overtaken by a leviathan wave and became marooned on a tiny island. All souls accounted for , we subsisted for the ensuing ..."
+    hops:
+      - { hop: most, name: Most, as_written: most }
   - slug: ride-the-lupulin-ipa-2021-hop-mob
     name: Ride the Lupulin IPA (2021 Hop Mob)
     url: https://www.stoupbrewing.com/beer/ride-the-lupulin-ipa-2021-hop-mob-1317.html
@@ -2177,6 +2186,13 @@ beers:
       - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: bru-1, name: Bru-1, as_written: Bru-1 }
+  - slug: stoup-10th-anniversary-ipa
+    name: Stoup 10th Anniversary IPA
+    url: https://www.stoupbrewing.com/beer/stoup-10th-anniversary-ipa-4275.html
+    abv: 6.9
+    hops_as_written: "Stoup 10th Anniversary IPA ABV: 6.90 IBU: 64.00 SRM: 3.00 Categories: IPA, Northwest, Hop Driven In ten amazing years at Stoup Brewing, we've brewed a wide variety of styles using a myriad of brewing techniques. Our beer has evolved over time, but one thing has stayed consistent. We've infused our passion for the craft into every brew. This IPA is no different. It's a Northwest Style IPA showca..."
+    hops:
+      - { hop: most, name: Most, as_written: most }
   - slug: stoup-immediately-ipa
     name: Stoup Immediately IPA
     url: https://www.stoupbrewing.com/beer/stoup-immediately-ipa-1165.html
@@ -2194,6 +2210,7 @@ beers:
     hops:
       - { hop: bitter-gold, name: Bitter Gold, as_written: Bitter Gold }
       - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
+      - { hop: most, name: Most, as_written: most }
       - { hop: amarillo, name: Amarillo, as_written: Amarillo }
   - slug: stouper-duper-super-deli-mart-ipa
     name: Stouper Duper Super Deli Mart IPA
@@ -2306,6 +2323,13 @@ beers:
     hops:
       - { hop: wakatu, name: Wakatu, as_written: Wakatu }
       - { hop: loral, name: Loral, as_written: Loral }
+  - slug: super-fun-time-ipa
+    name: Super Fun Time IPA
+    url: https://www.stoupbrewing.com/beer/super-fun-time-ipa-1987.html
+    abv: 6.9
+    hops_as_written: "Super Fun Time IPA ABV: 6.90 IBU: 60.00 SRM: 4.00 Categories: IPA, Northwest, Hop Driven The other day we were rubbing and sniffing a bunch of hops and we had a SUPER FUN TIME! Thought we'd share the good times by brewing up an IPA with all of those SUPER FUN HOPS. We started with a base of 2-row and wheat malt because every fun IPA starts with a strong malt bill. Then we added the hops we love..."
+    hops:
+      - { hop: most, name: Most, as_written: most }
   - slug: swag-bag-dipa
     name: Swag Bag DIPA
     url: https://www.stoupbrewing.com/beer/swag-bag-dipa-570.html
@@ -2531,6 +2555,7 @@ beers:
     hops:
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: most, name: Most, as_written: most }
   - slug: viafuct-ipa
     name: Viafuct IPA
     url: https://www.stoupbrewing.com/beer/viafuct-ipa-497.html

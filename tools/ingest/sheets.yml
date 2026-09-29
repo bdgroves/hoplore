@@ -558,3 +558,271 @@
   source: yvh
   file: yakimavalleyhops.com/products_superdelic-hops.html
   url: https://yakimavalleyhops.com/products/superdelic-hops
+
+# --- 2026-09-29: new varieties and three empty hops ---
+# Charles Faram's total-oil cells are often several numbers run together
+# ("10.5-20.1ml/100g"), and some myrcene cells are bare fractions ("0.32");
+# both are excluded, as on the earlier Charles Faram sheets.
+- slug: archer
+  source: charles-faram
+  file: charlesfaram.com/uk_hop-oracle_archer.html
+  url: https://charlesfaram.com/uk/hop-oracle/archer/
+- slug: bouclier
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_bouclier.html
+  url: https://charlesfaram.com/hop-oracle/bouclier/
+  exclude:
+    total_oil: 10.1-10.6 mL/100g is several times any hop on record; a garbled cell
+    myrcene: published as a bare 0.38 next to percentages
+- slug: emperor
+  source: charles-faram
+  file: charlesfaram.com/uk_hop-oracle_emperor.html
+  url: https://charlesfaram.com/uk/hop-oracle/emperor/
+  exclude:
+    myrcene: published as a bare 0.36 next to percentages
+- slug: epic
+  source: charles-faram
+  file: charlesfaram.com/uk_hop-oracle_epic-hops.html
+  url: https://charlesfaram.com/uk/hop-oracle/epic-hops/
+  exclude:
+    myrcene: published as a bare 0.12 next to percentages
+- slug: ernest
+  source: charles-faram
+  file: charlesfaram.com/uk_hop-oracle_ernest.html
+  url: https://charlesfaram.com/uk/hop-oracle/ernest/
+  exclude:
+    total_oil: 0.7-10.1 mL/100g is a garbled cell; Hop Alliance gives 0.7-1.1
+    myrcene: published as a bare 0.55 next to percentages
+- slug: ernest
+  source: hop-alliance
+  file: hopalliance.com/products_ernest-hops-2025.html
+  url: https://hopalliance.com/products/ernest-hops-2025
+  values:
+    alpha_acid: 6.1
+    beta_acid: [4.5, 5.0]
+    cohumulone: [47, 50]
+    total_oil: [0.7, 1.1]
+    myrcene: [45, 55]
+- slug: mystic
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_mystic.html
+  url: https://charlesfaram.com/hop-oracle/mystic/
+  exclude:
+    myrcene: published as a bare 0.35 next to percentages
+- slug: opus
+  source: charles-faram
+  file: charlesfaram.com/ca_hop-oracle_opus.html
+  url: https://charlesfaram.com/ca/hop-oracle/opus/
+  exclude:
+    myrcene: published as a bare 0.32 next to percentages
+- slug: pilot
+  source: charles-faram
+  file: charlesfaram.com/ca_hop-oracle_pilot.html
+  url: https://charlesfaram.com/ca/hop-oracle/pilot/
+  exclude:
+    total_oil: 0.8-10.4 mL/100g is a garbled cell
+- slug: pioneer
+  source: charles-faram
+  file: charlesfaram.com/ca_hop-oracle_pioneer.html
+  url: https://charlesfaram.com/ca/hop-oracle/pioneer/
+- slug: keyworths-early
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_keyworths-early.html
+  url: https://charlesfaram.com/hop-oracle/keyworths-early/
+  exclude:
+    total_oil: 1-10.8 mL/100g is a garbled cell
+    myrcene: published as a bare 0.43 next to percentages
+- slug: keyworths-midseason
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_keyworths-mid-season.html
+  url: https://charlesfaram.com/hop-oracle/keyworths-mid-season/
+  exclude:
+    myrcene: published as a bare 0.4 next to percentages
+- slug: most
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_most.html
+  url: https://charlesfaram.com/hop-oracle/most/
+- slug: most
+  source: yvh
+  file: yakimavalleyhops.com/products_most-hops.html
+  url: https://yakimavalleyhops.com/products/most-hops
+  values:
+    alpha_acid: [7, 10]
+    beta_acid: [5, 6.5]
+    cohumulone: [25, 32]
+    total_oil: 1
+    myrcene: [30, 35]
+    humulene: [21, 25]
+- slug: junga
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_junga.html
+  url: https://charlesfaram.com/hop-oracle/junga/
+- slug: pulawski
+  source: charles-faram
+  file: charlesfaram.com/eu_hop-oracle_pulawski.html
+  url: https://charlesfaram.com/eu/hop-oracle/pulawski/
+- slug: krpan
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_krpan.html
+  url: https://charlesfaram.com/hop-oracle/krpan/
+  exclude:
+    total_oil: 10.5-20.5 mL/100g is a garbled cell
+- slug: styrian-dragon
+  source: charles-faram
+  file: charlesfaram.com/uk_hop-oracle_styrian-dragon.html
+  url: https://charlesfaram.com/uk/hop-oracle/styrian-dragon/
+  exclude:
+    total_oil: 10.5-20.1 mL/100g is a garbled cell
+- slug: styrian-eureka
+  source: charles-faram
+  file: charlesfaram.com/ca_hop-oracle_styrian-eureka.html
+  url: https://charlesfaram.com/ca/hop-oracle/styrian-eureka/
+  exclude:
+    total_oil: 20.5-40.0 mL/100g is a garbled cell
+- slug: styrian-kolibri
+  source: charles-faram
+  file: charlesfaram.com/int_hop-oracle_styrian-kolibri.html
+  url: https://charlesfaram.com/int/hop-oracle/styrian-kolibri/
+  exclude:
+    total_oil: 10.0-20.0 mL/100g is a garbled cell
+    myrcene: published as a bare 0.32 next to percentages
+- slug: styrian-cardinal
+  source: charles-faram
+  file: charlesfaram.com/uk_hop-oracle_cardinal.html
+  url: https://charlesfaram.com/uk/hop-oracle/cardinal/
+  exclude:
+    total_oil: 30.0-40.0 mL/100g is a garbled cell; Hop Alliance gives 2.5
+- slug: styrian-cardinal
+  source: hop-alliance
+  file: hopalliance.com/products_cardinal-sl-hop-pellets-2024.html
+  url: https://hopalliance.com/products/cardinal-sl-hop-pellets-2024
+  values:
+    alpha_acid: 7.8
+    beta_acid: [3.2, 4.6]
+    cohumulone: [31, 37]
+    total_oil: 2.5
+    myrcene: [40, 50]
+    humulene: [15, 22]
+    caryophyllene: [8, 11]
+    farnesene: [5, 7]
+- slug: karma
+  source: charles-faram
+  file: charlesfaram.com/hop-oracle_karma-hop-variety.html
+  url: https://charlesfaram.com/hop-oracle/karma-hop-variety/
+  exclude:
+    total_oil: published as 0.5-0.9% -- a percentage, not mL/100g
+- slug: karma
+  source: hop-alliance
+  file: hopalliance.com/products_karma-hops-2025.html
+  url: https://hopalliance.com/products/karma-hops-2025
+  values:
+    alpha_acid: 8.7
+- slug: bullion
+  source: hop-alliance
+  file: hopalliance.com/products_bullion-hops-2025.html
+  url: https://hopalliance.com/products/bullion-hops-2025
+  values:
+    alpha_acid: 7.9
+    beta_acid: [4.5, 5.3]
+    cohumulone: [47, 50]
+    total_oil: [1.0, 1.9]
+    myrcene: [45, 55]
+- slug: celeste
+  source: hop-alliance
+  file: hopalliance.com/products_celeste-hops-2025.html
+  url: https://hopalliance.com/products/celeste-hops-2025
+  values:
+    alpha_acid: 12.0
+    beta_acid: 4.89
+    total_oil: 1.42
+- slug: bergamot
+  source: hop-alliance
+  file: hopalliance.com/products_bergamot-mi-hop-pellets-2025.html
+  url: https://hopalliance.com/products/bergamot-mi-hop-pellets-2025
+  values:
+    alpha_acid: 5.93
+    beta_acid: 7.5
+    total_oil: 1.82
+- slug: copper
+  source: hop-alliance
+  file: hopalliance.com/products_copper-mi-hop-pellets-2025.html
+  url: https://hopalliance.com/products/copper-mi-hop-pellets-2025
+  values:
+    alpha_acid: 11.5
+    beta_acid: 2.74
+    cohumulone: 27.9
+    total_oil: 1.02
+    myrcene: [8.0, 12.0]
+    humulene: [25, 30]
+    caryophyllene: [10.0, 15.0]
+- slug: emerald-spire
+  source: hop-alliance
+  file: hopalliance.com/products_emerald-spire-mi-hop-pellets-2025.html
+  url: https://hopalliance.com/products/emerald-spire-mi-hop-pellets-2025
+  values:
+    alpha_acid: 7.7
+    beta_acid: 3.3
+    cohumulone: 36.7
+    total_oil: 0.90
+    myrcene: 18.85
+    humulene: 17.75
+    caryophyllene: 10.01
+- slug: hydra
+  source: hop-alliance
+  file: hopalliance.com/products_hydra-mi-hop-pellets-2025.html
+  url: https://hopalliance.com/products/hydra-mi-hop-pellets-2025
+  values:
+    alpha_acid: 7.99
+    beta_acid: 6.25
+    total_oil: 1.4
+- slug: paradigm
+  source: hop-alliance
+  file: hopalliance.com/products_paradigm-mi-hop-pellets-2025.html
+  url: https://hopalliance.com/products/paradigm-mi-hop-pellets-2025
+  values:
+    alpha_acid: 9.33
+    beta_acid: 4.85
+    total_oil: 1.91
+- slug: erebus
+  source: hop-alliance
+  file: hopalliance.com/products_erebus-hop-pellets-2025.html
+  url: https://hopalliance.com/products/erebus-hop-pellets-2025
+  values:
+    alpha_acid: 9.7
+    beta_acid: [3.0, 4.0]
+    total_oil: [2.3, 2.8]
+- slug: mackinac
+  source: hop-alliance
+  file: hopalliance.com/products_mackinac-mi-hop-pellets-2025.html
+  url: https://hopalliance.com/products/mackinac-mi-hop-pellets-2025
+  values:
+    alpha_acid: 12.50
+    beta_acid: 2.74
+    cohumulone: 28.7
+    total_oil: 1.41
+    myrcene: 31.91
+    humulene: 21.41
+    caryophyllene: 10.10
+- slug: southern-passion
+  source: yvh
+  file: yakimavalleyhops.com/products_southern-passion-pellet-hops.html
+  url: https://yakimavalleyhops.com/products/southern-passion-pellet-hops
+  values:
+    alpha_acid: [5, 12]
+    beta_acid: [4, 6]
+    cohumulone: [16.6, 20.2]
+    total_oil: [0.7, 1.3]
+    myrcene: [20, 35]
+    humulene: [17, 35]
+    caryophyllene: [8, 13]
+    farnesene: [1, 3]
+- slug: southern-tropic
+  source: yvh
+  file: yakimavalleyhops.com/products_southern-tropic-hops.html
+  url: https://yakimavalleyhops.com/products/southern-tropic-hops
+  values:
+    alpha_acid: [17, 18]
+    beta_acid: [6.4, 6.6]
+    cohumulone: [26, 28]
+    total_oil: 1.3
+    farnesene: [9, 10.25]

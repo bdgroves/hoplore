@@ -810,7 +810,7 @@ def build_beer(brewery: dict, path: Path, parsed: tuple, index: dict[str, str]) 
                 i["fresh"] = True
     if not items:
         return None
-    slug = re.sub(r"^(beer|our_beer|products?)_", "", path.stem)
+    slug = re.sub(r"^(beer|our_beer|products?|pages)_(copy-of-)?", "", path.stem)
     slug = re.sub(r"_[A-Z0-9]{16,}$", "", slug).replace("_", "-").lower()
     slug = re.sub(r"-2$", "", slug)  # WordPress's "-2" on a reused title
     beer = CommentedMap()

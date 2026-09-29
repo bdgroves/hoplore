@@ -1,27 +1,24 @@
 slug: styrian-cardinal
 name: Styrian Cardinal
-purpose: dual
+purpose: aroma
 country: SI
 kind: cultivar
 
-# Stub created from confirmed Hopsteiner coverage (tools/ingest/discover_all.py).
-# purpose is an unconfirmed default -- see meta.notes. No analytics recorded
-# yet: run `pixi run -e data hopsteiner styrian-cardinal --apply` to pull real values.
 
 ownership:
-  mark: public
-  public_domain: true
+  mark: trademark
+  public_domain: false
 
 pedigree:
-  breeder: unknown
-  parents: { unknown: true }
-  refs: []
+  breeder: ihps
+  parents: { unknown: true, note: 'Bred from European and American germplasm.' }
+  refs: [charles-faram, hop-alliance]
 
 aroma:
   summary: >
-    Not yet written. Fill in from a real source, then update meta.status.
-  tags: []
-  refs: []
+    A Slovenian aroma hop from the Institute of Hop Research and Brewing in Žalec, bred from European and American germplasm: citrus and fruit -- pineapple, orange, lime, guava -- best late or in the dry hop, per Charles Faram and Hop Alliance.
+  tags: [pineapple, orange, lime, guava, citrus]
+  refs: [charles-faram, hop-alliance]
 
 usage:
   timing: []
@@ -32,9 +29,48 @@ products: { cryo: false, lupomax: false }
 substitutes: []
 
 meta:
-  status: stub
-  verification: unverified
-  last_reviewed: '2026-09-14'
+  status: draft
+  verification: corroborated
+  last_reviewed: '2026-09-29'
   notes: >
-    purpose defaulted to dual, unconfirmed -- was not researched individually
-    for this bulk scaffold pass. Correct before publishing.
+    Figures and description added 2026-09-29. Aroma per both Charles Faram and Hop Alliance.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 8.0, high: 10.0 }
+      - { source: hop-alliance, low: 7.8, high: 7.8 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 3.2, high: 4.6 }
+      - { source: hop-alliance, low: 3.2, high: 4.6 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 31.0, high: 37.0 }
+      - { source: hop-alliance, low: 31.0, high: 37.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: hop-alliance, low: 2.5, high: 2.5 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 40.0, high: 50.0 }
+      - { source: hop-alliance, low: 40.0, high: 50.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 15.0, high: 22.0 }
+      - { source: hop-alliance, low: 15.0, high: 22.0 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 5.0, high: 7.0 }
+      - { source: hop-alliance, low: 5.0, high: 7.0 }
+  caryophyllene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: hop-alliance, low: 8.0, high: 11.0 }

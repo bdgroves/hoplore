@@ -1,0 +1,48 @@
+slug: erebus
+name: Erebus
+purpose: dual
+country: US
+kind: cultivar
+
+ownership:
+  mark: trademark
+  public_domain: false
+
+pedigree:
+  breeder: hopsteiner-breeding
+  parents: { unknown: true, note: 'HS16660.' }
+  refs: [hop-alliance]
+
+aroma:
+  summary: >
+    Blueberry, citrus, candied fruit and floral rose, per Hop Alliance.
+  tags: [blueberry, citrus, candy, rose]
+  refs: [hop-alliance]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-29'
+  notes: >
+    Added 2026-09-29 from hop-alliance's page.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: hop-alliance, low: 9.7, high: 9.7 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: hop-alliance, low: 3.0, high: 4.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: hop-alliance, low: 2.3, high: 2.8 }

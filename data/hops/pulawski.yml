@@ -1,0 +1,65 @@
+slug: pulawski
+name: Pulawski
+purpose: aroma
+country: PL
+kind: cultivar
+
+ownership:
+  mark: public
+  public_domain: true
+
+pedigree:
+  breeder: unknown
+  parents: { unknown: true }
+  refs: []
+
+aroma:
+  summary: >
+    A traditional Polish aroma hop: delicate herbal, floral and slightly spicy, per Charles Faram.
+  tags: [herbal, floral, spice]
+  refs: [charles-faram]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-29'
+  notes: >
+    Added 2026-09-29 from charles-faram's page.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 8.0, high: 11.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 3.0, high: 4.0 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 26.0, high: 30.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: charles-faram, low: 2.1, high: 2.1 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 38.2, high: 38.2 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 24.8, high: 24.8 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 7.5, high: 7.5 }

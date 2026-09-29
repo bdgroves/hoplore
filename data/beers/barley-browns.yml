@@ -107,6 +107,7 @@ beers:
     abv: 5.8
     hops_as_written: Malty copper-colored rye beer gently hopped with Northwest Cascade hops.
     hops:
+      - { hop: copper, name: Copper, as_written: copper }
       - { hop: cascade, name: Cascade, as_written: Cascade }
   - slug: tank-slapper-iiipa
     name: Tank Slapper IIIPA

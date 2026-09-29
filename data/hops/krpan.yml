@@ -1,0 +1,57 @@
+slug: krpan
+name: Krpan
+purpose: dual
+country: SI
+kind: cultivar
+
+ownership:
+  mark: public
+  public_domain: true
+
+pedigree:
+  breeder: unknown
+  parents: { unknown: true, note: 'Chinook grown in Slovenia, released commercially in 2019 and named for the strongman Martin Krpan.' }
+  refs: [charles-faram]
+
+aroma:
+  summary: >
+    Slovenian-grown Chinook with a cleaner, more floral aroma and a dash of lemon, per Charles Faram.
+  tags: [floral, lemon]
+  refs: [charles-faram]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-29'
+  notes: >
+    Added 2026-09-29 from charles-faram's page.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 11.0, high: 15.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 3.0, high: 4.0 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 29.0, high: 35.0 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 20.0, high: 30.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 18.0, high: 25.0 }

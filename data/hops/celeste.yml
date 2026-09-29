@@ -1,0 +1,48 @@
+slug: celeste
+name: Celeste
+purpose: dual
+country: US
+kind: cultivar
+
+ownership:
+  mark: trademark
+  public_domain: false
+
+pedigree:
+  breeder: wchb
+  parents: { unknown: true, note: 'WCHB-102, formerly "2B".' }
+  refs: [hop-alliance]
+
+aroma:
+  summary: >
+    Passionfruit, honeydew melon and pine resin; low cohumulone for smooth bittering, per Hop Alliance.
+  tags: [passionfruit, melon, pine]
+  refs: [hop-alliance]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-29'
+  notes: >
+    Added 2026-09-29 from hop-alliance's page.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: hop-alliance, low: 12.0, high: 12.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: hop-alliance, low: 4.89, high: 4.89 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: hop-alliance, low: 1.42, high: 1.42 }

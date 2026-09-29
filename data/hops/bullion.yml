@@ -1,0 +1,57 @@
+slug: bullion
+name: Bullion
+purpose: dual
+country: GB
+kind: cultivar
+
+ownership:
+  mark: public
+  public_domain: true
+
+pedigree:
+  breeder: unknown
+  parents: { unknown: true, note: 'Released in 1938.' }
+  refs: [hop-alliance]
+
+aroma:
+  summary: >
+    Zesty and spicy with dark red fruit and blackcurrant; often used in darker beers, per Hop Alliance.
+  tags: [blackcurrant, spice, herbal]
+  refs: [hop-alliance]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-29'
+  notes: >
+    Added 2026-09-29 from hop-alliance's page.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: hop-alliance, low: 7.9, high: 7.9 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: hop-alliance, low: 4.5, high: 5.3 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: hop-alliance, low: 47.0, high: 50.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: hop-alliance, low: 1.0, high: 1.9 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: hop-alliance, low: 45.0, high: 55.0 }

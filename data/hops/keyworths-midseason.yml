@@ -1,0 +1,58 @@
+slug: keyworths-midseason
+name: "Keyworth's Midseason"
+purpose: aroma
+country: GB
+kind: cultivar
+
+ownership:
+  mark: public
+  public_domain: true
+
+pedigree:
+  breeder: wye
+  parents: { unknown: true, note: 'Seedling OR55 (1924) from open-pollinated seed of Y90, a daughter of wild Neomexicanus; mother of Density and Defender.' }
+  refs: [charles-faram]
+
+aroma:
+  summary: >
+    A wilt-tolerant Wye College hop planted from 1949, peaking at 573 acres in 1954 and grown until
+    1985, per Charles Faram.
+  tags: []
+  refs: [charles-faram]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-29'
+  notes: >
+    Added 2026-09-29 from charles-faram's page. Charles Faram does not state a brewing role.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 4.3, high: 8.7 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 2.4, high: 3.1 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 42.0, high: 48.0 }
+  total_oil:
+    unit: ml_per_100g
+    observations:
+      - { source: charles-faram, low: 0.5, high: 0.9 }
+oils:
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 20.0, high: 20.0 }

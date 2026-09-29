@@ -1,0 +1,57 @@
+slug: styrian-dragon
+name: Styrian Dragon
+purpose: aroma
+country: SI
+kind: cultivar
+
+ownership:
+  mark: public
+  public_domain: true
+
+pedigree:
+  breeder: ihps
+  parents: { unknown: true, note: 'Bred in Žalec from European and American germplasm.' }
+  refs: [charles-faram]
+
+aroma:
+  summary: >
+    Vibrant floral citrus and tropical fruit; late boil and dry hop, per Charles Faram.
+  tags: [floral, citrus, tropical]
+  refs: [charles-faram]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: single-source
+  last_reviewed: '2026-09-29'
+  notes: >
+    Added 2026-09-29 from charles-faram's page.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 6.0, high: 11.0 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 7.5, high: 8.5 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 22.0, high: 24.0 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 58.0, high: 63.0 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 12.0, high: 17.0 }

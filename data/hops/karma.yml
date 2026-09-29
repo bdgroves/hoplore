@@ -1,0 +1,63 @@
+slug: karma
+name: Karma
+purpose: dual
+country: US
+kind: cultivar
+
+ownership:
+  mark: trademark
+  public_domain: false
+
+pedigree:
+  breeder: charles-faram
+  parents: { unknown: true, note: 'A daughter of Mystic and a disease-resistant UK male; grown at Puterbaugh Farms, Yakima, from 2015.' }
+  refs: [hop-alliance]
+
+aroma:
+  summary: >
+    Orange creamsicle with berry and mint, per Hop Alliance; a Charles Faram and Puterbaugh Farms
+    collaboration.
+  tags: [orange, berry, mint, creamy]
+  refs: [hop-alliance]
+
+usage:
+  timing: []
+  beer_styles: []
+
+products: { cryo: false, lupomax: false }
+
+substitutes: []
+
+meta:
+  status: draft
+  verification: corroborated
+  last_reviewed: '2026-09-29'
+  notes: >
+    Added 2026-09-29 from hop-alliance's page.
+analytics:
+  alpha_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 7.0, high: 9.0 }
+      - { source: hop-alliance, low: 8.7, high: 8.7 }
+  beta_acid:
+    unit: percent
+    observations:
+      - { source: charles-faram, low: 3.0, high: 4.0 }
+  cohumulone:
+    unit: percent_of_alpha
+    observations:
+      - { source: charles-faram, low: 36.0, high: 36.0 }
+oils:
+  myrcene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 49.97, high: 49.97 }
+  humulene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 17.88, high: 17.88 }
+  farnesene:
+    unit: percent_of_total_oil
+    observations:
+      - { source: charles-faram, low: 0.02, high: 0.02 }

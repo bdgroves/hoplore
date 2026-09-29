@@ -1,23 +1,23 @@
-slug: mackinac
-name: Mackinac
-purpose: dual
+slug: copper
+name: Copper
+purpose: aroma
 country: US
 kind: cultivar
 
-
 ownership:
-  mark: public
-  public_domain: true
+  mark: trademark
+  public_domain: false
 
 pedigree:
   breeder: unknown
-  parents: { unknown: true }
-  refs: []
+  parents: { unknown: true, note: 'A Chinook cross; sister to Mackinac.' }
+  refs: [hop-alliance]
 
 aroma:
   summary: >
-    A Michigan-grown Chinook cross and sister to Copper: fruit punch and robust citrus, with tropical, melon, papaya and spice notes; great as a late-addition aroma hop, per Hop Alliance.
-  tags: [citrus, tropical, melon, spice]
+    Fruit punch, black cherry, red hard candy, pineapple and hibiscus; a Michigan-grown super-aroma hop,
+    per Hop Alliance.
+  tags: [berry, candy, pineapple, floral]
   refs: [hop-alliance]
 
 usage:
@@ -33,12 +33,12 @@ meta:
   verification: single-source
   last_reviewed: '2026-09-29'
   notes: >
-    Figures and description added 2026-09-29. Hop Alliance: "Usage: Dual Purpose".
+    Added 2026-09-29 from hop-alliance's page.
 analytics:
   alpha_acid:
     unit: percent
     observations:
-      - { source: hop-alliance, low: 12.5, high: 12.5 }
+      - { source: hop-alliance, low: 11.5, high: 11.5 }
   beta_acid:
     unit: percent
     observations:
@@ -46,21 +46,21 @@ analytics:
   cohumulone:
     unit: percent_of_alpha
     observations:
-      - { source: hop-alliance, low: 28.7, high: 28.7 }
+      - { source: hop-alliance, low: 27.9, high: 27.9 }
   total_oil:
     unit: ml_per_100g
     observations:
-      - { source: hop-alliance, low: 1.41, high: 1.41 }
+      - { source: hop-alliance, low: 1.02, high: 1.02 }
 oils:
   myrcene:
     unit: percent_of_total_oil
     observations:
-      - { source: hop-alliance, low: 31.91, high: 31.91 }
+      - { source: hop-alliance, low: 8.0, high: 12.0 }
   humulene:
     unit: percent_of_total_oil
     observations:
-      - { source: hop-alliance, low: 21.41, high: 21.41 }
+      - { source: hop-alliance, low: 25.0, high: 30.0 }
   caryophyllene:
     unit: percent_of_total_oil
     observations:
-      - { source: hop-alliance, low: 10.1, high: 10.1 }
+      - { source: hop-alliance, low: 10.0, high: 15.0 }
