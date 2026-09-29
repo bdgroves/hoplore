@@ -22,3 +22,16 @@ beers:
       - { hop: strata, name: Strata, form: CGX, as_written: Strata CGX }
       - { hop: chinook, name: Chinook, as_written: Chinook }
       - { hop: strata, name: Strata, form: hop kief, as_written: Strata Hop Kief }
+  - slug: low-key-ipa
+    name: Low Key IPA
+    url: https://fortgeorgebrewery.com/
+    style: IPA
+    abv: 2.8
+    hops_as_written: Krush, Eclipse, Mosaic, Krush Cryo
+    scanned_from: text
+    scanned: '2026-09-29'
+    hops:
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: eclipse, name: Eclipse, as_written: Eclipse }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush Cryo }
