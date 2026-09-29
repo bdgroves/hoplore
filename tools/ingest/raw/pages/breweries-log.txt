@@ -1,10 +1,10 @@
  WARN the lock file is up-to-date but uses an older format (v6), run `pixi lock` to upgrade to v7 for improved reproducibility
-fort-george: 0 beer page(s)
+fort-george: 62 beer page(s)
 double-mountain: 24 beer page(s)
 pfriem: 277 beer page(s)
 ex-novo: 191 beer page(s)
 breakside: 275 beer page(s)
-ecliptic: 0 beer page(s)
+ecliptic: 11 beer page(s)
 7-seas: 2 beer page(s)
 elysian: 16 beer page(s)
 fair-isle: 128 beer page(s)
@@ -15,7 +15,7 @@ fremont: 0 beer page(s)
 aslan: 101 beer page(s)
 georgetown: 115 beer page(s)
 stoup: 505 beer page(s)
-bale-breaker: 0 beer page(s)
+bale-breaker: 16 beer page(s)
 structures: 17 beer page(s)
 block-15: 0 beer page(s)
 pelican: 24 beer page(s)
@@ -25,7 +25,41 @@ triceratops: 0 beer page(s)
 single-hill: 0 beer page(s)
 sunriver: 41 beer page(s)
 icicle: 0 beer page(s)
-ferment: 0 beer page(s)
+ferment: 36 beer page(s)
+  FAIL https://fermentbrewing.com/products/brewery-gift-card: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/brewery-gift-card
+  FAIL https://fermentbrewing.com/products/12-pils-czech-lager: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/12-pils-czech-lager
+  FAIL https://fermentbrewing.com/products/barleywine: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/barleywine
+  FAIL https://fermentbrewing.com/products/bright-west-ipa-1: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/bright-west-ipa-1
+  FAIL https://fermentbrewing.com/products/calliope-ipa: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/calliope-ipa
+  FAIL https://fermentbrewing.com/products/cheers-to-the-land: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/cheers-to-the-land
+  FAIL https://fermentbrewing.com/products/desert-island-pale-ale: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/desert-island-pale-ale
+  FAIL https://fermentbrewing.com/products/doug-the-dark-ale-cda: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/doug-the-dark-ale-cda
+  FAIL https://fermentbrewing.com/products/earth-to-beer-american-pale-ale: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/earth-to-beer-american-pale-ale
+  FAIL https://fermentbrewing.com/products/el-lager-dorado: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/el-lager-dorado
+  FAIL https://fermentbrewing.com/products/esb: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/esb
+  FAIL https://fermentbrewing.com/products/female-alpha-ipa: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/female-alpha-ipa
+  FAIL https://fermentbrewing.com/products/ferment-x-grasslands-downtime-pale-ale-copy: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/ferment-x-grasslands-downtime-pale-ale-copy
+  FAIL https://fermentbrewing.com/products/downtime-pale-ale: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/downtime-pale-ale
+  FAIL https://fermentbrewing.com/products/fresh-hop-centennial-ipa: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/fresh-hop-centennial-ipa
+  FAIL https://fermentbrewing.com/products/fresh-hop-tettnang-italian-pils-copy: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/fresh-hop-tettnang-italian-pils-copy
+  FAIL https://fermentbrewing.com/products/fresh-hop-luminosa-ipa: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/fresh-hop-luminosa-ipa
+  FAIL https://fermentbrewing.com/products/garden-lager: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/garden-lager
+  FAIL https://fermentbrewing.com/products/guajava-guava-sour-ale: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/guajava-guava-sour-ale
+  FAIL https://fermentbrewing.com/products/hana-pils: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/hana-pils
+  FAIL https://fermentbrewing.com/products/hefeweizen: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/hefeweizen
+  FAIL https://fermentbrewing.com/products/la-ventana-dark-mexican-lager-copy: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/la-ventana-dark-mexican-lager-copy
+  FAIL https://fermentbrewing.com/products/high-five-herman-ipa: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/high-five-herman-ipa
+  FAIL https://fermentbrewing.com/products/holy-citra-ipa: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/holy-citra-ipa
+  FAIL https://fermentbrewing.com/products/imperial-stout: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/imperial-stout
+  FAIL https://fermentbrewing.com/products/king-tide-pilsner: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/king-tide-pilsner
+  FAIL https://fermentbrewing.com/products/kolsch: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/kolsch
+  FAIL https://fermentbrewing.com/products/la-palapa: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/la-palapa
+  FAIL https://fermentbrewing.com/products/la-ventana-dark-mexican-lager: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/la-ventana-dark-mexican-lager
+  FAIL https://fermentbrewing.com/products/longstep-mantis-wcipa: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/longstep-mantis-wcipa
+  FAIL https://fermentbrewing.com/products/lost-in-fragaria: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/lost-in-fragaria
+  FAIL https://fermentbrewing.com/products/nevertheless-pils: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/nevertheless-pils
+  FAIL https://fermentbrewing.com/products/nitro-dry-stout: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/nitro-dry-stout
+  FAIL https://fermentbrewing.com/products/now-face-west-ipa: 429 Client Error: Too Many Requests for url: https://fermentbrewing.com/products/now-face-west-ipa
 chuckanut: 57 beer page(s)
 ladd-and-lass: 0 beer page(s)
 wander: 0 beer page(s)
@@ -33,9 +67,9 @@ little-beast: 0 beer page(s)
 lucky-envelope: 0 beer page(s)
 matchless: 0 beer page(s)
 barley-browns: 0 beer page(s)
-narrows: 0 beer page(s)
+narrows: 47 beer page(s)
 
-added 8 packages, and audited 9 packages in 3s
+added 8 packages, and audited 9 packages in 1s
 
 3 packages are looking for funding
   run `npm fund` for details
