@@ -132,7 +132,13 @@ def read_rss() -> list[dict]:
     try:
         r = requests.get(RSS, headers={"User-Agent": "Mozilla/5.0 (compatible; brooksgroves-bot/1.0)"}, timeout=20)
         r.raise_for_status()
-        channel = ET.fromstring(r.content).find("channel")
+        text = r.text
+        if "<rss" not in text[:500]:
+            raise ET.ParseError("not an RSS feed (Untappd may have sent a challenge page)")
+        # Untappd's feed sometimes carries a bare "&" in a comment; escape
+        # any that aren't already entities before parsing.
+        text = re.sub(r"&(?!#?\w+;)", "&amp;", text)
+        channel = ET.fromstring(text.encode("utf-8")).find("channel")
     except (requests.RequestException, ET.ParseError) as error:
         print(f"rss: {error}")
         return []
