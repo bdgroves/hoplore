@@ -144,7 +144,7 @@ write(
 
 // ------------------------------------------------------------------ the site
 
-write(out('index.html'), renderIndex({ hops, taxonomy, meta }));
+write(out('index.html'), renderIndex({ hops, taxonomy, meta, beerCount: breweries.reduce((n, b) => n + b.beers.length, 0) }));
 write(out('landscape/index.html'), renderLandscape({ hops, meta }));
 if (acreage) write(out('grown/index.html'), renderGrown({ acreage, hops, meta }));
 write(out('scan/index.html'), renderScan({ meta }));

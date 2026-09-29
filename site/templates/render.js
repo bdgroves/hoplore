@@ -120,7 +120,7 @@ ${SITE_FOOTER}`;
 
 // ------------------------------------------------------------------- index
 
-export function renderIndex({ hops, taxonomy, meta }) {
+export function renderIndex({ hops, taxonomy, meta, beerCount = 0 }) {
   const byCountry = new Map();
   for (const hop of hops) {
     if (!byCountry.has(hop.country)) byCountry.set(hop.country, []);
@@ -206,7 +206,7 @@ ${footer('', meta)}
   return shell({
     title: 'HopLove 🍺❤️ — look at a can, know the hops',
     active: 'home',
-    description: `What’s in 1,300+ Pacific Northwest beers, hop by hop, plus brewing values, oil breakdowns and substitutions for ${hops.length} hop cultivars. Open data, free JSON API, every number cited.`,
+    description: `What’s in ${(Math.floor(beerCount / 100) * 100).toLocaleString('en-US')}+ Pacific Northwest beers, hop by hop, plus brewing values, oil breakdowns and substitutions for ${hops.length} hop cultivars. Open data, free JSON API, every number cited.`,
     body,
   });
 }
