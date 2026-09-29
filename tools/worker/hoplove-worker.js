@@ -1,30 +1,35 @@
 // HopLove additions for the brooks-anthropic-proxy Cloudflare Worker.
 //
-// Two jobs:
-//   1. Guard the Claude proxy: only brooksgroves.com may call it, only
-//      known models, a max_tokens ceiling, a size limit, a per-visitor
-//      limit and a daily ceiling -- so a post that takes off can't run up
-//      the Anthropic bill.
-//   2. /hoplove/save: one-tap saving for the scan page and "Rate it". With
-//      the owner key it files the issue the HopLove workflows act on; for
-//      anyone else it files a suggestion the workflows ignore.
+// That Worker also runs the recipe box (/save-recipe, /update-recipe,
+// /delete-recipe) and the Claude proxy the Recipe Extractor and Nora Reader
+// use (POST /). This file ADDS to it; it doesn't replace anything.
 //
-// How to use it (Cloudflare dashboard -> Workers -> brooks-anthropic-proxy):
-//   * Settings -> Variables: keep ANTHROPIC_API_KEY; add secrets
-//       GITHUB_TOKEN     fine-grained token, repo bdgroves/hoplove only,
-//                        permission "Issues: Read and write"
-//       HOPLOVE_KEY      any long random string; then open
-//                        https://brooksgroves.com/hoplove/?me&key=THAT_STRING
-//                        once on each of your devices
-//   * Settings -> Bindings: add a KV namespace bound as LIMITS
-//   * Merge: call `guardClaude` at the top of your existing handler for the
-//     proxy path, and route /hoplove/* to `hoplove`. If your Worker is only
-//     the proxy, the `default` export below is a complete replacement --
-//     keep your /save-recipe route by pasting it where marked.
+// Two jobs:
+//   1. Guard POST / (the Claude proxy): only brooksgroves.com may call it,
+//      only known models, a reply-length ceiling, a size limit, a per-visitor
+//      limit and a daily ceiling -- so a HopLove post that takes off can't
+//      run up the Anthropic bill. The recipe routes are untouched.
+//   2. /hoplove/save: one-tap saving for the scan page, "Rate it" and "Edit
+//      this beer". With the owner key it files the issue the HopLove
+//      workflows act on; for anyone else it files a suggestion they ignore.
+//
+// Install (Cloudflare dashboard -> Workers & Pages -> brooks-anthropic-proxy):
+//   1. Settings -> Variables and Secrets, add two SECRETS (keep the existing ones):
+//        HOPLOVE_GITHUB_TOKEN  fine-grained GitHub token, repository bdgroves/hoplove
+//                              only, permission "Issues: Read and write"
+//        HOPLOVE_KEY           the password you type on the site's 🔒 Brooks button
+//   2. Storage & Databases -> KV -> create a namespace "hoplove-limits"; then
+//      the Worker's Settings -> Bindings -> add KV namespace, variable name LIMITS.
+//      (Without it the limits are simply skipped -- nothing breaks.)
+//   3. Edit code: paste everything below this comment block at the very
+//      bottom of the Worker's file, then add the three marked lines at the
+//      top of its fetch handler (see "HOW TO WIRE IT IN" at the end). Deploy.
 
 const ORIGINS = ['https://brooksgroves.com', 'https://www.brooksgroves.com'];
-const MODELS = ['claude-sonnet-5', 'claude-opus-4-5', 'claude-haiku-4-5', 'claude-sonnet-4-5'];
-const MAX_TOKENS = 2000;
+// Any Claude model: the Nora Reader and Recipe Extractor pick their own, and
+// the per-visitor and daily caps are what hold the bill down.
+const MODEL = /^claude-[a-z0-9.-]+$/;
+const MAX_TOKENS = 4096; // the Recipe Extractor asks for 4096
 const MAX_BODY = 6 * 1024 * 1024; // a 1400px JPEG is well under this
 const PER_VISITOR_PER_DAY = 40;
 const PER_DAY = 400; // every visitor together; roughly a few dollars at most
@@ -42,6 +47,7 @@ const json = (data, status, origin) =>
 async function count(env, key, limit) {
   // KV is eventually consistent, so this is a soft ceiling -- plenty for a
   // side project. Keys expire after two days on their own.
+  if (!env.LIMITS) return true; // no KV bound yet: skip the limits rather than break
   const n = Number((await env.LIMITS.get(key)) || 0);
   if (n >= limit) return false;
   await env.LIMITS.put(key, String(n + 1), { expirationTtl: 172800 });
@@ -61,7 +67,7 @@ export async function guardClaude(request, env) {
   } catch {
     return json({ error: 'bad request' }, 400, origin);
   }
-  if (!MODELS.includes(body.model)) return json({ error: `model ${body.model} not allowed` }, 400, origin);
+  if (!MODEL.test(String(body.model || ''))) return json({ error: `model ${body.model} not allowed` }, 400, origin);
   if (!(body.max_tokens > 0) || body.max_tokens > MAX_TOKENS) return json({ error: `max_tokens must be 1-${MAX_TOKENS}` }, 400, origin);
   const day = new Date().toISOString().slice(0, 10);
   const who = request.headers.get('CF-Connecting-IP') || 'unknown';
@@ -107,7 +113,7 @@ export async function hoplove(request, env) {
   const r = await fetch(`https://api.github.com/repos/${REPO}/issues`, {
     method: 'POST',
     headers: {
-      Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+      Authorization: `Bearer ${env.HOPLOVE_GITHUB_TOKEN}`,
       Accept: 'application/vnd.github+json',
       'User-Agent': 'hoplove-worker',
       'Content-Type': 'application/json',
@@ -119,29 +125,14 @@ export async function hoplove(request, env) {
   return json({ ok: true, owner, url: issue.html_url }, 200, origin);
 }
 
-// A complete Worker, if the proxy is all your Worker does today. Paste your existing
-// /save-recipe handling where marked so the cookbook keeps working.
-export default {
-  async fetch(request, env) {
-    const url = new URL(request.url);
-    if (url.pathname.startsWith('/hoplove/')) return hoplove(request, env);
-    // if (url.pathname === '/save-recipe') return saveRecipe(request, env);   <- your existing route
-
-    const refused = await guardClaude(request, env);
-    if (refused) return refused;
-    const origin = request.headers.get('Origin') || '';
-    const upstream = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'x-api-key': env.ANTHROPIC_API_KEY,
-        'anthropic-version': '2023-06-01',
-        'content-type': 'application/json',
-      },
-      body: await request.text(),
-    });
-    return new Response(upstream.body, {
-      status: upstream.status,
-      headers: { 'Content-Type': 'application/json', ...cors(origin) },
-    });
-  },
-};
+// HOW TO WIRE IT IN -- at the top of the existing handler, right after it
+// works out the URL (async fetch(request, env) { const url = new URL(request.url); ...):
+//
+//     if (url.pathname.startsWith('/hoplove/')) return hoplove(request, env);
+//     if (url.pathname === '/') { const refused = await guardClaude(request, env); if (refused) return refused; }
+//
+// (If the handler has no `url` variable yet, add `const url = new URL(request.url);`
+// first -- that's the third line.) Everything after stays exactly as it was.
+//
+// If the pasted code complains about `export`, delete the word `export` in
+// front of guardClaude and hoplove -- the Cloudflare editor accepts either.
