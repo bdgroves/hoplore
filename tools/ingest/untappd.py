@@ -42,7 +42,7 @@ ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "data" / "untappd" / "checkins.yml"
 URL = "https://brooksgroves.com/beers.json"
 BROWSER_UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36"
-UA = "Mozilla/5.0 (compatible; HopLove/0.1; +https://github.com/bdgroves/hoplore)"
+UA = "Mozilla/5.0 (compatible; HopLove/0.1; +https://github.com/bdgroves/hoplove)"
 
 TITLE = re.compile(r"^.+? is drinking an? (?P<beer>.+?) by\s+(?P<brewery>.+?)(?: at (?P<venue>.+))?$")
 

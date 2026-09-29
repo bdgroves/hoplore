@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://hoplore.dev/api/v1/schema/source.schema.json",
+  "$id": "https://hoplove.dev/api/v1/schema/source.schema.json",
   "title": "Source registry",
   "description": "Every number in this dataset points at an entry here. No entry, no number.",
   "type": "object",

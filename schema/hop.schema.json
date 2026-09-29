@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://hoplore.dev/api/v1/schema/hop.schema.json",
+  "$id": "https://hoplove.dev/api/v1/schema/hop.schema.json",
   "title": "Hop cultivar",
   "description": "One hop cultivar, blend or experimental selection. Numeric properties store raw per-source OBSERVATIONS; published ranges are derived at build time by scripts/rollup.js and must never be hand-written into these files.",
   "type": "object",

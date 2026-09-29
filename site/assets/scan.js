@@ -8,7 +8,7 @@ const WORKER_URL = 'https://brooks-anthropic-proxy.bdgroves1970.workers.dev';
 // Fastest first; if the Worker or the model turns it down, or the answer
 // doesn't parse, the next one tries.
 const MODELS = ['claude-sonnet-5', 'claude-opus-4-5'];
-const REPO = 'bdgroves/hoplore';
+const REPO = 'bdgroves/hoplove';
 const $ = (s) => document.querySelector(s);
 
 const SYSTEM = `You read beer labels, cans, bottles, tap lists and brewery descriptions and report the hops.

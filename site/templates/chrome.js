@@ -1,5 +1,5 @@
 /** The brooksgroves.com chrome, so HopLove reads as part of the site rather
- *  than a stranger living at /hoplore/: the same topline, masthead bar, theme
+ *  than a stranger living at /hoplove/: the same topline, masthead bar, theme
  *  toggle (sharing the site's `bg_theme` key, so a dark-mode choice follows you
  *  in from the homepage and back) and the same footer.
  *
@@ -84,7 +84,7 @@ export const SITE_FOOTER = `<footer>
       <div class="pagelink-row">
         <a href="https://brooksgroves.com/writing/">Writing</a>
         <a href="https://brooksgroves.com/blog/">Blog</a>
-        <a href="https://github.com/bdgroves/hoplore">HopLove on GitHub</a>
+        <a href="https://github.com/bdgroves/hoplove">HopLove on GitHub</a>
       </div>
     </div>
 

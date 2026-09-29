@@ -87,7 +87,7 @@ export function renderAbout({ meta, stats }) {
       <dd>No. Brooks's own Untappd check-ins show up next to the beers he's had (that's the "In Brooks's glass" bits),
       but HopLove is its own thing and has nothing to do with Untappd.</dd>
       <dt>Something's wrong. How do I tell you?</dt>
-      <dd><a href="https://github.com/bdgroves/hoplore/issues/new">Open an issue on GitHub</a> or
+      <dd><a href="https://github.com/bdgroves/hoplove/issues/new">Open an issue on GitHub</a> or
       <a href="mailto:contact@brooksgroves.com">email Brooks</a>. Say which beer or hop, and what you saw.</dd>
       <dt>Can I use the data?</dt>
       <dd>Yes. It's free: <a href="${base}api/v1/hops.json">every hop</a> and <a href="${base}api/v1/beers.json">every beer</a>
@@ -112,7 +112,7 @@ export function renderAbout({ meta, stats }) {
     fresh hop season.</p>
     <p>Nobody's selling you hops, and there are no ads. It isn't affiliated with any brewery, breeder, farm or
     merchant; the variety names belong to their owners. The code and data are on
-    <a href="https://github.com/bdgroves/hoplore">GitHub</a>.</p>
+    <a href="https://github.com/bdgroves/hoplove">GitHub</a>.</p>
     <p class="fine">${stats.hops} hops · ${n(stats.beers)} beers · ${stats.breweries} breweries · ${stats.sources} sources ·
     last built ${esc(meta.built.slice(0, 10))}</p>
   </section>

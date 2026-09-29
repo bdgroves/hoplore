@@ -27,7 +27,7 @@ function target(url) {
 }
 
 const browser = await chromium.launch({ executablePath: process.env.CHROME || '/usr/bin/google-chrome' });
-const page = await browser.newPage({ userAgent: 'Mozilla/5.0 (compatible; HopLove/0.1; +https://github.com/bdgroves/hoplore)' });
+const page = await browser.newPage({ userAgent: 'Mozilla/5.0 (compatible; HopLove/0.1; +https://github.com/bdgroves/hoplove)' });
 let saved = 0;
 for (const [match, url] of listings) {
   try {

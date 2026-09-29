@@ -2,13 +2,13 @@
 
 **An open hop database that shows its working.**
 
-### → [brooksgroves.com/hoplore](https://brooksgroves.com/hoplore/)
+### → [brooksgroves.com/hoplove](https://brooksgroves.com/hoplove/)
 
-[Browse the hops](https://brooksgroves.com/hoplore/) ·
-[The hop landscape](https://brooksgroves.com/hoplore/landscape/) ·
-[Where the hops grow](https://brooksgroves.com/hoplore/grown/) ·
-[What's in the can](https://brooksgroves.com/hoplore/beers/) ·
-[The JSON API](https://brooksgroves.com/hoplore/api/v1/hops.json) ·
+[Browse the hops](https://brooksgroves.com/hoplove/) ·
+[The hop landscape](https://brooksgroves.com/hoplove/landscape/) ·
+[Where the hops grow](https://brooksgroves.com/hoplove/grown/) ·
+[What's in the can](https://brooksgroves.com/hoplove/beers/) ·
+[The JSON API](https://brooksgroves.com/hoplove/api/v1/hops.json) ·
 [Report a wrong number](../../issues/new?template=data-correction.yml)
 
 Every hop spec sheet on the internet hands you one confident number. `Alpha: 5.5–8.5%`. Cool. Says who? Measured when? In whose field, in what crop year, by the people who bred it or by a shop trying to move last season's crop?
@@ -44,10 +44,10 @@ That's the whole thesis. Nobody hand-writes a published range in this repo. You 
 ## What you'll find on the site
 
 - **A page per hop** — every source plotted on its own range bar, the oil breakdown, aroma, beer styles, pedigree, and ranked substitutes.
-- **[The hop landscape](https://brooksgroves.com/hoplore/landscape/)** — every hop with published figures on one chart, bittering power against aroma oil. Each hop carries a cross out to the widest range any source reported, so a big cross means the sources disagree or the crop swings year to year. Every hop page links in with that hop lit up.
-- **[Where America's hops grow](https://brooksgroves.com/hoplore/grown/)** — Washington grows three-quarters of the US crop, and this is the page that shows it: acres for every variety USDA counts in Washington, Oregon and Idaho, 2015 to 2025, straight from the National Hop Report. Every hop that's in the survey gets its own *Where it's grown* chart too — Citra is the No. 1 hop by acreage in both Washington and Oregon.
-- **[What's in the can](https://brooksgroves.com/hoplore/beers/)** — pick a beer, see its hops. 1,300+ beers from 15 Pacific Northwest breweries — Seattle (Cloudburst, Reuben's, Fair Isle, Elysian, Holy Mountain, Fremont), Bellingham (Aslan), Tacoma (7 Seas), Hood River (pFriem, Double Mountain, Kings & Daughters), Portland (Breakside, Ex Novo, Ecliptic) and Astoria (Fort George) — each with a page of its own, each hop opened up — aroma, alpha, oil breakdown, how many acres of it Washington and Oregon grew — with Cryo and fresh-hop additions called out (Fresh Hop Mirrored Realities: fresh Strata from Coleman Farms). Every hop page lists the beers it's in.
-- **[Scan a beer](https://brooksgroves.com/hoplore/scan/)** — photograph a can, a bottle or a tap list (or paste the brewery's text) and see its hops. It reads as soon as you shoot. Claude reads the picture through the site's Cloudflare Worker, so no key is ever in the browser; keeping it opens a prefilled GitHub issue that a workflow turns into data.
+- **[The hop landscape](https://brooksgroves.com/hoplove/landscape/)** — every hop with published figures on one chart, bittering power against aroma oil. Each hop carries a cross out to the widest range any source reported, so a big cross means the sources disagree or the crop swings year to year. Every hop page links in with that hop lit up.
+- **[Where America's hops grow](https://brooksgroves.com/hoplove/grown/)** — Washington grows three-quarters of the US crop, and this is the page that shows it: acres for every variety USDA counts in Washington, Oregon and Idaho, 2015 to 2025, straight from the National Hop Report. Every hop that's in the survey gets its own *Where it's grown* chart too — Citra is the No. 1 hop by acreage in both Washington and Oregon.
+- **[What's in the can](https://brooksgroves.com/hoplove/beers/)** — pick a beer, see its hops. 1,300+ beers from 15 Pacific Northwest breweries — Seattle (Cloudburst, Reuben's, Fair Isle, Elysian, Holy Mountain, Fremont), Bellingham (Aslan), Tacoma (7 Seas), Hood River (pFriem, Double Mountain, Kings & Daughters), Portland (Breakside, Ex Novo, Ecliptic) and Astoria (Fort George) — each with a page of its own, each hop opened up — aroma, alpha, oil breakdown, how many acres of it Washington and Oregon grew — with Cryo and fresh-hop additions called out (Fresh Hop Mirrored Realities: fresh Strata from Coleman Farms). Every hop page lists the beers it's in.
+- **[Scan a beer](https://brooksgroves.com/hoplove/scan/)** — photograph a can, a bottle or a tap list (or paste the brewery's text) and see its hops. It reads as soon as you shoot. Claude reads the picture through the site's Cloudflare Worker, so no key is ever in the browser; keeping it opens a prefilled GitHub issue that a workflow turns into data.
 - **Your glass** — Brooks's Untappd check-ins (merged daily from brooksgroves.com/beers.json into `data/untappd/checkins.yml`, with the caps rating read off each check-in page when Untappd allows) are joined to the beers HopLove knows. Beer pages show the check-in and rating; hop pages say how many of their beers you've had; `/beers/` shows the latest check-ins and, once enough are rated, the hops you love. Rate any beer (0.25–5 caps, like Untappd) from its page or while scanning; ratings land in `data/ratings.yml` through the same issue workflow.
 - **Honesty built into the page.** A hop with only a placeholder citation gets a red "needs a citation" badge. A stub with no numbers says *awaiting data*. A brewing role that hasn't been sourced says *role ?* instead of quietly guessing. An oil breakdown that doesn't account for enough of the oil isn't drawn at all — rather than scaling two trace compounds up to 100% and inventing the rest.
 
@@ -88,8 +88,8 @@ Every push to `main` validates, builds and deploys to GitHub Pages.
 ## Run it
 
 ```bash
-git clone git@github.com:bdgroves/hoplore.git
-cd hoplore
+git clone git@github.com:bdgroves/hoplove.git
+cd hoplove
 pixi install
 
 pixi run validate    # yells at you about the data
@@ -175,16 +175,16 @@ So formats are first-class. Each `forms` entry carries its own observations, and
 Static JSON on a CDN: costs nothing to run, can't go down separately from the site.
 
 ```
-GET /hoplore/api/v1/index.json            slim list, ~all you need for search
-GET /hoplore/api/v1/hops.json             everything
-GET /hoplore/api/v1/hops/citra.json       one hop: ranges + every underlying observation
-GET /hoplore/api/v1/similar/citra.json    ranked substitutes with component scores
-GET /hoplore/api/v1/acreage.json          USDA acreage by variety, state and year
-GET /hoplore/api/v1/beers.json            breweries, beers and their hops
-GET /hoplore/api/v1/sources.json          the source registry
-GET /hoplore/api/v1/taxonomy.json         aroma tags, styles, countries, breeders
-GET /hoplore/api/v1/hops.csv              the whole thing, flattened
-GET /hoplore/api/v1/schema/hop.schema.json
+GET /hoplove/api/v1/index.json            slim list, ~all you need for search
+GET /hoplove/api/v1/hops.json             everything
+GET /hoplove/api/v1/hops/citra.json       one hop: ranges + every underlying observation
+GET /hoplove/api/v1/similar/citra.json    ranked substitutes with component scores
+GET /hoplove/api/v1/acreage.json          USDA acreage by variety, state and year
+GET /hoplove/api/v1/beers.json            breweries, beers and their hops
+GET /hoplove/api/v1/sources.json          the source registry
+GET /hoplove/api/v1/taxonomy.json         aroma tags, styles, countries, breeders
+GET /hoplove/api/v1/hops.csv              the whole thing, flattened
+GET /hoplove/api/v1/schema/hop.schema.json
 ```
 
 All on `https://brooksgroves.com`. Every response carries a `meta` envelope with the build timestamp and license. `v1` will not break — if the shape needs to change it becomes `v2` and `v1` keeps working. Building something with it? Go ahead; it's CC BY 4.0, just credit it. I'd love to hear about it.

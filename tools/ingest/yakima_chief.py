@@ -69,7 +69,7 @@ BASE = "https://yakimachiefranches.com/create/brands/"
 SITEMAP = "https://yakimachiefranches.com/sitemap.xml"
 SOURCE_ID = "ychr"
 
-UA = "HopLove/0.1 (open hop dataset; +https://github.com/bdgroves/hoplore)"
+UA = "HopLove/0.1 (open hop dataset; +https://github.com/bdgroves/hoplove)"
 
 yaml = YAML()
 yaml.preserve_quotes = True

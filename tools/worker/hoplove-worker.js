@@ -11,10 +11,10 @@
 //
 // How to use it (Cloudflare dashboard -> Workers -> brooks-anthropic-proxy):
 //   * Settings -> Variables: keep ANTHROPIC_API_KEY; add secrets
-//       GITHUB_TOKEN     fine-grained token, repo bdgroves/hoplore only,
+//       GITHUB_TOKEN     fine-grained token, repo bdgroves/hoplove only,
 //                        permission "Issues: Read and write"
 //       HOPLOVE_KEY      any long random string; then open
-//                        https://brooksgroves.com/hoplore/?me&key=THAT_STRING
+//                        https://brooksgroves.com/hoplove/?me&key=THAT_STRING
 //                        once on each of your devices
 //   * Settings -> Bindings: add a KV namespace bound as LIMITS
 //   * Merge: call `guardClaude` at the top of your existing handler for the
@@ -28,7 +28,7 @@ const MAX_TOKENS = 2000;
 const MAX_BODY = 6 * 1024 * 1024; // a 1400px JPEG is well under this
 const PER_VISITOR_PER_DAY = 40;
 const PER_DAY = 400; // every visitor together; roughly a few dollars at most
-const REPO = 'bdgroves/hoplore';
+const REPO = 'bdgroves/hoplove';
 
 const cors = (origin) => ({
   'Access-Control-Allow-Origin': ORIGINS.includes(origin) || origin?.startsWith('http://localhost') ? origin : ORIGINS[0],

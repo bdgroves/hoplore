@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://hoplore.dev/api/v1/schema/taxonomy.schema.json",
+  "$id": "https://hoplove.dev/api/v1/schema/taxonomy.schema.json",
   "title": "Controlled vocabulary",
   "type": "object",
   "additionalProperties": {

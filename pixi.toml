@@ -11,7 +11,7 @@
 #   pixi run new-hop "Mount Hood" US aroma
 
 [workspace]
-name = "hoplore"
+name = "hoplove"
 version = "0.1.0"
 description = "An open, sourced, version-controlled database of hop cultivars."
 authors = ["Brooks Groves"]

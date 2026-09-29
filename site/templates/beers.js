@@ -171,7 +171,7 @@ function hopCard(entry, hop, taxonomy, base) {
   if (!hop) {
     return `<li class="hopcard missing">
       <div class="hc-head"><h3>${esc(entry.name)}</h3></div>
-      <p class="hc-none">Not in HopLove yet. <a href="https://github.com/bdgroves/hoplore/issues/new?title=${encodeURIComponent(`Add ${entry.name}`)}">Ask for it</a>.</p>
+      <p class="hc-none">Not in HopLove yet. <a href="https://github.com/bdgroves/hoplove/issues/new?title=${encodeURIComponent(`Add ${entry.name}`)}">Ask for it</a>.</p>
     </li>`;
   }
   const role = roleOf(hop);

@@ -165,7 +165,7 @@ export function renderLandscape({ hops, meta }) {
     <nav class="nav" style="border-top:0;padding-top:0">
       <a href="${base}">All varieties</a>
       <a href="${base}api/v1/hops.json">Download the data</a>
-      <a href="https://github.com/bdgroves/hoplore">GitHub</a>
+      <a href="https://github.com/bdgroves/hoplove">GitHub</a>
     </nav>
     <h1 class="page-title">The hop landscape</h1>
     <p class="standfirst">Every hop with published figures, on one sheet: how hard

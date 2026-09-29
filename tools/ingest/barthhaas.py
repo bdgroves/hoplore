@@ -57,7 +57,7 @@ OVERVIEW = "https://www.barthhaas.com/hops-and-products/hop-varieties-overview"
 SITEMAP = "https://www.barthhaas.com/sitemap.xml"
 SOURCE_ID = "barthhaas"
 
-UA = "HopLove/0.1 (open hop dataset; +https://github.com/bdgroves/hoplore)"
+UA = "HopLove/0.1 (open hop dataset; +https://github.com/bdgroves/hoplove)"
 
 yaml = YAML()
 yaml.preserve_quotes = True

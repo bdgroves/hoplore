@@ -57,7 +57,7 @@ jobs:
           git commit -m "Scanned beer: $SUMMARY" -m "From issue #$NUMBER."
           git pull --rebase --autostash && git push
           gh workflow run deploy.yml --ref main
-          gh issue close "$NUMBER" --comment "Added: $SUMMARY. It'll be at https://brooksgroves.com/hoplore/$PAGE in a minute or two, once the site rebuilds. 🍺❤️"
+          gh issue close "$NUMBER" --comment "Added: $SUMMARY. It'll be at https://brooksgroves.com/hoplove/$PAGE in a minute or two, once the site rebuilds. 🍺❤️"
 
       - name: Say what went wrong
         if: failure()
@@ -103,7 +103,7 @@ jobs:
           git commit -m "Rated: $SUMMARY" -m "From issue #$NUMBER."
           git pull --rebase --autostash && git push
           gh workflow run deploy.yml --ref main
-          gh issue close "$NUMBER" --comment "Rated $SUMMARY. It'll show on https://brooksgroves.com/hoplore/$PAGE in a minute or two. 🍺❤️"
+          gh issue close "$NUMBER" --comment "Rated $SUMMARY. It'll show on https://brooksgroves.com/hoplove/$PAGE in a minute or two. 🍺❤️"
 
       - name: Say what went wrong
         if: failure()
@@ -149,7 +149,7 @@ jobs:
           git commit -m "Edited: $SUMMARY" -m "From issue #$NUMBER."
           git pull --rebase --autostash && git push
           gh workflow run deploy.yml --ref main
-          gh issue close "$NUMBER" --comment "Edited $SUMMARY. It'll show on https://brooksgroves.com/hoplore/$PAGE in a minute or two. 🍺❤️"
+          gh issue close "$NUMBER" --comment "Edited $SUMMARY. It'll show on https://brooksgroves.com/hoplove/$PAGE in a minute or two. 🍺❤️"
 
       - name: Say what went wrong
         if: failure()

@@ -51,7 +51,7 @@ const meta = {
   count: hops.length,
   sourceCount: Object.keys(sources).length,
   license: 'CC-BY-4.0',
-  repository: 'https://github.com/bdgroves/hoplore',
+  repository: 'https://github.com/bdgroves/hoplove',
   names: Object.fromEntries(hops.map((h) => [h.slug, h.name])),
 };
 
@@ -194,12 +194,12 @@ for (const hop of hops) {
 cpSync(join(ROOT, 'site', 'assets'), out('assets'), { recursive: true });
 
 write(out('.nojekyll'), '');
-write(out('robots.txt'), `User-agent: *\nAllow: /\nSitemap: https://brooksgroves.com/hoplore/sitemap.xml\n`);
+write(out('robots.txt'), `User-agent: *\nAllow: /\nSitemap: https://brooksgroves.com/hoplove/sitemap.xml\n`);
 write(
   out('sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
     ['', 'landscape/', ...(acreage ? ['grown/'] : []), 'scan/', 'compare/', 'about/', 'science/', ...(breweries.length ? ['beers/', 'fresh-hop/', ...beerPaths] : []), ...hops.map((h) => `hops/${h.slug}/`)]
-      .map((p) => `  <url><loc>https://brooksgroves.com/hoplore/${p}</loc></url>`)
+      .map((p) => `  <url><loc>https://brooksgroves.com/hoplove/${p}</loc></url>`)
       .join('\n') +
     `\n</urlset>\n`
 );

@@ -71,18 +71,18 @@ export function shell({ title, description, body, base = '', bodyClass = '', act
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="HopLove">
-<meta property="og:image" content="https://brooksgroves.com/hoplore/assets/og.png">
+<meta property="og:image" content="https://brooksgroves.com/hoplove/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://brooksgroves.com/hoplore/assets/og.png">
+<meta name="twitter:image" content="https://brooksgroves.com/hoplove/assets/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="${FONTS}" rel="stylesheet">
 <link rel="icon" type="image/png" href="${base}assets/favicon.png">
 <link rel="apple-touch-icon" href="${base}assets/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/site-footer.css">
-<link rel="stylesheet" href="${base}assets/hoplore.css">
+<link rel="stylesheet" href="${base}assets/hoplove.css">
 ${THEME_INIT}
 </head>
 <body class="${bodyClass}" id="top">
@@ -110,7 +110,7 @@ export const footer = (base, meta) => `
     <code>${base}api/v1/hops.json</code> — free, no key, no rate limit.</p>
     <p>Built ${esc(meta.built)} from ${meta.count} cultivar records.
     Data under CC BY 4.0, code under MIT.
-    <a href="https://github.com/bdgroves/hoplore">Source and corrections on GitHub</a>.
+    <a href="https://github.com/bdgroves/hoplove">Source and corrections on GitHub</a>.
     Not affiliated with any hop breeder, farm or merchant; variety names are the
     marks of their owners.</p>
   </div>
@@ -168,8 +168,8 @@ export function renderIndex({ hops, taxonomy, meta }) {
       <a href="grown/">Where the hops grow</a>
       <a href="api/v1/hops.json">Download the data</a>
       <a href="api/v1/schema/hop.schema.json">Schema</a>
-      <a href="https://github.com/bdgroves/hoplore">GitHub</a>
-      <a href="https://github.com/bdgroves/hoplore/issues/new?template=data-correction.yml">Report a wrong number</a>
+      <a href="https://github.com/bdgroves/hoplove">GitHub</a>
+      <a href="https://github.com/bdgroves/hoplove/issues/new?template=data-correction.yml">Report a wrong number</a>
     </nav>
   </div>
 </header>
@@ -197,7 +197,7 @@ export function renderIndex({ hops, taxonomy, meta }) {
 ${ledger}
     <p class="empty" id="empty" hidden>Nothing matches that. Try an aroma
     instead of a name — <em>dank</em>, <em>gooseberry</em>, <em>noble</em> —
-    or <a href="https://github.com/bdgroves/hoplore/issues/new?template=add-hop.yml">open an issue to add the hop you were looking for</a>.</p>
+    or <a href="https://github.com/bdgroves/hoplove/issues/new?template=add-hop.yml">open an issue to add the hop you were looking for</a>.</p>
   </div>
 </main>
 ${footer('', meta)}
@@ -353,7 +353,7 @@ export function renderHop({ hop, similar, taxonomy, sources, meta, acreageYears 
       ${pedigreeLine ? `<section class="block"><h2>Pedigree</h2><p>${pedigreeLine}</p></section>` : ''}
       ${hop.meta.notes ? `<section class="block"><h2>Notes on this record</h2><p>${esc(hop.meta.notes)}</p></section>` : ''}
       <p class="fine nerd-links">For brewers and data folks: <a href="${base}api/v1/hops/${hop.slug}.json">this hop as JSON</a> ·
-      <a href="https://github.com/bdgroves/hoplore/blob/main/data/hops/${hop.slug}.yml">the source file</a>${hop.acreage ? ` · <a href="${base}grown/">where America's hops grow</a>` : ''}</p>
+      <a href="https://github.com/bdgroves/hoplove/blob/main/data/hops/${hop.slug}.yml">the source file</a>${hop.acreage ? ` · <a href="${base}grown/">where America's hops grow</a>` : ''}</p>
     </div>
   </div>
 </main>

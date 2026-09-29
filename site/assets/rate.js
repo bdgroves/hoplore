@@ -3,7 +3,7 @@
 // wires up the Save button, which opens a GitHub issue the "Add a scanned
 // beer" workflow turns into data/ratings.yml.
 
-const REPO = 'bdgroves/hoplore';
+const REPO = 'bdgroves/hoplove';
 
 // Rating is Brooks's: the controls only show in a browser that has opened
 // any HopLove page with ?me once (?me=0 forgets it). Anyone else's rating

@@ -48,7 +48,7 @@ SOURCE_ID = "hopsteiner"
 
 # Identify ourselves properly. A scraper that hides what it is deserves to be
 # blocked, and this project has nothing to hide.
-UA = "HopLove/0.1 (open hop dataset; +https://github.com/bdgroves/hoplore)"
+UA = "HopLove/0.1 (open hop dataset; +https://github.com/bdgroves/hoplove)"
 
 yaml = YAML()
 yaml.preserve_quotes = True
