@@ -1,10 +1,10 @@
  WARN the lock file is up-to-date but uses an older format (v6), run `pixi lock` to upgrade to v7 for improved reproducibility
-fort-george: 62 beer page(s)
+fort-george: 0 beer page(s)
 double-mountain: 24 beer page(s)
 pfriem: 277 beer page(s)
 ex-novo: 191 beer page(s)
 breakside: 275 beer page(s)
-ecliptic: 11 beer page(s)
+ecliptic: 0 beer page(s)
 7-seas: 2 beer page(s)
 elysian: 16 beer page(s)
 fair-isle: 128 beer page(s)
@@ -15,7 +15,7 @@ fremont: 0 beer page(s)
 aslan: 101 beer page(s)
 georgetown: 115 beer page(s)
 stoup: 505 beer page(s)
-bale-breaker: 16 beer page(s)
+bale-breaker: 0 beer page(s)
 structures: 17 beer page(s)
 block-15: 0 beer page(s)
 pelican: 24 beer page(s)
@@ -23,8 +23,19 @@ great-notion: 27 beer page(s)
 fast-fashion: 0 beer page(s)
 triceratops: 0 beer page(s)
 single-hill: 0 beer page(s)
+sunriver: 41 beer page(s)
+icicle: 0 beer page(s)
+ferment: 0 beer page(s)
+chuckanut: 57 beer page(s)
+ladd-and-lass: 0 beer page(s)
+wander: 0 beer page(s)
+little-beast: 0 beer page(s)
+lucky-envelope: 0 beer page(s)
+matchless: 0 beer page(s)
+barley-browns: 0 beer page(s)
+narrows: 0 beer page(s)
 
-added 8 packages, and audited 9 packages in 2s
+added 8 packages, and audited 9 packages in 3s
 
 3 packages are looking for funding
   run `npm fund` for details
