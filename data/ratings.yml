@@ -1,5 +1,10 @@
 about: Brooks's own ratings, set on HopLove (tools/ingest/rating.py). 0.25-5 caps, like Untappd.
 ratings:
+  - brewery: single-hill
+    beer: radiance
+    name: Radiance (Single Hill Brewing)
+    stars: 3.5
+    date: '2026-09-29'
   - brewery: fortside
     beer: fresh-cut
     name: Fresh Cut (Fortside Brewing)
