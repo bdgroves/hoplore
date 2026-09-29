@@ -1,5 +1,11 @@
 about: Brooks's own ratings, set on HopLove (tools/ingest/rating.py). 0.25-5 caps, like Untappd.
 ratings:
+  - brewery: great-basin
+    beer: ichthyosaur-ipa
+    name: Ichthyosaur IPA (Great Basin Brewing Co.)
+    stars: 4.0
+    note: College Classic while I was going to UNR!
+    date: '2026-09-29'
   - brewery: fort-george
     beer: low-key-ipa
     name: Low Key IPA (Fort George Brewery)

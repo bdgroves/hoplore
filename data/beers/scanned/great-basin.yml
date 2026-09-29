@@ -1,0 +1,19 @@
+brewery:
+  slug: great-basin
+  name: Great Basin Brewing Co.
+  city: Reno
+  state: NV
+  url:
+generated_by: 'HopLove scans (/scan/): photographed or pasted by a person, hops matched by tools/ingest/scanned_beer.py'
+retrieved: '2026-09-29'
+beers:
+  - slug: ichthyosaur-ipa
+    name: Ichthyosaur IPA
+    url:
+    style: American IPA
+    abv: 6.4
+    hops_as_written: Cascade hops drive citrus-and-pine bitterness over a caramel malt backbone
+    scanned_from: text
+    scanned: '2026-09-29'
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
