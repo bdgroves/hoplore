@@ -1096,3 +1096,6 @@ body.searching .brewery > p.fine { display: none; }
 
 /* "Something off? Email Brooks" on beer pages */
 .say-hi { margin: 1.25rem 0 0; }
+
+/* "About HopLove ->" at the end of the home intro */
+.hero-about { display: inline-block; margin-left: 0.3ch; font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }

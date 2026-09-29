@@ -8,10 +8,11 @@ export function renderAbout({ meta, stats }) {
   const body = `
 <header class="masthead" style="padding-top:1.5rem">
   <div class="wrap">
-    <h1 class="page-title">How it <em>works</em></h1>
+    <h1 class="page-title">About <em>HopLove</em></h1>
     <p class="standfirst">You're holding a beer. The can says Citra and Mosaic. What does
     that actually mean? HopLove tells you — what each hop smells like, how hard it
-    bites, where it was grown, and what else it's in. Here's how to get around.</p>
+    bites, where it was grown, and what else it's in. Here's how to get around, and
+    <a href="https://brooksgroves.com/blog/hoplove-post.html">the story of why it exists</a>.</p>
   </div>
 </header>
 <main id="main" class="wrap about">
@@ -129,7 +130,7 @@ export function renderAbout({ meta, stats }) {
 ${footer(base, meta)}`;
 
   return shell({
-    title: 'How HopLove works | HopLove',
+    title: 'About HopLove: what it is and how it works',
     active: 'about',
     description: 'How to find a beer, read its hops, scan a can and compare hops on HopLove — and where it all comes from.',
     body,
