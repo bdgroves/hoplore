@@ -14,7 +14,7 @@ beers:
     hops_as_written: Quad IPA Triple-dry hopped with Citra, Nelson, and Mosaic. Notes of red starburst, papaya, and ripe dankness
     hops:
       - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
   - slug: dreamthieves
     name: Dreamthieves

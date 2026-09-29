@@ -59,20 +59,13 @@ beers:
       - { hop: cashmere, name: Cashmere, as_written: Cashmere }
       - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Simcoe }
       - { hop: centennial, name: Centennial, as_written: Centennial }
-  - slug: 4-grain-grisette
-    name: 4-Grain Grisette
-    url: https://www.stoupbrewing.com/beer/4-grain-grisette-1172.html
-    abv: 4.7
-    hops_as_written: '[Retired] 4-Grain Grisette ABV: 4.70 IBU: 16.00 SRM: 3.00 Categories: Traditionally Summer, Yeast Driven Brewed with pilsner, oat, wheat and triticale pale malts then fermented with a Belgian farmhouse yeast strain, this grisette is sessionable, yet flavorful with aromas of light clove and fruit.'
-    hops:
-      - { hop: summer, name: Summer, as_written: Summer }
   - slug: 586-206-ipa
     name: 586 in the 206 IPA
     url: https://www.stoupbrewing.com/beer/586-206-ipa-966.html
     abv: 6.0
     hops_as_written: "[Retired] 586 in the 206 IPA ABV: 6.00 IBU: 0.00 SRM: 0.00 Categories: Hop Driven, IPA An IPA collaboration with our neighbors at Reuben's Brews and our friends from Yakima Chief Hops featuring HBC 586, a brand new experimental hop grown in the Yakima Valley by YCH."
     hops:
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
   - slug: american-pale-ale
     name: Afternoon Delight
     url: https://www.stoupbrewing.com/beer/american-pale-ale-12.html
@@ -167,16 +160,8 @@ beers:
     abv: 4.4
     hops_as_written: "[Retired] Ballard LOCK SOLID IPA ABV: 4.40 IBU: 40.00 SRM: 3.00 Categories: Hop Driven, IPA, Northwest, Traditionally Summer In celebration of Seattle Beer Week 2017, Four Ballard Breweries (Lucky Envelope, Populuxe Brewing, Reuben's Brews and Stoup Brewing) have partnered to brew this limited release, sessionable IPA. Lock Solid IPA features four hops, four malts and four brewers. Each brewery..."
     hops:
-      - { hop: summer, name: Summer, as_written: Summer }
       - { hop: galaxy, name: Galaxy, as_written: Galaxy }
       - { hop: comet, name: Comet, as_written: Comet }
-  - slug: bavarian-hefeweizen
-    name: Bavarian Hefeweizen
-    url: https://www.stoupbrewing.com/beer/bavarian-hefeweizen-61.html
-    abv: 5.0
-    hops_as_written: 'Bavarian Hefeweizen ABV: 5.00 IBU: 13.00 SRM: 4.00 Categories: Bavarian, Wheat, Traditionally Spring, Traditionally Summer, Yeast Driven, Malt Driven Close your eyes, take a sip of this beer and you’re sure to be transported to a tree-lined, sun-speckled biergarten in Munich. We honor tradition by brewing this beer using decoction mashing techniques and fermenting with a German yeast strain tha...'
-    hops:
-      - { hop: summer, name: Summer, as_written: Summer }
   - slug: be-dazzled-ipa
     name: Be Dazzled IPA
     url: https://www.stoupbrewing.com/beer/be-dazzled-ipa-1214.html
@@ -202,7 +187,7 @@ beers:
     abv: 4.4
     hops_as_written: 'Beerhall Helles ABV: 4.40 IBU: 19.00 SRM: 2.00 Categories: German, Lager, Yeast Driven, Malt Driven German Pilsner malt is the backbone for this clean, crisp German-style lager. A gentle malt sweetness teased out through traditional decoction brewing methods is balanced by Hallertau Mittlefruh hops making for a spicy, bright finish.'
     hops:
-      - { hop: hallertau-mittelfrueh, name: Hallertau, as_written: Hallertau }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau }
   - slug: belgian-pale-ale
     name: Belgian Pale Ale
     url: https://www.stoupbrewing.com/beer/belgian-pale-ale-158.html
@@ -264,13 +249,6 @@ beers:
       - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
       - { hop: azacca, name: Azacca, as_written: Azacca }
       - { hop: centennial, name: Centennial, as_written: Centennial }
-  - slug: fruited-sour
-    name: Black Raven Fruited Kettle Cherry Sour
-    url: https://www.stoupbrewing.com/beer/fruited-sour-2314.html
-    abv: 6.0
-    hops_as_written: '[Retired] Black Raven Fruited Kettle Cherry Sour Alt. Dimensions Fruited Kettle Cherry Sour ABV: 6.00 IBU: 8.00 SRM: 3.00 Categories: Sour, Traditionally Summer, Yeast Driven Originating on a base of 2-row and wheat malt and then soured using a novel yeast strain from the genus Lachancea, this tart delight is refreshing and delicious. Sweet cherry, tart cherry and apricot additions add that sum...'
-    hops:
-      - { hop: summer, name: Summer, as_written: Summer }
   - slug: blursday-ipa
     name: Blursday IPA
     url: https://www.stoupbrewing.com/beer/blursday-ipa-1307.html
@@ -347,7 +325,7 @@ beers:
     hops_as_written: "[Retired] Cautiously Optimistic IPA ABV: 6.50 IBU: 58.00 SRM: 3.00 Categories: Hop Driven, IPA, Northwest After a tough year and counting, it's refreshing to hear the words \" Cautiously Optimistic \". We are not out of the woods yet, but there are little bright spots that keep us motivated and hopeful . Vaccines, businesses opening, a renewed focus on human rights and dignity. This IPA hopped wi..."
     hops:
       - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
   - slug: centennial-fresh-hop
     name: Centennial Fresh Hop
     url: https://www.stoupbrewing.com/beer/centennial-fresh-hop-34.html
@@ -362,13 +340,6 @@ beers:
     hops_as_written: 'Centennial Fresh Hop 2020 ABV: 7.10 IBU: 0.00 SRM: 4.00 Categories: Hop Driven, IPA, Northwest, Traditionally Fall Now this is a special beer. Hop harvest comes only once a year and if you’re lucky enough to live close to one of the major hop-growing regions of the world (and we are), you can pick up freshly harvested hops from Yakima, bring them home and brew the same day. And that’s just what...'
     hops:
       - { hop: centennial, name: Centennial, fresh: true, as_written: Centennial }
-  - slug: cervecita-mexican-lager
-    name: Cervecita Mexican Lager
-    url: https://www.stoupbrewing.com/beer/cervecita-mexican-lager-1550.html
-    abv: 4.8
-    hops_as_written: "Cervecita Mexican Lager ABV: 4.80 IBU: 14.00 SRM: 2.00 Categories: Lager, Traditionally Summer, Water Driven, Malt Driven Our Mexican Lager is perfect for sunny days on the patio or the beach...preferably in flip flops. Since we can't guarantee sunny days in Seattle, we kept this lager light and bright and irresistibly crushable, sunshine not required. Salud! Awards: Bronze Medal Washington Bee..."
-    hops:
-      - { hop: summer, name: Summer, as_written: Summer }
   - slug: chance-meetings-ipa
     name: Chance Meetings IPA Collab for Latona Pub
     url: https://www.stoupbrewing.com/beer/chance-meetings-ipa-2327.html
@@ -376,7 +347,7 @@ beers:
     hops_as_written: "Chance Meetings IPA Collab for Latona Pub ABV: 7.00 IBU: 36.00 SRM: 4.00 Categories: IPA, Northwest, Hop Driven A collaboration between Stoup, Cloudburst, Dick Cantwell of Magnolia Brewing and Kevin Forhan of Flying Bike Brewery in honor of Latona Pub's 35th Anniversary. This beer is dominated by Idaho 7 hops with their tropical, pungent pineapple and citrus flavors and HBC 586 known for a medl..."
     hops:
       - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
   - slug: che-fico-italian-pils
     name: Che Fico Italian Pils
     url: https://www.stoupbrewing.com/beer/che-fico-italian-pils-2048.html
@@ -611,7 +582,7 @@ beers:
     abv: 5.6
     hops_as_written: 'Czech Pils ABV: 5.60 IBU: 38.00 SRM: 3.00 Categories: Lager, Pilsner, Yeast Driven, Hop Driven, Malt Driven Our Czech Style Pilsner is built on a base of Weyermann Barke-Pilsner Malt and Weyermann Pilsner Malt for a soft, lightly malt-forward,bright lager with notes of biscuit and cracker. Hopped entirely with Czech Saaz hops for a mild noble hop spiciness.'
     hops:
-      - { hop: saaz-cz, name: Czech Saaz, as_written: Czech Saaz }
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
   - slug: daddy-dank-ipa
     name: Daddy Dank IPA
     url: https://www.stoupbrewing.com/beer/daddy-dank-ipa-7130.html
@@ -674,14 +645,13 @@ beers:
     abv: 5.0
     hops_as_written: "Dortmunder Export Style Lager ABV: 5.00 IBU: 26.00 SRM: 2.00 Categories: German, Lager, Malt Driven We brewed this beer with our friends at Bottle Logic Brewing in Anaheim, CA for the annual Grainmaker Festival in Spokane. This Dortmunder Export Style Lager is a refreshing pale lager with a soft bitterness and spicy, noble hop aroma from Hallertauer Mittelfruh hops. It's balanced with a light c..."
     hops:
-      - { hop: hallertau-mittelfrueh, name: Hallertauer, as_written: Hallertauer }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertauer }
   - slug: dray-pa
     name: Dray-Pa
     url: https://www.stoupbrewing.com/beer/dray-pa-78.html
     abv: 4.9
     hops_as_written: 'DRAY-PA ABV: 4.90 IBU: 50.00 SRM: 4.00 Categories: Hop Driven, IPA, Northwest, Traditionally Summer This sessionable ale, brewed at the request of The Dray and The Yard is a golden brew crafted with the 3 big Cs – Chinook, Cascade & Centennial hops, taking us back to the early days of Northwest IPAs.'
     hops:
-      - { hop: summer, name: Summer, as_written: Summer }
       - { hop: chinook, name: Chinook, as_written: Chinook }
       - { hop: cascade, name: Cascade, as_written: Cascade }
       - { hop: centennial, name: Centennial, as_written: Centennial }
@@ -701,7 +671,7 @@ beers:
       - { hop: nectaron, name: Nectaron, as_written: Nectaron }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: krush, name: Krush, as_written: Krush }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: el-dorado-fresh-hop-2020
     name: El Dorado Fresh Hop 2020
     url: https://www.stoupbrewing.com/beer/el-dorado-fresh-hop-2020-1213.html
@@ -767,7 +737,7 @@ beers:
     hops:
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: citra, name: Citra, form: Cryo, as_written: Citra }
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
   - slug: erik-cistrata-ipa
     name: Erik CiStrata IPA
     url: https://www.stoupbrewing.com/beer/erik-cistrata-ipa-1183.html
@@ -782,7 +752,7 @@ beers:
     abv: 5.4
     hops_as_written: 'ESB ABV: 5.40 IBU: 30.00 SRM: 8.00 Categories: Yeast Driven, Malt Driven, English English Maris Otter and Crystal malts come together with East Kent Goldings and Palisade hops for a balanced interplay between toasty malt flavor and an earthy, herbal hop character.'
     hops:
-      - { hop: golding-uk, name: Goldings, as_written: Goldings }
+      - { hop: golding-uk, name: Golding (UK), as_written: Goldings }
       - { hop: palisade, name: Palisade, as_written: Palisade }
   - slug: experimental-ipa-2-pma-ipa
     name: 'Experimental IPA #2 – PMA IPA'
@@ -801,7 +771,7 @@ beers:
     hops_as_written: "F!X Lager ABV: 5.00 IBU: 44.00 SRM: 3.00 Categories: Hop Driven, Yeast Driven, Malt Driven, Lager, Northwest Freakout Festival started as a big-ass party for friends. 10 years later it's grown into something truly special and the party is far from over. Thousands of music lovers make the trek to see bands from all over the world play the stages of BALLARD. Freakout is and always will be a music..."
     hops:
       - { hop: citra, name: Citra, form: Cryo, as_written: Citra }
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
   - slug: fabulous-ipa
     name: Fabulous! IPA
     url: https://www.stoupbrewing.com/beer/fabulous-ipa-221.html
@@ -844,7 +814,7 @@ beers:
     hops:
       - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
       - { hop: centennial, name: Centennial, as_written: Centennial }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: fest-bier
     name: Fest Bier
     url: https://www.stoupbrewing.com/beer/fest-bier-7928.html
@@ -860,7 +830,7 @@ beers:
     hops:
       - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
       - { hop: loral, name: Loral, form: Cryo, as_written: Loral }
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
       - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic }
   - slug: fist-bump-strong-pale
     name: Fist Bump Strong Pale
@@ -1010,7 +980,7 @@ beers:
     hops_as_written: 'Global Superstar IPA ABV: 6.20 IBU: 46.00 SRM: 3.00 Categories: IPA, Northwest, Hop Driven This beer rocks hops from three world class growing regions around the globe. German Mandarina Bavaria and Huell Melon contribute aromas of tangerine and ripe melon. Moteuka from New Zealand adds aromas of fresh crushed Citrus. Lastly, Mosaic from the Yakima Valley of Washington brings the mango and blueb...'
     hops:
       - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina Bavaria }
-      - { hop: huell-melon, name: Huell Melon, as_written: Huell Melon }
+      - { hop: huell-melon, name: Hüll Melon, as_written: Huell Melon }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
   - slug: brewers-gold-pilsner-gold-dotheater-allen-collaboration
     name: Gold on Gold Pilsner (Gold Dot/Heater Allen Collaboration)
@@ -1055,28 +1025,28 @@ beers:
     abv: 7.3
     hops_as_written: '[Retired] HBC 1019 Fresh Hop Fiend 2022 (HAAS Home Farms) ABV: 7.30 IBU: 0.00 SRM: 4.00 Categories: Hop Driven, Fresh Hop, IPA, Northwest, Traditionally Fall The 5th in our 2022 Fresh Hop Fiend series, HBC 1019 Fresh Hop Fiend is packed with 300 lbs. per batch of HBC 1019 fresh hops from our friends at HAAS Home Farms in Yakima, WA. HBC 1019 brings aromas of citrus, tropical and stone fruit. Dr...'
     hops:
-      - { hop: dolcita, name: HBC 1019, fresh: true, as_written: HBC 1019 }
+      - { hop: dolcita, name: Dolcita, fresh: true, as_written: HBC 1019 }
   - slug: hbc-586-fresh-hop-fiend
     name: HBC 586 Fresh Hop Fiend
     url: https://www.stoupbrewing.com/beer/hbc-586-fresh-hop-fiend-1594.html
     abv: 7.6
     hops_as_written: 'HBC 586 Fresh Hop Fiend ABV: 7.60 IBU: 0.00 SRM: 4.00 Categories: Hop Driven, Fresh Hop, IPA, Northwest The next in our 2021 Fresh Hop Fiend series, HBC 586 Fresh Hop Fiend is packed with 300 lbs. per batch of HBC 586 fresh hops. HBC 586 brings aromas of guava and mango. Drink it fast and fresh!'
     hops:
-      - { hop: krush, name: HBC 586, fresh: true, as_written: HBC 586 }
+      - { hop: krush, name: Krush, fresh: true, as_written: HBC 586 }
   - slug: hbc-586-fresh-hop-fiend-2023-perrault
     name: HBC 586 Fresh Hop Fiend (2023 - Perrault)
     url: https://www.stoupbrewing.com/beer/hbc-586-fresh-hop-fiend-2023-perrault-4164.html
     abv: 6.8
     hops_as_written: 'HBC 586 Fresh Hop Fiend (2023 - Perrault) ABV: 6.80 IBU: 0.00 SRM: 4.00 Categories: Hop Driven, Fresh Hop, IPA, Northwest, Traditionally Fall The 8th in our 2023 Fresh Hop Fiend series, HBC 586 Fresh Hop Fiend is packed with 300 lbs per batch of HBC 586 fresh hops from our friends at Perrault Farms in Toppenish, WA. HBC 586 brings citrus, mango and sweet fruit aromas. Drink it fast and fresh!'
     hops:
-      - { hop: krush, name: HBC 586, fresh: true, as_written: HBC 586 }
+      - { hop: krush, name: Krush, fresh: true, as_written: HBC 586 }
   - slug: hbc-586-fresh-hop-fiend-ipa-2022-perrault-farms
     name: HBC 586 Fresh Hop Fiend IPA - Perrault Farms
     url: https://www.stoupbrewing.com/beer/hbc-586-fresh-hop-fiend-ipa-2022-perrault-farms-2669.html
     abv: 7.0
     hops_as_written: 'HBC 586 Fresh Hop Fiend IPA (2022) - Perrault Farms ABV: 7.00 IBU: 0.00 SRM: 4.00 Categories: Hop Driven, Fresh Hop, IPA, Northwest, Traditionally Fall The 9th in our 2022 Fresh Hop Fiend series, HBC 586 Fresh Hop Fiend is packed with 300 lbs. per batch of HBC 586 fresh hops from our friends at Perrault Farms in Toppenish, WA. HBC 586 brings aromas of citrus, mango, and sweet fruit. Drink it fa...'
     hops:
-      - { hop: krush, name: HBC 586, fresh: true, as_written: HBC 586 }
+      - { hop: krush, name: Krush, fresh: true, as_written: HBC 586 }
   - slug: hermit-skirmish-dipa
     name: Hermit Skirmish DIPA
     url: https://www.stoupbrewing.com/beer/hermit-skirmish-dipa-534.html
@@ -1125,7 +1095,7 @@ beers:
     abv: 5.0
     hops_as_written: 'Hoppy Harvest Ale ABV: 5.00 IBU: 50.00 SRM: 17.00 Categories: Hop Driven, Malt Driven, Traditionally Fall Our Hoppy Harvest Ale was designed with the change of seasons in mind. This Stoup creation combats the autumn chill with its warming malty goodness and complements the colors of the changing leaves with amber and earthy brown hues. Kiln Amber, Munich and Aromatic malts give this beer a toas...'
     hops:
-      - { hop: golding-uk, name: Goldings, as_written: Goldings }
+      - { hop: golding-uk, name: Golding (UK), as_written: Goldings }
   - slug: like-big-bines-ipa
     name: I Like Big Bines IPA
     url: https://www.stoupbrewing.com/beer/like-big-bines-ipa-412.html
@@ -1227,7 +1197,7 @@ beers:
     hops_as_written: '[Retired] Imperial Porter ABV: 8.00 IBU: 40.00 SRM: 41.00 Categories: Malt Driven, Porter, Traditionally Winter It’s only right that we pay tribute to the beer that’s brought us so much happiness and a bit of early competition hardware (Silver in the Robust Porter Category at both the 2014 Washington Beer Awards® and the 2014 World Beer Cup®) So our Imperial Porter was brewed as a celebration o...'
     hops:
       - { hop: columbus, name: Columbus, as_written: Columbus }
-      - { hop: hallertau-mittelfrueh, name: Hallertauer, as_written: Hallertauer }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertauer }
   - slug: meantime-ipa
     name: In the Meantime IPA
     url: https://www.stoupbrewing.com/beer/meantime-ipa-1178.html
@@ -1236,7 +1206,7 @@ beers:
     hops:
       - { hop: galaxy, name: Galaxy, as_written: Galaxy }
       - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
   - slug: italian-pils-fresh-hop-fiend-ipa-2023-perrault-farms
     name: Italian Pils Fresh Hop Fiend (2023 - Perrault Farms Citra)
@@ -1324,13 +1294,6 @@ beers:
     hops_as_written: 'Kolsch ABV: 4.80 IBU: 22.00 SRM: 2.00 Categories: German, Lager, Yeast Driven, Malt Driven We brewed this beer using traditional decoction methods for a clean and crisp beer. It has a delicate malt sweetness from German 2-row Pilsner malt as well as subtle German hop character from Tettnanger hops. Refreshing with a dry finish.'
     hops:
       - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
-  - slug: kristalweizen
-    name: Kristalweizen
-    url: https://www.stoupbrewing.com/beer/kristalweizen-222.html
-    abv: 4.8
-    hops_as_written: "Kristalweizen ABV: 4.80 IBU: 14.70 SRM: 4.00 Categories: Yeast Driven, Bavarian, German, Traditionally Summer, Wheat Kristallweizen is our Bavarian Hefeweizen's less hazy cousin. This German-style beer is brewed with wheat and pilsner malt then fermented on a Bavarian hefeweizen yeast producing aromas of clove and banana."
-    hops:
-      - { hop: summer, name: Summer, as_written: Summer }
   - slug: krush-pale-ale
     name: Krush Pale Ale
     url: https://www.stoupbrewing.com/beer/krush-pale-ale-5699.html
@@ -1417,7 +1380,7 @@ beers:
     hops_as_written: 'Live, Laugh, Lars Hazy Double IPA ABV: 7.80 IBU: 45.00 SRM: 4.00 Categories: Hazy, IPA Lars loves beer and Lars especially loves Double Hazy IPAs. Here you go, Lars! A beer named after you. Now please stop asking. This beer is a smooth operator, just like Lars. A grain bill of pilsner malt and unmalted wheat creates a deceptively smooth, but full bodied finish. Whirlpool hop additions are CryoP...'
     hops:
       - { hop: centennial, name: Centennial, as_written: Centennial }
-      - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
+      - { hop: dolcita, name: Dolcita, as_written: HBC 1019 }
       - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic }
       - { hop: comet, name: Comet, as_written: Comet }
   - slug: living-single-drinking-double-hazy-ipa
@@ -1615,7 +1578,7 @@ beers:
     abv: 8.2
     hops_as_written: 'Multiplayer Guild Collab Hazy Double IPA ABV: 8.20 IBU: 40.00 SRM: 3.00 Categories: Hop Driven, Malt Driven, Hazy, IPA This hoppy beast is a collaboration we brewed with our good friends Icicle Brewing at their location in Leavenworth. It features Nelson, Galaxy, Citra and Mosaic hops to provide notes of fruity orange, nectarine and ripe melon. Packed with flavor and dangerously smooth, this do...'
     hops:
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: galaxy, name: Galaxy, as_written: Galaxy }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
@@ -1718,7 +1681,7 @@ beers:
     hops:
       - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
       - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
       - { hop: idaho-7, name: Idaho 7, form: Cryo, as_written: Idaho 7 }
       - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
       - { hop: loral, name: Loral, form: Cryo, as_written: Loral }
@@ -1740,7 +1703,7 @@ beers:
     hops_as_written: 'Over Pils-West Coast Pils collab w/ Ghosttown Brewing, Oakland, CA ABV: 4.90 IBU: 30.00 SRM: 3.00 Categories: Lager, Northwest, Pilsner, Water Driven, Hop Driven We brewed this West Coast Pils with our buds from Ghosttown Brewing in Oakland, CA. They traveled to Seattle to share in our mutual love of West Coast style beers, both ales and lagers. Fueled by Motörhead and friendship, a crisp and r...'
     hops:
       - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic }
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
   - slug: palate-pleaser-american-wheat
     name: Palate Pleaser American Wheat
     url: https://www.stoupbrewing.com/beer/palate-pleaser-american-wheat-2498.html
@@ -1778,7 +1741,7 @@ beers:
       - { hop: belma, name: Belma, as_written: Belma }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: azacca, name: Azacca, as_written: Azacca }
-      - { hop: huell-melon, name: Huell Melon, as_written: Huell Melon }
+      - { hop: huell-melon, name: Hüll Melon, as_written: Huell Melon }
   - slug: picking-window-fresh-hop-pale-collaboration-with-varietal-beer-co
     name: Picking Window Fresh Hop Pale (Collaboration with Varietal Beer Co.)
     url: https://www.stoupbrewing.com/beer/picking-window-fresh-hop-pale-collaboration-with-varietal-beer-co-1211.html
@@ -1793,7 +1756,7 @@ beers:
     abv: 5.0
     hops_as_written: 'Pilsner Fresh Hop Fiend w/HBC 586 ABV: 5.00 IBU: 0.00 SRM: 3.00 Categories: Hop Driven, Malt Driven, Fresh Hop, Northwest, Pilsner The third in our 2021 Fresh Hop Fiend series is a special one. Our Pilsner Fresh Hop Fiend is cold conditioned then transferred over HBC 586 fresh hops from our friends at Perrault Farms in Yakima. This pilsner is crisp and refreshing with aromas of mango, guava and...'
     hops:
-      - { hop: krush, name: HBC 586, fresh: true, as_written: HBC 586 }
+      - { hop: krush, name: Krush, fresh: true, as_written: HBC 586 }
   - slug: pineapple-gose-collab-with-ecliptic-brewing
     name: Pineapple Gose (Collab with Ecliptic Brewing)
     url: https://www.stoupbrewing.com/beer/pineapple-gose-collab-with-ecliptic-brewing-1569.html
@@ -1877,7 +1840,6 @@ beers:
     abv: 6.6
     hops_as_written: "Please & Thank You IPA (Summer 2023) ABV: 6.60 IBU: 66.00 SRM: 3.00 Categories: Hop Driven, Experimental, IPA, Northwest Why yes, I'd love a pint of the Please & Thank you IPA. This newest version of our rotating Hop Exploration Series is a West Coast Style IPA built on a base of 2-Row and Pilsner malts. It's dry hopped with Simcoe and Citra Cryo with some Mosaic Cryo and Citra Incognito in the..."
     hops:
-      - { hop: summer, name: Summer, as_written: Summer }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: citra, name: Citra, form: Cryo, as_written: Citra }
       - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic }
@@ -1952,13 +1914,6 @@ beers:
       - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
       - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
       - { hop: hbc-630, name: HBC 630, as_written: HBC 630 }
-  - slug: raspberry-berliner-weiss
-    name: Raspberry Berliner Weiss
-    url: https://www.stoupbrewing.com/beer/raspberry-berliner-weiss-1539.html
-    abv: 3.5
-    hops_as_written: "Raspberry Berliner Weiss ABV: 3.50 IBU: 4.00 SRM: 3.00 Categories: Yeast Driven, German, Sour, Traditionally Summer This is our take on a classic German style sour wheat beer. A style dubbed the champagne of the north by Napoleon's troops; this beer is a clean, tart thirst quencher. For this round we added raspberries for even more deliciousness."
-    hops:
-      - { hop: summer, name: Summer, as_written: Summer }
   - slug: ray-light-dry-hopped-lager
     name: Ray of Light Dry Hopped Lager
     url: https://www.stoupbrewing.com/beer/ray-light-dry-hopped-lager-560.html
@@ -1977,13 +1932,6 @@ beers:
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: waimea, name: Waimea, as_written: Waimea }
-  - slug: rays-of-our-lives-ipa
-    name: Rays of Our Lives IPA
-    url: https://www.stoupbrewing.com/beer/rays-of-our-lives-ipa-6508.html
-    abv: 6.3
-    hops_as_written: "Rays of Our Lives IPA ABV: 6.30 IBU: 53.00 SRM: 3.00 Categories: IPA, Northwest, Hop Driven Our friends at Ray's Boathouse asked us to brew an IPA that would be perfect for summer weather on the patio. Something moderate in alcohol and and tropical in aroma and flavor. And of course we obliged! Because we love Ray's and we love summer. Find this beer at Ray's Boathouse all summer long."
-    hops:
-      - { hop: summer, name: Summer, as_written: summer }
   - slug: red-ipa
     name: Red IPA
     url: https://www.stoupbrewing.com/beer/red-ipa-214.html
@@ -2010,7 +1958,7 @@ beers:
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: galaxy, name: Galaxy, as_written: Galaxy }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: rise-up-ipa
     name: Rise Up IPA
     url: https://www.stoupbrewing.com/beer/rise-up-ipa-1557.html
@@ -2069,7 +2017,7 @@ beers:
     hops:
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
   - slug: a-sense-of-accomplishment-san-diego-style-wcipa
     name: Sense of Accomplishment San Diego Style WCIPA
@@ -2078,16 +2026,9 @@ beers:
     hops_as_written: 'Sense of Accomplishment San Diego Style WCIPA Collab with Human People Beer ABV: 6.90 IBU: 60.00 SRM: 3.00 Categories: IPA, Hop Driven We brewed this beer with our friends from Human People Beer in celebration of their arrival to Seattle. New to Seattle, but not new to beer, Human People brings some San Diego swagger to our Northwest slice of heaven. What better way to celebrate than with a San...'
     hops:
       - { hop: idaho-7, name: Idaho 7, form: Cryo, as_written: Idaho 7 }
-      - { hop: krush, name: HBC 586, form: Cryo, as_written: HBC 586 }
+      - { hop: krush, name: Krush, form: Cryo, as_written: HBC 586 }
       - { hop: columbus, name: Columbus, form: Cryo, as_written: Columbus }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
-  - slug: session-ipa
-    name: Session IPA
-    url: https://www.stoupbrewing.com/beer/session-ipa-170.html
-    abv: 5.0
-    hops_as_written: '[Retired] Session IPA ABV: 5.00 IBU: 45.00 SRM: 5.00 Categories: Hop Driven, IPA, Northwest, Traditionally Spring, Traditionally Summer A vibrantly golden brew crafted with the Northwest beer drinker in mind. Hopped to satisfy, moderately dry in the finish, and restrained in alcohol content, our India Session Ale is ideal for a long Seattle afternoon of beer consumption with friends. Or alone. ...'
-    hops:
-      - { hop: summer, name: Summer, as_written: Summer }
   - slug: simcoe-bomb-ipa
     name: Simcoe Bomb IPA
     url: https://www.stoupbrewing.com/beer/simcoe-bomb-ipa-834.html
@@ -2245,13 +2186,6 @@ beers:
       - { hop: azacca, name: Azacca, as_written: Azacca }
       - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina Bavaria }
       - { hop: cashmere, name: Cashmere, as_written: Cashmere }
-  - slug: stoup-sour-no-1-berline-weisse
-    name: Stoup Sour No. 1 Berline Weisse
-    url: https://www.stoupbrewing.com/beer/stoup-sour-no-1-berline-weisse-155.html
-    abv: 3.8
-    hops_as_written: 'Stoup Sour No. 1 Berline Weisse ABV: 3.80 IBU: 5.00 SRM: 3.00 Categories: Yeast Driven, German, Traditionally Summer, Wheat This is our take on a classic German style sour wheat beer. A style dubbed the champagne of the north by Napoleon’s troops; this beer is a clean, tart thirst quencher. Offered with a splash of Raspberry or Woodruff syrup from Soda Jerk Sodas.'
-    hops:
-      - { hop: summer, name: Summer, as_written: Summer }
   - slug: stoup-sour-no-4-dry-hopped-sour
     name: Stoup Sour No. 4 – Dry Hopped Sour
     url: https://www.stoupbrewing.com/beer/stoup-sour-no-4-dry-hopped-sour-200.html
@@ -2259,7 +2193,7 @@ beers:
     hops_as_written: 'Stoup Sour No. 4 – Dry Hopped Sour ABV: 6.00 IBU: 4.00 SRM: 5.00 Categories: Hop Driven, Yeast Driven, Northwest, Sour A refreshing pale sour brewed with Lactobacillus using a base of 2-row, pilsner and wheat malts. We play with each batch, changing the hops. Initially Dry hopped with Bitter Gold for a hint of citrus, then with Nelson for the 2nd release, Moteuka most recently and coming soon, ...'
     hops:
       - { hop: bitter-gold, name: Bitter Gold, as_written: Bitter Gold }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: amarillo, name: Amarillo, as_written: Amarillo }
   - slug: stouper-duper-super-deli-mart-ipa
     name: Stouper Duper Super Deli Mart IPA
@@ -2361,7 +2295,6 @@ beers:
     abv: 5.0
     hops_as_written: "Summer Sunburst IPA ABV: 5.00 IBU: 58.00 SRM: 3.00 Categories: IPA, Northwest, Hop Driven Category: Ale / Descriptors: Pine. Passionfruit. Sweet Fruits. We're excited to share this beer with our friends at Zeeks Pizza! And what could possibly be more delicious with any pie than a Summer Sunburst IPA?! Designed to showcase our fabulous northwest hops while remaining deliciously crushable under a..."
     hops:
-      - { hop: summer, name: Summer, as_written: Summer }
       - { hop: krush, name: Krush, as_written: Krush }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: strata, name: Strata, as_written: Strata }
@@ -2453,7 +2386,7 @@ beers:
     hops:
       - { hop: citra, name: Citra, form: Cryo, as_written: Citra }
       - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic }
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
       - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
   - slug: the-trash-panda-ate-my-homework-ipa
     name: The Trash Panda Ate My Homework IPA
@@ -2485,7 +2418,7 @@ beers:
     hops_as_written: "Tomorrow's Sunrise IPA ABV: 6.10 IBU: 58.00 SRM: 3.00 Categories: Hop Driven, IPA, Northwest Fresh hop season is still months away here in Washington, but hop growers in the southern hemisphere are right in the thick of it. To celebrate, we teamed up with our #sistercity friends in Christchurch, Beer Baroness Brewery, for a unique collaboration. While they brewed an IPA with freshly harvested N..."
     hops:
       - { hop: rakau, name: Rakau, as_written: Rakau }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: nectaron, name: Nectaron, as_written: Nectaron }
   - slug: trail-bend-ipa
     name: Trail Bend IPA
@@ -2536,7 +2469,7 @@ beers:
     hops_as_written: '[Retired] Troubleman IPA ABV: 6.00 IBU: 60.00 SRM: 4.00 Categories: Hop Driven, IPA, Northwest A light base of 2-Row, pilsner and wheat malts allow the hops to shine in this IPA. Lemondrop, Huell Melon, and Loral hops combine to showcase aromas and flavors of lemon, dark fruit and a touch of herb and spice.'
     hops:
       - { hop: lemondrop, name: Lemondrop, as_written: Lemondrop }
-      - { hop: huell-melon, name: Huell Melon, as_written: Huell Melon }
+      - { hop: huell-melon, name: Hüll Melon, as_written: Huell Melon }
       - { hop: loral, name: Loral, as_written: Loral }
   - slug: ultramega-good
     name: Ultramega Good
@@ -2589,7 +2522,6 @@ beers:
     abv: 6.2
     hops_as_written: 'Use Your Melon Pale ABV: 6.20 IBU: 25.00 SRM: 3.00 Categories: Hop Driven, Northwest, Pale When brewers put their heads…or should we say “melons”…together over a campfire and a couple of beers, beautiful things can happen. In the case of this Stoup/Future Primitive collaboration, that beautiful thing is a crisp, end-of-summer pale ale packed full of melon goodness. We kept the malt profile clea...'
     hops:
-      - { hop: summer, name: Summer, as_written: summer }
       - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
   - slug: vanna-s-big-day-ipa
     name: Vanna's Big Day IPA
@@ -2715,10 +2647,10 @@ beers:
     hops_as_written: 'Westies with our Besties WCIPA (Washington Brewers Guild Collab) ABV: 6.80 IBU: 55.00 SRM: 3.00 Categories: IPA, Northwest We brewed this beer in collaboration with the Washington Brewers Guild and 21 other breweries. The Guild split the state into 5 regions and we each brewed a West Coast IPA. This beer represents the Puget Sound region. We started with a base of 2-row, Pilsner and Wheat malt ...'
     hops:
       - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
-      - { hop: krush, name: HBC 586, form: Cryo, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
+      - { hop: krush, name: Krush, form: Cryo, as_written: HBC 586 }
       - { hop: citra, name: Citra, form: Cryo, as_written: Citra }
-      - { hop: dolcita, name: HBC 1019, as_written: HBC 1019 }
+      - { hop: dolcita, name: Dolcita, as_written: HBC 1019 }
   - slug: what-in-carnation-ipa
     name: What in Carnation?! IPA
     url: https://www.stoupbrewing.com/beer/what-in-carnation-ipa-3448.html
@@ -2736,7 +2668,7 @@ beers:
     hops_as_written: 'Wheat The Rich ABV: 5.20 IBU: 14.00 SRM: 4.00 Categories: Northwest, Wheat, Malt Driven A moderately hopped, highly quaffable American-style wheat beer. Distinctive wheat nuttiness in the aroma is complemented by notes of melon, citrus and strawberry thanks to healthy additions of Citra and Huell Melon in the dry hop.'
     hops:
       - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: huell-melon, name: Huell Melon, as_written: Huell Melon }
+      - { hop: huell-melon, name: Hüll Melon, as_written: Huell Melon }
   - slug: wintertime-ur-bock
     name: Wintertime Ur-Bock
     url: https://www.stoupbrewing.com/beer/wintertime-ur-bock-33.html
@@ -2758,16 +2690,8 @@ beers:
     abv: 5.5
     hops_as_written: 'Xtra Wicket Pale Ale ABV: 5.50 IBU: 32.00 SRM: 5.00 Categories: Hop Driven, Pale, Traditionally Summer If there ever was a beer to improve your mallet skills, this is it. Our Extra Wicket Pale Ale is golden in color, moderate in body and bittered for balance. Azzaca, Hallertau Mittelfruh, and Hull Melon hops create an aroma reminiscent of summer with soft floral tones, mango, honeydew melon and...'
     hops:
-      - { hop: summer, name: Summer, as_written: Summer }
       - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau Mittelfruh }
-      - { hop: huell-melon, name: Hull Melon, as_written: Hull Melon }
-  - slug: yakima-bound-ipa
-    name: Yakima Bound IPA
-    url: https://www.stoupbrewing.com/beer/yakima-bound-ipa-1193.html
-    abv: 6.8
-    hops_as_written: "Yakima Bound IPA ABV: 6.80 IBU: 49.00 SRM: 4.00 Categories: IPA, Northwest, Hop Driven We are always thinking about our hop friends in Yakima, but they are especially on our minds right now during harvest season. With one, maybe two trips a week to pick up fresh hops, we get to see their hard working, smiling faces and it's the highlight of late summer for us. Yakima Bound is filled with aromas..."
-    hops:
-      - { hop: summer, name: Summer, as_written: summer }
+      - { hop: huell-melon, name: Hüll Melon, as_written: Hull Melon }
   - slug: chinook-fresh-hop-fiend
     name: Yesterday's Sunset Fresh Hop IPA
     url: https://www.stoupbrewing.com/beer/chinook-fresh-hop-fiend-1593.html
@@ -2775,13 +2699,6 @@ beers:
     hops_as_written: "Yesterday's Sunset Fresh Hop IPA ABV: 7.80 IBU: 0.00 SRM: 4.00 Categories: IPA, Northwest, Fresh Hop, Hop Driven This is the 2nd half of our bi-hemispheric Fresh Hop collaboration with Beer Baroness in Christchurch, New Zealand. United in our belief that beer can bring people together, we live by the mantra to \"drink beer, do good\". In that spirit, a portion of the proceeds from this beer will ..."
     hops:
       - { hop: chinook, name: Chinook, fresh: true, farm: Roy Farms, as_written: Chinook }
-  - slug: yonder-dry-cider
-    name: Yonder Cider - Hot Yonder Summer
-    url: https://www.stoupbrewing.com/beer/yonder-dry-cider-5111.html
-    abv: 6.9
-    hops_as_written: "Yonder Cider - Hot Yonder Summer ABV: 6.90 IBU: 0.00 SRM: 0.00 Originally crafted as a small-batch collaboration with our buddies at Chucks Hop Shop (formally known as Hot Chuck Summer) we bring you a cider that's packed with the flavors of juicy peach, zesty lemon and refreshing mint, this cider is the ultimate thirst-quencher for those sun-soaked days. Tart and juicy all at the same time, thi..."
-    hops:
-      - { hop: summer, name: Summer, as_written: Summer }
   - slug: zappa-ipa
     name: Zappa IPA
     url: https://www.stoupbrewing.com/beer/zappa-ipa-1332.html

@@ -14,10 +14,10 @@ beers:
     hops_as_written: "Kettle: Citra, HBC 586, Cluster, Cascade; Dry Hop: Cascade, HBC 586, Brewer's Gold"
     hops:
       - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
       - { hop: cluster, name: Cluster, as_written: Cluster }
       - { hop: cascade, name: Cascade, as_written: Cascade }
-      - { hop: brewers-gold, name: Brewer's Gold, as_written: Brewer's Gold }
+      - { hop: brewers-gold, name: Brewers Gold, as_written: Brewer's Gold }
   - slug: devils-kriek
     name: Devil's Kriek
     url: https://doublemountainbrewery.com/beer/devils-kriek/
@@ -50,7 +50,7 @@ beers:
     hops_as_written: 'Kettle: Citra, HBC 586, Cluster, Cascade; DH: Cascade, HBC 586, Brewer’s Gold'
     hops:
       - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
       - { hop: cluster, name: Cluster, as_written: Cluster }
       - { hop: cascade, name: Cascade, as_written: Cascade }
   - slug: hop-lion
@@ -126,7 +126,7 @@ beers:
     abv: 4.7
     hops_as_written: Oregon Tettnang from Gosche Farms
     hops:
-      - { hop: tettnang, name: Tettnang, farm: Gosche Farms, as_written: Tettnang }
+      - { hop: tettnang, name: Tettnanger, farm: Gosche Farms, as_written: Tettnang }
   - slug: peche-cuvee
     name: Pêche Cuvée
     url: https://doublemountainbrewery.com/beer/peche-cuvee/
@@ -176,7 +176,7 @@ beers:
     hops_as_written: Crystal and Goldings
     hops:
       - { hop: crystal, name: Crystal, as_written: Crystal }
-      - { hop: golding-uk, name: Goldings, as_written: Goldings }
+      - { hop: golding-uk, name: Golding (UK), as_written: Goldings }
   - slug: wolfweizen
     name: Wolfweizen
     url: https://doublemountainbrewery.com/beer/wolfweizen/

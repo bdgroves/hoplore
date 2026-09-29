@@ -196,7 +196,7 @@ def split_hops(line: str) -> list[str]:
     line = re.sub(r"\s+", " ", line.replace("\xa0", " "))
     line = re.sub(r"\bMt\.\s*", "Mt ", line, flags=re.I)
     line = re.sub(r"\band\b|\bplus\b|&|\+|;|\.\s", ",", line, flags=re.I)
-    line = re.sub(r"\s+(?=Fresh\b)", ", ", line)  # "Nelson Fresh Strata": a lost line break
+    line = re.sub(r"(?<!Cryo)\s+(?=Fresh\b)", ", ", line)  # "Nelson Fresh Strata": a lost line break (not YCH's "Cryo Fresh")
     line = re.sub(r"Hallertauer,\s*Mittelfr", "Hallertauer Mittelfr", line)  # a stray comma on one page
     tokens = [t.strip(" .:-") for t in line.split(",")]
     return [t for t in tokens if t and not NOT_HOPS.match(t)]
@@ -243,7 +243,10 @@ AMBIGUOUS = {
     "mistral", "trident", "flint", "calypso", "atlas", "aramis", "endeavour", "godiva", "boadicea", "super galena",
     "pacifica", "southern cross", "green bullet", "first gold", "golding", "fuggle", "mackinac", "tahoma",
     "denali", "alora", "altus", "lemondrop", "teamaker", "santiam", "willamette", "saphir", "smaragd", "premiant",
+    "summer",
 }
+# "Summer Pale Ale", "a refreshing summer lager": the season, not the hop.
+SEASON_WORD = re.compile(r"\s+(?:pale|lager|ale|beer|seasonal|sipper|crusher|months?|days?|time|release|series|\d{4})\b", re.I)
 
 
 def names_in(text: str, index: dict[str, str], field: bool = False) -> list[dict]:
@@ -264,9 +267,13 @@ def names_in(text: str, index: dict[str, str], field: bool = False) -> list[dict
                 continue
             if ambiguous and re.match(r"\s+malts?\b", text[b:b + 8], re.I):
                 continue  # "Crystal malt"
+            if label.lower() == "summer" and SEASON_WORD.match(text[b:b + 14]):
+                continue
             taken.append((a, b))
             before, after = text[max(0, a - 18):a].lower(), text[b:b + 12].lower()
-            name = label  # the record's own spelling, not the brewery's capitals
+            # The record's own spelling, not the brewery's capitals -- and for an
+            # alias ("Calista", "Tettnanger"), the record's name.
+            name = label if NAME_FORMS[label] not in SLUG_NAME or label.lower() == SLUG_NAME[NAME_FORMS[label]].lower() else SLUG_NAME[NAME_FORMS[label]]
             item = {"hop": NAME_FORMS[label], "name": name, "as_written": m.group(0)}
             if "cryo" in before.split()[-1:] or after.strip().startswith("cryo"):
                 item["form"] = "Cryo"
@@ -291,6 +298,7 @@ def names_in(text: str, index: dict[str, str], field: bool = False) -> list[dict
 
 
 NAME_FORMS: dict[str, str] = {}
+SLUG_NAME: dict[str, str] = {}
 
 
 def load_name_forms() -> None:
@@ -302,11 +310,13 @@ def load_name_forms() -> None:
             alt = str(alt)
             if len(alt) >= 4 and not alt.isdigit():
                 NAME_FORMS.setdefault(alt, rec["slug"])
+        SLUG_NAME[rec["slug"]] = str(rec["name"])
     for alias, slug in {"Nelson": "nelson-sauvin", "Mt. Hood": "mount-hood", "Mt Hood": "mount-hood",
                         "HBC 586": "krush", "HBC 1019": "dolcita", "HBC 682": "hbc-682", "Tettnang": "tettnang",
                         "El Dorado": "el-dorado", "Idaho 7": "idaho-7", "Brewer's Gold": "brewers-gold",
                         "Mittelfruh": "hallertau-mittelfrueh", "Hallertau": "hallertau-mittelfrueh",
-                        "Mandarina": "mandarina-bavaria", "Huell Melon": "huell-melon", "Hull Melon": "huell-melon"}.items():
+                        "Mandarina": "mandarina-bavaria", "Huell Melon": "huell-melon", "Hull Melon": "huell-melon",
+                        "Calista": "callista", "Tettnanger": "tettnang"}.items():
         NAME_FORMS.setdefault(alias, slug)
 
 
@@ -593,6 +603,108 @@ def segmented_names(text: str, index: dict[str, str]) -> list[dict]:
     return out
 
 
+def parse_sunriver(path: Path) -> tuple | None:
+    """Squarespace beer pages: name (h1), style, "6.6 ABV", the description,
+    then a "Hops:" field ending at "Contains:". Other beers are listed further
+    down the page, so only the first of each is read."""
+    _, name, text = page_text(path)
+    hops = between(text, r"\bHops:", r"Contains:|Awards|Year Round|Seasonal|Limited")
+    m = re.search(r"\b(\d{1,2}(?:\.\d+)?)\s*%?\s*ABV\b", text)
+    return name, float(m.group(1)) if m else None, hops, "field"
+
+
+def parse_chuckanut(path: Path) -> tuple | None:
+    """Shopify pages: "ABV: 4.5%" (sometimes split "4. 5%"), then a
+    Description in prose that names the hops."""
+    _, name, text = page_text(path)
+    desc = between(text, r"\bDescription\b", r"Awards?|Available|Pairs? (?:well )?with|Food Pairing|Share|You may also like|Related") or ""
+    bits = re.findall(r"[^.]*\b(?:hops?|hopped|dry[- ]hop\w*)\b[^.]*\.?", desc, re.I)
+    m = re.search(r"ABV:?\s*(\d{1,2})\s*\.\s*(\d)\s*%|ABV:?\s*(\d{1,2}(?:\.\d+)?)\s*%", text)
+    abv = float(f"{m.group(1)}.{m.group(2)}") if m and m.group(1) else float(m.group(3)) if m else None
+    return name, abv, " ".join(bits) or None, "prose"
+
+
+def parse_barley_browns(path: Path) -> list | None:
+    """Squarespace menu: one .menu-item per beer -- title, a prose description
+    that names the hops, and the ABV where a price would go."""
+    soup = BeautifulSoup(path.read_text(encoding="utf-8", errors="ignore"), "lxml")
+    out = []
+    for item in soup.select(".menu-item"):
+        title = item.select_one(".menu-item-title")
+        desc = item.select_one(".menu-item-description")
+        if not title or not desc:
+            continue
+        m = re.search(r"([\d.]+)\s*%\s*ABV", item.get_text(" "))
+        out.append((title.get_text(" ", strip=True), float(m.group(1)) if m else None, desc.get_text(" ", strip=True), "prose"))
+    return out or None
+
+
+def parse_wander(path: Path) -> list | None:
+    """WordPress taplist: each beer is a text block with an h3 name, a
+    "6.5% ABV // 60 IBU" line and a prose description."""
+    soup = BeautifulSoup(path.read_text(encoding="utf-8", errors="ignore"), "lxml")
+    out = []
+    for h3 in soup.find_all("h3"):
+        block = h3.parent
+        text = re.sub(r"\s+", " ", block.get_text(" ")) if block else ""
+        m = re.search(r"([\d.]+)\s*%\s*ABV", text)
+        bits = re.findall(r"[^.]*\b(?:hops?|hopped|dry[- ]hop\w*|showcase|only hop)\b[^.]*\.", text, re.I)
+        name = h3.get_text(" ", strip=True)
+        if m and bits and "hop water" not in name.lower():
+            out.append((name, float(m.group(1)), " ".join(bits), "prose"))
+    return out or None
+
+
+def parse_ladd_and_lass(path: Path) -> list | None:
+    """Squarespace text pages. On tap: numbered paragraphs, "1) Name",
+    "Style / 6.5% ABV", prose, then "Hops: A, B & C" and "Malts:". The fresh
+    hop page: "Name<br>Style / ABV", "featuring Citra from Westwood Farms &
+    ...", prose. The tap list's Hops line is the fuller one, so the fresh hop
+    page only adds beers the tap list doesn't have."""
+    soup = BeautifulSoup(path.read_text(encoding="utf-8", errors="ignore"), "lxml")
+    fresh_page = "fresh-hop" in path.name
+    on_tap = set()
+    if fresh_page and (path.parent / "ontap.html").exists():
+        on_tap = {squash(b[0]) for b in parse_ladd_and_lass(path.parent / "ontap.html") or []}
+    out = []
+    for para in soup.select(".sqs-html-content p"):
+        lines = [l.strip() for l in para.get_text("\n").split("\n") if l.strip()]
+        text = " ".join(lines)
+        m = re.search(r"/\s*([\d.]+)\s*%\s*ABV", text)
+        if not m:
+            continue
+        # The name is whatever comes before the "Style / ABV" line.
+        head = text[: text.find(m.group(0))]
+        head = re.sub(r"^.*?Expected Release Date:\s*\S+\s+\S+\s+\S+\s*", "", head)
+        head = re.sub(r"^\d+\)\s*", "", head).strip()
+        # "SOLD OUT!", "NOW AVAILABLE!", "AVAILABLE ON DRAFT! CANS SOLD OUT." -- news, not the name.
+        head = re.sub(r"^(?:[A-Z][A-Z0-9 ,.'&-]*[!.]\s*)+", "", head).strip()
+        style_line = next((l for l in lines if m.group(0).strip() in l or re.search(r"/\s*[\d.]+\s*%\s*ABV", l)), "")
+        style = style_line.split("/")[0].strip()
+        name = head[: len(head) - len(style)].strip() if style and head.endswith(style) else head
+        name = re.sub(r"\s+", " ", name).strip(" -—")
+        if not name or (fresh_page and squash(name) in on_tap):
+            continue
+        text = re.sub(r"[®™]", "", text)
+        text = re.sub(r"(\w)\s+&\s+Son\b", r"\1 and Son", text)  # Sauve & Son Farms is one farm
+        hops = re.search(r"Hops:\s*(.+?)(?:\s+Malts?:|$)", text)
+        if hops:
+            out.append((name, float(m.group(1)), hops.group(1).replace(" & ", ", "), "list"))
+            continue
+        feat = re.search(r"featuring\s+(.+?)\s+—", text)
+        if feat:
+            # "Citra from Westwood Farms & Simcoe Cryo Fresh® from YCH": fresh hops, each from its farm.
+            tokens = [t.strip() for t in re.split(r"\s+&\s+|,\s*", feat.group(1)) if t.strip()]
+            tokens = [t if re.search(r"fresh", t, re.I) else f"Fresh {t}" for t in tokens]
+            tokens = [re.sub(r"\s+from\s+(?:YCH|Yakima Chief(?: Hops)?)$", "", t) for t in tokens]
+            out.append((name, float(m.group(1)), ", ".join(tokens), "list"))
+    return out or None
+
+
+def squash(text: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", text.lower())
+
+
 def parse_description(path: Path) -> tuple | None:
     """Breweries that write a paragraph: the whole description is scanned for
     variety names (see names_in for how ordinary words are kept out)."""
@@ -647,6 +759,11 @@ PARSERS = {
     "fast-fashion": (parse_fast_fashion, "themasonryseattle.com", "fast-fashion.html"),
     "triceratops": (parse_triceratops, "triceratopsbrewing.com", "all-beers.html"),
     "single-hill": (parse_single_hill, "singlehillbrewing.com", "menu.html"),
+    "sunriver": (parse_sunriver, "sunriverbrewingcompany.com", "beer_*.html"),
+    "chuckanut": (parse_chuckanut, "chuckanutbrewery.com", "pages_*.html"),
+    "barley-browns": (parse_barley_browns, "barleybrownsbeer.com", "taphouse.html"),
+    "wander": (parse_wander, "wanderbrewing.com", "taplist.html"),
+    "ladd-and-lass": (parse_ladd_and_lass, "laddandlassbrewing.com", "*.html"),
 }
 
 
@@ -700,7 +817,8 @@ def build_beer(brewery: dict, path: Path, parsed: tuple, index: dict[str, str]) 
     beer["slug"] = slug
     name = re.sub(r"\s+", " ", name).strip()
     if name.isupper():
-        name = re.sub(r"\b(Ipa|Esb|Ipl|Dipa|Neipa|Wc|Xpa|Ddh)\b", lambda m: m.group(1).upper(), name.title())
+        name = re.sub(r"\b(Ipa|Esb|Ipl|Dipa|Neipa|Wc|Xpa|Ddh|Wfo|Pbr|Iiipa|Iipa)\b", lambda m: m.group(1).upper(), name.title())
+        name = re.sub(r"(?<=\w)'([A-Z])\b", lambda m: "'" + m.group(1).lower(), name)  # Rye'd, not Rye'D
     beer["name"] = name
     beer["url"] = source_url(path, brewery)
     if abv and 0.5 <= abv <= 18:  # outside that it's a misread (a price, an IBU, a typo on the page)
@@ -766,7 +884,8 @@ def main() -> int:
                     continue
                 if isinstance(parsed, list):
                     beer["slug"] = re.sub(r"[^a-z0-9]+", "-", beer["name"].lower()).strip("-")
-                    beer["url"] = brewery.get("page_url") or brewery["url"]
+                    # A one-page menu links to that page; a page_url template can't be filled here.
+                    beer["url"] = brewery["page_url"] if "{path}" not in brewery.get("page_url", "{path}") else brewery["url"]
                 if beer["slug"] not in seen:
                     seen.add(beer["slug"])
                     beers.append(beer)

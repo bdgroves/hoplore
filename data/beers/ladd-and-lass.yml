@@ -1,0 +1,133 @@
+brewery:
+  slug: ladd-and-lass
+  name: Ladd & Lass Brewing
+  city: Seattle
+  state: WA
+  url: https://www.laddandlassbrewing.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-29'
+beers:
+  - slug: ish-fresh-hop-el-dorado-hazy-ipa
+    name: (ish) Fresh Hop El Dorado Hazy IPA
+    url: https://www.laddandlassbrewing.com/
+    abv: 6.8
+    hops_as_written: Fresh El Dorado from CLS Farms
+    hops:
+      - { hop: el-dorado, name: El Dorado, fresh: true, farm: CLS Farms, as_written: Fresh El Dorado from CLS Farms }
+  - slug: ish-fresh-hop-pale-ale
+    name: (ish) Fresh Hop Pale Ale
+    url: https://www.laddandlassbrewing.com/
+    abv: 5.5
+    hops_as_written: Fresh Chinook from Roy Farms
+    hops:
+      - { hop: chinook, name: Chinook, fresh: true, farm: Roy Farms, as_written: Fresh Chinook from Roy Farms }
+  - slug: cloud-sipper
+    name: Cloud Sipper
+    url: https://www.laddandlassbrewing.com/
+    abv: 7.0
+    hops_as_written: Crosby Estate Comet, Nelson Sauvin, Cryo Krush, Dolcita, Tangier, Cryo Citra
+    hops:
+      - { hop: comet, name: Comet, farm: Crosby Hop Farm, as_written: Crosby Estate Comet }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Cryo Krush }
+      - { hop: dolcita, name: Dolcita, as_written: Dolcita }
+      - { hop: null, name: Tangier, as_written: Tangier }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Cryo Citra }
+  - slug: fractal-sunset
+    name: Fractal Sunset
+    url: https://www.laddandlassbrewing.com/
+    abv: 8.9
+    hops_as_written: Nectaron, Citra, Cryo Mosaic, Cryo Simcoe
+    hops:
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Cryo Mosaic }
+      - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Cryo Simcoe }
+  - slug: fresh-hop-cloud-sipper
+    name: Fresh Hop Cloud Sipper
+    url: https://www.laddandlassbrewing.com/
+    abv: 6.8
+    hops_as_written: Fresh Mosaic, Cryo Mosaic, Riwaka, and Simcoe Cryo Fresh
+    hops:
+      - { hop: mosaic, name: Mosaic, fresh: true, as_written: Fresh Mosaic }
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Cryo Mosaic }
+      - { hop: riwaka, name: Riwaka, as_written: Riwaka }
+      - { hop: simcoe, name: Simcoe, product: Cryo Fresh, fresh: true, as_written: Simcoe Cryo Fresh }
+  - slug: fresh-hop-howdy-friend
+    name: Fresh Hop Howdy, Friend
+    url: https://www.laddandlassbrewing.com/
+    abv: 6.5
+    hops_as_written: Fresh Citra, Simcoe Cryo Fresh, Mosaic Dynaboost, El Dorado, Riwaka
+    hops:
+      - { hop: citra, name: Citra, fresh: true, as_written: Fresh Citra }
+      - { hop: simcoe, name: Simcoe, product: Cryo Fresh, fresh: true, as_written: Simcoe Cryo Fresh }
+      - { hop: mosaic, name: Mosaic, form: DynaBoost, as_written: Mosaic Dynaboost }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: riwaka, name: Riwaka, as_written: Riwaka }
+  - slug: fresh-hop-krush-hazy-ipa
+    name: Fresh Hop Krush Hazy IPA
+    url: https://www.laddandlassbrewing.com/
+    abv: 6.8
+    hops_as_written: Fresh Krush from Perrault Farms
+    hops:
+      - { hop: krush, name: Krush, fresh: true, farm: Perrault Farms, as_written: Fresh Krush from Perrault Farms }
+  - slug: fresh-hop-west-coast-pilsner
+    name: Fresh Hop West Coast Pilsner
+    url: https://www.laddandlassbrewing.com/
+    abv: 5.3
+    hops_as_written: Fresh Strata from Coleman Farms
+    hops:
+      - { hop: strata, name: Strata, fresh: true, farm: Coleman Farms, as_written: Fresh Strata from Coleman Farms }
+  - slug: nick-teddy-s-excellent-adventure
+    name: Nick & Teddy’s Excellent Adventure
+    url: https://www.laddandlassbrewing.com/
+    abv: 5.0
+    hops_as_written: Sterling
+    hops:
+      - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: parliament-of-owls
+    name: Parliament of Owls
+    url: https://www.laddandlassbrewing.com/
+    abv: 6.7
+    hops_as_written: Centennial, Citra, Cryo Citra, Cryo Simcoe, Mosaic, Cryo Columbus
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Cryo Citra }
+      - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Cryo Simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: columbus, name: Columbus, form: Cryo, as_written: Cryo Columbus }
+  - slug: raspberry-revelry
+    name: Raspberry Revelry
+    url: https://www.laddandlassbrewing.com/
+    abv: 5.7
+    hops_as_written: Hallertau Mittelfrüh
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+  - slug: the-night-is-dark-and-full-of-terrors
+    name: The Night Is Dark and Full of Terrors
+    url: https://www.laddandlassbrewing.com/
+    abv: 7.0
+    hops_as_written: Crosby Estate Amarillo, Simcoe, Centennial, Mosaic, Chinook, Cryo Citra
+    hops:
+      - { hop: amarillo, name: Amarillo, farm: Crosby Hop Farm, as_written: Crosby Estate Amarillo }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Cryo Citra }
+  - slug: trampled-by-koalas
+    name: Trampled by Koalas
+    url: https://www.laddandlassbrewing.com/
+    abv: 5.1
+    hops_as_written: Nelson Sauvin, Citra
+    hops:
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: your-shout-bruv
+    name: Your Shout, Bruv
+    url: https://www.laddandlassbrewing.com/
+    abv: 4.2
+    hops_as_written: Sterling
+    hops:
+      - { hop: sterling, name: Sterling, as_written: Sterling }

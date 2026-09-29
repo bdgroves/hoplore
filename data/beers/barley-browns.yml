@@ -1,0 +1,141 @@
+brewery:
+  slug: barley-browns
+  name: Barley Brown's Beer
+  city: Baker City
+  state: OR
+  url: https://www.barleybrownsbeer.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-29'
+beers:
+  - slug: 80-eighty-shilling
+    name: 80/- (Eighty Shilling)
+    url: https://www.barleybrownsbeer.com/
+    abv: 4.0
+    hops_as_written: Light and refreshing. This traditional export strength Scottish ale uses floor malted Marris Otter and light additions of East Kent Golding Hops.
+    hops:
+      - { hop: east-kent-golding, name: East Kent Golding, as_written: East Kent Golding }
+  - slug: ales-for-als-ipa
+    name: Ales For Als IPA
+    url: https://www.barleybrownsbeer.com/
+    abv: 8.7
+    hops_as_written: A light bodied, pleasantly hoppy IPA made with the exclusive hop blend of Citra, Mosaic, HBC291, HBC344, and Equinox hops. One dollar per pint will be donated to the ALS Therapy Development Institute.
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: armstrong-nugget
+    name: Armstrong Nugget
+    url: https://www.barleybrownsbeer.com/
+    abv: 9.6
+    hops_as_written: Brewed for Miner's Jubilee and named after the 80.4 oz. gold nugget on display U.S. Bank. We use only Nugget hops to make this big golden ale.
+    hops:
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+  - slug: disorder-stout
+    name: Disorder Stout
+    url: https://www.barleybrownsbeer.com/
+    abv: 7.7
+    hops_as_written: Pitch black and aggressive. this robust American stout has huge hops and big roast flavors. brewed with Newport and cascade hops along with roasted barley and dark chocolate malts.
+    hops:
+      - { hop: newport, name: Newport, as_written: Newport }
+      - { hop: cascade, name: Cascade, as_written: cascade }
+  - slug: e-s-b
+    name: E.S.B.
+    url: https://www.barleybrownsbeer.com/
+    abv: 5.8
+    hops_as_written: Malty and fruity. Marks brewed this Extra Special Bitter with Magnum, Crystal, Cascade, and Amarillo hops. Some victory malt in the mash gives it a nice malty flavor.
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+      - { hop: crystal, name: Crystal, as_written: Crystal }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: forklift-double-ipa
+    name: Forklift Double IPA
+    url: https://www.barleybrownsbeer.com/
+    abv: 9.0
+    hops_as_written: Double IPA. This is the big version of our popular pallet jack ipa. deep golden in color and packed with simcoe, Columbus, citra, Chinook, Amarillo, and ahtanum hops.
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: simcoe }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: citra, name: Citra, as_written: citra }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: ahtanum, name: Ahtanum, as_written: ahtanum }
+  - slug: handtruck-pale-ale
+    name: Handtruck pale ale
+    url: https://www.barleybrownsbeer.com/
+    abv: 5.5
+    hops_as_written: American-stlye pale ale uses centennial, citra, simcoe and mosaic hops to give a fresh citrus aroma, with hints of grapefruit and pine.
+    hops:
+      - { hop: centennial, name: Centennial, as_written: centennial }
+      - { hop: citra, name: Citra, as_written: citra }
+      - { hop: simcoe, name: Simcoe, as_written: simcoe }
+      - { hop: mosaic, name: Mosaic, as_written: mosaic }
+  - slug: headshake-ipa
+    name: Headshake IPA
+    url: https://www.barleybrownsbeer.com/
+    abv: 8.9
+    hops_as_written: IPA and a half (not quite a double) brewed with Chinook, Citra, and Equinox hops. Bright golden in color with citrus and tropical fruit aromas.
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: citra, name: Citra, as_written: Citra }
+  - slug: hot-blonde
+    name: Hot Blonde
+    url: https://www.barleybrownsbeer.com/
+    abv: 5.25
+    hops_as_written: golden ale brewed with fresh jalapenos and citra hops with the additions of lime zest and lemongrass
+    hops:
+      - { hop: citra, name: Citra, as_written: citra }
+  - slug: pallet-jack-ipa
+    name: Pallet Jack IPA
+    url: https://www.barleybrownsbeer.com/
+    abv: 7.0
+    hops_as_written: the awesome blend of Columbus, citra, Amarillo and simcoe hops bombard this ipa with flavors of citrus, tropical fruit, and a little bit of pine. the light malt flavor comes from 2-row barley and a touch of crystal malt. 2012 GABF Silver. 2013 National IPA Champion.
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: citra, name: Citra, as_written: citra }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: simcoe, name: Simcoe, as_written: simcoe }
+  - slug: point-blank-red-pbr
+    name: Point Blank Red (PBR)
+    url: https://www.barleybrownsbeer.com/
+    abv: 5.4
+    hops_as_written: Also known as our Irish Red, this beer gets it auburn color from caramel and chocolate malts. It's lightly hopped with Oregon grown Crystal hops.
+    hops:
+      - { hop: crystal, name: Crystal, as_written: Crystal }
+  - slug: rye-d-it-out
+    name: Rye'd It Out
+    url: https://www.barleybrownsbeer.com/
+    abv: 5.8
+    hops_as_written: Malty copper-colored rye beer gently hopped with Northwest Cascade hops.
+    hops:
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: tank-slapper-iiipa
+    name: Tank Slapper IIIPA
+    url: https://www.barleybrownsbeer.com/
+    abv: 9.2
+    hops_as_written: Intense pine and citrus notes in this triple ipa come from massive amounts of simcoe and Chinook hops. at more than 1/2 ounces of hops per pint, this is not for the faint of heart.
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: simcoe }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: tumble-off-pale-ale
+    name: Tumble Off Pale Ale
+    url: https://www.barleybrownsbeer.com/
+    abv: 5.7
+    hops_as_written: american style pale ale. named after a ski run at anthony lakes. medium bodied, brewed with amarillo and cascade hops. maxim magazine named it as one of their top 25 beers in 2010.
+    hops:
+      - { hop: amarillo, name: Amarillo, as_written: amarillo }
+      - { hop: cascade, name: Cascade, as_written: cascade }
+  - slug: twisted-whisker-scotch-ale
+    name: Twisted Whisker Scotch Ale
+    url: https://www.barleybrownsbeer.com/
+    abv: 7.2
+    hops_as_written: A traditional scotch ale, brewed with floor malted marris otter barley, some dark crystal malt and a bit of peat smoked barley. hops are east kent goldings.
+    hops:
+      - { hop: golding-uk, name: Golding (UK), as_written: goldings }
+  - slug: wfo-ipa
+    name: WFO IPA
+    url: https://www.barleybrownsbeer.com/
+    abv: 7.5
+    hops_as_written: American Style india pale ale. Oregon style. big and hoppy. magnum, cascade, and simcoe hops.
+    hops:
+      - { hop: cascade, name: Cascade, as_written: cascade }
+      - { hop: simcoe, name: Simcoe, as_written: simcoe }

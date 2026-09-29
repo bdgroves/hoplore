@@ -70,7 +70,7 @@ beers:
     abv: 5.0
     hops_as_written: Mt. Hood, Lorien
     hops:
-      - { hop: mount-hood, name: Mt. Hood, as_written: Mt. Hood }
+      - { hop: mount-hood, name: Mount Hood, as_written: Mt. Hood }
   - slug: green-truck-american-light-lager
     name: Green Truck
     url: https://block15.com/green-truck-american-light-lager
@@ -143,7 +143,7 @@ beers:
       - { hop: sultana, name: Sultana, as_written: Sultana }
       - { hop: cascade, name: Cascade, as_written: Cascade }
       - { hop: columbus, name: Columbus, form: Cryo, as_written: Columbus }
-      - { hop: hallertau-mittelfrueh, name: Hallertau, as_written: Hallertau }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau }
       - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }

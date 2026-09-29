@@ -1,0 +1,225 @@
+brewery:
+  slug: sunriver
+  name: Sunriver Brewing
+  city: Sunriver
+  state: OR
+  url: https://www.sunriverbrewingcompany.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-29'
+beers:
+  - slug: applied-science
+    name: Applied Science
+    url: https://www.sunriverbrewingcompany.com/beer/applied-science/
+    abv: 7.0
+    hops_as_written: Mosaic, Citra, Comet, Simcoe Cryo, Citra Cryo Contains
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: comet, name: Comet, as_written: Comet }
+      - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Simcoe }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Citra }
+  - slug: burlington
+    name: Burlington
+    url: https://www.sunriverbrewingcompany.com/beer/burlington/
+    abv: 6.8
+    hops_as_written: Citra, Idaho 7, Eldorado Contains
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
+  - slug: che-figata
+    name: Che Figata
+    url: https://www.sunriverbrewingcompany.com/beer/che-figata/
+    abv: 5.4
+    hops_as_written: Czech Saaz, Saphir, Hallertau Blanc Contains
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
+      - { hop: saphir, name: Saphir, as_written: Saphir }
+      - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
+  - slug: cocoa-cow
+    name: Cocoa Cow
+    url: https://www.sunriverbrewingcompany.com/beer/cocoa-cow/
+    abv: 7.0
+    hops_as_written: 'Columbus Contains: Lactose, Cocoa Nibs'
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: coolwater
+    name: Coolwater
+    url: https://www.sunriverbrewingcompany.com/beer/coolwater/
+    abv: 4.5
+    hops_as_written: Czech Saaz, Lorien, Chinook Contains
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+  - slug: emotional-support-peacock
+    name: Emotional Support Peacock
+    url: https://www.sunriverbrewingcompany.com/beer/emotional-support-peacock/
+    abv: 6.8
+    hops_as_written: Citra, Mosaic, El Dorado Contains
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+  - slug: escape-from-escondido
+    name: Escape From Escondido
+    url: https://www.sunriverbrewingcompany.com/beer/escape-from-escondido/
+    abv: 6.9
+    hops_as_written: Simcoe Cryo, Citra, Eureka, Amarillo®, Amarillo® Cryo Contains
+    hops:
+      - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Simcoe }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: flowable
+    name: Flowable
+    url: https://www.sunriverbrewingcompany.com/beer/flowable/
+    abv: 5.5
+    hops_as_written: Citra, Citra Cryo, Citra 702 flowable Contains
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Citra }
+  - slug: fuzztail
+    name: Fuzztail
+    url: https://www.sunriverbrewingcompany.com/beer/fuzztail/
+    abv: 5.0
+    hops_as_written: Chinook, Cascade, Lemon Drop Contains
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: hawaiian-haze
+    name: Hawaiian Haze
+    url: https://www.sunriverbrewingcompany.com/beer/hawaiian-haze/
+    abv: 6.8
+    hops_as_written: 'Galaxy, Citra, Mandarina Bavaria, Lotus | Other Ingredients: Passionfruit, Tangerine, Pink Guava Contains'
+    hops:
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina Bavaria }
+      - { hop: lotus, name: Lotus, as_written: Lotus }
+  - slug: high-desert-diesel
+    name: High Desert Diesel
+    url: https://www.sunriverbrewingcompany.com/beer/high-desert-diesel/
+    abv: 8.6
+    hops_as_written: Chinook, Simcoe, Comet, Simcoe Cryo, Eureka! Contains
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: comet, name: Comet, as_written: Comet }
+      - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Simcoe }
+      - { hop: eureka, name: Eureka!, as_written: Eureka! }
+  - slug: holy-schmidt
+    name: Holy Schmidt!
+    url: https://www.sunriverbrewingcompany.com/beer/holy-schmidt/
+    abv: 5.8
+    hops_as_written: Mt. Hood, Liberty Contains
+    hops:
+      - { hop: mount-hood, name: Mount Hood, as_written: Mt. Hood }
+      - { hop: liberty, name: Liberty, as_written: Liberty }
+  - slug: lava-lands
+    name: Lava Lands
+    url: https://www.sunriverbrewingcompany.com/beer/lava-lands/
+    abv: 6.8
+    hops_as_written: Nugget Contains
+    hops:
+      - { hop: nugget, name: Nugget, as_written: Nugget }
+  - slug: mele-kalikimaka
+    name: Mele Kalikimaka
+    url: https://www.sunriverbrewingcompany.com/beer/mele-kalikimaka/
+    abv: 8.2
+    hops_as_written: Citra, Mosaic, Nelson Sauvin, Hallertau Blanc Contains
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+      - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
+  - slug: mocha-cow
+    name: Mocha Cow
+    url: https://www.sunriverbrewingcompany.com/beer/mocha-cow/
+    abv: 7.0
+    hops_as_written: 'Columbus | Other Ingredients: Lactose, Cocoa Nibs, Coffee Contains'
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: reflection-therapy
+    name: Reflection Therapy
+    url: https://www.sunriverbrewingcompany.com/beer/reflection-therapy/
+    abv: 7.0
+    hops_as_written: Citra, Cascade, Summit, Apollo, Nelson Sauvin Contains
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+      - { hop: summit, name: Summit, as_written: Summit }
+      - { hop: apollo, name: Apollo, as_written: Apollo }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
+  - slug: resin-nation
+    name: Resin Nation
+    url: https://www.sunriverbrewingcompany.com/beer/resin-nation/
+    abv: 8.6
+    hops_as_written: Simcoe, Amarillo®, Mosaic Contains
+    hops:
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+  - slug: rippin
+    name: Rippin
+    url: https://www.sunriverbrewingcompany.com/beer/rippin/
+    abv: 6.0
+    hops_as_written: Citra, Citra Cryo, Mosaic, Mosaic Cryo, Amarillo®, Amarilo® CGX Contains
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+  - slug: shred-head
+    name: Shred Head
+    url: https://www.sunriverbrewingcompany.com/beer/shred-head/
+    abv: 7.0
+    hops_as_written: Chinook, Centennial, Cascade Contains
+    hops:
+      - { hop: chinook, name: Chinook, as_written: Chinook }
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: stay-out-of-malibu
+    name: Stay Out of Malibu
+    url: https://www.sunriverbrewingcompany.com/beer/stay-out-of-malibu/
+    abv: 5.5
+    hops_as_written: Citra, Mosaic, HBC 586, Motuere Contains
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
+  - slug: stomp
+    name: Stomp
+    url: https://www.sunriverbrewingcompany.com/beer/stomp/
+    abv: 6.6
+    hops_as_written: Mosaic, Citra, Krush Cryo Contains
+    hops:
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Krush }
+  - slug: thorns-udders
+    name: Thorns & Udders
+    url: https://www.sunriverbrewingcompany.com/beer/thorns-udders/
+    abv: 7.0
+    hops_as_written: Columbus Contains
+    hops:
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+  - slug: vermont-vacation
+    name: Vermont Vacation
+    url: https://www.sunriverbrewingcompany.com/beer/vermont-vacation/
+    abv: 6.8
+    hops_as_written: Citra, Huell Melon, El Dorado, Sultana, Mandarina Bavaria Contains
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: huell-melon, name: Hüll Melon, as_written: Huell Melon }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
+      - { hop: sultana, name: Sultana, as_written: Sultana }
+      - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina Bavaria }
+  - slug: vicious
+    name: Vicious
+    url: https://www.sunriverbrewingcompany.com/beer/vicious/
+    abv: 7.0
+    hops_as_written: Centennial, Columbus, Columbus Cryo, Simcoe Cryo Contains
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: columbus, name: Columbus, as_written: Columbus }
+      - { hop: columbus, name: Columbus, form: Cryo, as_written: Columbus }
+      - { hop: simcoe, name: Simcoe, form: Cryo, as_written: Simcoe }

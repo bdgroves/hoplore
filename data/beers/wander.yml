@@ -1,0 +1,32 @@
+brewery:
+  slug: wander
+  name: Wander Brewing
+  city: Bellingham
+  state: WA
+  url: https://wanderbrewing.com/
+generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
+retrieved: '2026-09-29'
+beers:
+  - slug: aussie-steve-pale-lager
+    name: Aussie Steve Pale Lager
+    url: https://wanderbrewing.com/
+    abv: 4.9
+    hops_as_written: ' A pale lager with Australian Galaxy hops that’s extra pale and extra crispy.'
+    hops:
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+  - slug: fresh-press-west-coast-fresh-hop-ipa
+    name: Fresh Press West Coast Fresh Hop IPA
+    url: https://wanderbrewing.com/
+    abv: 6.5
+    hops_as_written: Fresh Press West Coast Fresh Hop IPA Roy Farms, Moxee, WA 6. 5% ABV // 60 IBU // 6 SRM A showcase of Citra, Amarillo, and Cascade hops.  Transportational aroma that might as well be a cool breeze right off the hop fields themselves.  Vivid hop character without being punishing.  of whole cone fresh hops from Roy Farms of Yakima Washington.
+    hops:
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
+  - slug: nectaron-single-eyepa
+    name: Nectaron Single EyePA
+    url: https://wanderbrewing.com/
+    abv: 6.4
+    hops_as_written: 4% ABV // 35 IBU // 4 SRM A showcase of the emerging, New Zealand grown “Nectaron” hop.  The only hop used in this one-off brew, we can confirm that Nectaron is as tropical and aromatically complex as it gets.  An extra smooth and rich drinking experience with barley and spelt malts acting as the springboard for the new peachy, pineapple-forward hops.
+    hops:
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }

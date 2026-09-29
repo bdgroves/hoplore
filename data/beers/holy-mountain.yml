@@ -13,7 +13,7 @@ beers:
     abv: 4.5
     hops_as_written: ' Black Beer Dark Ale A dark ale brewed with flaked barley, meris otter, and hopped with east kent goldings. Style Dark Ale ABV 4.5% Availability Seasonal '
     hops:
-      - { hop: golding-uk, name: Goldings, as_written: goldings }
+      - { hop: golding-uk, name: Golding (UK), as_written: goldings }
   - slug: coastal-cutthroat
     name: Coastal Cutthroat
     url: https://www.holymountainbrewing.com/beer/coastal-cutthroat/
@@ -68,7 +68,7 @@ beers:
     abv: 9.9
     hops_as_written: ' Kingdom of Tyrants Barrel Lagered Dopplebock Kingdom of Tyrants was brewed using malt exclusively from Sugar Creek Malting. With a base of Munich, Vienna and Pilsner malts, we also added a touch of Crystal Rye and a custom smoked malt incorporating Cherry and Pecan wood for a subtle smokey background. We then hopped this beer in the kettle using only Tettnang, and fermented it cold with one of...'
     hops:
-      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnang }
   - slug: primordial-sky
     name: Primordial Sky
     url: https://www.holymountainbrewing.com/beer/primordial-sky/

@@ -13,7 +13,7 @@ beers:
     abv: 5.5
     hops_as_written: ' BEER ABOUT Astro Fresh Hop Italian-Style Astro, originating from the Greek word for star, shines with Mount Rainier hops.  A crisp, clean lager to celebrate the annual hop harvest.'
     hops:
-      - { hop: mount-rainier, name: Mount Rainier, fresh: true, as_written: Mount Rainier }
+      - { hop: mount-rainier, name: Mt. Rainier, fresh: true, as_written: Mount Rainier }
   - slug: ecliptic-capella
     name: Capella Porter
     url: https://eclipticbrewing.com/beer/ecliptic-capella/

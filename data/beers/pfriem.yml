@@ -668,8 +668,8 @@ beers:
     abv: 6.8
     hops_as_written: Cryo Fresh Mosaic, Cryo Fresh Krush, Mosaic, Simcoe Dynaboost Fresh Hops Simcoe
     hops:
-      - { hop: mosaic, name: Mosaic, fresh: true, as_written: Fresh Mosaic }
-      - { hop: krush, name: Krush, fresh: true, as_written: Fresh Krush }
+      - { hop: mosaic, name: Mosaic, product: Cryo Fresh, fresh: true, as_written: Cryo Fresh Mosaic }
+      - { hop: krush, name: Krush, product: Cryo Fresh, fresh: true, as_written: Cryo Fresh Krush }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: simcoe, name: Simcoe, form: DynaBoost, as_written: Simcoe Dynaboost }
       - { hop: simcoe, name: Simcoe, fresh: true, as_written: Fresh Hops Simcoe }

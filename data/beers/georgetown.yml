@@ -86,7 +86,7 @@ beers:
     abv: 3.1
     hops_as_written: Czech Saaz
     hops:
-      - { hop: saaz-cz, name: Czech Saaz, as_written: Czech Saaz }
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
   - slug: 9-pound
     name: 9 Pound
     url: https://georgetownbeer.com/products/9-pound
@@ -501,7 +501,7 @@ beers:
     hops:
       - { hop: columbus, name: Columbus, as_written: Columbus }
       - { hop: saaz-cz, name: Saaz, as_written: Saaz }
-      - { hop: hallertau-mittelfrueh, name: Hallertau, as_written: Hallertau }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau }
   - slug: bunker
     name: Bunker
     url: https://georgetownbeer.com/products/bunker
@@ -758,7 +758,7 @@ beers:
     hops_as_written: Saaz, Hallertau
     hops:
       - { hop: saaz-cz, name: Saaz, as_written: Saaz }
-      - { hop: hallertau-mittelfrueh, name: Hallertau, as_written: Hallertau }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau }
   - slug: crossloaded
     name: Crossloaded
     url: https://georgetownbeer.com/products/crossloaded
@@ -805,7 +805,7 @@ beers:
     hops_as_written: Citra, HBC 586, Strata
     hops:
       - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
       - { hop: strata, name: Strata, as_written: Strata }
   - slug: demar
     name: Demar
@@ -814,7 +814,7 @@ beers:
     hops_as_written: Citra, HBC 586, Strata
     hops:
       - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
       - { hop: strata, name: Strata, as_written: Strata }
   - slug: denny-party
     name: Denny Party
@@ -850,7 +850,7 @@ beers:
     abv: 5.5
     hops_as_written: Hallertau Mittlefrüh
     hops:
-      - { hop: hallertau-mittelfrueh, name: Hallertau, as_written: Hallertau }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau }
   - slug: donkey-deux
     name: Donkey Deux
     url: https://georgetownbeer.com/products/donkey-deux

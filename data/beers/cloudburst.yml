@@ -23,7 +23,7 @@ beers:
     abv: 4.5
     hops_as_written: ' (with brightness of peace) Dry Hopped Helles | 4.5% ABV | 25 IBU Helles is a place & through this place of helles move (with brightness of peace) all places hops is a world & in this world of hops live (skilfully added) Mittelfruh, Peacherine, and Citra Cryo '
     hops:
-      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Mittelfruh }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Mittelfruh }
       - { hop: citra, name: Citra, form: Cryo, as_written: Citra }
   - slug: a-complete-unknown-ipa
     name: A Complete Unknown IPA
@@ -333,7 +333,7 @@ beers:
     abv: 7.0
     hops_as_written: ' Beware of the Undertow IPA | 7.0% ABV | 70 IBU Feel that? That pull? It’s outside your control. It exists whether you acknowledge it or ignore it (we do not recommend the latter). It feels kind of dangerous, a force bigger than you, that only nature and the moon can dictate. It’s constant, rhythmic, distinct – as subtle as it is assertive. It demands respect or you will pay the price. We’ve se...'
     hops:
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: riwaka, name: Riwaka, as_written: Riwaka }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
   - slug: big-softy
@@ -367,7 +367,7 @@ beers:
     hops_as_written: ' Born A Unicorn IPA IPA | 6.5% ABV | 52 IBU Wait. Have Hazy IPAs missed the boat? Because this one is loaded with 2 Row, White Wheat, Red Wheat, Spelt, AND Oats for a beautiful, silken body and radiant, hazy sheen. And then we loaded it up with a tropical smorgasbord of hops – like Mosaic, Huell Melon, Rakau, Citra, Idaho 7 & Sabro – so that the bright, fruity intensity rating is ratcheted up t...'
     hops:
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
-      - { hop: huell-melon, name: Huell Melon, as_written: Huell Melon }
+      - { hop: huell-melon, name: Hüll Melon, as_written: Huell Melon }
       - { hop: rakau, name: Rakau, as_written: Rakau }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
@@ -393,7 +393,7 @@ beers:
       - { hop: citra, name: Citra, as_written: CITRA }
       - { hop: mosaic, name: Mosaic, as_written: MOSAIC }
       - { hop: simcoe, name: Simcoe, as_written: SIMCOE }
-      - { hop: mandarina-bavaria, name: Mandarina, as_written: MANDARINA }
+      - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: MANDARINA }
   - slug: but-make-it-special-ipa
     name: But Make It Special IPA
     url: https://www.cloudburstbrew.com/beer/but-make-it-special-ipa/
@@ -553,13 +553,6 @@ beers:
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: strata, name: Strata, as_written: Strata }
       - { hop: galaxy, name: Galaxy, as_written: Galaxy }
-  - slug: cool-for-the-summer
-    name: Cool For The Summer
-    url: https://www.cloudburstbrew.com/beer/cool-for-the-summer/
-    abv: 5.3
-    hops_as_written: ' Cool For The Summer English Summer Ale | 5.3% ABV | 38 IBU Demi: “Tell me what you want, what you like, it’s okay I’m a little curious too.” Us: Oh this is fun! Um, we kinda want something a little malty, lower in alcohol and bitterness, with some lemony/peachy/green tea hop character. Demi: “Tell me if it’s wrong, if it’s right, I don’t care. I can keep a secret, can you?” Us: Ahhh is this wr...'
-    hops:
-      - { hop: summer, name: Summer, as_written: Summer }
   - slug: cool-space-photos-ipa
     name: Cool Space Photos IPA
     url: https://www.cloudburstbrew.com/beer/cool-space-photos-ipa/
@@ -657,7 +650,7 @@ beers:
     hops_as_written: ' Dorty Work Export Lager | 5.6% ABV | 30 IBU Hold onto your lederhosen you little lager heads! We’ve got work to drink! Dorty Work, to be precise. Our Dortmunder/Export – esque pale lager! [sidebar: if you’ve never heard of this style, or tried one before, it’s not your fault! We’ll simplify it for you – it’s kind of a hoppy Helles or more bitter Wiesn. Still lost? You’re not alone. Ok, it’s a ...'
     hops:
       - { hop: magnum, name: Magnum, as_written: Magnum }
-      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnang }
   - slug: double-cone
     name: Double Cone
     url: https://www.cloudburstbrew.com/beer/double-cone/
@@ -736,8 +729,7 @@ beers:
     abv: 5.3
     hops_as_written: ' Endless Summer Nights English Summer Ale | 5.3% ABV | 27 IBU 2019 GABF Bronze Medal Summer came and left without a warning, I’d give my life for one more pint. Every single sip you took was mine, we can have it all again. There’s only so much I can say, so please don’t run away from what we brewed together. I still recall hops along the beaches. And I remember how you loved me. Time was all we...'
     hops:
-      - { hop: summer, name: Summer, as_written: Summer }
-      - { hop: golding-uk, name: Goldings, as_written: Goldings }
+      - { hop: golding-uk, name: Golding (UK), as_written: Goldings }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: motueka, name: Motueka, as_written: Motueka }
   - slug: eternal-summer-slacking-ipa
@@ -746,7 +738,6 @@ beers:
     abv: 6.9
     hops_as_written: ' Eternal Summer Slacking IPA IPA | 6.9% ABV | 63 IBU We made up our minds, and we started brewing. We mashed before the sun came up that day. An exit to eternal summer slacking, But what were we making without ever knowing the hop? Anyone can see the hop that we used here tastes like gold. And its 5 – 8 – 6 And it’s definitely not old. We got it from Yakima (Chief Hops) We added the Simcoe A li...'
     hops:
-      - { hop: summer, name: Summer, as_written: Summer }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
   - slug: even-more-so-ipa
@@ -911,7 +902,7 @@ beers:
     hops_as_written: ' For Me This Is Heaven Modern American Helles | 5.3% ABV | 40 IBU Our buddy Jimmy, who likes to wax poetic, once said “The first star I see may not be a star” and we were like, “Damn Jimmy that shit is deep.” And then we started to think about that, and other things – like beer styles and traditional flavor profiles and if it’d be possible to combine some of our favorite, yet disparate, things ...'
     hops:
       - { hop: magnum, name: Magnum, as_written: Magnum }
-      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Mittelfruh }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Mittelfruh }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: mosaic, name: Mosaic, form: Cryo, as_written: Mosaic }
@@ -939,10 +930,10 @@ beers:
     hops:
       - { hop: magnum, name: Magnum, as_written: Magnum }
       - { hop: saaz-cz, name: Saaz, as_written: Saaz }
-      - { hop: mandarina-bavaria, name: Mandarina, as_written: Mandarina }
+      - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
-      - { hop: tettnang, name: Tettnang, farm: Goschie Farms, as_written: Tettnang }
+      - { hop: tettnang, name: Tettnanger, farm: Goschie Farms, as_written: Tettnang }
       - { hop: citra, name: Citra, fresh: true, farm: Loftus Ranch, as_written: Citra }
   - slug: fresh-wet-pils
     name: Fresh Wet Pils
@@ -950,8 +941,8 @@ beers:
     abv: 4.9
     hops_as_written: ' Fresh Wet Pils Lager Beer | 4.9% ABV | 45 IBU We started this harvest off brewing a bonafide banger…but we needed time to give it time. You know that saying “good things come to those who wait”? Well, good things come to beers that lager. Like this one, brewed with freshly kilned Tettnang and wet Hallertau hops from Goschie Farms , that were hand delivered by the Oregon lager legends themselve...'
     hops:
-      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
-      - { hop: hallertau-mittelfrueh, name: Hallertau, fresh: true, farm: Goschie Farms, as_written: Hallertau }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnang }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, fresh: true, farm: Goschie Farms, as_written: Hallertau }
   - slug: friendly-ghost
     name: Friendly Ghost
     url: https://www.cloudburstbrew.com/beer/friendly-ghost/
@@ -982,7 +973,7 @@ beers:
     abv: 4.9
     hops_as_written: ' Froth Goblin Helles Lager | 4.9% ABV | 28 IBU Crush that fresh nectar, that rocky white foam, that sweet bready malt, that alpine meadow Mittelfruh, that prickly carb, that clean crisp quench. That glug, that charge, that gulp, that burp. Froth Goblin is built for speed, engineered for maximum stoke, adhered to highest of German standards, designed for the lowest of introspection. Dig it, clin...'
     hops:
-      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Mittelfruh }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Mittelfruh }
   - slug: frozen-assets-ipa
     name: Frozen Assets
     url: https://www.cloudburstbrew.com/beer/frozen-assets-ipa/
@@ -1026,7 +1017,7 @@ beers:
     abv: 7.0
     hops_as_written: ' Give Way DDH New Zealand WCIPA | 7% ABV | 65 IBU If you’re ever driving around New Zealand, on the wrong side of the road, seated in the front right seat, you’ll notice they use the term “Give Way” as our versions of YIELD signs. And we’re telling you this because….YOU BEST GIVE WAY TO THIS ALL NELSON WEST COAST IPA YA HEARD?!? There’s like 8 total hop additions in this recipe, and every singl...'
     hops:
-      - { hop: nelson-sauvin, name: Nelson, as_written: NELSON }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: NELSON }
   - slug: go-for-broke-ipa
     name: Go For Broke IPA
     url: https://www.cloudburstbrew.com/beer/go-for-broke-ipa/
@@ -1061,7 +1052,7 @@ beers:
     abv: 6.9
     hops_as_written: ' Good Luck Babe DDH West Coast IPA | 6.9% ABV | 70 IBU It’s fine, it’s cool. You could say WCIPAs are nothing, but we know the truth. Wait, what is the truth? The truth is that Chappell Roan is on FIRE right now, and so are West Coast IPAs. And they have A LOT in common. They both take inspiration from earlier generations. They’re both considered “campy,” whatever that means. They both have ind...'
     hops:
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
       - { hop: columbus, name: Columbus, as_written: Columbus }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: citra, name: Citra, as_written: Citra }
@@ -1114,7 +1105,7 @@ beers:
     hops:
       - { hop: magnum, name: Magnum, as_written: Magnum }
       - { hop: saaz-cz, name: Saaz, as_written: Saaz }
-      - { hop: mandarina-bavaria, name: Mandarina, as_written: Mandarina }
+      - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: strata, name: Strata, as_written: Strata }
@@ -1140,7 +1131,6 @@ beers:
     abv: 4.8
     hops_as_written: ' Have A Great Summer! Ale English Summer Ale | 4.8% ABV | 30 IBU IFYKYK, we HEART our Summer Ales over at Cloudburst. Usually we release a traditional English Summer Ale in August – which we still plan to do – but why not get one out at the start of Summer too? We want a light, fruity, spritzy, balanced ale right MEOW! IN JUNE! And thus, H.A.G.S. was born. A base of Pilsner malts combined with ...'
     hops:
-      - { hop: summer, name: Summer, as_written: Summer }
       - { hop: saaz-cz, name: Saaz, as_written: Saaz }
       - { hop: peacharine, name: Peacharine, as_written: Peacharine }
       - { hop: citra, name: Citra, form: Cryo, as_written: Citra }
@@ -1218,7 +1208,7 @@ beers:
       - { hop: strata, name: Strata, as_written: Strata }
       - { hop: chinook, name: Chinook, as_written: Chinook }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: cascade, name: Cascade, as_written: CASCADE }
   - slug: how-the-wet-was-won
     name: How The Wet Was Won
@@ -1313,7 +1303,7 @@ beers:
     abv: 6.3
     hops_as_written: ' Just So Happens IPA IPA | 6.3% ABV | 58 IBU It just so happens this beer is almost entirely brewed with a new hop variety called YQH 1320 that was grown at CLS Farms. And it just so happens YQH (Yakima Quality Hops) founder Tim Sattler stumbled upon this hop along a river bank while hiking in Idaho back in 2015. And it just so happens this hop is genetically unique, it’s parentage unknown – ho...'
     hops:
-      - { hop: elani, name: YQH 1320, as_written: YQH 1320 }
+      - { hop: elani, name: Elani, as_written: YQH 1320 }
   - slug: keller-whalez
     name: Keller Whalez
     url: https://www.cloudburstbrew.com/beer/keller-whalez/
@@ -1321,8 +1311,8 @@ beers:
     hops_as_written: ' Keller Whalez Unfiltered German Pilsner w/ Spelt | 5.4% ABV | 40 IBU This ain’t your neck-bearded older brother’s type of whale. But this unfiltered & unfined rustic AF German Pilsner, with a splash of Spelt and hopped with Magnum, Mittelfruh, Tettnang, & Saaz, has never been brewed before and nor will it ever be brewed again. You know what that means? ISOs for days. Secondary prices your I-ba...'
     hops:
       - { hop: magnum, name: Magnum, as_written: Magnum }
-      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Mittelfruh }
-      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Mittelfruh }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnang }
       - { hop: saaz-cz, name: Saaz, as_written: Saaz }
   - slug: kevin
     name: Kevin!!!
@@ -1403,7 +1393,7 @@ beers:
     hops_as_written: ' Like Really Chill Extra Pale Ale | 5.3% ABV | 40 IBU What exactly IS an extra pale ale? Especially in this world of heavy-handed hop usage, that we admittedly contribute to? Well, at the heart of the style is a pale ale – a pleasant balance of hops in bitterness, flavor, & aroma. But then, it’s taken down a notch in the malt character and alcohol department. As for the hops – nuance and modera...'
     hops:
       - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: callista, name: Grüngeist, as_written: Grüngeist }
+      - { hop: callista, name: Callista, as_written: Grüngeist }
   - slug: like-whoa
     name: Like Whoa
     url: https://www.cloudburstbrew.com/beer/like-whoa/
@@ -1549,7 +1539,6 @@ beers:
     hops:
       - { hop: talus, name: Talus, as_written: Talus }
       - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: summer, name: Summer, as_written: summer }
   - slug: minima
     name: Minima
     url: https://www.cloudburstbrew.com/beer/minima/
@@ -1566,14 +1555,14 @@ beers:
       - { hop: chinook, name: Chinook, as_written: Chinook }
       - { hop: strata, name: Strata, as_written: Strata }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
   - slug: no-exceptions
     name: More Than Most
     url: https://www.cloudburstbrew.com/beer/no-exceptions/
     abv: 6.9
     hops_as_written: ' More Than Most DDH New Zealand WCIPA | 6.9% ABV | 60 IBU For New Zealand style beers, Nelson is THAT hop. It put their growing region on the map. It got into the hands of American IPA brewers, and never left. It simply has no substitute nor imitator – it’s that unique. It’s been in every single one of these NZ/WCIPA recipes we’ve brewed and it always will be. Yeah, we add other hops – this go ...'
     hops:
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: rakau, name: Rakau, as_written: Rakau }
       - { hop: citra, name: Citra, as_written: Citra }
   - slug: mosaicin-me-crazy-ipa
@@ -1618,7 +1607,7 @@ beers:
     hops_as_written: ' Mostly True IPA | 6.8% ABV | 52 IBU Ok, so, hear us out. There is something undeniably similar with Strata, Nelson, and Krush. From spidercharts to HPLCs to whole cone rubs to finished beer – SOMETHING IS GOING ON HERE. Despite them being developed and bred by separate (and secretive) organizations, on different timelines, in different regions/countries (one on an island on the other side of t...'
     hops:
       - { hop: strata, name: Strata, as_written: Strata }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: krush, name: Krush, as_written: Krush }
   - slug: motueka-madness-ipa
     name: Motueka MaDnESs! IPA
@@ -1627,7 +1616,7 @@ beers:
     hops_as_written: ' Motueka MaDnESs! IPA IPA | 6.3% ABV | 50 IBU Oops we DID it again. We played with our lots, got lost in the game, oh baby baby, it might seem like one hop, Motueka from aboooove, single hop in ess-ence. That’s right. Another *mostly* single hop IPA with 6 different lots of Motueka hops from Freestyle Farms, Hop Revolution, & Nelson Lakes picked in 3 different years, in T90 pellets and FH Subze...'
     hops:
       - { hop: motueka, name: Motueka, as_written: Motueka }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: much-of-muchness-ipa
     name: Much Of A Muchness IPA
     url: https://www.cloudburstbrew.com/beer/much-of-muchness-ipa/
@@ -1650,7 +1639,7 @@ beers:
     abv: 6.6
     hops_as_written: ' Nelson Is My Friend IPA | 6.6% ABV | 58 IBU First off, this beer is not about Steve’s longest running friend, Erika Nelson, who grew up around the corner from him in Connecticut and went to kindergarten (Ridgebury Elementary) through undergrad (Colby College) together. But it COULD be, because she’s a wonderful human. THIS beer is about the HOP named Nelson Sauvin, the variety that put New Zea...'
     hops:
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: nelsonnugz-com
     name: nelsonnugz.com
     url: https://www.cloudburstbrew.com/beer/nelsonnugz-com-2/
@@ -1703,10 +1692,10 @@ beers:
     abv: 6.4
     hops_as_written: ' No Experience Needed IPA IPA | 6.4% ABV | 50 IBU Why would we brew an IPA with Mandarina, Hallertau Blanc, Callista & Huell Melon – a bunch of meddling newer German hop varieties that do great in fruit forward pale lagers but don’t have the power, analytics, or experience to carry something as important as a “Cloudburst IPA” recipe? Because they are RICH in history, with a privileged lineage a...'
     hops:
-      - { hop: mandarina-bavaria, name: Mandarina, as_written: Mandarina }
+      - { hop: mandarina-bavaria, name: Mandarina Bavaria, as_written: Mandarina }
       - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
       - { hop: callista, name: Callista, as_written: Callista }
-      - { hop: huell-melon, name: Huell Melon, as_written: Huell Melon }
+      - { hop: huell-melon, name: Hüll Melon, as_written: Huell Melon }
   - slug: no-mistakes
     name: No Mistakes
     url: https://www.cloudburstbrew.com/beer/no-mistakes-2/
@@ -1714,7 +1703,7 @@ beers:
     hops_as_written: ' No Mistakes German-Style Schwarzbier | 5.4% ABV | 35 IBU ”There are no mistakes, only happy little accidents” said Bob to the tree. The tree was feeling down about the lopsided, imperfect branches Bob had just painted on them. “Look Bob, I am a tree. I need to be perfect – balanced and mature.” Bob put down his brush and took a sip of his beer, perplexed by the tree’s request. “When you make m...'
     hops:
       - { hop: magnum, name: Magnum, as_written: Magnum }
-      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnang }
   - slug: no-new-friends-ipa
     name: No New Friends IPA
     url: https://www.cloudburstbrew.com/beer/no-new-friends-ipa/
@@ -1841,7 +1830,7 @@ beers:
     abv: 6.3
     hops_as_written: ' Outside the Box IPA IPA | 6.3% ABV | 59 IBU Okay, so most hops come from similar lineage/parentage (Tettnang, Golding, Brewer’s Gold, Fuggle, etc) although with all the breeding programs we have now, there’s a little more genetic diversity out there. But there’s one hop that’s way the fuck out there – Zappa. It’s been grown by CLS Farms in Moxee going on 11 years, and while acreage ebbs and fl...'
     hops:
-      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnang }
       - { hop: fuggle, name: Fuggle, as_written: Fuggle }
       - { hop: zappa, name: Zappa, as_written: Zappa }
       - { hop: citra, name: Citra, as_written: Citra }
@@ -1852,7 +1841,7 @@ beers:
     abv: 6.9
     hops_as_written: ' Paradise Meadows IPA IPA | 6.9% ABV | 55 IBU This beer is basically the embodiment of this area of Mount Rainier National Park from mid-July to mid-August. Oh, you’re unfamiliar? We’ll let 1889 John Muir tell you about it – “The most luxuriant and the most extravagantly beautiful of all the alpine gardens I ever beheld in all my mountain-top wanderings.” That’s high praise from a well traveled...'
     hops:
-      - { hop: mount-rainier, name: Mount Rainier, as_written: Mount Rainier }
+      - { hop: mount-rainier, name: Mt. Rainier, as_written: Mount Rainier }
       - { hop: citra, name: Citra, as_written: Citra }
   - slug: part-of-the-decoration-ipa
     name: Part Of The Decoration IPA
@@ -1880,8 +1869,8 @@ beers:
     abv: 4.9
     hops_as_written: ' Party Crashin’ Bohemian Style Pilsner | 4.9% ABV | 48 IBU Hey. Guess what? Our 8TH FUCKING ANNIVERSARY is happening in a few weeks (PS SAVE THE DATE! Friday January 5th at Western! Saturday January 6th at Shilshole!) and this lil Bo Pils just showed up unannounced and early for the occasion. But it’s one of those beers you just can’t get mad at. Weyermann Floor Malted Bohemian Pilsner malt for...'
     hops:
-      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
-      - { hop: saaz-cz, name: Czech Saaz, as_written: Czech Saaz }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnang }
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
   - slug: passin-time
     name: Passin’ Time
     url: https://www.cloudburstbrew.com/beer/passin-time/
@@ -1889,7 +1878,7 @@ beers:
     hops_as_written: ' Passin’ Time Pre-Prohibition American Pilsner | 5.1% ABV | 42 IBU The inspiration for this beer goes back – way back – to the days of pre-prohibition, when lagers were a little more chewy, and spicy, and rustic, and probably not that great if we’re being honest because this was like 100 years ago and stainless steel wasn’t widely available and they didn’t sanitize equipment like we do now. ANY...'
     hops:
       - { hop: saaz-cz, name: Saaz, as_written: Saaz }
-      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnang }
   - slug: pattern-interrupt-ipa
     name: Pattern Interrupt IPA
     url: https://www.cloudburstbrew.com/beer/pattern-interrupt-ipa/
@@ -2058,9 +2047,9 @@ beers:
     hops_as_written: ' Quiet Lightning New Zealand Pilsner | 4.7% ABV | 39 IBU We’re ALL IN on this type of Pilsner, and we hope you are too. At first you might not see it coming – it’s light, it’s nuanced, a slightly hoppier Pilsner derivative. But it’s bright and crisp, and those southern hemisphere hop flavors build to FLASH BANG of passionfruit, lemon chiffon and beach grass thanks to a blend of Peacharine, Nels...'
     hops:
       - { hop: peacharine, name: Peacharine, as_written: Peacharine }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: riwaka, name: Riwaka, as_written: Riwaka }
-      - { hop: saaz-cz, name: Czech Saaz, as_written: Czech Saaz }
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
   - slug: quite-the-party-ipa
     name: Quite the Party IPA
     url: https://www.cloudburstbrew.com/beer/quite-the-party-ipa/
@@ -2077,7 +2066,7 @@ beers:
     abv: 6.9
     hops_as_written: ' Quote Unquote DDH New Zealand WCIPA | 6.9% ABV | 67 IBU Ok so maybe this beer doesn’t “look the part” It’s got Nelson so it’s “New Zealand Style” But there’s Strata so it “doesn’t fit the mold” Also Simcoe which is “very Yakima” You can see through it which is “kinda weird” It’s bitter and that’s “abrasive” Overall it’s “intensely flavorful” It’s a beer that’s “not for everyone” It doesn’t “pl...'
     hops:
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: strata, name: Strata, as_written: Strata }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
   - slug: rear-wheel-drive
@@ -2172,7 +2161,7 @@ beers:
     hops_as_written: ' Rolling Hills New Zealand Style Pilsner | 5.2% ABV | 30 IBU Over the rivers and through the woods, on a kiwi adventure we go. This pretty little pils is a scenic drive through winding roads and all the views – coastlines and mountains and farmland and forest. We used a blend of Peacharine (mostly), Nelson (a little bit), and Riwaka (just a touch) that resulted in notes of wild flowers, native ...'
     hops:
       - { hop: peacharine, name: Peacharine, as_written: Peacharine }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: riwaka, name: Riwaka, as_written: Riwaka }
   - slug: same-ghost-every-night-ipa
     name: Same Ghost Every Night IPA
@@ -2298,7 +2287,6 @@ beers:
     abv: 5.4
     hops_as_written: ' So Last Summer English Summer Ale | 5.4% ABV | 27 IBU 2023: Vampires 2021: Cottagecore 2020: N95s 2019: Birkenstocks 2017: Citra Cryo Hops 2010: Michael Cera 2004: Puka shells 2001: This beer style. 1999: Birkenstocks again 1998: Motueka Hops 1982: The Go-Gos 1970: Hippie Shit 1966: Maris Otter Malt 1910: Bathing Costumes 1839: East Kent Golding Hops '
     hops:
-      - { hop: summer, name: Summer, as_written: Summer }
       - { hop: citra, name: Citra, form: Cryo, as_written: Citra }
       - { hop: motueka, name: Motueka, as_written: Motueka }
       - { hop: east-kent-golding, name: East Kent Golding, as_written: East Kent Golding }
@@ -2330,7 +2318,6 @@ beers:
       - { hop: amarillo, name: Amarillo, as_written: Amarillo }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
-      - { hop: summer, name: Summer, as_written: summer }
   - slug: soft-squeeze-ipa
     name: Soft Squeeze IPA
     url: https://www.cloudburstbrew.com/beer/soft-squeeze-ipa/
@@ -2346,7 +2333,7 @@ beers:
     abv: 5.6
     hops_as_written: ' Sorry For Partying German-Style Festbier | 5.6% ABV | 35 IBU It’s almost that time of the year! Oktoberfest! One of the biggest parties in the world! FUN TIMES SEHR GÜT! As a remote homage to this international beer holiday, we brewed up an unfiltered (we don’t own a filter) rendition of this style with pilsner, vienna, and caramunich malts from Weyermann and German Mittelfruh hops. And while ...'
     hops:
-      - { hop: hallertau-mittelfrueh, name: Mittelfruh, as_written: Mittelfruh }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Mittelfruh }
   - slug: sorry-to-bother-you
     name: Sorry To Bother You
     url: https://www.cloudburstbrew.com/beer/sorry-to-bother-you/
@@ -2458,14 +2445,13 @@ beers:
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: luminosa, name: Luminosa, as_written: Luminosa }
       - { hop: bru-1, name: Bru-1, as_written: Bru-1 }
-      - { hop: callista, name: Grungeist, as_written: Grungeist }
+      - { hop: callista, name: Callista, as_written: Grungeist }
   - slug: summer-sunset
     name: Summer Sunset
     url: https://www.cloudburstbrew.com/beer/summer-sunset/
     abv: 7.2
     hops_as_written: ' Summer Sunset IPA | 7.2% ABV | 51 IBU It’s (almost, kinda) Summer so we brewed a beer in honor of one of our favorite things this time of year…those very late, very long sunsets. We’re talking soft, wispy layers upon layers of apricot and peach and tangerine and meyer lemon. And maybe there’s a calm, cool breeze coming off the sound. And a sweet, salty essence that culminates in a refreshing, ...'
     hops:
-      - { hop: summer, name: Summer, as_written: Summer }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: peacharine, name: Peacharine, as_written: Peacharine }
   - slug: sway-my-way-ipa
@@ -2611,7 +2597,7 @@ beers:
     abv: 5.4
     hops_as_written: ' Thatz Not Okay Unfiltered Czech-Style Pils | 5.4% ABV | 50 IBU Umm, so we’d like to have a word with you. As most of you know, we’ve been lowkey brewing traditional-style lagers since our conception. BUT recently we’ve really enjoyed not clarifying them. While we’ve never filtered any of our beers (because we don’t own a filter) we do occasionally add wort clarifiers to our kettle and during c...'
     hops:
-      - { hop: saaz-cz, name: Czech Saaz, as_written: Czech Saaz }
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
   - slug: thats-baseball-baby
     name: That’s Baseball Baby
     url: https://www.cloudburstbrew.com/beer/thats-baseball-baby/
@@ -2655,7 +2641,7 @@ beers:
     hops:
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: strata, name: Strata, as_written: Strata }
       - { hop: chinook, name: Chinook, as_written: Chinook }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
@@ -2703,7 +2689,7 @@ beers:
     abv: 7.0
     hops_as_written: ' The NEEZ BEEZ IPA IPA | 7.0% ABV | 57 IBU The first IPA brew after harvest is always a breath of fresh air. Or more like, an exhale of hot air? It’s a welcome relief, is what we’re saying. We LOVE brewing freshies and wetties but the brew days are almost 2 hrs longer and a lot more intensive. The “hop out” is messy and sticky. We have to jerry rig lots of process piping with hoses, etc etc. So...'
     hops:
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: nectaron, name: Nectaron, as_written: Nectaron }
       - { hop: riwaka, name: Riwaka, as_written: Riwaka }
   - slug: the-ultimate-rush-ipa
@@ -2797,7 +2783,7 @@ beers:
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: vista, name: Vista, as_written: Vista }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: too-many-hashtags
     name: Too Many Hashtags
     url: https://www.cloudburstbrew.com/beer/too-many-hashtags/
@@ -2826,7 +2812,7 @@ beers:
       - { hop: chinook, name: Chinook, as_written: CHINOOK }
       - { hop: amarillo, name: Amarillo, as_written: Amarillo }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
-      - { hop: elani, name: YQH 1320, as_written: YQH 1320 }
+      - { hop: elani, name: Elani, as_written: YQH 1320 }
       - { hop: vista, name: Vista, as_written: Vista }
   - slug: training-bines-ipa
     name: Training Bines IPA
@@ -2845,7 +2831,7 @@ beers:
     hops_as_written: ' Two Player Mode IPA | 6.6% ABV | 57 IBU Sup Noobs? Are you ready for a high resolution sandbox style journey between 2 SUPER hops – Mosaic and Nelson? It will be filled with random encounters, endless fog, invisible walls, and easter eggs. Also a stoned diesel truck driver rumble-packing through pineapples and passion fruits and grapefruits and white grapes. And you won’t even need cheat codes...'
     hops:
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: two-player-mode-ipa
     name: Two Player Mode IPA
     url: https://www.cloudburstbrew.com/beer/two-player-mode-ipa/
@@ -2853,7 +2839,7 @@ beers:
     hops_as_written: ' Two Player Mode IPA IPA | 6.8% ABV | 57 IBU Sup Noobs? Are you ready for a high resolution sandbox style journey between 2 SUPER hops – Mosaic and Nelson? It will be filled with random encounters, endless fog, invisible walls, and easter eggs. Also a stoned diesel truck driver rumble-packing through pineapples and passion fruits and grapefruits and white grapes. And you won’t even need cheat c...'
     hops:
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: ungrammable-hang-zone-ipa
     name: Ungrammable Hang Zone IPA
     url: https://www.cloudburstbrew.com/beer/ungrammable-hang-zone-ipa/
@@ -2886,7 +2872,7 @@ beers:
     abv: 5.4
     hops_as_written: ' Unlimited Breadsticks Italian Pilsner | 5.4% ABV | 47 IBU MAMA MIA! We made an Italian Pilsner! What makes it Italian?! Well, we used German malts (Weyermann Pils), German Lager yeast (thanks Chuckanut!), and German hops (some Tettnang, but mostly Saphir)….AND THEN WE DRY HOPPED IT! SEI FUORI! Yeah, that’s pretty much what this style is…which to us, is about as Italian as Olive Garden. VUOI LI...'
     hops:
-      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnang }
       - { hop: saphir, name: Saphir, as_written: Saphir }
   - slug: unrecoverable-error
     name: Unrecoverable Error
@@ -2949,10 +2935,9 @@ beers:
     abv: 6.9
     hops_as_written: ' Verse Jump IPA IPA | 6.9% ABV | 57 IBU It’s that time of the year where we approach peak FOMO – all the concerts, beach parties, hikes to alpine lakes, backyard BBQs, friends with boats, M’s games, road trips – ALL THE THINGS! And it’s impossible to do it all at once – UNLESS – you channel yourself in multiple metaverses, and verse jump simultaneously through active portals with the help of yo...'
     hops:
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: summer, name: Summer, as_written: SUMMER }
   - slug: very-far-away
     name: Very Far Away
     url: https://www.cloudburstbrew.com/beer/very-far-away/
@@ -2961,7 +2946,7 @@ beers:
     hops:
       - { hop: motueka, name: Motueka, as_written: Motueka }
       - { hop: nectaron, name: Nectaron, as_written: Nectaron }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: krush, name: Krush, as_written: Krush }
   - slug: vip-lounge
@@ -3099,16 +3084,16 @@ beers:
     abv: 5.0
     hops_as_written: ' Wet Hop Keller Pils Wet Hop Keller Pils | 5% ABV | 42 IBU Collab with Wayfinder Last year, we brewed our first ever wet hop pilsner and HOLY SHIT HOW DID IT TAKE US THIS LONG. Following in the tradition, we brought in a brilliant friend – Natalie Rose Baldwin of Wayfinder Beer – to elevate this lager collab beer to the next level. A blend of pilsner malts, plus a bag of spelt to soften up the ...'
     hops:
-      - { hop: tettnang, name: Tettnang, fresh: true, farm: Goschie Farms, as_written: Tettnang }
+      - { hop: tettnang, name: Tettnanger, fresh: true, farm: Goschie Farms, as_written: Tettnang }
   - slug: wet-hop-pils
     name: Wet Hop Pils
     url: https://www.cloudburstbrew.com/beer/wet-hop-pils/
     abv: 5.0
     hops_as_written: ' Wet Hop Pils Wet Hop Pilsner | 5.0% ABV | 40 IBU It’s hard to schedule collabs during harvest. First, harvest is a bit unpredictable, so lining up a specific variety with a tight production schedule is a challenge. And then travel plans of a second brewery, who has their own production & operation demands, ups the difficulty of aligning all the logistics. BUT WHEN TETTNANG (JUST 10 HRS OF PICK...'
     hops:
-      - { hop: tettnang, name: Tettnang, as_written: TETTNANG }
-      - { hop: hallertau-mittelfrueh, name: Hallertau, as_written: HALLERTAU }
-      - { hop: hallertau-mittelfrueh, name: Hallertau, fresh: true, farm: Goschie Farms, as_written: Hallertau }
+      - { hop: tettnang, name: Tettnanger, as_written: TETTNANG }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: HALLERTAU }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, fresh: true, farm: Goschie Farms, as_written: Hallertau }
   - slug: wet-is-as-wet-does
     name: Wet Is As Wet Does
     url: https://www.cloudburstbrew.com/beer/wet-is-as-wet-does/
@@ -3124,7 +3109,7 @@ beers:
     hops:
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
   - slug: wet-side-story
     name: Wet Side Story
     url: https://www.cloudburstbrew.com/beer/wet-side-story/
@@ -3209,7 +3194,7 @@ beers:
     abv: 7.8
     hops_as_written: ' Who’s In Charge Here? DIPA | 7.8% ABV | 65 IBU Oh, well wouldn’t YOU like to know. WE HAVE NO CLUE EITHER. But if you find out, we’d like to also have a word with them! Because we’re running around with our heads cut off, trying to keep the ship afloat AND on course, while putting out fires everywhere, while also playing whack-a-mole with one hand and shuffleboard with the other with a third o...'
     hops:
-      - { hop: krush, name: HBC 586, as_written: HBC 586 }
+      - { hop: krush, name: Krush, as_written: HBC 586 }
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
@@ -3277,7 +3262,6 @@ beers:
     abv: 6.6
     hops_as_written: ' Yay, Space! IPA IPA | 6.6% ABV | 55 IBU Late last Summer, we teamed up with Haas & HPA and brewed this recipe with some AMAZING lots of Galaxy from the 2023 and 2024 crop. Like no joke – THEY WERE THE BEST GALAXY WE HAVE EVER BREWED WITH and we triumphantly declared that THIS HOP IS BACK, BABY! Welp, Haas & HPA were also stoked on the beer, so much so they wondered if we would brew it again fo...'
     hops:
-      - { hop: summer, name: Summer, as_written: Summer }
       - { hop: galaxy, name: Galaxy, as_written: Galaxy }
       - { hop: citra, name: Citra, as_written: Citra }
   - slug: yeah-but-why-tho
@@ -3331,4 +3315,4 @@ beers:
       - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau Mittelfruh }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: peacharine, name: Peacharine, as_written: Peacharine }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }

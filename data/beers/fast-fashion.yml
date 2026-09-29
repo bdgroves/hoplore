@@ -23,7 +23,7 @@ beers:
     hops_as_written: West Coast IPA - Hopped with Idaho 7, Freestyle Nelson and Mosaic.
     hops:
       - { hop: idaho-7, name: Idaho 7, as_written: Idaho 7 }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
   - slug: all-dressed
     name: All Dressed
@@ -38,7 +38,7 @@ beers:
     abv: 4.2
     hops_as_written: West Coast American Pale Ale - Brewed in collaboration with Aslan, Brouwers, Bosk, Bottleworks, Fair Isle, Floodland, Headless Mumby, Holy Mountain, Ilk, Pike, Stillwater, Stoup, Seattle Cider, and Yonder. Featuring Freestyle Nelson Hops.
     hops:
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: bagel-mode
     name: Bagel Mode
     url: https://themasonryseattle.com/fast-fashion/
@@ -46,7 +46,7 @@ beers:
     hops_as_written: West Coast IPA - Brewed in collaboration with Cellarmaker. Featuring El Dorado, Freestyle Nelson and Galaxy hops.
     hops:
       - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: galaxy, name: Galaxy, as_written: Galaxy }
   - slug: bargin-bin
     name: Bargin Bin
@@ -72,7 +72,7 @@ beers:
     abv: 4.0
     hops_as_written: Vietnamese Style Lager - Brewed in collaboration with Lowercase Brewing. Hopped with Hallertau Mittelfrüh.
     hops:
-      - { hop: hallertau-mittelfrueh, name: Hallertau, as_written: Hallertau }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau }
   - slug: birding
     name: Birding
     url: https://themasonryseattle.com/fast-fashion/
@@ -178,7 +178,7 @@ beers:
     hops_as_written: DDH IPA - Brewed in collaboration with Community Pint. Hopped with Centennial, Freestyle Nelson and Segal Anchovy.
     hops:
       - { hop: centennial, name: Centennial, as_written: Centennial }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: anchovy, name: Anchovy, as_written: Anchovy }
   - slug: construct-break-blue
     name: Construct Break – Blue
@@ -208,7 +208,7 @@ beers:
     hops_as_written: Oat Cream Pale Ale - Hopped with Segal Ranch Anchovy and Freestyle Nelson. Order Now
     hops:
       - { hop: anchovy, name: Anchovy, as_written: Anchovy }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: crop-top
     name: Crop Top
     url: https://themasonryseattle.com/fast-fashion/
@@ -222,7 +222,7 @@ beers:
     abv: 7.2
     hops_as_written: DDH India Pale Ale - Brewed With Freestyle Peacherine and Freestyle Nelson Hops
     hops:
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: death-at-the-bar
     name: Death At The Bar
     url: https://themasonryseattle.com/fast-fashion/
@@ -281,7 +281,7 @@ beers:
     abv: 6.2
     hops_as_written: West Coast IPA - Hopped with Freestyle Kohia, Nelson Hop Kief, Mosaic and Segal Ranch Anchovy.
     hops:
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: anchovy, name: Anchovy, as_written: Anchovy }
   - slug: fix-in-post
@@ -298,7 +298,7 @@ beers:
     abv: 4.4
     hops_as_written: Heirloom Corn Lager - brewed in collaboration with The Showbox and Fontaines DC. Featuring Heirloom Blue Corn, Hallertau Mittelfrüh and Motueka.
     hops:
-      - { hop: hallertau-mittelfrueh, name: Hallertau, as_written: Hallertau }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau }
       - { hop: motueka, name: Motueka, as_written: Motueka }
   - slug: fresh-flight
     name: Fresh Flight
@@ -314,7 +314,7 @@ beers:
     hops_as_written: Hoppy Rye Pils - Brewed in collaboration with Creature Comforts Brewery. Featuring Saphire, Hallertau Blanc, and Freestyle Nelson Hops.
     hops:
       - { hop: hallertau-blanc, name: Hallertau Blanc, as_written: Hallertau Blanc }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: game-beer
     name: Game Beer
     url: https://themasonryseattle.com/fast-fashion/
@@ -338,7 +338,7 @@ beers:
     abv: 7.5
     hops_as_written: West Coast IPA - Brewed with Freestyle Nelson, Simcoe, and Strata Hops
     hops:
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
       - { hop: simcoe, name: Simcoe, as_written: Simcoe }
       - { hop: strata, name: Strata, as_written: Strata }
   - slug: here-and-nowhere-else
@@ -349,7 +349,7 @@ beers:
     hops:
       - { hop: citra, name: Citra, as_written: Citra }
       - { hop: motueka, name: Motueka, as_written: Motueka }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: hidden-gems
     name: Hidden Gems
     url: https://themasonryseattle.com/fast-fashion/
@@ -357,7 +357,7 @@ beers:
     hops_as_written: DDH India Pale Ale - Brewed with Citra and Freestyle Nelson. Order Online
     hops:
       - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: hometeam
     name: Hometeam
     url: https://themasonryseattle.com/fast-fashion/
@@ -373,7 +373,7 @@ beers:
     hops_as_written: DDH India Pale Ale - Double Dry-Hopped India Pale Ale Brewed with Phantasm, Enigma, and Freestyle Nelson
     hops:
       - { hop: enigma, name: Enigma, as_written: Enigma }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: hot-pizza-with-anchovy
     name: Hot Pizza with Anchovy
     url: https://themasonryseattle.com/fast-fashion/
@@ -520,14 +520,14 @@ beers:
     hops_as_written: Pilsner - Hopped with Hersbrucker and Tettnang. Order Now
     hops:
       - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
-      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnang }
   - slug: pocket-fan
     name: Pocket Fan
     url: https://themasonryseattle.com/fast-fashion/
     abv: 7.0
     hops_as_written: India Pale Ale - Brewed with Freestyle Nelson and Phantasm Powder
     hops:
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: pocket-forensics
     name: Pocket Forensics
     url: https://themasonryseattle.com/fast-fashion/
@@ -544,7 +544,7 @@ beers:
     hops_as_written: Japanese Rice Lager - Brewed in collaboration with The Showbox and Prof. Featuring Saaz and Tettnang Hops
     hops:
       - { hop: saaz-cz, name: Saaz, as_written: Saaz }
-      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnang }
   - slug: real-talk
     name: Real Talk
     url: https://themasonryseattle.com/fast-fashion/
@@ -577,9 +577,9 @@ beers:
     abv: 5.2
     hops_as_written: German Style Pilsner - Brewed in collaboration with The Showbox and Red Clay Strays. Featuring Hallertau Mittelfrüh, Hersbrucker and Tettnang Hops
     hops:
-      - { hop: hallertau-mittelfrueh, name: Hallertau, as_written: Hallertau }
+      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau }
       - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
-      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnang }
   - slug: reflection
     name: Reflection
     url: https://themasonryseattle.com/fast-fashion/
@@ -595,7 +595,7 @@ beers:
     hops:
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: motueka, name: Motueka, as_written: Motueka }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: salad-days
     name: Salad Days
     url: https://themasonryseattle.com/fast-fashion/
@@ -605,7 +605,7 @@ beers:
       - { hop: cashmere, name: Cashmere, as_written: Cashmere }
       - { hop: ekuanot, name: Ekuanot, as_written: Ekuanot }
       - { hop: azacca, name: Azacca, as_written: Azacca }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: season-to-taste
     name: Season to Taste
     url: https://themasonryseattle.com/fast-fashion/
@@ -613,7 +613,7 @@ beers:
     hops_as_written: DDH India Pale Ale - With Phantasm, Freestyle New Zealand Cascade, and Freestyle Nelson
     hops:
       - { hop: cascade, name: Cascade, as_written: Cascade }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: second-generation-ipa
     name: Second Generation IPA
     url: https://themasonryseattle.com/fast-fashion/
@@ -637,7 +637,7 @@ beers:
     abv: 4.7
     hops_as_written: German Style Altbier - Brewed in collaboration with Halfway Crooks. Hopped with Tettnang and Tradition.
     hops:
-      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnang }
   - slug: shift-change
     name: Shift Change
     url: https://themasonryseattle.com/fast-fashion/
@@ -669,7 +669,7 @@ beers:
     hops:
       - { hop: chinook, name: Chinook, as_written: Chinook }
       - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: nelson-sauvin, name: Nelson, as_written: Nelson }
+      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson }
   - slug: spiritual-technology
     name: Spiritual Technology
     url: https://themasonryseattle.com/fast-fashion/
@@ -741,7 +741,7 @@ beers:
     hops_as_written: Japanese Rice Lager - Brewed in celebration of Blue Owl Workshop's 15th anniversary. Hopped with Saaz and Tettnang.
     hops:
       - { hop: saaz-cz, name: Saaz, as_written: Saaz }
-      - { hop: tettnang, name: Tettnang, as_written: Tettnang }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnang }
   - slug: work-trip
     name: Work Trip
     url: https://themasonryseattle.com/fast-fashion/
