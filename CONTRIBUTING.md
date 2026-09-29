@@ -73,7 +73,7 @@ Then drop `meta.verification` from `unverified` to `single-source` and update `m
 
 - YAML, two-space indent, no tabs.
 - Flow mappings (`{ source: x, low: 1 }`) are fine for observations, but **quote any string containing a comma** or YAML will silently parse it as another key. This has already bitten this repo once.
-- Prose fields (`aroma.summary`, `meta.notes`) get block scalars (`>`), and should read like a brewer talking, not a catalogue. Say what the hop actually does in a beer.
+- Prose fields (`aroma.summary`, `meta.notes`) get block scalars (`>`), and should read like someone at the bar talking, not a catalogue. Say what the hop actually does in the glass.
 - Aroma summaries: be specific and be willing to be negative. "Polarising in quantity" is useful. "Complex and versatile" is not.
 
 ## What gets rejected

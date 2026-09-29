@@ -1,265 +1,207 @@
 # HopLove 🍺❤️
 
-**An open hop database that shows its working.**
+**Look at a can. Know the hops.**
 
 ### → [brooksgroves.com/hoplove](https://brooksgroves.com/hoplove/)
 
-[Browse the hops](https://brooksgroves.com/hoplove/) ·
-[The hop landscape](https://brooksgroves.com/hoplove/landscape/) ·
-[Where the hops grow](https://brooksgroves.com/hoplove/grown/) ·
 [What's in the can](https://brooksgroves.com/hoplove/beers/) ·
-[The JSON API](https://brooksgroves.com/hoplove/api/v1/hops.json) ·
-[Report a wrong number](../../issues/new?template=data-correction.yml)
+[Scan a beer](https://brooksgroves.com/hoplove/scan/) ·
+[Fresh hop season](https://brooksgroves.com/hoplove/fresh-hop/) ·
+[Hop vs hop](https://brooksgroves.com/hoplove/compare/) ·
+[Hop science](https://brooksgroves.com/hoplove/science/) ·
+[All the hops](https://brooksgroves.com/hoplove/) ·
+[How it works](https://brooksgroves.com/hoplove/about/)
 
-Every hop spec sheet on the internet hands you one confident number. `Alpha: 5.5–8.5%`. Cool. Says who? Measured when? In whose field, in what crop year, by the people who bred it or by a shop trying to move last season's crop?
+You're at the bar. The can says **Citra, Mosaic, Strata**. You nod like you know what that means.
 
-Nobody says. So I built a database that does.
+I did that for years — 865 check-ins on Untappd, mostly IPAs. I could tell you which beers I loved. I couldn't tell you *why*, or what Strata actually brings to a beer, or which farm in the Yakima Valley it came off of.
 
-**196 cultivars. 172 backed by real breeder, grower and merchant sources, 95 of them by two or more. Every number traceable to whoever actually said it.**
+So I built HopLove. **This isn't a brewing tool. It's for the people drinking the beer** — so the next time you're staring at a tap list, you know exactly what you're about to taste.
+
+> **232 hops · 2,036 beers · 32 breweries · 145 fresh hop beers traced to the farm · 22 sources · every number cited**
 
 ---
 
-## The thing that set me off
+## What you can do with it
 
-I went looking for Aramis data one night — a French aroma hop, Strisselspalt crossed with WGV back in 2002 — and found four sites giving four different alpha ranges. One of them was honest enough to admit in its own methodology page that its sources were *"different or blatantly contradictory"* and that the fix was to widen the range until everything fit inside it.
+🍺 **Find your beer.** Type a beer, a brewery or a hop. Every beer gets a page: each hop in it, what it smells like, how hard it bites, where it was grown — and a plain-English *"what it'll taste like"* that adds the hops up. Plus **beers like this one**, ranked by the closest hop bill, for when you find one you love.
 
-Which, fine. That is a reasonable thing to do. But it means the range you're reading is an artifact of an editorial decision made by a stranger, and you cannot see the decision, and you cannot check it, and you cannot disagree with it.
+📸 **Snap the can.** Beer not listed? Point your phone at the can, the bottle or the tap list. Claude reads the hops off it and opens every one up.
 
-I brew on a 10-gallon system in the garage with a notebook full of crossed-out numbers. I am not going to pretend I need four-decimal precision on cohumulone. But I do want to know whether the 5.5% low end came from the breeder or from a shop trying to move last year's crop, because those two numbers mean completely different things when I'm building a bittering charge.
+🌿 **Fresh hop season.** Late August through October, the Pacific Northwest goes a little crazy: hops go from the bine to the kettle the same day, never dried. The [fresh hop guide](https://brooksgroves.com/hoplove/fresh-hop/) lists every fresh hop beer this season and the farm behind each hop — Carpenter Ranches, Sauve & Son, Roy Farms, Coleman, Loza, Van Horn. When a brewery writes *"fresh, wet Roy Farms Strata, with freshly dried Roy Strata"*, HopLove knows which Strata was wet.
 
-So: store the observations. Derive the range. Show both.
+⚖️ **Hop vs hop.** Citra or Mosaic? Strata or Nelson? Put any two side by side — what they share, which bites harder, what brewers pair them with, and the beers that use both. Send the link to whoever you're arguing with.
+
+🧪 **The chemistry, for the curious.** What you smell in an IPA is mostly four oils — myrcene, humulene, caryophyllene, farnesene. The bitterness is alpha acids rearranging in the boil. [Hop science](https://brooksgroves.com/hoplove/science/) explains it in bar words, with the actual molecules in 3D you can spin around.
+
+🍻 **Brooks's glass.** My Untappd check-ins sync in every few hours, and my ratings show up on every beer I've had — so you can see what I thought before you order it. (I rate on caps, like Untappd. I'm a 3.75 guy.)
+
+---
+
+## Why you can trust the numbers
+
+Every hop spec on the internet hands you one confident number. `Alpha: 5.5–8.5%`. Says who? The people who bred it? A shop clearing out last year's crop? A website that averaged three other websites?
+
+Nobody says. HopLove does.
+
+Each number is stored **as the source said it, with the source attached** — the breeder, the grower, the merchant. The site rolls them up into a range and draws each source as its own dot on the bar, so when they disagree, you *see* them disagree.
 
 ```yaml
+# data/hops/styrian-cardinal.yml
 alpha_acid:
   unit: percent
   observations:
-    - { source: beermaverick, low: 5.5, high: 8.5, typical: 7.0 }
-    - { source: hops-france,  low: 7.0, high: 8.5, note: 'Breeder figure, narrower than merchant spread.' }
+    - { source: charles-faram, low: 8.0, high: 10.0 }
+    - { source: hop-alliance, low: 7.8, high: 7.8 }
 ```
 
-That's the whole thesis. Nobody hand-writes a published range in this repo. You write down what each source actually said, and the build rolls it up into `5.5–8.5%, typical 7.5, 2 sources` — and the site draws the breeder's number and the aggregator's number as two separate dots on the same bar so you can *see* them disagree.
+Charles Faram publishes a range for the variety; Hop Alliance publishes the lot they're selling. Both are true. The page shows both.
+
+The rules are strict, and the build enforces them:
+
+- **No source, no number.** Every figure points at an entry in `data/sources.yml`.
+- **Hand-typed numbers must be on the page.** Anything keyed in by hand is checked against a saved copy of the source's page. If the number isn't there, the build stops.
+- **Garbage gets excluded out loud.** When a spec sheet prints a total oil of 20 mL/100g (ten times any real hop), that cell is dropped *by name, with the reason*, and the reason prints on every run.
+- **A gap beats a guess.** Nine hops still have no numbers, because no source we trust publishes them. Their pages say *awaiting data* instead of making something up.
 
 ---
 
-## What you'll find on the site
+## Where the beers come from
 
-- **A page per hop** — every source plotted on its own range bar, the oil breakdown, aroma, beer styles, pedigree, and ranked substitutes.
-- **[The hop landscape](https://brooksgroves.com/hoplove/landscape/)** — every hop with published figures on one chart, bittering power against aroma oil. Each hop carries a cross out to the widest range any source reported, so a big cross means the sources disagree or the crop swings year to year. Every hop page links in with that hop lit up.
-- **[Where America's hops grow](https://brooksgroves.com/hoplove/grown/)** — Washington grows three-quarters of the US crop, and this is the page that shows it: acres for every variety USDA counts in Washington, Oregon and Idaho, 2015 to 2025, straight from the National Hop Report. Every hop that's in the survey gets its own *Where it's grown* chart too — Citra is the No. 1 hop by acreage in both Washington and Oregon.
-- **[What's in the can](https://brooksgroves.com/hoplove/beers/)** — pick a beer, see its hops. 1,300+ beers from 15 Pacific Northwest breweries — Seattle (Cloudburst, Reuben's, Fair Isle, Elysian, Holy Mountain, Fremont), Bellingham (Aslan), Tacoma (7 Seas), Hood River (pFriem, Double Mountain, Kings & Daughters), Portland (Breakside, Ex Novo, Ecliptic) and Astoria (Fort George) — each with a page of its own, each hop opened up — aroma, alpha, oil breakdown, how many acres of it Washington and Oregon grew — with Cryo and fresh-hop additions called out (Fresh Hop Mirrored Realities: fresh Strata from Coleman Farms). Every hop page lists the beers it's in.
-- **[Scan a beer](https://brooksgroves.com/hoplove/scan/)** — photograph a can, a bottle or a tap list (or paste the brewery's text) and see its hops. It reads as soon as you shoot. Claude reads the picture through the site's Cloudflare Worker, so no key is ever in the browser; keeping it opens a prefilled GitHub issue that a workflow turns into data.
-- **Your glass** — Brooks's Untappd check-ins (merged daily from brooksgroves.com/beers.json into `data/untappd/checkins.yml`, with the caps rating read off each check-in page when Untappd allows) are joined to the beers HopLove knows. Beer pages show the check-in and rating; hop pages say how many of their beers you've had; `/beers/` shows the latest check-ins and, once enough are rated, the hops you love. Rate any beer (0.25–5 caps, like Untappd) from its page or while scanning; ratings land in `data/ratings.yml` through the same issue workflow.
-- **Honesty built into the page.** A hop with only a placeholder citation gets a red "needs a citation" badge. A stub with no numbers says *awaiting data*. A brewing role that hasn't been sourced says *role ?* instead of quietly guessing. An oil breakdown that doesn't account for enough of the oil isn't drawn at all — rather than scaling two trace compounds up to 100% and inventing the rest.
+Straight from the breweries' own websites. A crawler reads their beer pages **twice a week** and pulls out the hops each beer names — so new releases just show up.
 
-It all works with JavaScript off. JavaScript adds search, filters and tooltips on top.
-
----
-
-## What's in the jar
-
-```
-data/hops/*.yml         one file per cultivar — the actual product
-data/sources.yml        the source registry. no entry, no number.
-data/acreage/           USDA acreage by variety and state. generated, never hand-edited
-data/beers/             hop lists from breweries' own beer pages. generated
-data/taxonomy/          controlled vocabulary: aroma, styles, countries, breeders
-data/reference/         the checklist of varieties that should have a record
-schema/                 JSON Schema 2020-12. the contract.
-scripts/validate.js     the bouncer
-scripts/lib/rollup.js   observations -> published ranges. all the arithmetic lives here
-scripts/build.js        observations in, API + website out
-site/                   templates and styles for the static site
-tools/ingest/           scrapers that turn breeder sheets into observations
-dist/                   generated. gitignored. never edit.
-```
-
-One build, three outputs, and the website is rendered *from* the API JSON, so the site can't drift from the data:
-
-| Output | What it is |
+| Where | Breweries |
 |---|---|
-| `dist/api/v1/**` | A free JSON API. No key, no auth, no rate limit, CORS wide open. |
-| `dist/index.html`, `dist/hops/<slug>/`, `dist/landscape/`, `dist/grown/` | The static site. |
-| `dist/api/v1/hops.csv` | For when you just want to open it in a spreadsheet like a normal person. |
+| **Seattle** | Cloudburst · Reuben's · Stoup · Georgetown · Fast Fashion · Fair Isle · Ladd & Lass · Elysian · Holy Mountain · Fremont |
+| **Portland** | Ex Novo · Breakside · Great Notion · Ecliptic |
+| **Hood River** | pFriem · Double Mountain · Kings & Daughters |
+| **Bellingham** | Aslan · Chuckanut · Structures · Wander |
+| **Yakima** | Bale Breaker · Single Hill |
+| **Around Oregon** | Fort George (Astoria) · Block 15 (Corvallis) · Sunriver · Barley Brown's (Baker City) · Pelican (Pacific City) |
+| **Around Washington** | 7 Seas (Tacoma) · Triceratops (Tumwater) · Fortside (Vancouver) |
+| **And one for old times' sake** | Great Basin (Reno) |
 
-Every push to `main` validates, builds and deploys to GitHub Pages.
+Breweries write hop lists every way imaginable — tidy `Hops:` fields, run-on sentences, all-caps menus, "a galaxy of hops" (lovely, but which ones?). Each one gets its own reader, and the readers know a few things the hard way: *Summer* Pale Ale isn't made with Summer hops, *Crystal malt* isn't Crystal hops, and YCH's *Simcoe Cryo Fresh®* is one fresh hop, not two.
+
+Beers that aren't online come in through the camera. Anything wrong gets fixed with the **Edit this beer** button, and the fix sticks through every future crawl.
 
 ---
 
-## Run it
+## How it runs itself
+
+Nobody babysits this. GitHub Actions does the chores:
+
+| When | What |
+|---|---|
+| Every push | Validate the data, build the site, deploy |
+| Mon & Thu | Re-read every brewery, add new beers, redeploy |
+| Every 6 hours | Pull Brooks's latest Untappd check-ins |
+| On a scan, rating or edit | The site opens a GitHub issue; a workflow turns it into data |
+| 1st of the month | Check every hop source for new varieties; open an issue for anything new |
+
+The camera and one-tap saving go through a small Cloudflare Worker that holds the API keys, so nothing secret is ever in the browser. It caps how many photos anyone can read in a day, so a post that takes off can't run up the bill.
+
+---
+
+## The data is free
+
+Static JSON, no key, no sign-up, no rate limit, CORS wide open. **CC BY 4.0** — build whatever you want, just say where it came from.
+
+```
+GET https://brooksgroves.com/hoplove/api/v1/beers.json            every brewery, beer and hop bill
+GET https://brooksgroves.com/hoplove/api/v1/hops.json             every hop: ranges + every observation
+GET https://brooksgroves.com/hoplove/api/v1/hops/citra.json       one hop
+GET https://brooksgroves.com/hoplove/api/v1/similar/citra.json    what's closest to Citra, and why
+GET https://brooksgroves.com/hoplove/api/v1/acreage.json          USDA acres by variety, state and year
+GET https://brooksgroves.com/hoplove/api/v1/sources.json          who said what
+GET https://brooksgroves.com/hoplove/api/v1/hops.csv              the lot, for a spreadsheet
+```
+
+`v1` won't break. If the shape has to change, it becomes `v2` and `v1` keeps working.
+
+---
+
+## Honest state of the data
+
+| | count | |
+|---|---|---|
+| Hops | **232** | every one has a page and an API endpoint |
+| With real figures | **223** | from breeders, growers and merchants |
+| Backed by two or more sources | **103** | where you'll see the dots disagree |
+| With a full oil breakdown | **135** | the rest are waiting on a source that publishes myrcene |
+| With aroma descriptors | **161** | |
+| Still leaning on a placeholder somewhere | **13** | flagged in red on the page until a real source replaces it |
+| No numbers yet | **9** | Ibuki, Teamaker, Ultra, Newport and friends. No trusted source covers them. |
+
+---
+
+## Under the hood
+
+```
+data/hops/*.yml          one file per hop — the actual product
+data/sources.yml         the source registry. no entry, no number
+data/beers/*.yml         hop lists read from breweries' own sites (generated)
+data/beers/scanned/      beers added from the camera
+data/beers/overrides.yml hand fixes from "Edit this beer"
+data/untappd/            Brooks's check-ins and Untappd beer history
+data/ratings.yml         ratings set on HopLove
+data/acreage/            USDA National Hop Report, 2015–2025 (generated)
+schema/                  JSON Schema — the contract
+scripts/validate.js      the bouncer
+scripts/lib/rollup.js    observations → published ranges. all the arithmetic lives here
+scripts/build.js         data in, API + website out
+site/                    templates, styles, the scan page, the science page
+tools/ingest/            the readers: hop sources, breweries, Untappd, USDA
+tools/worker/            the Cloudflare Worker (camera proxy, limits, one-tap saves)
+```
+
+The website is rendered *from* the API data, so the two can't drift apart.
+
+**Hop sources:** Hopsteiner, BarthHaas, Yakima Chief Ranches and the Hop Breeding Company each have their own scraper; one-page spec sheets from Indie Hops, Crosby, Charles Faram, Hop Alliance, Yakima Valley Hops, John I. Haas, Yakima Quality Hops, CLS Farms and NZ Hops are read from saved copies; acreage comes from the USDA. Scrapers write observations and nothing else — they never average or merge. The maths happens at build time, in public, the same way for every hop.
+
+### Run it yourself
 
 ```bash
-git clone git@github.com:bdgroves/hoplove.git
+git clone https://github.com/bdgroves/hoplove.git
 cd hoplove
 pixi install
 
 pixi run validate    # yells at you about the data
 pixi run build       # writes dist/
 pixi run serve       # http://localhost:4173
-pixi run coverage    # what's missing, what's stale, what's still on placeholders
 pixi run check       # exactly what CI runs
 ```
 
-Node is pinned in `pixi.toml` and locked in `pixi.lock`, so a fresh clone builds byte-identical output on any machine. That matters more than usual for a project whose entire pitch is "you can check my work" — if the build isn't reproducible, neither is the data. (No pixi? `npm install && npm run build` works; the pixi tasks are thin wrappers.)
-
-`pixi run validate` is deliberately hard to please. Past the schema, it checks the things a schema can't: every cited source exists, every substitute points at a real record, no aroma tag was invented on the spot, oil components sum to something plausible, nobody typed a cohumulone of 420, a `published` record isn't quietly resting on placeholders, and substitutions go both ways so the graph is walkable.
-
-Errors fail the build. Warnings don't — they print as a to-do list, because a visible gap beats an invisible guess. The most common warning right now is `no myrcene figure`: Hopsteiner's sheets don't publish myrcene, which is usually the single biggest component of a hop's oil, so the tool says the breakdown is incomplete instead of drawing you a pie chart that adds up to 4%.
+(No pixi? `npm install && npm run build` works too.)
 
 ---
 
-## Pulling data in
+## What's next
 
-Scrapers live in `tools/ingest/`, one per source, all under the same contract: **dry run by default, cached responses, identified by user-agent, and they write observations and nothing else.** They never average, never merge, never touch another source's observation. The arithmetic stays in `rollup.js` at build time where you can see it.
-
-| Scraper | Covers | Notes |
-|---|---|---|
-| `hopsteiner` | ~100 varieties across the US, Europe, the Southern Hemisphere; the catalog is crawled, not guessed | acids and some oils; no myrcene |
-| `ych` | Yakima Chief Ranches: Citra, Mosaic, Simcoe, Krush, Dolcita, Sabro… | full oil profiles **including myrcene**, plus storage stability |
-| `barthhaas` | ~100 varieties worldwide, incl. Galaxy, Vic Secret, the Czech and Polish hops | full oil breakdown, stated as the range over the last four crop years |
-| `hbc` | Hop Breeding Company, Yakima: all 10 brands (Citra, Mosaic, Sabro, Talus, TerraFlux…) from one page | the breeder's own spec; oils for Citra and Mosaic |
-| `sheets` | One-page spec sheets: Indie Hops (Strata, Meridian, Audacia, Lórien, Luminosa, and Oregon-grown classics), John I. Haas, Yakima Quality Hops (Elani), CLS Farms (Zappa), Charles Faram | read from saved copies; hand-keyed numbers must appear verbatim in the saved file, and cells that can't be right are excluded by name with the reason |
-| `beers` | Fort George Brewery's beer pages | the hops each beer lists, matched to records; Cryo, CO2 extract, kief and fresh-hop farms kept apart from the variety |
-| `usda_nass` | USDA National Hop Report, 2015–2025: acres and production by variety for Washington, Oregon and Idaho | writes `data/acreage/`, not hop records. Checked by making every state and year add up to USDA's own totals, exactly |
-
-```bash
-pixi run -e data ych citra            # dry run: what it found, and where it disagrees
-pixi run -e data ych citra --apply    # write it
-pixi run -e data ych --all --apply
-```
-
-The reconciliation report is the useful part:
-
-```
-  !! alpha_acid: on file 10.0-15.0 (seed-general-knowledge), ychr says 11.0-13.0
-```
-
-`!!` means it disagrees with a placeholder — the placeholder was probably wrong. `~` means it disagrees with a real source, which is not an error. Two sources disagreeing is the thing this project exists to show.
-
-**No local setup?** The **Run a scraper** workflow in the Actions tab runs any scraper on GitHub's runners, validates, commits the result and redeploys. Works from a phone.
-
-**New releases find me.** On the 1st of every month a workflow lists what each source publishes, diffs it against `data/hops/`, and opens an issue for anything new. Its first run turned up Dolcita, Krush, HBC 682, Terrasurge and Ahtanum; all five are in now.
+- [ ] **More breweries.** Anyone in the Northwest whose website names their hops is fair game. Icicle in Leavenworth is next — their site just needs a real browser to read.
+- [ ] **"Most used in"** on every hop page — Strata shows up mostly in hazies, that kind of thing — counted from the beers.
+- [ ] **A fresh hop 2026 recap** once harvest is done: the most-used fresh hops, the busiest farms, and the best of what I drank.
+- [ ] **The hops you love.** Once enough of my ratings are in, a page that works out which hops show up in the beers I rate highest. Then maybe one for you.
+- [ ] **The last nine hops,** whenever a trusted source publishes their numbers.
 
 ---
 
-## Substitution, done with math instead of vibes
+## Say hi
 
-"What can I use instead of Citra" is really three questions wearing a trenchcoat, so `scripts/lib/similarity.js` answers all three separately:
+Something wrong with a beer? Hit **✉️ Email Brooks** on its page, or [open an issue](../../issues/new). A brewery that wants its beers on here: put your hop list on your website, in plain words, one page per beer — HopLove will find it. Or just [email me](mailto:contact@brooksgroves.com?subject=HopLove).
 
-- **chemistry** — scaled distance across alpha, beta, cohumulone, total oil
-- **oils** — distance across the normalised oil breakdown, so myrcene-bombs cluster with myrcene-bombs
-- **aroma** — tag overlap, with partial credit where two tags share a family, because grapefruit and tangerine are not strangers
+If HopLove ever saves you from a bad six-pack, [buy me a beer](https://ko-fi.com/brooksgroves). 🍺
 
-An axis that hasn't been measured earns nothing. The score is how much *evidence* there is for the swap, not just how close the numbers you happen to have are — otherwise a hop known only by its acid numbers outranks one you actually know. Curated swaps a human vouched for in the YAML get a bonus on top, because a brewer who has made the swap beats a distance metric.
-
-```
-Citra →  Mosaic         83   [brewer-tested]
-         Simcoe         72
-         Centennial     64   [brewer-tested]
-         Idaho 7        57
-```
-
-Nelson Sauvin's best match scores 50, right on the line where anything lower is a different beer. Nothing substitutes for Nelson Sauvin. The number agrees.
+The story of why this exists: [What's in the Can? Building HopLove](https://brooksgroves.com/blog/hoplove-post.html).
 
 ---
 
-## A hop is not one product
+## The fine print
 
-Idaho 7 T-90 pellets and Idaho 7 Cryo are the same plant with different numbers. Cryo is lupulin separated from the vegetal fraction, so alpha and oil roughly double. Most hop databases model this as a checkbox — "Cryo available: yes" — which tells you nothing you can brew with.
-
-So formats are first-class. Each `forms` entry carries its own observations, and the build derives an `alpha_factor` per format — Idaho 7 Cryo comes out at about **2×** the pellet — because that's the number you need when dropping a concentrate into a recipe written for pellets. Dose by alpha, not by grams. The validator knows a concentrate can't be weaker than the hop it came from, and that 24% alpha is normal for Cryo and a typo on a leaf hop.
+Code is **MIT**. Data is **CC BY 4.0**. Not affiliated with any brewery, hop breeder, farm, merchant or Untappd. Variety names are the marks of their owners and are used to name the plants, which is what names are for. See [NOTICE.md](NOTICE.md).
 
 ---
 
-## The API
+Built in the Pacific Northwest, a couple hours from the Yakima Valley, where about three-quarters of America's hops come off the bine every fall. Around here hops aren't an ingredient — they're a harvest you can smell on the wind in September.
 
-Static JSON on a CDN: costs nothing to run, can't go down separately from the site.
-
-```
-GET /hoplove/api/v1/index.json            slim list, ~all you need for search
-GET /hoplove/api/v1/hops.json             everything
-GET /hoplove/api/v1/hops/citra.json       one hop: ranges + every underlying observation
-GET /hoplove/api/v1/similar/citra.json    ranked substitutes with component scores
-GET /hoplove/api/v1/acreage.json          USDA acreage by variety, state and year
-GET /hoplove/api/v1/beers.json            breweries, beers and their hops
-GET /hoplove/api/v1/sources.json          the source registry
-GET /hoplove/api/v1/taxonomy.json         aroma tags, styles, countries, breeders
-GET /hoplove/api/v1/hops.csv              the whole thing, flattened
-GET /hoplove/api/v1/schema/hop.schema.json
-```
-
-All on `https://brooksgroves.com`. Every response carries a `meta` envelope with the build timestamp and license. `v1` will not break — if the shape needs to change it becomes `v2` and `v1` keeps working. Building something with it? Go ahead; it's CC BY 4.0, just credit it. I'd love to hear about it.
-
----
-
-## Honest state of the data
-
-Nobody gets to skip this section.
-
-| | count | what that means |
-|---|---|---|
-| Cultivars | **196** | every one has a record, a page and an API endpoint |
-| Backed by a real source | **172** | breeders (Hopsteiner, BarthHaas, YCR, HBC, NZ Hops, Indie Hops) plus growers and merchants |
-| With a full oil breakdown (myrcene) | **109** | the rest are waiting on a source that publishes it |
-| Still citing a placeholder somewhere | **12** | mostly aroma prose and pedigree from the first seed pass |
-| No numbers yet | **24** | real varieties, no source found that covers them |
-
-I bootstrapped the first records from general brewing knowledge so there'd be something to build the tooling against. Every one of those citations points at `seed-general-knowledge`, tier `unsourced`, weight 0.1, and is flagged everywhere. When a real source arrives, the placeholder number it contradicts gets deleted rather than kept alongside — the rollup publishes the *union* of source ranges, so a padded guess would drag the published figure away from what the breeder measured. Citra went from a guessed 10–15% alpha to the breeder's 11–13% that way.
-
-The 32 empty records are the same principle pointed the other way. An empty record that says "we don't have this yet" beats a full one padded out with plausible guesses.
-
-Aramis is the fully-worked example of a single hop — copy its shape. Idaho 7 is the example for formats, and for the hardest coverage problem: bred by a family farm in Wilder, Idaho, distributed by three companies, found by no breeder's catalog.
-
----
-
-## Contributing
-
-Adding a hop: copy `data/hops/aramis.yml`, cite your sources in `data/sources.yml`, run `pixi run validate`, open a PR. CI runs `pixi run check` — same command, same pinned Node — so green locally means green there. Run `git config core.hooksPath .githooks` once per clone for the pre-commit check.
-
-Full instructions and gotchas are in [CONTRIBUTING.md](CONTRIBUTING.md). The one rule that matters: **never write a range you calculated yourself.** Write what the source said. The build does the arithmetic, in public, the same way for every hop.
-
-Found a wrong number? [Open an issue](../../issues/new?template=data-correction.yml). A correction with a source link is worth more to this project than a new hop without one.
-
----
-
-## Roadmap
-
-Done:
-
-- [x] Hopsteiner, BarthHaas, Yakima Chief Ranches and HBC scrapers — real breeder data for 149 hops, and myrcene for the hops that matter most
-- [x] Coverage report plus a monthly discovery workflow that opens an issue when a new variety shows up
-- [x] The hop landscape
-- [x] Run any scraper from the Actions tab
-- [x] Hop Breeding Company specs, straight from the breeder
-- [x] Washington, Oregon and Idaho acreage from the USDA National Hop Report, 2015–2025
-- [x] Indie Hops, Haas, Yakima Quality Hops and CLS Farms sheets: Strata, Pekko, Elani, Zappa, Meridian and more
-- [x] What's in the can: Fort George's beers, hop by hop
-
-Next, roughly in order of how much I want it:
-
-- [ ] **Aroma data for the rest.** 109 of 188 hops now carry aroma descriptors (most from BarthHaas's variety pages, translated through `tools/ingest/barthhaas_aroma_map.yml`). Apollo, Idaho 7's peers and the other hops BarthHaas doesn't carry are next — aroma is 40% of the substitution score.
-- [ ] **An IBU calculator that outputs a range** — because alpha is a range, your IBUs are too. Format-aware, so Cryo doses correctly. Nobody else can do this, because nobody else stores ranges.
-- [ ] A mini landscape on every hop page, with that hop and its substitutes highlighted
-- [ ] Side-by-side compare for 2–4 hops
-- [ ] More sources: NZ Hops, Hop Products Australia, Charles Faram — for the ~30 hops no current source covers
-- [x] Seattle breweries on What's in the can
-- [x] Scan a beer: photograph a can or paste the text, see the hops, add it with one GitHub issue
-- [x] Untappd check-ins and Untappd-style ratings joined to the hops
-- [x] Hop pairings counted from real brewery hop lists ("Brewed alongside")
-- [ ] Stoup, Georgetown and the other breweries whose beer pages are drawn by JavaScript
-- [ ] Plant patents as a source: public domain, breeder-authored, and they carry the pedigree marketing sheets leave out
-- [ ] Crop-year data, so you can watch alpha drift across harvests instead of reading one eternal average
-- [ ] BeerXML / BeerJSON import: paste a recipe, get told what's substitutable
-
----
-
-## Licensing, and a disclaimer
-
-Code is **MIT**. Data is **CC BY 4.0** — use it, build things on it, just say where it came from. Two licenses because they're two different assets, and the data is the one that took the work.
-
-Not affiliated with any hop breeder, farm, merchant, or the aggregators cited in `data/sources.yml`. Variety names are trademarks of their owners and are used here to identify the plants, which is what names are for. Measured properties of a plant are facts; facts don't belong to anybody. See [NOTICE.md](NOTICE.md).
-
----
-
-Built in the Pacific Northwest — within a couple hours' drive of the Yakima Valley, where something like three quarters of the American hop crop comes off the bine every fall. Around here hops aren't an ingredient you order, they're a harvest you can smell on the wind in September. Hard not to get curious about what's actually in them.
-
-Cheers. Go make something bitter.
+Cheers. Go drink something hoppy. 🍻
