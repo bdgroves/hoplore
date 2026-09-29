@@ -117,7 +117,8 @@ export function renderAbout({ meta, stats }) {
     <p>HopLove is a side project by <a href="https://brooksgroves.com/">Brooks Groves</a>, a GIS and data guy in
     Lakewood, Washington, who wanted to look at a can of fresh hop IPA and actually know what was in it. It started as
     a hop database that shows its sources (the working name was HopLore) and grew a beer list, a camera and a lot of
-    fresh hop season.</p>
+    fresh hop season. The whole story is on the blog:
+    <a href="https://brooksgroves.com/blog/hoplove-post.html">What's in the Can? Building HopLove</a>.</p>
     <p>Nobody's selling you hops, and there are no ads. It isn't affiliated with any brewery, breeder, farm or
     merchant; the variety names belong to their owners. The code and data are on
     <a href="https://github.com/bdgroves/hoplove">GitHub</a>.</p>
