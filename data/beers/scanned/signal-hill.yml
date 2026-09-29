@@ -1,0 +1,23 @@
+brewery:
+  slug: signal-hill
+  name: Signal Hill
+  city: Unknown
+  state: WA
+  url: https://www.google.com/search?q=Signal+Hill
+generated_by: 'HopLove scans (/scan/): photographed or pasted by a person, hops matched by tools/ingest/scanned_beer.py'
+retrieved: '2026-09-29'
+beers:
+  - slug: radiance
+    name: Radiance
+    url: https://www.google.com/search?q=Signal+Hill
+    abv: 6.1
+    hops_as_written: Harvest grown in Yakima with fresh wet Centennial fresh kilned Carpenter Sabro layered with Coleman Strata, Carpenter Talus, Sauve Simcoe & Loza Farms Amarillo
+    scanned_from: photo
+    scanned: '2026-09-29'
+    hops:
+      - { hop: centennial, name: Centennial, as_written: Centennial }
+      - { hop: sabro, name: Sabro, as_written: Sabro }
+      - { hop: strata, name: Strata, as_written: Strata }
+      - { hop: talus, name: Talus, as_written: Talus }
+      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
+      - { hop: amarillo, name: Amarillo, as_written: Amarillo }
