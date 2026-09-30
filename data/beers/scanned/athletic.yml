@@ -1,0 +1,20 @@
+brewery:
+  slug: athletic
+  name: Athletic Brewing Company
+  city: Unknown
+  state: US
+  url:
+generated_by: 'HopLove scans (/scan/): photographed or pasted by a person, hops matched by tools/ingest/scanned_beer.py'
+retrieved: '2026-09-30'
+beers:
+  - slug: cold-off-the-press
+    name: Cold Off the Press
+    url:
+    style: European-style Pilsner
+    hops_as_written: Hallertau Mittelfrüh, Tettnanger, and Lemondrop hops
+    scanned_from: text
+    scanned: '2026-09-30'
+    hops:
+      - { hop: hallertau-mittelfrueh, name: Mittelfrüh, as_written: Hallertau Mittelfrüh }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+      - { hop: lemondrop, name: Lemondrop, as_written: Lemondrop }

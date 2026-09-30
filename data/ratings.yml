@@ -1,5 +1,11 @@
 about: Brooks's own ratings, set on HopLove (tools/ingest/rating.py). 0.25-5 caps, like Untappd.
 ratings:
+  - brewery: athletic
+    beer: cold-off-the-press
+    name: Cold Off the Press (Athletic Brewing Company)
+    stars: 3.5
+    note: Great on a Tuesday afternoon when you have things to do, the Olive oil makes it feel heaty almost.
+    date: '2026-09-30'
   - brewery: great-basin
     beer: ichthyosaur-ipa
     name: Ichthyosaur IPA (Great Basin Brewing Co.)
