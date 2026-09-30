@@ -1,5 +1,13 @@
 source: Untappd, via https://brooksgroves.com/beers.json (tools/ingest/untappd.py) -- do not edit by hand
 checkins:
+  - id: 1605032225
+    date: '2026-09-30'
+    beer: Cold Off the Press
+    brewery: Athletic Brewing Company
+    venue: Western State Hospital
+    comment: Is interesting, great on a Tuesday afternoon when you have things to do, found it a bit soapy though.  🔥🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_09_30/7ffccc799f43a245564dd4b966e36a73_c_1605032225_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1605032225
   - id: 1604902212
     date: '2026-09-29'
     beer: Radiance (2026)
