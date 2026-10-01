@@ -5,7 +5,7 @@ brewery:
   state: OR
   url: https://www.barleybrownsbeer.com/
 generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
-retrieved: '2026-09-29'
+retrieved: '2026-10-01'
 beers:
   - slug: 80-eighty-shilling
     name: 80/- (Eighty Shilling)

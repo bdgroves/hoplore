@@ -5,7 +5,7 @@ brewery:
   state: WA
   url: https://www.structuresbrewing.com/
 generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
-retrieved: '2026-09-29'
+retrieved: '2026-10-01'
 beers:
   - slug: dih
     name: Die In Haze

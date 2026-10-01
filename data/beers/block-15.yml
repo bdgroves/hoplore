@@ -5,7 +5,7 @@ brewery:
   state: OR
   url: https://www.block15.com/
 generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
-retrieved: '2026-09-29'
+retrieved: '2026-10-01'
 beers:
   - slug: animal-cookies-fresh-hop
     name: Animal Cookies - Fresh Hop
@@ -131,25 +131,3 @@ beers:
     hops_as_written: A Fresh Hop version of our flagship Imperial IPA is back for 2026, using fresh Citra hops from Westwood Farms in Gervais, Oregon. *Release dates may be subject to change depending on hop harvest windows.
     hops:
       - { hop: citra, name: Citra, fresh: true, farm: Westwood Farms, as_written: Citra }
-  - slug: collaboration-beers
-    name: Synergy Series
-    url: https://block15.com/collaboration-beers
-    abv: 6.25
-    hops_as_written: 'teiner thin-film Apollo extract. Banker’s Bills will be available at Block 15 locations starting July 24th, and around the PNW the following week. Coming Soon A special project made with Brittney, our Intern from the OSU Fermentation Science Program Past Collaborations Alumni Club: High Desert West Coast IPA • 6.10% Collab with: Barley Browns Beer Release Date: June 2026 Buzzworks West Coast IP...'
-    hops:
-      - { hop: apollo, name: Apollo, as_written: Apollo }
-      - { hop: most, name: Most, as_written: most }
-      - { hop: anchovy, name: Anchovy, as_written: Anchovy }
-      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
-      - { hop: sultana, name: Sultana, as_written: Sultana }
-      - { hop: cascade, name: Cascade, as_written: Cascade }
-      - { hop: columbus, name: Columbus, form: Cryo, as_written: Columbus }
-      - { hop: hallertau-mittelfrueh, name: Hallertau Mittelfruh, as_written: Hallertau }
-      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
-      - { hop: citra, name: Citra, as_written: Citra }
-      - { hop: simcoe, name: Simcoe, as_written: Simcoe }
-      - { hop: comet, name: Comet, as_written: Comet }
-      - { hop: pacific-sunrise, name: Pacific Sunrise, as_written: Pacific Sunrise }
-      - { hop: chinook, name: Chinook, as_written: Chinook }
-      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
-      - { hop: cashmere, name: Cashmere, as_written: Cashmere }

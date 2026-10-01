@@ -5,7 +5,7 @@ brewery:
   state: WA
   url: https://singlehillbrewing.com/
 generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
-retrieved: '2026-09-29'
+retrieved: '2026-10-01'
 beers:
   - slug: dankmaster-flash
     name: Dankmaster Flash
@@ -27,6 +27,27 @@ beers:
       - { hop: columbus, name: Columbus, farm: Marc Desmarais Farms, as_written: Columbus }
       - { hop: comet, name: Comet, farm: Newhouse Ranches, as_written: Comet }
       - { hop: zappa, name: Zappa, farm: CLS Farms, as_written: Zappa }
+  - slug: five-sisters
+    name: Five Sisters
+    url: https://singlehillbrewing.com/menu/
+    abv: 5.2
+    hops_as_written: A collaboration focused on connecting women in beer with women on hop farms. Fresh, wet Perault Farms Mosaic with freshly kilned Gooding Farms Idaho Gem, CLS Zappa, Van Horn Citra, and Haas Loral.
+    hops:
+      - { hop: mosaic, name: Mosaic, fresh: true, farm: Perault Farms, as_written: Mosaic }
+      - { hop: idaho-gem, name: Idaho Gem, farm: Gooding Farms, as_written: Idaho Gem }
+      - { hop: zappa, name: Zappa, as_written: Zappa }
+      - { hop: citra, name: Citra, farm: Van Horn Farms, as_written: Citra }
+      - { hop: loral, name: Loral, as_written: Loral }
+  - slug: fresh-hop-lateral-a
+    name: Fresh Hop Lateral A
+    url: https://singlehillbrewing.com/menu/
+    abv: 7.2
+    hops_as_written: We took a drive down Lateral A in the lower Yakima Valley to Perrault Farms where we sourced the fresh, wet, Krush and freshly kilned Krush, Mosaic, and Dolcita for this brew.
+    hops:
+      - { hop: krush, name: Krush, fresh: true, as_written: Krush }
+      - { hop: krush, name: Krush, as_written: Krush }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: dolcita, name: Dolcita, as_written: Dolcita }
   - slug: last-light
     name: Last Light
     url: https://singlehillbrewing.com/menu/

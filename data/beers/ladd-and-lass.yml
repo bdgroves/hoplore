@@ -5,7 +5,7 @@ brewery:
   state: WA
   url: https://www.laddandlassbrewing.com/
 generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
-retrieved: '2026-09-29'
+retrieved: '2026-10-01'
 beers:
   - slug: ish-fresh-hop-el-dorado-hazy-ipa
     name: (ish) Fresh Hop El Dorado Hazy IPA
@@ -21,18 +21,14 @@ beers:
     hops_as_written: Fresh Chinook from Roy Farms
     hops:
       - { hop: chinook, name: Chinook, fresh: true, farm: Roy Farms, as_written: Fresh Chinook from Roy Farms }
-  - slug: cloud-sipper
-    name: Cloud Sipper
+  - slug: crunchy-boi
+    name: Crunchy Boi
     url: https://www.laddandlassbrewing.com/
-    abv: 7.0
-    hops_as_written: Crosby Estate Comet, Nelson Sauvin, Cryo Krush, Dolcita, Tangier, Cryo Citra
+    abv: 5.3
+    hops_as_written: Adeena, Mosaic
     hops:
-      - { hop: comet, name: Comet, farm: Crosby Hop Farm, as_written: Crosby Estate Comet }
-      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
-      - { hop: krush, name: Krush, form: Cryo, as_written: Cryo Krush }
-      - { hop: dolcita, name: Dolcita, as_written: Dolcita }
-      - { hop: null, name: Tangier, as_written: Tangier }
-      - { hop: citra, name: Citra, form: Cryo, as_written: Cryo Citra }
+      - { hop: adeena, name: Adeena, as_written: Adeena }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
   - slug: fractal-sunset
     name: Fractal Sunset
     url: https://www.laddandlassbrewing.com/
@@ -64,6 +60,16 @@ beers:
       - { hop: mosaic, name: Mosaic, form: DynaBoost, as_written: Mosaic Dynaboost }
       - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
       - { hop: riwaka, name: Riwaka, as_written: Riwaka }
+  - slug: fresh-hop-krush
+    name: Fresh Hop Krush
+    url: https://www.laddandlassbrewing.com/
+    abv: 6.8
+    hops_as_written: Fresh Krush, Cryo Krush, Cryo Citra, Nectaron
+    hops:
+      - { hop: krush, name: Krush, fresh: true, as_written: Fresh Krush }
+      - { hop: krush, name: Krush, form: Cryo, as_written: Cryo Krush }
+      - { hop: citra, name: Citra, form: Cryo, as_written: Cryo Citra }
+      - { hop: nectaron, name: Nectaron, as_written: Nectaron }
   - slug: fresh-hop-krush-hazy-ipa
     name: Fresh Hop Krush Hazy IPA
     url: https://www.laddandlassbrewing.com/
@@ -116,14 +122,6 @@ beers:
       - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: chinook, name: Chinook, as_written: Chinook }
       - { hop: citra, name: Citra, form: Cryo, as_written: Cryo Citra }
-  - slug: trampled-by-koalas
-    name: Trampled by Koalas
-    url: https://www.laddandlassbrewing.com/
-    abv: 5.1
-    hops_as_written: Nelson Sauvin, Citra
-    hops:
-      - { hop: nelson-sauvin, name: Nelson Sauvin, as_written: Nelson Sauvin }
-      - { hop: citra, name: Citra, as_written: Citra }
   - slug: your-shout-bruv
     name: Your Shout, Bruv
     url: https://www.laddandlassbrewing.com/
@@ -131,3 +129,10 @@ beers:
     hops_as_written: Sterling
     hops:
       - { hop: sterling, name: Sterling, as_written: Sterling }
+  - slug: zoospaloos
+    name: Zoospaloos
+    url: https://www.laddandlassbrewing.com/
+    abv: 5.3
+    hops_as_written: Czech Saaz
+    hops:
+      - { hop: saaz-cz, name: Saaz, as_written: Czech Saaz }
