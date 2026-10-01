@@ -1,4 +1,4 @@
 rss: not an RSS feed (Untappd may have sent a challenge page)
 untappd.com answered 403; skipping ratings this run
 0 rating(s) read from untappd.com
-0 new check-in(s); 22 on file
+1 new check-in(s); 24 on file

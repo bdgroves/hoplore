@@ -1,5 +1,13 @@
 source: Untappd, via https://brooksgroves.com/beers.json (tools/ingest/untappd.py) -- do not edit by hand
 checkins:
+  - id: 1605183135
+    date: '2026-10-01'
+    beer: Fresh Hop Hazealicious (2026)
+    brewery: Reuben's Brews
+    venue: Western State Hospital
+    comment: Solid fresh hop but maybe these ones not as fresh as they would have or could have been.  🔥🌳🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_10_01/17b3df6f0b1939c4a33eaa179cdfc872_c_1605183135_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1605183135
   - id: 1605032225
     date: '2026-09-30'
     beer: Cold Off the Press
