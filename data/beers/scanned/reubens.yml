@@ -5,7 +5,7 @@ brewery:
   state: WA
   url: https://reubensbrews.com/
 generated_by: 'HopLove scans (/scan/): photographed or pasted by a person, hops matched by tools/ingest/scanned_beer.py'
-retrieved: '2026-09-27'
+retrieved: '2026-10-01'
 beers:
   - slug: fresh-hop-double-crush
     name: Fresh Hop Double Crush
@@ -16,3 +16,14 @@ beers:
     scanned: '2026-09-27'
     hops:
       - { hop: simcoe, name: Simcoe, fresh: true, as_written: fresh Simcoe }
+  - slug: hazealicious
+    name: Hazealicious
+    url: https://reubensbrews.com/
+    style: Hazy IPA
+    abv: 6.0
+    hops_as_written: Fresh Strata hops elevate the overall fruity character of Hazealicious on top of its soft and pillowy body. Dolcita is described as having a pleasing mix of tropical, citrus, and stone fruits notes including Valencia oranges, caramelized bananas, peaches, coconut and honeydew melon.
+    scanned_from: photo
+    scanned: '2026-10-01'
+    hops:
+      - { hop: strata, name: Strata, as_written: Strata, fresh: true }
+      - { hop: dolcita, name: Dolcita, as_written: Dolcita }

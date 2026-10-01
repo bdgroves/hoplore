@@ -1,5 +1,11 @@
 about: Brooks's own ratings, set on HopLove (tools/ingest/rating.py). 0.25-5 caps, like Untappd.
 ratings:
+  - brewery: reubens
+    beer: hazealicious
+    name: Hazealicious (Reuben's Brews)
+    stars: 4.0
+    note: Fresh hop hazy FTW
+    date: '2026-10-01'
   - brewery: athletic
     beer: cold-off-the-press
     name: Cold Off the Press (Athletic Brewing Company)
