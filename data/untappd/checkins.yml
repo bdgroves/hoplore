@@ -1,5 +1,13 @@
 source: Untappd, via https://brooksgroves.com/beers.json (tools/ingest/untappd.py) -- do not edit by hand
 checkins:
+  - id: 1605359441
+    date: '2026-10-02'
+    beer: Fresh Hop Animal Cookies (2026)
+    brewery: Block 15 Brewing Company
+    venue: Western State Hospital
+    comment: Really nice fresh hop with the CGX NUVO cryo thing going one, but is a cryo really a fresh hop? 🔥🌳🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_10_02/e0cdc4d057b0f8b1bb0f0f0e47863759_c_1605359441_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1605359441
   - id: 1605183135
     date: '2026-10-01'
     beer: Fresh Hop Hazealicious (2026)
