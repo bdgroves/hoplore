@@ -167,7 +167,7 @@ function grownLine(hop) {
   return parts.length ? `<p class="hc-grown">Grown ${a.latest}: ${parts.join(' · ')}</p>` : '';
 }
 
-function hopCard(entry, hop, taxonomy, base) {
+function hopCard(entry, hop, taxonomy, base, smells = {}) {
   if (!hop) {
     return `<li class="hopcard missing">
       <div class="hc-head"><h3>${esc(entry.name)}</h3></div>
@@ -175,7 +175,7 @@ function hopCard(entry, hop, taxonomy, base) {
     </li>`;
   }
   const role = roleOf(hop);
-  const tags = (hop.aroma?.tags ?? []).slice(0, 6).map((t) => taxonomy.aromaTags[t]?.label ?? t);
+  const tags = (hop.aroma?.tags ?? []).slice(0, 6).map((t) => smellA(t, taxonomy, smells, base));
   const how = [
     entry.fresh ? `<span class="how fresh">Fresh hop${entry.fresh.farm ? `, from ${esc(entry.fresh.farm)}` : ''}</span>` : '',
     ...entry.forms.map((f) => `<span class="how">${esc(f)}</span>`),
@@ -187,7 +187,7 @@ function hopCard(entry, hop, taxonomy, base) {
         <span class="hc-meta">${esc(COUNTRY[hop.country] ?? hop.country)}${role ? ` · <span class="purpose" data-purpose="${hop.purpose}">${role}</span>` : ''}</span>
       </div>
       <div class="hc-how">${how}</div>
-      ${tags.length ? `<p class="hc-aroma">${esc(tags.join(', '))}</p>` : '<p class="hc-none">No aroma descriptors on file yet.</p>'}
+      ${tags.length ? `<p class="hc-aroma">${tags.join(', ')}</p>` : '<p class="hc-none">No aroma descriptors on file yet.</p>'}
       ${alphaBar(hop.analytics?.alpha_acid)}
       ${oilLine(hop.analytics?.total_oil)}
       ${oilStrip(hop)}
@@ -197,7 +197,12 @@ function hopCard(entry, hop, taxonomy, base) {
 
 /** Aroma tags across the whole bill, most shared first: a quick read of
  *  what the hops are pulling toward together. */
-function togetherBlock(bill, bySlug, taxonomy) {
+function smellA(t, taxonomy, smells, base) {
+  const label = esc(taxonomy.aromaTags[t]?.label ?? t);
+  return smells[t] ? `<a href="${base}smells/${t}/">${label}</a>` : label;
+}
+
+function togetherBlock(bill, bySlug, taxonomy, smells = {}, base = '') {
   const counts = new Map();
   for (const e of bill) {
     const hop = e.slug && bySlug[e.slug];
@@ -215,7 +220,7 @@ function togetherBlock(bill, bySlug, taxonomy) {
   return `<section class="block taste">
     <h2>What it'll taste like</h2>
     <ul class="tags together">
-      ${ranked.map(([t, n]) => `<li${n > 1 ? ' class="shared"' : ''}>${esc(taxonomy.aromaTags[t]?.label ?? t)}${n > 1 ? ` <span class="num">×${n}</span>` : ''}</li>`).join('\n      ')}
+      ${ranked.map(([t, n]) => `<li${n > 1 ? ' class="shared"' : ''}>${smellA(t, taxonomy, smells, base)}${n > 1 ? ` <span class="num">×${n}</span>` : ''}</li>`).join('\n      ')}
     </ul>
     <p class="fine">What the ${known.length} hops smell like, most shared first — from the hop growers' and breeders' own notes, not the brewery's. ${esc(originText)}.</p>
   </section>`;
@@ -262,11 +267,11 @@ const GLOSSARY = `<details class="block glossary">
 
 // --------------------------------------------------------------- pages
 
-export function renderBeer({ brewery, beer, bySlug, taxonomy, meta }) {
+export function renderBeer({ brewery, beer, bySlug, taxonomy, meta, smells = {} }) {
   const base = '../../../';
   const bill = hopBill(beer);
   const fresh = bill.some((e) => e.fresh);
-  const cards = bill.map((e) => hopCard(e, e.slug ? bySlug[e.slug] : null, taxonomy, base)).join('\n    ');
+  const cards = bill.map((e) => hopCard(e, e.slug ? bySlug[e.slug] : null, taxonomy, base, smells)).join('\n    ');
 
   const body = `
 <header class="masthead" style="padding-top:1.5rem">
@@ -286,7 +291,7 @@ export function renderBeer({ brewery, beer, bySlug, taxonomy, meta }) {
 
 <main id="main" class="wrap beer">
   ${fresh ? `<p class="callout fresh-note"><b>Fresh hop beer.</b> Fresh (or “wet”) hops go from the bine to the kettle within hours, never kilned. The figures below are for the dried hop; fresh ones carry the same oils in a greener, brighter form, and brewers use several times the weight.</p>` : ''}
-  ${togetherBlock(bill, bySlug, taxonomy)}
+  ${togetherBlock(bill, bySlug, taxonomy, smells, base)}
   <section class="block">
     <h2>The hop bill</h2>
     <ul class="hopcards">

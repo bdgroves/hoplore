@@ -45,9 +45,10 @@ export const FEATURES = [
   { key: 'scan', href: 'scan/', icon: '📷', short: 'Scan', label: 'Scan a beer', blurb: 'Snap the can or tap list and it reads the hops for you.' },
   { key: 'fresh', href: 'fresh-hop/', icon: '🌿', short: 'Fresh hop', label: 'Fresh hop', blurb: 'This season’s fresh hop beers and the farms behind them.' },
   { key: 'compare', href: 'compare/', icon: '⚖️', short: 'Hop vs hop', label: 'Hop vs hop', blurb: 'Put two hops side by side and settle the argument.' },
+  { key: 'smells', href: 'smells/', icon: '👃', short: 'Smells', label: 'By smell', blurb: 'Mango, pine, grapefruit: pick a smell, find the hops and beers.' },
   { key: 'science', href: 'science/', icon: '🧪', short: 'Science', label: 'Hop science', blurb: 'The acids and oils that make a hop, molecule by molecule.' },
   { key: 'hops', href: '', icon: '🔎', short: 'All hops', label: 'All hops', blurb: 'Every hop on file, with its smell, bite and sources.' },
-  { key: 'about', href: 'about/', icon: '👋', short: 'About', label: 'About HopLove', blurb: 'What this is, how to use it, and why it exists.' },
+  { key: 'about', href: 'about/', icon: '👋', short: 'About', label: 'About', blurb: 'What this is, how to use it, and why it exists.' },
 ];
 
 export const appBar = (base, active) => `<nav class="appbar" aria-label="HopLove">
@@ -104,7 +105,7 @@ export const tip = (line = 'Found what you were after?') =>
 export const footer = (base, meta) => `
 <section class="colophon">
   <div class="wrap">
-    <nav class="colophon-nav"><a href="${base}about/">About HopLove</a><a href="${base}beers/">What's in the can</a><a href="${base}scan/">Scan a beer</a><a href="${base}compare/">Hop vs hop</a><a href="${base}fresh-hop/">Fresh hop season</a><a href="${base}">All hops</a><a href="${TIP_URL}" rel="noopener">Buy Brooks a beer 🍺</a><a href="mailto:contact@brooksgroves.com?subject=HopLove">✉️ Email Brooks</a><button type="button" class="owner-link" id="owner-link">🔒 Brooks</button></nav>
+    <nav class="colophon-nav"><a href="${base}about/">About HopLove</a><a href="${base}beers/">What's in the can</a><a href="${base}scan/">Scan a beer</a><a href="${base}compare/">Hop vs hop</a><a href="${base}fresh-hop/">Fresh hop season</a><a href="${base}smells/">Hops by smell</a><a href="${base}">All hops</a><a href="${TIP_URL}" rel="noopener">Buy Brooks a beer 🍺</a><a href="mailto:contact@brooksgroves.com?subject=HopLove">✉️ Email Brooks</a><button type="button" class="owner-link" id="owner-link">🔒 Brooks</button></nav>
     <p>HopLove is an open dataset first and a website second. Every figure on this
     site is rolled up from cited observations in
     <code>data/hops/</code>, and the same build that made this page wrote
@@ -252,6 +253,7 @@ function row(hop, taxonomy) {
 /** The hop in one glance, in bar words: smell, bite, where to drink it, what
  *  to swap it for. The numbers underneath are for the brewers. */
 let NAMES = {};
+let SMELLS = {};
 const nameFor = (slug) => NAMES[slug] ?? slug;
 
 /** "Brewed alongside": the hops that share a bill with this one most often. */
@@ -275,14 +277,17 @@ function pairedBlock(hop, base, meta) {
 }
 
 function quickTake(hop, similar, taxonomy, base) {
-  const tags = (hop.aroma?.tags ?? []).slice(0, 5).map((t) => taxonomy.aromaTags[t]?.label ?? t);
+  const tags = (hop.aroma?.tags ?? []).slice(0, 5).map((t) => {
+    const label = esc(taxonomy.aromaTags[t]?.label ?? t);
+    return SMELLS[t] ? `<a href="${base}smells/${t}/">${label}</a>` : label;
+  });
   const bite = bitterWord(hop.analytics?.alpha_acid);
   const beers = hop.beers ?? [];
   const had = beers.filter((x) => x.mine).length;
   const fresh = beers.filter((x) => x.fresh).length;
   const swap = similar?.[0];
   const cells = [
-    tags.length && ['Smells like', esc(tags.join(', '))],
+    tags.length && ['Smells like', tags.join(', ')],
     bite && ['Bitterness', `${bite} <span class="fine">(${fmt(hop.analytics.alpha_acid.low)}–${fmt(hop.analytics.alpha_acid.high)}% alpha)</span>`],
     beers.length && ['In the glass', `<a href="#in-the-glass">${beers.length.toLocaleString('en-US')} beer${beers.length === 1 ? '' : 's'} here</a>${fresh ? ` · ${fresh} fresh hop` : ''}${had ? ` · Brooks has had ${had}` : ''}`],
     hop.paired && ['Usually paired with', hop.paired.with.slice(0, 3).map((p) => `<a href="${base}hops/${p.slug}/">${esc(nameFor(p.slug))}</a>`).join(', ')],
@@ -294,8 +299,9 @@ function quickTake(hop, similar, taxonomy, base) {
     </dl>`;
 }
 
-export function renderHop({ hop, similar, taxonomy, sources, meta, acreageYears }) {
+export function renderHop({ hop, similar, taxonomy, sources, meta, acreageYears, smells = {} }) {
   NAMES = meta.names ?? {};
+  SMELLS = smells;
   const base = '../../';
   const country = taxonomy.countries[hop.country]?.label ?? hop.country;
 
@@ -347,7 +353,7 @@ export function renderHop({ hop, similar, taxonomy, sources, meta, acreageYears 
       ${hop.acreage ? hopAcreageBlock({ ...hop, acreageYears }, base) : ''}
     </div>
     <div>
-      ${aromaBlock(hop, taxonomy)}
+      ${aromaBlock(hop, taxonomy, smells, base)}
       ${usageBlock(hop, taxonomy)}
       ${hopBeersBlock(hop.beers, base, hop.name)}
       ${pairedBlock(hop, base, meta)}
@@ -550,15 +556,16 @@ function oilsBlock(hop) {
   </section>`;
 }
 
-function aromaBlock(hop, taxonomy) {
+function aromaBlock(hop, taxonomy, smells = {}, base = '') {
   if (!hop.aroma?.tags?.length) return '';
   return `<section class="block">
-    <h2>Aroma</h2>
+    <h2>Aroma <span class="fine">· tap one for every hop and beer with that smell</span></h2>
     <ul class="tags">
       ${hop.aroma.tags
         .map((t) => {
           const tag = taxonomy.aromaTags[t];
-          return `<li${tag?.parent ? ` data-family="${tag.parent}"` : ''}>${esc(tag?.label ?? t)}</li>`;
+          const label = esc(tag?.label ?? t);
+          return `<li${tag?.parent ? ` data-family="${tag.parent}"` : ''}>${smells[t] ? `<a href="${base}smells/${t}/">${label}</a>` : label}</li>`;
         })
         .join('\n      ')}
     </ul>

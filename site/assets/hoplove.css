@@ -972,7 +972,7 @@ body.searching .brewery > p.fine { display: none; }
 .appbar-home img { width: auto; height: 40px; }
 .appbar-tabs { display: flex; gap: 0.4rem; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding: 0.2rem 0; }
 .appbar-tabs::-webkit-scrollbar { display: none; }
-.appbar-tabs a { flex: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 0.85rem; border: 1px solid var(--wire); border-radius: 999px; background: var(--paper); color: var(--ink); text-decoration: none; font-family: var(--font-body); font-size: 0.9rem; font-weight: 700; white-space: nowrap; }
+.appbar-tabs a { flex: none; display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.5rem 0.75rem; border: 1px solid var(--wire); border-radius: 999px; background: var(--paper); color: var(--ink); text-decoration: none; font-family: var(--font-body); font-size: 0.9rem; font-weight: 700; white-space: nowrap; }
 .appbar-tabs a:hover { border-color: var(--gold); }
 .appbar-tabs a[aria-current="page"] { background: var(--ink); color: var(--parchment); border-color: var(--ink); }
 @media (max-width: 46rem) {
@@ -1099,3 +1099,16 @@ body.searching .brewery > p.fine { display: none; }
 
 /* "About HopLove ->" at the end of the home intro */
 .hero-about { display: inline-block; margin-left: 0.3ch; font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+
+/* Smells: aroma tags link to /smells/<tag>/. The whole chip is the link. */
+.tags li:has(> a) { padding: 0; }
+.tags li > a { display: block; padding: 0.25rem 0.65rem; color: inherit; text-decoration: none; }
+.tags li:has(> a):hover { background: var(--gold); border-color: var(--gold); }
+.tags li:has(> a):hover a, .tags li:has(> a):hover .num { color: var(--white); }
+.tags li > a .num { color: var(--ink-faint); margin-left: 0.3ch; }
+.hc-aroma a, .smell-hops .fine a { color: inherit; text-decoration: underline; text-decoration-color: var(--mist); text-underline-offset: 2px; }
+.hc-aroma a:hover, .smell-hops .fine a:hover { color: var(--rust); text-decoration-color: currentColor; }
+.smell-family h2 a { color: inherit; text-decoration: none; }
+.smell-family h2 a:hover { color: var(--rust); }
+.smell-family .smell-tags { margin-top: 0.5rem; }
+.smell-hits { color: var(--ink-soft); }

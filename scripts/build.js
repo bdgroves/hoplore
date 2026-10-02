@@ -22,6 +22,7 @@ import { renderAbout } from '../site/templates/about.js';
 import { renderNotFound } from '../site/templates/notfound.js';
 import { renderScience } from '../site/templates/science.js';
 import { attachMine } from '../site/templates/mine.js';
+import { aromaIndex, renderAromas, renderAroma } from '../site/templates/aromas.js';
 
 const API_VERSION = 'v1';
 const { sources, taxonomy, hops: raw, acreage, breweries, checkins, ratings, history } = loadDataset();
@@ -159,6 +160,10 @@ write(
   })
 );
 const bySlug = Object.fromEntries(hops.map((h) => [h.slug, h]));
+// Smell pages: /smells/ and one per aroma tag some hop carries.
+const smells = aromaIndex({ hops, breweries, taxonomy });
+write(out('smells/index.html'), renderAromas({ index: smells, taxonomy, meta }));
+for (const entry of Object.values(smells)) write(out(`smells/${entry.tag}/index.html`), renderAroma({ entry, index: smells, taxonomy, meta }));
 const beerPaths = [];
 if (breweries.length) {
   write(out('beers/index.html'), renderBeers({ breweries, bySlug, meta, recent }));
@@ -167,13 +172,13 @@ if (breweries.length) {
     for (const beer of b.beers) {
       const path = `beers/${b.brewery.slug}/${beer.slug}/`;
       beerPaths.push(path);
-      write(out(`${path}index.html`), renderBeer({ brewery: b.brewery, beer, bySlug, taxonomy, meta }));
+      write(out(`${path}index.html`), renderBeer({ brewery: b.brewery, beer, bySlug, taxonomy, meta, smells }));
     }
   }
 }
 
 for (const hop of hops) {
-  write(out(`hops/${hop.slug}/index.html`), renderHop({ hop, similar: similar[hop.slug] ?? [], taxonomy, sources, meta, acreageYears: acreage?.years }));
+  write(out(`hops/${hop.slug}/index.html`), renderHop({ hop, similar: similar[hop.slug] ?? [], taxonomy, sources, meta, acreageYears: acreage?.years, smells }));
 }
 
 // Old names keep their old addresses: /hops/denali/ forwards to Sultana,
@@ -198,7 +203,7 @@ write(out('robots.txt'), `User-agent: *\nAllow: /\nSitemap: https://brooksgroves
 write(
   out('sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    ['', 'landscape/', ...(acreage ? ['grown/'] : []), 'scan/', 'compare/', 'about/', 'science/', ...(breweries.length ? ['beers/', 'fresh-hop/', ...beerPaths] : []), ...hops.map((h) => `hops/${h.slug}/`)]
+    ['', 'landscape/', ...(acreage ? ['grown/'] : []), 'scan/', 'compare/', 'about/', 'science/', 'smells/', ...Object.keys(smells).map((t) => `smells/${t}/`), ...(breweries.length ? ['beers/', 'fresh-hop/', ...beerPaths] : []), ...hops.map((h) => `hops/${h.slug}/`)]
       .map((p) => `  <url><loc>https://brooksgroves.com/hoplove/${p}</loc></url>`)
       .join('\n') +
     `\n</urlset>\n`
