@@ -1,5 +1,10 @@
 about: Brooks's own ratings, set on HopLove (tools/ingest/rating.py). 0.25-5 caps, like Untappd.
 ratings:
+  - brewery: block-15
+    beer: animal-cookies
+    name: Animal Cookies (Block 15 Brewing Co.)
+    stars: 3.5
+    date: '2026-10-02'
   - brewery: reubens
     beer: hazealicious
     name: Hazealicious (Reuben's Brews)

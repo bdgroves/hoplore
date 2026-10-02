@@ -1,0 +1,19 @@
+brewery:
+  slug: block-15
+  name: Block 15 Brewing Co.
+  city: Corvallis
+  state: OR
+  url:
+generated_by: 'HopLove scans (/scan/): photographed or pasted by a person, hops matched by tools/ingest/scanned_beer.py'
+retrieved: '2026-10-02'
+beers:
+  - slug: animal-cookies
+    name: Animal Cookies
+    url:
+    style: Fresh Hop Hazy India Pale Ale
+    abv: 7.0
+    hops_as_written: Experience the spectacular with Centennial CGX NUVO cryo hops.
+    scanned_from: photo
+    scanned: '2026-10-02'
+    hops:
+      - { hop: null, name: Centennial CGX NUVO, form: Cryo, as_written: Centennial CGX NUVO cryo hops }
