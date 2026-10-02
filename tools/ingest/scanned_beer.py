@@ -41,6 +41,35 @@ def slugify(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:80]
 
 
+NOISE_WORDS = r"(?:fresh|wet)[- ]hop(?:ped)?|edition|release"
+STYLE_WORDS = r"west coast|new england|hazy|juicy|cold|india pale ale|ipa|dipa|neipa|pale ale|pale|ale|lager|pilsner|pils|stout|porter|sour"
+
+
+def _clean(name) -> str:
+    n = str(name).lower().replace("\u2019", "'")
+    n = re.sub(r"\(?\b(?:19|20)\d\d\b\)?", " ", n)
+    return re.sub(rf"\b(?:{NOISE_WORDS})\b", " ", n)
+
+
+def _squash(n: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", n)
+
+
+def same_beer(a, b) -> bool:
+    """The same beer written two ways. Vintages and "Fresh Hop" never tell
+    two beers apart ("Animal Cookies" / "Animal Cookies - Fresh Hop (2026)").
+    Style words do ("Coconut IPA" vs "Coconut Stout"), unless one of the two
+    names left the style off ("Topcutter" / "Topcutter IPA")."""
+    ca, cb = _clean(a), _clean(b)
+    if _squash(ca) == _squash(cb):
+        return len(_squash(ca)) >= 3
+    style = re.compile(rf"\b(?:{STYLE_WORDS})\b")
+    if style.search(ca) and style.search(cb):
+        return False
+    ka, kb = _squash(style.sub(" ", ca)), _squash(style.sub(" ", cb))
+    return len(ka) >= 4 and ka == kb
+
+
 def main() -> int:
     body = os.environ.get("SCAN_BODY", "")
     if MARKER not in body:
@@ -102,7 +131,7 @@ def main() -> int:
     # A brewery HopLove already crawls keeps its slug, city and website, so a
     # scanned can lands in the same section as the brewery's other beers.
     known = YAML(typ="safe").load((Path(__file__).parent / "breweries.yml").read_text(encoding="utf-8")) or []
-    squash = lambda t: re.sub(r"[^a-z0-9]", "", t.lower().replace("brewing", "").replace("brewery", "").replace("brews", ""))
+    squash = lambda t: re.sub(r"[^a-z0-9]", "", re.sub(r"\b(?:brewing|brewery|brewers|brews|company|co|inc|llc)\b\.?", "", t.lower()))
     match = next((b for b in known if squash(b["name"]) == squash(brewery)), None)
     if match:
         slug = match["slug"]
@@ -130,6 +159,36 @@ def main() -> int:
         doc["beers"] = CommentedSeq()
 
     beer_slug = slugify(beer_name)
+
+    # Already on HopLove from the brewery's own site? ("Animal Cookies" is
+    # Block 15's "Animal Cookies - Fresh Hop".) Then don't add a copy: the
+    # brewery's page is the better one -- it names the hops as the brewery
+    # wrote them. A rating goes on that page instead.
+    crawled = ROOT / "data" / "beers" / f"{slug}.yml"
+    if crawled.exists():
+        listed = (YAML(typ="safe").load(crawled.read_text(encoding="utf-8")) or {}).get("beers") or []
+        hits = [b for b in listed if same_beer(b.get("name", ""), beer_name)]
+        # Several? ("Topcutter" vs "Topcutter IPA" and "Fresh Hop Topcutter
+        # IPA".) Prefer the same name exactly, then the one that agrees on
+        # being fresh hop -- a scan says so in the name or in its hops.
+        fresh = bool(re.search(r"\b(?:fresh|wet)\b", f"{beer_name} {' '.join(written)}", re.I))
+        hits.sort(key=lambda b: (slugify(b.get("name", "")) != beer_slug,
+                                 bool(re.search(r"(?:fresh|wet)[- ]hop", str(b.get("name", "")), re.I)) != fresh))
+        same = hits[0] if hits else None
+        if same:
+            print(f"{beer_name} ({brewery}) is already on HopLove as {same['name']}, from the brewery's site -- not added again")
+            stars = clean_stars(data.get("stars"))
+            rated = ""
+            if stars is not None:
+                add_rating(slug, same["slug"], same["name"], match["name"] if match else brewery, stars, str(data.get("note") or "").strip())
+                rated = f"; your {stars:g}-cap rating is on it"
+            out = os.environ.get("GITHUB_OUTPUT")
+            if out:
+                with open(out, "a", encoding="utf-8") as fh:
+                    fh.write(f"page=beers/{slug}/{same['slug']}/\n")
+                    fh.write(f"summary={beer_name} was already on HopLove as {same['name']}{rated}\n")
+            return 0
+
     beers = doc["beers"]
     for existing in list(beers):
         if existing.get("slug") == beer_slug:

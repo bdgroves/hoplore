@@ -54,10 +54,13 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/beers/scanned
           if [ -f data/ratings.yml ]; then git add data/ratings.yml; fi
-          git commit -m "Scanned beer: $SUMMARY" -m "From issue #$NUMBER."
-          git pull --rebase --autostash && git push
-          gh workflow run deploy.yml --ref main
-          gh issue close "$NUMBER" --comment "Added: $SUMMARY. It'll be at https://brooksgroves.com/hoplove/$PAGE in a minute or two, once the site rebuilds. 🍺❤️"
+          # A beer that was already on HopLove, scanned without a rating, changes nothing.
+          if ! git diff --cached --quiet; then
+            git commit -m "Scanned beer: $SUMMARY" -m "From issue #$NUMBER."
+            git pull --rebase --autostash && git push
+            gh workflow run deploy.yml --ref main
+          fi
+          gh issue close "$NUMBER" --comment "$SUMMARY. It's at https://brooksgroves.com/hoplove/$PAGE (give it a minute or two if it's new). 🍺❤️"
 
       - name: Say what went wrong
         if: failure()
