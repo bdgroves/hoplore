@@ -16,4 +16,4 @@ beers:
     scanned_from: photo
     scanned: '2026-10-02'
     hops:
-      - { hop: null, name: Centennial CGX NUVO, form: Cryo, as_written: Centennial CGX NUVO cryo hops }
+      - { hop: centennial, name: Centennial, form: Cryo, product: CGX NUVO, as_written: Centennial CGX NUVO cryo hops }

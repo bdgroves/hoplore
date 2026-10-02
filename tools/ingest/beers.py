@@ -40,6 +40,7 @@ FORMS = [
     ("cryo", "Cryo"),
     ("lupuln2", "LupuLN2"),
     ("cgx", "CGX"),
+    ("nuvo", "NUVO"),
     ("hyperboost", "HyperBoost"),
     ("dynaboost", "DynaBoost"),
     ("amplifier", "Amplifier"),
@@ -159,13 +160,31 @@ def parse_hop(token: str, index: dict[str, str]) -> dict:
         text = text[m.end():]
     text = re.sub(r"\bhops?\b", "", text, flags=re.I)
     text = re.sub(r"\s+", " ", re.sub(r"[™®]", " ", text)).strip()
-    low = text.lower()
-    for word, label in FORMS:
-        if re.search(rf"\b{re.escape(word)}$", low):
-            if label:
-                item["form"] = label
-            text = text[: len(text) - len(word)].strip()
+    # Product words can stack ("Centennial CGX NUVO cryo"): peel them off the
+    # end one at a time. The last one written is the form; any others are
+    # kept as the product.
+    # Only peel past the first word if that reaches a real hop name;
+    # otherwise keep the one-word peel ("Aged Whole Leaf Noble" stays
+    # "Aged Whole Leaf", not "Aged").
+    peeled: list[str] = []
+    states: list[tuple[str, list[str]]] = []
+    for _ in range(4):
+        low = text.lower()
+        hit = next(((w, l) for w, l in FORMS if re.search(rf"\b{re.escape(w)}$", low)), None)
+        if not hit:
             break
+        word, label = hit
+        if label:
+            peeled.append(label)
+        text = text[: len(text) - len(word)].strip()
+        states.append((text, list(peeled)))
+    if states:
+        known = next((st for st in states if index.get(norm(re.sub(r"[™®]", "", st[0])))), None)
+        text, peeled = known or states[0]
+    if peeled:
+        item["form"] = peeled[0]
+        if len(peeled) > 1:
+            item.setdefault("product", " ".join(reversed(peeled[1:])))
     for word, label in PREFIX_FORMS.items():
         if text.lower().startswith(word + " "):
             item["form"] = label
