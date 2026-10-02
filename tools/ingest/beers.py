@@ -516,7 +516,7 @@ def parse_pelican(path: Path) -> tuple | None:
     title = soup.title.string if soup.title and soup.title.string else ""
     name = re.split(r"\s[\u2013|-]\s", title.strip())[0].strip() or None
     field = between(text, r"Ingredients:", r"Water|Pure brewers|[A-Z][a-z]+ yeast")
-    hops = ", ".join(re.findall(r"([A-Z][\w.' -]+?) hops\b", field or "")) or None
+    hops = ", ".join(re.findall(r"([A-Z][\w.' -]+?) [Hh]ops\b", field or "")) or None
     if hops:
         return name, abv_of(text), hops, "field"
     _, _, prose, _ = parse_prose_generic(path)

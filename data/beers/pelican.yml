@@ -5,23 +5,27 @@ brewery:
   state: OR
   url: https://pelicanbrewing.com/
 generated_by: tools/ingest/beers.py from the brewery's own beer pages -- do not edit by hand
-retrieved: '2026-10-01'
+retrieved: '2026-10-02'
 beers:
   - slug: bad-santa
     name: Bad Santa
     url: https://www.pelicanbrewing.com/beer/bad-santa/
     abv: 7.5
-    hops_as_written: ' Toasted malt and roast character blends seamlessly with the alluring herbal hop aroma that comes from copious amounts of Fuggle hops.'
+    hops_as_written: Magnum, Fuggle, Willamette, Cascade
     hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
       - { hop: fuggle, name: Fuggle, as_written: Fuggle }
+      - { hop: willamette, name: Willamette, as_written: Willamette }
+      - { hop: cascade, name: Cascade, as_written: Cascade }
   - slug: beak-breaker
     name: Beak Breaker
     url: https://www.pelicanbrewing.com/beer/beak-breaker/
     abv: 9.0
-    hops_as_written: ' Beak Breaker – Pelican Brewing Company What do hopheads love about hops? Great big punchy aromas.  At Pelican Brewing we’ve been packing hop aroma into beer for over 20 years.  With massive additions of Mosaic, Citra, and Centennial hops this beer delivers a bright citrus-tropical aroma with notes of ruby red grapefruit and sweet pine, blasting your olfactory sense…enough to break your beak! -...'
+    hops_as_written: Magnum, Citra, Mosaic, Centennial
     hops:
-      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
+      - { hop: magnum, name: Magnum, as_written: Magnum }
       - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: mosaic, name: Mosaic, as_written: Mosaic }
       - { hop: centennial, name: Centennial, as_written: Centennial }
   - slug: beak-breaker-hazy
     name: Beak Breaker Hazy
@@ -57,11 +61,25 @@ beers:
       - { hop: bravo, name: Bravo, as_written: Bravo }
       - { hop: centennial, name: Centennial, as_written: Centennial }
       - { hop: strata, name: Strata, as_written: Strata }
+  - slug: head-out
+    name: Head Out
+    url: https://www.pelicanbrewing.com/beer/head-out/
+    abv: 4.8
+    hops_as_written: Ella
+    hops:
+      - { hop: ella, name: Ella, as_written: Ella }
+  - slug: kiwanda
+    name: Kiwanda
+    url: https://www.pelicanbrewing.com/beer/kiwanda/
+    abv: 5.4
+    hops_as_written: Mt. Hood
+    hops:
+      - { hop: mount-hood, name: Mount Hood, as_written: Mt. Hood }
   - slug: mother-of-all-storms
     name: Mother
     url: https://www.pelicanbrewing.com/beer/mother-of-all-storms/
     abv: 14.0
-    hops_as_written: ' ABV: 14% IBU: 40 Plato: 32° Ingredients: Golden Promise Malt, Munich Malt, Melanoidin Malt, Caramel Malt, Torrified Wheat, Magnum Hops, Glacier Hops, Pure Ale Yeast, Pure Coastal Water Available from November-December in 22oz bottles and on draft in select locations.'
+    hops_as_written: Magnum, Glacier
     hops:
       - { hop: magnum, name: Magnum, as_written: Magnum }
       - { hop: glacier, name: Glacier, as_written: Glacier }
@@ -69,10 +87,18 @@ beers:
     name: Mr. Lager’s Neighborhood
     url: https://www.pelicanbrewing.com/beer/mr-lagers-neighborhood/
     abv: 5.7
-    hops_as_written: ' A bright hop bill featuring Strata and Cashmere hops delivers notes of honeydew, tangerine, and marionberry.'
+    hops_as_written: Oregon Grown Strata and Cashmere
     hops:
       - { hop: strata, name: Strata, as_written: Strata }
       - { hop: cashmere, name: Cashmere, as_written: Cashmere }
+  - slug: pelican-pilsner
+    name: Pelican Pilsner
+    url: https://www.pelicanbrewing.com/beer/pelican-pilsner/
+    abv: 4.5
+    hops_as_written: Hersbrucker, Tettnang
+    hops:
+      - { hop: hersbrucker, name: Hersbrucker, as_written: Hersbrucker }
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnang }
   - slug: pelican-west-coast-india-pale-ale
     name: Pelican West Coast India Pale Ale
     url: https://www.pelicanbrewing.com/beer/pelican-west-coast-india-pale-ale/
@@ -80,3 +106,59 @@ beers:
     hops_as_written: Ekuanot Cryo
     hops:
       - { hop: ekuanot, name: Ekuanot, form: Cryo, as_written: Ekuanot }
+  - slug: pelicano-extra
+    name: Pelicano Extra!
+    url: https://www.pelicanbrewing.com/beer/pelicano-extra/
+    abv: 5.0
+    hops_as_written: Tettnanger, Ultra-refreshing Floral and Spicy
+    hops:
+      - { hop: tettnang, name: Tettnanger, as_written: Tettnanger }
+      - { hop: ultra, name: Ultra, as_written: Ultra }
+  - slug: raspberried-at-sea-vol2
+    name: Raspberried at Sea
+    url: https://www.pelicanbrewing.com/beer/raspberried-at-sea-vol2/
+    abv: 6.0
+    hops_as_written: Magnum
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+  - slug: sean-red
+    name: Sea’N Red
+    url: https://www.pelicanbrewing.com/beer/sean-red/
+    abv: 5.4
+    hops_as_written: Santiam
+    hops:
+      - { hop: santiam, name: Santiam, as_written: Santiam }
+  - slug: sunrise-surfer
+    name: Sunrise Surfer
+    url: https://www.pelicanbrewing.com/beer/sunrise-surfer/
+    abv: 4.8
+    hops_as_written: Huell Melon, Magnum
+    hops:
+      - { hop: huell-melon, name: Hüll Melon, as_written: Huell Melon }
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+  - slug: the-brewed-abides
+    name: The Brewed Abides
+    url: https://www.pelicanbrewing.com/beer/the-brewed-abides/
+    abv: 7.0
+    hops_as_written: Magnum, Willamette
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+      - { hop: willamette, name: Willamette, as_written: Willamette }
+  - slug: tsunami
+    name: Tsunami
+    url: https://www.pelicanbrewing.com/beer/tsunami/
+    abv: 7.0
+    hops_as_written: Magnum, Willamette
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+      - { hop: willamette, name: Willamette, as_written: Willamette }
+  - slug: updrift
+    name: Updrift
+    url: https://www.pelicanbrewing.com/beer/updrift/
+    abv: 7.1
+    hops_as_written: Magnum, Galaxy, Citra, El Dorado
+    hops:
+      - { hop: magnum, name: Magnum, as_written: Magnum }
+      - { hop: galaxy, name: Galaxy, as_written: Galaxy }
+      - { hop: citra, name: Citra, as_written: Citra }
+      - { hop: el-dorado, name: El Dorado, as_written: El Dorado }
