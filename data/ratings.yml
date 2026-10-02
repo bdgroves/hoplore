@@ -1,8 +1,8 @@
 about: Brooks's own ratings, set on HopLove (tools/ingest/rating.py). 0.25-5 caps, like Untappd.
 ratings:
   - brewery: block-15
-    beer: animal-cookies
-    name: Animal Cookies (Block 15 Brewing Co.)
+    beer: animal-cookies-fresh-hop
+    name: Animal Cookies - Fresh Hop (Block 15 Brewing)
     stars: 3.5
     date: '2026-10-02'
   - brewery: reubens
