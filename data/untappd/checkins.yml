@@ -1,5 +1,13 @@
 source: Untappd, via https://brooksgroves.com/beers.json (tools/ingest/untappd.py) -- do not edit by hand
 checkins:
+  - id: 1605678487
+    date: '2026-10-03'
+    beer: Fresh Hop Centennial IPA 2026
+    brewery: Ferment Brewing Company
+    venue: Western State Hospital
+    comment: Wildcrafted fresh hop for the Friday after work vibe!! 🔥🌳🍺🤙
+    photo: https://images.untp.beer/crop?width=200&height=200&stripmeta=true&url=https://untappd.s3.amazonaws.com/photos/2026_10_03/0536c863522bb84a910e6b99ad0eb791_c_1605678487_raw.jpg
+    link: https://untappd.com/user/bdgroves/checkin/1605678487
   - id: 1605359441
     date: '2026-10-02'
     beer: Fresh Hop Animal Cookies (2026)
